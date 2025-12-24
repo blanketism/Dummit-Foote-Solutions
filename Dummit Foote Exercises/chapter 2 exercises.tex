@@ -331,7 +331,7 @@
     \end{sol}
     \item Let $H$ be a subgroup of order $2$ in $G$. Show that $N_G(H) = C_G(H)$. Deduce that if $N_G(H) = G$ then $H \le Z(G)$.
     \begin{sol}
-        Since $\abs H = 2$, then $H = \set{1, h}$ for some $h \in G$ where $\abs h = 2$. Suppose $g \in N_G(H)$. Then $gHg\inv = \set{gg\inv, ghg\inv} = \set{1, ghg\inv} = H$. If $ghg\inv = 1$, then $h = 1$ which contradicts that $\abs H = 2$. Then $ghg\inv = h$ so that $g \in C_G(H)$. From \hyperref[defi2.6]{Definition 2.6}, we see that $C_G(H) \leq N_G(H)$ so that $N_G(H) = C_G(H)$.
+        Since $\abs H = 2$, then $H = \set{1, h}$ for some $h \in G$ where $\abs h = 2$. Suppose $g \in N_G(H)$. Then $gHg\inv = \set{gg\inv, ghg\inv} = \set{1, ghg\inv} = H$. If $ghg\inv = 1$, then $h = 1$ which contradicts that $\abs H = 2$. Then $ghg\inv = h$ so that $g \in C_G(H)$. We have $C_G(H) \leq N_G(H)$ so that $N_G(H) = C_G(H)$.
         
         Now suppose $N_G(H) = G$, It follows that for any $g \in N_G(H) = G$, then $gHg\inv = H$. In particular, we have that $ghg\inv = h$ for any $h \in H$. Then $gh = hg$ so that $h \in Z(G)$. Hence, $H \leq Z(G)$.
     \end{sol}
@@ -463,11 +463,11 @@
     \end{sol}
     \item If $x$ is an element of the finite group $G$ and $\abs x = \abs G$, prove that $G = \gen x$. Give an explicit example to show that this result need not be true if $G$ is an infinite group.
     \begin{sol}
-        For some $x \in G$ where $\abs x = \abs G = n$, then \autoref{prop2.2} says that $1, x, x^2, \ldots, x^{n - 1}$ are all distinct elements of $G$. Since $G$ has $n$ elements only, it follows that these are the elements of $G$, hence $G = \gen x$. Moreover, this is not true if $G$ is infinite, since $\abs{\z} = \abs 2 = \infty$, but $\gen 2$ generates only the even integers.
+        For some $x \in G$ where $\abs x = \abs G = n$, then Proposition 2.2 says that $1, x, x^2, \ldots, x^{n - 1}$ are all distinct elements of $G$. Since $G$ has $n$ elements only, it follows that these are the elements of $G$, hence $G = \gen x$. Moreover, this is not true if $G$ is infinite, since $\abs{\z} = \abs 2 = \infty$, but $\gen 2$ generates only the even integers.
     \end{sol}
     \item Find all generators for $\intmod[48]$.
     \begin{sol}
-        Using \autoref{prop2.5} and $\abs{\intmod[48]} = 48$, then $\gen{\bar a}$ generates $\intmod[48]$ when $(a, 48) = 1$. We then have $a = 1, 5, 7, 11, 13, 17, 19, 23, 25, 29, 31, 35, 37, 41, 43, 47$.
+        Using Proposition 2.5 and $\abs{\intmod[48]} = 48$, then $\gen{\bar a}$ generates $\intmod[48]$ when $(a, 48) = 1$. We then have $a = 1, 5, 7, 11, 13, 17, 19, 23, 25, 29, 31, 35, 37, 41, 43, 47$.
     \end{sol}
     \item Find all generators for $\intmod[202]$.
     \begin{sol}
@@ -531,11 +531,11 @@
     \begin{sol}
         Suppose $\bar b = \bar c$ for $\bar b, \bar c \in \intmod[48]$. Suppose $\psi_a$ is already well-defined. Then $\psi_a(\bar b) = \psi_a(\bar c)$, or $x^{ab} = x^{ac}$, which implies that $x^{a(b - c)} = 1$. Then $36 \mid a(b - c)$, but recall that $48 \mid b - c$. Then $36m = a(b - c)$ and $48n = b - c$ for $m, n \in \z$, or $36m = 48an$. If we choose $b, c$ such that $n = 1$, then this reduces to $36m = 48a$ so that $36 \mid 48a$. Equivalently, we may reduce by $(36, 48)$ so that $3 \mid 4a$. Since $3 \nmid 4$, it must be that $3 \mid a$ so that $\psi_a$ is well-defined only when $3 \mid a$. Moreover,
         \[\psi_a(\bar b + \bar c) = x^{a(b + c)} = x^{ab}x^{ac} = \psi_a(\bar b)\psi_a(\bar c)\]
-        so that $\psi_a$ is a homomorphism. Lastly, if $\psi_a$ were to be surjective, then $x^a$ must have order 36. But by \autoref{prop2.5}, we have $\abs{x^a} = 36/(36, a)$, and $(36, a) \geq 3$ because $3 \mid a$. Hence, $\psi_a$ can never be surjective.
+        so that $\psi_a$ is a homomorphism. Lastly, if $\psi_a$ were to be surjective, then $x^a$ must have order 36. But by Proposition 2.5, we have $\abs{x^a} = 36/(36, a)$, and $(36, a) \geq 3$ because $3 \mid a$. Hence, $\psi_a$ can never be surjective.
     \end{sol}
     \item What is the order of $\widebar{30}$ in $\intmod[54]$? Write out all of the elements and their orders in $\gen{\widebar{30}}$.
     \begin{sol}
-        By \autoref{prop2.5}, we have $\abs{\bar 1} = 54$. Then
+        By Proposition 2.5, we have $\abs{\bar 1} = 54$. Then
         \[\abs{\widebar{30}} = \abs{30 \cdot \bar 1} = \frac{54}{(54, 30)} = \frac{54}{6} = 9\]
         The first element of order 9 in $\intmod[54]$ is $\bar 6$, so
         \[\gen{\widebar{30}} = \set{\bar 0, \bar 6, \widebar{12}, \widebar{18}, \widebar{24}, \widebar{30}, \widebar{36}, \widebar{42}, \widebar{48}}\]
@@ -605,13 +605,13 @@
     \end{sol}
     \item Prove that $\q \times \q$ is not cyclic.
     \begin{sol}
-        If it were cyclic, then all subgroups are also cyclic, by \autoref{theo2.7}. But $\z \times \z$ is not cyclic.
+        If it were cyclic, then all subgroups are also cyclic, by Theorem 2.7. But $\z \times \z$ is not cyclic.
     \end{sol}
     \item Assume $\abs x = n$ and $\abs y = m$. Suppose that $x$ and $y$ \textit{commute}: $xy = yx$. Prove that $\abs{xy}$ divides the least common multiple of $m$ and $n$. Need this be true of $x$ and $y$ do \textit{not} commute? Give an example of commuting elements $x$ and $y$ such that the order of $xy$ is not equal to the least common multiple of $\abs x$ and $\abs y$.
     \begin{sol}
         Let $\ell$ be the least common multiple of $m$ and $n$. Then there exist $a, b \in \z$ such that $\ell = am = bn$. Then
         \[(xy)^\ell = x^\ell y^\ell = x^{bn}y^{am} = 1 \cdot 1 = 1\]
-        so that by \autoref{prop2.3}, then $|xy|$ divides $\ell$. Moreover, this is not true if $x$ and $y$ do not commute. If we consider $r, s \in D_8$, then $\abs r = 4$ and $\abs s = 2$, but $\abs{rs} = 2$ which 4 does not divide. Lastly, consider $\intmod[2]$. Then $\abs{\bar 1} = 2$, but $\abs{\bar 1 + \bar 1} = \abs{\bar 0} = 1$.
+        so that by Proposition 2.3, then $|xy|$ divides $\ell$. Moreover, this is not true if $x$ and $y$ do not commute. If we consider $r, s \in D_8$, then $\abs r = 4$ and $\abs s = 2$, but $\abs{rs} = 2$ which 4 does not divide. Lastly, consider $\intmod[2]$. Then $\abs{\bar 1} = 2$, but $\abs{\bar 1 + \bar 1} = \abs{\bar 0} = 1$.
     \end{sol}
     \item Find a presentation for $Z_n$ with one generator.
     \begin{sol}
@@ -639,7 +639,7 @@
     \end{sol}
     \item Let $p$ be a prime and let $n$ be a positive integer. Show that if $x$ is an element of the group $G$ such that $x^{p^n} = 1$, then $\abs x = p^m$ for some $m \leq n$.
     \begin{sol}
-        If $x^{p^n} = 1$, then \autoref{prop2.3} says that $|x|$ divides $p^n$. Since $p$ is prime, then $|x|$ must also be a power of $p$ that is at most $n$.
+        If $x^{p^n} = 1$, then Proposition 2.3 says that $|x|$ divides $p^n$. Since $p$ is prime, then $|x|$ must also be a power of $p$ that is at most $n$.
     \end{sol}
     \item Let $p$ be an odd prime and let $n$ be a positive integer. Use the Binomial Theorem to show that $(1 + p)^{p^{n - 1}} \equiv 1 \bmod p^n$ but $(1 + p)^{p^{n - 2}} \not\equiv 1 \bmod p^n$. Deduce that $1 + p$ is an element of order $p^{n - 1}$ in the multiplicative group $\units[p^n]$.
     \begin{sol}
@@ -673,7 +673,7 @@
     \end{sol}
     \item Show that $\units[2^n]$ is not cyclic for any $n \ge 3$. [Find two distinct subgroups of order 2.]
     \begin{sol}
-        By \autoref{theo2.7}, we must have one subgroup of order 2 in $\units[2^n]$ if it were cyclic. However,
+        By Theorem 2.7, we must have one subgroup of order 2 in $\units[2^n]$ if it were cyclic. However,
         \[(2^n - 1)^2 = (-1)^2 \equiv 1 \bmod 2^{n}\]
         and
         \[(2^{n - 1} + 1)^2 = 2^{2n - 2} + 2^n + 1 \equiv 1 \bmod 2^n\]
@@ -713,7 +713,7 @@
         Suppose that $(a, n) = 1$. By the previous exercise, then $\sigma_a$ is a surjective map. Since $Z_n$ is finite, then $\sigma_a$ is also bijective. Moreover,
         \[\sigma_a(xy) = (xy)^a = x^ay^a = \sigma_a(x)\sigma_a(y)\]
         for some $x, y \in Z_n$. Then $\sigma_a$ is also a homomorphism, hence $\sigma_a \in \aut(Z_n)$.
-        \item Let $Z_n = \gen x$. If $\sigma_a = \sigma_b$, then $\sigma_a(x) = \sigma_b(x)$. In particular, $x^a = x^b$, or $x^{a - b} = 1$. By \autoref{prop2.3}, then $n \mid (a - b)$ or $a \equiv b \bmod n$.
+        \item Let $Z_n = \gen x$. If $\sigma_a = \sigma_b$, then $\sigma_a(x) = \sigma_b(x)$. In particular, $x^a = x^b$, or $x^{a - b} = 1$. By Proposition 2.3, then $n \mid (a - b)$ or $a \equiv b \bmod n$.
         
         If $a \equiv b \bmod n$, then there is some $c \in \z$ such that $a = b + cn$. Then for any $x^m \in Z_n$, we have
         \[\sigma_a(x^m) = x^{am} = x^{(b + cn)m} = x^{bm + cnm} = x^{bm}(x^n)^{cm} = x^{bm} = \sigma_b(x^m)\]
@@ -742,7 +742,7 @@
     \end{sol}
     \item Prove that if $H$ is an abelian subgroup of a group $G$ then $\langle H, Z(G)\rangle$ is abelian. Give an explicit example of an abelian subgroup $H$ of a group $G$ such that $\langle H, C_G(H)\rangle$ is not abelian.
     \begin{sol}
-        Let $g, h \in \gen{H, Z(G)}$. Using \autoref{prop2.9}, we may put them as follows:
+        Let $g, h \in \gen{H, Z(G)}$. Using Proposition 2.9, we may put them as follows:
         \[g = g_1^{\ep_1}g_2^{\ep_2} \ldots g_m^{\ep_m}, \quad h = h_1^{\delta_1}h_2^{\delta_2} \ldots h_n^{\delta_n}\]
         where $\ep_i = \delta_i = \pm 1$, and $g_i, h_i \in H \cup Z(G)$ for all $i$. Since both $H$ and $Z(G)$ are abelian, then elements of $H$ and $Z(G)$ commute with each other. Then
         \[gh = g_1^{\ep_1} \ldots g_m^{\ep_m}h_1^{\delta_1} \ldots h_n^{\delta_n} = h_1^{\delta_1} \ldots h_n^{\delta_n}g_1^{\ep_1} \ldots g_m^{\ep_m} = hg\]
@@ -1138,7 +1138,7 @@
     \end{solalph}
     \item Classify groups of order 4 by proving that if $\abs G = 4$, then $G \cong Z_4$ or $G \cong V_4$. [See \hyperref[ex1.1.36]{Section 1.1, Exercise 36}]
     \begin{sol}
-        Let $G = \set{1, g, h, k}$. Certainly, $G \cong Z_4$ if $G$ contains an element of order 4 (so is then cyclic), since \autoref{theo2.4} says that cyclic groups of the same order are isomorphic. Suppose that $G$ is not cyclic. It must be that $\abs g = \abs h = \abs k = 2$. If $gh = 1$, then $h = g$ so that $g$ and $h$ are not distinct. If $gh = g$ or $h$, we may cancel to deduce either $h = 1$ or $g = 1$ respectively, contradicting the order of $G$. Hence, $gh = k$. We may use similar reasoning to deduce that $gk = h$ and $hk = g$ so that $G \cong V_4$. 
+        Let $G = \set{1, g, h, k}$. Certainly, $G \cong Z_4$ if $G$ contains an element of order 4 (so is then cyclic), since Theorem 2.4 says that cyclic groups of the same order are isomorphic. Suppose that $G$ is not cyclic. It must be that $\abs g = \abs h = \abs k = 2$. If $gh = 1$, then $h = g$ so that $g$ and $h$ are not distinct. If $gh = g$ or $h$, we may cancel to deduce either $h = 1$ or $g = 1$ respectively, contradicting the order of $G$. Hence, $gh = k$. We may use similar reasoning to deduce that $gk = h$ and $hk = g$ so that $G \cong V_4$. 
     \end{sol}
     \item Consider the group of order 16 with the following presentation:
     \[QD_{16} = \gen{\sigma, \tau \mid \sigma^8 = \tau^2 = 1, \sigma\tau = \tau\sigma^3}\]
@@ -1300,7 +1300,7 @@ The next three examples lead to two nonisomorphic groups that have the same latt
     \begin{sol}
         Using the presentation for $Z_2 \times Z_4$ in Exercise 12, note that $u^2 = (v^2)^4 = 1$, and $v^2u = vuv^5 = uv^{10} = uv^2$, then $\gen{u, v^2}$ is an abelian subgroup of $M$, and the map $\phi : Z_2 \times Z_4 \to \gen{u, v^2}$ defined by
         \[\phi(a) = u, \quad \phi(b) = v^2\]
-        is a homomorphism. Moreover, $\phi$ is surjective by construction as $\gen{u, v^2} = \gen{\phi(a), \phi(b)}$. Since $\abs{Z_2 \times Z_4} = \abs{\gen{u, v^2}}$, then $\phi$ is bijective so that $Z_2 \times Z_4 \cong \gen{u, v^2}$. Now, $\gen v$ has order 8, and $\gen{uv} = \set{1, ,uv, uv^3, uv^5, uv^7, v^2, v^4, v^6}$ so that $\gen{uv}$ also has order 8. Then $\gen v \cong Z_8$ and $\gen{uv} \cong 8$ since cyclic groups of the same order are isomorphic. Then the lattice of subgroups of $M$ is the same as the lattice of $Z_2 \times Z_8$, where $x = u$ and $y = v$:
+        is a homomorphism. Moreover, $\phi$ is surjective by construction as $\gen{u, v^2} = \gen{\phi(a), \phi(b)}$. Since $\abs{Z_2 \times Z_4} = \abs{\gen{u, v^2}}$, then $\phi$ is bijective so that $Z_2 \times Z_4 \cong \gen{u, v^2}$. Now, $\gen v$ and $\gen{uv}$ are both subgroups of order 8. Then $\gen v \cong Z_8$ and $\gen{uv} \cong Z_8$ since cyclic groups of the same order are isomorphic. Then the lattice of subgroups of $M$ is the same as the lattice of $Z_2 \times Z_8$, where $x = u$ and $y = v$:
         \begin{center}
             \begin{tikzpicture}[every node/.style=on grid]
                 \node (G) {$G$};

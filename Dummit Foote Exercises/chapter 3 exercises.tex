@@ -30,7 +30,7 @@ Let $G$ and $H$ be groups.
     \end{sol}
     \item Prove that in the quotient group $G/N$, $(gN)^{\alpha} = g^{\alpha}N$ for all $\alpha \in \mathbb{Z}$.
     \begin{sol}
-        Note that $(gN)^0 = 1N = g^0N$, and $(gN)\inv = g\inv N$ by \autoref{prop3.5}. It suffices to show that the relationship holds for $\alpha \in \zp$. To that end, note that $\alpha = 1$ holds. Supposing it holds for some $\alpha$, then
+        Note that $(gN)^0 = 1N = g^0N$, and $(gN)\inv = g\inv N$ by Proposition 3.5. It suffices to show that the relationship holds for $\alpha \in \zp$. To that end, note that $\alpha = 1$ holds. Supposing it holds for some $\alpha$, then
         \[(gN)^{\alpha + 1} = (gN)^\alpha (gN) = (g^\alpha N)(gN) = g^{\alpha + 1}N\]
         so that the result is true by induction.
     \end{sol}
@@ -433,7 +433,7 @@ Let $G$ and $H$ be groups.
         \item Prove that the intersection of an arbitrary nonempty collection of normal subgroups of a group is a normal subgroup (do not assume the collection is countable).
     \end{problems}
     \begin{solalph}
-        \item Observe that $H \cap K \leq G$ since $H \leq G$ and $K \leq G$. Let $g \in G$ and $x \in H \cap K$. Since $H \nsub G$ and $K \nsub G$, then $gxg\inv \in H$ and $gxg\inv \in K$, hence $gxg\inv \in H \cap K$. Then $g(H \cap K)g\inv \subseteq H \cap K$. By \autoref{theo3.6}, then $H \cap K \nsub G$.
+        \item Observe that $H \cap K \leq G$ since $H \leq G$ and $K \leq G$. Let $g \in G$ and $x \in H \cap K$. Since $H \nsub G$ and $K \nsub G$, then $gxg\inv \in H$ and $gxg\inv \in K$, hence $gxg\inv \in H \cap K$. Then $g(H \cap K)g\inv \subseteq H \cap K$. By Theorem 3.6, then $H \cap K \nsub G$.
         \item Let $G$ be a group and $I$ be a nonempty set of indices, possibly not countable. Consider the collection of subgroups $\{N_i \mid i \in I\}$ of $G$, where $N_i \nsub G$ for every $i \in I$. Consider their intersection
         \[N = \bigcap_{i \in I} N_i\]
         Since $N \leq G$, what remains to be shown is that $gNg\inv \subseteq N$ for some $g \in G$. To that end, let $n \in N$. Then $gng\inv \in N_i$ for each $i \in I$ because $N_i \nsub G$. It follows that $gng\inv \in N$ so that $gNg\inv \subseteq N$.
@@ -554,7 +554,7 @@ Let $G$ and $H$ be groups.
             s\gen r s\inv & = \{1, r^3, r^2, r\} = \gen r \\
             r\gen{rs, r^2}r\inv & = \{1, sr, r^2, sr^3\} = \gen{rs, r^2}
         \end{align*}
-        so that the normalizers of each of the subgroups contain $r$ and $s$, hence $N_{D_8}(\gen{s, r^2}) = N_{D_8}(\gen r) = N_{D_8}(\gen{rs, r^2}) = Q_8$. Moreover, each of these maximal subgroups are of order 4, which means their corresponding quotient groups will have order 2, hence $Q_8/\gen{s, r^2} \cong Q_8/\gen r \cong Q_8/\gen{rs, r^2} \cong Z_2$.
+        then the normalizers of each subgroup contain $r$ and $s$, hence $N_{D_8}(\gen{s, r^2}) = N_{D_8}(\gen r) = N_{D_8}(\gen{rs, r^2}) = Q_8$. Moreover, each of these maximal subgroups are of order 4, which means their corresponding quotient groups will have order 2, hence $Q_8/\gen{s, r^2} \cong Q_8/\gen r \cong Q_8/\gen{rs, r^2} \cong Z_2$.
 
         Now we examine $\gen{r^2} = Z(D_8)$ so it is clearly normal. Then $D_8/\gen{r^2} = \{\bar 1, \bar r, \bar s, \bar{sr}\}$. Note that the nonidentity elements have order 2, and so $D_8/\gen{r^2} \cong V_4$.
 
@@ -580,11 +580,11 @@ Let $G$ and $H$ be groups.
     \end{solalph}
     \item Prove that $\speclin_n(F) \nsub \gl_n(F)$ and describe the isomorphism type of the quotient group (cf. Exercise 9, Section 2.1).
     \begin{sol}
-        We know that $\speclin_n(F) \leq \gl_n(F)$, so we just need to show that $A \speclin_n(F) A\inv = \speclin_n(F)$ for all $A \in \gl_n(F)$. To that end, note that for any $S \in \speclin_n(F)$ and $X \in \gl_n(F)$, we have $\det(XSX\inv) = \det(X)\det(S)\det(X\inv) = 1$, hence $X\speclin_n(F)X\inv \subseteq \speclin_n(F)$, and $\speclin_n(F) \nsub \gl_n(F)$.
+        We know that $\speclin_n(F) \leq \gl_n(F)$, so we just need to show that $A \speclin_n(F) A\inv = \speclin_n(F)$ for all $A \in \gl_n(F)$. To that end, note that for any $S \in \speclin_n(F)$ and $X \in \gl_n(F)$, then $\det(XSX\inv) = \det(X)\det(S)\det(X\inv) = 1$, hence $X\speclin_n(F)X\inv \subseteq \speclin_n(F)$, and $\speclin_n(F) \nsub \gl_n(F)$.
 
         Recall that when a subgroup is normal, it is actually the kernel of some homomorphism. Observe that every element of $\speclin_n(F)$ has determinant 1, so if we consider the mapping $A \mapsto \det(A)$ for some $A \in \gl_n(F)$, then the kernel of this homomorphism is clearly $\speclin_n(F)$. We may then consider the mapping $\phi : \gl_n(F)/\speclin_n(F) \to F\unt$ given by $\phi(\bar X) = \det(X)$.
 
-        We now show that this mapping is well defined. To that end, suppose $\bar A = \bar B$ for some $\bar A, \bar B \in \gl_n(F)/\speclin_n(F)$. Recall that the elements of $\bar A$ are of the form $AS$ for $A \in \gl_n(F)$ and some $S \in \speclin_n(F)$. Since $\bar A = \bar B$, then for $AS \in \bar A$ there exists $S' \in \speclin_n(F)$ such that $AS = BS_0$. Then
+        We now show that this mapping is well defined. Suppose $\bar A = \bar B$ for some $\bar A, \bar B \in \gl_n(F)/\speclin_n(F)$. Recall that the elements of $\bar A$ are of the form $AS$ for $A \in \gl_n(F)$ and some $S \in \speclin_n(F)$. Since $\bar A = \bar B$, then for $AS \in \bar A$ there exists $S' \in \speclin_n(F)$ such that $AS = BS_0$. Then
         \[\phi(\bar A) = \det(A) = \det(AS) = \det(BS') = \det(B) = \phi(\bar B)\]
         so that $\phi$ is well defined.
         
@@ -661,7 +661,9 @@ Let $G$ be a group.
 
 \begin{problems}
     \item Which of the following are permissible orders for subgroups of a group of order 120: 1, 2, 5, 7, 9, 15, 60, 240? For each permissible order give the corresponding index.
-    
+    \begin{sol}
+        Only 1, 2, 5, 9, 15, and 60 are permissible orders for subgroups of a group of order 120. The corresponding indices are 120, 60, 24, 12, 8, and 2, respectively.
+    \end{sol}
     \item Prove that the lattice of subgroups of $S_3$ in Section 2.5 is correct (i.e., prove that it contains all subgroups of $S_3$ and that their pairwise joins and intersections are correctly drawn).
     
     \item Prove that the lattice of subgroups of $Q_8$ in Section 2.5 is correct.
