@@ -22,9 +22,6 @@
     pdftitle={},
     }
 
-\newcommand{\tocex}{\subsection*{Exercises}
-\addcontentsline{toc}{subsection}{\protect\numberline{}Exercises}}
-
 \tikzset{
     lattice edge/.style = {draw, -},
 }
@@ -34,17 +31,12 @@
     uu/.style = {lattice edge, to path={(\tikztostart.north) -- (\tikztotarget)\tikztonodes}},
 }
 
-\newcommand{\wt}[1]{\widetilde{#1}}
-\newcommand{\newsec}[1]{\subsection*{#1}
-\addcontentsline{toc}{subsection}{\protect\numberline{}#1}}
-
 \urlstyle{same}
 
 \pagestyle{fancy}
 \fancyhead{}
 \fancyhead[RO]{\leftmark}
 \fancyhead[LO]{\rightmark}
-\DeclareMathOperator{\ut}{UT}
 
 \input{Misc Environments/breakable algorithm.tex}
 \input{Base Tex Files/commands.tex}
