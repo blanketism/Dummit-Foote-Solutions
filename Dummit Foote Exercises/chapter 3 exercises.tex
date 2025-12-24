@@ -656,3 +656,76 @@ Let $G$ and $H$ be groups.
 \end{problems}
 
 \subsection{More on Cosets and Lagrange's Theorem}
+
+Let $G$ be a group.
+
+\begin{problems}
+    \item Which of the following are permissible orders for subgroups of a group of order 120: 1, 2, 5, 7, 9, 15, 60, 240? For each permissible order give the corresponding index.
+    
+    \item Prove that the lattice of subgroups of $S_3$ in Section 2.5 is correct (i.e., prove that it contains all subgroups of $S_3$ and that their pairwise joins and intersections are correctly drawn).
+    
+    \item Prove that the lattice of subgroups of $Q_8$ in Section 2.5 is correct.
+    
+    \item Show that if $|G| = pq$ for some primes $p$ and $q$ (not necessarily distinct) then either $G$ is abelian or $Z(G) = 1$. [See Exercise 36 in Section 1.]
+    
+    \item Let $H$ be a subgroup of $G$ and fix some element $g \in G$. 
+    \begin{problems}
+        \item Prove that $gH g^{-1}$ is a subgroup of $G$ of the same order as $H$.
+        
+        \item Deduce that if $n \in \mathbb{Z}^+$ and $H$ is the unique subgroup of $G$ of order $n$ then $H \nsub G$.
+        
+    \end{problems}
+    \item Let $H \leq G$ and let $g \in G$. Prove that if the right coset $Hg$ equals some left coset of $H$ in $G$ then it equals the left coset $gH$ and $g$ must be in $N_G(H)$.
+    
+    \item Let $H \leq G$ and define a relation $\sim$ on $G$ by $a \sim b$ if and only if $b^{-1}a \in H$. Prove that $\sim$ is an equivalence relation and describe the equivalence class of each $a \in G$. Use this to prove Proposition 4.
+    
+    \item Prove that if $H$ and $K$ are finite subgroups of $G$ whose orders are relatively prime then $|H \cap K| = 1$.
+    
+    \item This exercise outlines a proof of Cauchy’s Theorem due to James McKay (\textit{Another proof of Cauchy’s group theorem}, Amer. Math. Monthly, 66 (1959), p. 119). Let $G$ be a finite group and let $p$ be a prime dividing $|G|$. Let $\ss$ denote the set of $p$-tuples of elements of $G$ the product of whose coordinates is 1:
+    \[\ss = \{(x_1, x_2, \ldots, x_p) \mid x_i \in G \text{ and} x_1x_2 \cdots x_p = 1\}\]
+    \begin{problems}
+        \item Show that $S$ has $|G|^{p-1}$ elements, hence has order divisible by $p$.
+        
+    \end{problems}
+    Define the relation $\sim$ on $S$ by letting $\alpha \sim \beta$ if $\beta$ is a cyclic permutation of $\alpha$.
+    \begin{problems}
+        \item Show that a cyclic permutation of an element of $\ss$ is again an element of $\ss$.
+        
+        \item Prove that $\sim$ is an equivalence relation on $\ss$.
+        
+        \item Prove that an equivalence class contains a single element if and only if it is of the form $(x, x, \dots, x)$ with $x^p = 1$.
+        
+        \item Prove that every equivalence class has order 1 or $p$ (this uses the fact that $p$ is \textit{prime}). Deduce that $|G|^{p-1} = k + pd$, where $k$ is the number of classes of size 1 and $d$ is the number of classes of size $p$.
+        
+        \item Since $\{(1, 1, \dots, 1)\}$ is an equivalence class of size 1, conclude from (e) that there must be a nonidentity element $x \in G$ with $x^p = 1$, i.e., $G$ contains an element of order $p$. [Show $p \mid k$ and so $k > 1$.]
+        
+    \end{problems}
+    \item Suppose $H$ and $K$ are subgroups of finite index in the (possibly infinite) group $G$ with $|G : H| = m$ and $|G : K| = n$. Prove that $\lcm(m, n) \leq |G : H \cap K| \leq mn$. Deduce that if $m$ and $n$ are relatively prime then $|G : H \cap K| = |G : H| \cdot |G : K|$.
+    
+    \item Let $H \leq K \leq G$. Prove that $|G : H| = |G : K| \cdot |K : H|$. 
+    
+    \item Let $H \leq G$. Prove that the map $x \mapsto x^{-1}$ sends each left coset of $H$ in $G$ onto a right coset of $H$ and gives a bijection between the set of left cosets and the set of right cosets of $H$ in $G$ (hence the number of left cosets of $H$ in $G$ equals the number of right cosets).
+    
+    \item Fix any labelling of the vertices of a square and use this to identify $D_8$ as a subgroup of $S_4$. Prove that the elements of $D_8$ and $(123)$ do not commute in $S_4$.
+    
+    \item Prove that $S_4$ does not have a normal subgroup of order 8 or a normal subgroup of order 3.
+    
+    \item Let $G = S_n$ and for fixed $i \in \{1, 2, \dots, n\}$ let $G_i$ be the stabilizer of $i$. Prove that $G_i \cong S_{n-1}$.
+    
+    \item Use Lagrange's Theorem in the multiplicative group $(\mathbb{Z}/p\mathbb{Z})^\times$ to prove Fermat's Little Theorem: if $p$ is a prime then $a^p \equiv a \bmod p$ for all $a \in \z$.
+    
+    \item Let $p$ be a prime and let $n$ be a positive integer. Find the order of $\bar p$ in $(\mathbb{Z}/(p^n - 1)\mathbb{Z})^\times$ and deduce that $n \mid \phi(p^n - 1)$ (here $\phi$ is Euler's function).
+    
+    \item Let $G$ be a finite group, let $H$ be a subgroup of $G$ and let $N \nsub G$. Prove that if $H$ and $|G : N|$ are relatively prime then $H \leq N$.
+    
+    \item Prove that if $N$ is a normal subgroup of the finite group $G$ and $(|N|, |G : N|) = 1$ then $N$ is the unique subgroup of $G$ of order $|N|$.
+    
+    \item If $A$ is an abelian group with $A \nsub G$ and $B$ is any subgroup of $G$ prove that $A \cap B \nsub AB$.
+    
+    \item Prove that $\mathbb{Q}$ has no proper subgroups of finite index. Deduce that $\mathbb{Q}/\mathbb{Z}$ has no proper subgroups of finite index. [Recall Exercise 21, Section 1.6 and Exercise 15, Section 1.1.]
+    
+    \item Use Lagrange's Theorem in the multiplicative group $(\mathbb{Z}/n\mathbb{Z})^\times$ to prove Euler's Theorem: $a^{\varphi(n)} \equiv 1 \bmod n$ for every integer $a$ relatively prime to $n$, where $\varphi$ denotes Euler's $\varphi$-function.
+    
+    \item Determine the last two digits of $3^{3^{100}}$. [Determine $3^{100} \bmod \phi(100)$ and use the previous exercise.]
+    
+\end{problems}
