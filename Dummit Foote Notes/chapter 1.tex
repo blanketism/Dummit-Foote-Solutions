@@ -1,0 +1,469 @@
+\section{Introduction to Groups}
+
+\subsection{Basic Axioms and Examples}
+
+\begin{defi}[Binary Operation]
+    \begin{itemize}
+        \item A \textbf{binary operation} $\star$ on a set $G$ is a function $\star : G \times G \to G$. For any $a, b \in G$, then we write $a \star b$ for $\star(a, b)$.
+        \item A binary operation $\star$ on a set $G$ is \textbf{associative} on a set $G$ when for al $a, b, c \in G$ we have $a \star (b \star c) = (a \star b) \star c$.
+        \item If $\star$ is a binary operation on a set $G$, then $a, b \in G$ \textbf{commute} if $a \star b = b \star a$. Moreover, $\star$ (or $G$) is \textbf{commutative} if for all $a, b \in G$, then $a \star b = b \star a$.
+        \item If $\star$ is a binary operation on $G$ with $H \subseteq G$, and if $\star|_H$ is a binary operation on $H$, i.e., if $a \star b \in H$ for all $a, b \in H$, then $H$ is \textbf{closed} under $H$. Moreover, associativity and commutativity on $G$ implies the same on $H$.
+    \end{itemize}
+\end{defi}
+
+\begin{defi}[Group Definitions]
+    \begin{itemize}
+        \item A \textbf{group} is an ordered pair $(G, \star)$ where $G$ is a set and $\star$ is a binary operation satisfying the axioms:
+        \begin{enumerate}
+            \item $\star$ is associative,
+            \item there exists $e \in G$, called the \textbf{identity}, such that for all $g \in G$, then $g \star e = e \star g = g$,
+            \item for every $g \in G$, there exists an element $g\inv$, called the \textbf{inverse of $g$}, such that $g \star g\inv = g\inv \star g = e$.
+        \end{enumerate}
+        \item A group $(G, \star)$ is called \textbf{abelian}, or \textbf{commutative}, if $a \star b = b \star a$ for every $a, b \in G$. 
+        \item In addition to referring to $G$ as a group and not the tuple (if $\star$ is clear from the context), we say $G$ is a \textbf{finite group} when $G$ itself is a finite set.
+        \item Axiom (2) guarantees non-emptiness of a group.
+    \end{itemize}
+\end{defi}
+
+\begin{ex}[Binary Operations and Groups]
+    \begin{itemize}
+        \item Common binary operations are:
+        \begin{itemize}
+            \item $+$ is commutative on $\z, \q, \r, \c$.
+            \item $\times$ is commutative on $\z, \q, \r, \c$.
+            \item $-$ is non-commutative, since $-(a, b) \neq -(b, a)$.
+            \item Vector cross products in $\r^3$ is non-commutative and non-associative.
+        \end{itemize}
+        \item Common examples of groups include:
+        \begin{itemize}
+            \item Any vector space is an additive abelian group.
+            \item For any $n \in \zp$, then $\intmod$ is an abelian group under $+$ of addition of residue classes. The identity is $\widebar 0$ and the inverse of each $\widebar a \in \intmod$ is $\widebar{-a}$.
+            \item For $n \in \zp$, the set $\units$ is an abelian group under $\times$ of multiplication of residue classes. The identity is $\widebar 1$, and each element has a multiplicative inverse, by definition.
+            \item Let $(A, \star)$ and $(B, \diamond)$ be groups. Then the \textbf{direct product} $A \times B$ is a group whose elements are those from the Cartesian product
+            $$A \times B = \{(a, b) : a \in A, b \in B\}$$
+            and whose operation is defined componentwise:
+            $$(a_1, b_1)(a_2, b_2) = (a_1 \star a_2, b_1 \diamond b_2)$$
+        \end{itemize}
+    \end{itemize}
+\end{ex}
+
+\begin{prop}[Basic Group Properties]
+    Let $G$ be a group under the operation $\star$. Then:
+    \begin{enumerate}
+        \item the identity of $G$ is unique,
+        \item for each $g \in G$, then $g\inv$ is uniquely determined,
+        \item $(g\inv)\inv = g$ for every $g \in G$,
+        \item $(g_1 \star g_2)\inv = g_2\inv \star g_1\inv$
+        \item For $g_1, g_2, \ldots, g_n \in G$, then $g_1 \star g_2 \star \cdots \star g_n$ is independent of the bracketing, also known as the \textbf{generalized associative law}.
+    \end{enumerate}
+    \begin{proofnum}
+        \item Let $a, b$ be identities of $g$. Then $a \star b = a$ and $a \star b = b$.
+        \item Let $h_1, h_2$ be inverses of some $g \in G$ with identity $e$. Then
+        \begin{align*}
+            h_1 & = h_1 \star e \\
+            & = h_1 \star (g \star h_2) \\
+            & = (h_1 \star g) \star h_2 \\
+            & = e \star h_2 \\
+            & = h_2
+        \end{align*}
+        \item Note that $g\inv(g\inv)\inv = e$ and $g\inv g = 1$. Since the inverse of an element is uniquely determined, it follows that the inverse of $g\inv$ is $g$.
+        \item Let $h = (g_1 \star g_2)\inv$. Then
+        \begin{align*}
+            (g_1 \star g_2) \star h & = e \\
+            g_1\inv \star (g_1 \star g_2) \star h & = g_1\inv \star e \\
+            (g_1\inv \star g_1) \star (g_2 \star h) & = g_1\inv \\
+            \intertext{Note that $g_1\inv \star g_1 = e$. Then left multiply by $g_2\inv$:}
+            g_2\inv \star (g_2 \star h) & = g_2 \inv \star g_1\inv \\
+            h & = g_2\inv \star g_1\inv
+        \end{align*}
+        \item The proof will proceed by induction. Note that for $n =1 , 2$, the result is trivial, while $n = 3$ follows from associativity of $\star$ on $G$. Assume for $k < n$ that a bracketing of any $k$ elements $h_1 \star h_2 \star \cdots \star h_k$ for $h_1, \ldots, h_k \in G$ can be reduced to an expression of the form
+        $$h_1 \star (h_2 \star (h_3 \star (\cdots \star h_k)) \cdots)$$
+        Consider an arbitrarily-bracketed expression of $g_1 \star g_2 \star \cdots \star g_n$. Split it into 2 products $(g_1 \star g_2 \star \cdots \star g_k) \star (g_{k + 1} \star \cdots \star g_n)$, where each product is also bracketed in any fashion. By the inductive hypothesis, we may arrange these products in the form $g_1 \star(g_2 \star (\cdots \star g_k)) \cdots ) \star (g_{k + 1} \star (g_{k + 2} \star ( \cdots \star g_n))\cdots )$. Applying associativity, we get the result $g_1 \star (g_2 \star (\cdots \star g_k \star (g_{k + 1} \star (\cdots \star g_n)) \cdots )$, where the second product had the terms $g_{k + 1}, \ldots, g_{n - 1}$ arranged in the form above.
+    \end{proofnum}
+\end{prop}
+
+\begin{note}
+    Except when necessary, specified groups $G, H, \ldots$ will be written with the operation $\cdot$, and $a \cdot b$ will be written as $ab$. Moreover, any parentheses is dropped for products with at least 3 elements due to the generalized associative law. Additionally, the identity of $G$ will be denoted as $1$ for $\cdot$, while additive operations $+$ will have identities denoted as $0$. Lastly, $x x \cdots x$ with $n$ amount of $x$ will be denoted as $x^n$, with $x\inv x\inv \cdots x\inv$ (also $n$ amount) will be denoted as $x^{-n}$, and $x^0 = 1$.
+\end{note}
+
+\begin{prop}[Cancellation Laws]
+    Let $G$ be a group with $g, h \in G$. Then for any $s, t \in G$, the equations $gs = h$ and $tg = h$ have unique solutions. Moreover, the left and right cancellation laws hold in $G$:
+    \begin{enumerate}
+        \item $gs = gt \implies s = t$,
+        \item $sh = th \implies s = t$.
+    \end{enumerate}
+    In particular, if $g \in G$ and $h \in G$ such that $gh = e$ or $hg = e$, then $h$ is necessarily $g\inv$. Moreover, if $gh = g$ or $hg = g$, then $h$ is necessarily $e$.
+    \begin{proof}
+        Solve $gs = h$ by left multiplying by $g\inv$ to get $s = g\inv h$, where $s$ is unique since $g\inv$ is unique. If $tg = h$, then $t = hg\inv$ is also unique. Lastly, items (1) and (2) are done by left and right multiplying by $g\inv$ and $h\inv$ respectively.
+    \end{proof}
+\end{prop}
+
+\begin{defi}[Order]
+    Let $G$ be a group with $g \in G$. The \textbf{order} of $g$ is the smallest $n \in \zp$ such that $g^n = 1$, where $n$ is denoted by $|g|$, and $g$ is said to have order $n$. Moreover, if no such $n$ exists, then $g$ is said to have \textbf{infinite order}.
+\end{defi}
+
+\begin{ex}[Examples of Order]
+    \begin{itemize}
+        \item For some $g \in G$ for a group $G$, then $|g| = 1$ if and only if $g = 1$.
+        \item Under $(S, +)$ where $S = \z, \q, \r, \c$, then every non-identity element has infinite order.
+        \item In $(\r\nz, \times)$ and $(\q\nz, \times)$, we have $|-1| = 2$ with other non-identity elements having infinite order.
+        \item Take $\widebar 8 \in \intmod[12]$. Then $\widebar 8 + \widebar 8 = \widebar{16} = \widebar 4$, and $\widebar 8 + \widebar 8 + \widebar 8 = \widebar 4 + \widebar 8 = \widebar 0$ so that $|\widebar 8| = 3$. Note that powers of an element in an additive group are integer multiples.
+        \item Take $\widebar 4 \in \units[7]$. Then $(\widebar 4)^2 = \widebar{16} = \widebar 2$, and $(\widebar 4)^3 = \widebar{64} = \widebar 1$ so that $|\widebar 4| = 3$.
+    \end{itemize}
+\end{ex}
+
+\begin{defi}[Multiplication/Group Table]
+    Let $G = \{g_1, g_2, \ldots, g_n\}$ be a finite group with $g_1 = 1$. Then the \textbf{multiplication table} is the $n \times n$ matrix whose $i,j$ entry is the product $g_ig_j$.
+\end{defi}
+
+\subsection{Dihedral Groups}
+
+\begin{defi}[Dihedral Group of Order $2n$]
+    For $n \in \zp$ and $n \geq 3$, define $D_{2n}$ to be the set of symmetries of a regular $n$-gon. We define a symmetry to be taking a copy of the $n$-gon, moving it in any fashion, then placing the copy on the original $n$-gon to exactly cover it. Each symmetry $s$ places a vertex $i$ to a vertex $j$ of the $n$-gon, and there is an associated $\sigma$ that sends $i$ to $j$.
+    \begin{itemize}
+        \item As an example, if $s$ was a rotation of $2\pi/n$ radians clockwise about the center of the $n$-gon, then $\sigma$ sends $i$ to $i + 1$ for $1 \leq i \leq n - 1$, and $\sigma(n) = 1$.
+    \end{itemize}
+    We define $D_{2n}$ to now be a group with $st$ for $s, t \in D_{2n}$ to be defined as applying $t$ then $s$ (so we effectively treat symmetries as functions). Moreover, if $s, t$ describe the permutations $\sigma, \tau$, then $st$ describes the permutation $\sigma \circ \tau$. The identity of $D_{2n}$ is the map $1$ that sends each vertex to itself, and the inverse of any $s \in D_{2n}$ is the element $s\inv$ that effects $\sigma\inv$ that reverses every rigid motion of $s$.
+    
+    We claim that $|D_{2n}| = 2n$. To see this, we observe the following:
+    \begin{itemize}
+        \item For each vertex $i$, there exists $s \in D_{2n}$ that sends $1$ to $i$. Adjacency of vertex 2 to 1 makes it end up in vertex $i + 1$ or $i - 1$, where vertex $n$ is sent to 1 and $1$ is sent to 1 so that the vertex labeling is read mod $n$.
+        \item After this symmetry, we may follow it with a reflection about the line through vertex $i$ and the center of the $n$-gon. This results in vertex 2 being sent to either vertex $i + 1$ or $i - 1$ (where $i + 1 \to i - 1$, and vice versa).
+        \item The rigidity of the symmetries result in the complete determination of the other vertices once the results of vertex 1 and 2 are known. It follows that there are exactly $2n$ symmetries.
+        \item Those symmetries are as follows: $n$ rotations about the center through $2\pi i/n$ radians for $0 \leq i \leq n - 1$, and $n$ reflections through the $n$ lines of symmetry (In the reflections, there are two cases: if $n$ is odd, then it goes through a vertex and the midpoint of the opposite side. If $n$ is even, then there are $n/2$ lines of symmetry that cross through 2 opposite vertices, and $n/2$ lines of symmetry that perpendicularly bisect two opposite sides.)
+    \end{itemize}
+    
+    Viewing $D_{2n}$ as an abstract group, we simplify this view as follows: fix a regular $n$-gon at the origin in the Cartesian plane, and label the vertices consecutively from 1 to $n$ clockwise.
+    \begin{itemize}
+        \item Define $r$ as the rotation clockwise about the origin through $2\pi/n$ radian.
+        \item Define $s$ as the reflection about the line of symmetry through vertex 1 and the origin.
+    \end{itemize}
+    From this, we may deduce the following:
+    \begin{enumerate}
+        \item $1, r, r^2, \ldots, r^{n - 1}$ are all distinct, and $r^n = 1$ so $|r| = n$.
+        \item $|s| = 2$.
+        \item $s \neq r^i$ for any $i$.
+        \item $sr^i \neq sr^j$ for all $0 \leq i, j \leq n - 1$ with $i \neq j$, so
+        $$D_{2n} = \{1, r, r^2, \ldots, r^{n - 1}, s, sr, sr^2, \ldots, sr^{n - 1}\}$$
+        i.e., each element is written \textit{uniquely} in the form $s^kr^i$ for $k \in \{0, 1\}$ and $0 \leq i \leq n - 1$.
+        \item $rs = sr^{- 1}$. [First work out what permutation $s$ effects on $\{1, 2, \ldots, n\}$ and then work out separately what each side in this equation does to vertices 1 and 2.] This shows in particular that $r$ and $s$ do not commute so that $D_{2n}$ is non-abelian.
+        \item $r^is = sr^{-i}$ for all $0 \leq i \leq n$. [Proceed by induction on $i$ and use the fact that $r^{i + 1}s = r(r^i)s$ together with the preceeding calculation.] This indicates how to commute $s$ with powers of $r$.
+    \end{enumerate}
+    The following is a proof of each assertion:
+    \begin{proofnum}
+        \item Note that $r^n$ is a $2\pi$ rotation, so it is the same as the identity map. Then $|r| \leq n$. Suppose $r^i = r^j$ for $i \neq j$ and $0 \leq i < j \leq n - i$. Then $r^{j - i} = 1$, which is false, since a rotation by $2\pi(j- i)/n$ radians is not returning each vertex to itself since $n \nmid (j - i)$. In particular, the rotation $2\pi m/n$ is an identity rotation when $n \mid m$, which is not true here since $i , j < n$. Then $n$ is the smallest integer such that $r^n = 1$, hence $|r| = n$.
+        \item Recall that $s$ is a reflection, and so 2 reflections must send a reflected vertex back to its position so that $s^2 = 1$, and $|s| \leq 2$. Moreover, since applying $s$ guarantees a vertex moving to a position it was not originally in, then $|s| \neq 1$.
+        \item Since a rotation preserves the orientation of the vertices (in particular, it maintains the clockwise manner to which we have constructed the $n$-gon), and a reflection reverses this to a counter-clockwise manner, then no amount of rotations can equal a reflection.
+        \item If (4) was true, left multiply by $s$ to obtain $r^i = r^j$. Since $i \neq j$, this contradicts the earlier assertion of (1). Hence any element of $D_{2n}$ is the form of $s^kr^i$.
+        \item On the set $\{1, 2, \ldots, n\}$, we may figure out how $s$ effects on this set by considering two cases:
+        \begin{itemize}
+            \item If $n$ is odd, then $s(1) = 1$, and $s(i) = n + 2 - i$.
+            \item If $n$ is even, then $s(1) = 1$ and $s(n/2 + 1) = n/2 + 1$. For other $i$, then $s(i) = n + 2 - i$.
+        \end{itemize}
+        Moreover, for $r$, we have $r(n) = 1$ and $r(i) = i + 1$ for $1 \leq i \leq n - 1$. Then $rs$ sends 1 to 2 and 2 to 1, and $sr\inv$ sends 1 to 2 and 2 to 1.
+        \item The case for $i = 1$ is true by (5). Suppose it is true for $i \in \zp$. Then for $i + 1$, we have $r^{i + 1}s = r(r^is) = r(sr^{-i}) = (sr\inv)r^{-i} = sr^{-(i + 1)}$, and the result follows by induction.
+    \end{proofnum}
+\end{defi}
+
+\newsec{Generators and Relations}
+
+\begin{defi}[Generators and Generating]
+    Let $G$ be a group with a subset $S$ such that every $g, g\inv \in G$ can be written as a (finite) product of elements of $S$. Then $S$ is a set of \textbf{generators} of $G$, denoted by $G = \gen S$, and we say $S$ \textbf{generates} $G$ or that $G$ is \textbf{generated by $S$}. We can see by (4) above that $D_{2n} = \gen{r, s}$.
+\end{defi}
+
+\begin{defi}[Relation]
+    For a group $G$ with a set of generators $S$, we define \textbf{relations} to be a set of equations that the generators satisfy. In $D_{2n}$, the relations are: $r^n = 1, s^2 = 1$, and $rs = sr\inv$. We also see that any other relation between the groups are derived from these primary 3.
+\end{defi}
+
+\begin{defi}[Presentation]
+    Let $G$ be a group with a set of generators $S$ satisfying a set of relations $R_i$, where each $R_i$ is an equation using elements from $S \cup \{1\}$. Then the collection of generators and relations form a \textbf{presentation} of $G$ and write
+    $$G = \gen{S \mid R_1, R_2, \ldots, R_m}$$
+    We may then describe $D_{2n}$ as the following:
+    \begin{equation}
+        D_{2n} := \gen{r, s \mid r^n = 1, s^2 = 1, rs = sr\inv}
+    \end{equation}
+\end{defi}
+
+\begin{ex}[Subtleties in Group Presentations]
+    \begin{itemize}
+        \item One must caution that, in an arbitrary representation of a group, it may be difficult to tell when two elements of a group are equal when using the generators given. Consequently, the order of the presented group may be difficult to determine. For example, one can show that $\gen{x_1, y_1 \mid x_1^2 = y_1^2 = (x_1y_1)^2 = 1}$ is a presentation of a group with order 4, while $\gen{x_2, y_2 \mid x_2^3 = y_2^3 = (x_2y_2)^3 = 1}$ is a presentation of an infinite group.
+        \item Another caution is that collapsing of the relations may occur, even in simple presentations, because the relations are intertwined in an unobvious way. This creates difficulty in ascertaining a lower bound of the group order. For example, take a mimic of $D_{2n}$ specified as such:
+        \begin{equation}
+        \label{eq1.2}
+            X_{2n} := \gen{x, y \mid x^n = y^2 = 1, xy = yx^2}
+        \end{equation}
+        The relation $xy = yx^2$ describes how to commute $y$ and $x$ such that every element in $X_{2n}$ can be written in the form $y^kx^i$. From $x^n = y^2 = 1$, we may suppose that $0 \leq i \leq n - 1$ and $k \in \{0, 1\}$ so that we deduce $X_{2n}$ is of order $2n$. However, using the fact that $x = xy^2$ because $y^2 = 1$, we may use the commutative relation to deduce:
+        $$x = xy^2 = (xy)y = (yx^2)y = (yx)(xy) = (yx)(yx^2) = y(xy)x^2 = y(yx^2)x^2 = x^4$$
+        Then $x^3 = 1$ in $X_{2n}$ so that it has order of at most 6 for any $n$.
+        \item Consider the next presentation as such:
+        \begin{equation}
+        \label{eq1.3}
+            Y = \gen{u, v \mid u^4 = v^3 = 1, uv = v^2u^2}
+        \end{equation}
+        While it may be tempting to guess that $|Y| = 12$, this actually degrades to the trivial group of order 1, where $u = v = 1$.
+    \end{itemize}
+\end{ex}
+
+\subsection{Symmetric Groups}
+
+\begin{defi}[Symmetric Group]
+    Let $\Omega$ be a nonempty set and $S_\Omega$ be the set of all bijections from $\Omega$ to itself. Then $(S_\Omega, \circ)$ is the \textbf{symmetric group on the set $\Omega$} with $\circ$ representing function composition. Moreover, recognize that the elements of $S_\Omega$ are permutations of the elements of $\Omega$ rather than the elements of $\Omega$ itself.
+    \begin{itemize}
+        \item If $\sigma, \tau \in S_\Omega$, then $\sigma \circ \tau$ remains a bijection from $\Omega$ to $\Omega$ so that $\circ$ is a binary operation on $S_\Omega$.
+        \item The identity of $S_\Omega$ is 1, where $1(x) = x$ for $x \in \Omega$.
+        \item $\circ$ is associative, in general.
+        \item For any $\sigma \in S_\Omega$, we have the associated inverse $\sigma\inv \in S_\Omega$, where $\sigma\inv\circ\sigma = 1$ and $\sigma\circ\sigma\inv = 1$. More explicitly, if $\sigma(a) = b$, then $\sigma\inv(b) = a$ for every $a, b \in \Omega$.
+    \end{itemize}
+    In the case where $\Omega = \{1, 2, \ldots, n\}$, we denote it as $S_n$ instead, or the \textbf{symmetric group of degree $n$}. Moreover, we claim that $|S_n| = n!$.
+    \begin{proof}
+        From \hyperref[prop0.1]{Proposition 0.1}, the permutations of $\{1, 2, \ldots, n\}$ are the injective functions of this set to itself since it is finite. To count the number of injective functions, proceed as such: For any $\sigma \in S_n$, then $\sigma(1)$ has $n$ choices. Then $\sigma(2)$ has $n - 1$ choices, since $\sigma(2) \neq \sigma(1)$ because $\sigma$ is injective. Going on this vein until $\sigma(n)$ is left, we have $n \cdot (n - 1) \cdot (n - 2) \cdots 2 \cdot 1 = n!$ injections. 
+    \end{proof}
+\end{defi}
+
+\begin{defi}[Cycle Terminology]
+    \begin{itemize}
+        \item A \textbf{cycle} is a string of integers that represents the elements of $S_n$ which cyclically permute these integers and fixes all other integers. For example, the cycle $(a_1a_2\ldots a_m)$ is the permutation that sends $a_i \to a_{i + 1}$ for $1 \leq i \leq m - 1$ and then sends $a_m \to a_1$.
+        \item To generalize, for any $\sigma \in S_n$, then the numbers 1 to $n$ are arranged and grouped into $k$ cycles of the form
+        $$(a_1a_2\ldots a_{m_1})(a_{m_1+1}a_{m_1 + 2}\ldots a_{m_2}) \ldots (a_{m_{k - 1} + 1}a_{m_{k - 1} + 2}\ldots a_{m_k})$$
+        To read this, pick some $x$ between 1 to $n$ and find $x$ in the above expression. If $x$ is not on the right end of one of the $k$ cycles, then $\sigma(x)$ is the integer immediately to the right of $x$. If $x$ is at the right end, then $\sigma(x)$ is the integer at the left end, i.e., if $x = a_{m_i}$, then $\sigma(x) = a_{m_{i- 1} + 1}$, where $m_0 = 0$.
+        \item The product of all the $k$ cycles is called the \textbf{cycle decomposition} of $\sigma$.
+        \item If a cycle contains $t$ integers, then we call that a \textbf{$t$-cycle}.
+        \item Two cycles that contain no elements in common are called \textbf{disjoint}.
+    \end{itemize}
+\end{defi}
+
+\begin{defi}[Cycle Decomposition Algorithm]
+    \begin{enumerate}
+        \item To start a new cycle, pick the smallest element of $\{1, 2, ,\ldots, n\}$ that has not appeared in a previous cycle, call it $a$. If the process is beginning, then start with $a = 1$.
+        \item From the given description of $\sigma$, find $\sigma(a)$ and call it $b$. If $b = a$, then close the current cycle with a right parenthesis without writing $b$ and return to step 1. If $b \neq a$, then write $b$ next to $a$ in the ongoing cycle.
+        \item Find $\sigma(b)$ and call it $c$. If $c = a$, close the cycle with a right parenthesis and return to step 1. Otherwise, write $c$ next to $b$. Using $c$ as $b$ in step 2, repeat step 3 until the cycle ends.
+        \item Remove all cycles of length 1.
+    \end{enumerate}
+\end{defi}
+
+\begin{ex}[Cycle Decomposition of $\sigma \in S_{13}$]
+    Let $n = 13$ and define $\sigma \in S_{13}$ as
+    $$\begin{array}{ccccccc}
+        \sigma(1) = 12, & \sigma(2) = 13, & \sigma(3) = 3, & \sigma(4) = 1, & \sigma(5) = 11, & \sigma(6) = 9, & \sigma(7) = 5, \\
+        \sigma(8) = 10, & \sigma(9) = 6, & \sigma(10) = 4, & \sigma(11) = 7, & \sigma(12) = 8, & \sigma(13) = 2
+    \end{array}$$
+    \begin{itemize}
+        \item Starting the cycle, begin with $a = 1$. Since $\sigma(1) = 12\neq 1$, then $\sigma(12) = 8, \sigma(8) = 10, \sigma(10) = 4$, and $\sigma(4) = 1$. The first cycle is then $(1\ 12\ 8\ 10\ 4)$.
+        \item The next smallest number is 2, so $\sigma(2) = 13$ and $\sigma(13) = 2$. Then the second cycle is $(2\ 13)$.
+        \item The next smallest number is 3, so $\sigma(3) = 3$, and the third cycle is $(3)$.
+        \item The next smallest is 5, so $\sigma(5) = 11, \sigma(11) = 7$, and $\sigma(7) = 5$. Then the fourth cycle is $(5\ 11\ 7)$.
+        \item The next smallest is 6, so $\sigma(6) = 9$ and $\sigma(9) = 6$. Then the fifth cycle is $(6\ 9)$.
+        \item Remove the single cycle $(3)$.
+    \end{itemize}
+    Following this, we have $\sigma = (1\ 12\ 8\ 10\ 4)(2\ 13)(5\ 11\ 7)(6\ 9)$.
+\end{ex}
+
+\begin{defi}[Additional Properties of Cycles]
+    \begin{itemize}
+        \item If $\sigma \in S_n$ that permutes $\{1, 2, \ldots, n\}$, then $\sigma \in S_m$ for $m > n$ permutes the elements $\{1, 2, \ldots, n\}$ the same way as $\sigma \in S_n$ with the additional permutation that $\sigma(x) = x$ for $n < x \leq m$.
+        \item For $\sigma \in S_n$, then $\sigma\inv$ is found by reversing the orders of the numbers in each of the cycles in $\sigma$.
+        \item To compute products of cycles, follow each of the elements in succession in each permutation. Moreover, for $\sigma, \tau \in S_n$, we calculate $\sigma \circ \tau$ by sending the integers through $\tau$ first as in function composition.
+        \item It is easy to show that $S_n$ is a non-abelian group for all $n \geq 3$.
+        \item Because each cycle permutes only the integers involved in the cycle, and disjoint cycles permute numbers that lie in disjoint sets by definition (otherwise, they wouldn't be disjoint as they share integers), then it follows that disjoint cycles commute.
+        \item For an arbitrary cycle $(a_1\ a_2\ldots a_m)$, recall that this cycle permutes the elements $\{a_1, a_2, \ldots, a_m\}$ cyclically. Hence, it follows that the cycle is equal to any representation that preserves the order in which the integers are represented. Explicitly, this means that
+        $$(a_1\ a_2 \ldots a_m) = (a_2\ a_3 \ldots a_m\ a_1) = (a_3\ a_4 \ldots a_m\ a_1\ a_2) = \cdots = (a_m\ a_1\ a_2 \ldots a_{m - 1})$$
+        \item The cycle decomposition of any permutation is actually the \textit{unique} way of expressing a permutation as a product of disjoint cycles, up to rearrangement of the cycles. It follows that reducing an arbitrary product of cycles to a product of disjoint cycles allows the determination of whether or not two permutations are the same. 
+        \item Lastly, the exercises will show that the order of a permutation is the $\lcm$ of the lengths of the cycles in the cycle decomposition.
+    \end{itemize}
+\end{defi}
+
+\subsection{Matrix Groups}
+
+\begin{defi}[Field]
+    \begin{itemize}
+        \item A \textbf{field} is a set $F$ with two binary operations $+$ andd $\cdot$ on $F$ such that $(F, +)$ is an abelian group (with identity 0) and $(F - \{0\}, \cdot)$ is an abelian group with the distributive law:
+        $$a \cdot (b + c) = (a \cdot b) + (a \cdot c) \text{ for all $a, b, c \in F$}$$
+        \item Denote $F\unt = F - \{0\}$.
+    \end{itemize}
+    For prime $p$, denote $\intmod[p]$ as $\f_p$.
+\end{defi}
+
+\begin{defi}[General Linear Group of Degree $n$]
+    For $n \in \zp$, denote $\gl_n(F)$ as the set of all $n \times n$ matrices with entries from $F$ and nonzero determinant, which is calculated with the same formula when $F = \r$.
+    \begin{itemize}
+        \item For $A, B \in \gl_n(F)$, denote $AB$ as their product whose calculation is the same when $F = \r$. Since $\det(A) \neq 0$ and $\det(B) \neq 0$, then $\det(A)\det(B) = \det(AB) \neq 0$ so that $AB \in \gl_n(F)$. Hence, matrix multiplication is closed.
+        \item Matrix multiplication is associative, in general.
+        \item A matrix $A$ has nonzero determinant if and only if $A\inv$ exists whose calculation is the same when $F = \r$. Then for each $A \in \gl_n(F)$ there exists $A\inv \in \gl_n(F)$ such that $AA\inv = A\inv A = I$, where $I$ denotes the $n \times n$ identity matrix.
+    \end{itemize}
+    Then $\gl_n(F)$ is a group under matrix multiplication and is called the \textbf{general linear group of degree $n$}. Moreover, there are two additional facts that are known:
+    \begin{enumerate}
+        \item For a field $F$ with $|F| < \infty$, then $|F| = p^m$ for prime $p$ and $m \in \zp$.
+        \item If $|F| = q < \infty$, then 
+        $$|\gl_n(F)| = \prod_{i = 1}^n(q^n - q^{i - 1})$$
+    \end{enumerate}
+\end{defi}
+
+\subsection{The Quaternion Group}
+
+\begin{defi}[Quaternion Group]
+    The \textbf{quaternion group}, denoted as $Q_8$, is defined as
+    $$Q_8 := \{1, -1, i, -i, j, -j, k, -k\}$$
+    with product $\cdot$ as follows:
+    \[1 \cdot a = a \cdot 1 = a, \quad \text{for all $a \in Q_8$}\]
+    \[(-1) \cdot (-1) = 1, \quad (-1) \cdot a = a \cdot (-1) = -a, \quad \text{for all $a \in Q_8$}\]
+    \[i \cdot i = j \cdot j = k \cdot k = -1\]
+    \[i \cdot j = k, \quad j \cdot i = -k\]
+    \[j \cdot k = i, \quad k \cdot j = -i\]
+    \[k \cdot i = j, \quad i \cdot k = -j\]
+    \begin{itemize}
+        \item The associative law can be proven by multiplying every 3-tuple of numbers, but that is 512 potential combinations (since $|Q_8| = 8$), so a more sophisticated method will be associating $Q_8$ with matrices wherein matrix multiplication is associative.
+        \item The identity element of $Q_8$ is 1.
+        \item $Q_8$ is clearly closed under the definition of the defined product.
+        \item The inverse of $-1$ is itself, and the inverse of $i, j, k$ is $-i, -j, -k$ respectively.
+        \item $Q_8$ is non-abelian.
+    \end{itemize}
+\end{defi}
+
+\subsection{Homomorphisms and Isomorphisms}
+
+\begin{defi}[Homomorphism]
+    Let $(G, \star)$ and $(H, \diamond)$ be groups. Then a map $\phi : G \to H$ such that
+    \[\phi(x \star y) = \phi(x) \diamond \phi(y), \quad \text{for all $x, y \in G$}\]
+    is called a \textbf{homomorphism}. Moreover, if the operations of $G$ and $H$ are not explicitly rewritten, the above becomes $\phi(xy) = \phi(x)\phi(y)$.
+\end{defi}
+
+\begin{defi}[Isomorphism]
+    Let $\phi : G \to H$ be a bijective homomorphism. Then it is an \textbf{isomorphism} and $G$ and $H$ are said to be \textbf{isomorphic} or of the same \textbf{isomorphism type}, written as $G \cong H$, if
+    \begin{enumerate}
+        \item $\phi$ is a homomorphism, and
+        \item $\phi$ is a bijection.
+    \end{enumerate}
+    In some sense, $G \cong H$ implies that $G$ and $H$ are the same group but written dif and only iferently. Moreover, any properties deduced about $G$ using group axioms only will also hold in $H$.
+\end{defi}
+
+\begin{ex}[Examples of Homomorphism and Isomorphisms]
+    \begin{itemize}
+        \item For any group $G$, then $G \cong G$. A potential isomorphism is the identity map $\phi : G \to G$ defined as $\phi(g) = g$ for all $g \in G$. Clearly, for $g, h \in G$, then $\phi(gh) = gh = \phi(g)\phi(h)$. Moreover, the identity map is trivially a bijection, so it indeed is an isomorphism. More generally, suppose $\gg$ is a collection of groups $G_1, G_2, \ldots$. Then $\cong$ is an equivalence relation on $\gg$:
+        \begin{proof}
+            As shown above, $\cong$ is reflexive. Suppose now that $G \cong H$ for some $G, H \in \gg$. Then there exists an isomorphism $\phi : G \to H$. Since $\phi$ is bijective, then $\phi\inv : H \to G$ exists and is also bijective. Moreover, for any $h_1, h_2 \in H$, there exists corresponding $g_1, g_2 \in G$ such that $\phi(g_1) = h_1$ and $\phi(g_2) = h_2$. Then
+            \[\phi\inv(h_1h_2) = \phi\inv(\phi(g_1)\phi(g_2)) = \phi\inv(\phi(g_1g_2)) = g_1g_2 = \phi\inv(h_1)\phi\inv(h_2)\]
+            so that $\phi\inv$ is an isomorphism, and $H \cong G$. Then $\cong$ is symmetric.
+            
+            Suppose now $G, H, K \in \gg$ such that $G \cong H$ and $H \cong K$ with isomorphisms $\phi : G \to H$ and $\psi : H \to K$. Consider the mapping $\psi \circ \phi$, which is bijective since a composition of bijective mappings is bijective (To see this, let $f : A \to B$ and $g : B \to C$ be bijective mappings, and consider $g \circ f$. Suppose $f(a_1) = f(a_2)$ for $a_1, a_2 \in A$. Then $g(f(a_1)) = g(f(a_2))$ implies that $f(a_1) = f(a_2)$, since $g$ is injective. Then $a_1 = a_2$, since $f$ is injective so that $g \circ f$ is injective. Now suppose $c \in C$. Since $g$ is surjective, there exists $b \in B$ such that $g(b) = c$. Moreover, there exists $a \in A$ such that $f(a) = b$ because $f$ is surjective. Then $g(f(a)) = g(b) = c$ so that $g \circ f$ is surjective, hence it is bijective.)
+            
+            Suppose $g_1, g_2 \in G$. Then
+            \[\psi(\phi(g_1g_2)) = \psi(\phi(g_1)\phi(g_2)) = \psi(\phi(g_1))\psi(\phi(g_2))\]
+            so that $\psi \circ \phi$ is a homomorphism, hence it is an isomorphism. Then $G \cong K$, and $\cong$ is transitive on $\gg$. It follows that $\cong$ is an equivalence relation on $\gg$. 
+        \end{proof}
+        Moreover, we say that the equivalence classes of $\cong$ on $\gg$ are \textbf{isomorphism classes}.
+        \item The exponential mapping $\exp : R \to \r^+$ defined as $\exp(x) = e^x$ is an isomorphism from $(\r, +)$ to $(\r^+, \times)$. Since $\exp$ is a bijection (because it has the inverse $\ln$), and it is a homomorphism because $\exp(x + y) = e^{x + y} = e^xe^y = \exp(x)\exp(y)$, then it is an isomorphism.
+        \item Isomorphism type of symmetric groups depends on the cardinality of the underlying set being permuted, i.e., if $\Delta$ and $\Omega$ are nonempty sets. then $S_\Delta$ and $S_\Omega$ are isomorphic if and only if $|\Delta| = |\Omega|$.
+        \begin{proof}
+            Suppose $S_\Delta \cong S_\Omega$. For simplicity's sake, the proof will only show the finite case, while the infinite case will be handled later. Because an isomorphism is a bijection, it follows that $|S_\Delta| = |S_\Omega|$. Since we assumed finiteness of $\Delta$ and $\Omega$, i.e., $\abs\Delta = m$ and $\abs\Omega = n$, then $\abs{S_\Delta} = m! = n! = \abs{S_\Omega}$. Then $\abs\Delta = m = n = \abs\Omega$.
+            
+            Suppose now that $\abs\Delta = \abs\Omega$. While the exact details will be done below in the exercises, the intuition for this is as follows. Since there must be a bijection from $\theta : \Delta \to \Omega$, then we may associate each element $x \in \Delta$ to $\theta(x) \in \Omega$. A map $\phi : S_\Delta \to S_\Omega$ must associate $\sigma \in S_\Delta$ to $\phi(\sigma) \in S_\Omega$, where $\phi(\sigma)$ must move the elements of $\Omega$ in the same fashion that $\sigma$ moves elements in $\Delta$. More explicitly, if $\sigma(a) = b$ for $a, b \in \Delta$, then $\phi(\sigma)(\theta(a)) = \theta(b)$.
+        \end{proof}
+    \end{itemize}
+\end{ex}
+
+\begin{defi}[Properties of Isomorphisms]
+    Let $\phi : G \to H$ be an isomorphism. Then the following is true:
+    \begin{enumerate}
+        \item $|G| = |H|$,
+        \item $G$ is abelian if and only if $H$ is abelian, and
+        \item for every $g \in G$, then $|g| = |\phi(g)|$.
+    \end{enumerate}
+    Proved later in the exercises, one may exhibit a property in $G$ not present in $H$ to determine that $G \not\cong H$.
+\end{defi}
+
+\begin{ex}[Non-Isomorphic Groups]
+    \begin{itemize}
+        \item $S_3$ is not isomorphic to $\intmod[6]$ since the former is not abelian while the latter is.
+        \item $(\r - \{0\}, \times$ and $(\r, +)$ are not isomorphic since $-1 \in (\r - \{0\}, \times)$ has order 2, while there are no elements of order 2 in $(\r, +)$.
+    \end{itemize}
+\end{ex}
+
+\begin{defi}[Homomorphisms of Group Presentations]
+    Let $G$ be a finite group with order $n$ with some presentation and generators $S = \{s_1, s_2, \ldots, s_m\}$. Let $H$ be another group with elements $\{r_1, r_2, \ldots, r_m\}$.
+    \begin{itemize}
+        \item If a relation satisfied in $G$ by the $s_i$ is also satisfied in $H$ when $s_i$ replaces $r_i$, then there exist a unique homomorphism $\phi : G \to H$ that maps $s_i$ to $r_i$.
+        \item If $H = \gen{r_1, r_2, \ldots, r_m}$, then $\phi$ is necessarily surjective, since any element in $H$ is a combination of $r_i$ whose preimage is $s_i$.
+        \item If $|G| = |H|$, then $G \cong H$ if $\phi$ is a surjective map since it would be necessarily injective.
+    \end{itemize}
+\end{defi}
+
+\begin{ex}[Showing Isomorphism Via Group Presentations]
+    \begin{itemize}
+        \item Let $D_{2n}$ have its usual representation. Let $H$ be a group with $a, b \in H$ such that $a^n = 1, b^2 = 1$, and $ba = a\inv b$. There exists a homomorphism from $D_{2n}$ to $H$ that maps $a$ to $r$ and $b$ to $s$. Let $k \in \z$ such that $k \mid n$ and $k \geq 3$, and define $D_{2k} = \gen{r_1, s_1 \mid r_1^k = s_1^2 = 1, s_1r_1 = r_1\inv s_1}$. Define the map
+        \[\phi : D_{2n} \to D_{2k} \quad \text{by} \quad \phi(r) = r_1, \phi(s) = s_1\]
+        Putting $n = km$ for $m \in \z$, then $r_1^n = (r_1^k)^m = 1$. Then all relations in $D_{2n}$ are satisfied by $r_1, s_1$ in $D_{2k}$ so that $\phi$ extends to a homomorphism form $D_{2n}$ to $D_{2k}$. Moreover, $\phi$ is surjective since $\{r_1, s_1\}$ generates $D_{2k}$ but is not an isomorphism when $k < n$.
+        \item Consider $D_6$ and $S_3$. Set $a = (1\ 2\ 3)$ and $b = (1\ 2)$ so that $a^3 = b^2 = 1$, and $ba = (1\ 2)(1\ 2\ 3) = (1\ 3) = (1\ 2\ 3)(1\ 2) = ab\inv$. Then there is a homomorphism $\phi : D_6 \to S_3$ defined by $\phi(r) = a$ and $\phi(s) = b$. Since $(1\ 2\ 3)^2 = (1\ 3\ 2), (1\ 2\ 3)(1\ 2) = (1\ 3)$, and $(1\ 2\ 3)^2(1\ 2) = (2\ 3)$, then $S_3$ is indeed generated by $a$ and $b$ so that $\phi$ is a surjective homomorphism. Lastly, $\phi$ is an isomorphism since $|D_6| = |S_3|$.
+    \end{itemize}
+\end{ex}
+
+\subsection{Group Actions}
+
+\begin{defi}[Group Action]
+    A \textbf{group action} of a group $G$ on a set $A$ is a map from $G \times A$ to $A$, written as $g \cdot a$, for all $g \in G$ and $a \in A$ satisfying the following properties:
+    \begin{enumerate}
+        \item $g_1 \cdot (g_2 \cdot a) = (g_1g_2) \cdot a$ for all $g_1, g_2 \in G, a \in A$, and
+        \item $1 \cdot a = a$, for all $a \in A$.
+    \end{enumerate}
+    We may say that $G$ is a group acting on a set $A$, and we usually write $g \cdot a$ as $ga$. For property (1), $g_1$ acting on $g_2 \cdot a$ makes sense, since $g_2 \cdot a \in A$. Moreover, $g_1g_2 \in G$, so we may have that element act on $a \in A$.
+\end{defi}
+
+\begin{defi}[Permutation Representation]
+    Let $G$ act on a set $A$. For fixed $g \in G$, define the map $\sigma_g$ as:
+    \begin{align*}
+        \sigma_g & : A \to A \\
+        \sigma_g & (a) = g \cdot a
+    \end{align*}
+    Moreover, there are two important facts:
+    \begin{enumerate}
+        \item For each fixed $g \in G$, then $\sigma_g$ is a \textbf{permutation} of $A$, and
+        \item The map $\phi : G \to S_A$ defined by $\phi(g) = \sigma_g$ is a homomorphism.
+    \end{enumerate}
+    \begin{proofnum}
+        \item Let $\sigma_g$ be defined as above. Then $\sigma_{g\inv}$ is its 2-sided inverse. For any $a \in A$, then
+        \begin{align*}
+            (\sigma_{g\inv} \circ \sigma_g)(a) & = \sigma_{g\inv}(\sigma_g(a)) \\
+            & = \sigma_{g\inv}(g \cdot a) \\
+            & = g\inv \cdot (g \cdot a) \\
+            & = (g\inv g)\cdot a \\
+            & = 1 \cdot a = a
+        \end{align*}
+        So that $\sigma_{g\inv} \circ \sigma_g$ is the identity map on $A$. Interchange $g$ and $g\inv$ in the above to show that $\sigma_g \circ \sigma_{g\inv}$ is also the identity map on $A$ so that $\sigma_g$ has a 2-sided inverse. Hence, $\sigma_g$ is a permutation of $A$.
+        \item Let $\phi$ be defined as above. Note that $\sigma_g \in S_A$ by above, because $S_A$ consists of the set of permutations on $A$. Then for any $a \in A$ and $g, h \in G$, we have
+        \begin{align*}
+            \phi(gh)(a) & = \sigma_{gh}(a) \\
+            & = (gh) \cdot a \\
+            & = g \cdot (h \cdot a) \\
+            & = \sigma_g(\sigma_h(a)) \\
+            & = (\phi(g) \circ \phi(h))(a)
+        \end{align*}
+        Then $\phi$ is a homomorphism.
+    \end{proofnum}
+    We may additionally see that if given the homomorphism $\phi : G \to S_A$, then a map $G \times A \to A$ defined by
+    \[g \cdot a = \phi(g)(a) \quad \text{for all $g \in G$ and $a \in A$}\]
+    would satisfy the properties of a group action of $G$ on $A$.
+\end{defi}
+
+\begin{defi}[Group Action Types]
+    \label{defi1.7.22}
+    \begin{enumerate}
+        \item Let $G$ be a group with $A$ a nonempty set. Suppose $ga = a$ for all $g \in G$ and $a \in A$. Then the group action properties clearly follow, and we call this the \textbf{trivial action}. Moreover, we say that $G$ \textbf{acts trivially} on $A$. The \textit{same} permutations are induced by \textit{distinct} elements of $G$, i.e., the identity permutation. Moreover, the associated permutation representation $\phi : G \to S_A$ satisfies that $\phi(g)(a) = ga = a$, so that $\phi = 1$, or the trivial homomorphism.
+        \item A group action $G$ on a set $A$ is \textbf{faithful} if distinct elements $g, h \in G$ induces distinct permutations, i.e., if $g \neq h$, then for any $a \in A$ we have that $g \cdot a \neq h \cdot a$, or that the associated permutation homomorphism is injective. Moreover, a faithful action is when the associated permutation representation is injective. For example, the trivial action on groups with $|G| > 1$, then the kernel $\{g \in G \mid gb = b \text{ for every $b \in B$}\}$ is equal to $G$, so it is \textit{not faithful}.
+        \item Let $G$ be a group with $A = G$, and define the map from $G \times A$ to $A$ by $g \cdot a = ga$, where $a \in A, g \in G$. We then get a group action of $G$ on itself, where each $g \in G$ permutes the elements of $G$ by \textbf{left multiplication}. If $G$ has an additive operation, we then write $g \cdot a = g + a$, called the \textbf{left translation}. Known as the \textbf{left regular action} of $G$ on itself, we may check that the group action properties hold:
+         
+        For $g, h \in G$ and for any $a \in A$, then $g \cdot (h \cdot a) = g \cdot (ha) = g(ha) = (gh)a = (gh) \cdot a$. Moreover, $1 \cdot a = 1a = a$. Lastly, consider the homomorphism $\phi : G \to S_G$ defined by $\phi(g) = \sigma_g$. Then for any $a \in G$, we have $\phi(g)(a) = \sigma_g(a) = g \cdot a = ga$. Supposing that $\phi(g) = \phi(h)$ for some $g, h \in G$, then $ga = ha$ implies $g = h$ so that $\phi$ is injective, hence the left regular action is faithful.
+    \end{enumerate}
+\end{defi}
+
+\begin{ex}[Group Actions]
+    \begin{enumerate}
+        \item For a vector space $V$ over a field $F$, the two properties of group actions that the group $F\unt$ acts on the set $V$ are satisfied by the vector space axioms. For example, when $V = \r^n$ and $F = \r$, then the map
+        \[x(r_1, r_2, \ldots, r_n) = (xr_1, xr_2, \ldots, xr_n)\]
+        is a group action. For any $x, y \in \r$, then
+        \[x(y(r_1, \ldots, r_n)) = x(yr_1, \ldots, yr_n) = (xyr_1, \ldots, xyr_n) = (xy)(r_1, \ldots, r_n)\]
+        and $1(r_1, \ldots, r_n) = (r_1, \ldots, r_n)$. Note that $\phi : \r\unt \to S_{\r^n}$ is injective, because if $\phi(x) = \phi(y)$, then for any $(r_1, \ldots, r_n) \in \r^n$, we have $\phi(x)(r_1, \ldots, r_n) = \phi(y)(r_1, \ldots, r_n)$, or $(xr_1, \ldots, xr_n) = (yr_1, \ldots, yr_n)$. Picking any nonzero $r_i$, we see that $xr_i = yr_i$ implies $x = y$. Then the multiplicative action of a field on a vector space is faithful.
+        \item For a nonempty set $A$, then let $S_A$ act on $A$ by $\sigma \cdot a = \sigma(a)$ for every $\sigma \in S_A, a \in A$. Clearly, for $\sigma, \tau \in S_A$, then $\sigma \cdot (\tau \cdot a) = \sigma \cdot (\tau(a)) = \sigma(\tau(a)) = (\sigma \circ \tau)(a) = (\sigma \circ \tau) \cdot a$. Moreover, $1 \cdot a = 1(a) = a$. The associated homomorphism is $\phi : S_A \to S_A$ defined by $\phi(\tau) = \sigma_\tau$. Since $\sigma_\tau : A \to A$ is defined as the permutation on $A$ such that $\sigma_\tau(a) = \tau \cdot a = \tau(a)$, it follows that $\phi(\tau)(a) = \tau(a)$, or that $\phi(\tau) = \tau$. Then $\phi$ is the identity map on $A$, which has a trivial kernel so that it is actually an isomorphism (since $A$, thus $S_A$, are finite).
+        \item Fix the vertices of a regular $n$-gon. Then every element $\alpha \in D_{2n}$ is associated with a permutation $\sigma_\alpha$ of the set $\{1, 2, \ldots, n\}$, which shall be referred to as $A$. For example, $r \in D_{2n}$ is associated with $\sigma_r : A \to A$ where $\sigma_r(a) = a + 1$, and $\sigma_r(n) = 1$.  The mapping from $D_{2n} \times A$ to $A$ defined by $\cdot(\alpha, i) \to \sigma_\alpha(i)$ is indeed a group action: for any $\alpha, \beta \in D_{2n}$, then $\cdot(\alpha, \cdot (\beta, i)) = \cdot(\alpha, \sigma_\beta(i)) = \sigma_\alpha(\sigma_\beta(i)) = (\sigma_\alpha \circ \sigma_\beta)(i) = \cdot(\alpha \circ \beta, i)$. Moreover, $\cdot(1, i) = \sigma_1(i) = 1(i) = i$. This action is faithful, since all elements of $D_{2n}$ are distinct. 
+        
+        One thing to note is that for $n = 3$, then $D_6 \cong S_3$ because $|D_6| = |S_3|$ and the associated homomorphism is injective. It is not true, however, that $D_{2n} \cong S_n$ for $n \geq 4$, which is easy to see by considering orders.
+    \end{enumerate}
+\end{ex}

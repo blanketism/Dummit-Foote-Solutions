@@ -1,0 +1,514 @@
+\setcounter{section}{-1}
+
+\section{Preliminaries}
+
+\subsection{Basics}
+
+For Exercises 1 to 4, let
+$$M = 
+\begin{pmatrix}
+    1 & 1 \\
+    0 & 1
+\end{pmatrix}$$
+and $\bb = \{X \in \ac : MX = XM\}$, where $\ac$ denotes the set of $2 \times 2$ matrices with real entries.
+\begin{problems}
+    \item Determine which of the following elements of $\ac$ lie in $\bb$:
+    $$
+    \begin{pmatrix}
+        1 & 1 \\
+        0 & 1
+    \end{pmatrix},
+    \begin{pmatrix}
+        1 & 1 \\
+        1 & 1
+    \end{pmatrix},
+    \begin{pmatrix}
+        0 & 0 \\
+        0 & 0
+    \end{pmatrix},
+    \begin{pmatrix}
+        1 & 1 \\
+        1 & 0
+    \end{pmatrix},
+    \begin{pmatrix}
+        1 & 0 \\
+        0 & 1
+    \end{pmatrix},
+    \begin{pmatrix}
+        0 & 1 \\
+        1 & 0 
+    \end{pmatrix}$$
+    \begin{sol}
+        Note that the 1st matrix is $M$ itself so that it belongs to $\bb$, since $MX = XM = M^2$. Further note that the 3rd, 5th, and 6th matrices are the zero, identity, and exchange matrices respectively. Then the 3rd and 5th belong to $\bb$ while the 6th does not. Then only the remaining matrices to check are the 2nd and 4th matrices. For the 2nd matrix:
+        \begin{align*}
+            MX & = 
+            \begin{pmatrix}
+                1 & 1 \\
+                0 & 1
+            \end{pmatrix}
+            \begin{pmatrix}
+                1 & 1 \\
+                1 & 1
+            \end{pmatrix} = 
+            \begin{pmatrix}
+                1 \cdot 1 + 1 \cdot 1 & 1 \cdot 1 + 1 \cdot 1 \\
+                0 \cdot 1 + 1 \cdot 1 & 0 \cdot 1 + 1 \cdot 1
+            \end{pmatrix} = 
+            \begin{pmatrix}
+                2 & 2 \\ 1 & 1
+            \end{pmatrix} \\
+            XM & = 
+            \begin{pmatrix}
+                1 & 1 \\
+                1 & 1 
+            \end{pmatrix}
+            \begin{pmatrix}
+                1 & 1 \\
+                0 & 1
+            \end{pmatrix} = 
+            \begin{pmatrix}
+                1 \cdot 1 + 1 \cdot 0 & 1 \cdot 1 + 1 \cdot 1 \\
+                1 \cdot 1 + 1 \cdot 0 & 1 \cdot 1 + 1 \cdot 1 
+            \end{pmatrix} =
+            \begin{pmatrix}
+                2 & 1 \\
+                2 & 1
+            \end{pmatrix}
+        \end{align*}
+        Then $MX \neq XM$ and the 2nd matrix does not belong to $\bb$. For the 4th matrix:
+        \begin{align*}
+            MX & = 
+            \begin{pmatrix}
+                1 & 1 \\
+                0 & 1 
+            \end{pmatrix}
+            \begin{pmatrix}
+                1 & 1 \\
+                1 & 0
+            \end{pmatrix} =
+            \begin{pmatrix}
+                1 \cdot 1 + 1 \cdot 1 & 1 \cdot 1 + 1 \cdot 0 \\
+                0 \cdot 1 + 1 \cdot 1 & 0 \cdot 1 + 1 \cdot 0
+            \end{pmatrix} =
+            \begin{pmatrix}
+                2 & 1 \\
+                1 & 0
+            \end{pmatrix} \\
+            XM & = 
+            \begin{pmatrix}
+                1 & 1 \\
+                1 & 0
+            \end{pmatrix}
+            \begin{pmatrix}
+                1 & 1 \\
+                0 & 1
+            \end{pmatrix} = 
+            \begin{pmatrix}
+                1 \cdot 1 + 1 \cdot 0 & 1 \cdot 1 + 1 \cdot 1 \\
+                1 \cdot 1 + 0 \cdot 0 & 1 \cdot 1 + 0 \cdot 1
+            \end{pmatrix} = 
+            \begin{pmatrix}
+                1 & 2 \\
+                1 & 1
+            \end{pmatrix}
+        \end{align*}
+        So that $MX \neq XM$.
+    \end{sol}
+    \item Prove that if $P, Q \in \bb$, then $P + Q \in \bb$ where $+$ denotes the usual sum of two matrices.
+    \begin{sol}
+        For Exercises 2 and 3, let
+        \[P = 
+        \begin{pmatrix}
+            a & b \\
+            c & d
+        \end{pmatrix}, \quad Q = 
+        \begin{pmatrix}
+            e & f \\
+            g & h
+        \end{pmatrix}, \quad P + Q = 
+        \begin{pmatrix}
+            a + e & b + f \\
+            c + g & d + h
+        \end{pmatrix}, \quad P \cdot Q = 
+        \begin{pmatrix}
+            ae + bg & af + bh \\
+            ce + dg & cf + dh
+        \end{pmatrix}\]
+        where $PM = MP$ and $QM = MQ$. Then
+        \begin{align*}
+            M(P + Q) & = 
+            \begin{pmatrix}
+                1 & 1 \\
+                0 & 1
+            \end{pmatrix}
+            \begin{pmatrix}
+                a + e & b + f \\
+                c + g & d + h
+            \end{pmatrix} \\
+            & = 
+            \begin{pmatrix}
+                a + e + c + g & b + f + d + h \\
+                c + g & d + h
+            \end{pmatrix} \\
+            & = 
+            \begin{pmatrix}
+                a + c & b + d \\
+                c & d
+            \end{pmatrix} + 
+            \begin{pmatrix}
+                e + g & f + h \\
+                g & h
+            \end{pmatrix} \\
+            & = MP + MQ \\
+            & = PM + QM \\
+            & = 
+            \begin{pmatrix}
+                a & a + b \\
+                c & c + d
+            \end{pmatrix} + 
+            \begin{pmatrix}
+                e & e + f \\
+                g & g + h
+            \end{pmatrix} \\
+            & = 
+            \begin{pmatrix}
+                a + e & a + e + b + f \\
+                c + g & c + g + d + h
+            \end{pmatrix} \\
+            & = 
+            \begin{pmatrix}
+                a + e & b + f \\
+                c + g & d + h
+            \end{pmatrix}
+            \begin{pmatrix}
+                1 & 1 \\
+                0 & 1
+            \end{pmatrix} \\
+            & = (P + Q)M \qh
+        \end{align*}
+    \end{sol}
+    \item Prove that if $P, Q \in \bb$, then $P\cdot Q \in \bb$ where $\cdot$ denotes the usual product of two matrices.
+    \begin{sol}
+        Using $PQ$, proceed as we did above with $M(PQ)$. Rewriting the entries will result in $(MP)Q$. Since $P \in \bb$, then we have $(PM)Q$. We rewrite entries again to result in $P(MQ)$. Because $Q \in \bb$, we have $P(QM)$, and a final rewrite results in $(PQ)M$.
+    \end{sol}
+    \item Find conditions on $p, q, r, s$ which determine precisely when $
+    \begin{pmatrix}
+        p & q \\
+        r & s
+    \end{pmatrix} \in \bb$.
+    \begin{sol}
+        Let $X$ be the matrix described above. Note that
+        \begin{align*}
+            MX & =
+            \begin{pmatrix}
+                1 & 1 \\
+                0 & 1
+            \end{pmatrix}
+            \begin{pmatrix}
+                p & q \\
+                r & s
+            \end{pmatrix} =
+            \begin{pmatrix}
+                p + r & q + s \\
+                r & s
+            \end{pmatrix} \\
+            XM & = 
+            \begin{pmatrix}
+                p & q \\
+                r & s
+            \end{pmatrix}
+            \begin{pmatrix}
+                1 & 1 \\
+                0 & 1
+            \end{pmatrix} = 
+            \begin{pmatrix}
+                p & p + q \\
+                r & r + s
+            \end{pmatrix}
+        \end{align*}
+        Because $X \in \bb$, then we may compare entries to obtain the following:
+        \[
+        \begin{cases}
+            p + r = p \\
+            q + s = p + q \\
+            r = r \\
+            s = r + s
+        \end{cases}
+        \]
+        The first and fourth equations force $r = 0$, and the second equation forces $p = s$. Then $\bb$ is classified as
+        \[\bb = \set*{\left.
+        \begin{pmatrix}
+            p & p + q \\
+            0 & p
+        \end{pmatrix}\,\right|\, p, q \in \r} \qh\]
+    \end{sol}
+    \item Determine whether the following functions $f$ are well defined:
+    \begin{problems}
+        \item $f : \q \to \z$ defined by $f(a/b) = a$.
+        \item $f : \q \to \q$ defined by $f(a/b) = a^2/b^2$.
+    \end{problems}
+    \begin{solalph}
+        \item No, because $1/2 = 2/4$, but $f(1/2) = 1$ and $f(2/4) = 2$.
+        \item Yes; suppose $a/b = c/d$. Then $ad = bc$, or that $a^2d^2 = b^2c^2$. Then $a^2/b^2 = c^2/d^2$, or $f(a/b) = f(c/d)$. 
+    \end{solalph}
+    \item Determine whether the function $f: R^+ \to \z$ defined by mapping a real number $r$ to the first digit to the right of the decimal point in a decimal expansion of $r$ is well defined.
+    \begin{sol}
+        No. Note that $1=1.000\ldots = 0.999\ldots$, but $f(1.000\ldots) = 1$ and $f(0.999\ldots) = 9$.
+    \end{sol}
+    \item Let $f: A \to B$ be a surjective map of sets. Prove that the relation
+    $$a \sim b \iff f(a) = f(b)$$
+    is an equivalence relation whose equivalence classes are the fibers of $f$.
+    \begin{sol}
+        The relation above is an equivalence relation, since $=$ is already an equivalence relation on $B$.
+        
+        Consider now some $b \in B$. Since $f$ is surjective, there exists $a \in A$ such that $f(a) = b$. The equivalence class of $a$ is the set $\set{x \in A \mid x \sim a}$. By definition of $\sim$, this is equal to the set $\set{x \in A \mid f(x) = f(a) = b}$, which is precisely the fiber of $f$ over $b$.
+    \end{sol}
+\end{problems}
+
+\subsection{Properties of the Integers}
+
+\begin{enumerate}
+    \item For each of the following pairs of integers $a$ and $b$, determine their greatest common divisor, their least common multiple, and write their greatest common divisor in the form $ax + by$ for some integers $x$ and $y$.
+    \begin{enumerate}
+        \item $a = 20, b = 13$
+        \item $a= 69, b = 372$
+        \item $a = 792, b = 275$
+        \item $a = 11391, b = 5673$
+        \item $a= 1761, b = 1567$
+        \item $a = 507885, b = 60808$
+    \end{enumerate}
+    \begin{solalph}
+        \item Note: for this exercise, we will only do (e) as that has the most steps in calculating both the g.c.d and the Euclidean Algorithm. The l.c.m is obtained by dividing the product $ab$ by $(a, b)$.
+        
+        $(20, 13) = 1, \lcm(20, 13) = 260, 1 = 2(20) - 3(13)$
+        \item $(69, 372) = 3,\lcm(69, 372) = 8556, 27(69) -5(372)$
+        \item $(792, 275) = 11, \lcm(792, 275) = 19800, 8(792) - 23(275)$
+        \item $(11391, 5673) = 3 ,\lcm(11391, 5673) = 21540381, 3 = 253(5673) - 126(11391)$
+        \item Applying the Euclidean Algorithm to $a = 1761$ and $b = 1567$, we get:
+        \begin{align*}
+            1761 & = (1)1567 + 194 \\
+            1567 & = (8)194 + 15 \\
+            194 & = (12)15 + 14 \\
+            15 & = (1)14 + 1
+        \end{align*}
+        Then $(1761, 1567) = 1$ so that $\lcm(1761, 1567) = 2759487$. Reversing the Euclidean Algorithm steps to solve for 1, we get:
+        \begin{align*}
+            1 & = 15 - 14 \\
+            & = 15 - (194 - 12(15)) = 13(15) - 194 \\
+            & = 13(1567 - 8(194)) - 194 = 13(1567) - 105(194) \\
+            & = 13(1567) - 105(1761 - 1567) = -105(1761) + 118(1567)
+        \end{align*}
+        \item $(507885, 60808) = 691, \lcm(507885, 60808) = 44693880, 691 = 142(60808) - 17(507885)$
+    \end{solalph}
+    \item Prove that if the integer $k$ divides the integers $a$ and $b$ then $k$ divides $as + bt$ for every pair of integers $s$ and $t$. 
+    \begin{sol}
+        Since $k \mid a$ and $k \mid b$, there exists $x, y \in \z$ such that $a = kx$ and $b = ky$. Then for any $s, t \in \z$, we have $as + bt = kxs + kyt = k(xs + yt)$ which is divisible by $k$.
+    \end{sol}
+    \item Prove that if $n$ is composite then there are integers $a$ and $b$ such that $n$ divides $ab$ but $n$ does not divide either $a$ or $b$.
+    \begin{sol}
+        By the Fundamental Theorem of Arithmetic, $n$ has at least two prime factors $a, b$ such that $1 < a, b < n$. Putting $n = ab$, then $n \mid ab$ but $n \nmid a$ and $n \nmid b$.
+    \end{sol}
+    \item Let $a, b$ and $N$ be fixed integers with $a$ and $b$ nonzero and let $d = (a, b)$ be the greatest common divisor of $a$ and $b$. Suppose $x_0$ and $y_0$ are particular solutions to $ax + by = N$ (i.e., $ax_0 + by_0 = N$). Prove for any integer $t$ that the integers
+    $$x = x_0 + \frac bdt \text{ and } y = y_0 - \frac adt$$
+    are also solutions to $ax + by = N$ (this is in fact the general solution).
+    \begin{sol}
+        We have
+        \begin{align*}
+            ax + by & = a\left(x_0 + \frac bdt\right) + b\left(y_0 - \frac adt\right) \\
+            & = ax_0 + \frac{ab}{d}t + by_0 - \frac{ab}{d}t \\
+            & = ax_0 + by_0 = N
+        \end{align*}
+    \end{sol}
+    \item Determine the value $\phi(n)$  each integer $n \leq 30$ where $\phi$ denotes the Euler $\phi$-function.
+    \begin{sol}
+        $$\begin{array}{c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c}
+            n & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\
+            \hline
+            \phi(n) & 1 & 1 & 2 & 2 & 4 & 2 & 6 & 4 & 6 & 4 & 10 & 4 & 12 & 6 & 8 \\
+        \end{array}$$
+        $$\begin{array}{c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c}
+            n & 16 & 17 & 18 & 19 & 20 & 21 & 22 & 23 & 24 & 25 & 26 & 27 & 28 & 29 & 30 \\
+            \hline
+            \phi(n) & 8 & 16 & 6 & 18 & 8 & 12 & 10 & 22 & 8 & 20 & 12 & 18 & 12 & 28 & 8 \\
+        \end{array}$$
+    \end{sol}
+    \item Prove the Well Ordering Property of $\z$ by induction and prove the minimal element is unique.
+    \begin{sol}
+        Let $A \subseteq \n$ be nonempty. If $0 \in A$, then it has a minimal element. Suppose now that $0 \not\in A$. Moreover, suppose that $1, 2, \ldots, k \not\in A$ for some $k$. By strong induction, it follows that $k + 1 \not\in A$. However, this results in there being no positive integer in $A$, contradicting that it is nonempty, thus it must have a minimal element. Moreover, if it had two minimal elements $a, b$, then it follows that $a \leq b$ and $b \leq a$ by definition of minimal element. Hence, $a = b$, and the minimal element of $A$ is unique.
+    \end{sol}
+    \item If $p$ is a prime, prove that there do not exist nonzero integers $a$ and $b$ such that $a^2 = pb^2$ (i.e., $\sqrt p$ is not a rational number).
+    \begin{sol}
+        Suppose $\sqrt p$ is a rational number. Then there exists $a, b \in \z$ such that $a^2 = b^2p$, and $(a, b) = 1$. If $(a, b) = d \neq 1$, then take $a' = a/d$ and $b' = b/d$ instead. Then $p \mid a^2 = a \cdot a$, and $p \mid a$. We then have $a = kp$ for some $k \in \z$. Then $b^2 = k^2p$ so that $p \mid b$, and $b = mp$ for $m \in \z$. This contradicts that $(a, b) = 1$, hence $\sqrt p$ cannot be a rational number.
+    \end{sol}
+    \item Let $p$ be a prime, $n \in \n$. Find a formula for the largest power of $p$ which divides $n! = n(n - 1)(n - 2) \ldots 2 \cdot 1$ (it involves the greatest integer function).
+    \label{ex0.2.8}
+    \begin{sol}
+        Note that in $n!$, there are $\lfloor n/p \rfloor$ integers that are divisible by $p$, where the greatest integer function is necessary since $n$ may not be a perfect multiple of $p$ (consider $n = 36$ and $p = 7$. Then there are the multiples $7, 14, 21, 28,$ and $35$ which is $\lfloor 36/7 \rfloor = 5$). However, this alone does not account for the factors of $p$ in $n!$, so we move onto $p^2$. In this case, there are $\lfloor n/p^2 \rfloor$ integers divisible by $p^2$. We continue this process until a certain integer $a \in \n$ such that $p^a \leq n$. (We must bound $p^a$ above by $n$, up to equality, since $n$ may be a power of $p$, and any power $a$ such that $p^a > n$ would result in $\lfloor n/p^a\rfloor= 0$). It then follows that $a \leq \log_p(n)$, or that the maximum power of $p$ (and any of its multiples) that divide $n!$ is given by $a = \lfloor\log_p(n)\rfloor$. Thus, the largest power of $p$ that divides $n!$ is given by
+        $$\sum_{i = 1}^{\lfloor \log_p(n)\rfloor} \left\lfloor\frac{n}{p^i}\right\rfloor$$
+    \end{sol}
+    \item Write a computer program to determine the greatest common divisor $(a, b)$ of two integers $a$ and $b$ and to express $(a, b)$ in the form $ax + by$ for some integers $x$ and $y$.
+    \begin{breakablealgorithm}
+        \begin{algorithmic}[1]
+            \Require {Integers $a$, $b$ (not both zero)}
+            \Ensure {Integers $g, x, y$ such that $g = (a,b)$ and $a x + b y = g$}
+            
+            \State {$x_1 \gets 1$, $y_1 \gets 0$}
+            \State {$x_2 \gets 0$, $y_2 \gets 1$}
+            
+            \While {$b \neq 0$}
+                \State {$q \gets 0$}
+                \State {$r \gets a$}
+                \While {($r \ge b$) or ($r \le -b$)}
+                    \State {$r \gets r - b$}
+                    \State {$q \gets q + 1$}
+                \EndWhile
+                \State {$a \gets b$}
+                \State {$b \gets r$}
+                \State {$(x_1, x_2) \gets (x_2, x_1 - q \times x_2)$}
+                \State {$(y_1, y_2) \gets (y_2, y_1 - q \times y_2)$}
+            \EndWhile
+            
+            \State {$g \gets a$}
+            \State {\textbf{return} $(g, x_1, y_1)$}
+        \end{algorithmic}
+    \end{breakablealgorithm}
+    \item Prove for any given positive integer $N$ there exist only finitely many integers $n$ with $\phi(n) = N$ where $\phi$ denotes Euler's $\phi$-function. Conclude in particular that $\phi$ tends to infinity as $n$ tends to infinity.
+    \begin{sol}
+        Let $N \in \n$ be fixed, and let $n \in \n$ such that $\phi(n) = N$. We can break apart $n$ into its primes $p_i$ (where $p_1 < p_2 < \dots)$ with associated exponents $\alpha_i$:
+        $$n = \prod_{i = 1}^k p_i^{\alpha_i} \implies \phi(n) = \prod_{i = 1}^k p_i^{\alpha_i - 1}(p_i - 1) = N$$
+        In particular, each of the terms $p_i - 1$ divides $N$ so that $p_i - 1 \leq N$, or $p_i \leq N + 1$. It follows that any prime $q$ of some $n$ must be such a prime where $q - 1 \leq N$. Moreover, for some $p_i^{\alpha_i}$ that is a part of $n$'s prime factorization, it follows that $p_i^{\alpha_i - 1}$ divides $N$. Since $\alpha_i - 1$ is finite, this limits the exponents for any particular $p_i$. With a finite list of primes and finitely many exponents, it follows that the amount of $n$ such that $\phi(n) = N$ is finite.
+        
+        For some $N_0 \in \n$, there are finitely many $n$ such that $\phi(n) = N_0$. Then there are infinitely many $m > n$ such that $\phi(m) > N_0$, or that $\phi(n)$ tends towards infinity.
+    \end{sol}
+    \item Prove that if $d$ divides $n$ then $\phi(d)$ divides $\phi(n)$ where $\phi$ denotes Euler's $\phi$-function.
+    \begin{sol}
+        Let $n = p_1^{\alpha_1}p_2^{\alpha_2} \cdots p_k^{\alpha_k}$ with $d \mid n$. Then $d$ is a composition of some $p_i$ present in $n$, so some $\alpha_i$ may go to 0 or are less. In particular, we have that $d = p_1^{\beta_1}p_2^{\beta_2}\cdots p_k^{\beta_k}$, where $\beta_i \leq \alpha_i$ for all $i$. To see if $\phi(d) \mid \phi(n)$, it follows to check if $p_i^{\beta_i - 1}(p_i - 1)$ divides $p_i^{\alpha_i - 1}(p_i - 1)$, which further simplifies to checking if $p_i^{\beta_i}$ divides $p_i^{\alpha_i}$ for each $i$. Clearly, $p_i^{\alpha_i} = p_i^{\beta_i} \cdot p_i^{\alpha i - \beta_i}$, hence $\phi(d) \mid \phi(n)$.
+    \end{sol}
+\end{enumerate}
+
+\subsection{\texorpdfstring{$\intmod$: The Integers Modulo $n$}{Z/nZ: The Integers Modulo n}}
+
+\begin{enumerate}
+    \item Write down explicitly all the elements in the residue classes of $\intmod[18]$.
+    \begin{sol}
+        \begin{align*}
+            \widebar 0 & = \{0 + 18k : k \in \z\} = \{0, 18, -18, 36, -36, \ldots\} \\
+            \widebar 1 & = \{1 + 18k : k \in \z\} = \{1, 19, -17, 37, -35, \ldots\} \\
+            \widebar 2 & = \{2 + 18k : k \in \z\} = \{2, 20, -16, 38, -34, \ldots\} \\
+            \widebar 3 & = \{3 + 18k : k \in \z\} = \{3, 21, -15, 39, -33, \ldots\} \\
+            \widebar 4 & = \{4 + 18k : k \in \z\} = \{4, 22, -14, 40, -32, \ldots\} \\
+            \widebar 5 & = \{5 + 18k : k \in \z\} = \{5, 23, -13, 41, -31, \ldots\} \\
+            \widebar 6 & = \{6 + 18k : k \in \z\} = \{6, 24, -12, 42, -30, \ldots\} \\
+            \widebar 7 & = \{7 + 18k : k \in \z\} = \{7, 25, -11, 43, -29, \ldots\} \\
+            \widebar 8 & = \{8 + 18k : k \in \z\} = \{8, 26, -10, 44, -28, \ldots\} \\
+            \widebar 9 & = \{9 + 18k : k \in \z\} =\{9, 27, -9, 45, -27, \ldots\} \\
+            \widebar{10} & = \{10 + 18k : k \in \z\} = \{10, 28, -8, 46, -26, \ldots\} \\
+            \widebar{11} & = \{11 + 18k : k \in \z\} = \{11, 29, -7, 47, -25, \ldots\} \\
+            \widebar{12} & = \{12 + 18k : k \in \z\} = \{12, 30, -6, 48, -24, \ldots\} \\
+            \widebar{13} & = \{13 + 18k : k \in \z\} = \{13, 31, -5, 49, -23, \ldots\} \\
+            \widebar{14} & = \{14 + 18k : k \in \z\} = \{14, 32, -4, 50, -22, \ldots\} \\
+            \widebar{15} & = \{15 + 18k : k \in \z\} = \{15, 33, -3, 51, -21, \ldots\} \\
+            \widebar{16} & = \{16 + 18k : k \in \z\} = \{16, 34, -2, 52, -20, \ldots\} \\
+            \widebar{17} & = \{17 + 18k : k \in \z\} = 
+            \{17, 35, -1, 53, -19, \ldots\}
+        \end{align*}
+    \end{sol}
+    \item Prove that the distinct equivalence classes in $\intmod$ are precisely $\widebar 0, \widebar 1, \widebar 2, \ldots, \widebar{n - 1}$ (use the Division Algorithm).
+    \begin{sol}
+        Clearly, $\widebar 0, \widebar 1, \widebar 2, \ldots, \widebar{n - 1} \in \intmod$. Let $\widebar a \in \intmod$. By the Division Algorithm, there exists $q \in \z$ and $0 \leq r < n$ such that $a = nq + r$. Then $a \equiv r \bmod n$, so that $\widebar a = \widebar r$, where $r$ is any one of the aforementioned equivalence classes. Moreover, if $\widebar a = \widebar b$ where $0 \leq a, b < n$, it follows that $n \mid (a - b)$ so that $a - b = 0$, or $a = b$. Hence, the equivalence classes of $\intmod$ are precisely the set above.
+    \end{sol}
+    \item Prove that if $a = a_n10^n + a_{n - 1}10^{n - 1} + \cdots + a_110 + a_0$ is any positive integer then $a \equiv (a_n + a_{n - 1} + \cdots + a_1 + a_0) \bmod 9$ (note that this is the usual arithmetic rule that the remainder after division by 9 is the same as the sum of the decimal digits mod 9—in particular an integer is divisible by 9 if and only if the sum of its digits is divisible by 9) [note that $10 \equiv 1 \bmod 9$].
+    \begin{sol}
+        Using the note, then
+        \begin{align*}
+            a & \equiv (a_n10^n + a_{n - 1}10^{n - 1} + \cdots + a_110 + a_0) \bmod 9 \\
+            & \equiv (a_n1^n + a_{n - 1}1^{n - 1} + \cdots + a_11 + a_0) \bmod 9 \\
+            & = (a_n + a_{n - 1} + \cdots + a_1 + a_0) \bmod 9
+        \end{align*}
+    \end{sol}
+    \item Compute the remainder when $37^{100}$ is divided by $29$.
+    \begin{sol}
+        Note the following:
+        \begin{align*}
+            37^2 & \equiv 6 \bmod 29 \\ 
+            37^4 & \equiv 6^2 \bmod 29 \equiv 7 \bmod 29 \\
+            37^8 & \equiv 7^2 \bmod 29 \equiv 20 \bmod 29 \\
+            37^{16} & \equiv 20^2 \bmod 29 \equiv 23 \bmod 29 \equiv -6 \bmod 29 \\
+            37^{32} & \equiv (-6)^2 \bmod 29 \equiv 7 \bmod 29 \\
+            37^{64} & \equiv 20 \bmod 29
+        \end{align*}
+        Then we have
+        $$37^{64}37^{32}37^4 \equiv 20 \cdot 7 \cdot 7 \bmod 29 \equiv 20^2 \bmod 29 \equiv 23 \bmod 29$$
+        Hence the remainder when dividing $37^{100}$ by $29$ is $23$.
+    \end{sol}
+    \item Compute the last two digits of $9^{1500}$.
+    \begin{sol}
+        Note that $9^3 \equiv 29 \bmod 100$ so that $29^3 \equiv 89 \bmod 100$. Then $89 \cdot 9 \equiv 1 \bmod 100$, or $9^{10} \equiv 1 \bmod 100$. Since $1500$ is a multiple of $10$, then $9^{1500} = (9^{10})^{150} \equiv 1^{150} \bmod 100 \equiv 1 \bmod 100$. Then the last two digits is $01$.
+    \end{sol}
+    \item Prove that the square of the elements in $\intmod[4]$ are just $\widebar 0$ and $\widebar 1$.
+    \begin{sol}
+        \begin{align*}
+            0^2 = 0 \equiv 0 \bmod 4 \\
+            1^2 = 1 \equiv 1 \bmod 4 \\
+            2^2 = 4 \equiv 0 \bmod 4 \\
+            3^2 = 9 \equiv 1 \bmod 4 \\
+        \end{align*}
+    \end{sol}
+    \item Prove that for any integers $a$ and $b$ that $a^2 + b^2$ never leaves a remainder of $3$ when divided by $4$ (use the previous exercise).
+    \begin{sol}
+        Since $a^2 $ and $b^2$ is either $0 \bmod 4$ or $1 \bmod 4$, then we have $4$ potential sums:
+        \begin{align*}
+            0 + 0 \equiv 0 \bmod 4 \\
+            0 + 1 \equiv 1 \bmod 4 \\
+            1 + 0 \equiv 1 \bmod 4 \\
+            1 + 1 \equiv 2 \bmod 4
+        \end{align*}
+        In any of the sums, there is no remainder of $3$ when dividing by $4$.
+    \end{sol}
+    \item Prove that the equation $a^2 + b^2 = 3c^2$ has no solutions in nonzero integers $a, b$ and $c$. [Consider the equation $\bmod 4$ as in the previous two exercises and show that $a, b$ and $c$ would all have to be divisible by $2$. Then each of $a^2, b^2$ and $c^2$ has a factor of $4$ and by dividing through by $4$ show that there would be a smaller set of solutions to the original equation. Iterate to reach a contradiction.]
+    \begin{sol}
+        As hinted, consider the equation in $\bmod 4$. The left side must be $0$ or $1$, while the right side must be $0$ or $3$, hence both sides must be equivalent to $0 \bmod 4$. Then $3c^2 \equiv 0 \bmod 4$ implies $c$ is even. If $a$ is even, then $b$ is even. If $a$ is odd, then $b$ must be odd. However, putting $a = 2x + 1$ and $b = 2y + 1$ for $x, y \in \z$ results in $a^2 + b^2 = (2x + 1)^2 + (2y + 1)^2 \equiv 2 \bmod 4$, contradicting that $a^2 + b^2 \equiv 0 \bmod 4$. It must be that $a$ and $b$ are even. We may then divide the original equation by $4$ to get a new equation $r^2 + s^2 = 3t^2$, where $r < a, s < b, t < c$. But then we may use the same reasoning to conclude that the new $r, s, t$ must also be even, resulting in a new equation with smaller integer solutions. This process cannot be iterated indefinitely as we cannot halve any integer indefinitely and remain an integer. Hence, the original equation does not have integer solutions.
+    \end{sol}
+    \item Prove that the square of any odd integer always leaves a remainder of $1$ when divided by $8$.
+    \begin{sol}
+        Take $a = 2k + 1, k \in \z$. Then $a^2 = 4k^2 + 4k + 1 = 4k(k + 1) + 1$. Note that $k(k + 1)$ is even, so that $4k(k + 1)$ is divisible by $8$. Then $a^2 \equiv 1 \bmod 8$.
+    \end{sol}
+    \item Prove that the number of elements of $\units$ is $\phi(n)$ where $\phi$ denotes the Euler $\phi$-function.
+    \begin{sol}
+        Recall that $\phi(n)$ produces the number of integers that are relatively prime to $n$. It suffices to prove that the elements of $\units$ are the equivalence classes of $\intmod$ whose representatives are relatively prime to $n$.
+        
+        Let $\widebar a \in \units$. Then there exists $\widebar b \in \units$ such that $\widebar a \cdot \widebar b = \widebar 1$. In particular, $\widebar a \cdot \widebar b - \widebar 1 = \widebar 0$, or $n \mid (ab - 1)$. Then $nx + ab = 1$ for $x \in \z$, which shows that $(a, n) = 1$. Conversely, if $\widebar a \in \units$ such that $(a, n) = 1$, then there exists $b, x \in \z$ such that $ab + xn = 1$, or $ab = 1 \bmod n$. It follows that $\widebar b$ is the inverse of $\widebar a \in \units$.
+    \end{sol}
+    \item Prove that if $\widebar a, \widebar b \in \units$, then $\widebar a \cdot \widebar b \in \units$.
+    \begin{sol}
+        It follows that there exist $\widebar x, \widebar y \in \units$ such that $\widebar a \cdot \widebar x = \widebar b \cdot \widebar y = \widebar 1$. In particular:
+        $$\widebar 1 = \widebar 1 \cdot \widebar 1 = (\widebar a \cdot \widebar x)\cdot(\widebar b \cdot \widebar y) = (\widebar a \cdot \widebar b) \cdot (\widebar x \cdot \widebar y)$$
+        So that the multiplicative inverse of $\widebar a \cdot \widebar b$ is $\widebar x \cdot \widebar y$.
+    \end{sol}
+    \item Let $n \in \z, n > 1$ and let $a \in \z$ with $1 \leq a \leq n$. Prove if $a$ and $n$ are not relatively prime, there exists an integer $b$ with $1 \leq b < n$ such that $ab \equiv 0 \bmod n$ and deduce that there cannot be an integer $c$ such that $ac \equiv 1 \bmod n$.
+    \begin{sol}
+        Since $a$ and $n$ are not relatively prime, then $(a, n) = d$ where $1 < d \leq a$. Then $n/d, a/d \in \z$, and $a(n/d) = n(a/d) \equiv 0 \bmod n$ so that $b = n/d$. Moreover, if there was such a $c$ such that $ac \equiv 1 \bmod n$, then $abc \equiv b \bmod n$, which is false since $ab \equiv 0 \bmod n$. Hence, no such $b$ may exist.
+    \end{sol}
+    \item Let $n \in \z, n > 1$ and let $a \in \z$ with $1 \leq a \leq n$. Prove that if $a$ and $n$ are relatively prime then there is an integer $c$ such that $ac \equiv 1 \bmod n$ [use the fact that the g.c.d. of two integers is a $\z$-linear combination of the integers].
+    \begin{sol}
+        Since $(a, n) = 1$, there exists $c, x \in \z$ such that $ac + nx = 1$. Then $ac \equiv 1 \bmod n$.
+    \end{sol}
+    \item Conclude from the previous two exercises that $\units$ is the set of elements $\widebar a$ of $\intmod$ with $(a, n) = 1$ and hence prove Proposition 4. Verify this directly in the case $n = 12$.
+    \begin{sol}
+        The previous two exercises show that $a$ and $n$ are relatively prime if and only if there exists $b$ such that $ab \equiv 1 \bmod n$, which is exactly the proposition. For $n = 12$, the elements $1, 5, 7, 11$ are relatively prime to $12$, so that $\units[11] = \{\widebar 1, \widebar 5, \widebar 7, \widebar{11}\} $ whose inverses are $\widebar 1, \widebar 7, \widebar 5, \widebar{11}$ respectively. 
+    \end{sol}
+    \item For each of the following pairs of integers $a$ and $n$, show that $a$ is relatively prime to $n$ and determine the multiplicative inverse of $\widebar a$ in $\intmod$.
+    \begin{enumerate}
+        \item $a = 13, n = 20$
+        \item $a = 69, n = 89$
+        \item $a = 1891, n = 3797$
+        \item $a = 6003722857, n = 77695236973$
+    \end{enumerate}
+    \begin{solalph}
+        \item Refer to the previous set of exercises on how to do the Euclidean Algorithm and how to calculate such an $x$ such that $ax + by = 1$, or $ax \equiv 1 \bmod n$. For this exercise, we obtain $-3 \equiv 17 \bmod 20$, so the inverse is $\widebar{17}$.
+        \item $40(69) - 31(89) = 1 \implies 40\cdot 89 \equiv 1 \bmod 89$, so the inverse is $\widebar{40}$.
+        \item $253(1891) - 126(3797) = 1 \implies 253 \cdot 1891 \equiv 1 \bmod 3797$, so the inverse is $\widebar{253}$.
+        \item $17n - 220a = 1 \implies -220a \equiv 1 \bmod n \implies 77695237193a \equiv 1 \bmod n$, so the inverse is $\widebar{77695237193}$.
+    \end{solalph}
+    \item Write a computer program to add and multiply mod $n$, for any $n$ given as input. The output of these operations should be the least residues of the sums and products of two integers. Also include the feature that if $(a, n) = 1$, an integer $c$ between $1$ and $n - 1$ such that $\widebar a \cdot \widebar c = \widebar 1$ may be printed on request. (Your program should not, of course, simply quote "mod" functions already built into many systems).
+\end{enumerate}
