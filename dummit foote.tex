@@ -1,0 +1,73 @@
+\documentclass[10pt]{extarticle}
+\usepackage[margin = 1in]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{lmodern, anyfontsize}
+\usepackage{graphicx, fancyhdr}
+\usepackage{amsmath, amsthm, lipsum, mathtools}
+\usepackage[T1]{fontenc}
+\usepackage[adobe-utopia]{mathdesign}
+\usepackage{xparse, tikz, multicol, enumitem, pgfplots}
+\usepackage{algorithm, algpseudocode, hyperref}
+\usepackage[framemethod = TikZ]{mdframed}
+\usetikzlibrary{shadows, shapes.geometric, positioning, arrows.meta}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\pgfplotsset{compat=newest}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={},
+    }
+
+\newcommand{\tocex}{\subsection*{Exercises}
+\addcontentsline{toc}{subsection}{\protect\numberline{}Exercises}}
+
+\tikzset{
+    lattice edge/.style = {draw, -},
+}
+
+\tikzset{
+    u/.style = {lattice edge, to path={(\tikztostart) -- (\tikztotarget.south)\tikztonodes}},
+    uu/.style = {lattice edge, to path={(\tikztostart.north) -- (\tikztotarget)\tikztonodes}},
+}
+
+\newcommand{\wt}[1]{\widetilde{#1}}
+\newcommand{\newsec}[1]{\subsection*{#1}
+\addcontentsline{toc}{subsection}{\protect\numberline{}#1}}
+
+\urlstyle{same}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[RO]{\leftmark}
+\fancyhead[LO]{\rightmark}
+\DeclareMathOperator{\ut}{UT}
+
+\input{Misc Environments/breakable algorithm.tex}
+\input{Base Tex Files/commands.tex}
+\input{Base Tex Files/environments.tex}
+
+% Extra Commands
+
+\title{Dummit \& Foote Notes}
+\author{blanket}
+\date{Fall 2025}
+
+\setlength{\jot}{1pt}
+\setlength{\parindent}{0.5cm}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\include{Dummit Foote Notes/chapter 0}
+\include{Dummit Foote Notes/chapter 1}
+\include{Dummit Foote Notes/chapter 2}
+\include{Dummit Foote Notes/chapter 3}
+
+\end{document}
