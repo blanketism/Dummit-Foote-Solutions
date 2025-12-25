@@ -738,7 +738,7 @@
     \end{sol}
     \item Prove that if $A$ is a subset of $B$ then $\langle A\rangle \le \langle B\rangle$. Give an example where $A \subseteq B$ with $A \ne B$ but $\langle A\rangle = \langle B\rangle$.
     \begin{sol}
-        If $a \in \gen A$, then $a \in A$ so that $a \in B$. Then $a \in \gen B$, hence $\gen A \leq \gen B$. Moreover, take $\gen A = \set x$ and $B = \set{x, x^2}$ in $Z_4$. Then $A \subset B$, but $\gen A = \gen B = Z_4$.
+        By definition, $\gen B$ is the smallest subgroup of $G$ that contains $B$. Hence, it must contain $A$. Since $\gen A$ is the smallest subgroup of $G$ that contains $A$, and $\gen B$ contains $A$, it follows that $\gen A \subseteq \gen B$. Moreover, take $\gen A = \set x$ and $B = \set{x, x^2}$ in $Z_4$. Then $A \subset B$, but $\gen A = \gen B = Z_4$.
     \end{sol}
     \item Prove that if $H$ is an abelian subgroup of a group $G$ then $\langle H, Z(G)\rangle$ is abelian. Give an explicit example of an abelian subgroup $H$ of a group $G$ such that $\langle H, C_G(H)\rangle$ is not abelian.
     \begin{sol}

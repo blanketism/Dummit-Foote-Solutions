@@ -592,7 +592,7 @@ Let $G$ and $H$ be groups.
         \[\phi(\bar{AB}) = \det(AB) = \det(A)\det(B) = \phi(\bar A)\phi(\bar B)\]
         so that $\phi$ is a homomorphism. Then $\phi$ is a bijective homomorphism, and $\gl_n(F)/\speclin_n(F) \cong F\unt$. 
     \end{sol}
-    \item Prove that if $G/Z(G)$ is cyclic then $G$ is abelian. [If $G/Z(G)$ is cyclic with generator $xZ(G)$, show that every element of $G$ can be written in the form $x^a z$ for some integer $a \in \mathbb{Z}$ and some element $z \in Z(G)$.]
+    \item \label{ex3.1.36} Prove that if $G/Z(G)$ is cyclic then $G$ is abelian. [If $G/Z(G)$ is cyclic with generator $xZ(G)$, show that every element of $G$ can be written in the form $x^a z$ for some integer $a \in \mathbb{Z}$ and some element $z \in Z(G)$.]
     \begin{sol}
         Suppose $G/Z(G) = \gen{xZ(G)}$ for some $x \in G$. Then cosets are of the form $x^aZ(G)$ for some $a \in \z$. Suppose $g, h \in G$. Since both $g$ and $h$ belong to some coset in $G/Z(G)$, then $g = x^mz$ and $h = x^nz'$ for some $m, n \in \z$ and $z, z' \in Z(G)$. Then
         \[ab = (x^mz)(x^nz') = (x^nz')(x^mz) = ba\]
@@ -665,43 +665,74 @@ Let $G$ be a group.
         Only 1, 2, 5, 9, 15, and 60 are permissible orders for subgroups of a group of order 120. The corresponding indices are 120, 60, 24, 12, 8, and 2, respectively.
     \end{sol}
     \item Prove that the lattice of subgroups of $S_3$ in Section 2.5 is correct (i.e., prove that it contains all subgroups of $S_3$ and that their pairwise joins and intersections are correctly drawn).
-    
+    \begin{sol}
+        Since $|S_3| = 6$, then Lagrange's Theorem shows that non-trivial subgroups are of order 2 and 3. Clearly, none of the cyclic subgroups of order 2 can be contained in $\gen{(1\ 2\ 3)}$ since it has order 3. Moreover, $\gen{(1\ 2\ 3)} = \gen{(1\ 3\ 2)}$, hence all cyclic subgroups are accounted for, and the containment is correct.
+
+        To prove that the subgroups of $S_3$ are only the cyclic subgroups in the lattice, suppose $S_3$ has a non-cyclic subgroup $H$ of order 3, and suppose $H = \gen{\sigma, \tau}$ for some $\sigma, \tau \in S_3$. We then have $H = \set{1, \sigma, \tau}$. Since $\abs\sigma$ divides $\abs H$, it must be that $\abs\sigma = 3$, hence $\sigma$ and $\sigma^2$ are distinct elements so that $\tau = \sigma^2$. Then $H = \gen\sigma$, contradicting it was non-cyclic. Hence, all proper subgroups of $S_3$ are cyclic, and the lattice is correct.
+    \end{sol}
     \item Prove that the lattice of subgroups of $Q_8$ in Section 2.5 is correct.
-    
-    \item Show that if $|G| = pq$ for some primes $p$ and $q$ (not necessarily distinct) then either $G$ is abelian or $Z(G) = 1$. [See Exercise 36 in Section 1.]
-    
+    \begin{sol}
+        Lagrange's Theorem shows that the possible orders of subgroups of $Q_8$ are 1, 2, 4, and 8. The only possible subgroup of order 2 is $\gen{-1}$ since it is the only element of order 2 in $Q_8$. The only subgroups of order 4 are $\gen i, \gen j$, ad $\gen k$ since every other nonidentity element has order 4 and are contained in one of these subgroups.
+
+        Since $\gen{-1}$ is contained in each of $\gen i, \gen j$, and $\gen k$, and the subgroups of order 4 are maximal via Lagrange's, then the lattice is correct.
+    \end{sol}
+    \item Show that if $|G| = pq$ for some primes $p$ and $q$ (not necessarily distinct) then either $G$ is abelian or $Z(G) = 1$. [See \hyperref[ex3.1.36]{Exercise 3.1.36}.]
+    \begin{sol}
+        If $G$ is abelian, then we are done. Suppose $G$ is not abelian. It follows that $Z(G)$ is a proper subgroup of $G$, and by Lagrange's Theorem, the order of $Z(G)$ must be either 1, $p$, or $q$. Assume $Z(G)$ is not trivial, and without loss of generality, assume $|Z(G)| = p$. Since $Z(G) \nsub G$ as $Z(G)$ is abelian, then we may Lagrange's again to obtain $\abs{G/Z(G)} = \abs G/\abs{Z(G)} = q$, which is prime. Then $G/Z(G)$ is cyclic, so by \hyperref[ex3.1.36]{Exercise 3.1.36}, $G$ is abelian, a contradiction. Hence, $Z(G) = 1$.
+    \end{sol}
     \item Let $H$ be a subgroup of $G$ and fix some element $g \in G$. 
     \begin{problems}
         \item Prove that $gH g^{-1}$ is a subgroup of $G$ of the same order as $H$.
-        
         \item Deduce that if $n \in \mathbb{Z}^+$ and $H$ is the unique subgroup of $G$ of order $n$ then $H \nsub G$.
-        
     \end{problems}
+    \begin{solalph}
+        \item Since $1 \in H$, then $g1g\inv = 1 \in gHg\inv$ so that $gHg\inv$ is nonempty. Now suppose $gxg\inv, gyg\inv \in gHg\inv$ for some $x, y \in H$. Then
+        \[(gxg\inv)(gyg\inv)\inv = gxg\inv gy\inv g\inv = gxy\inv g\inv \in gHg\inv\]
+        since $xy\inv \in H$. Hence, $gHg\inv \leq G$.
+
+        Define a map $\phi : H \to gHg\inv$ by $\phi(h) = ghg\inv$. To show that this is a bijection, suppose $\phi(h_1) = \phi(h_2)$. Then $gh_1g\inv = gh_2g\inv$, hence $h_1 = h_2$ so that $\phi$ is injective. Moreover, for any $ghg\inv \in gHg\inv$, then $\phi(h) = ghg\inv$ so that $\phi$ is surjective. Hence, $\abs{gHg\inv} = \abs H$.
+        \item Let $g \in G$. Since $H$ is the unique subgroup of $G$ of order $n$, then by part (a), $gHg\inv$ is a subgroup of $G$ of order $n$, hence $gHg\inv = H$. It follows that $H \nsub G$.
+    \end{solalph}
     \item Let $H \leq G$ and let $g \in G$. Prove that if the right coset $Hg$ equals some left coset of $H$ in $G$ then it equals the left coset $gH$ and $g$ must be in $N_G(H)$.
-    
+    \begin{sol}
+        Suppose $Hg = g'H$ for some $g' \in G$. Note that $g \in Hg$ so that $g \in g'H$. Then $Hg = g'H = gH$, hence $Hg = gH$, and $g \in N_G(H)$.
+    \end{sol}
     \item Let $H \leq G$ and define a relation $\sim$ on $G$ by $a \sim b$ if and only if $b^{-1}a \in H$. Prove that $\sim$ is an equivalence relation and describe the equivalence class of each $a \in G$. Use this to prove Proposition 4.
-    
+    \begin{sol}
+        Let $h \in H$. Since $h\inv h = 1 \in H$, then $h \sim h$ so that $\sim$ is reflexive. Suppose $g, h \in H$ such that $g \sim h$. Then $h\inv g \in H$, hence $g\inv h = (h\inv g)\inv \in H$ so that $h \sim g$ and $\sim$ is symmetric. Lastly, suppose $g, h, k \in G$ such that $g \sim h$ and $h \sim k$. Then $h\inv g \in H$ and $k\inv h \in H$, hence $(k\inv h)(h\inv g) = k\inv g \in H$ so that $g \sim k$ and $\sim$ is transitive. It follows that $\sim$ is an equivalence relation.
+
+        The equivalence class of some $a \in G$ is given by $\set{b \in G \mid b\inv a \in H}$. Note that $b$ is in the equivalence class of $a$ when $b\inv a = h$ for some $h \in H$, hence $b = ah\inv$. The set becomes $\set{ah\inv \mid h \in H}$, which is the left coset of $H$ containing $a$. Since the equivalence classes partition $G$, then the left cosets of $H$ partition $G$, by Proposition 0.2, then the left cosets of $H$ in $G$ form a partition of $G$, proving Proposition 4.
+    \end{sol}
     \item Prove that if $H$ and $K$ are finite subgroups of $G$ whose orders are relatively prime then $|H \cap K| = 1$.
-    
-    \item This exercise outlines a proof of Cauchy’s Theorem due to James McKay (\textit{Another proof of Cauchy’s group theorem}, Amer. Math. Monthly, 66 (1959), p. 119). Let $G$ be a finite group and let $p$ be a prime dividing $|G|$. Let $\ss$ denote the set of $p$-tuples of elements of $G$ the product of whose coordinates is 1:
-    \[\ss = \{(x_1, x_2, \ldots, x_p) \mid x_i \in G \text{ and} x_1x_2 \cdots x_p = 1\}\]
+    \begin{sol}
+        Let $\abs H = m$ and $\abs K = n$ such that $(m, n) = 1$. Let $\ell = \abs{H \cap K}$. Since $H \cap K \leq H$ and $H \cap K \leq K$, then by Lagrange's Theorem, $\ell \mid m$ and $\ell \mid n$. It follows that $\ell \mid (m, n) = 1$, hence $\ell = 1$.
+    \end{sol}
+    \item This exercise outlines a proof of Cauchy's Theorem due to James McKay (\textit{Another proof of Cauchy's group theorem}, Amer. Math. Monthly, 66 (1959), p. 119). Let $G$ be a finite group and let $p$ be a prime dividing $|G|$. Let $\ss$ denote the set of $p$-tuples of elements of $G$ the product of whose coordinates is 1:
+    \[\ss = \{(x_1, x_2, \ldots, x_p) \mid x_i \in G \text{ and } x_1x_2 \cdots x_p = 1\}\]
     \begin{problems}
-        \item Show that $S$ has $|G|^{p-1}$ elements, hence has order divisible by $p$.
-        
+        \item Show that $\ss$ has $|G|^{p-1}$ elements, hence has order divisible by $p$.
     \end{problems}
     Define the relation $\sim$ on $S$ by letting $\alpha \sim \beta$ if $\beta$ is a cyclic permutation of $\alpha$.
-    \begin{problems}
+    \begin{problems}[resume]
         \item Show that a cyclic permutation of an element of $\ss$ is again an element of $\ss$.
-        
         \item Prove that $\sim$ is an equivalence relation on $\ss$.
-        
         \item Prove that an equivalence class contains a single element if and only if it is of the form $(x, x, \dots, x)$ with $x^p = 1$.
-        
         \item Prove that every equivalence class has order 1 or $p$ (this uses the fact that $p$ is \textit{prime}). Deduce that $|G|^{p-1} = k + pd$, where $k$ is the number of classes of size 1 and $d$ is the number of classes of size $p$.
-        
         \item Since $\{(1, 1, \dots, 1)\}$ is an equivalence class of size 1, conclude from (e) that there must be a nonidentity element $x \in G$ with $x^p = 1$, i.e., $G$ contains an element of order $p$. [Show $p \mid k$ and so $k > 1$.]
-        
     \end{problems}
+    \begin{solalph}
+        \item Consider the $(p - 1)$-tuples of elements of $G$, and call this set $\ss'$. Clearly, $\ss'$ has $|G|^{p-1}$ elements. Now define a mapping $\phi : \ss' \to \ss$ by $\phi(x_1, x_2, \dots, x_{p-1}) = (x_1, x_2, \dots, x_{p-1}, (x_1x_2 \cdots x_{p-1})\inv)$. To show that this is a bijection, suppose $\phi(x_1, x_2, \dots, x_{p-1}) = \phi(y_1, y_2, \dots, y_{p-1})$. Then $(x_1, x_2, \dots, x_{p-1}, (x_1x_2 \cdots x_{p-1})\inv) = (y_1, y_2, \dots, y_{p-1}, (y_1y_2 \cdots y_{p-1})\inv)$ so that $x_i = y_i$ for all $1 \leq i \leq p - 1$, hence $\phi$ is injective. Moreover, this mapping is clearly surjective. It follows that $\abs\ss = \abs{\ss'} = |G|^{p-1}$.
+        \item Let $\alpha = (x_1, x_2, \dots, x_p) \in \ss$. A cyclic permutation of $\alpha$ is given by $\beta = (x_k, x_{k+1}, \dots, x_p, x_1, x_2, \dots, x_{k-1})$ for some $1 \leq k \leq p$ where the indices are taken modulo $p$. Observe that these consist of the same elements as $\alpha$, just in a different order, hence $x_k x_{k+1} \cdots x_p x_1 x_2 \cdots x_{k-1} = x_1 x_2 \cdots x_p = 1$, so that $\beta \in \ss$.
+        \item Let $\alpha, \beta, \gamma \in \ss$. $\sim$ is clearly reflexive since $\alpha$ is a cyclic permutation of itself. 
+        
+        Suppose $\alpha \sim \beta$. Then $\beta$ is a cyclic permutation of $\alpha$, hence $\alpha$ is a cyclic permutation of $\beta$, so that $\beta \sim \alpha$ and $\sim$ is symmetric. 
+        
+        Lastly, suppose $\alpha \sim \beta$ and $\beta \sim \gamma$. Then $\beta$ is a cyclic permutation of $\alpha$, and $\gamma$ is a cyclic permutation of $\beta$, hence $\gamma$ is a cyclic permutation of $\alpha$ by taking the composition of the permutations, so that $\alpha \sim \gamma$ and $\sim$ is transitive. It follows that $\sim$ is an equivalence relation on $\ss$.
+        \item \rightimp Let $[\alpha]$ denote the equivalence class that contains $\alpha$. If $[alpha]$ contains a single element, then it must be that all cyclic permutations of $\alpha$ are equal, hence $\alpha = (x, x, \dots, x)$ for some $x \in G$. Since $\alpha \in \ss$, then $x^p = 1$.
+        
+        \noindent \leftimp Suppose $\alpha = (x, x, \dots, x)$ for some $x \in G$ such that $x^p = 1$. Then any cyclic permutation of $\alpha$ is equal to $\alpha$, hence $[\alpha]$ contains a single element.
+        \item 
+    \end{solalph}
     \item Suppose $H$ and $K$ are subgroups of finite index in the (possibly infinite) group $G$ with $|G : H| = m$ and $|G : K| = n$. Prove that $\lcm(m, n) \leq |G : H \cap K| \leq mn$. Deduce that if $m$ and $n$ are relatively prime then $|G : H \cap K| = |G : H| \cdot |G : K|$.
     
     \item Let $H \leq K \leq G$. Prove that $|G : H| = |G : K| \cdot |K : H|$. 
