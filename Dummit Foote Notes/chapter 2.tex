@@ -108,7 +108,7 @@
         so that $s \in N_G(A)$. Since $\gen{r, s} = D_8$, and $r, s \in N_G(A)$, then $G \leq N_G(A)$ so that $N_G(A) = G$.
         
         Observe that if $g \in Z(G)$, then $ga = ag$ for every $a \in G$ so that $gag\inv = a$, hence $g \in C_G(A)$. Then $Z(G) \leq C_G(A)$. In calculating $C_G(A)$, we saw that $sr \neq rs$ and $sr^3 \neq r^3s$ so that $r, r^3 \not\in Z(G)$. Hence, $Z(G) = \{1, r^2\}$ only. 
-        \item Let $G = S_3$ and $A = \{1, (1\ 2)\}$. Recall that $(1\ 2)$ and $(1\ 3)$ generate $S$ from \hyperref[ex1.4.20]{Section 1.4, Exercise 20}, and inspection leads to $A \leq C_G(A)$. Since $(1\ 3) \not\in C_G(A)$, then no other element of $S_3$ lies in $C_G(A)$, hence $C_G(A) = A$. Moreover, note that $\sigma \in N_G(A)$ if and only if
+        \item Let $G = S_3$ and $A = \{1, (1\ 2)\}$. Recall that $(1\ 2)$ and $(1\ 3)$ generate $S_3$ from Exercise 1.4.20, and inspection leads to $A \leq C_G(A)$. Since $(1\ 3) \not\in C_G(A)$, then no other element of $S_3$ lies in $C_G(A)$, hence $C_G(A) = A$. Moreover, note that $\sigma \in N_G(A)$ if and only if
         \[\{\sigma 1\sigma\inv, \sigma(1\ 2)\sigma\inv\} = \{1, (1\ 2)\}\]
         This equality occurs when $\sigma(1\ 2)\sigma\inv = (1\ 2)$, or when $\sigma \in C_G(A)$. Since the only nonidentity element of $C_G(A)$ is $(1\ 2)$, then $N_G(A) = A$. Lastly, $Z(G) = \{1\}$ because $Z(G) \leq C_G(A)$, and $(1\ 2) \not\in Z(G)$ since $(1\ 2)(1\ 3) \neq (1\ 3)(1\ 2)$.
     \end{itemize}
@@ -133,7 +133,7 @@
 \begin{ex}[Examples of Stabilizers]
     \begin{itemize}
         \item Let $G = D_8$ with $A = \{1, 2, 3, 4\}$ being the vertices of a square. Since no rotation except the identity preserves vertex location, then $G_i = \{1, s_i\}$ for every $i \in A$, where $s_i$ refers to the reflection about the line from vertex $i$ to the center. Moreover, $\ker(\cdot) = 1$ only, since no other element in $D_8$ fixes all vertices.
-        \item Let $G = D_8$ again with $A = \{\{1, 3\}, \{2, 4\}\}$ be the set of opposite vertices of a square. Then the kernel of this action is $\{1, r^2, s, sr^2\}$ by \hyperref[ex1.7.12]{Section 7, Exercise 12}. Since $G_a \leq \ker(\cdot)$ for all $a \in A$, and all elements in the kernel fix all pairs of vertices of a square (order doesn't matter), then $G_a = \ker(\cdot)$ for all $a \in A$.
+        \item Let $G = D_8$ again with $A = \{\{1, 3\}, \{2, 4\}\}$ be the set of opposite vertices of a square. Then the kernel of this action is $\{1, r^2, s, sr^2\}$ by Exercise 1.7.12. Since $G_a \leq \ker(\cdot)$ for all $a \in A$, and all elements in the kernel fix all pairs of vertices of a square (order doesn't matter), then $G_a = \ker(\cdot)$ for all $a \in A$.
     \end{itemize}
 \end{ex}
 
@@ -162,7 +162,7 @@
         \[\set{x^n \mid n \in \z} = \set{(x\inv)^n \mid n \in z}\]
         \item Note that elements of $\gen h$ are powers of $h$, not integers.
         \item Not all powers of $h$ are distinct.
-        \item Cyclic groups are always abelian, by \hyperref[ex1.1.19]{Section 1.1, Exercise 19}. 
+        \item Cyclic groups are always abelian, by Exercise 1.1.19. 
     \end{itemize}
 \end{defi}
 

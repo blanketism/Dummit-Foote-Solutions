@@ -25,7 +25,7 @@
     \label{defi0.2}
     \begin{itemize}
         \item A \textbf{function} $f$ from $A$ to $B$ is denoted as $f : A \to B$, where the value of $f$ at some $a \in A$ is denoted by $f(a)$.
-        \item The \textbf{domain} of $f$ is $A$, and the \textbf{codomain} of $f$ is $B$. Moreover, we use the notation $f : a \mapsto b$ or $a \mapsto b$ to denote that $f(a) = b$, or that the function is specified on elements.
+        \item The \textbf{domain} of $f$ is $A$, and the \textbf{codomain} of $f$ is $B$. Moreover, we use the notation $f : a \to b$ or $a \mapsto b$ to denote that $f(a) = b$, or that the function is specified on elements.
         \item The \textbf{range} or \textbf{image} of $f$ (also known as the \textbf{image of $A$ under $f$} is given by
         \[f(A) := \{b \in B \mid f(a) = b \text{ for some } a \in A\}\]
         \item The \textbf{preimage} or \textbf{inverse image} of some subset $C$ of $B$ is given by
@@ -62,10 +62,10 @@
         \leftimp Suppose now that $f$ has a left inverse $g$, and let $x, y \in A$ such that $f(x) = f(y)$. Then $g(f(x)) = g(f(y))$. Since $g$ is a left inverse, then $x = y$.
         \item \rightimp Suppose $f$ is surjective. Then each fiber of $f$ over every $b \in B$ is nonempty. We may then arbitrarily associate each $b$ with a singular $a_b \in A$ such that $f(a_b) = b$. We may then define a mapping $h : B \to A$ as follows: for any $b \in B$, then $h(b) = a_b$. Then $f(h(b)) = f(a_b) = b$ so that $h$ is a right inverse of $f$.
         
-        \leftimp Suppose that $f$ has a right inverse $h$, and let $b \in B$. Then for any $h(b) \in h(B)$, we have $f(h(b)) = b$ so that $f$ is surjective.
+        \noindent \leftimp Suppose that $f$ has a right inverse $h$, and let $b \in B$. Then for any $h(b) \in h(B)$, we have $f(h(b)) = b$ so that $f$ is surjective.
         \item \rightimp Suppose $f$ is bijective, and let $b \in B$. Since $f$ is surjective, there exists some $a \in A$ such that $f(a) = b$. Moreover, this $a$ is unique because $f$ is injective. Define the function $g : B \to A$ by $g(b) = a$. Then for any $a \in A$, we have $g(f(a)) = g(b) = a$. For any $b \in B$, we have $f(g(b)) = f(a) = b$ so that $g \circ f$ is the identity map on $A$, and $f \circ g$ is the identity map on $B$.
         
-        \leftimp Suppose there exists $g : B \to A$ such that $f \circ g$ is the identity map on $B$, and $g\circ f$ is the identity map on $A$. Then $g$ is a left inverse and a right inverse of $f$, hence $f$ is injective and surjective. Then $f$ is bijective, by definition.
+        \noindent \leftimp Suppose there exists $g : B \to A$ such that $f \circ g$ is the identity map on $B$, and $g\circ f$ is the identity map on $A$. Then $g$ is a left inverse and a right inverse of $f$, hence $f$ is injective and surjective. Then $f$ is bijective, by definition.
         \item Suppose $f$ is bijective. It is then injective.
         
         Suppose $f$ is injective. Then distinct elements of $A$ map to distinct elements of $B$. Since $|A| = |B|$, then all elements of $B$ are mapped to, hence $f$ is surjective.

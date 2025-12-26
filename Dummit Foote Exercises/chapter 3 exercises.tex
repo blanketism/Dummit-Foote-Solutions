@@ -260,7 +260,7 @@ Let $G$ and $H$ be groups.
         \item Note that $\q/\z \subseteq \tor(\r/\z)$ by the previous exercise, so it remains to show that cosets with irrational representatives do not have finite order. If $x + \z \in \r/\z$ with finite order $n$, and $x \in \r - \q$, then $n(x + \z) = nx + \z = \z$ implies that $nx \in \z$. But since $n \in \zp$, this implies that $x \in \z$, contradicting that it was irrational. Hence, $\tor(\r/\z) = \q/\z$.
         \item By Exercise 3.1.12, we have $\r/\z \cong S^1$. Note that $\tor(S^1)$ consists of $z \in \c\unt$ such that $z^n = 1$, which is precisely the set of roots of unity. Since $\tor(\r/\z) = \q/\z$, then $\q/\z$ is isomorphic to the set of roots of unity.
     \end{solalph}
-    \item Prove that a quotient of a divisible abelian group by any proper subgroup is also divisible. Deduce that $\mathbb{Q}/\mathbb{Z}$ is divisible (cf.\ Exercise 19, Section 2.4).
+    \item \label{ex3.1.15} Prove that a quotient of a divisible abelian group by any proper subgroup is also divisible. Deduce that $\mathbb{Q}/\mathbb{Z}$ is divisible (cf. \hyperref[ex2.4.19]{Exercise 2.4.19}).
     \begin{sol}
         Let $A$ be a divisible abelian group, and let $B$ be a proper subgroup of $A$. Pick $aB \in A/B$. Since $A$ is divisible, there exists $x \in A$ such that $x^n = a$ for $x \in A$ and $n \in \z$. Then $(xB)^n = x^nB = aB$ so that $A/B$ is divisible. Since $\q$ is divisible, and $\z < \q$ is proper, then $\q/\z$ is also divisible.
     \end{sol}
@@ -728,37 +728,82 @@ Let $G$ be a group.
         Suppose $\alpha \sim \beta$. Then $\beta$ is a cyclic permutation of $\alpha$, hence $\alpha$ is a cyclic permutation of $\beta$, so that $\beta \sim \alpha$ and $\sim$ is symmetric. 
         
         Lastly, suppose $\alpha \sim \beta$ and $\beta \sim \gamma$. Then $\beta$ is a cyclic permutation of $\alpha$, and $\gamma$ is a cyclic permutation of $\beta$, hence $\gamma$ is a cyclic permutation of $\alpha$ by taking the composition of the permutations, so that $\alpha \sim \gamma$ and $\sim$ is transitive. It follows that $\sim$ is an equivalence relation on $\ss$.
-        \item \rightimp Let $[\alpha]$ denote the equivalence class that contains $\alpha$. If $[alpha]$ contains a single element, then it must be that all cyclic permutations of $\alpha$ are equal, hence $\alpha = (x, x, \dots, x)$ for some $x \in G$. Since $\alpha \in \ss$, then $x^p = 1$.
+        \item \rightimp Let $[\alpha]$ denote the equivalence class that contains $\alpha$. If $[\alpha]$ contains a single element, then it must be that all cyclic permutations of $\alpha$ are equal, hence $\alpha = (x, x, \dots, x)$ for some $x \in G$. Since $\alpha \in \ss$, then $x^p = 1$.
         
         \noindent \leftimp Suppose $\alpha = (x, x, \dots, x)$ for some $x \in G$ such that $x^p = 1$. Then any cyclic permutation of $\alpha$ is equal to $\alpha$, hence $[\alpha]$ contains a single element.
-        \item 
+        \item Let $\alpha = (x_1, x_2, \dots, x_p) \in \ss$ where the $x_i$ need not be distinct, and let $[\alpha]$ be the equivalence class containing $\alpha$. Suppose $[\alpha]$ has $n$ elements, and note that $x_i = x_j$ whenever $i + kn \equiv j \bmod p$ for some $k \in \z$ that represents the amount of cyclic shifts.
+        
+        There are two cases to discuss, either $n = p$ or $1 \leq n < p$. If $n = p$, then we are done. Suppose $1 \leq n < p$. Since $p$ is prime, then $(n, p) = 1$, hence there exists some $k \in \z$ such that $kn \equiv 1 \bmod p$. In particular, $i + kn \equiv i + 1 \equiv j \bmod p$ implies $x_{i + 1} = x_j$. It follows that $x_i = x_j$ for all $1 \leq i, j \leq p$, hence $\alpha = (x, x, \dots, x)$ for some $x \in G$. By part (c), $[\alpha]$ contains a single element.
+
+        Since the equivalence classes partition $\ss$, let $k$ be the number of classes of size 1 and $d$ be the number of classes of size $p$. Then $\abs\ss = k + pd$, as desired.
+        \item Because $p$ divides $\abs G$, then it divides $\abs\ss = |G|^{p-1}$. From part (d), we have $|G|^{p-1} = k + pd$, hence $p \mid k$ so that $k > 1$. Then there is at least one equivalence class of size 1 that is not $\{(1, 1, \dots, 1)\}$. By part (c), this equivalence class is of the form $(x, x, \dots, x)$ for some nonidentity $x \in G$ such that $x^p = 1$. It follows that $G$ contains an element of order $p$.
     \end{solalph}
-    \item Suppose $H$ and $K$ are subgroups of finite index in the (possibly infinite) group $G$ with $|G : H| = m$ and $|G : K| = n$. Prove that $\lcm(m, n) \leq |G : H \cap K| \leq mn$. Deduce that if $m$ and $n$ are relatively prime then $|G : H \cap K| = |G : H| \cdot |G : K|$.
-    
+    \item \label{ex3.2.10} Suppose $H$ and $K$ are subgroups of finite index in the (possibly infinite) group $G$ with $|G : H| = m$ and $|G : K| = n$. Prove that $\lcm(m, n) \leq |G : H \cap K| \leq mn$. Deduce that if $m$ and $n$ are relatively prime then $|G : H \cap K| = |G : H| \cdot |G : K|$.
+    \begin{sol} 
+        Let $|G : H \cap K| = \ell$. Consider the cosets $gH, gK$, and $g(H \cap K)$ for some $g \in G$. We wish to identify $g(H \cap K)$ in terms of $gH$ and $gK$. Note that $x \in g(H \cap K)$ implies that $g\inv x \in H \cap K$, hence $g\inv x \in H$ and $g\inv x \in K$, so that $x \in gH$ and $x \in gK$. It follows that $g(H \cap K) \subseteq gH \cap gK$. Now suppose $x \in gH \cap gK$. Then $x \in gH$ and $x \in gK$, hence $g\inv x \in H$ and $g\inv x \in K$, so that $g\inv x \in H \cap K$. It follows that $x \in g(H \cap K)$, hence $gH \cap gK \subseteq g(H \cap K)$. We conclude that $g(H \cap K) = gH \cap gK$.
+
+        Note that the set of cosets of $H \cap K$ in $G$ partitions $G$ into $\ell$ parts, and each coset is the intersection of a coset of $H$ with a coset of $K$. Since there are $m$ cosets of $H$ and $n$ cosets of $K$, then there are at most $mn$ distinct intersections, hence $\ell \leq mn$. 
+
+        We now show that $\ell$ is a multiple of $m$ (a similar argument can be done to show that it is a multiple of $n$). Let $x \in G$. Since the cosets of $H$ in $G$ partition $G$, then there exists a unique $g \in G$ such that $x \in gH$. Moreover, because $H \cap K \leq H$, then the cosets of $H \cap K$ in $H$ partition $H$ so that there exists a unique $h \in H$ such that $x \in gh(H \cap K)$. Pick another coset $h' \neq h$ of $H \cap K$ in $H$. Then $gh(H \cap K) \neq gh'(H \cap K)$ since if they were equal, then $(gh)\inv(gh') = h\inv h' \in H \cap K$, contradicting that $h$ and $h'$ are distinct cosets. It follows that for each coset of $H$ in $G$, there are $\abs{H : H \cap K}$ distinct cosets of $H \cap K$ in $G$. Since there are $m$ cosets of $H$ in $G$, then $\ell = m \abs{H : H \cap K}$, hence $m \mid \ell$. Similarly, $n \mid \ell$. Since $\ell$ is a multiple of both $m$ and $n$, then $\lcm(m, n) \mid \ell$, hence $\lcm(m, n) \leq \ell$, and we have the desired inequality $\lcm(m, n) \leq \ell \leq mn$.
+
+        Lastly, if $(m, n) = 1$, then $\lcm(m, n) = mn$ so that $\ell = mn$.
+    \end{sol}
     \item Let $H \leq K \leq G$. Prove that $|G : H| = |G : K| \cdot |K : H|$. 
-    
+    \begin{sol}
+        Note that cosets of $H$ are contained in cosets of $K$. If $H$ has infinite index in $K$ or if $K$ has infinite index in $G$, then $H$ has infinite index in $G$. The finite case follows in the proof of \hyperref[ex3.2.10]{Exercise 3.2.10}, where we showed that each coset of $K$ contains $\abs{K : H}$ distinct cosets of $H$. Since there are $\abs{G : K}$ distinct cosets of $K$ in $G$, then there are $\abs{G : K} \cdot \abs{K : H}$ distinct cosets of $H$ in $G$, hence $\abs{G : H} = \abs{G : K} \cdot \abs{K : H}$.
+    \end{sol}
     \item Let $H \leq G$. Prove that the map $x \mapsto x^{-1}$ sends each left coset of $H$ in $G$ onto a right coset of $H$ and gives a bijection between the set of left cosets and the set of right cosets of $H$ in $G$ (hence the number of left cosets of $H$ in $G$ equals the number of right cosets).
-    
-    \item Fix any labelling of the vertices of a square and use this to identify $D_8$ as a subgroup of $S_4$. Prove that the elements of $D_8$ and $(123)$ do not commute in $S_4$.
-    
+    \begin{sol}
+        Let $L$ be the set of left cosets of $H$ in $G$ and $R$ be the set of right cosets of $H$ in $G$. Define the map $\phi : L \to R$ be given by $\phi(xH) = Hx\inv$. Firstly, this map is well-defined: suppose $xH = yH$. Then $yx\inv \in H$, hence $(yx\inv)\inv = xy\inv \in H$, so that $Hx\inv = Hy\inv$. Note that the map $\psi : R \to L$ given by $\psi(Hx) = x\inv H$ is well-defined by a similar argument. It is clear that $\phi \circ \psi = 1$ and $\psi \circ \phi = 1$, hence $\psi = \phi\inv$ so that $\phi$ is a bijection. It follows that $\abs L = \abs R$.
+    \end{sol}
+    \item Fix any labelling of the vertices of a square and use this to identify $D_8$ as a subgroup of $S_4$. Prove that the elements of $D_8$ and $\gen{(123)}$ do not commute in $S_4$.
+    \begin{sol}
+        Let $D_8 = \{1, (1\ 2\ 3\ 4), (1\ 3)(2\ 4), (1\ 4\ 3\ 2), (2\ 4), (1\ 2)(3\ 4), (1\ 3), (1\ 4)(2\ 3)\}$ be the subgroup of $S_4$, where a square is labelled clockwise from 1 to 4. Note that $D_8$ is generated by $r = (1\ 2\ 3\ 4)$ and $s = (2\ 4)$. Then $(1\ 2\ 3)(1\ 2\ 3\ 4) = (1\ 3\ 4\ 2) \neq (1\ 4\ 3\ 2) = (1\ 2\ 3\ 4)(1\ 2\ 3)$, and $(1\ 2\ 3)(2\ 4) = (1\ 4\ 3) \neq (1\ 3\ 4) = (2\ 4)(1\ 2\ 3)$, so that the generators of $D_8$ do not commute with the generator of $\gen{(1\ 2\ 3)}$. It follows that the elements of $D_8$ and $\gen{(1\ 2\ 3)}$ do not commute in $S_4$.
+    \end{sol}
     \item Prove that $S_4$ does not have a normal subgroup of order 8 or a normal subgroup of order 3.
-    
+    \begin{sol}
+        Suppose $S_4$ has a normal subgroup $N$ of order 8. By Lagrange's then $N$ cannot contain any 3-cycle. Then elements of $N$ are comprised of at least the identity, 2-cycles, a product of 2 disjoint 2-cycles, or 4-cycles. Observe that $N$ cannot contain all 6 2-cycles of $S_4$ for otherwise $(1\ 2)(1\ 3) = (1\ 3\ 2) \in N$, a contradiction. It must be that there is some 2-cycle $\sigma \in S_4$ that is not in $N$. Since $N \nsub S_4$, then $N \gen\sigma \leq S_4$. Since $\sigma \not\in S_4$, then $N \cap \gen\sigma = 1$, hence $|N \gen\sigma| = 16$. This contradicts Lagrange's Theorem, hence $N$ cannot exist.
+
+        If $S_4$ has a normal subgroup $M$ of order 3, then $M \cong Z_3$ which is cyclic. Since $S_4$ contains 4 distinct 3-cycles, we may pick another $\tau \in S_4$ such that $\tau \not\in M$, hence $M \cap \gen\tau = 1$. Because $M \nsub S_4$, we have $|M \gen\tau| = 9$, contradicting Lagrange's Theorem, hence $M$ cannot exist.
+    \end{sol}
     \item Let $G = S_n$ and for fixed $i \in \{1, 2, \dots, n\}$ let $G_i$ be the stabilizer of $i$. Prove that $G_i \cong S_{n-1}$.
-    
-    \item Use Lagrange's Theorem in the multiplicative group $(\mathbb{Z}/p\mathbb{Z})^\times$ to prove Fermat's Little Theorem: if $p$ is a prime then $a^p \equiv a \bmod p$ for all $a \in \z$.
-    
+    \begin{sol}
+        Observe that the elements of $G_i$ consists of permutations on the $\{1, 2, \ldots, n\} - \set i$ which has $n - 1$ elements. Then $G_i \cong S_{n - 1}$.
+    \end{sol}
+    \item Use Lagrange's Theorem in the multiplicative group $(\mathbb{Z}/p\mathbb{Z})^\times$ to prove \textit{Fermat's Little Theorem}: if $p$ is a prime then $a^p \equiv a \bmod p$ for all $a \in \z$.
+    \begin{sol}
+        Let $p$ be a prime. Note that $\units[p] = \{\bar 1, \bar 2, \ldots, \bar{p - 1}\}$. For any $a \in \z$, then we either have $a \mid p$ or $a \nmid p$. If $a \mid p$, then $a \equiv 0 \bmod p$, hence $a^p \equiv 0 \equiv a \bmod p$. If $a \nmid p$, then $\bar a \in \units[p]$. By Lagrange's Theorem and Corollary 3.9, $\abs{\bar a}$ divides $\abs{\units[p]} = p - 1$, hence $\bar a^{p - 1} = \bar 1$. Then $a^{p - 1} \equiv 1 \bmod p$, or $a^p \equiv a \bmod p$.
+    \end{sol}
     \item Let $p$ be a prime and let $n$ be a positive integer. Find the order of $\bar p$ in $(\mathbb{Z}/(p^n - 1)\mathbb{Z})^\times$ and deduce that $n \mid \phi(p^n - 1)$ (here $\phi$ is Euler's function).
-    
-    \item Let $G$ be a finite group, let $H$ be a subgroup of $G$ and let $N \nsub G$. Prove that if $H$ and $|G : N|$ are relatively prime then $H \leq N$.
-    
+    \begin{sol}
+        Since $p^n \equiv 1 \bmod (p^n - 1)$, then $\abs{\bar p} \leq n$. Suppose $d < n$ such that $p^d \equiv 1 \bmod (p^n - 1)$. Then $p^n - 1 \mid p^d - 1$ so that $p^n - 1 \leq p^d - 1$, a contradiction. It follows that $\abs{\bar p} = n$. By Lagrange's Theorem, $\abs{\bar p} = n$ divides $\abs{\units[p^n - 1]} = \phi(p^n - 1)$.
+    \end{sol}
+    \item Let $G$ be a finite group, let $H$ be a subgroup of $G$ and let $N \nsub G$. Prove that if $\abs H$ and $|G : N|$ are relatively prime then $H \leq N$.
+    \begin{sol}
+        Since $N \nsub G$, then $HN \leq G$. Moreover, $H \cap N \leq H$ so that $|H \cap N|$ divides $\abs H$. Then we have that $|G| = m|HN|$ and $|H| = n|H \cap N|$ for some $m, n \in \z$. By Corollary 13, we have that
+        \[|HN| = \frac{\abs H \abs N}{|H \cap N|} \implies m|HN| = m\frac{n|H \cap N||N|}{|H \cap N|} \implies \frac{|G|}{|N|} = |G : N| = mn\]
+        Since $(\abs H, |G : N|) = 1$, then $n = 1$ so that $\abs H = |H \cap N|$. It follows that $H = H \cap N$, hence $H \leq N$.
+    \end{sol}
     \item Prove that if $N$ is a normal subgroup of the finite group $G$ and $(|N|, |G : N|) = 1$ then $N$ is the unique subgroup of $G$ of order $|N|$.
-    
+    \begin{sol}
+        Let $M$ be a subgroup of $G$ with order $\abs N$. By the previous exercise, we have $M \leq N$, and since they have the same order, then $M = N$.
+    \end{sol}
     \item If $A$ is an abelian group with $A \nsub G$ and $B$ is any subgroup of $G$ prove that $A \cap B \nsub AB$.
-    
-    \item Prove that $\mathbb{Q}$ has no proper subgroups of finite index. Deduce that $\mathbb{Q}/\mathbb{Z}$ has no proper subgroups of finite index. [Recall Exercise 21, Section 1.6 and Exercise 15, Section 1.1.]
-    
-    \item Use Lagrange's Theorem in the multiplicative group $(\mathbb{Z}/n\mathbb{Z})^\times$ to prove Euler's Theorem: $a^{\varphi(n)} \equiv 1 \bmod n$ for every integer $a$ relatively prime to $n$, where $\varphi$ denotes Euler's $\varphi$-function.
-    
+    \begin{sol}
+        Suppose $y = abxb\inv a\inv \in ab(A \cap B)b\inv a\inv$ for some $x \in A \cap B$. Since $A \nsub G$, then $bxb\inv \in A$ so that $y = a(bxb\inv)a\inv = bxb\inv \in A$. Moreover, $bxb\inv \in B$ since $x \in B$, hence $y \in A \cap B$. It follows that $ab(A \cap B)b\inv a\inv \subseteq A \cap B$, so that $A \cap B \nsub AB$.
+    \end{sol}
+    \item Prove that $\mathbb{Q}$ has no proper subgroups of finite index. Deduce that $\mathbb{Q}/\mathbb{Z}$ has no proper subgroups of finite index. [Recall \hyperref[ex1.6.21]{Exercise 1.6.21} and \hyperref[ex3.1.15]{Exercise 3.1.15}.]
+    \begin{sol}
+        Suppose $\q$ has a proper subgroup $H$ such that $|\q : H|$ is some finite $n$. Recalling that $\q$ is divisible by \hyperref[ex2.4.19]{Exercise 2.4.19}, then $\q/H$ is also divisible by \hyperref[ex3.1.15]{Exercise 3.1.15}. However, $\q/H$ is a finite group of order $n$, hence it cannot be divisible unless it is trivial. It follows that $H = \q$, a contradiction. Therefore, $\q$ has no proper subgroups of finite index. Moreover, $\q/\z$ has no proper subgroup of finite index for the same reasoning.
+    \end{sol}
+    \item Use Lagrange's Theorem in the multiplicative group $(\mathbb{Z}/n\mathbb{Z})^\times$ to prove \textit{Euler's Theorem}: $a^{\varphi(n)} \equiv 1 \bmod n$ for every integer $a$ relatively prime to $n$, where $\varphi$ denotes Euler's $\varphi$-function.
+    \begin{sol}
+        Recall $\abs{\units} = \phi(n)$. Since $\bar a \in \units$, then $\abs{\bar a}$ divides $\phi(n)$, hence $a^{\phi(n)} \equiv 1 \bmod n$.
+    \end{sol}
     \item Determine the last two digits of $3^{3^{100}}$. [Determine $3^{100} \bmod \phi(100)$ and use the previous exercise.]
-    Test
+    \begin{sol}
+        Note that $100 = 2^2 \cdot 5^2$, then $\phi(100) = 2^1(2 - 1)5^1(5 - 1) = 40$. Since $3^4 \bmod 40 = 81 \bmod 40 \equiv 1 \bmod 40$, then $3^{100} \bmod 40 \equiv 1 \bmod 40$. It follows that $3^{100} = 1 + 40k = 1 + \phi(100)k$ for some $k \in \z$, hence
+        \[3^{3^{100}} = 3^{1 + \phi(100)k} = 3 \cdot 3^{{\phi(100)}^k} \equiv 3 \cdot 1^k \bmod 100 = 3 \bmod 100\]
+        so that the last two digits of $3^{3^{100}}$ are 03.
+    \end{sol}
 \end{problems}

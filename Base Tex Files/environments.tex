@@ -25,18 +25,13 @@
 \setlist[problems, 2]{label = (\alph*), topsep = 3pt, itemsep = 2pt}
 
 \newenvironment{sol}{%
-\begin{proof}[{\textbf{Solution}}]\setlength{\parindent}{0.5cm}%
+\begin{proof}[{Solution}]\setlength{\parindent}{0.5cm}%
 }{\end{proof}}
 
 \newenvironment{solalph}{%
-\begin{proof}[{\textbf{Solution}}]%
+\begin{proof}[{Solution}]%
 \leavevmode\begin{problems}[label = (\alph*)]%
 \setlength{\parindent}{0.5cm}}{\qedhere\end{problems}\end{proof}}
-
-\newenvironment{note}[1][]{\noindent%
-\textcolor{CadetBlue}{\textbf{Note~$\blacktriangleright$~{#1}}}
-
-}{\vskip 0.20cm}
 
 \newenvironment{defi}[1][]{\noindent%
 \refstepcounter{definition}%
@@ -68,7 +63,7 @@
 
 }{\vskip 0.20cm}
 
-\newmdenv[frametitle = {Informal Discussion}, innerleftmargin = 4pt, %
-everyline = true, %
-innertopmargin = 0pt, %
-roundcorner = 5pt]{disc}
+\newenvironment{note}[1][]{\noindent%
+\textcolor{CadetBlue}{\textbf{Note~$\blacktriangleright$~{#1}}}
+
+}{\vskip 0.20cm}
