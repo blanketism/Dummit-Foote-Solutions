@@ -578,7 +578,7 @@ Let $G$ and $H$ be groups.
         \[\bar r = \{r, r^{k + 1}, r^{2k + 1}, \ldots, r^{n - k + 1}\} \quad \text{and} \quad \bar s = \{s, sr^k, sr^{2k}, \ldots, sr^{n - k}\}\]
         It is clear that $\bar s \neq \bar 1$, and $\bar s^2 = \bar 1$ so that $\abs{\bar s} = 2$. Moreover, $\bar r^k = \bar 1$, hence $\abs{\bar r} \leq k$. However, note that $\bar r^i = \bar 1$ when $i \mid k$ so that $\abs{\bar r} = k$. This clearly satisfies the relations for $D_{2k}$, hence $D_{2n}/\gen{r^k} \cong D_{2k}$. 
     \end{solalph}
-    \item Prove that $\speclin_n(F) \nsub \gl_n(F)$ and describe the isomorphism type of the quotient group (cf. Exercise 9, Section 2.1).
+    \item \label{ex3.1.35} Prove that $\speclin_n(F) \nsub \gl_n(F)$ and describe the isomorphism type of the quotient group (cf. Exercise 9, Section 2.1).
     \begin{sol}
         We know that $\speclin_n(F) \leq \gl_n(F)$, so we just need to show that $A \speclin_n(F) A\inv = \speclin_n(F)$ for all $A \in \gl_n(F)$. To that end, note that for any $S \in \speclin_n(F)$ and $X \in \gl_n(F)$, then $\det(XSX\inv) = \det(X)\det(S)\det(X\inv) = 1$, hence $X\speclin_n(F)X\inv \subseteq \speclin_n(F)$, and $\speclin_n(F) \nsub \gl_n(F)$.
 
@@ -654,6 +654,8 @@ Let $G$ and $H$ be groups.
         Consider some $g\bar 1 \in G/\bar 1$, and let $\bar g \in \pp$. For some $gy \in g\bar 1$ where $y \in \bar 1$, then $\bar{gy} = \bar g \cdot \bar y = \bar g \cdot \bar 1 = \bar g$ so that $gy \in \bar g$, hence $g \bar 1 \subseteq \bar g$. If $x \in \bar g$, then $\bar x = \bar g$ so that $\bar{g\inv x} = \bar{g\inv g} = \bar 1$, hence $g\inv x \in \bar 1$. Then $x = gg\inv x = g(g\inv x) \in g\bar 1$, hence $\bar g \subseteq g\bar 1$. It follows that $\bar g = g\bar 1$.
     \end{sol}
 \end{problems}
+
+\newpage
 
 \subsection{More on Cosets and Lagrange's Theorem}
 
@@ -806,4 +808,45 @@ Let $G$ be a group.
         \[3^{3^{100}} = 3^{1 + \phi(100)k} = 3 \cdot 3^{{\phi(100)}^k} \equiv 3 \cdot 1^k \bmod 100 = 3 \bmod 100\]
         so that the last two digits of $3^{3^{100}}$ are 03.
     \end{sol}
+\end{problems}
+
+\newpage
+
+\subsection{The Isomorphism Theorems}
+
+Let $G$ be a group.
+
+\begin{problems}
+    \item Let $F$ be a finite field of order $q$ and let $n \in \zp$. Prove that $|\gl_N(F) : \speclin_n(F)| = q - 1$. [See \hyperref[ex3.1.35]{Exercise 3.1.35}.]
+    \begin{sol}
+        In \hyperref[ex3.1.35]{Exercise 3.1.35}, we showed that $\speclin_n(F) \nsub \gl_n(F)$ and that $\gl_n(F)/\speclin_n(F) \cong F\unt$. Since $F$ is a finite field of order $q$, then $\abs{F\unt} = q - 1$. We then have that $|\gl_n(F) : \speclin_n(F)| = \abs{F\unt} = q - 1$.
+    \end{sol}
+    \item Prove all parts of the Lattice Isomorphism Theorem.
+    \begin{sol}
+        Let $\ac = \set{A \leq G \mid N \subseteq A}$ be the set of subgroups of $G$ containing $N$, and let $\bar\ac = \set{\bar A \mid A \in \ac}$. Define the map $\phi : \ac \to \bar\ac$ by $\phi(A) = A/N$. To show that $\phi$ is a bijection, we first show it is surjective. Let $\bar A \in \bar\ac$, so that $\bar A = B/N$ for some $B \in \ac$. Then $\phi(B) = B/N = \bar A$, hence $\phi$ is surjective. To show injectivity, suppose $\phi(A_1) = \phi(A_2)$ for $A_1, A_2 \in \ac$. Then $A_1/N = A_2/N$, so that for any $a_1 \in A_1$, there exists $a_2 \in A_2$ such that $a_1N = a_2N$, hence $a_2\inv a_1 \in N \subseteq A_2$ so that $a_1 \in A_2$. By symmetry, then $A_1 = A_2$, hence $\phi$ is injective. We now prove the properties:
+        \begin{enumerate}
+            \item If $A \leq B$, then for any $aN \in \bar A$, we have $a \in A \leq B$ so that $aN \in \bar B$, hence $\bar A \leq \bar B$. Conversely, if $\bar A \leq \bar B$, then for any $a \in A$, we have $aN \in \bar A \leq \bar B$ so that $aN = bN$ for some $b \in B$. It follows that $b\inv a \in N \subseteq B$, hence $a \in B$, so that $A \leq B$.
+            \item If $A \leq B$, consider the map $\psi : B/A \to \bar B/\bar A$ given by $\psi(bA) = bN \bar A$. To show $\psi$ is well-defined, suppose $b_1A = b_2A$ for $b_1, b_2 \in B$. Then $b_2\inv b_1 \in A$, so that $b_2\inv b_1N \in \bar A$, hence $b_1N \bar A = b_2N \bar A$. It is clear that $\psi$ is a homomorphism and surjective. Finally, if $bA \in \ker\psi$, then $bN \bar A = \bar A$ so that $b \in A$, hence $bA = A$. It follows that $\psi$ is an isomorphism, so that $|B : A| = |\bar B : \bar A|$.
+            \item Let $x \in \bar{\gen{A, B}}$, so that $x = gN$ for some $g \in \gen{A, B}$. Then $g$ may be written as a finite product of elements of $A$ and $B$, so that $x$ may be written as a finite product of elements of $\bar A$ and $\bar B$, hence $x \in \gen{\bar A, \bar B}$. Conversely, let $y \in \gen{\bar A, \bar B}$, so that $y = gN$ for some $g \in G$ that may be written as a finite product of elements of $A$ and $B$. It follows that $g \in \gen{A, B}$, hence $y \in \bar{\gen{A, B}}$. Therefore, the two sets are equal.
+            \item Pick $x \in \bar{A \cap B}$ so that $x = gN$ for some $g \in A \cap B$. It follows that $g \in A$ and $g \in B$, hence $gN \in \bar A$ and $gN \in \bar B$, so that $x \in \bar A \cap \bar B$. Conversely, let $y \in \bar A \cap \bar B$, so that $y = gN$ for some $g \in G$ such that $gN \in \bar A$ and $gN \in \bar B$. It follows that $g \in A$ and $g \in B$, hence $g \in A \cap B$, so that $y \in \bar{A \cap B}$. Therefore, the two sets are equal.
+            \item \rightimp Suppose $A \nsub G$. Suppose $gN \in \bar G$ and consider $(gN)(aN)(g\inv N) \in gN(\bar A)g\inv N$ for some $aN \in \bar A$. Note that $(gN)(aN)(g\inv N) = gag\inv N$. Since $A \nsub G$, then $gag\inv \in A$, hence $gag\inv N \in \bar A$, so that $gN \bar A g\inv N \subseteq \bar A$, hence $\bar A \nsub \bar G$.
+            
+            \noindent \leftimp Suppose $\bar A \nsub \bar G$. To show that $A \nsub G$, let $g \in G$ and consider $gag\inv$ for $a \in A$. Note that $gN \in \bar G$ and $gN \bar A g\inv N \in gN \bar A g\inv N$ is equal to $gag\inv N$. Since $\bar A \nsub \bar G$, then $gag\inv N \in \bar A$, hence $gag\inv \in A$, so that $gAg\inv \subseteq A$, hence $A \nsub G$. \qh
+        \end{enumerate}
+    \end{sol}
+    \item Prove that if $H$ is a normal subgroup of $G$ of prime index $p$ then for all $K \leq G$ either
+    \begin{enumerate}
+        \item[(i)] $K \leq H$ or
+        \item[(ii)] $G = HK$ and $|K : K \cap H| = p$.
+    \end{enumerate}
+    \begin{sol}
+        
+    \end{sol}
+    \item Let $C$ be a normal subgroup of the group $A$ and let $D$ be a normal subgroup of the group $B$. Prove that $(C \times D) \nsub (A \times B)$ and $(A \times B)/(C \times D) \cong (A/C) \times (B/D)$.
+    \item Let $QD_{16} = \gen{\sigma, \tau}$ be the quasidihedral group of order 16 in \hyperref[ex2.5.11]{Exercise 2.5.11}. Prove that $\gen{\sigma^4}$ is normal in $QD_{16}$ and use the Lattice Isomorphism Theorem to draw the lattice of subgroups of $QD_{16}/\gen{\sigma^4}$. Which group of order 8 has the same lattice as this quotient? Use generators and relations for $QD_{16}$ to decide the isomorphism type of this group.
+    \item Let $M = \gen{u, v}$ be the modular group of order 16 in \hyperref[ex2.5.14]{Exercise 2.5.14}. Prove that $\gen{v^4}$ is normal in $M$ and use the Lattice Isomorphism Theorem to draw the lattice of subgroups of $M/\gen{v^4}$. Which group of order 8 has the same lattice as this quotient? Use generators and relations for $M$ to decide the isomorphism type of this group.
+    \item Let $M$ and $N$ be normal subgroups of $G$ such that $G = MN$. Prove that $G/(M \cap N) \cong (G/M) \times (G/N)$. [Draw the lattice.]
+    \item Let $p$ be a prime and let $G$ be the group of $p$-power roots  of $1$ in $\c$ (cf. \hyperref[ex2.4.18]{Exercise 2.4.18}). Prove that the map $z \mapsto z^p$ is a surjective homomorphism. Deduce that $G$ is isomorphic to a proper quotient of itself.
+    \item Let $p$ be a prime and let $G$ be a group of order $p^am$, where $p$ does not divide $m$. Assume $P$ is a subgroup of $G$ of order $p^a$ and $N$ is a normal subgroup of $G$ of order $p^b n$, where $p$ does not divide $n$. Prove that $|P \cap N| = p^b$ and $|PN/N| = p^{a - b}$. (The subgroup $P$ of $G$ is called a \textit{Sylow $p$-subgroup} of $G$. This exercise shows that the intersection of any Sylow $p$-subgroup with a normal subgroup $N$ is a Sylow $p$-subgroup of $N$.)
+    \item Generalize the preceding exercise as follows. A subgroup $H$ of a finite group $G$ is called a \textit{Hall subgroup} of $G$ if its index in $G$ is relatively prime to its order: $(|G : H|, |H|) = 1$. Prove that if $H$ is a Hall subgroup of $G$ and $N \nsub G$, then $H \cap N$ is a Hall subgroup of $N$ and
 \end{problems}
