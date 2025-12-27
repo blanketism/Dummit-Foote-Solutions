@@ -564,3 +564,175 @@
 \begin{note}[Equivalence of Studying Right Cosets]
     Lagrange's Theorem shows that in a finite group $G$, the number of left cosets of $H$ in $G$ equal the number of right cosets of $H$ in $G$, even though the left cosets are not right cosets in general. Some texts may denote $H \bl G$ to denote the set of right cosets of $H$ in $G$.
 \end{note}
+
+\subsection{The Isomorphism Theorems}
+
+\begin{theo}[The First Isomorphism Theorem]
+    \label{theo3.16}
+    If $\phi : G \to H$ is a group homomorphism, then $\ker\phi \nsub G$ and $G/\ker\phi \cong \phi(G)$.
+    \begin{proof}
+        By \autoref{prop3.7}, we know that $\ker\phi \nsub G$. Let $K = \ker\phi$ and define the map $\psi : G/K \to \phi(G)$ by $\psi(gK) = \phi(g)$. Now suppose $gK = g'K$ for some $g, g' \in G$. It follows that $g\inv g' \in K$, hence $\phi(g\inv g') = 1$ which implies $\phi(g) = \phi(g')$ so that $\psi$ is well-defined. Moreover, 
+        \[\psi(gKg'K) = \psi(gg'K) = \phi(gg') = \phi(g)\phi(g') = \psi(gK)\psi(g'K)\]
+        so that $\psi$ is a homomorphism. It is also clear that $\psi$ is surjective, and since $gK = g'K$ if and only if $g\inv g' \in K$, then $\psi$ is injective. Therefore, $\psi$ is an isomorphism, and $G/K \cong \phi(G)$.
+    \end{proof}
+\end{theo}
+
+\begin{cor}[Consequences of First Isomorphism Theorem]
+    \label{cor3.17}
+    Let $\phi : G \to H$ be a group homomorphism.
+    \begin{enumerate}
+        \item $\phi$ is injective if and only if $\ker\phi = 1$.
+        \item $|G : \ker\phi| = |\phi(G)|$.
+    \end{enumerate}
+    \begin{proofnum}
+        \item \rightimp If $\phi$ is injective, then $\phi(g) = 1$ implies $g = 1$, hence $\ker\phi = 1$.
+        
+        \noindent \leftimp $\ker\phi = 1$ implies $G/\ker\phi = G/1 \cong G$. By the First Isomorphism Theorem,$G \cong \phi(G)$ hence $\phi$ is injective.
+        \item This follows directly from the First Isomorphism Theorem, since $|G : \ker\phi| = |G/\ker\phi| = |\phi(G)|$.
+    \end{proofnum}
+\end{cor}
+
+\begin{theo}[The Second/Diamond Isomorphism Theorem]
+    \label{theo3.18}
+    Let $G$ be a group, let $A$ and $B$ be subgroups of $G$ and assume $A \leq N_G(B)$. Then $AB$ is a subgroup of $G$, $B \nsub AB$, $A \cap B \nsub A$ and $AB/B \cong A/A \cap B$.
+    \begin{proof}
+        \autoref{cor3.15} shows that $AB \leq G$. Because $A \leq N_G(B)$ and $B \leq N_G(B)$ trivially, then $AB \leq N_G(B)$ so that $B \nsub AB$.
+
+        By normality of $B$ in $AB$, then $AB/B$ is well defined and we may define $\phi : A \to AB/B$ given by $\phi(a) = aB$. This is clearly a homomorphism, since $\phi = \pi|_A$, where $\pi : AB \to AB/B$ is the natural projection homomorphism. By definition, $\phi$ is surjective. Moreover, if $a \in \ker\phi$, then $aB = B$ so that $a \in B$, hence $a \cap B$. It follows that $\ker\phi = A \cap B$. By the First Isomorphism Theorem, then $A \cap B \nsub A$, and $A/A \cap B \cong AB/B$.
+    \end{proof}
+\end{theo}
+
+\begin{note}[Further Discussion on the Diamond Isomorphism Theorem]
+    Note that the theorem gives a new proof of the formula given in \autoref{prop3.13} when we have the case $A \leq N_G(B)$. Moreover, the theorem is called the Diamond Isomorphism because the involved subgroups of $G$ in the theorem make a diamond shape in the subgroup lattice. Note that $AB/A$ doesn't need to be a group, i.e., $A$ is not normal in $G$, but we still have $|AB: A| = |B : A \cap B|$. The diamond shape is shown below, where the the tick marks represent which quotient groups are isomorphic.
+    \begin{center}
+        \begin{tikzpicture}
+            \node (G) at (0, 0) {$G$};
+            \node (AB) at (0, -1) {$AB$};
+            \node (A) at (-1, -2) {$A$};
+            \node (B) at (1, -2) {$B$};
+            \node (AcapB) at (0, -3) {$A \cap B$};
+            \node (1) at (0, -4) {$1$};
+
+            \node [rotate=-45] at (0.5, -1.5) {\scriptsize$|$};
+            \node [rotate=-45] at (-0.5, -2.5) {\scriptsize$|$};
+
+            \draw (G) -- (AB) -- (A) -- (AcapB) -- (1);
+            \draw (AcapB) -- (B) -- (AB);
+        \end{tikzpicture}
+    \end{center}
+\end{note}
+
+\begin{theo}[The Third Isomorphism Theorem]
+    \label{theo3.19}
+    Let $G$ be a group and let $H$ and $K$ be normal subgroups of $G$ with $H \leq K$. Then $K/H \nsub G/H$ and
+    \[ (G/H)/(K/H) \cong G/K \]
+    Moreover, if we denote the quotient by $H$ with a bar, we may write this as
+    \[ \bar G / \bar K \cong G/K \]
+    \begin{proof}
+        Let $gH \in G/H$, and consider $gHkHg\inv H \in gH(K/H)g\inv H$. That element is equal to $gkg\inv H$. Since $K \nsub G$, then $gkg\inv \in K$ so that $gkg\inv H \in K/H$, hence $gH(K/H)g\inv H \subseteq K/H$. By \autoref{theo3.6}, then $K/H \nsub G/H$.
+
+        Define the map $\phi : G/H \to G/K$ given by $gH \mapsto gK$. To show $\phi$ is well defined, suppose $g_1H = g_2H$ for $g_1, g_2 \in G$. Then $g_1 = g_2h$ for some $h \in H$. Because $H \leq K$, then $h \in K$ so $g_1 = g_2h$ in $K$, hence $g_1K = g_2K$ or that $\phi(g_1H) = \phi(g_2H)$. Since our choice of $g$ is arbitrary, $\phi$ is a surjective homomorphism. Finally,
+        \[\ker\phi = \set{gH \in G/H \mid \phi(gH) = 1K} = \set{gH \in G/H \mid gK = 1K} = \set{gH \in G/H \mid g \in K} = K/H\]
+        so that by the First Isomorphism Theorem, then $(G/H)/(K/H) \cong G/K$.
+    \end{proof}
+\end{theo}
+
+\begin{note}[A Remark on the Lattice Isomorphism Theorem]
+    The following isomorphism theorem shows a relation between the lattice of subgroups of the quotient group $G/N$ and the lattice of subgroups of $G$. In particular, the lattice of subgroups for $G/N$ can be read from the lattice of subgroups of $G$ by collapsing the subgroup $N$ to the identity. More precisely, we may bijectively associate the subgroups of $G$ that contain $N$ with the subgroups of $G/N$ so that the lattice of $G/N$ appears in the lattice for $G$.
+\end{note}
+
+\begin{theo}[The Fourth/Lattice Isomorphism Theorem]
+    \label{theo3.20}
+    Let $G$ be a group with $N \nsub G$. Then there is a bijection from the set of subgroups $A$ of $G$ that contain $N$ onto the set of subgroups $\bar A$ of $G/N$. In particular, every subgroup of $\bar G$ is of the form $A/N$ for some subgroup $A$ of $G$ containing $N$ (its preimage in $G$ under the natural projection homomorphism from $G$ to $G/N$). This bijection has the following properties: for every $A, B \leq G$ with $N \leq A$ and $N \leq B$,
+    \begin{enumerate}
+        \item $A \leq B$ if and only if $\bar A \leq \bar B$,
+        \item if $A \leq B$ , then $|B : A| = |\bar B : \bar A|$,
+        \item $\bar{\gen{A, B}} = \gen{\bar A, \bar B}$,
+        \item $\bar{A \cap B} = \bar A \cap \bar B$,
+        \item $A \nsub G$ if and only if $\bar A \nsub \bar G$.
+    \end{enumerate}
+    \begin{proof}
+        Let $\ac = \set{A \leq G \mid N \subseteq A}$ be the set of subgroups of $G$ containing $N$, and let $\bar\ac = \set{\bar A \mid A \in \ac}$. Define the map $\phi : \ac \to \bar\ac$ by $\phi(A) = A/N$. To show that $\phi$ is a bijection, we first show it is surjective. Let $\bar A \in \bar\ac$, so that $\bar A = B/N$ for some $B \in \ac$. Then $\phi(B) = B/N = \bar A$, hence $\phi$ is surjective. To show injectivity, suppose $\phi(A_1) = \phi(A_2)$ for $A_1, A_2 \in \ac$. Then $A_1/N = A_2/N$, so that for any $a_1 \in A_1$, there exists $a_2 \in A_2$ such that $a_1N = a_2N$, hence $a_2\inv a_1 \in N \subseteq A_2$ so that $a_1 \in A_2$. By symmetry, then $A_1 = A_2$, hence $\phi$ is injective. We now prove the properties:
+        \begin{enumerate}
+            \item If $A \leq B$, then for any $aN \in \bar A$, we have $a \in A \leq B$ so that $aN \in \bar B$, hence $\bar A \leq \bar B$. Conversely, if $\bar A \leq \bar B$, then for any $a \in A$, we have $aN \in \bar A \leq \bar B$ so that $aN = bN$ for some $b \in B$. It follows that $b\inv a \in N \subseteq B$, hence $a \in B$, so that $A \leq B$.
+            \item If $A \leq B$, consider the map $\psi : B/A \to \bar B/\bar A$ given by $\psi(bA) = bN \bar A$. To show $\psi$ is well-defined, suppose $b_1A = b_2A$ for $b_1, b_2 \in B$. Then $b_2\inv b_1 \in A$, so that $b_2\inv b_1N \in \bar A$, hence $b_1N \bar A = b_2N \bar A$. It is clear that $\psi$ is a homomorphism and surjective. Finally, if $bA \in \ker\psi$, then $bN \bar A = \bar A$ so that $b \in A$, hence $bA = A$. It follows that $\psi$ is an isomorphism, so that $|B : A| = |\bar B : \bar A|$.
+            \item Let $x \in \bar{\gen{A, B}}$, so that $x = gN$ for some $g \in \gen{A, B}$. Then $g$ may be written as a finite product of elements of $A$ and $B$, so that $x$ may be written as a finite product of elements of $\bar A$ and $\bar B$, hence $x \in \gen{\bar A, \bar B}$. Conversely, let $y \in \gen{\bar A, \bar B}$, so that $y = gN$ for some $g \in G$ that may be written as a finite product of elements of $A$ and $B$. It follows that $g \in \gen{A, B}$, hence $y \in \bar{\gen{A, B}}$. Therefore, the two sets are equal.
+            \item Pick $x \in \bar{A \cap B}$ so that $x = gN$ for some $g \in A \cap B$. It follows that $g \in A$ and $g \in B$, hence $gN \in \bar A$ and $gN \in \bar B$, so that $x \in \bar A \cap \bar B$. Conversely, let $y \in \bar A \cap \bar B$, so that $y = gN$ for some $g \in G$ such that $gN \in \bar A$ and $gN \in \bar B$. It follows that $g \in A$ and $g \in B$, hence $g \in A \cap B$, so that $y \in \bar{A \cap B}$. Therefore, the two sets are equal.
+            \item \rightimp Suppose $A \nsub G$. Suppose $gN \in \bar G$ and consider $(gN)(aN)(g\inv N) \in gN(\bar A)g\inv N$ for some $aN \in \bar A$. Note that $(gN)(aN)(g\inv N) = gag\inv N$. Since $A \nsub G$, then $gag\inv \in A$, hence $gag\inv N \in \bar A$, so that $gN \bar A g\inv N \subseteq \bar A$. By \autoref{theo3.6}, then $\bar A \nsub \bar G$.
+            
+            \noindent \leftimp Suppose $\bar A \nsub \bar G$. To show that $A \nsub G$, let $g \in G$ and consider $gag\inv$ for $a \in A$. Note that $gN \in \bar G$ and $gN \bar A g\inv N \in gN \bar A g\inv N$ is equal to $gag\inv N$. Since $\bar A \nsub \bar G$, then $gag\inv N \in \bar A$, hence $gag\inv \in A$, so that $gAg\inv \subseteq A$. By \autoref{theo3.6}, then $A \nsub G$. \qh
+        \end{enumerate}
+    \end{proof}
+\end{theo}
+
+\begin{ex}[Fourth Isomorphism Theorem Applied]
+    \begin{itemize}
+        \item Consider $G = Q_8$ with $N = \gen{-1}$. The isomorphic copy of $G/N$ consists of the double lines in the lattice of $G$ below. We have previously seen that $Q_8/\gen{-1} \cong V_4$ and the two lattices do indeed coincide.
+        \begin{center}
+            \begin{tikzpicture}
+                \node (q8) at (0, 0) {$Q_8$};
+                \node (i) at (-1, -1) {$\gen i$};
+                \node (j) at (0, -1) {$\gen j$};
+                \node (k) at (1, -1) {$\gen k$};
+                \node (-1) at (0, -2) {$\gen{-1}$};
+                \node (1) at (0, -3) {1};
+
+                \draw (1) -- (-1);
+                \draw [double] (-1) -- (i) -- (q8);
+                \draw [double] (-1) -- (j) -- (q8);
+                \draw [double] (-1) -- (k) -- (q8);
+            \end{tikzpicture}
+        \end{center}
+        \item The same process gives the lattice of $D_8/\gen{r^2}$ in the lattice of $D_8$:
+        \begin{center}
+            \begin{tikzpicture}
+                \node (d8) at (0, 0) {$D_8$};
+                \node (sr2) at (-1, -1) {$\gen{s, r^2}$};
+                \node (r) at (0, -1) {$\gen r$};
+                \node (rsr2) at (1, -1) {$\gen{rs, r^2}$};
+                \node (s) at (-2, -2) {$\gen s$};
+                \node (r2s) at (-1, -2) {$\gen{r^2s}$};
+                \node (r2) at (0, -2) {$\gen{r^2}$};
+                \node (rs) at (1, -2) {$\gen{rs}$};
+                \node (r3s) at (2, -2) {$\gen{r^3s}$};
+                \node (1) at (0, -3) {1};
+
+                \draw (1) -- (s) -- (sr2);
+                \draw (1) -- (r2s) -- (sr2);
+                \draw (1) -- (r2);
+                \draw [double] (r2) -- (sr2) -- (d8);
+                \draw (1) -- (rs) -- (rsr2);
+                \draw (1) -- (r3s) -- (rsr2);
+                \draw [double] (r2) -- (r) -- (d8);
+                \draw [double] (r2) -- (rsr2) -- (d8);
+            \end{tikzpicture}
+        \end{center}
+    \end{itemize}
+\end{ex}
+
+\begin{note}[Further Discussion on the Lattice Isomorphism Theorem]
+    \begin{itemize}
+        \item Note that in the second example of $G = D_8$ with $N = \gen{r^2}$, there are subgroups of $G$ that do not correspond to the subgroups of $G/N$, such as $\gen r$. These subgroups are precisely those that do not contain $N$. In general, subgroups of $G$ point to the same subgroup in $G/N$.
+        \item The image of a subgroup $H$ of $G$ under the natural projection homomorphism from $G$ to $G/N$ is the same as the image of the subgroup $HN$ of $G$, and $HN$ of $G$ contains $N$. Conversely, we see that the preimage of a subgroup $\bar H$ of $G/N$ contains $N$ and is the unique subgroup of $G$ containing $N$ whose image is $\bar H$ in $G/N$. In particular, it is the subgroups of $G$ containing $N$ which appear in the lattice for $G/N$.
+        \item The two lattices above illustrate that the isomorphism type of a group cannot be determined by the isomorphism types of $G/N$ and $N$. For example, both $Q_8$ and $D_8$ have normal subgroups isomorphic to $Z_2$ with corresponding quotient groups isomorphic to $V_4$, yet $Q_8$ is not isomorphic to $D_8$.
+        \item In a subgroup lattice, we may label the edges traced out between the subgroups with an integer $n$ such that $|A : B| = n$. Moreover, this integer is unchanged even with the subgroup lattice of the quotient groups by \autoref{theo3.20}(2).
+    \end{itemize}
+\end{note}
+
+\begin{note}[Remark on Group Homomorphisms on Quotient Groups]
+    There have been situations in the proofs of the isomorphism theorems that a homomorphism defined on $G/N$ is specified by giving the value of $\phi$ on the coset $gN$ in terms of $g$ alone. These situations required us showing that $\phi$ was well-defined, i.e., independent of the choice of $g$. We are actually defining a homomorphism $\Phi$ on $G$ itself by specifying the value of $\phi$ at $g$, hence independence of the choice of $g$ requires that $\Phi$ be trivial on $N$, i.e.,
+    \[\text{$\phi$ is well defined on $G/N$ if and only if $N \leq \ker\Phi$.}\]
+    We may check that a homomorphism on $G/N$ is well-defined by defining a homomorphism on $G$ and check that $N$ is contained in its kernel. We then say that $\Phi$ \textit{factors through} $N$, and $\phi$ is the \textit{induced} homomorphism on $G/N$. We may show this pictorially as follows:
+    \begin{center}
+        \begin{tikzpicture}[scale=1.5]
+            \node (G) at (0,0) {$G$};
+            \node (GN) at (2, 0) {$GN$};
+            \node (H) at (2, -1) {$H$};
+
+            \draw[->] (G) -- (GN) node [midway, above] {$\pi$};
+            \draw[->] (G) -- (H) node [midway, below left=-2pt] {$\Phi$};
+            \draw[->] (GN) -- (H) node [midway, right] {$\phi$};
+        \end{tikzpicture}
+    \end{center}
+    The diagram indicates that $\Phi = \phi \circ \pi$, i.e., the image in $H$ of an element in $G$ does not depend on the path taken in the dagram. We say that this diagram \textit{commutes}.
+\end{note}

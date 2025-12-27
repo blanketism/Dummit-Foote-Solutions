@@ -448,64 +448,62 @@
         Note that $V_4$ is abelian that is not isomorphic to $Z_4$ since it does not contain elements of order 3.
         \item $S_3$ is the lattice:
         \begin{center}
+        \begin{tikzpicture}
+            \node (s3) at (0, 0) {$S_3$};
+            \node (12) at (-4.5, -2) {$\gen{(1\ 2)}$};
+            \node (13) at (-3, -2) {$\gen{(1\ 3)}$};
+            \node (23) at (-1.5, -2) {$\gen{(2\ 3)}$};
+            \node (123) at (1.5, -1) {$\gen{(1\ 2\ 3)}$};
+            \node (1) at (0, -3) {1};
+
+            \draw (1) -- (12.south);
+            \draw (12.north) -- (s3);
+            \draw (1) -- (13.south);
+            \draw (13.north) -- (s3);
+            \draw (1) -- (23.south);
+            \draw (23.north) -- (s3);
+            \draw (1) -- (123) -- (s3);
+        \end{tikzpicture}
+    \end{center}
+        \item $D_8$ is the lattice:
+        \begin{center}
             \begin{tikzpicture}
-                \node (s3) at (0, 0) {$S_3$};
-                \node (12) at (-4.5, -2) {$\gen{(1\ 2)}$};
-                \node (13) at (-3, -2) {$\gen{(1\ 3)}$};
-                \node (23) at (-1.5, -2) {$\gen{(2\ 3)}$};
-                \node (123) at (1.5, -1) {$\gen{(1\ 2\ 3)}$};
+                \node (d8) at (0, 0) {$D_8$};
+                \node (sr2) at (-1, -1) {$\gen{s, r^2}$};
+                \node (r) at (0, -1) {$\gen r$};
+                \node (rsr2) at (1, -1) {$\gen{rs, r^2}$};
+                \node (s) at (-2, -2) {$\gen s$};
+                \node (r2s) at (-1, -2) {$\gen{r^2s}$};
+                \node (r2) at (0, -2) {$\gen{r^2}$};
+                \node (rs) at (1, -2) {$\gen{rs}$};
+                \node (r3s) at (2, -2) {$\gen{r^3s}$};
                 \node (1) at (0, -3) {1};
 
-                \draw (1) -- (12.south);
-                \draw (12.north) -- (s3);
-                \draw (1) -- (13.south);
-                \draw (13.north) -- (s3);
-                \draw (1) -- (23.south);
-                \draw (23.north) -- (s3);
-                \draw (1) -- (123) -- (s3);
+                \draw (1) -- (s) -- (sr2) -- (d8);
+                \draw (1) -- (r2s) -- (sr2);
+                \draw (1) -- (r2) -- (sr2);
+                \draw (1) -- (rs) -- (rsr2) -- (d8);
+                \draw (1) -- (r3s) -- (rsr2);
+                \draw (r2) -- (r) -- (d8);
+                \draw (r2) -- (sr2);
+                \draw (r2) -- (rsr2);
             \end{tikzpicture}
         \end{center}
-        \begin{multicols}{2}
-            \item $D_8$ is the lattice:
-            \begin{center}
-                \begin{tikzpicture}
-                    \node (d8) at (0, 0) {$D_8$};
-                    \node (sr2) at (-1, -1) {$\gen{s, r^2}$};
-                    \node (r) at (0, -1) {$\gen r$};
-                    \node (rsr2) at (1, -1) {$\gen{rs, r^2}$};
-                    \node (s) at (-2, -2) {$\gen s$};
-                    \node (r2s) at (-1, -2) {$\gen{r^2s}$};
-                    \node (r2) at (0, -2) {$\gen{r^2}$};
-                    \node (rs) at (1, -2) {$\gen{rs}$};
-                    \node (r3s) at (2, -2) {$\gen{r^3s}$};
-                    \node (1) at (0, -3) {1};
-    
-                    \draw (1) -- (s) -- (sr2) -- (d8);
-                    \draw (1) -- (r2s) -- (sr2);
-                    \draw (1) -- (r2) -- (sr2);
-                    \draw (1) -- (rs) -- (rsr2) -- (d8);
-                    \draw (1) -- (r3s) -- (rsr2);
-                    \draw (r2) -- (r) -- (d8);
-                    \draw (r2) -- (sr2);
-                    \draw (r2) -- (rsr2);
-                \end{tikzpicture}
-            \end{center}
-            \item $Q_8$ is the lattice:
-            \begin{center}
-                \begin{tikzpicture}
-                    \node (q8) at (0, 0) {$Q_8$};
-                    \node (i) at (-1, -1) {$\gen i$};
-                    \node (j) at (0, -1) {$\gen j$};
-                    \node (k) at (1, -1) {$\gen k$};
-                    \node (-1) at (0, -2) {$\gen{-1}$};
-                    \node (1) at (0, -3) {1};
-    
-                    \draw (1) -- (-1) -- (i) -- (q8);
-                    \draw (-1) -- (j) -- (q8);
-                    \draw (-1) -- (k) -- (q8);
-                \end{tikzpicture}
-            \end{center}
-        \end{multicols}
+        \item $Q_8$ is the lattice:
+        \begin{center}
+            \begin{tikzpicture}
+                \node (q8) at (0, 0) {$Q_8$};
+                \node (i) at (-1, -1) {$\gen i$};
+                \node (j) at (0, -1) {$\gen j$};
+                \node (k) at (1, -1) {$\gen k$};
+                \node (-1) at (0, -2) {$\gen{-1}$};
+                \node (1) at (0, -3) {1};
+
+                \draw (1) -- (-1) -- (i) -- (q8);
+                \draw (-1) -- (j) -- (q8);
+                \draw (-1) -- (k) -- (q8);
+            \end{tikzpicture}
+        \end{center}
         \item $D_{16}$ has a lattice that is not a planar graph, or is a graph drawn on a plane without lines crossing. A way of drawing it is
         \begin{center}
             \begin{tikzpicture}[scale=1.75]
