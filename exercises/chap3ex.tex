@@ -942,3 +942,77 @@ Let $G$ be a group.
         Now, observe that $|G/N : HN/N| = |G|/|HN| = |G:H|/|HN : H|$. Moreover, $|HN/N| = |H|/|H \cap N|$. Then $(|G/N : HN/N|, |HN/N|) = 1$ follows because $(|G : H|, \abs H) = 1$, hence $HN/N$ is a Hall subgroup of $G/N$.
     \end{sol}
 \end{problems}
+
+\newpage
+
+\subsection{Composition Series and the H\"older Program}
+
+\begin{problems}
+
+\item Prove that if $G$ is an abelian simple group then $G \cong \mathbb{Z}_p$ for some prime $p$
+(do not assume $G$ is a finite group).
+
+\item Exhibit all $3$ composition series for $Q_8$ and all $7$ composition series for $D_8$.
+List the composition factors in each case.
+
+\item Find a composition series for the quasidihedral group of order $16$
+(cf.\ Exercise~11, Section~2.5). Deduce that $QD_{16}$ is solvable.
+
+\item Use Cauchy's Theorem and induction to show that a finite abelian group has a subgroup
+of order $n$ for each positive divisor $n$ of its order.
+
+\item Prove that subgroups and quotient groups of a solvable group are solvable.
+
+\item Prove part (1) of the Jordan--H\"older Theorem by induction on $|G|$.
+
+\item If $G$ is a finite group and $H \trianglelefteq G$, prove that there is a composition series of $G$,
+one of whose terms is $H$.
+
+\item Let $G$ be a finite group. Prove that the following are equivalent:
+\begin{enumerate}
+  \item[(i)] $G$ is solvable.
+  \item[(ii)] $G$ has a chain of subgroups
+  \[
+  1 = H_0 \trianglelefteq H_1 \trianglelefteq H_2 \trianglelefteq \cdots \trianglelefteq H_s = G
+  \]
+  such that $H_{i+1}/H_i$ is cyclic, $0 \le i \le s-1$.
+  \item[(iii)] All composition factors of $G$ are of prime order.
+  \item[(iv)] $G$ has a chain of subgroups
+  \[
+  1 = N_0 \trianglelefteq N_1 \trianglelefteq N_2 \trianglelefteq \cdots \trianglelefteq N_t = G
+  \]
+  such that each $N_i$ is a normal subgroup of $G$ and $N_{i+1}/N_i$ is abelian,
+  $0 \le i \le t-1$.
+\end{enumerate}
+
+\noindent
+[For (iv), prove that a minimal nontrivial normal subgroup $M$ of $G$ is necessarily abelian
+and then use induction. To see that $M$ is abelian, let $N \trianglelefteq M$ be of prime index
+(by (iii)) and show that $x^{-1}y^{-1}xy \in N$ for all $x,y \in M$
+(cf.\ Exercise~40, Section~1). Apply the same argument to $gNg^{-1}$ to show that
+$x^{-1}y^{-1}xy$ lies in the intersection of all $G$-conjugates of $N$, and use the minimality
+of $M$ to conclude that $x^{-1}y^{-1}xy = 1$.]
+
+\item Prove the following special case of part (2) of the Jordan--H\"older Theorem:
+assume the finite group $G$ has two composition series
+\[
+1 = N_0 \trianglelefteq N_1 \trianglelefteq \cdots \trianglelefteq N_r = G
+\quad\text{and}\quad
+1 = M_0 \trianglelefteq M_1 \trianglelefteq M_2 = G.
+\]
+Show that $r = 2$ and that the list of composition factors is the same.
+[Use the Second Isomorphism Theorem.]
+
+\item Prove part (2) of the Jordan--H\"older Theorem by induction on $\min\{r,s\}$.
+[Apply the inductive hypothesis to $H = N_{r-1} \cap M_{s-1}$ and use the preceding exercises.]
+
+\item Prove that if $H$ is a nontrivial normal subgroup of the solvable group $G$ then there is
+a nontrivial subgroup $A$ of $H$ with $A \trianglelefteq G$ and $A$ abelian.
+
+\item Prove (without using the Feit--Thompson Theorem) that the following are equivalent:
+\begin{enumerate}
+  \item[(i)] Every group of odd order is solvable.
+  \item[(ii)] The only simple groups of odd order are those of prime order.
+\end{enumerate}
+
+\end{problems}
