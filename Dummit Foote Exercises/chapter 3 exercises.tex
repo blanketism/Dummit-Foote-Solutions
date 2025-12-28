@@ -750,7 +750,7 @@ Let $G$ be a group.
 
         Lastly, if $(m, n) = 1$, then $\lcm(m, n) = mn$ so that $\ell = mn$.
     \end{sol}
-    \item Let $H \leq K \leq G$. Prove that $|G : H| = |G : K| \cdot |K : H|$. 
+    \item \label{ex3.2.11} Let $H \leq K \leq G$. Prove that $|G : H| = |G : K| \cdot |K : H|$. 
     \begin{sol}
         Note that cosets of $H$ are contained in cosets of $K$. If $H$ has infinite index in $K$ or if $K$ has infinite index in $G$, then $H$ has infinite index in $G$. The finite case follows in the proof of \hyperref[ex3.2.10]{Exercise 3.2.10}, where we showed that each coset of $K$ contains $\abs{K : H}$ distinct cosets of $H$. Since there are $\abs{G : K}$ distinct cosets of $K$ in $G$, then there are $\abs{G : K} \cdot \abs{K : H}$ distinct cosets of $H$ in $G$, hence $\abs{G : H} = \abs{G : K} \cdot \abs{K : H}$.
     \end{sol}
@@ -823,15 +823,17 @@ Let $G$ be a group.
     \end{sol}
     \item Prove all parts of the Lattice Isomorphism Theorem.
     \begin{sol}
-        Let $\ac = \set{A \leq G \mid N \subseteq A}$ be the set of subgroups of $G$ containing $N$, and let $\bar\ac = \set{\bar A \mid A \in \ac}$. Define the map $\phi : \ac \to \bar\ac$ by $\phi(A) = A/N$. To show that $\phi$ is a bijection, we first show it is surjective. Let $\bar A \in \bar\ac$, so that $\bar A = B/N$ for some $B \in \ac$. Then $\phi(B) = B/N = \bar A$, hence $\phi$ is surjective. To show injectivity, suppose $\phi(A_1) = \phi(A_2)$ for $A_1, A_2 \in \ac$. Then $A_1/N = A_2/N$, so that for any $a_1 \in A_1$, there exists $a_2 \in A_2$ such that $a_1N = a_2N$, hence $a_2\inv a_1 \in N \subseteq A_2$ so that $a_1 \in A_2$. By symmetry, then $A_1 = A_2$, hence $\phi$ is injective. We now prove the properties:
+        Let $\ac = \set{A \leq G \mid N \subseteq A}$ and $\bar{\ac} = \set{\bar A \leq \bar G}$. Define the map $\phi : \ac \to \bar{\ac}$ by $\phi(A) = \bar A = A/N$. Note that $\phi(A) \leq \bar G$ as follows: since $\bar 1 \in \bar A$, then $\bar A$ is nonempty. Moreover, for any $\bar a, \bar b \in \bar A$ where $a, b \in A$, then $ab\inv \in A$ implies $\bar a \bar b\inv = \overline{ab\inv} \in \bar A$, hence $\bar A \leq \bar G$. This also implies that $\phi$ is surjective, since for any $\bar A \in \bar{\ac}$, we know that the preimage of $\bar A$ under the natural projection homomorphism from $G$ to $G/N$ is some subgroup $A$ of $G$ containing $N$ such that $\phi(A) = \bar A$. Lastly, suppose $\phi(A) = \phi(B)$ for some $A, B \in \ac$. Then $\bar A = \bar B$ implies that for some $a \in A$, there is some $b \in B$ such that $\bar a = \bar b$, hence $aN = bN$ so that $b\inv a \in N \subseteq B$. It follows that $a = b(b\inv a) \in B$, hence $A \subseteq B$. A similar argument shows that $B \subseteq A$, hence $A = B$ so that $\phi$ is injective. Therefore, $\phi$ is a bijection.
         \begin{enumerate}
-            \item If $A \leq B$, then for any $aN \in \bar A$, we have $a \in A \leq B$ so that $aN \in \bar B$, hence $\bar A \leq \bar B$. Conversely, if $\bar A \leq \bar B$, then for any $a \in A$, we have $aN \in \bar A \leq \bar B$ so that $aN = bN$ for some $b \in B$. It follows that $b\inv a \in N \subseteq B$, hence $a \in B$, so that $A \leq B$.
-            \item If $A \leq B$, consider the map $\psi : B/A \to \bar B/\bar A$ given by $\psi(bA) = bN \bar A$. To show $\psi$ is well-defined, suppose $b_1A = b_2A$ for $b_1, b_2 \in B$. Then $b_2\inv b_1 \in A$, so that $b_2\inv b_1N \in \bar A$, hence $b_1N \bar A = b_2N \bar A$. It is clear that $\psi$ is a homomorphism and surjective. Finally, if $bA \in \ker\psi$, then $bN \bar A = \bar A$ so that $b \in A$, hence $bA = A$. It follows that $\psi$ is an isomorphism, so that $|B : A| = |\bar B : \bar A|$.
-            \item Let $x \in \bar{\gen{A, B}}$, so that $x = gN$ for some $g \in \gen{A, B}$. Then $g$ may be written as a finite product of elements of $A$ and $B$, so that $x$ may be written as a finite product of elements of $\bar A$ and $\bar B$, hence $x \in \gen{\bar A, \bar B}$. Conversely, let $y \in \gen{\bar A, \bar B}$, so that $y = gN$ for some $g \in G$ that may be written as a finite product of elements of $A$ and $B$. It follows that $g \in \gen{A, B}$, hence $y \in \bar{\gen{A, B}}$. Therefore, the two sets are equal.
-            \item Pick $x \in \bar{A \cap B}$ so that $x = gN$ for some $g \in A \cap B$. It follows that $g \in A$ and $g \in B$, hence $gN \in \bar A$ and $gN \in \bar B$, so that $x \in \bar A \cap \bar B$. Conversely, let $y \in \bar A \cap \bar B$, so that $y = gN$ for some $g \in G$ such that $gN \in \bar A$ and $gN \in \bar B$. It follows that $g \in A$ and $g \in B$, hence $g \in A \cap B$, so that $y \in \bar{A \cap B}$. Therefore, the two sets are equal.
-            \item \rightimp Suppose $A \nsub G$. Suppose $gN \in \bar G$ and consider $(gN)(aN)(g\inv N) \in gN(\bar A)g\inv N$ for some $aN \in \bar A$. Note that $(gN)(aN)(g\inv N) = gag\inv N$. Since $A \nsub G$, then $gag\inv \in A$, hence $gag\inv N \in \bar A$, so that $gN \bar A g\inv N \subseteq \bar A$, hence $\bar A \nsub \bar G$.
+            \item \rightimp Suppose $A \leq B$ for $A, B \in \ac$, and suppose $\bar a \in \bar A$ for some $a \in A$. Since $A \leq B$, then $a \in B$ so that $\bar a \in \bar B$, hence $\bar A \leq \bar B$.
             
-            \noindent \leftimp Suppose $\bar A \nsub \bar G$. To show that $A \nsub G$, let $g \in G$ and consider $gag\inv$ for $a \in A$. Note that $gN \in \bar G$ and $gN \bar A g\inv N \in gN \bar A g\inv N$ is equal to $gag\inv N$. Since $\bar A \nsub \bar G$, then $gag\inv N \in \bar A$, hence $gag\inv \in A$, so that $gAg\inv \subseteq A$, hence $A \nsub G$. \qh
+            \noindent \leftimp Suppose $\bar A \leq \bar B$ for $A, B \in \ac$, and suppose $a \in A$ for some $a \in A$. Then $\bar a \in \bar A$ so that $\bar a \in \bar B$, hence there is some $b \in B$ such that $\bar a = \bar b$. It follows that $aN = bN$ so that $b\inv a \in N \subseteq B$, hence $a = b(b\inv a) \in B$. Therefore, $A \leq B$.
+            \item Consider a mapping $\psi : B/A \to \bar B / \bar A$ given by $\psi(bA) = \bar b \bar A$ for $b \in B$. To show $\psi$ is well-defined, suppose $b_1A = b_2A$ for some $b_1, b_2 \in B$. Then $b_2\inv b_1 \in A$, hence $\overline{b_2\inv b_1} \in \bar A$ so that $\bar b_1 \bar A = \bar b_2 \bar A$, hence $\psi(b_1A) = \psi(b_2A)$. It is clear that $\psi$ is a homomorphism, and it is surjective since for any $\bar b \bar A \in \bar B / \bar A$, there is some $b \in B$ such that $\psi(bA) = \bar b \bar A$. Finally, if $bA \in \ker\psi$, then $\psi(bA) = \bar A$ so that $\bar b \in \bar A$, hence $bN \in A/N$ or that $b \in A$. It follows that $\ker\psi = A/A = 1$, hence $\psi$ is an isomorphism. Therefore, $|B : A| = |B/A| = |\bar B / \bar A| = |\bar B : \bar A|$.
+            \item $\bar x \in \bar{\gen{A, B}}$ if and only if $x = x_1x_2 \ldots x_n$ where $x_i \in A \cup B$ for each $1 \leq i \leq n$ if and only if $\bar x = \bar{x_1x_2} \ldots \bar{x_n}$ where $\bar{x_i} \in \bar A \cup \bar B$ for each $1 \leq i \leq n$ if and only if $\bar x \in \gen{\bar A, \bar B}$, hence $\bar{\gen{A, B}} = \gen{\bar A, \bar B}$.
+            \item $\bar x \in \bar{A \cap B}$ if and only if $x \in A \cap B$ if and only if $x \in A$ and $x \in B$ if and only if $\bar x \in \bar A$ and $\bar x \in \bar B$ if and only if $\bar x \in \bar A \cap \bar B$, hence $\bar{A \cap B} = \bar A \cap \bar B$.
+            \item \rightimp Suppose $A \nsub G$, and let $gN \in \bar G$. Then for any $\bar a \in \bar A$ where $a \in A$, we have that $gag\inv \in A$ so that $gNg\inv = gag\inv N \in \bar A$, hence $\bar A \nsub \bar G$.
+            
+            \noindent \leftimp Suppose $\bar A \nsub \bar G$, and let $g \in G$. Then for any $a \in A$, we have that $\bar g \bar a \bar g\inv \in \bar A$ so that $gag\inv N \in A/N$, hence $gag\inv \in A$, thus $A \nsub G$. \qh
         \end{enumerate}
     \end{sol}
     \item Prove that if $H$ is a normal subgroup of $G$ of prime index $p$ then for all $K \leq G$ either
@@ -840,13 +842,103 @@ Let $G$ be a group.
         \item[(ii)] $G = HK$ and $|K : K \cap H| = p$.
     \end{enumerate}
     \begin{sol}
-        
+        Since $H \nsub G$, then $N_G(H) = G$. Then $K \leq N_G(H)$, hence $KH \leq G$ by the Second Isomorphism Theorem. By Proposition 3.14, then $KH = HK$. Since we have $H \leq HK \leq G$, we may use \hyperref[ex3.2.11]{Exercise 3.2.11} to conclude that $|G : H| = |G : HK| \cdot |HK : H|$. Since $|G : H| = p$ is prime, we have that $|G : HK|$ is either 1 or $p$. If the former is true, then $G = HK$. If the latter is true, then $HK = H$, hence $K \leq H$. In particular, if the former is true, then $|HK : H| = p$, and we may use the Second Isomorphism Theorem to conclude that $HK/H \cong K/(K \cap H)$ so that $|K : K \cap H| = |HK : H| = p$.
     \end{sol}
     \item Let $C$ be a normal subgroup of the group $A$ and let $D$ be a normal subgroup of the group $B$. Prove that $(C \times D) \nsub (A \times B)$ and $(A \times B)/(C \times D) \cong (A/C) \times (B/D)$.
+    \begin{sol}
+        Consider the map $\phi : A \times B \to (A/C) \times (B/D)$ given by $\phi(a, b) = (aC, bD)$. This map is clearly well-defined and a homomorphism. Now suppose $\phi((a, b)) = (C, D)$. Then $aC = C$ and $bD = D$, hence $a \in C$ and $b \in D$, so that $(a, b) \in C \times D$, hence $\ker\phi \subseteq C \times D$. If $(c, d) \in C \times D$, then $\phi((c, d)) = (cC, dD) = (C, D)$, so that $C \times D \subseteq \ker\phi$. It follows that $\ker\phi = C \times D$, hence $C \times D \nsub A \times B$. Lastly, $\phi$ is clearly surjective since for any $(aC, bD) \in (A/C) \times (B/D)$, we have $\phi((a, b)) = (aC, bD)$. By the First Isomorphism Theorem, we have $(A \times B)/(C \times D) \cong (A/C) \times (B/D)$.
+    \end{sol}
     \item Let $QD_{16} = \gen{\sigma, \tau}$ be the quasidihedral group of order 16 in \hyperref[ex2.5.11]{Exercise 2.5.11}. Prove that $\gen{\sigma^4}$ is normal in $QD_{16}$ and use the Lattice Isomorphism Theorem to draw the lattice of subgroups of $QD_{16}/\gen{\sigma^4}$. Which group of order 8 has the same lattice as this quotient? Use generators and relations for $QD_{16}$ to decide the isomorphism type of this group.
+    \begin{sol}
+        Note that $\tau\sigma^4\tau = \tau\tau\sigma^{12} = \sigma^4$, hence $\gen{\sigma^4} \nsub QD_{16}$. By the Lattice Isomorphism Theorem, we may draw the following diagram:
+        \begin{center}
+            \begin{tikzpicture}[scale=1.2]
+                \node (d8) at (0, 0) {$QD_{16}/\gen{\sigma^4}$};
+                
+                \node (sr2) at (-1, -1) {$\bar{\gen{\sigma^2, \tau}}$};
+                \node (r) at (0, -1) {$\bar{\gen\sigma}$};
+                \node (rsr2) at (1, -1) {${\bar{\gen{\sigma\tau, \sigma^2}}}$};
+
+                \node (s) at (-2, -2) {$\bar{\gen{\tau\sigma^2, \sigma^4}}$};
+                \node (r2s) at (-1, -2) {$\bar{\gen{\sigma^4, \tau}}$};
+                \node (r2) at (0, -2) {$\bar{\gen{\sigma^2}}$};
+                \node (rs) at (1, -2) {$\bar{\gen{\tau\sigma}}$};
+                \node (r3s) at (2, -2) {$\bar{\gen{\tau\sigma^3}}$};
+                
+                \node (1) at (0, -3) {1};
+
+                \draw (1) -- (s) -- (sr2) -- (d8);
+                \draw (1) -- (r2s) -- (sr2);
+                \draw (1) -- (r2) -- (sr2);
+                \draw (1) -- (rs) -- (rsr2) -- (d8);
+                \draw (1) -- (r3s) -- (rsr2);
+                \draw (r2) -- (r) -- (d8);
+                \draw (r2) -- (sr2);
+                \draw (r2) -- (rsr2);
+            \end{tikzpicture}
+        \end{center}
+        Moreover, $\bar{\sigma^4} = \bar{\tau^2} = \bar 1$ and $\bar{\tau\sigma} = \bar{\sigma^3\tau} = \bar{\sigma\inv\tau}$, then the generators $\bar\sigma$ and $\bar\tau$ satisfy the relations as $r$ and $s$ do in $D_8$, hence $QD_{16}/\gen{\sigma^4} \cong D_8$.
+    \end{sol}
     \item Let $M = \gen{u, v}$ be the modular group of order 16 in \hyperref[ex2.5.14]{Exercise 2.5.14}. Prove that $\gen{v^4}$ is normal in $M$ and use the Lattice Isomorphism Theorem to draw the lattice of subgroups of $M/\gen{v^4}$. Which group of order 8 has the same lattice as this quotient? Use generators and relations for $M$ to decide the isomorphism type of this group.
+    \begin{sol}
+        Note that $uv^4u = uuv^{20} = v^4$, hence $\gen{v^4} \nsub M$. By the Lattice Isomorphism Theorem, we may draw the following diagram:
+        \begin{center}
+            \begin{tikzpicture}[every node/.style=on grid]
+                \node (G) {$M/\gen{v^4}$};
+
+                \node (y) [below left=of G] {$\bar{\gen v}$};
+                \node (xy) [below=of G] {$\bar{\gen{uv}}$};
+                \node (x y2) [below right=of G] {$\bar{\gen{u, v^2}}$};
+
+                \node (y2) [below right=of y] {$\bar{\gen{v^2}}$};
+                \node (xy2) [below=of x y2] {$\bar{\gen{uv^2}}$};
+                \node (x y4) [below right=of x y2] {$\bar{\gen{u, v^4}}$};
+
+                \node (y4) [below right=of y2] {$\bar{\gen{v^4}}$};
+
+                \draw (y4) -- (y2) -- (y) -- (G);
+                \draw (y4) -- (x y4) -- (x y2) -- (G);
+                \draw (y4) -- (xy2) -- (x y2);
+                \draw (y2) -- (xy) -- (G);
+                \draw (y2) -- (x y2);
+            \end{tikzpicture}
+        \end{center}
+        Moreover, $\bar{v^4} = \bar{u^2} = \bar 1$ and $\bar{vu} = \bar{uv^5} = \bar{uv}$ so that the generators of $M/\gen{v^4}$ satisfy the relations as $a$ and $b$ do in $Z_2 \times Z_4$, whose presentation is given in \hyperref[ex2.5.12]{Exercise 2.5.12}. Then $M/\gen{v^4} \cong Z_2 \times Z_4$.
+    \end{sol}
     \item Let $M$ and $N$ be normal subgroups of $G$ such that $G = MN$. Prove that $G/(M \cap N) \cong (G/M) \times (G/N)$. [Draw the lattice.]
+    \begin{sol}
+        The lattice is given as the following, where double lines represent the quotient group $G/(M \cap N)$:
+        \begin{center}
+            \begin{tikzpicture}[scale=0.8]
+                \node (MN) at (0, 0) {$G = MN$};
+                \node (M) at (-1, -1) {$M$};
+                \node (N) at (1, -1) {$N$};
+                \node (MnN) at (0, -2) {$M \cap N$};
+                \node (1) at (0, -3) {1};
+
+                \draw (1) -- (MnN);
+                \draw [double] (MnN) -- (M) -- (MN);
+                \draw [double] (MnN) -- (N) -- (MN);
+            \end{tikzpicture}
+        \end{center}
+        Now consider the mapping $\phi : G \to (G/M) \times (G/N)$ given by $\phi(g) = (gM, gN)$. This is clearly a homomorphism with $\ker\phi = M \cap N$. Now let $(gM, hN) \in (G/M) \times (G/N)$. Since $G = MN$, there exist $m, m' \in M$ and $n, n' \in N$ such that $g = mn$ and $h = m'n'$. Then $\phi(mn') = (mnM, mn'N) = (gM, hN)$, hence $\phi$ is surjective. By the First Isomorphism Theorem, we have $G/(M \cap N) \cong \phi(G) = (G/M) \times (G/N)$.
+    \end{sol}
     \item Let $p$ be a prime and let $G$ be the group of $p$-power roots  of $1$ in $\c$ (cf. \hyperref[ex2.4.18]{Exercise 2.4.18}). Prove that the map $z \mapsto z^p$ is a surjective homomorphism. Deduce that $G$ is isomorphic to a proper quotient of itself.
+    \begin{sol}
+        Let $\phi(z) = z^p$ be the map. For any $z, w \in G$, then $\phi(zw) = (zw)^p = z^p w^p = \phi(z)\phi(w)$, hence $\phi$ is a homomorphism. Moreover, for any $y \in G$, there is some $n \in \zp$ such that $y^{p^n} = 1$. Then let $z = y^{p^{n - 1}}$, so that $z^p = y^{p^n} = 1$, hence $z \in G$ and $\phi(z) = y$. It follows that $\phi$ is surjective. By the First Isomorphism Theorem, we have $G/\ker\phi \cong G$. Since $\ker\phi$ contains all $p$-power roots of unity of order dividing $p$, then $\ker\phi$ is nontrivial, hence $G$ is isomorphic to a proper quotient of itself.
+    \end{sol}
     \item Let $p$ be a prime and let $G$ be a group of order $p^am$, where $p$ does not divide $m$. Assume $P$ is a subgroup of $G$ of order $p^a$ and $N$ is a normal subgroup of $G$ of order $p^b n$, where $p$ does not divide $n$. Prove that $|P \cap N| = p^b$ and $|PN/N| = p^{a - b}$. (The subgroup $P$ of $G$ is called a \textit{Sylow $p$-subgroup} of $G$. This exercise shows that the intersection of any Sylow $p$-subgroup with a normal subgroup $N$ is a Sylow $p$-subgroup of $N$.)
-    \item Generalize the preceding exercise as follows. A subgroup $H$ of a finite group $G$ is called a \textit{Hall subgroup} of $G$ if its index in $G$ is relatively prime to its order: $(|G : H|, |H|) = 1$. Prove that if $H$ is a Hall subgroup of $G$ and $N \nsub G$, then $H \cap N$ is a Hall subgroup of $N$ and
+    \begin{sol}
+        Since $P \cap N \leq P$, Lagrange's Theorem concludes that $|P \cap N| = p^c$ for some $c \leq a$. Moreover, $c \leq b$ since $P \cap N \leq N$ where $\abs N = p^b n$ where $p \nmid n$. Since $N \nsub G$, then $P \leq N_G(N) = G$ so that by the Second Isomorphism Theorem, we have $PN \leq G$, and $PN/N \cong P/(P \cap N)$. It now follows that $|PN/N| = |P/P \cap N| = p^{a - k}$.
+
+        Now note that $\abs{G/N} = \abs G/\abs N = p^{a - b}m/n$, where $p \nmid m$ and $p \nmid n$. Since $PN/N \leq G/N$, then we may use Lagrange's Theorem again to conclude that $p^{a - k} \mid p^{a - b}$, hence $a - k \leq a - b$, or $k \geq b$. Since we showed previously that $k \leq b$, it follows that $k = b$, hence $|P \cap N| = p^b$ and $|PN/N| = p^{a - b}$.
+    \end{sol}
+    \item Generalize the preceding exercise as follows. A subgroup $H$ of a finite group $G$ is called a \textit{Hall subgroup} of $G$ if its index in $G$ is relatively prime to its order: $(|G : H|, |H|) = 1$. Prove that if $H$ is a Hall subgroup of $G$ and $N \nsub G$, then $H \cap N$ is a Hall subgroup of $N$ and $HN/N$ is a Hall subgroup of $G/N$.
+    \begin{sol}
+        It follows by the Second Isomorphism Theorem that $HN \leq G$ and $HN/N \cong H/(H \cap N)$. Note that
+        \[|HN| = \frac{\abs H \abs N}{\abs{H \cap N}} \quad \text{must divide} \quad \abs G = \abs H |G : H|\]
+        Hence, $|N|/\abs{H \cap N}$ divides $|G : H|$. Since $(|G : H|, \abs H) = 1$, and $|N|/|H \cap N|$ divides $|G : H|$, it follows that $(|N|/\abs{H \cap N}, \abs H) = 1$, hence $(\abs{N : H \cap N}, \abs{H \cap N}) = 1$. Then $H \cap N$ is a Hall subgroup of $N$.
+
+        Now, observe that $|G/N : HN/N| = |G|/|HN| = |G:H|/|HN : H|$. Moreover, $|HN/N| = |H|/|H \cap N|$. Then $(|G/N : HN/N|, |HN/N|) = 1$ follows because $(|G : H|, \abs H) = 1$, hence $HN/N$ is a Hall subgroup of $G/N$.
+    \end{sol}
 \end{problems}
