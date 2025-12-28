@@ -6,5 +6,6 @@
 *.pdf
 *.synctex.gz
 *.toc
+!dummit_foote_exercises.pdf
 dummit_foote_notes.tex
 notes/
