@@ -852,7 +852,7 @@ Let $G$ be a group.
     \begin{sol}
         Note that $\tau\sigma^4\tau = \tau\tau\sigma^{12} = \sigma^4$, hence $\gen{\sigma^4} \nsub QD_{16}$. By the Lattice Isomorphism Theorem, we may draw the following diagram:
         \begin{center}
-            \begin{tikzpicture}[scale=1.2]
+            \begin{tikzpicture}[scale=1.5]
                 \node (d8) at (0, 0) {$QD_{16}/\gen{\sigma^4}$};
                 
                 \node (sr2) at (-1, -1) {$\bar{\gen{\sigma^2, \tau}}$};
@@ -949,70 +949,105 @@ Let $G$ be a group.
 
 \begin{problems}
 
-\item Prove that if $G$ is an abelian simple group then $G \cong \mathbb{Z}_p$ for some prime $p$
-(do not assume $G$ is a finite group).
+    \item Prove that if $G$ is an abelian simple group then $G \cong \mathbb{Z}_p$ for some prime $p$ (do not assume $G$ is a finite group).
+    \begin{sol}
+        Since $G$ is simple, then its only subgroups are 1 and $G$. Since $G$ is abelian, then all of its subgroups are normal. If $G$ is trivial, then $G \cong Z_1$, which we exclude from this statement.
+        
+        Consider now some nonidentity $g \in G$. Then $\gen g \leq G$. Since $g \neq 1$, and $G$ is simple, it must be that $\gen g = G$, hence $G$ is cyclic.
 
-\item Exhibit all $3$ composition series for $Q_8$ and all $7$ composition series for $D_8$.
-List the composition factors in each case.
+        Now consider $\abs g = n$. If $n = \infty$, then $\gen{g^k}$ is a proper nontrivial subgroup of $G$ for any $k \in \zp$, contradicting that $G$ is simple. Then $n$ must be finite. If $n = ab$ for $a, b \in \zp$ where $1 < a, b < n$, then $\gen{g^a}$ is a proper nontrivial subgroup of $G$, again contradicting that $G$ is simple. It follows that $n$ is prime, hence $G \cong Z_n$ for some prime $n$.
+    \end{sol}
+    \item Exhibit all $3$ composition series for $Q_8$ and all $7$ composition series for $D_8$. List the composition factors in each case.
+    \begin{sol}
+        The composition series for $Q_8$ are as follows:
+        \begin{align*}
+            1 & \nsub \gen{-1} \nsub \gen i \nsub Q_8 \\
+            1 & \nsub \gen{-1} \nsub \gen j \nsub Q_8 \\
+            1 & \nsub \gen{-1} \nsub \gen k \nsub Q_8
+        \end{align*}
+        The composition factors for each series are isomorphic to $Z_2$.
 
-\item Find a composition series for the quasidihedral group of order $16$
-(cf.\ Exercise~11, Section~2.5). Deduce that $QD_{16}$ is solvable.
+        The composition series for $D_8$ are as follows:
+        \begin{align*}
+            1 & \nsub \gen s \nsub \gen{s, r^2} \nsub D_8 \\
+            1 & \nsub \gen{r^2s} \nsub \gen{s, r^2} \nsub D_8 \\
+            1 & \nsub \gen{r^2} \nsub \gen{s, r^2} \nsub D_8 \\
+            1 & \nsub \gen{r^2} \nsub \gen r \nsub D_8 \\
+            1 & \nsub \gen{r^2} \nsub \gen{rs, r^2} \nsub D_8 \\
+            1 & \nsub \gen{rs} \nsub \gen{rs, r^2} \nsub D_8 \\
+            1 & \nsub \gen{r^3s} \nsub \gen{rs, r^2} \nsub D_8
+        \end{align*}
+        with each composition factor isomorphic to $Z_2$.
+    \end{sol}
+    \item Find a composition series for the quasidihedral group of order $16$
+    (cf. \hyperref[ex2.5.11]{Exercise 2.5.11}). Deduce that $QD_{16}$ is solvable.
+    \begin{sol}
+        A clear composition series is $1 \nsub \gen{\sigma^4} \nsub \gen{\sigma^2} \nsub \gen{\sigma} \nsub QD_{16}$, with each composition factor isomorphic to $Z_2$. Since all composition factors are abelian, then $QD_{16}$ is solvable.
+    \end{sol}
+    \item Use Cauchy's Theorem and induction to show that a finite abelian group has a subgroup of order $n$ for each positive divisor $n$ of its order.
+    \begin{sol}
+        Let $\abs G = m$. If $m = 1$, the result is trivial. If $m$ is prime, then the result is trivial by Cauchy's Theorem.
 
-\item Use Cauchy's Theorem and induction to show that a finite abelian group has a subgroup
-of order $n$ for each positive divisor $n$ of its order.
+        Suppose the result is true for all groups with order less than $m$, and let $n \in \zp$ where $n \mid m$. If $n$ is prime, then there exists $g \in G$ where $\abs g = n$ by Cauchy's Theorem. Then $\abs g \leq G$ is a subgroup of order $n$, and the result is true. Suppose now $n$ is not prime. Then $n = kp$ for some prime divisor $p$ of $n$. Since $p \mid m$, there exists an element $h \in G$ where $\abs h = p$ by Cauchy's Theorem. Then $\gen h$ has order $p$, and $G/\gen h$ is a finite abelian group of order $m/p < m$. Since $k \mid m/p$, by the inductive hypothesis, there exists a subgroup $\bar H$ of $G/\gen h$ where $\abs{\bar H} = k$. By the Lattice Isomorphism Theorem, there exists a subgroup $H$ of $G$ containing $\gen h$ such that $H/\gen h = \bar H$. Then $\abs H = \abs{\bar H} \abs{\gen h} = kp = n$, hence $H$ is a subgroup of $G$ of order $n$. By induction, the result holds for all finite abelian groups.
+    \end{sol}
+    \item Prove that subgroups and quotient groups of a solvable group are solvable.
+    \begin{sol}
+        Let $G$ be a solvable group, and let $H \leq G$. Then there exists a chain of subgroups
+        \[1 = G_0 \nsub G_1 \nsub \cdots \nsub G_n = G\]
+        such that $G_{i + 1}/G_i$ is abelian for each $0 \leq i \leq n - 1$. Consider the set of subgroups $H_i = H \cap G_i$ for each $0 \leq i \leq n$. Note that $H_0 = H \cap G_0 = 1$ and $H_n = H \cap G_n = H$ since $H \leq G$. It is clear that $H_i \leq H_{i + 1}$ for each $0 \leq i \leq n - 1$. Moreover, let $g \in H_{i + 1}$ and $x \in H_i$. Then $g \in G_{i + 1}$ and $x \in G_i$. Since $G_i \nsub G_{i + 1}$, then $gxg\inv \in G_i$. Moreover, $g, x \in H$ so that $gxg\inv \in H$, hence $gxg\inv \in H_i$. It follows that $H_i \nsub H_{i + 1}$ for each $0 \leq i \leq n - 1$. Note that $H_i = G_i \cap H = (G_i \cap G_{i + 1}) \cap H = G_i \cap H_{i + 1}$ so that by the Second Isomorphism Theorem, we have $H_{i + 1}/H_i = H_{i + 1}/(H_{i + 1} \cap G_i) \cong H_{i + 1}G_i/G_i \leq G_{i + 1}/G_i$. Since $G_{i + 1}/G_i$ is abelian, then so is $H_{i + 1}/H_i$. Therefore, $H$ is solvable with the chain
+        \[1 = H_0 \nsub H_1 \nsub \cdots \nsub H_n = H\]
+        Now let $N \nsub G$. Consider the subgroups $N_i = G_iN$. 
+    \end{sol}
+    \item Prove part (1) of the Jordan--H\"older Theorem by induction on $|G|$.
 
-\item Prove that subgroups and quotient groups of a solvable group are solvable.
+    \item If $G$ is a finite group and $H \trianglelefteq G$, prove that there is a composition series of $G$,
+    one of whose terms is $H$.
 
-\item Prove part (1) of the Jordan--H\"older Theorem by induction on $|G|$.
+    \item Let $G$ be a \textit{finite} group. Prove that the following are equivalent:
+    \begin{enumerate}
+    \item[(i)] $G$ is solvable.
+    \item[(ii)] $G$ has a chain of subgroups
+    \[
+    1 = H_0 \trianglelefteq H_1 \trianglelefteq H_2 \trianglelefteq \cdots \trianglelefteq H_s = G
+    \]
+    such that $H_{i+1}/H_i$ is cyclic, $0 \le i \le s-1$.
+    \item[(iii)] All composition factors of $G$ are of prime order.
+    \item[(iv)] $G$ has a chain of subgroups
+    \[
+    1 = N_0 \trianglelefteq N_1 \trianglelefteq N_2 \trianglelefteq \cdots \trianglelefteq N_t = G
+    \]
+    such that each $N_i$ is a normal subgroup of $G$ and $N_{i+1}/N_i$ is abelian,
+    $0 \le i \le t-1$.
+    \end{enumerate}
 
-\item If $G$ is a finite group and $H \trianglelefteq G$, prove that there is a composition series of $G$,
-one of whose terms is $H$.
+    \noindent
+    [For (iv), prove that a minimal nontrivial normal subgroup $M$ of $G$ is necessarily abelian
+    and then use induction. To see that $M$ is abelian, let $N \trianglelefteq M$ be of prime index
+    (by (iii)) and show that $x^{-1}y^{-1}xy \in N$ for all $x,y \in M$
+    (cf.\ Exercise~40, Section~1). Apply the same argument to $gNg^{-1}$ to show that
+    $x^{-1}y^{-1}xy$ lies in the intersection of all $G$-conjugates of $N$, and use the minimality
+    of $M$ to conclude that $x^{-1}y^{-1}xy = 1$.]
 
-\item Let $G$ be a finite group. Prove that the following are equivalent:
-\begin{enumerate}
-  \item[(i)] $G$ is solvable.
-  \item[(ii)] $G$ has a chain of subgroups
-  \[
-  1 = H_0 \trianglelefteq H_1 \trianglelefteq H_2 \trianglelefteq \cdots \trianglelefteq H_s = G
-  \]
-  such that $H_{i+1}/H_i$ is cyclic, $0 \le i \le s-1$.
-  \item[(iii)] All composition factors of $G$ are of prime order.
-  \item[(iv)] $G$ has a chain of subgroups
-  \[
-  1 = N_0 \trianglelefteq N_1 \trianglelefteq N_2 \trianglelefteq \cdots \trianglelefteq N_t = G
-  \]
-  such that each $N_i$ is a normal subgroup of $G$ and $N_{i+1}/N_i$ is abelian,
-  $0 \le i \le t-1$.
-\end{enumerate}
+    \item Prove the following special case of part (2) of the Jordan--H\"older Theorem:
+    assume the finite group $G$ has two composition series
+    \[
+    1 = N_0 \trianglelefteq N_1 \trianglelefteq \cdots \trianglelefteq N_r = G
+    \quad\text{and}\quad
+    1 = M_0 \trianglelefteq M_1 \trianglelefteq M_2 = G.
+    \]
+    Show that $r = 2$ and that the list of composition factors is the same.
+    [Use the Second Isomorphism Theorem.]
 
-\noindent
-[For (iv), prove that a minimal nontrivial normal subgroup $M$ of $G$ is necessarily abelian
-and then use induction. To see that $M$ is abelian, let $N \trianglelefteq M$ be of prime index
-(by (iii)) and show that $x^{-1}y^{-1}xy \in N$ for all $x,y \in M$
-(cf.\ Exercise~40, Section~1). Apply the same argument to $gNg^{-1}$ to show that
-$x^{-1}y^{-1}xy$ lies in the intersection of all $G$-conjugates of $N$, and use the minimality
-of $M$ to conclude that $x^{-1}y^{-1}xy = 1$.]
+    \item Prove part (2) of the Jordan--H\"older Theorem by induction on $\min\{r,s\}$.
+    [Apply the inductive hypothesis to $H = N_{r-1} \cap M_{s-1}$ and use the preceding exercises.]
 
-\item Prove the following special case of part (2) of the Jordan--H\"older Theorem:
-assume the finite group $G$ has two composition series
-\[
-1 = N_0 \trianglelefteq N_1 \trianglelefteq \cdots \trianglelefteq N_r = G
-\quad\text{and}\quad
-1 = M_0 \trianglelefteq M_1 \trianglelefteq M_2 = G.
-\]
-Show that $r = 2$ and that the list of composition factors is the same.
-[Use the Second Isomorphism Theorem.]
+    \item Prove that if $H$ is a nontrivial normal subgroup of the solvable group $G$ then there is
+    a nontrivial subgroup $A$ of $H$ with $A \trianglelefteq G$ and $A$ abelian.
 
-\item Prove part (2) of the Jordan--H\"older Theorem by induction on $\min\{r,s\}$.
-[Apply the inductive hypothesis to $H = N_{r-1} \cap M_{s-1}$ and use the preceding exercises.]
-
-\item Prove that if $H$ is a nontrivial normal subgroup of the solvable group $G$ then there is
-a nontrivial subgroup $A$ of $H$ with $A \trianglelefteq G$ and $A$ abelian.
-
-\item Prove (without using the Feit--Thompson Theorem) that the following are equivalent:
-\begin{enumerate}
-  \item[(i)] Every group of odd order is solvable.
-  \item[(ii)] The only simple groups of odd order are those of prime order.
-\end{enumerate}
+    \item Prove (without using the Feit--Thompson Theorem) that the following are equivalent:
+    \begin{enumerate}
+    \item[(i)] Every group of odd order is solvable.
+    \item[(ii)] The only simple groups of odd order are those of prime order.
+    \end{enumerate}
 
 \end{problems}
