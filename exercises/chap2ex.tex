@@ -3,7 +3,7 @@
 \subsection{Definitions and Examples}
 
 \begin{problems}
-    \item In each of (a)–(e) prove that the specified subset is a subgroup of the given group:
+    \item In each of (a)-(e) prove that the specified subset is a subgroup of the given group:
     \begin{problems}
         \item the set of complex numbers of the form $a + ai$, $a \in \mathbb{R}$ (under addition)
         \item the set of complex numbers of absolute value $1$, i.e., the unit circle in the complex plane (under multiplication)
@@ -488,34 +488,32 @@
     \end{sol}
     \item In $\intmod[48]$ write out all elements of $\gen{\bar a}$ for every $\bar a$. Find all inclusions between subgroups in $\intmod[48]$.
     \begin{sol}
-        \begin{multicols}{2}
         The elements of each subgroup are
-            \begin{align*}
-                \intmod[48] = \gen{\bar 1} & = \set{\bar 0, \bar 1, \bar 2, \ldots, \widebar{46}, \widebar{47}} \\
-                \gen{\bar 2} & = \set{\bar 0, \bar 2, \bar 4, \ldots, \widebar{44}, \widebar{46}} \\
-                \gen{\bar 3} & = \set{\bar 0, \bar 3, \bar 6, \ldots, \widebar{42}, \widebar{45}} \\
-                \gen{\bar 4} & = \set{\bar 0, \bar 4, \bar 8, \ldots, \widebar{40}, \widebar{44}} \\
-                \gen{\bar 6} & = \set{\bar 0, \bar 6, \widebar{12}, \ldots, \widebar{36}, \widebar{42}} \\
-                \gen{\bar 8} & = \set{\bar 0, \bar 8, \widebar{16}, \widebar{24}, \widebar{32}, \widebar{40}} \\
-                \gen{\widebar{12}} & = \set{\bar 0, \widebar{12}, \widebar{24}, \widebar{36}} \\
-                \gen{\widebar{16}} & = \set{\bar 0, \widebar{16}, \widebar{32}} \\
-                \gen{\widebar{24}} & = \set{\bar 0, \bar{24}} \\
-                \gen{\bar 0} & = \set{\bar 0}
-            \end{align*}
-            Moreover, the subgroup inclusions are
-            \begin{align*}
-                \gen{\bar 1} & \geq \gen{\bar 0}, \gen{\bar 1}, \gen{\bar 2}, \gen{\bar 3}, \gen{\bar 4}, \gen{\bar 6}, \gen{\bar 8}, \gen{\widebar{12}}, \gen{\widebar{16}}, \gen{\widebar{24}} \\
-                \gen{\bar 2} & \geq \gen{\bar 0}, \gen{\bar 2}, \gen{\bar 4}, \gen{\bar 6}, \gen{\bar 8}, \gen{\widebar{12}}, \gen{\widebar{24}} \\
-                \gen{\bar 3} & \geq \gen{\bar 3}, \gen{\bar 6}, \gen{\widebar{12}}, \gen{\widebar{24}} \\
-                \gen{\bar 4} & \geq \gen{\bar 0}, \gen{\bar 4}, \gen{\bar 8}, \gen{\widebar{12}}, \gen{\widebar{16}}, \gen{\widebar{24}} \\
-                \gen{\bar 6} & \geq \gen{\bar 0}, \gen{\bar 6}, \gen{\widebar{12}}, \gen{\widebar{24}} \\
-                \gen{\bar 8} & \geq \gen{\bar 0}, \gen{\bar 8}, \gen{\widebar{16}}, \gen{\widebar{24}} \\
-                \gen{\widebar{12}} & \geq \gen{\bar 0}, \gen{\widebar{12}}, \gen{\widebar{24}} \\
-                \gen{\widebar{16}} & \geq \gen{0}, \gen{\bar 16} \\
-                \gen{\widebar{24}} & \geq \gen{0}, \gen{\widebar{24}} \\
-                \gen{\bar 0} & \geq \gen{\bar 0}
-            \end{align*}
-        \end{multicols}
+        \begin{align*}
+            \intmod[48] = \gen{\bar 1} & = \set{\bar 0, \bar 1, \bar 2, \ldots, \bar{46}, \bar{47}} \\
+            \gen{\bar 2} & = \set{\bar 0, \bar 2, \bar 4, \ldots, \bar{44}, \bar{46}} \\
+            \gen{\bar 3} & = \set{\bar 0, \bar 3, \bar 6, \ldots, \bar{42}, \bar{45}} \\
+            \gen{\bar 4} & = \set{\bar 0, \bar 4, \bar 8, \ldots, \bar{40}, \bar{44}} \\
+            \gen{\bar 6} & = \set{\bar 0, \bar 6, \bar{12}, \ldots, \bar{36}, \bar{42}} \\
+            \gen{\bar 8} & = \set{\bar 0, \bar 8, \bar{16}, \bar{24}, \bar{32}, \bar{40}} \\
+            \gen{\bar{12}} & = \set{\bar 0, \bar{12}, \bar{24}, \bar{36}} \\
+            \gen{\bar{16}} & = \set{\bar 0, \bar{16}, \bar{32}} \\
+            \gen{\bar{24}} & = \set{\bar 0, \bar{24}} \\
+            \gen{\bar 0} & = \set{\bar 0}
+        \end{align*}
+        Moreover, the subgroup inclusions are
+        \begin{align*}
+            \gen{\bar 1} & \geq \gen{\bar 0}, \gen{\bar 1}, \gen{\bar 2}, \gen{\bar 3}, \gen{\bar 4}, \gen{\bar 6}, \gen{\bar 8}, \gen{\bar{12}}, \gen{\bar{16}}, \gen{\bar{24}} \\
+            \gen{\bar 2} & \geq \gen{\bar 0}, \gen{\bar 2}, \gen{\bar 4}, \gen{\bar 6}, \gen{\bar 8}, \gen{\bar{12}}, \gen{\bar{24}} \\
+            \gen{\bar 3} & \geq \gen{\bar 3}, \gen{\bar 6}, \gen{\bar{12}}, \gen{\bar{24}} \\
+            \gen{\bar 4} & \geq \gen{\bar 0}, \gen{\bar 4}, \gen{\bar 8}, \gen{\bar{12}}, \gen{\bar{16}}, \gen{\bar{24}} \\
+            \gen{\bar 6} & \geq \gen{\bar 0}, \gen{\bar 6}, \gen{\bar{12}}, \gen{\bar{24}} \\
+            \gen{\bar 8} & \geq \gen{\bar 0}, \gen{\bar 8}, \gen{\bar{16}}, \gen{\bar{24}} \\
+            \gen{\bar{12}} & \geq \gen{\bar 0}, \gen{\bar{12}}, \gen{\bar{24}} \\
+            \gen{\bar{16}} & \geq \gen{0}, \gen{\bar 16} \\
+            \gen{\bar{24}} & \geq \gen{0}, \gen{\bar{24}} \\
+            \gen{\bar 0} & \geq \gen{\bar 0}
+        \end{align*}
     \end{sol}
     \item Let $Z_{48} = \gen x$ and use the isomorphism $\intmod[48] \cong Z_{48}$ given by $\bar 1 \mapsto x$ to list all subgroups of $Z_{48}$ as computed in the preceding exercise.
     \begin{sol}
@@ -537,18 +535,18 @@
         \[\psi_a(\bar b + \bar c) = x^{a(b + c)} = x^{ab}x^{ac} = \psi_a(\bar b)\psi_a(\bar c)\]
         so that $\psi_a$ is a homomorphism. Lastly, if $\psi_a$ were to be surjective, then $x^a$ must have order 36. But by Proposition 2.5, we have $\abs{x^a} = 36/(36, a)$, and $(36, a) \geq 3$ because $3 \mid a$. Hence, $\psi_a$ can never be surjective.
     \end{sol}
-    \item What is the order of $\widebar{30}$ in $\intmod[54]$? Write out all of the elements and their orders in $\gen{\widebar{30}}$.
+    \item What is the order of $\bar{30}$ in $\intmod[54]$? Write out all of the elements and their orders in $\gen{\bar{30}}$.
     \begin{sol}
         By Proposition 2.5, we have $\abs{\bar 1} = 54$. Then
-        \[\abs{\widebar{30}} = \abs{30 \cdot \bar 1} = \frac{54}{(54, 30)} = \frac{54}{6} = 9\]
+        \[\abs{\bar{30}} = \abs{30 \cdot \bar 1} = \frac{54}{(54, 30)} = \frac{54}{6} = 9\]
         The first element of order 9 in $\intmod[54]$ is $\bar 6$, so
-        \[\gen{\widebar{30}} = \set{\bar 0, \bar 6, \widebar{12}, \widebar{18}, \widebar{24}, \widebar{30}, \widebar{36}, \widebar{42}, \widebar{48}}\]
+        \[\gen{\bar{30}} = \set{\bar 0, \bar 6, \bar{12}, \bar{18}, \bar{24}, \bar{30}, \bar{36}, \bar{42}, \bar{48}}\]
         Moreover, the orders are
         \[
         \begin{array}{ccc}
-            \abs{\bar 0} = 1 & \abs{\bar 6} = 9 & \abs{\widebar{12}} = 9 \\
-            \abs{\widebar{18}} = 3 & \abs{\widebar{24}} = 9 & \abs{\widebar{30}} = 9 \\
-            \abs{\widebar{36}} = 3 & \abs{\widebar{42}} = 9 & \abs{\widebar{48}} = 9
+            \abs{\bar 0} = 1 & \abs{\bar 6} = 9 & \abs{\bar{12}} = 9 \\
+            \abs{\bar{18}} = 3 & \abs{\bar{24}} = 9 & \abs{\bar{30}} = 9 \\
+            \abs{\bar{36}} = 3 & \abs{\bar{42}} = 9 & \abs{\bar{48}} = 9
         \end{array}
         \] 
     \end{sol}
