@@ -614,7 +614,7 @@ Let $G$ and $H$ be groups.
     \begin{sol}
         Since $A$ is abelian, then $A \times A$ is abelian, hence any subgroup is normal so that $D \nsub A \times A$.
 
-        Now consider two cosets $\bar{(a_1, a_2)}, \bar{(a_3, a_4)} \in (A \times A)/D$. Then $\bar{(a_1, a_2)} = \bar{(a_3, a_4)}$ when $(a_1, a_2)\inv(a_3, a_4) \in D$, which implies that $a_1\inv a_3 = a_2\inv a_4$, or $a_3a_4\inv = a_1a_2\inv$. We can construct a well-defined, injective homomorphism $\phi : (A \times A)/D \to A$ given by $\phi(\bar{(a, b)}) = ab\inv$. Moreover, this is surective, since $\phi(\bar{(a, 1)}) = a$ for any $a \in A$. Lastly, it is a homomorphism, because
+        Now consider two cosets $\bar{(a_1, a_2)}, \bar{(a_3, a_4)} \in (A \times A)/D$. Then $\bar{(a_1, a_2)} = \bar{(a_3, a_4)}$ when we have $(a_1, a_2)\inv(a_3, a_4) \in D$, which implies that $a_1\inv a_3 = a_2\inv a_4$, or $a_3a_4\inv = a_1a_2\inv$. We can construct a well-defined, injective homomorphism $\phi : (A \times A)/D \to A$ given by $\phi(\bar{(a, b)}) = ab\inv$. Moreover, this is surective, since $\phi(\bar{(a, 1)}) = a$ for any $a \in A$. Lastly, it is a homomorphism, because
         \begin{align*}
             \phi(\bar{(a_1, b_1)(a_2, b_2)}) & = \phi(\bar{(a_1a_2, b_1b_2)}) \\
             & = (a_1a_2)(b_1b_2)\inv \\
@@ -627,7 +627,7 @@ Let $G$ and $H$ be groups.
     \begin{sol}
         Let $\alpha, \beta \in S_3$, where $\alpha = 1$ and $\beta = (1\ 2\ 3)$ so that $\alpha\inv = \alpha$ and $\beta\inv \neq \beta$. For $\gamma = (1\ 2) \in S_3$, consider $\alpha\gamma\alpha\inv$ and $\beta\gamma\beta\inv$. Observe that $\alpha\gamma\alpha\inv = \gamma$, while $\beta\gamma\beta\inv = (1\ 2\ 3)(1\ 2)(3\ 2\ 1) = (2\ 3) \neq (1\ 2) = \gamma$. Then $(\alpha, \beta)(\gamma, \gamma)(\alpha\inv, \beta\inv) = (\gamma, (2\ 3))$, hence $D$ is not a normal subgroup of $S_3 \times S_3$.
     \end{sol}
-    \item Let $G$ be a group, let $N$ be a normal subgroup of $G$ and let $\bar{G} = G/N$. Prove that $\bar{x}$ and $\bar{y}$ commute in $\bar{G}$ if and only if $x^{-1}y^{-1}xy \in N$. (The element $x^{-1}y^{-1}xy$ is called the \textit{commutator} of $x$ and $y$ and is denoted by $[x,y]$.)
+    \item \label{ex3.1.40}Let $G$ be a group, let $N$ be a normal subgroup of $G$ and let $\bar{G} = G/N$. Prove that $\bar{x}$ and $\bar{y}$ commute in $\bar{G}$ if and only if $x^{-1}y^{-1}xy \in N$. (The element $x^{-1}y^{-1}xy$ is called the \textit{commutator} of $x$ and $y$ and is denoted by $[x,y]$.)
     \begin{sol}
         \rightimp Suppose $\bar{xy} = \bar{yx}$. Then $xyN = yxN$. Then there exists $n, n' \in N$ such that $xyn = yxn'$, or $x\inv y\inv xy = n'n\inv$ so that $x\inv y\inv xy \in N$.
 
@@ -723,8 +723,8 @@ Let $G$ be a group.
         \item Since $\{(1, 1, \dots, 1)\}$ is an equivalence class of size 1, conclude from (e) that there must be a nonidentity element $x \in G$ with $x^p = 1$, i.e., $G$ contains an element of order $p$. [Show $p \mid k$ and so $k > 1$.]
     \end{problems}
     \begin{solalph}
-        \item Consider the $(p - 1)$-tuples of elements of $G$, and call this set $\ss'$. Clearly, $\ss'$ has $|G|^{p-1}$ elements. Now define a mapping $\phi : \ss' \to \ss$ by $\phi(x_1, x_2, \dots, x_{p-1}) = (x_1, x_2, \dots, x_{p-1}, (x_1x_2 \cdots x_{p-1})\inv)$. To show that this is a bijection, suppose $\phi(x_1, x_2, \dots, x_{p-1}) = \phi(y_1, y_2, \dots, y_{p-1})$. Then $(x_1, x_2, \dots, x_{p-1}, (x_1x_2 \cdots x_{p-1})\inv) = (y_1, y_2, \dots, y_{p-1}, (y_1y_2 \cdots y_{p-1})\inv)$ so that $x_i = y_i$ for all $1 \leq i \leq p - 1$, hence $\phi$ is injective. Moreover, this mapping is clearly surjective. It follows that $\abs\ss = \abs{\ss'} = |G|^{p-1}$.
-        \item Let $\alpha = (x_1, x_2, \dots, x_p) \in \ss$. A cyclic permutation of $\alpha$ is given by $\beta = (x_k, x_{k+1}, \dots, x_p, x_1, x_2, \dots, x_{k-1})$ for some $1 \leq k \leq p$ where the indices are taken modulo $p$. Observe that these consist of the same elements as $\alpha$, just in a different order, hence $x_k x_{k+1} \cdots x_p x_1 x_2 \cdots x_{k-1} = x_1 x_2 \cdots x_p = 1$, so that $\beta \in \ss$.
+        \item Consider the $(p - 1)$-tuples of elements of $G$, and call this set $\ss'$. Clearly, $\ss'$ has $|G|^{p-1}$ elements. Now define a mapping $\phi : \ss' \to \ss$ by $\phi(x_1, x_2, \dots, x_{p-1}) = (x_1, x_2, \dots, x_{p-1}, (x_1x_2 \cdots x_{p-1})\inv)$. Now suppose $\phi(x_1, x_2, \dots, x_{p-1}) = \phi(y_1, y_2, \dots, y_{p-1})$. Then $(x_1, x_2, \dots, x_{p-1}, (x_1x_2 \cdots x_{p-1})\inv) = (y_1, y_2, \dots, y_{p-1}, (y_1y_2 \cdots y_{p-1})\inv)$ so that $x_i = y_i$ for all $1 \leq i \leq p - 1$, hence $\phi$ is injective. Moreover, this mapping is clearly surjective. It follows that $\abs\ss = \abs{\ss'} = |G|^{p-1}$.
+        \item Let $\alpha = (x_1, x_2, \dots, x_p) \in \ss$. A cyclic permutation of $\alpha$ is some $\beta = (x_k, x_{k+1}, \dots, x_p, x_1, x_2, \dots, x_{k-1})$ for some $1 \leq k \leq p$ where the indices are taken modulo $p$. Observe that these consist of the same elements as $\alpha$, just in a different order, hence $x_k x_{k+1} \cdots x_p x_1 x_2 \cdots x_{k-1} = x_1 x_2 \cdots x_p = 1$, so that $\beta \in \ss$.
         \item Let $\alpha, \beta, \gamma \in \ss$. $\sim$ is clearly reflexive since $\alpha$ is a cyclic permutation of itself. 
         
         Suppose $\alpha \sim \beta$. Then $\beta$ is a cyclic permutation of $\alpha$, hence $\alpha$ is a cyclic permutation of $\beta$, so that $\beta \sim \alpha$ and $\sim$ is symmetric. 
@@ -996,38 +996,47 @@ Let $G$ be a group.
         \[1 = G_0 \nsub G_1 \nsub \cdots \nsub G_n = G\]
         such that $G_{i + 1}/G_i$ is abelian for each $0 \leq i \leq n - 1$. Consider the set of subgroups $H_i = H \cap G_i$ for each $0 \leq i \leq n$. Note that $H_0 = H \cap G_0 = 1$ and $H_n = H \cap G_n = H$ since $H \leq G$. It is clear that $H_i \leq H_{i + 1}$ for each $0 \leq i \leq n - 1$. Moreover, let $g \in H_{i + 1}$ and $x \in H_i$. Then $g \in G_{i + 1}$ and $x \in G_i$. Since $G_i \nsub G_{i + 1}$, then $gxg\inv \in G_i$. Moreover, $g, x \in H$ so that $gxg\inv \in H$, hence $gxg\inv \in H_i$. It follows that $H_i \nsub H_{i + 1}$ for each $0 \leq i \leq n - 1$. Note that $H_i = G_i \cap H = (G_i \cap G_{i + 1}) \cap H = G_i \cap H_{i + 1}$ so that by the Second Isomorphism Theorem, we have $H_{i + 1}/H_i = H_{i + 1}/(H_{i + 1} \cap G_i) \cong H_{i + 1}G_i/G_i \leq G_{i + 1}/G_i$. Since $G_{i + 1}/G_i$ is abelian, then so is $H_{i + 1}/H_i$. Therefore, $H$ is solvable with the chain
         \[1 = H_0 \nsub H_1 \nsub \cdots \nsub H_n = H\]
-        Now let $N \nsub G$. Consider the subgroups $N_i = G_iN$. 
+        Now let $N \nsub G$. Consider the subgroups $N_i = G_iN$. Since it is clear that $N_i \leq N_{i + 1}$, we need to show that $N_i \nsub N_{i + 1}$. To that end, let $gn \in N_{i + 1}$ and $hn' \in N_i$ for some $g \in G_{i + 1}$, $h \in G_i$, and $n, n' \in N$. We now consider the element $gnhn'n\inv g\inv \in gnN_i(gn)\inv$. Since $h \in G_i \leq G$, then $nh = hn''$ for some $n'' \in N$, hence $gnhn'n\inv g\inv = ghn''n'n\inv g\inv$. Moreover, $(n''n'n\inv)g\inv = g\inv n'''$ for $n''' \in N$ so we obtain $ghg\inv n''' \in N_i$ since $ghg\inv \in G_i$ because $G_i \nsub G_{i + 1}$. It follows that $N_i \nsub N_{i + 1}$. By the Lattice Isomorphism Theorem, then $N_i/N \nsub N_{i + 1}/N$, and the Third Isomorphism Theorem concludes that $(N_{i + 1}/N)/(N_i/N) \cong N_{i + 1}/N_i$. 
+
+        We now show $N_{i + 1}/N_i$ is abelian. Let $g_1n_1N_i, g_2n_2N_i \in N_{i + 1}/N_i$ for some $g_1, g_2 \in G_{i + 1}$ and $n_1, n_2 \in N$, and consider the product $(g_1n_1N_i)(g_2n_2N_i) = g_1g_2N_i$, where $g_1n_1g_2n_2 = g_1g_2n_3$ for some $n_3 \in N$ since $N \nsub G$. Since $G_{i + 1}/G_i$ is abelian, then $(g_1G_i)(g_2G_i) = (g_2G_i)(g_1G_i)$, which implies $g_1g_2g_1 = g_2g_1h$ for some $h \in G_i \leq N_i$. Hence, $g_1g_2N_i = g_2g_1hN_i = g_2g_1N_i$ so that $N_{i + 1}/N_i$ is abelian. Therefore, $G/N$ is solvable with the chain
+        \[1 = N_0/N \nsub N_1/N \nsub \cdots \nsub N_n/N = G/N \qh\]
     \end{sol}
     \item Prove part (1) of the Jordan--H\"older Theorem by induction on $|G|$.
+    \begin{sol}
+        Let $G$ be a finite group. If $G = 1$, then the result is trivial. Suppose now $G$ is nontrivial and that the result holds for all groups of order less than $\abs G$. If $G$ is simple, then the composition series is $1 \nsub G$. Suppose now $G$ is not simple, and let $N$ be a maximal, normal subgroup of $G$. Since $\abs N < \abs G$, we may conclude by the inductive hypothesis that there exists a composition series
+        \[1 = N_0 \nsub N_1 \nsub \cdots \nsub N_k = N\]
+        for some $k \in \zp$. Since $N \nsub G$ and $G/N$ is simple, then the chain
+        \[1 = N_0 \nsub N_1 \nsub \cdots \nsub N_k = N \nsub G\]
+        is a composition series for $G$. By induction, the result holds for all finite groups.
+    \end{sol}
+    \item If $G$ is a finite group and $H \trianglelefteq G$, prove that there is a composition series of $G$, one of whose terms is $H$.
+    \begin{sol}
+        If $H = G$, then the result follows trivially, since the last term in the composition series must be $H$. Now suppose $H$ is a proper, normal subgroup of $G$. If $\abs G = 1$, the result is trivial. Suppose $\abs G > 1$, and assume the result is true for all groups with order less than $\abs G$.
 
-    \item If $G$ is a finite group and $H \trianglelefteq G$, prove that there is a composition series of $G$,
-    one of whose terms is $H$.
-
+        Since $H$ is proper, then $\abs H < \abs G$, hence we have a composition series
+        \[1 = H_0 \nsub H_1 \nsub \cdots \nsub H_m = H\]
+        by the inductive hypothesis. Now consider the quotient group $G/H$. Since $\abs{G/H} < \abs G$, then by the inductive hypothesis, there exists a composition series
+        \[1 = K_0/H \nsub K_1/H \nsub \cdots \nsub K_n/H = G/H\]
+        for some $n \in \zp$. By the Lattice Isomorphism Theorem, we have $H = K_0 \nsub K_1 \nsub \cdots \nsub K_n = G$. Since each $K_{i + 1}/K_i \cong (K_{i + 1}/H)/(K_i/H)$ is simple, then the chain
+        \[1 = H_0 \nsub H_1 \nsub \cdots \nsub H_m = H = K_0 \nsub K_1 \nsub \cdots \nsub K_n = G\]
+        is a composition series for $G$ with one of its terms equal to $H$. By induction, the result holds for all finite groups.
+    \end{sol}
     \item Let $G$ be a \textit{finite} group. Prove that the following are equivalent:
     \begin{enumerate}
     \item[(i)] $G$ is solvable.
     \item[(ii)] $G$ has a chain of subgroups
-    \[
-    1 = H_0 \trianglelefteq H_1 \trianglelefteq H_2 \trianglelefteq \cdots \trianglelefteq H_s = G
-    \]
+    \[1 = H_0 \trianglelefteq H_1 \trianglelefteq H_2 \trianglelefteq \cdots \trianglelefteq H_s = G\]
     such that $H_{i+1}/H_i$ is cyclic, $0 \le i \le s-1$.
     \item[(iii)] All composition factors of $G$ are of prime order.
     \item[(iv)] $G$ has a chain of subgroups
-    \[
-    1 = N_0 \trianglelefteq N_1 \trianglelefteq N_2 \trianglelefteq \cdots \trianglelefteq N_t = G
-    \]
+    \[1 = N_0 \trianglelefteq N_1 \trianglelefteq N_2 \trianglelefteq \cdots \trianglelefteq N_t = G\]
     such that each $N_i$ is a normal subgroup of $G$ and $N_{i+1}/N_i$ is abelian,
     $0 \le i \le t-1$.
     \end{enumerate}
-
-    \noindent
-    [For (iv), prove that a minimal nontrivial normal subgroup $M$ of $G$ is necessarily abelian
-    and then use induction. To see that $M$ is abelian, let $N \trianglelefteq M$ be of prime index
-    (by (iii)) and show that $x^{-1}y^{-1}xy \in N$ for all $x,y \in M$
-    (cf.\ Exercise~40, Section~1). Apply the same argument to $gNg^{-1}$ to show that
-    $x^{-1}y^{-1}xy$ lies in the intersection of all $G$-conjugates of $N$, and use the minimality
-    of $M$ to conclude that $x^{-1}y^{-1}xy = 1$.]
-
+    \noindent [For (iv), prove that a minimal nontrivial normal subgroup $M$ of $G$ is necessarily abelian and then use induction. To see that $M$ is abelian, let $N \trianglelefteq M$ be of prime index (by (iii)) and show that $x^{-1}y^{-1}xy \in N$ for all $x,y \in M$ (cf. \hyperref[ex3.1.40]{Exercise 3.1.40}). Apply the same argument to $gNg^{-1}$ to show that $x^{-1}y^{-1}xy$ lies in the intersection of all $G$-conjugates of $N$, and use the minimality of $M$ to conclude that $x^{-1}y^{-1}xy = 1$.]
+    \begin{sol}
+        (i) \rightimp (ii): Suppose $G$ is solvable. 
+    \end{sol}
     \item Prove the following special case of part (2) of the Jordan--H\"older Theorem:
     assume the finite group $G$ has two composition series
     \[
