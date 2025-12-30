@@ -1030,28 +1030,46 @@ Let $G$ be a group.
     \item[(iii)] All composition factors of $G$ are of prime order.
     \item[(iv)] $G$ has a chain of subgroups
     \[1 = N_0 \trianglelefteq N_1 \trianglelefteq N_2 \trianglelefteq \cdots \trianglelefteq N_t = G\]
-    such that each $N_i$ is a normal subgroup of $G$ and $N_{i+1}/N_i$ is abelian,
-    $0 \le i \le t-1$.
+    such that each $N_i$ is a normal subgroup of $G$ and $N_{i+1}/N_i$ is abelian, $0 \le i \le t-1$.
     \end{enumerate}
     \noindent [For (iv), prove that a minimal nontrivial normal subgroup $M$ of $G$ is necessarily abelian and then use induction. To see that $M$ is abelian, let $N \trianglelefteq M$ be of prime index (by (iii)) and show that $x^{-1}y^{-1}xy \in N$ for all $x,y \in M$ (cf. \hyperref[ex3.1.40]{Exercise 3.1.40}). Apply the same argument to $gNg^{-1}$ to show that $x^{-1}y^{-1}xy$ lies in the intersection of all $G$-conjugates of $N$, and use the minimality of $M$ to conclude that $x^{-1}y^{-1}xy = 1$.]
     \begin{sol}
-        (i) \rightimp (ii): Suppose $G$ is solvable. 
+        \textbf{(i) \rightimp (ii)}: Suppose $G$ is solvable, and consider the chain of subgroups
+        \[1 = G_0 \nsub G_1 \nsub \cdots \nsub G_n = G\]
+        where $G_{i + 1}/G_i$ is abelian. We prove the following lemma: if $A$ is a finite abelian group, then there exists a chain of subgroups
+        \[1 = A_0 \nsub A_1 \nsub \cdots \nsub A_k = A\]
+        such that $A_{j + 1}/A_j$ is cyclic. We prove this lemma by induction on $\abs A$. If $\abs A = 1$, the result is trivial. Suppose $\abs A > 1$ and that the result holds for all abelian groups of order less than $\abs A$. Since $A$ is finite abelian, there exists some nonidentity $a \in A$ such that $\gen a \nsub A$. Then $\abs{\gen a} < \abs A$, hence by the inductive hypothesis, there exists a chain of subgroups
+        \[1 = B_0 \nsub B_1 \nsub \cdots \nsub B_m = \gen a\]
+        such that $B_{j + 1}/B_j$ is cyclic. Now consider the quotient group $A/\gen a$. Since $\abs{A/\gen a} < \abs A$, then by the inductive hypothesis, there exists a chain of subgroups
+        \[1 = C_0/\gen a \nsub C_1/\gen a \nsub \cdots \nsub C_\ell/\gen a = A/\gen a\]
+        for some $\ell \in \zp$. By the Lattice Isomorphism Theorem, we have $\gen a = C_0 \nsub C_1 \nsub \cdots \nsub C_\ell = A$. Since each $C_{i + 1}/C_i \cong (C_{i + 1}/\gen a)/(C_i/\gen a)$ is cyclic, then the chain
+        \[1 = B_0 \nsub B_1 \nsub \cdots \nsub B_m = \gen a = C_0 \nsub C_1 \nsub \cdots \nsub C_\ell = A\]
+        satisfies the lemma. By induction, the lemma holds for all finite abelian groups. 
+
+        Applying this lemma to each abelian quotient $G_{i + 1}/G_i$ in the original chain, we obtain a chain of subgroups
+        \[1 = H_0 \nsub H_1 \nsub H_2 \nsub \cdots \nsub H_s = G\]
+        such that $H_{i + 1}/H_i$ is cyclic, hence (ii) holds.
+
+        \textbf{(ii) \rightimp (iii)}: Suppose $G$ has a chain of subgroups
+        \[1 = H_0 \nsub H_1 \nsub H_2 \nsub \cdots \nsub H_s = G\]
+        such that $H_{i + 1}/H_i$ is cyclic. We prove that each composition factor of $G$ is of prime order. We prove this by induction on $\abs G$. If $\abs G = 1$, the result is trivial. Suppose $\abs G > 1$ and that the result holds for all groups of order less than $\abs G$. Since $H_{s - 1} \nsub G$ and $G/H_{s - 1}$ is cyclic, then $G/H_{s - 1} \cong Z_n$ for some $n \in \zp$. If $n$ is prime, then the composition factors of $G/H_{s - 1}$ are of prime order. Since $\abs{H_{s - 1}} < \abs G$, then by the inductive hypothesis, the composition factors of $H_{s - 1}$ are also of prime order, hence all composition factors of $G$ are of prime order. Suppose now $n$ is not prime, so that $n = km$ for some $k, m \in \zp$ where $1 < k, m < n$. Then $Z_n$ has a proper, nontrivial subgroup $\gen{a^m}$ of order $k$. Let $\pi : G \to G/H_{s - 1}$ be the natural projection, and let $K = \pi\inv(\gen{a^m})$. Then $H_{s - 1} \nsub K \nsub G$ so that by the Lattice Isomorphism Theorem, $K/H_{s - 1} \cong \gen{a^m}$ is a proper, nontrivial subgroup of $G/H_{s - 1}$, contradicting that $H_{s - 1}$ is maximal normal in $G$. It follows that $n$ must be prime, hence all composition factors of $G$ are of prime order. By induction, the result holds for all finite groups.
+
+        \textbf{(iii) \rightimp (iv)}: Suppose all composition factors of $G$ are of prime order. We prove that $G$ has a chain of subgroups
+        \[1 = N_0 \nsub N_1 \nsub N_2 \nsub \cdots \nsub N_t = G\]
+        such that each $N_i$ is a normal subgroup of $G$ and $N_{i + 1}/N_i$ is abelian. Let $M$ be a minimal, nontrivial normal subgroup of $G$, and suppose $N \nsub M$ have prime index. Then for any $x, y \in M$, we have $x^{-1}y^{-1}xy \in N$ since $M/N$ is abelian. Now for any $g \in G$, consider $gNg\inv \nsub gMg\inv = M$. By the same argument, we have $x^{-1}y^{-1}xy \in gNg\inv$ for all $x, y \in M$. It follows that $x^{-1}y^{-1}xy$ lies in the intersection of all $G$-conjugates of $N$. Since $M$ is minimal normal in $G$, then this intersection is either 1 or $M$. If it were $M$, then $M$ would be abelian, contradicting that $M/N$ is nontrivial. Hence, $x^{-1}y^{-1}xy = 1$ for all $x, y \in M$, so that $M$ is abelian.
+
+        \textbf{(iv) \rightimp (i)}: This implication is immediate from the definition of solvable groups.
     \end{sol}
-    \item Prove the following special case of part (2) of the Jordan--H\"older Theorem:
-    assume the finite group $G$ has two composition series
-    \[
-    1 = N_0 \trianglelefteq N_1 \trianglelefteq \cdots \trianglelefteq N_r = G
-    \quad\text{and}\quad
-    1 = M_0 \trianglelefteq M_1 \trianglelefteq M_2 = G.
-    \]
+    \item Prove the following special case of part (2) of the Jordan--H\"older Theorem: assume the finite group $G$ has two composition series
+    \[ 1 = N_0 \trianglelefteq N_1 \trianglelefteq \cdots \trianglelefteq N_r = G \quad\text{and}\quad 1 = M_0 \trianglelefteq M_1 \trianglelefteq M_2 = G. \]
     Show that $r = 2$ and that the list of composition factors is the same.
     [Use the Second Isomorphism Theorem.]
+    \begin{sol}
+        
+    \end{sol}
+    \item Prove part (2) of the Jordan--H\"older Theorem by induction on $\min\{r,s\}$. [Apply the inductive hypothesis to $H = N_{r-1} \cap M_{s-1}$ and use the preceding exercises.]
 
-    \item Prove part (2) of the Jordan--H\"older Theorem by induction on $\min\{r,s\}$.
-    [Apply the inductive hypothesis to $H = N_{r-1} \cap M_{s-1}$ and use the preceding exercises.]
-
-    \item Prove that if $H$ is a nontrivial normal subgroup of the solvable group $G$ then there is
-    a nontrivial subgroup $A$ of $H$ with $A \trianglelefteq G$ and $A$ abelian.
+    \item Prove that if $H$ is a nontrivial normal subgroup of the solvable group $G$ then there is a nontrivial subgroup $A$ of $H$ with $A \trianglelefteq G$ and $A$ abelian.
 
     \item Prove (without using the Feit--Thompson Theorem) that the following are equivalent:
     \begin{enumerate}
