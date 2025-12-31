@@ -580,7 +580,7 @@ Let $G$ and $H$ be groups.
     \end{solalph}
     \item \label{ex3.1.35} Prove that $\speclin_n(F) \nsub \gl_n(F)$ and describe the isomorphism type of the quotient group (cf. Exercise 9, Section 2.1).
     \begin{sol}
-        We know that $\speclin_n(F) \leq \gl_n(F)$, so we just need to show that $A \speclin_n(F) A\inv = \speclin_n(F)$ for all $A \in \gl_n(F)$. To that end, note that for any $S \in \speclin_n(F)$ and $X \in \gl_n(F)$, then $\det(XSX\inv) = \det(X)\det(S)\det(X\inv) = 1$, hence $X\speclin_n(F)X\inv \subseteq \speclin_n(F)$, and $\speclin_n(F) \nsub \gl_n(F)$.
+        We know that $\speclin_n(F) \leq \gl_n(F)$, so we just need to show that $A \speclin_n(F) A\inv = \speclin_n(F)$ for all $A \in \gl_n(F)$. To that end, note that for any $S \in \speclin_n(F)$ and $X \in \gl_n(F)$, then we have $\det(XSX\inv) = \det(X)\det(S)\det(X\inv) = 1$, hence $X\speclin_n(F)X\inv \subseteq \speclin_n(F)$, and $\speclin_n(F) \nsub \gl_n(F)$.
 
         Recall that when a subgroup is normal, it is actually the kernel of some homomorphism. Observe that every element of $\speclin_n(F)$ has determinant 1, so if we consider the mapping $A \mapsto \det(A)$ for some $A \in \gl_n(F)$, then the kernel of this homomorphism is clearly $\speclin_n(F)$. We may then consider the mapping $\phi : \gl_n(F)/\speclin_n(F) \to F\unt$ given by $\phi(\bar X) = \det(X)$.
 
@@ -588,7 +588,7 @@ Let $G$ and $H$ be groups.
         \[\phi(\bar A) = \det(A) = \det(AS) = \det(BS') = \det(B) = \phi(\bar B)\]
         so that $\phi$ is well defined.
         
-        To show that $\phi$ is injective, suppose $\phi(\bar A) = \phi(\bar B)$. Then $\det(A) = \det(B)$. Pick some $AS \in \bar A$, where $S \in \speclin_n(F)$. Observe that $B\inv AS \in \speclin_n(F)$, since $\det(B\inv AS) = \det(B\inv)\det(A)\det(S) = \det(A)\inv\det(A)\det(S) = 1$, hence $B\inv AS = S'$ for some $S' \in \speclin_n(F)$. Then $AS = BS'$, and $AS \in \bar B$ so that $\bar A \subseteq \bar B$. A similar argument shows that $\bar B \subseteq \bar A$ so that $\bar A = \bar B$, and $\phi$ is injective. Moreover, for some $f \in F\unt$, then $\det(fI_n) = f\det(I_n) = f$ so that $\phi$ is surjective. Lastly, for $\bar A, \bar B \in \speclin_n(F)$, then 
+        To show that $\phi$ is injective, suppose $\phi(\bar A) = \phi(\bar B)$. Then $\det(A) = \det(B)$. Pick some $AS \in \bar A$, where $S \in \speclin_n(F)$. Note that $B\inv AS \in \speclin_n(F)$, since $\det(B\inv AS) = \det(B\inv)\det(A)\det(S) = \det(A)\inv\det(A)\det(S) = 1$, hence $B\inv AS = S'$ for some $S' \in \speclin_n(F)$. Then $AS = BS'$, and $AS \in \bar B$ so that $\bar A \subseteq \bar B$. A similar argument shows that $\bar B \subseteq \bar A$ so that $\bar A = \bar B$, and $\phi$ is injective. Moreover, for some $f \in F\unt$, then $\det(fI_n) = f\det(I_n) = f$ so that $\phi$ is surjective. Lastly, for $\bar A, \bar B \in \speclin_n(F)$, then 
         \[\phi(\bar{AB}) = \det(AB) = \det(A)\det(B) = \phi(\bar A)\phi(\bar B)\]
         so that $\phi$ is a homomorphism. Then $\phi$ is a bijective homomorphism, and $\gl_n(F)/\speclin_n(F) \cong F\unt$. 
     \end{sol}
@@ -614,7 +614,7 @@ Let $G$ and $H$ be groups.
     \begin{sol}
         Since $A$ is abelian, then $A \times A$ is abelian, hence any subgroup is normal so that $D \nsub A \times A$.
 
-        Now consider two cosets $\bar{(a_1, a_2)}, \bar{(a_3, a_4)} \in (A \times A)/D$. Then $\bar{(a_1, a_2)} = \bar{(a_3, a_4)}$ when we have $(a_1, a_2)\inv(a_3, a_4) \in D$, which implies that $a_1\inv a_3 = a_2\inv a_4$, or $a_3a_4\inv = a_1a_2\inv$. We can construct a well-defined, injective homomorphism $\phi : (A \times A)/D \to A$ given by $\phi(\bar{(a, b)}) = ab\inv$. Moreover, this is surective, since $\phi(\bar{(a, 1)}) = a$ for any $a \in A$. Lastly, it is a homomorphism, because
+        Now consider two cosets $\bar{(a_1, a_2)}, \bar{(a_3, a_4)} \in (A \times A)/D$. Then $\bar{(a_1, a_2)} = \bar{(a_3, a_4)}$ when $(a_1, a_2)\inv(a_3, a_4) \in D$, which implies that $a_1\inv a_3 = a_2\inv a_4$, or $a_3a_4\inv = a_1a_2\inv$. We can construct a well-defined, injective homomorphism $\phi : (A \times A)/D \to A$ given by $\phi(\bar{(a, b)}) = ab\inv$. Moreover, this is surective, since $\phi(\bar{(a, 1)}) = a$ for any $a \in A$. Lastly, it is a homomorphism, because
         \begin{align*}
             \phi(\bar{(a_1, b_1)(a_2, b_2)}) & = \phi(\bar{(a_1a_2, b_1b_2)}) \\
             & = (a_1a_2)(b_1b_2)\inv \\
@@ -723,7 +723,7 @@ Let $G$ be a group.
         \item Since $\{(1, 1, \dots, 1)\}$ is an equivalence class of size 1, conclude from (e) that there must be a nonidentity element $x \in G$ with $x^p = 1$, i.e., $G$ contains an element of order $p$. [Show $p \mid k$ and so $k > 1$.]
     \end{problems}
     \begin{solalph}
-        \item Consider the $(p - 1)$-tuples of elements of $G$, and call this set $\ss'$. Clearly, $\ss'$ has $|G|^{p-1}$ elements. Now define a mapping $\phi : \ss' \to \ss$ by $\phi(x_1, x_2, \dots, x_{p-1}) = (x_1, x_2, \dots, x_{p-1}, (x_1x_2 \cdots x_{p-1})\inv)$. Now suppose $\phi(x_1, x_2, \dots, x_{p-1}) = \phi(y_1, y_2, \dots, y_{p-1})$. Then $(x_1, x_2, \dots, x_{p-1}, (x_1x_2 \cdots x_{p-1})\inv) = (y_1, y_2, \dots, y_{p-1}, (y_1y_2 \cdots y_{p-1})\inv)$ so that $x_i = y_i$ for all $1 \leq i \leq p - 1$, hence $\phi$ is injective. Moreover, this mapping is clearly surjective. It follows that $\abs\ss = \abs{\ss'} = |G|^{p-1}$.
+        \item Consider the $(p - 1)$-tuples of elements of $G$, and call this set $\ss'$. Clearly, $\ss'$ has $|G|^{p-1}$ elements. Define the map $\phi : \ss' \to \ss$ by $\phi(x_1, x_2, \dots, x_{p-1}) = (x_1, x_2, \dots, x_{p-1}, (x_1x_2 \cdots x_{p-1})\inv)$. Now suppose $\phi(x_1, \dots, x_{p-1}) = \phi(y_1, \dots, y_{p-1})$. Then we have $x_i = y_i$ for all $1 \leq i \leq p - 1$, and the last inverse term must imply $x_1x_2 \cdots x_{p - 1} = y_1y_2 \cdots y_{p - 1}$ since inverses are unique in a group. Hence $\phi$ is injective. Moreover, this mapping is clearly surjective. It follows that $\abs\ss = \abs{\ss'} = |G|^{p-1}$.
         \item Let $\alpha = (x_1, x_2, \dots, x_p) \in \ss$. A cyclic permutation of $\alpha$ is some $\beta = (x_k, x_{k+1}, \dots, x_p, x_1, x_2, \dots, x_{k-1})$ for some $1 \leq k \leq p$ where the indices are taken modulo $p$. Observe that these consist of the same elements as $\alpha$, just in a different order, hence $x_k x_{k+1} \cdots x_p x_1 x_2 \cdots x_{k-1} = x_1 x_2 \cdots x_p = 1$, so that $\beta \in \ss$.
         \item Let $\alpha, \beta, \gamma \in \ss$. $\sim$ is clearly reflexive since $\alpha$ is a cyclic permutation of itself. 
         
@@ -778,7 +778,7 @@ Let $G$ be a group.
     \end{sol}
     \item Let $p$ be a prime and let $n$ be a positive integer. Find the order of $\bar p$ in $(\mathbb{Z}/(p^n - 1)\mathbb{Z})^\times$ and deduce that $n \mid \phi(p^n - 1)$ (here $\phi$ is Euler's function).
     \begin{sol}
-        Since $p^n \equiv 1 \bmod (p^n - 1)$, then $\abs{\bar p} \leq n$. Suppose $d < n$ such that $p^d \equiv 1 \bmod (p^n - 1)$. Then $p^n - 1 \mid p^d - 1$ so that $p^n - 1 \leq p^d - 1$, a contradiction. It follows that $\abs{\bar p} = n$. By Lagrange's Theorem, $\abs{\bar p} = n$ divides $\abs{\units[p^n - 1]} = \phi(p^n - 1)$.
+        Since $p^n \equiv 1 \bmod (p^n - 1)$, then $\abs{\bar p} \leq n$. Suppose $d < n$ such that $p^d \equiv 1 \bmod (p^n - 1)$. Then $p^n - 1 \mid p^d - 1$ so that $p^n - 1 \leq p^d - 1$, a contradiction. It follows that $\abs{\bar p} = n$. By Lagrange's Theorem, $\abs{\bar p} = n$ divides $\abs{\units[(p^n - 1)]} = \phi(p^n - 1)$.
     \end{sol}
     \item Let $G$ be a finite group, let $H$ be a subgroup of $G$ and let $N \nsub G$. Prove that if $\abs H$ and $|G : N|$ are relatively prime then $H \leq N$.
     \begin{sol}
@@ -1071,13 +1071,58 @@ Let $G$ be a group.
         \[G/N_{r - 1} \cong M_1/(N_{r - 1} \cap M_1) \cong M_1 \quad \text{and} \quad N_{r - 1}/1 \cong N_{r - 1} \cong G/M_1 \qh\]
     \end{sol}
     \item Prove part (2) of the Jordan--H\"older Theorem by induction on $\min\{r,s\}$. [Apply the inductive hypothesis to $H = N_{r-1} \cap M_{s-1}$ and use the preceding exercises.]
-
+    \begin{sol}
+        Suppose $G$ has two composition series
+        \begin{equation}
+            \label{eqclubsuit}
+            \tag{$\clubsuit$}
+            1 = N_0 \nsub N_1 \nsub \cdots \nsub N_r = G
+        \end{equation}
+        and
+        \begin{equation}
+            \label{eqspadesuit}
+            \tag{$\spadesuit$}
+            1 = M_0 \nsub M_1 \nsub \cdots \nsub M_s = G.
+        \end{equation}
+        We induct on $\min\set{r,s}$. By the previous exercise, we may assume that $\min\set{r, s} > 2$. Suppose the statement is true for $\min\set{r, s} < k$ for some $k > 2$, and let $\min\set{r, s} = k$. Let $H = N_{r - 1} \cap M_{s - 1}$. If $N_{r - 1} \leq M_{s - 1}$ is proper, then by simplicity of $M_{s - 1}$, it must be that $N_{r - 1} = 1$, contradicting that $N_{r - 1}$ is nontrivial. Hence, $N_{r - 1} \nsub M_{s - 1}$. By a similar argument, we have $M_{s - 1} \nsub N_{r - 1}$. If we have $M_{s - 1} = N_{r - 1}$, then by the previous exercise, the composition factors of both series are the same, so we now suppose $M_{s - 1} \neq N_{r - 1}$ and they are not contained 
+        in one another. They are then proper normal subgroups of $M_{s - 1}N_{r - 1}$. If $M_{s - 1}N_{r - 1} \neq G$, then $M_{s - 1}N_{r - 1} \nsub G$ is proper, so by simplicity of $G/N_{r - 1}$, it must be that $M_{s - 1}N_{r - 1} = N_{r - 1}$, contradicting that $M_{s - 1} \nsub N_{r - 1}$. Hence, $M_{s - 1}N_{r - 1} = G$. We may use the Second Isomorphism Theorem to conclude that
+        \begin{equation}
+            \label{eqheartsuit}
+            \tag{$\heartsuit$}
+            M_{s - 1}/H \cong M_{s - 1}N_{r - 1}/N_{r - 1} = G/N_{r - 1}
+        \end{equation}
+        and
+        \begin{equation}
+            \label{eqdiamondsuit}
+            \tag{$\diamondsuit$}
+            N_{r - 1}/H \cong M_{s - 1}N_{r - 1}/M_{s - 1} = G/M_{s - 1}.
+        \end{equation}
+        which shows that both $M_{s - 1}/H$ and $N_{r - 1}/H$ are simple. Consider now the composition series for $H$:
+        \begin{equation}
+            \label{eqstar}
+            \tag{$\star$}
+            1 = H_0 \nsub H_1 \nsub \cdots \nsub H_t = H.
+        \end{equation}
+        It is clear that appending $N_{r - 1}$ to the series \eqref{eqstar} gives a composition series for $N_{r - 1}$. Similarly, we get a composition series for $M_{s - 1}$. Moreover, there are $r - 2$ factors for the series for $N_{r - 1}$ and $s - 2$ factors for the series for $M_{s - 1}$. Since $\min\set{r - 1, s - 1} = k - 1 < k$, then by the inductive hypothesis, both series have the same number of factors and the same composition factors up to isomorphism. Therefore, $r - 2 = s - 2$ so that $r = s$. In \eqref{eqclubsuit} and \eqref{eqspadesuit}, both series have $r - 2$ factors isomorphic to \eqref{eqstar} up to some order, and the last 2 factors in \eqref{eqheartsuit} and \eqref{eqdiamondsuit} are isomorphic to $G/N_{r - 1}$ and $G/M_{s - 1}$ respectively. The result then follows by induction.
+    \end{sol}
     \item Prove that if $H$ is a nontrivial normal subgroup of the solvable group $G$ then there is a nontrivial subgroup $A$ of $H$ with $A \trianglelefteq G$ and $A$ abelian.
-
+    \begin{sol}
+        Since $G$ is solvable, we have the sequence
+        \[1 = G_0 \nsub G_1 \nsub \cdots \nsub G_n = G\]
+        where $G_{i + 1}/G_i$ is abelian. Let $H_i = H \cap G_i$ for each $0 \leq i \leq n$. Since $H$ is nontrivial, consider the set of indices $I = \set{i \in \zp \mid G_i \cap H \neq 1}$. Since $H_n = H$, then $I$ is nonempty. By the Well Ordering Property, there exist some minimal index $k$ such that $H_k = G_k \cap H \neq 1$ but $H_{k - 1} = G_{k - 1} \cap H = 1$. Note that $H_k \nsub G$ since $H \nsub G$ and $G_k \nsub G$. Moreover, by the Second Isomorphism Theorem, we have
+        \[H_k \cong H_k/1 = H_k/(H_k \cap G_{k - 1}) \cong H_k G_{k - 1}/G_{k - 1} \leq G_k/G_{k - 1}\]
+        Since $G_k/G_{k - 1}$ is abelian, then so is $H_k$. Therefore, $A = H_k$ is a nontrivial, abelian normal subgroup of $G$ contained in $H$.
+    \end{sol}
     \item Prove (without using the Feit--Thompson Theorem) that the following are equivalent:
     \begin{enumerate}
     \item[(i)] Every group of odd order is solvable.
     \item[(ii)] The only simple groups of odd order are those of prime order.
     \end{enumerate}
+    \begin{sol}
+        \textbf{(i) \rightimp (ii)} Suppose every group of odd order is solvable. Let $G$ be a simple group of odd order. Since $G$ is solvable, then by the characterization of solvable groups, all composition factors of $G$ are of prime order. Since $G$ is simple, then its only composition series is $1 \nsub G$, hence $G$ is of prime order.
 
+        \noindent \textbf{(ii) \rightimp (i)} Suppose the only simple groups of odd order are those of prime order. Let $G$ be a group of odd order. We want to show that $G$ is solvable. Consider a composition series of $G$:
+        \[1 = G_0 \nsub G_1 \nsub \cdots \nsub G_n = G.\]
+        Each composition factor $G_{i+1}/G_i$ is simple and of odd order, so by assumption, each is of prime order and hence abelian. Therefore, $G$ is solvable.
+    \end{sol}
 \end{problems}
