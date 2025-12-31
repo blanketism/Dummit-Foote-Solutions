@@ -1065,7 +1065,10 @@ Let $G$ be a group.
     Show that $r = 2$ and that the list of composition factors is the same.
     [Use the Second Isomorphism Theorem.]
     \begin{sol}
-        
+        Consider $H = N_{r - 1} \cap M_1$. Then $H \nsub M_1$. Since $M_1/1 \cong M_1$ is simple, then either $H = 1$ or $H = M_1$. If $H = M_1$, then $N_{r - 1} \nsub M_1$. By simplicity of $M_1$, it must be that $N_{r - 1} = M_1$ so that $r = 2$. Both composition series are then the same, so we now suppose $H = 1$.
+
+        Noting that $M_1 \nsub G$ and $N_{r - 1} \nsub G$, we may use the Second Isomorphism Theorem to conclude that $N_{r - 1}M_1/M_1 \cong N_{r - 1}/(N_{r - 1} \cap M_1) = N_{r - 1}/1 \cong N_{r - 1}$. Observe now that $M_1 \leq N_{r - 1}M_1 \leq G$, hence $N_{r - 1}M_1/M_1 \nsub G/M_1$. By simplicity of $G/M_1$, it must be that $N_{r - 1}M_1 = 1$ or $N_{r - 1}M_1 = G$. Since $N_{r - 1}$ is not trivial, it must be that $N_{r - 1}M_1 = G$. Now, $N_{r - 1}$ is simple, hence $N_{r - 2} = 1 = N_0$, and we may conclude that $r = 2$. Moreover, the composition factors are isomorphic:
+        \[G/N_{r - 1} \cong M_1/(N_{r - 1} \cap M_1) \cong M_1 \quad \text{and} \quad N_{r - 1}/1 \cong N_{r - 1} \cong G/M_1 \qh\]
     \end{sol}
     \item Prove part (2) of the Jordan--H\"older Theorem by induction on $\min\{r,s\}$. [Apply the inductive hypothesis to $H = N_{r-1} \cap M_{s-1}$ and use the preceding exercises.]
 
