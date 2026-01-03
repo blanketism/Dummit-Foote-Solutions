@@ -269,16 +269,16 @@ and $\bb = \{X \in \ac : MX = XM\}$, where $\ac$ denotes the set of $2 \times 2$
 
 \subsection{Properties of the Integers}
 
-\begin{enumerate}
+\begin{problems}
     \item For each of the following pairs of integers $a$ and $b$, determine their greatest common divisor, their least common multiple, and write their greatest common divisor in the form $ax + by$ for some integers $x$ and $y$.
-    \begin{enumerate}
+    \begin{problems}
         \item $a = 20, b = 13$
         \item $a= 69, b = 372$
         \item $a = 792, b = 275$
         \item $a = 11391, b = 5673$
         \item $a= 1761, b = 1567$
         \item $a = 507885, b = 60808$
-    \end{enumerate}
+    \end{problems}
     \begin{solalph}
         \item Note: for this exercise, we will only do (e) as that has the most steps in calculating both the g.c.d and the Euclidean Algorithm. The l.c.m is obtained by dividing the product $ab$ by $(a, b)$.
         
@@ -346,7 +346,7 @@ and $\bb = \{X \in \ac : MX = XM\}$, where $\ac$ denotes the set of $2 \times 2$
     \label{ex0.2.8}
     \begin{sol}
         Note that in $n!$, there are $\lfloor n/p \rfloor$ integers that are divisible by $p$, where the greatest integer function is necessary since $n$ may not be a perfect multiple of $p$ (consider $n = 36$ and $p = 7$. Then there are the multiples $7, 14, 21, 28,$ and $35$ which is $\lfloor 36/7 \rfloor = 5$). However, this alone does not account for the factors of $p$ in $n!$, so we move onto $p^2$. In this case, there are $\lfloor n/p^2 \rfloor$ integers divisible by $p^2$. We continue this process until a certain integer $a \in \n$ such that $p^a \leq n$. (We must bound $p^a$ above by $n$, up to equality, since $n$ may be a power of $p$, and any power $a$ such that $p^a > n$ would result in $\lfloor n/p^a\rfloor= 0$). It then follows that $a \leq \log_p(n)$, or that the maximum power of $p$ (and any of its multiples) that divide $n!$ is given by $a = \lfloor\log_p(n)\rfloor$. Thus, the largest power of $p$ that divides $n!$ is given by
-        $$\sum_{i = 1}^{\lfloor \log_p(n)\rfloor} \left\lfloor\frac{n}{p^i}\right\rfloor$$
+        \[\sum_{i = 1}^{\lfloor \log_p(n)\rfloor} \left\lfloor\frac{n}{p^i}\right\rfloor \qh\]
     \end{sol}
     \item Write a computer program to determine the greatest common divisor $(a, b)$ of two integers $a$ and $b$ and to express $(a, b)$ in the form $ax + by$ for some integers $x$ and $y$.
     \begin{breakablealgorithm}
@@ -386,13 +386,13 @@ and $\bb = \{X \in \ac : MX = XM\}$, where $\ac$ denotes the set of $2 \times 2$
     \begin{sol}
         Let $n = p_1^{\alpha_1}p_2^{\alpha_2} \cdots p_k^{\alpha_k}$ with $d \mid n$. Then $d$ is a composition of some $p_i$ present in $n$, so some $\alpha_i$ may go to 0 or are less. In particular, we have that $d = p_1^{\beta_1}p_2^{\beta_2}\cdots p_k^{\beta_k}$, where $\beta_i \leq \alpha_i$ for all $i$. To see if $\phi(d) \mid \phi(n)$, it follows to check if $p_i^{\beta_i - 1}(p_i - 1)$ divides $p_i^{\alpha_i - 1}(p_i - 1)$, which further simplifies to checking if $p_i^{\beta_i}$ divides $p_i^{\alpha_i}$ for each $i$. Clearly, $p_i^{\alpha_i} = p_i^{\beta_i} \cdot p_i^{\alpha i - \beta_i}$, hence $\phi(d) \mid \phi(n)$.
     \end{sol}
-\end{enumerate}
+\end{problems}
 
 \newpage
 
 \subsection{\texorpdfstring{$\intmod$: The Integers Modulo $n$}{Z/nZ: The Integers Modulo n}}
 
-\begin{enumerate}
+\begin{problems}
     \item Write down explicitly all the elements in the residue classes of $\intmod[18]$.
     \begin{sol}
         \begin{align*}
@@ -414,7 +414,7 @@ and $\bb = \{X \in \ac : MX = XM\}$, where $\ac$ denotes the set of $2 \times 2$
             \bar{15} & = \{15 + 18k : k \in \z\} = \{15, 33, -3, 51, -21, \ldots\} \\
             \bar{16} & = \{16 + 18k : k \in \z\} = \{16, 34, -2, 52, -20, \ldots\} \\
             \bar{17} & = \{17 + 18k : k \in \z\} = 
-            \{17, 35, -1, 53, -19, \ldots\}
+            \{17, 35, -1, 53, -19, \ldots\} \qh
         \end{align*}
     \end{sol}
     \item Prove that the distinct equivalence classes in $\intmod$ are precisely $\bar 0, \bar 1, \bar 2, \ldots, \bar{n - 1}$ (use the Division Algorithm).
@@ -427,7 +427,7 @@ and $\bb = \{X \in \ac : MX = XM\}$, where $\ac$ denotes the set of $2 \times 2$
         \begin{align*}
             a & \equiv (a_n10^n + a_{n - 1}10^{n - 1} + \cdots + a_110 + a_0) \bmod 9 \\
             & \equiv (a_n1^n + a_{n - 1}1^{n - 1} + \cdots + a_11 + a_0) \bmod 9 \\
-            & = (a_n + a_{n - 1} + \cdots + a_1 + a_0) \bmod 9
+            & = (a_n + a_{n - 1} + \cdots + a_1 + a_0) \bmod 9 \qh
         \end{align*}
     \end{sol}
     \item Compute the remainder when $37^{100}$ is divided by $29$.
@@ -455,7 +455,7 @@ and $\bb = \{X \in \ac : MX = XM\}$, where $\ac$ denotes the set of $2 \times 2$
             0^2 = 0 \equiv 0 \bmod 4 \\
             1^2 = 1 \equiv 1 \bmod 4 \\
             2^2 = 4 \equiv 0 \bmod 4 \\
-            3^2 = 9 \equiv 1 \bmod 4 \\
+            3^2 = 9 \equiv 1 \bmod 4 \qh
         \end{align*}
     \end{sol}
     \item Prove that for any integers $a$ and $b$ that $a^2 + b^2$ never leaves a remainder of $3$ when divided by $4$ (use the previous exercise).
@@ -502,12 +502,12 @@ and $\bb = \{X \in \ac : MX = XM\}$, where $\ac$ denotes the set of $2 \times 2$
         The previous two exercises show that $a$ and $n$ are relatively prime if and only if there exists $b$ such that $ab \equiv 1 \bmod n$, which is exactly the proposition. For $n = 12$, the elements $1, 5, 7, 11$ are relatively prime to $12$, so that $\units[11] = \{\bar 1, \bar 5, \bar 7, \bar{11}\} $ whose inverses are $\bar 1, \bar 7, \bar 5, \bar{11}$ respectively. 
     \end{sol}
     \item For each of the following pairs of integers $a$ and $n$, show that $a$ is relatively prime to $n$ and determine the multiplicative inverse of $\bar a$ in $\intmod$.
-    \begin{enumerate}
+    \begin{problems}
         \item $a = 13, n = 20$
         \item $a = 69, n = 89$
         \item $a = 1891, n = 3797$
         \item $a = 6003722857, n = 77695236973$
-    \end{enumerate}
+    \end{problems}
     \begin{solalph}
         \item Refer to the previous set of exercises on how to do the Euclidean Algorithm and how to calculate such an $x$ such that $ax + by = 1$, or $ax \equiv 1 \bmod n$. For this exercise, we obtain $-3 \equiv 17 \bmod 20$, so the inverse is $\bar{17}$.
         \item $40(69) - 31(89) = 1 \implies 40\cdot 89 \equiv 1 \bmod 89$, so the inverse is $\bar{40}$.
@@ -515,4 +515,4 @@ and $\bb = \{X \in \ac : MX = XM\}$, where $\ac$ denotes the set of $2 \times 2$
         \item $17n - 220a = 1 \implies -220a \equiv 1 \bmod n \implies 77695237193a \equiv 1 \bmod n$, so the inverse is $\bar{77695237193}$.
     \end{solalph}
     \item Write a computer program to add and multiply mod $n$, for any $n$ given as input. The output of these operations should be the least residues of the sums and products of two integers. Also include the feature that if $(a, n) = 1$, an integer $c$ between $1$ and $n - 1$ such that $\bar a \cdot \bar c = \bar 1$ may be printed on request. (Your program should not, of course, simply quote "mod" functions already built into many systems).
-\end{enumerate}
+\end{problems}
