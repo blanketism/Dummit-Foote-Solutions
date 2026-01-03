@@ -1,0 +1,59 @@
+\section{Group Actions}
+
+\subsection{Group Actions and Permutation Representations}
+
+Let $G$ be a group and let $A$ be a nonempty set.
+
+\begin{problems}
+    \item Let $G$ act on the set $A$. Prove that if $a,b \in A$ and $b = g \cdot a$ for some $g \in G$, then \(G_b = g G_a g^{-1}\) (\(G_a\) is the stabilizer of $a$). Deduce that if $G$ acts transitively on $A$ then the kernel of the action is
+    \[\bigcap_{g \in G} g G_a g^{-1}.\]
+    
+    \item Let $G$ be a permutation group on the set $A$ (i.e., \(G \leq S_A\)), let \(\sigma \in G\) and let \(a \in A\). Prove that \(\sigma G_a \sigma^{-1} = G_{\sigma(a)}\). Deduce that if $G$ acts transitively on $A$ then 
+    \[\bigcap_{\sigma \in G} \sigma G_a \sigma^{-1} = 1.\]
+    
+    \item Assume that $G$ is an abelian, transitive subgroup of $S_A$. Show that \(\sigma(a) \neq a\) for all \(\sigma \in G - \{1\}\) and all \(a \in A\). Deduce that \(|G| = |A|\). [Use the preceding exercise.]
+    
+    \item Let \(S_3\) act on the set \(\Omega\) of ordered pairs \(\{(i,j) \mid 1 \le i,j \le 3\}\) by \(\sigma((i,j)) = (\sigma(i), \sigma(j))\). Find the orbits of \(S_3\) on \(\Omega\). For each \(\sigma \in S_3\) find the cycle decomposition of \(\sigma\) under this action (i.e., find its cycle decomposition when \(\sigma\) is considered as an element of \(S_9\)—first fix a labeling of these nine ordered pairs). For each orbit \(\mathcal{O}\) of $S_3$ acting on these nine points, pick some \(a \in \mathcal{O}\) and find the stabilizer of \(a\) in \(S_3\).
+    
+    \item For each of parts (a) and (b) repeat the preceding exercise but with $S_3$ acting on the specified set:
+    \begin{problems}
+        \item the set of 27 triples \(\{(i,j,k) \mid 1 \le i,j,k \le 3\}\)
+        \item the set \(\mathcal{P}(\{1,2,3\}) - \{\emptyset\}\) of all 7 nonempty subsets of \(\{1,2,3\}\)
+    \end{problems}
+    
+    \item As in \hyperref[ex2.2.12]{Exercise 2.2.12}, let $R$ be the set of all polynomials with integer coefficients in the independent variables \(x_1,x_2,x_3,x_4\) and let $S_4$ act on $R$ by permuting the indices of the four variables: \(\sigma \cdot p(x_1,x_2,x_3,x_4) = p(x_{\sigma(1)}, x_{\sigma(2)}, x_{\sigma(3)}, x_{\sigma(4)})\) for all \(\sigma \in S_4\).
+    \begin{problems}
+        \item Find the polynomials in the orbit of $S_4$ on $R$ containing \(x_1 + x_2\) (recall from \hyperref[ex2.2.12]{Exercise 2.2.12} that the stabilizer of this polynomial has order 4).
+        \item Find the polynomials in the orbit of $S_4$ on $R$ containing \(x_1 x_2 + x_3 x_4\) (recall from \hyperref[ex2.2.12]{Exercise 2.2.12} that the stabilizer of this polynomial has order 8).
+        \item Find the polynomials in the orbit of $S_4$ on $R$ containing \((x_1 + x_2)(x_3 + x_4)\).
+    \end{problems}
+
+	\item Let $G$ be a transitive permutation group on the finite set $A$. A \textit{block} is a nonempty subset $B$ of $A$ such that for all $\sigma \in G$ either $\sigma(B) = B$ or $\sigma(B) \cap B = \emptyset$ (here $\sigma(B) = \{\sigma(b) \mid b \in B\}$). 
+	\begin{problems}
+		\item Prove that if $B$ is a block containing the element $a$ of $A$, then the set $G_B$ defined by $G_B = \{\sigma \in G \mid \sigma(B) = B\}$ is a subgroup of $G$ containing $G_a$.
+		\item Show that if $B$ is a block and $\sigma_1(B), \sigma_2(B), \ldots, \sigma_n(B)$ are all the distinct images of $B$ under the elements of $G$, then these form a partition of $A$.
+		\item A (transitive) group $G$ on a set $A$ is said to be \textit{primitive} if the only blocks in $A$ are the trivial ones: the sets of size $1$ and $A$ itself. Show that $S_4$ is primitive on $A = \{1,2,3,4\}$. Show that $D_8$ is not primitive as a permutation group on the four vertices of a square.
+		\item Prove that the transitive group $G$ is primitive on $A$ if and only if for each $a \in A$, the only subgroups of $G$ containing $G_a$ are $G_a$ and $G$ (i.e., $G_a$ is a \textit{maximal} subgroup of $G$, cf. \hyperref[ex2.4.16]{Exercise 2.4.16}). [Use part (a).]
+	\end{problems}
+
+	\item A transitive permutation group $G$ on a set $A$ is called \textit{doubly transitive} if for any (hence all) $a \in A$ the subgroup $G_a$ is transitive on the set $A - \{a\}$.
+	\begin{problems}
+		\item Prove that $S_n$ is doubly transitive on $\{1,2,\ldots,n\}$ for all $n \ge 2$.
+		\item Prove that a doubly transitive group is primitive. Deduce that $D_8$ is not doubly transitive in its action on the 4 vertices of a square.
+	\end{problems}
+
+	\item Assume $G$ acts transitively on the finite set $A$ and let $H$ be a normal subgroup of $G$. Let $\mathcal{O}_1, \mathcal{O}_2, \ldots, \mathcal{O}_r$ be the distinct orbits of $H$ on $A$.
+	\begin{problems}
+		\item Prove that $G$ permutes the sets $\mathcal{O}_1, \mathcal{O}_2, \ldots, \mathcal{O}_r$, in the sense that for each $g \in G$ and each $i \in \{1,\ldots,r\}$ there is a $j$ such that $g \mathcal{O}_i = \mathcal{O}_j$, where $g\mathcal{O} = \{g \cdot a \mid a \in \mathcal{O}\}$ (i.e., in the notation of Exercise 7 the sets $\mathcal{O}_1, \ldots, \mathcal{O}_r$ are blocks). Prove that $G$ is transitive on $\{\mathcal{O}_1, \ldots, \mathcal{O}_r\}$. Deduce that all orbits of $H$ on $A$ have the same cardinality.
+		\item Prove that if $a \in \mathcal{O}_1$ then $|\mathcal{O}_1| = |H : H \cap G_a|$ and prove that $r = |G : HG_a|$. [Draw the sublattice describing the Second Isomorphism Theorem for the subgroups $H$ and $G_a$ of $G$. Note that $H \cap G_a = H_a$.]
+	\end{problems}
+
+	\item Let $H$ and $K$ be subgroups of the group $G$. For each $x \in G$ define the $HK$ \textit{double coset} of $x$ in $G$ to be the set $HxK = \{hxk \mid h \in H, k \in K\}$.
+	\begin{problems}
+		\item Prove that $HxK$ is the union of the left cosets $x_1K, \ldots, x_nK$ where $\{x_1K, \ldots, x_nK\}$ is the orbit containing $xK$ of $H$ acting by left multiplication on the set of left cosets of $K$.
+		\item Prove that $HxK$ is a union of right cosets of $H$.
+		\item Show that $HxK$ and $HyK$ are either the same set or are disjoint for all $x, y \in G$. Show that the set of $HK$ double cosets partitions $G$.
+		\item Prove that $|HxK| = |K| \cdot |H : H \cap xKx^{-1}|$.
+		\item Prove that $|HxK| = |H| \cdot |K : K \cap x^{-1}Hx|$.
+	\end{problems}
+\end{problems}
