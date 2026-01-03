@@ -7,20 +7,154 @@ Let $G$ be a group and let $A$ be a nonempty set.
 \begin{problems}
     \item Let $G$ act on the set $A$. Prove that if $a,b \in A$ and $b = g \cdot a$ for some $g \in G$, then \(G_b = g G_a g^{-1}\) (\(G_a\) is the stabilizer of $a$). Deduce that if $G$ acts transitively on $A$ then the kernel of the action is
     \[\bigcap_{g \in G} g G_a g^{-1}.\]
-    
+    \begin{sol}
+		Suppose $h \in G_b$. We want to show that $h \in gG_ag\inv$. Since $h \in G_b$, we have $h \cdot b = b$. But $b = g \cdot a$, so $h \cdot (g \cdot a) = g \cdot a$. Applying $g\inv$ to both sides, we get $g\inv h g \cdot a = a$. This means that $g\inv h g \in G_a$, so $h \in g G_a g\inv$. Thus, we have shown that \(G_b \subseteq g G_a g^{-1}\). For the other direction, suppose $h \in g G_a g^{-1}$. Then there exists some $k \in G_a$ such that $h = g k g^{-1}$. We want to show that $h \in G_b$. We have $h \cdot b = (g k g^{-1}) \cdot (g \cdot a) = g \cdot (k \cdot a) = g \cdot a = b$, since $k \in G_a$ implies $k \cdot a = a$. Thus, $h \in G_b$. Therefore, we have shown that \(g G_a g^{-1} \subseteq G_b\). Combining both inclusions, we conclude that \(G_b = g G_a g^{-1}\).
+
+		Now, if $G$ acts transitively on $A$, then for any $b \in A$, there exists some $g \in G$ such that $b = g \cdot a$. From the first part, we have \(G_b = g G_a g^{-1}\). The kernel of the action is the intersection of all stabilizers \(G_b\) for \(b \in A\). Therefore, the kernel is
+		\[\bigcap_{b \in A} G_b = \bigcap_{g \in G} g G_a g^{-1}. \qh\]
+	\end{sol}
     \item Let $G$ be a permutation group on the set $A$ (i.e., \(G \leq S_A\)), let \(\sigma \in G\) and let \(a \in A\). Prove that \(\sigma G_a \sigma^{-1} = G_{\sigma(a)}\). Deduce that if $G$ acts transitively on $A$ then 
     \[\bigcap_{\sigma \in G} \sigma G_a \sigma^{-1} = 1.\]
-    
+    \begin{sol}
+		Suppose $\tau \in \sigma G_a\sigma\inv$. We want to show that $\tau \in G_{\sigma(a)}$. Since $\tau \in \sigma G_a \sigma^{-1}$, there exists some $\rho \in G_a$ such that $\tau = \sigma \rho \sigma^{-1}$. We have $\tau \cdot \sigma(a) = (\sigma \rho \sigma^{-1}) \cdot \sigma(a) = \sigma \cdot (\rho \cdot a) = \sigma(a)$, since $\rho \in G_a$ implies $\rho \cdot a = a$. Thus, $\tau \in G_{\sigma(a)}$. Therefore, we have shown that \(\sigma G_a \sigma^{-1} \subseteq G_{\sigma(a)}\). For the other direction, suppose $\tau \in G_{\sigma(a)}$. We want to show that $\tau \in \sigma G_a \sigma^{-1}$. We have $\tau \cdot \sigma(a) = \sigma(a)$. Applying $\sigma^{-1}$ to both sides, we get $\sigma^{-1} \tau \sigma \cdot a = a$. This means that $\sigma^{-1} \tau \sigma \in G_a$, so $\tau \in \sigma G_a \sigma^{-1}$. Thus, we have shown that \(G_{\sigma(a)} \subseteq \sigma G_a \sigma^{-1}\). Combining both inclusions, we conclude that \(\sigma G_a \sigma^{-1} = G_{\sigma(a)}\).
+
+		Now, if $G$ acts transitively on $A$, then for any $b \in A$, there exists some $\sigma \in G$ such that $b = \sigma(a)$. From the first part, we have \(\sigma G_a \sigma^{-1} = G_b\). The kernel of the action is the intersection of all stabilizers \(G_b\) for \(b \in A\). Therefore, the kernel is
+		\[\bigcap_{b \in A} G_b = \bigcap_{\sigma \in G} \sigma G_a \sigma^{-1} = 1. \qh\]
+	\end{sol}
     \item Assume that $G$ is an abelian, transitive subgroup of $S_A$. Show that \(\sigma(a) \neq a\) for all \(\sigma \in G - \{1\}\) and all \(a \in A\). Deduce that \(|G| = |A|\). [Use the preceding exercise.]
-    
+    \begin{sol}
+		Since $G$ is abelian, then the conjugate of $G_a$ is trivial, i.e., $\sigma G_a \sigma\inv = G_a$ for all $\sigma \in G$. From the previous exercise, we know that the kernel of this action is trivial. However, the intersection of all $\sigma G_a\sigma\inv$ is just $G_a$ so that $G_a = 1$. Then $G_a$ is trivial for every $a \in A$, hence $\sigma(a) \neq a$ for all $\sigma \in G - \{1\}$ and all $a \in A$. It follows by Proposition 4.2 that $|G|/|G_a| = |A|$, hence $|G| = |A|$ because $G_a$ is trivial.
+	\end{sol}
     \item Let \(S_3\) act on the set \(\Omega\) of ordered pairs \(\{(i,j) \mid 1 \le i,j \le 3\}\) by \(\sigma((i,j)) = (\sigma(i), \sigma(j))\). Find the orbits of \(S_3\) on \(\Omega\). For each \(\sigma \in S_3\) find the cycle decomposition of \(\sigma\) under this action (i.e., find its cycle decomposition when \(\sigma\) is considered as an element of \(S_9\)—first fix a labeling of these nine ordered pairs). For each orbit \(\mathcal{O}\) of $S_3$ acting on these nine points, pick some \(a \in \mathcal{O}\) and find the stabilizer of \(a\) in \(S_3\).
-    
+    \begin{sol}
+		Note that in $\Omega$, there are two types of ordered pairs: those with identical elements and those with distinct elements. In the former case, it is clear that any $\sigma \in S_3$ will map such a pair to another pair with identical elements. In the latter case, it is easy to find some $\sigma \in S_3$ that maps any ordered pair with distinct elements to any other such pair. We now label the elements of $\Omega$ accordingly:
+		\begin{multicols}{3}
+			\begin{itemize}
+				\item 1 = (1, 1)
+				\item 2 = (2, 2)
+				\item 3 = (3, 3)
+				\item 4 = (1, 2)
+				\item 5 = (2, 1)
+				\item 6 = (1, 3)
+				\item 7 = (3, 1)
+				\item 8 = (2, 3)
+				\item 9 = (3, 2)
+			\end{itemize}
+		\end{multicols}
+		We then have the two orbits 
+		\[\oo_1 = \{(i, i) \mid i \in \set{1, 2, 3}\} \longand \oo_2 = \set{(i, j) \mid i \neq j}\]
+		of $S_3$ acting on $\Omega$. Note that $|\oo_1| = 3$ and $|\oo_2| = 6$. Now for each $\sigma \in S_3$, we find its cycle decomposition as an element of $S_9$. We describe how to compute one such cycle decomposition, and the rest follow similarly. Consider $\sigma = (1 2 3) \in S_3$. Then we have the following mappings:
+		\begin{itemize}
+			\item $(1, 1) \mapsto (2, 2) \mapsto (3, 3) \mapsto (1, 1)$, which corresponds to the cycle $(1\ 2\ 3)$ in $S_9$.
+			\item $(1, 2) \mapsto (2, 3) \mapsto (3, 1) \mapsto (1, 2)$, which corresponds to the cycle $(4\ 8\ 7)$ in $S_9$.
+			\item $(2, 1) \mapsto (3, 2) \mapsto (1, 3) \mapsto (2, 1)$, which corresponds to the cycle $(5\ 9\ 6)$ in $S_9$.
+		\end{itemize}
+		Combining these cycles, we find that the cycle decomposition of $\sigma = (1 2 3)$ in $S_9$ is $(1\ 2\ 3)(4\ 8\ 7)(5\ 9\ 6)$. The cycle decompositions for all elements of $S_3$ acting on $\Omega$ are as follows:
+		\begin{multicols}{3}
+			\begin{itemize}
+				\item $1 \in S_3$ is the same as $1 \in S_9$.
+				\item $(1 2)$: $(1\ 2)(4\ 5)(6\ 7)(8\ 9)$
+				\item $(1 3)$: $(1\ 3)(4\ 6)(5\ 7)(8\ 9)$
+				\item $(2 3)$: $(1\ 2)(2\ 3)(5\ 6)(7\ 8)$
+				\item $(1 2 3)$: $(1\ 2\ 3)(4\ 8\ 7)(5\ 9\ 6)$
+				\item $(1 3 2)$: $(1\ 3\ 2)(4\ 7\ 8)(5\ 6\ 9)$
+			\end{itemize}
+		\end{multicols}
+		For $\oo_1$, we pick $a = (1, 1)$. The only $\sigma \in S_3$ that fixes $(1, 1)$ is the identity permutation and $(2\ 3)$, so the stabilizer of $(1, 1)$ in $S_3$ is $\gen{(2\ 3)}$. Moreover, we have $|G_a||\oo_1| = 2 \cdot 3 = 6 = |S_3|$ as expected. For $\oo_2$, we pick $a = (1, 2)$. The only $\sigma \in S_3$ that fixes $(1, 2)$ is the identity permutation, so the stabilizer of $(1, 2)$ in $S_3$ is 1. Again, $|G_a||\oo_2| = 1 \cdot 6 = 6 = |S_3|$.
+	\end{sol}
     \item For each of parts (a) and (b) repeat the preceding exercise but with $S_3$ acting on the specified set:
     \begin{problems}
         \item the set of 27 triples \(\{(i,j,k) \mid 1 \le i,j,k \le 3\}\)
         \item the set \(\mathcal{P}(\{1,2,3\}) - \{\emptyset\}\) of all 7 nonempty subsets of \(\{1,2,3\}\)
     \end{problems}
-    
+    \begin{solalph}
+		\item We begin by classifying these set of triples. There are five types of triples:
+		\begin{itemize}
+			\item Type 1: Triples with all identical elements.
+			\item Type 2: Triples whose two first coordinates are identical.
+			\item Type 3: Triples whose first and last coordinates are identical.
+			\item Type 4: Triples whose last two coordinates are identical.
+			\item Type 5: Triples with all distinct elements.
+		\end{itemize}
+		Note that this is a correct classification. One may suggest to combine Types 2, 3, and 4 into a singular type. However, observe that no elements may be permuted such that the location of a pair of identical coordinates move to another one, i.e., there is no such permutation $\sigma$ in $S_3$ such that $(1, 1, 2)$ maps to $(1, 2, 2)$.We now label the elements of $\Omega$ lexicographically as follows, i.e., we begin by increasing the last coordinate, then increasing the middle coordinate, and finally increasing the first coordinate:
+		\begin{multicols}{3}
+			\begin{itemize}
+				\item $1 = (1, 1, 1)$
+				\item $2 = (1, 1, 2)$
+				\item $3 = (1, 1, 3)$
+				\item $4 = (1, 2, 1)$
+				\item $5 = (1, 2, 2)$
+				\item $6 = (1, 2, 3)$
+				\item $7 = (1, 3, 1)$
+				\item $8 = (1, 3, 2)$
+				\item $9 = (1, 3, 3)$
+				\item $10 = (2, 1, 1)$
+				\item $11 = (2, 1, 2)$
+				\item $12 = (2, 1, 3)$
+				\item $13 = (2, 2, 1)$
+				\item $14 = (2, 2, 2)$
+				\item $15 = (2, 2, 3)$
+				\item $16 = (2, 3, 1)$
+				\item $17 = (2, 3, 2)$
+				\item $18 = (2, 3, 3)$
+				\item $19 = (3, 1, 1)$
+				\item $20 = (3, 1, 2)$
+				\item $21 = (3, 1, 3)$
+				\item $22 = (3, 2, 1)$
+				\item $23 = (3, 2, 2)$
+				\item $24 = (3, 2, 3)$
+				\item $25 = (3, 3, 1)$
+				\item $26 = (3, 3, 2)$
+				\item $27 = (3, 3, 3)$
+			\end{itemize}
+		\end{multicols}
+		The classification yields the following orbits of $S_3$ acting on $\Omega$:
+		\begin{itemize}
+			\item $\oo_1 = \{(i, i, i) \mid i \in \set{1, 2, 3}\}$ with order 3.
+			\item $\oo_2 = \{(i, i, j) \mid i \neq j\}$ with order 6.
+			\item $\oo_3 = \{(i, j, i) \mid i \neq j\}$ with order 6.
+			\item $\oo_4 = \{(j, i, i) \mid i \neq j\}$	with order 6.
+			\item $\oo_5 = \{(i, j, k) \mid i, j, k \text{ distinct}\}$ with order 6.
+		\end{itemize}
+		The cycle decompositions for all elements of $S_3$ acting on $\Omega$ are as follows:
+		\begin{itemize}
+			\item $1 \in S_3$ is the same as $1 \in S_{27}$.
+			\item $(1\ 2)$: $(1\ 14)(2\ 13)(3\ 15)(4\ 11)(5\ 10)(6\ 12)(7\ 17)(8\ 16)(9\ 18)(19\ 23)(20\ 22)(21\ 24)(25\ 26)$
+			\item $(1\ 3)$: $(1\ 27)(2\ 26)(3\ 25)(4\ 24)(5\ 23)(6\ 22)(7\ 21)(8\ 20)(9\ 19)(10\ 18)(11\ 17)(12\ 16)(13\ 15)$
+			\item $(2\ 3)$: $(2\ 3)(4\ 7)(5\ 9)(6\ 8)(10\ 19)(11\ 21)(12\ 20)(13\ 25)(14\ 27)(15\ 26)(16\ 22)(17\ 24)(18\ 23)$
+			\item $(1\ 2\ 3)$: $(1\ 14\ 27)(2\ 15\ 25)(3\ 13\ 26)(4\ 17\ 21)(5\ 18\ 19)(6\ 16\ 20)(7\ 11\ 24)(8\ 12\ 22)(9\ 10\ 23)$
+			\item $(1\ 3\ 2)$: $(1\ 27\ 14)(2\ 25\ 15)(3\ 26\ 13)(4\ 21\ 17)(5\ 19\ 18)(6\ 20\ 16)(7\ 24\ 11)(8\ 22\ 12)(9\ 23\ 10)$
+		\end{itemize}
+		For $\oo_1$, pick $a = (1\ 1\ 1)$. The elements that stabilize $a$ are the identity permutation and $(2\ 3)$, so the stabilizer of $a$ in $S_3$ is $\gen{(2\ 3)}$. We have $|G_a||\oo_1| = 2 \cdot 3 = 6 = |S_3|$. For the other orbits, note that $S_3$ acts transitively on each of them, so the stabilizer of any chosen element in these orbits is trivial. For example, for $\oo_2$, pick $a = (1\ 1\ 2)$. The only element that stabilizes $a$ is the identity permutation, so the stabilizer of $a$ in $S_3$ is 1. We have $|G_a||\oo_2| = 1 \cdot 6 = 6 = |S_3|$. The same logic applies to $\oo_3$, $\oo_4$, and $\oo_5$.
+		\item We begin by classifying the nonempty subsets of $\{1, 2, 3\}$. There are three types of subsets: 1-element subsets, 2-element subsets, and the 3-element subset. We now label the elements of $\mathcal{P}(\{1, 2, 3\}) - \{\emptyset\}$ as follows:
+		\begin{multicols}{4}
+			\begin{itemize}
+				\item $1 = \{1\}$
+				\item $2 = \{2\}$
+				\item $3 = \{3\}$
+				\item $4 = \{1, 2\}$
+				\item $5 = \{1, 3\}$
+				\item $6 = \{2, 3\}$
+				\item $7 = \{1, 2, 3\}$
+			\end{itemize}
+		\end{multicols}
+		The classification yields the following orbits of $S_3$ acting on $\mathcal{P}(\{1, 2, 3\}) - \{\emptyset\}$:
+		\begin{itemize}
+			\item $\oo_1 = \{\{1\}, \{2\}, \{3\}\}$ with order 3.
+			\item $\oo_2 = \{\{1, 2\}, \{1, 3\}, \{2, 3\}\}$ with order 3.
+			\item $\oo_3 = \{\{1, 2, 3\}\}$ with order 1.
+		\end{itemize}
+		The cycle decompositions for all elements of $S_3$ acting on $\mathcal{P}(\{1, 2, 3\}) - \{\emptyset\}$ are as follows:
+		\begin{itemize}
+			\item $1 \in S_3$ is the same as $1 \in S_7$.
+			\item $(1\ 2)$: $(1\ 2)(5\ 6)$
+			\item $(1\ 3)$: $(1\ 3)(4\ 6)$
+			\item $(2\ 3)$: $(2\ 3)(4\ 5)$
+			\item $(1\ 2\ 3)$: $(1\ 2\ 3)(4\ 6\ 5)$
+			\item $(1\ 3\ 2)$: $(1\ 3\ 2)(4\ 5\ 6)$
+		\end{itemize}
+		For $\oo_1$, pick $a = \{1\}$. The only elements that stabilize $a$ are the identity permutation and $(2\ 3)$, so the stabilizer of $a$ in $S_3$ is $\gen{(2\ 3)}$. We have $|G_a||\oo_1| = 2 \cdot 3 = 6 = |S_3|$. For $\oo_2$, pick $a = \{1, 2\}$. The only elements that stabilize $a$ are the identity permutation and $(1\ 2)$, so the stabilizer of $a$ in $S_3$ is $\gen{(1\ 2)}$. We have $|G_a||\oo_2| = 2 \cdot 3 = 6 = |S_3|$. For $\oo_3$, note that $S_3$ acts trivially on this orbit, so the stabilizer of $\{1, 2, 3\}$ in $S_3$ is all of $S_3$. We have $|G_a||\oo_3| = 6 \cdot 1 = 6 = |S_3|$.
+	\end{solalph}
     \item As in \hyperref[ex2.2.12]{Exercise 2.2.12}, let $R$ be the set of all polynomials with integer coefficients in the independent variables \(x_1,x_2,x_3,x_4\) and let $S_4$ act on $R$ by permuting the indices of the four variables: \(\sigma \cdot p(x_1,x_2,x_3,x_4) = p(x_{\sigma(1)}, x_{\sigma(2)}, x_{\sigma(3)}, x_{\sigma(4)})\) for all \(\sigma \in S_4\).
     \begin{problems}
         \item Find the polynomials in the orbit of $S_4$ on $R$ containing \(x_1 + x_2\) (recall from \hyperref[ex2.2.12]{Exercise 2.2.12} that the stabilizer of this polynomial has order 4).
