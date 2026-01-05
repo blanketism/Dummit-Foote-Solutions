@@ -161,7 +161,14 @@ Let $G$ be a group and let $A$ be a nonempty set.
         \item Find the polynomials in the orbit of $S_4$ on $R$ containing \(x_1 x_2 + x_3 x_4\) (recall from \hyperref[ex2.2.12]{Exercise 2.2.12} that the stabilizer of this polynomial has order 8).
         \item Find the polynomials in the orbit of $S_4$ on $R$ containing \((x_1 + x_2)(x_3 + x_4)\).
     \end{problems}
-
+	\begin{solalph}
+		\item Note that the size of the orbit is given by \(|S_4|/|G_{x_1 + x_2}| = 24/4 = 6\). The polynomials in the orbit of $S_4$ on $R$ containing \(x_1 + x_2\) are
+		\[x_1 + x_2, x_1 + x_3, x_1 + x_4, x_2 + x_3, x_2 + x_4, x_3 + x_4\]
+		\item The size of the orbit is 3. The polynomials in the orbit of $S_4$ on $R$ containing \(x_1 x_2 + x_3 x_4\) are
+		\[x_1 x_2 + x_3 x_4, x_1 x_3 + x_2 x_4, x_1 x_4 + x_2 x_3\]
+		\item Note that the stabilizer of \((x_1 + x_2)(x_3 + x_4)\) has order 8 (it is the same as that of \(x_1 x_2 + x_3 x_4\)). Thus, the size of the orbit is 3. The polynomials in the orbit of $S_4$ on $R$ containing \((x_1 + x_2)(x_3 + x_4)\) are
+		\[(x_1 + x_2)(x_3 + x_4), (x_1 + x_3)(x_2 + x_4), (x_1 + x_4)(x_2 + x_3)\qh\]
+	\end{solalph}
 	\item Let $G$ be a transitive permutation group on the finite set $A$. A \textit{block} is a nonempty subset $B$ of $A$ such that for all $\sigma \in G$ either $\sigma(B) = B$ or $\sigma(B) \cap B = \emptyset$ (here $\sigma(B) = \{\sigma(b) \mid b \in B\}$). 
 	\begin{problems}
 		\item Prove that if $B$ is a block containing the element $a$ of $A$, then the set $G_B$ defined by $G_B = \{\sigma \in G \mid \sigma(B) = B\}$ is a subgroup of $G$ containing $G_a$.
@@ -169,19 +176,53 @@ Let $G$ be a group and let $A$ be a nonempty set.
 		\item A (transitive) group $G$ on a set $A$ is said to be \textit{primitive} if the only blocks in $A$ are the trivial ones: the sets of size $1$ and $A$ itself. Show that $S_4$ is primitive on $A = \{1,2,3,4\}$. Show that $D_8$ is not primitive as a permutation group on the four vertices of a square.
 		\item Prove that the transitive group $G$ is primitive on $A$ if and only if for each $a \in A$, the only subgroups of $G$ containing $G_a$ are $G_a$ and $G$ (i.e., $G_a$ is a \textit{maximal} subgroup of $G$, cf. \hyperref[ex2.4.16]{Exercise 2.4.16}). [Use part (a).]
 	\end{problems}
-
+	\begin{solalph}
+		\item We first show that $G_B$ is a subgroup of $G$. Since $1(B) = B$, then $1 \in G_B$, hence it is nonempty. If $\sigma, \tau \in G$ such that $\sigma(B) = B$ and $\tau(B) = B$, we note that $\tau\inv(B) = B$ as well, hence $\sigma, \tau\inv \in G_B$. Then $(\sigma\tau\inv)(B) = \sigma(\tau\inv(B)) = \sigma(B) = B$, so $\sigma\tau\inv \in G_B$. Hence $G_B \leq G$.
+		
+		Now, let $a \in B$. If $\sigma \in G_a$, then $\sigma(a) = a$. Since $a \in B$, then $\sigma(a) \in \sigma(B)$. But $\sigma(a) = a \in B$, so $\sigma(B) \cap B \neq \emptyset$. By the definition of a block, this implies that $\sigma(B) = B$, hence $\sigma \in G_B$. Therefore, we have shown that $G_a \leq G_B$.
+		\item Let $B$ be a block and let $\sigma_1(B), \sigma_2(B), \ldots, \sigma_n(B)$ be all the distinct images of $B$ under the elements of $G$. By transitivity of $G$ on $A$, then for some $a \in A$, there exists $b \in B$ such that $\sigma(b) = a$. Then $a \in \sigma(B)$, and since $\sigma(B)$ is one of the sets $\sigma_1(B), \sigma_2(B), \ldots, \sigma_n(B)$, it follows that
+		\[\bigcup_{i=1}^n \sigma_i(B) = A.\]
+		Suppose there existed $i \neq j$ where $\sigma_i(B) \cap \sigma_j(B) \neq \emptyset$. Then there are $b, b' \in B$ such that $\sigma_i(b) = \sigma_j(b')$, or $(\sigma_j\inv\sigma_i)(b) = b'$, hence $\sigma_j\inv\sigma_i(B) \cap B \neq \emptyset$. Since $B$ is a block, then $\sigma_j\inv\sigma_i(B) = B$, hence $\sigma_i(B) = \sigma_j(B)$, contradicting the assumption that they are distinct. Therefore, the sets $\sigma_1(B), \sigma_2(B), \ldots, \sigma_n(B)$ are disjoint, and we conclude that they form a partition of $A$.
+		\item Let $B \subset A$, i.e., a proper subset of $A$. If $|B| = 1$, then it is trivial. Suppose $|B| > 1$, and without loss of generality, let $1 \in B$ and some $1 \neq i \in B$ as well. Then there exists some $\sigma \in S_4$ such that $\sigma(1) = 1$ and $\sigma(i) = j$ for $j \not\in B$. Then $\sigma(B) \cap B \neq \emptyset$ so that $\sigma(B) = B$, hence $j \in B$. We may repeat this to show that $B = A$, contradicting the assumption that $B$ is a proper subset of $A$. Therefore, the only blocks in $A$ are the trivial ones, and $S_4$ is primitive on $A$.
+		
+		Now, consider $D_8$ acting on the four vertices of a square. Let $B$ be the set containing the two opposite vertices. Then for any $\sigma \in D_8$, either $\sigma(B) = B$ or $\sigma(B) \cap B = \emptyset$. Thus, $B$ is a nontrivial block, and $D_8$ is not primitive in its action on the four vertices of a square.
+		\item \rightimp If $G$ is primitive on $A$. Let $H \leq G$ such that $G_a \leq H \leq G$, and let $B$ be the orbit of $H$ so that $B = H \cdot a$. Since $1 \in H$ because $H \leq G$, then $1 \cdot a = a \in B$. By part (a), we know that $a \in B$ implies $G_a \leq G_B$ so that $B$ is now a block containing $a$. Primitivity of $G$ implies that $B$ is either $\set a$ or $A$ itself. If $B = \set a$, then for any $\sigma \in H$, we have $\sigma \cdot a \in B$, hence $\sigma \cdot a = a$, so $\sigma \in G_a$. Therefore, $H \leq G_a$, and since $G_a \leq H$, then $H = G_a$. If $B = A$, then for any $b \in A$, there exists some $\sigma \in H$ such that $\sigma \cdot a = b$. Thus, for any $b \in A$, there exists some $\sigma \in H$ such that $\sigma(b) = a$, hence $H$ is transitive on $A$. Therefore, $H = G$. We have shown that the only subgroups of $G$ containing $G_a$ are $G_a$ and $G$.
+		
+		\noindent\leftimp Suppose now that $G_a$ is maximal in $G$. Let $B$ be a block of $A$ that contains some $a \in A$. By part (a), we know that $G_a \leq G_B \leq G$. Maximality of $G_a$ implies that either $G_B = G_a$ or $G_B = G$. If $G_B = G_a$, then for any $\sigma \in G_B$, we have $\sigma \in G_a$, hence $\sigma(a) = a$. Since $a \in B$, then $\sigma(a) \in \sigma(B)$, so $\sigma(a) \in B$. Therefore, $\sigma(a) = a \in B$, and it follows that $\sigma(B) \cap B \neq \emptyset$. By the definition of a block, this implies that $\sigma(B) = B$. Thus, for any $\sigma \in G_B$, we have $\sigma(B) = B$, so $B = \set a$. If $G_B = G$, then for any $b \in A$, there exists some $\sigma \in G$ such that $\sigma(a) = b$. Since $\sigma \in G_B$, then $\sigma(B) = B$, hence $b \in B$. Therefore, $B = A$. We have shown that the only blocks in $A$ are the trivial ones, so $G$ is primitive on $A$.
+	\end{solalph}
 	\item A transitive permutation group $G$ on a set $A$ is called \textit{doubly transitive} if for any (hence all) $a \in A$ the subgroup $G_a$ is transitive on the set $A - \{a\}$.
 	\begin{problems}
 		\item Prove that $S_n$ is doubly transitive on $\{1,2,\ldots,n\}$ for all $n \ge 2$.
 		\item Prove that a doubly transitive group is primitive. Deduce that $D_8$ is not doubly transitive in its action on the 4 vertices of a square.
 	\end{problems}
-
+	\begin{solalph}
+		\item Let $G_a$ be the stabilizer of $a \in \set{1, 2, \ldots, n}$. Note that $G_a$ is the set of all permutations that fix $a$ and permute the remaining $n - 1$ elements so that $G_a \cong S_{n - 1}$. Since $S_{n - 1}$ is transitive on the set $\set{1, 2, \ldots, n} - \{a\}$ for all $n - 1 \geq 1$, then $G_a$ is transitive on $A - \{a\}$ for all $n \geq 2$. Therefore, $S_n$ is doubly transitive on $\set{1, 2, \ldots, n}$ for all $n \geq 2$.
+		\item Let $G$ be double transitive and let $B$ be a block containing some $a \in A$. Take $b \in B$ such that $b \neq a$. Double transitivity of $G$ implies that there exists some $\sigma \in G_a$ such that $\sigma(b) = c$ for any $c \in A - \{a\}$. Since $\sigma \in G_a$, then $\sigma(B) = B$, hence $c \in B$. Therefore, $B = A$, and we conclude that the only blocks in $A$ are the trivial ones. Thus, $G$ is primitive on $A$. Since $D_8$ is not primitive in its action on the four vertices of a square (as shown in part (c) of the previous exercise), then it is not doubly transitive.
+	\end{solalph}
 	\item Assume $G$ acts transitively on the finite set $A$ and let $H$ be a normal subgroup of $G$. Let $\mathcal{O}_1, \mathcal{O}_2, \ldots, \mathcal{O}_r$ be the distinct orbits of $H$ on $A$.
 	\begin{problems}
 		\item Prove that $G$ permutes the sets $\mathcal{O}_1, \mathcal{O}_2, \ldots, \mathcal{O}_r$, in the sense that for each $g \in G$ and each $i \in \{1,\ldots,r\}$ there is a $j$ such that $g \mathcal{O}_i = \mathcal{O}_j$, where $g\mathcal{O} = \{g \cdot a \mid a \in \mathcal{O}\}$ (i.e., in the notation of Exercise 7 the sets $\mathcal{O}_1, \ldots, \mathcal{O}_r$ are blocks). Prove that $G$ is transitive on $\{\mathcal{O}_1, \ldots, \mathcal{O}_r\}$. Deduce that all orbits of $H$ on $A$ have the same cardinality.
 		\item Prove that if $a \in \mathcal{O}_1$ then $|\mathcal{O}_1| = |H : H \cap G_a|$ and prove that $r = |G : HG_a|$. [Draw the sublattice describing the Second Isomorphism Theorem for the subgroups $H$ and $G_a$ of $G$. Note that $H \cap G_a = H_a$.]
 	\end{problems}
+	\begin{solalph}
+		\item Let $g \in G$ and $\oo_i$ be an orbit of $H$ on $A$. Let $a \in \oo_i$ so that $\oo_i = H \cdot a = \set{h \cdot a \mid h \in H}$. Consider the set $g\oo_i = \set{g \cdot (h \cdot a) \mid h \in H}$. Since $H$ is normal in $G$, then for any $h \in H$, we have $ghg\inv \in H$. Then $g\oo_i = H \cdot (g \cdot a)$, which is the orbit of $H$ containing $g \cdot a$. Therefore, there exists some $j$ such that $g\oo_i = \oo_j$.
+		
+		To show that $G$ is transitive on $\{\oo_1, \ldots, \oo_r\}$, let $\oo_i$ and $\oo_j$ be any two orbits of $H$ on $A$. Since $G$ is transitive on $A$, then for some $a \in \oo_i$ and $b \in \oo_j$, there exists some $g \in G$ such that $g \cdot a = b$. Then $g\oo_i$ is the orbit of $H$ containing $b$, hence $g\oo_i = \oo_j$. Therefore, $G$ is transitive on $\{\oo_1, \ldots, \oo_r\}$. Since $G$ is transitive on $\{\oo_1, \ldots, \oo_r\}$, then all orbits of $H$ on $A$ have the same cardinality.
+		\item Suppose $a \in \oo_1$. By Proposition 4.2, we have $|\oo_1| = |H : H_a|$. Since $H_a = H \cap G_a$, then $|\oo_1| = |H : H \cap G_a|$. Moreover, the orbits of $H$ partition $A$ and have the same size by the previous solution, so we have $|A| = r|\oo_1|$. By applying Proposition 4.2 again, we have $|A| = |G : G_a|$. Therefore, $|G : G_a| = r|\oo_1| = r|H : H \cap G_a|$. By the Second Isomorphism Theorem, we also have that $H/(H \cap G_a) \cong HG_a/G_a$ so that $|H : H \cap G_a| = |HG_a : G_a|$. Now recall by \hyperref[ex3.2.11]{Exercise 3.2.11} that $|G : K| = |G : H||H : K|$ for subgroups $K \leq H \leq G$. Applying this to the subgroups $G_a \leq HG_a \leq G$, we have $|G : G_a| = |G : HG_a||HG_a : G_a| = |G : HG_a||H : H \cap G_a|.$ We then have $r|H : H \cap G_a| = |G : HG_a||H : H \cap G_a|$, or $r = |G : HG_a|$. Moreover, the sublattice is given as follows:
+		\begin{center}
+			\begin{tikzpicture}
+				\node (G) at (0, 0) {$G$};
+				\node (HGa) at (0, -1) {$HG_a$};
+				\node (H) at (-1, -2) {$H$};
+				\node (Ga) at (1, -2) {$G_a$};
+				\node (HcapGa) at (0, -3) {$H \cap G_a$};
+				\node (1) at (0, -4) {$\{1\}$};
 
+				\draw (1) -- (HcapGa) -- (H) -- (HGa) -- (G);
+				\draw (HcapGa) -- (Ga) -- (HGa);
+			\end{tikzpicture}
+		\end{center}
+	\end{solalph}
 	\item Let $H$ and $K$ be subgroups of the group $G$. For each $x \in G$ define the $HK$ \textit{double coset} of $x$ in $G$ to be the set $HxK = \{hxk \mid h \in H, k \in K\}$.
 	\begin{problems}
 		\item Prove that $HxK$ is the union of the left cosets $x_1K, \ldots, x_nK$ where $\{x_1K, \ldots, x_nK\}$ is the orbit containing $xK$ of $H$ acting by left multiplication on the set of left cosets of $K$.
@@ -190,4 +231,13 @@ Let $G$ be a group and let $A$ be a nonempty set.
 		\item Prove that $|HxK| = |K| \cdot |H : H \cap xKx^{-1}|$.
 		\item Prove that $|HxK| = |H| \cdot |K : K \cap x^{-1}Hx|$.
 	\end{problems}
+	\begin{solalph}
+		\item Let $\oo$ be the orbit containing $xK$ of $H$ acting by left multiplication on the set of left cosets of $K$. Then $\oo = \set{hxK \mid h \in H}$, and let $\{x_1K, \ldots, x_nK\}$ be the distinct left cosets in $\oo$. Let $\kk$ be the union of these left cosets, i.e., $\kk = \bigcup_1^n x_iK$.
+		
+		Now pick $y \in HxK$. Then there exist $h \in H$ and $k \in K$ such that $y = hxk$. Note that $hxK \in \oo$, so there exists some $i$ such that $hxK = x_iK$. Therefore, $y = hxk \in x_iK \subseteq \kk$, hence $HxK \subseteq \kk$. If $z \in \kk$, then there exists some $i$ and some $k' \in K$ such that $z = x_ik'$. Since $x_iK \in \oo$, then there exists some $h' \in H$ such that $x_iK = h'xK$, hence $x_i = h'xk''$ for some $k'' \in K$. Therefore, $z = x_ik' = h'xkk'' \in HxK$, so $\kk \subseteq HxK$. We have shown that $HxK = \kk$, i.e., $HxK$ is the union of the left cosets $x_1K, \ldots, x_nK$.
+		\item The proof is similar to that of part (a). 
+		\item Let $x, y \in G$. Suppose $HxK \cap HyK \neq \emptyset$. Then there exist $h_1, h_2 \in H$ and $k_1, k_2 \in K$ such that $h_1 x k_1 = h_2 y k_2$. Rearranging, we have $y = h_2\inv h_1 x k_1 k_2\inv$, hence $y \in HxK$. Therefore, $HyK \subseteq HxK$. By symmetry, we also have $HxK \subseteq HyK$, so $HxK = HyK$. We have shown that $HxK$ and $HyK$ are either the same set or are disjoint for all $x, y \in G$. Since every element of $G$ is in some double coset of the form $HxK$, then the set of $HK$ double cosets partitions $G$.
+		\item Recall that the orbit of $xK$ under this action is $\oo = \set{hxK \mid h \in H}$. By Proposition 4.2, we have $|\oo| = |H : H_{xK}|$, where $H_{xK}$ is the stabilizer of $xK$ in $H$. Observe that $H_{xK} = \set{h \in H \mid hxK = xK}$. Then $hxK = xK$ implies that there exists some $k \in K$ such that $hxk = x$, or equivalently, $h = x k x\inv$. Therefore, $H_{xK} = H \cap x K x\inv$. By part (a), we have $|HxK| = |\oo| \cdot |K| = |H : H \cap x K x\inv| \cdot |K|$.
+		\item Similar to part (d).
+	\end{solalph}
 \end{problems}
