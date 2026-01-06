@@ -515,4 +515,42 @@ and $\bb = \{X \in \ac : MX = XM\}$, where $\ac$ denotes the set of $2 \times 2$
         \item $17n - 220a = 1 \implies -220a \equiv 1 \bmod n \implies 77695237193a \equiv 1 \bmod n$, so the inverse is $\bar{77695237193}$.
     \end{solalph}
     \item Write a computer program to add and multiply mod $n$, for any $n$ given as input. The output of these operations should be the least residues of the sums and products of two integers. Also include the feature that if $(a, n) = 1$, an integer $c$ between $1$ and $n - 1$ such that $\bar a \cdot \bar c = \bar 1$ may be printed on request. (Your program should not, of course, simply quote "mod" functions already built into many systems).
+    \begin{sol}
+
+        
+    \begin{breakablealgorithm}
+        \begin{algorithmic}[1]
+            \Require Integers $a, b, n$ with $n > 1$
+            \Ensure $\bar a + \bar b$, $\bar a \cdot \bar b$ (least residues modulo $n$), and optionally $\bar a^{-1}$ if $(a,n) = 1$
+
+            \State \textbf{Function} \textsc{ModAdd}($a,b,n$)
+            \State Sum $\gets a + b$
+            \State \textbf{While} Sum $\ge n$ \textbf{Do}
+                \State Sum $\gets Sum - n$
+            \State \textbf{While} Sum $< 0$ \textbf{Do}
+                \State Sum $\gets Sum + n$
+            \State \textbf{Return} Sum
+
+            \State \textbf{Function} \textsc{ModMul}($a,b,n$)
+            \State Prod $\gets 0$
+            \State A\_Mod $\gets a$
+            \State \textbf{While} A\_Mod $\ge n$ \textbf{Do}
+                \State A\_Mod $\gets A\_Mod - n$
+            \State \textbf{For} i $= 1$ \textbf{To} b \textbf{Do}
+                \State Prod $\gets \textsc{ModAdd}(Prod, A\_Mod, n)$
+            \State \textbf{Return} Prod
+
+            \State \textbf{Function} \textsc{ModInverse}($a,n$)
+            \State \textbf{If} GCD$(a,n) \neq 1$ \textbf{Then Return} ``No Inverse''
+            \State \textbf{For} c $= 1$ \textbf{To} $n-1$ \textbf{Do}
+                \State \textbf{If} $\textsc{ModMul}(a,c,n) = 1$ \textbf{Then Return} c
+            \State \textbf{Return} ``No Inverse Found''
+
+            \State \textbf{Example Usage:}
+            \State Input: $a=7, b=5, n=12$
+            \State Output: $\textsc{ModAdd}(7,5,12) = 0$, $\textsc{ModMul}(7,5,12) = 11$
+            \State If Requested: $\textsc{ModInverse}(7,12) = 7$
+        \end{algorithmic}
+    \end{breakablealgorithm}
+    \end{sol}
 \end{problems}
