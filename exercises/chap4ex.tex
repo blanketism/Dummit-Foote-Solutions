@@ -288,29 +288,21 @@ Let $G$ be a group and let $A$ be a nonempty set.
 	\begin{solalph}
 		\item We calculate $\sigma_r = (1\ 2\ 3\ 4)(5\ 8\ 7\ 6)$ and $\sigma_s = (1\ 5)(2\ 6)(3\ 7)(4\ 8)$. Continuing in this way, we find that the images of the elements of $D_8$ under the left regular representation are as follows:
 		\begin{align*}
-			1 & \mapsto 1 \\
-			r & \mapsto (1\ 2\ 3\ 4)(5\ 8\ 7\ 6) \\
-			r^2 & \mapsto (1\ 3)(2\ 4)(5\ 7)(6\ 8) \\
-			r^3 & \mapsto (1\ 4\ 3\ 2)(5\ 6\ 7\ 8) \\
-			s & \mapsto (1\ 5)(2\ 6)(3\ 7)(4\ 8) \\
-			sr & \mapsto (1\ 6)(2\ 7)(3\ 8)(4\ 5) \\
-			sr^2 & \mapsto (1\ 7)(2\ 8)(3\ 5)(4\ 6) \\
-			sr^3 & \mapsto (1\ 8)(2\ 5)(3\ 6)(4\ 7)
+			1 & \mapsto 1 & s & \mapsto (1\ 5)(2\ 6)(3\ 7)(4\ 8) \\
+			r & \mapsto (1\ 2\ 3\ 4)(5\ 8\ 7\ 6) & sr & \mapsto (1\ 6)(2\ 7)(3\ 8)(4\ 5) \\
+			r^2 & \mapsto (1\ 3)(2\ 4)(5\ 7)(6\ 8) & sr^2 & \mapsto (1\ 7)(2\ 8)(3\ 5)(4\ 6) \\
+			r^3 & \mapsto (1\ 4\ 3\ 2)(5\ 6\ 7\ 8) & sr^3 & \mapsto (1\ 8)(2\ 5)(3\ 6)(4\ 7)
 		\end{align*}
 		\item The images of $D_8$ under the left regular representation with respect to this new labelling are as follows:
 		\begin{align*}
-			1 & \mapsto 1 \\
-			r & \mapsto (1\ 3\ 5\ 7)(2\ 8\ 6\ 4) \\
-			r^2 & \mapsto (1\ 5)(3\ 7)(2\ 6)(4\ 8) \\
-			r^3 & \mapsto (1\ 7\ 5\ 3)(2\ 4\ 6\ 8) \\
-			s & \mapsto (1\ 2)(3\ 4)(5\ 6)(7\ 8) \\
-			sr & \mapsto (1\ 4)(2\ 7)(3\ 6)(5\ 8) \\
-			sr^2 & \mapsto (1\ 6)(2\ 5)(3\ 8)(4\ 7) \\
-			sr^3 & \mapsto (1\ 8)(2\ 3)(4\ 5)(6\ 7)
+			1 & \mapsto 1 & s & \mapsto (1\ 2)(3\ 4)(5\ 6)(7\ 8) \\
+			r & \mapsto (1\ 3\ 5\ 7)(2\ 8\ 6\ 4) & sr & \mapsto (1\ 4)(2\ 7)(3\ 6)(5\ 8) \\
+			r^2 & \mapsto (1\ 5)(3\ 7)(2\ 6)(4\ 8) & sr^2 & \mapsto (1\ 6)(2\ 5)(3\ 8)(4\ 7) \\
+			r^3 & \mapsto (1\ 7\ 5\ 3)(2\ 4\ 6\ 8) & sr^3 & \mapsto (1\ 8)(2\ 3)(4\ 5)(6\ 7)
 		\end{align*}
 		Clearly, the two subgroups of $S_8$ obtained in parts (a) and (b) are different since, for example, the image of $r$ in part (a) is a product of two 4-cycles while the image of $r$ in part (b) is a product of two 4-cycles but with different elements.
 	\end{solalph}
-	\item Use the left regular representation of $Q_8$ to produce two elements of $S_8$ which generate a subgroup of $S_8$ isomorphic to the quaternion group $Q_8$.
+	\item \label{ex4.2.4} Use the left regular representation of $Q_8$ to produce two elements of $S_8$ which generate a subgroup of $S_8$ isomorphic to the quaternion group $Q_8$.
 	\begin{sol}
 		At minimum, we have that $Q_8 = \gen{i, j}$ (any 2 elements of order 4 can be used), so we compute the images of $i$ and $j$ under the left regular representation. We label $Q_8$ as $1, -1, i, -i, j, -j, k, -k$ and label these with the integers $1,2 \ldots 8$ respectively. We find that
 		\begin{align*}
@@ -322,31 +314,82 @@ Let $G$ be a group and let $A$ be a nonempty set.
 	\item Let $r$ and $s$ be the usual generators for the dihedral group of order 8 and let $H = \langle s \rangle$. List the left cosets of $H$ in $D_8$ as $1H, rH, r^2H$ and $r^3H$.
 	\begin{problems}
 		\item Label these cosets with the integers $1,2,3,4$, respectively. Exhibit the image of each element of $D_8$ under the representation $\pi_H$ of $D_8$ into $S_4$ obtained from the action of $D_8$ by left multiplication on the set of 4 left cosets of $H$ in $D_8$. Deduce that this representation is faithful (i.e., the elements of $S_4$ obtained form a subgroup isomorphic to $D_8$).
-		
 		\item Repeat part (a) with the list of cosets relabelled by the integers $1,3,2,4$, respectively. Show that the permutations obtained from this labelling form a subgroup of $S_4$ that is different from the subgroup obtained in part (a).
-		
 		\item Let $K = \langle sr \rangle$, list the cosets of $K$ in $D_8$ as $1K, rK, r^2K$ and $r^3K$, and label these with the integers $1,2,3,4$. Prove that, with respect to this labelling, the image of $D_8$ under the representation $\pi_K$ obtained from left multiplication on the cosets of $K$ is the same \emph{subgroup} of $S_4$ as in part (a) (even though the subgroups $H$ and $K$ are different and some of the elements of $D_8$ map to different permutations under the two homomorphisms).
 	\end{problems}
-
-    \item Let $r$ and $s$ be the usual generators for the dihedral group of order 8 and let $N = \langle r^2 \rangle$. List the left cosets of $N$ in $D_8$ as $1N, rN, sN$ and $srN$. Label these cosets with the integers 1,2,3,4 respectively. Exhibit the image of each element of $D_8$ under the representation $\pi_N$ of $D_8$ into $S_4$ obtained from the action of $D_8$ by left multiplication on the set of 4 left cosets of $N$ in $D_8$. Deduce that this representation is not faithful and prove that $\pi_N(D_8)$ is isomorphic to the Klein 4-group.
-
+	\begin{solalph}
+		\item We have $\pi_H(r) = (1\ 2\ 3\ 4)$ and $\pi_H(s) = (2\ 4)$. We continue in this way to find that the images of the elements of $D_8$ under $\pi_H$ are:
+		\begin{align*}
+			\pi_H(1) & = 1 & \pi_H(s) & = (2\ 4) \\
+			\pi_H(r) & = (1\ 2\ 3\ 4) & \pi_H(sr) & = (1\ 2)(3\ 4) \\
+			\pi_H(r^2) & = (1\ 3)(2\ 4) & \pi_H(sr^2) & = (1\ 3) \\
+			\pi_H(r^3) & = (1\ 4\ 3\ 2) & \pi_H(sr^3) & = (1\ 4)(2\ 3)
+		\end{align*}
+		so that the subgroup $\gen{\pi_H(r), \pi_H(s)} \leq S_4$ is isomorphic to $D_8$. Since the kernel of $\pi_H$ is trivial, then the representation is faithful.
+		\item The new labelling affords the permutations $\pi_H(r) = (1\ 3\ 2\ 4)$ and $\pi_H(s) = (3\ 4)$. We have the following images:
+		\begin{align*}
+			\pi_H(1) & = 1 & \pi_H(s) & = (3\ 4) \\
+			\pi_H(r) & = (1\ 3\ 2\ 4) & \pi_H(sr) & = (1\ 3)(2\ 4) \\
+			\pi_H(r^2) & = (1\ 2)(3\ 4) & \pi_H(sr^2) & = (1\ 2) \\
+			\pi_H(r^3) & = (1\ 4\ 2\ 3) & \pi_H(sr^3) & = (1\ 4)(2\ 3)
+		\end{align*}
+		Moreover, the subgroup is different from that in part (a) since, for example, the image of $r$ in part (a) is $(1\ 2\ 3\ 4)$ while the image of $r$ in this part is $(1\ 3\ 2\ 4)$.
+		\item Under $\pi_K$, we have $\pi_K(r) = (1\ 2\ 3\ 4)$ and $\pi_K(s) = (1\ 2)(3\ 4)$. With respect to this labeling, we have the subgroup $\wh K = \gen{(1\ 2\ 3\ 4), (1\ 2)(3\ 4)}$. Let $\wh H$ be the subgroup obtained in part (a). Note that $(1\ 2\ 3\ 4)$ is contained in both $\wh H$ and $\wh K$. Moreover, we have following:
+		\[(1\ 2\ 3\ 4)(2\ 4)(1\ 4\ 3\ 2) = (1\ 2)(3\ 4) \in \wh H \longand (1\ 2\ 3\ 4)^2(1\ 2)(3\ 4) = (2\ 4) \in \wh K\]
+		so that both subgroups contain the other generator of the other subgroup. Therefore, $\wh H = \wh K$.
+	\end{solalph}
+    \item Let $r$ and $s$ be the usual generators for the dihedral group of order 8 and let $N = \langle r^2 \rangle$. List the left cosets of $N$ in $D_8$ as $1N, rN, sN$ and $srN$. Label these cosets with the integers $1,2,3,4$ respectively. Exhibit the image of each element of $D_8$ under the representation $\pi_N$ of $D_8$ into $S_4$ obtained from the action of $D_8$ by left multiplication on the set of 4 left cosets of $N$ in $D_8$. Deduce that this representation is not faithful and prove that $\pi_N(D_8)$ is isomorphic to the Klein 4-group.
+	\begin{sol}
+		We have $\pi_N(r) = (1\ 2)(3\ 4)$ and $\pi_N(s) = (1\ 3)(2\ 4)$. Continuing in this way, we find that the images of the elements of $D_8$ under $\pi_N$ are:
+		\begin{align*}
+			\pi_N(1) & = 1 & \pi_N(s) & = (1\ 3)(2\ 4) \\
+			\pi_N(r) & = (1\ 2)(3\ 4) & \pi_N(sr) & = (1\ 4)(2\ 3) \\
+			\pi_N(r^2) & = 1 & \pi_N(sr^2) & = (1\ 3)(2\ 4) \\
+			\pi_N(r^3) & = (1\ 2)(3\ 4) & \pi_N(sr^3) & = (1\ 4)(2\ 3)
+		\end{align*}
+		Since $\ker(\pi_N)$ contains the nontrivial element $r^2$, then the representation is not faithful. Moreover, we have $\pi_N(D_8) = \{1, (1\ 2)(3\ 4), (1\ 3)(2\ 4), (1\ 4)(2\ 3)\}$, which is isomorphic to the Klein 4-group.
+	\end{sol}
     \item Let $Q_8$ be the quaternion group of order 8.
 	\begin{problems}
 		\item Prove that $Q_8$ is isomorphic to a subgroup of $S_8$.
 		\item Prove that $Q_8$ is not isomorphic to a subgroup of $S_n$ for any $n \le 7$. [If $Q_8$ acts on any set $A$ of order $\le 7$ show that the stabilizer of any point $a \in A$ must contain the subgroup $\langle -1 \rangle$.]
 	\end{problems}
-
+	\begin{solalph}
+		\item This is done in \hyperref[ex4.2.4]{Exercise 4.2.4}.
+		\item Let $Q_8$ act on a set $A$ of order $n \leq 7$. For any $a \in A$, consider the orbit $\oo_a$ of $a$ under this action. By Proposition 4.2, we have $|\oo_a| = |Q_8 : (Q_8)_a|$, where $(Q_8)_a$ is the stabilizer of $a$ in $Q_8$. Since $|\oo_a|$ divides $|A| \leq 7$, then $|\oo_a|$ must be 1, 2, 4, or 7. However, since $Q_8$ has no subgroup of index 7, then $|\oo_a|$ cannot be 7. If $|\oo_a| = 4$, then $(Q_8)_a$ has order 2, but the only subgroup of order 2 in $Q_8$ is $\langle -1 \rangle$. If $|\oo_a| = 2$, then $(Q_8)_a$ has order 4, and the only subgroups of order 4 in $Q_8$ are $\langle i \rangle$, $\langle j \rangle$, and $\langle k \rangle$, all of which contain $\langle -1 \rangle$. If $|\oo_a| = 1$, then $(Q_8)_a = Q_8$, which also contains $\langle -1 \rangle$. Therefore, in all cases, the stabilizer $(Q_8)_a$ contains $\langle -1 \rangle$. Since this holds for all $a \in A$, then $\langle -1 \rangle$ is contained in the kernel of the action. The action is not faithful, hence $Q_8$ cannot be isomorphic to a subgroup of $S_n$ for any $n \leq 7$.
+	\end{solalph}
     \item Prove that if $H$ has finite index $n$ then there is a normal subgroup $K$ of $G$ with $K \le H$ and $|G : K| \le n!$.
-
+	\begin{sol}
+		Let $G$ act by left multiplication on the set of left cosets of $H$ in $G$. Then we have the homomorphism $\phi : G \to S_n$, which is the permutation representation of $G$ on $G/H$. Let $K = \ker(\phi) \subseteq H$, since $g \in K$ if and only if $gH = H$. By the First Isomorphism Theorem, we have $G/K \cong \phi(G) \leq S_n$, so that $|G : K| = |G/K| = |\phi(G)|$ divides $n!$. Therefore, $|G : K| \leq n!$.
+	\end{sol}
     \item Prove that if $p$ is a prime and $G$ is a group of order $p^\alpha$ for some $\alpha \in \mathbb{Z}^+$, then every subgroup of index $p$ is normal in $G$. Deduce that every group of order $p^2$ has a normal subgroup of order $p$.
+	\begin{sol}
+		Let $H$ be a subgroup of $G$ with index $p$. Then $|G : H| = p$, so the action of $G$ on the left cosets of $H$ in $G$ gives a homomorphism $\phi : G \to S_p$. Since $|G| = p^\alpha$, then by Lagrange's Theorem, the order of $\phi(G)$ divides $p^\alpha$. However, the only subgroups of $S_p$ whose order divides $p^\alpha$ are the trivial group and groups of order $p$. Since $\phi(G)$ acts transitively on the $p$ cosets of $H$, then $\phi(G)$ cannot be trivial. Therefore, $|\phi(G)| = p$, which is prime, so $\phi(G)$ is cyclic and hence abelian. The kernel of $\phi$ is a normal subgroup of $G$ contained in $H$. Since the image $\phi(G)$ has order $p$, then by the First Isomorphism Theorem, we have $|G : \ker(\phi)| = p$. But since $\ker(\phi) \subseteq H$ and both have index $p$, then $\ker(\phi) = H$. Therefore, $H$ is normal in $G$.
 
+		To deduce that every group of order $p^2$ has a normal subgroup of order $p$, let $G$ be a group of order $p^2$. By Cauchy's Theorem, there exists an element of order $p$ in $G$, which generates a subgroup $H$ of order $p$. Since the index of $H$ in $G$ is $p$, by the previous result, $H$ is normal in $G$.
+	\end{sol}
     \item Prove that every non-abelian group of order 6 has a nonnormal subgroup of order 2. Use this to classify groups of order 6. [Produce an injective homomorphism into $S_3$.]
+	\begin{sol}
+		Note that $2 \mid 6$ and $3 \mid 6$. By Cauchy's Theorem, there exists subgroups $H$ and $K$ of orders 2 and 3 respectively. Let $H = \set{1, h}$, suppose it is normal, and let $g \in G - H$. Since $H \nsub G$, then $gHg\inv = H$. In particular, $ghg\inv \in H$, so either $ghg\inv = 1$ or $ghg\inv = h$. Since the first case implies $h = 1$, it must be that $ghg\inv = h$, or $gh = hg$. Then $h$ commutes with every element. Moreover, we may use \hyperref[ex3.3.3]{Exercise 3.3.3} to conclude that $G = HK$ since $H \nsub G$. Since $K$ is also abelian as it is cyclic, then $G = hk$ for $h \in H$ and $k \in K$, implying that $G$ is abelian, a contradiction. Therefore, $H$ is not normal in $G$.
 
-    \item Let $G$ be a finite group and let $\pi : G \to S_G$ be the left regular representation. Prove that if $x$ is an element of $G$ of order $n$ and $|G| = mn$, then $\pi(x)$ is a product of $m$ $n$-cycles. Deduce that $\pi(x)$ is an odd permutation if and only if $|x|$ is even and $\abs G/\abs x$ is odd.
+		To classify groups of order 6, let $G$ be a group of order 6. If $G$ is abelian, then $G \cong \z_6 \cong \z_2 \times \z_3$. If $G$ is non-abelian, then by the above result, $G$ has a nonnormal subgroup $H$ of order 2. Let $K$ be the subgroup of order 3. Then $G = HK$. Let $G$ act by left multiplication on the left cosets of $K$ in $G$. This action gives a homomorphism $\phi : G \to S_3$. Since $H$ is not normal in $G$, then the action is nontrivial, so $\phi$ is injective. Therefore, $G \cong \phi(G) \leq S_3$. Since $|G| = 6 = |S_3|$, then $\phi(G) = S_3$, and hence $G \cong S_3$.
+	\end{sol}
+    \item \label{ex4.2.11} Let $G$ be a finite group and let $\pi : G \to S_G$ be the left regular representation. Prove that if $x$ is an element of $G$ of order $n$ and $|G| = mn$, then $\pi(x)$ is a product of $m$ $n$-cycles. Deduce that $\pi(x)$ is an odd permutation if and only if $|x|$ is even and $\abs G/\abs x$ is odd.
+	\begin{sol}
+		Let $x \in G$ with $\abs x = n$. Consider the action of $\langle x \rangle$ on $G$ by left multiplication. The orbit of any $g \in G$ under this action is $\oo_g = \set{x^k g \mid k = 0, 1, \ldots, n-1}$. Since $\abs x = n$, then $|\oo_g| = n$ for all $g \in G$. By Proposition 4.2, we have $|\oo_g| = |\langle x \rangle : (\langle x \rangle)_g|$, where $(\langle x \rangle)_g$ is the stabilizer of $g$ in $\langle x \rangle$. Since $|\oo_g| = n$, then $(\langle x \rangle)_g$ is trivial for all $g \in G$. Therefore, the orbits of this action partition $G$ into subsets of size $n$. Since $|G| = mn$, there are exactly $m$ such orbits. Each orbit corresponds to an $n$-cycle in the permutation $\pi(x)$. Therefore, $\pi(x)$ is a product of $m$ $n$-cycles.
 
-    \item Let $G$ and $\pi$ be as in the preceding exercise. Prove that if $\pi(G)$ contains an odd permutation then $G$ has a subgroup of index 2. [Use \hyperref[ex3.3.3]{Exercise 3.3.3}.]
-
+		To determine when $\pi(x)$ is an odd permutation, we note that an $n$-cycle is an odd permutation if and only if $n$ is even. Since $\pi(x)$ is a product of $m$ $n$-cycles, the parity of $\pi(x)$ is determined by the parity of $m$ and $n$. Specifically, $\pi(x)$ is odd if and only if $n$ is even and $m$ is odd. Thus, $\pi(x)$ is an odd permutation if and only if $|x|$ is even and $|G|/|x|$ is odd.
+	\end{sol}
+    \item \label{ex4.2.12} Let $G$ and $\pi$ be as in the preceding exercise. Prove that if $\pi(G)$ contains an odd permutation then $G$ has a subgroup of index 2. [Use \hyperref[ex3.3.3]{Exercise 3.3.3}.]
+	\begin{sol}
+		Recall the $\ep$ homomorphism from Proposition 3.23. Moreover, $\pi$ is a homomorphism from $G$ to $S_G$. Consider the composition $\ep \circ \pi : G \to \set{\pm 1}$. Since $\pi(G)$ contains an odd permutation, then $\ep \circ \pi$ is surjective. By the First Isomorphism Theorem, we have $G/\ker(\ep \circ \pi) \cong \set{\pm 1}$, so that $|\ker(\ep \circ \pi)| = |G|/2$. Therefore, $\ker(\ep \circ \pi)$ is a subgroup of $G$ of index 2.
+	\end{sol}
     \item Prove that if $|G| = 2k$ where $k$ is odd then $G$ has a subgroup of index 2. [Use Cauchy's Theorem to produce an element of order 2 and then use the preceding two exercises.]
-
+	\begin{sol}
+		By Cauchy's Theorem, there exists $x \in G$ such that $\abs x = 2$. Then $\pi(x)$ is of order 2 and is hence a product of disjoint transpositions. Since $|G| = 2k$ with $k$ odd, then use $m = k$ and $n = 2$ in \hyperref[ex4.2.11]{Exercise 4.2.11} along with even $\abs x$ to conclude that $\pi(x)$ is an odd permutation. By the \hyperref[ex4.2.12]{Exercise 4.2.12}, $G$ has a subgroup of index 2.
+	\end{sol}
     \item Let $G$ be a finite group of composite order $n$ with the property that $G$ has a subgroup of order $k$ for each positive integer $k$ dividing $n$. Prove that $G$ is not simple.
+    \begin{sol}
+		Let $S$ be the set of all prime factors of $n$. By the Well Ordering Principle, this has a minimal element $p$. By hypothesis, $G$ has a subgroup $P$ of order $n/p$ with index $p$. By Corollary 4.5, $P$ is normal in $G$ since $p$ is the smallest prime dividing $n$. Therefore, $G$ is not simple.
+	\end{sol}
 \end{problems}
