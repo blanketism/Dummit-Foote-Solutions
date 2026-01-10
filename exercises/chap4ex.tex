@@ -447,38 +447,144 @@ Let $G$ be a group.
 		Suppose $x \in gC_G(S)g\inv$, and consider $xsx\inv$ for some $s \in gSg\inv$. Since $x = gng\inv$ for some $n \in C_G(S)$, then we have $gng\inv s g n\inv g\inv = g n (g\inv s g) n\inv g\inv = g (g\inv s g) g\inv = s$, so that $x \in C_G(gSg\inv)$. Conversely, suppose $x \in C_G(gSg\inv)$. Then $xsx\inv = s$ for all $s \in gSg\inv$. Letting $n = g\inv x g$, we have $n t n\inv = t$ for all $t \in S$, so $n \in C_G(S)$ and hence $x \in gC_G(S)g\inv$. Therefore, $gC_G(S)g\inv = C_G(gSg\inv)$.
 	\end{sol}
 	\item If the center of $G$ is of index $n$, prove that every conjugacy class has at most $n$ elements.
-
+	\begin{sol}
+		Let $\kk_g$ be the conjugacy class of some $g \in G$. By Proposition 4.6, we have $|\kk_g| = |G : C_G(g)|$. Since $Z(G) \leq C_G(g)$ for all $g \in G$, Lagrange's Theorem shows that $|Z(G)|$ divides $|C_G(g)|$. Therefore, $|G : C_G(g)|$ divides $|G : Z(G)| = n$. Hence, $|\kk_g| \leq n$.
+	\end{sol}
 	\item Assume $G$ is a non-abelian group of order $15$. Prove that $Z(G)=1$. Use the fact that $\langle g \rangle \le C_G(g)$ for all $g \in G$ to show that there is at most one possible class equation for $G$. [Use \hyperref[ex3.1.36]{Exercise 3.1.36}.]
+	\begin{sol}
+		Recall that $Z(G) \leq G$. Since $G$ is non-abelian, then $Z(G) \neq G$. Assume $1 < Z(G) < 15$. By Lagrange's Theorem, $Z(G)$ has order 3 or 5. If $|Z(G)| = 3$, then $|G/Z(G)| = 5$ and $G/Z(G) \cong Z_5$. If $|Z(G)| = 5$, then $|G/Z(G)| = 3$ and $G/Z(G) \cong Z_3$. In either case, $G/Z(G)$ is cyclic by Corollary 3.10, and \hyperref[ex3.1.36]{Exercise 3.1.36} implies that $G$ is abelian, a contradiction. Therefore, $Z(G) = 1$.
 
+		Now suppose $g \in G$ is nonidentity. Since $\langle g \rangle \leq C_G(g)$, then $|C_G(g)|$ is 3, 5, or 15 by Lagrange's Theorem. If $|C_G(g)| = 15$, then $C_G(g) = G$, so $g \in Z(G)$, a contradiction. Therefore, $|C_G(g)|$ is 3 or 5 for all nonidentity $g \in G$. By Proposition 4.6, we have $|\kk_g| = |G : C_G(g)|$, so that $|\kk_g|$ is 5 or 3 respectively. The identity element forms a conjugacy class of size 1, and the class equation must involve a summation of sizes 3 and 5 that adds to 14. The only such combination is three classes of size 3 and one class of size 5. Therefore, the class equation of $G$ is $15 = 1 + 3 + 3 + 3 + 5$.
+	\end{sol}
 	\item For $n=3,4,6,$ and $7$ make lists of the partitions of $n$ and give representatives for the corresponding conjugacy classes of $S_n$.
-
+	\begin{sol}
+		$n = 3$:
+		\[\begin{array}{c|c}
+			\textbf{Partition of 3} & \textbf{Representative of Cycle Type} \\
+			\hline
+			1, 1, 1 & 1 \\
+			2, 1 & (1\ 2) \\
+			3 & (1\ 2\ 3)
+		\end{array}\]
+		$n = 4$:
+		\[\begin{array}{c|c}
+			\textbf{Partition of 4} & \textbf{Representative of Cycle Type} \\
+			\hline
+			1, 1, 1, 1 & 1 \\
+			2, 1, 1 & (1\ 2) \\
+			2, 2 & (1\ 2)(3\ 4) \\
+			3, 1 & (1\ 2\ 3) \\
+			4 & (1\ 2\ 3\ 4)
+		\end{array}\]
+		$n = 6$:
+		\[\begin{array}{c|c}
+			\textbf{Partition of 6} & \textbf{Representative of Cycle Type} \\
+			\hline
+			1, 1, 1, 1, 1, 1 & 1 \\
+			2, 1, 1, 1, 1 & (1\ 2) \\
+			2, 2, 1, 1 & (1\ 2)(3\ 4) \\
+			2, 2, 2 & (1\ 2)(3\ 4)(5\ 6) \\
+			3, 1, 1, 1 & (1\ 2\ 3) \\
+			3, 2, 1 & (1\ 2\ 3)(4\ 5) \\
+			3, 3 & (1\ 2\ 3)(4\ 5\ 6) \\
+			4, 1, 1 & (1\ 2\ 3\ 4) \\
+			4, 2 & (1\ 2\ 3\ 4)(5\ 6) \\
+			5, 1 & (1\ 2\ 3\ 4\ 5) \\
+			6 & (1\ 2\ 3\ 4\ 5\ 6)
+		\end{array}\]
+		$n = 7$:
+		\[\begin{array}{c|c}
+			\textbf{Partition of 7} & \textbf{Representative of Cycle Type} \\
+			\hline
+			1, 1, 1, 1, 1, 1, 1 & 1 \\
+			2, 1, 1, 1, 1, 1 & (1\ 2) \\
+			2, 2, 1, 1, 1 & (1\ 2)(3\ 4) \\
+			2, 2, 2, 1 & (1\ 2)(3\ 4)(5\ 6) \\
+			3, 1, 1, 1, 1 & (1\ 2\ 3) \\
+			3, 2, 1, 1 & (1\ 2\ 3)(4\ 5) \\
+			3, 2, 2 & (1\ 2\ 3)(4\ 5)(6\ 7) \\
+			3, 3, 1 & (1\ 2\ 3)(4\ 5\ 6) \\
+			4, 1, 1, 1 & (1\ 2\ 3\ 4) \\
+			4, 2, 1 & (1\ 2\ 3\ 4)(5\ 6) \\
+			4, 3 & (1\ 2\ 3\ 4)(5\ 6\ 7) \\
+			5, 1, 1 & (1\ 2\ 3\ 4\ 5) \\
+			5, 2 & (1\ 2\ 3\ 4\ 5)(6\ 7) \\
+			6, 1 & (1\ 2\ 3\ 4\ 5\ 6) \\
+			7 & (1\ 2\ 3\ 4\ 5\ 6\ 7)
+		\end{array} \qh\]
+	\end{sol}
 	\item Prove that $Z(S_n)=1$ for all $n \ge 3$.
-
+	\begin{sol}
+		Suppose $\sigma \in Z(S_n)$ for some $n \geq 3$. Then $\sigma$ commutes with every element of $S_n$. In particular, $\sigma$ commutes with all transpositions (the set of which generate $S_n$). Let $(a\ b)$ be any transposition in $S_n$. Then we have $\sigma(a\ b)\sigma\inv = (a\ b)$. This implies that $(\sigma(a)\ \sigma(b)) = (a\ b)$, so $\sigma(a) = a$ and $\sigma(b) = b$. Since $a$ and $b$ were arbitrary, $\sigma$ fixes every element of $\{1, 2, \ldots, n\}$. Therefore, $\sigma$ is the identity permutation. Hence, $Z(S_n) = \{1\}$ for all $n \geq 3$.
+	\end{sol}
 	\item Show that $|C_{S_n}((1\ 2)(3\ 4))| = 8 (n-4)!$ for all $n \ge 4$. Determine the elements in this centralizer explicitly.
-
+	\begin{sol}
+		The $(n - 4)!$ factor arises from the fact that permutations on the $n - 4$ integers not involved in the cycle $(1\ 2)(3\ 4)$ commute with it. Therefore, we need only consider the permutations of $\{1, 2, 3, 4\}$ that commute with $(1\ 2)(3\ 4)$. Computing $C_{S_4}((1\ 2)(3\ 4))$ directly, the permutations that fall in this set need to leave $(1\ 2)(3\ 4)$ unchanged, or swap the two transpositions. The permutations that leave $(1\ 2)(3\ 4)$ unchanged are $1$, $(1\ 2)$, $(3\ 4)$, and $(1\ 2)(3\ 4)$. The permutations that swap the two transpositions are $(1\ 3)(2\ 4)$, $(1\ 4)(2\ 3)$, $(1\ 3\ 2\ 4)$, and $(1\ 4\ 2\ 3)$. Therefore, 
+		\[C_{S_4}((1\ 2)(3\ 4)) = \{1, (1\ 2), (3\ 4), (1\ 2)(3\ 4), (1\ 3)(2\ 4), (1\ 4)(2\ 3), (1\ 3\ 2\ 4), (1\ 4\ 2\ 3)\},\]
+		which has size 8. Combining this with the $(n - 4)!$ factor, we have $|C_{S_n}((1\ 2)(3\ 4))| = 8(n - 4)!$ for all $n \geq 4$.
+	\end{sol}
 	\item Let $\sigma$ be the 5-cycle $(1\ 2\ 3\ 4\ 5)$ in $S_5$. In each of (a) to (c) find an explicit element $\tau \in S_5$ which accomplishes the specified conjugation:
-		\begin{problems}
-			\item $\tau \sigma \tau^{-1} = \sigma^2$
-			\item $\tau \sigma \tau^{-1} = \sigma^{-1}$
-			\item $\tau \sigma \tau^{-1} = \sigma^{-2}$
-		\end{problems}
-
+	\begin{problems}
+		\item $\tau \sigma \tau^{-1} = \sigma^2$
+		\item $\tau \sigma \tau^{-1} = \sigma^{-1}$
+		\item $\tau \sigma \tau^{-1} = \sigma^{-2}$
+	\end{problems}
+	\begin{solalph}
+		\item $\sigma^2 = (1\ 3\ 5\ 2\ 4)$. Then $\tau = (2\ 3\ 5\ 4)$.
+		\item $\sigma^{-1} = (1\ 5\ 4\ 3\ 2)$. Then $\tau = (1\ 5)(2\ 4)$.
+		\item $\sigma^{-2} = (1\ 4\ 2\ 5\ 3)$. Then $\tau = (2\ 4\ 5\ 3)$.
+	\end{solalph}
 	\item In each of (a) -- (d) determine whether $\sigma_1$ and $\sigma_2$ are conjugate. If they are, given an explicit permutation $\tau$ such that $\tau \sigma_1 \tau^{-1} = \sigma_2$.
-		\begin{problems}
-			\item $\sigma_1 = (1\ 2)(3\ 4\ 5)$ and $\sigma_2 = (1\ 2\ 3)(4\ 5)$
-			\item $\sigma_1 = (1\ 5)(3\ 7\ 2)(10\ 6\ 8\ 11)$ and $\sigma_2 = (3\ 7\ 5\ 10)(4\ 9)(13\ 11\ 2)$
-			\item $\sigma_1 = (1\ 5)(3\ 7\ 2)(10\ 6\ 8\ 11)$ and $\sigma_2 = \sigma_1^3$
-			\item $\sigma_1 = (1\ 3)(2\ 4\ 6)$ and $\sigma_2 = (3\ 5)(2\ 4)(5\ 6)$
-		\end{problems}
-
+	\begin{problems}
+		\item $\sigma_1 = (1\ 2)(3\ 4\ 5)$ and $\sigma_2 = (1\ 2\ 3)(4\ 5)$
+		\item $\sigma_1 = (1\ 5)(3\ 7\ 2)(10\ 6\ 8\ 11)$ and $\sigma_2 = (3\ 7\ 5\ 10)(4\ 9)(13\ 11\ 2)$
+		\item $\sigma_1 = (1\ 5)(3\ 7\ 2)(10\ 6\ 8\ 11)$ and $\sigma_2 = \sigma_1^3$
+		\item $\sigma_1 = (1\ 3)(2\ 4\ 6)$ and $\sigma_2 = (3\ 5)(2\ 4)(5\ 6)$
+	\end{problems}
+	\begin{solalph}
+		\item Rewrite $\sigma_2$ as $(4\ 5)(1\ 2\ 3)$ so that both have the same cycle type. Then $\tau = (1\ 4\ 2\ 5\ 3)$.
+		\item Rewrite $\sigma_2$ as $(4\ 9)(13\ 11\ 2)(3\ 7\ 5\ 10)$. Then $\tau = (1\ 4)(8\ 5\ 9)(6\ 7\ 11\ 10\ 3\ 13)$.
+		\item Note that $\sigma_2 = (1\ 5)(6\ 10\ 11\ 8)$, which does not have the same cycle type as $\sigma_1$. Therefore, they are not conjugate.
+		\item $\sigma_2 = (2\ 4)(3\ 5\ 6)$. Then $\tau = (1\ 2\ 3\ 4\ 5)$.
+	\end{solalph}
 	\item Find a representative for each conjugacy class of elements of order $4$ in $S_8$ and $S_{12}$.
-
+	\begin{sol}
+		$S_8$:
+		\[\begin{array}{c|c}
+			\textbf{Cycle Type} & \textbf{Representative} \\
+			\hline
+			4, 4 & (1\ 2\ 3\ 4)(5\ 6\ 7\ 8) \\
+			4, 2, 2 & (1\ 2\ 3\ 4)(5\ 6)(7\ 8) \\
+			4, 2, 1, 1 & (1\ 2\ 3\ 4)(5\ 6) \\
+			4, 1, 1, 1, 1 & (1\ 2\ 3\ 4)
+		\end{array}\]
+		$S_{12}$:
+		\[\begin{array}{c|c}
+			\textbf{Cycle Type} & \textbf{Representative} \\
+			\hline
+			4, 4, 4 & (1\ 2\ 3\ 4)(5\ 6\ 7\ 8)(9\ 10\ 11\ 12) \\
+			4, 4, 2, 2 & (1\ 2\ 3\ 4)(5\ 6\ 7\ 8)(9\ 10)(11\ 12) \\
+			4, 4, 2, 1, 1 & (1\ 2\ 3\ 4)(5\ 6\ 7\ 8)(9\ 10) \\
+			4, 4, 1, 1, 1, 1 & (1\ 2\ 3\ 4)(5\ 6\ 7\ 8) \\
+			4, 2, 2, 2, 2 & (1\ 2\ 3\ 4)(5\ 6)(7\ 8)(9\ 10)(11\ 12) \\
+			4, 2, 2, 2, 1, 1 & (1\ 2\ 3\ 4)(5\ 6)(7\ 8)(9\ 10) \\
+			4, 2, 2, 1, 1, 1, 1 & (1\ 2\ 3\ 4)(5\ 6)(7\ 8) \\
+			4, 2, 1, 1, 1, 1, 1, 1 & (1\ 2\ 3\ 4)(5\ 6) \\
+			4, 1, 1, 1, 1, 1, 1, 1, 1 & (1\ 2\ 3\ 4)
+		\end{array} \qh\]
+	\end{sol}
 	\item Find all finite groups which have exactly two conjugacy classes.
-
+	\begin{sol}
+		Let $G$ be a finite group with exactly two conjugacy classes. One of these classes must be $\{1\}$, the identity element. Let $\kk$ be the other conjugacy class, and let $g \in \kk$. By Proposition 4.6, we have $|\kk| = |G : C_G(g)|$. Since there are only two conjugacy classes, then $|\kk| = |G| - 1$. Therefore, $|G : C_G(g)| = |G| - 1$, which implies that $|C_G(g)| = |G|/(|G| - 1)$. Since $|C_G(g)|$ is an integer, then $|G| - 1$ divides $|G|$. This is only possible if $|G| - 1 = 1$, so that $|G| = 2$. Therefore, the only finite group with exactly two conjugacy classes is the group of order 2, which is isomorphic to $Z_2$.
+	\end{sol}
 	\item In \hyperref[ex4.2.1]{Exercise 4.2.1} two labellings of the elements $\set{1, a, b, c}$ of the Klein 4-group $V_4$ were chosen to give two versions of the left regular representation of $V_4$ into $S_4$. Let $\pi_1$ be the version of regular representation obtained in part (a) of that exercise, and let $\pi_2$ be the version obtained via the labelling in part (b). Let $\tau = (2\ 4)$. Show that $\tau \circ \pi_1(g) \circ \tau\inv = \pi_2(g)$ for each $g \in V_4$ (i.e., conjugation by $\tau$ sends the image of $\pi_1$ to the image of $\pi_2$ elementwise).
-
+	\begin{sol}
+		We will compute for $a$, as the rest follow similarly. We have $\pi_1(a) = (1\ 2)(3\ 4)$ and $\pi_2(a) = (1\ 4)(2\ 3)$. Then $\tau \circ \pi_1(a) \circ \tau\inv = (2\ 4)(1\ 2)(3\ 4)(2\ 4) = (1\ 4)(2\ 3) = \pi_2(a)$.
+	\end{sol}
 	\item Find an element of $S_8$ which conjugates the subgroup of $S_8$ obtained in part (a) of \hyperref[ex4.2.3]{Exercise 4.2.3} to the subgroup of $S_8$ obtained in part (b) of that same exercise (both of these subgroups are isomorphic to $D_8$).
-
+	\begin{sol}
+		
+	\end{sol}
 	\item Find an element of $S_4$ which conjugates the subgroup of $S_4$ obtained in part (a) of \hyperref[ex4.2.5]{Exercise 4.2.5} to the subgroup of $S_4$ obtained in part (c) of that same exercise (both of these subgroups are isomorphic to $D_8$).
 
 	\item Let $A$ be a nonempty set and let $X$ be any subset of $S_A$. Let
