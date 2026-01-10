@@ -199,7 +199,7 @@ Let $G$ be a group and let $A$ be a nonempty set.
 		\item Let $G_a$ be the stabilizer of $a \in \set{1, 2, \ldots, n}$. Note that $G_a$ is the set of all permutations that fix $a$ and permute the remaining $n - 1$ elements so that $G_a \cong S_{n - 1}$. Since $S_{n - 1}$ is transitive on the set $\set{1, 2, \ldots, n} - \{a\}$ for all $n - 1 \geq 1$, then $G_a$ is transitive on $A - \{a\}$ for all $n \geq 2$. Therefore, $S_n$ is doubly transitive on $\set{1, 2, \ldots, n}$ for all $n \geq 2$.
 		\item Let $G$ be double transitive and let $B$ be a block containing some $a \in A$. Take $b \in B$ such that $b \neq a$. Double transitivity of $G$ implies that there exists some $\sigma \in G_a$ such that $\sigma(b) = c$ for any $c \in A - \{a\}$. Since $\sigma \in G_a$, then $\sigma(B) = B$, hence $c \in B$. Therefore, $B = A$, and we conclude that the only blocks in $A$ are the trivial ones. Thus, $G$ is primitive on $A$. Since $D_8$ is not primitive in its action on the four vertices of a square (as shown in part (c) of the previous exercise), then it is not doubly transitive.
 	\end{solalph}
-	\item Assume $G$ acts transitively on the finite set $A$ and let $H$ be a normal subgroup of $G$. Let $\mathcal{O}_1, \mathcal{O}_2, \ldots, \mathcal{O}_r$ be the distinct orbits of $H$ on $A$.
+	\item \label{ex4.1.9} Assume $G$ acts transitively on the finite set $A$ and let $H$ be a normal subgroup of $G$. Let $\mathcal{O}_1, \mathcal{O}_2, \ldots, \mathcal{O}_r$ be the distinct orbits of $H$ on $A$.
 	\begin{problems}
 		\item Prove that $G$ permutes the sets $\mathcal{O}_1, \mathcal{O}_2, \ldots, \mathcal{O}_r$, in the sense that for each $g \in G$ and each $i \in \{1,\ldots,r\}$ there is a $j$ such that $g \mathcal{O}_i = \mathcal{O}_j$, where $g\mathcal{O} = \{g \cdot a \mid a \in \mathcal{O}\}$ (i.e., in the notation of Exercise 7 the sets $\mathcal{O}_1, \ldots, \mathcal{O}_r$ are blocks). Prove that $G$ is transitive on $\{\mathcal{O}_1, \ldots, \mathcal{O}_r\}$. Deduce that all orbits of $H$ on $A$ have the same cardinality.
 		\item Prove that if $a \in \mathcal{O}_1$ then $|\mathcal{O}_1| = |H : H \cap G_a|$ and prove that $r = |G : HG_a|$. [Draw the sublattice describing the Second Isomorphism Theorem for the subgroups $H$ and $G_a$ of $G$. Note that $H \cap G_a = H_a$.]
@@ -247,17 +247,17 @@ Let $G$ be a group and let $A$ be a nonempty set.
 \subsection{Groups Acting on Themselves by Left Mutliplication---Cayley's Theorem}
 
 \begin{problems}
-	\item Let $G$ be $\{1,a,b,c\}$, the Klein 4-group whose group table is written out in Section 2.5.
+	\item \label{ex4.2.1} Let $G$ be $\{1,a,b,c\}$, the Klein 4-group whose group table is written out in Section 2.5.
 	\begin{problems}
 		\item Label $1,a,b,c$ with the integers $1,2,4,3$, respectively, and prove that under the left regular representation of $G$ into $S_4$ the nonidentity elements are mapped as follows:
-		\[a \mapsto (1\,2)(3\,4), \quad b \mapsto (1\,4)(2\,3), \quad c \mapsto (1\,3)(2\,4).\]
+		\[a \mapsto (1\ 2)(3\ 4), \quad b \mapsto (1\ 4)(2\ 3), \quad c \mapsto (1\ 3)(2\ 4).\]
 		\item Relabel $1,a,b,c$ as $1,4,2,3$, respectively, and compute the image of each element of $G$ under the left regular representation of $G$ into $S_4$. Show that the image of $G$ in $S_4$ under this labelling is the same \emph{subgroup} as the image of $G$ in part (a) (even though the nonidentity elements individually map to different permutations under the two different labellings).
 	\end{problems}
 	\begin{solalph}
 		\item We have $a \cdot 1 = a$ so that $\sigma_a(1) = 2$. Similarly, $\sigma_a(2) = 1$. We also have $a \cdot b = c$ so that $\sigma_a(4) = 3$, and $\sigma_a(3) = 4$, and we have $a \mapsto (1\ 2)(3\ 4)$. The others are computed similarly. 
 		\item Again, we have $a \cdot 1 = a$ so that $\sigma_a(1) = 4$. Similarly, $\sigma_a(4) = 1$. We also have $a \cdot b = c$ so that $\sigma_a(2) = 3$, and $\sigma_a(3) = 2$, and we have $a \mapsto (1\ 4)(2\ 3)$. For $b$, we have $b \mapsto (1\ 2)(3\ 4)$, and for $c$, we have $c \mapsto (1\ 3)(2\ 4)$. The image of $G$ in $S_4$ under this labelling is $\{1, (1\ 4)(2\ 3), (1\ 2)(3\ 4), (1\ 3)(2\ 4)\}$, which is the same subgroup as in part (a).
 	\end{solalph}
-	\item List the elements of $S_3$ as $1, (1\,2), (2\,3), (1\,3), (1\,2\,3), (1\,3\,2)$ and label these with the integers $1,2,3,4,5,6$ respectively. Exhibit the image of each element of $S_3$ under the left regular representation of $S_3$ into $S_6$.
+	\item List the elements of $S_3$ as $1, (1\ 2), (2\ 3), (1\ 3), (1\ 2\ 3), (1\ 3\ 2)$ and label these with the integers $1,2,3,4,5,6$ respectively. Exhibit the image of each element of $S_3$ under the left regular representation of $S_3$ into $S_6$.
 	\begin{sol}
 		Consider $(1\ 2)$. Then we have the following computations:
 		\begin{align*}
@@ -280,7 +280,7 @@ Let $G$ be a group and let $A$ be a nonempty set.
 			(1\ 3\ 2) & \mapsto (1\ 6\ 5)(2\ 3\ 4) \qh
 		\end{align*}
 	\end{sol}
-	\item Let $r$ and $s$ be the usual generators for the dihedral group of order 8.
+	\item \label{ex4.2.3} Let $r$ and $s$ be the usual generators for the dihedral group of order 8.
 	\begin{problems}
 		\item List the elements of $D_8$ as $1, r, r^2, r^3, s, sr, sr^2, sr^3$ and label these with the integers $1,2,\dots,8$ respectively. Exhibit the image of each element of $D_8$ under the left regular representation of $D_8$ into $S_8$.
 		\item Relabel this same list of elements of $D_8$ with the integers $1,3,5,7,2,4,6,8$ respectively and recompute the image of each element of $D_8$ under the left regular representation with respect to this new labelling. Show that the two subgroups of $S_8$ obtained in parts (a) and (b) are different.
@@ -311,7 +311,7 @@ Let $G$ be a group and let $A$ be a nonempty set.
 		\end{align*}
 		Hence $Q_8 \cong \gen{\sigma_i, \sigma_j} \leq S_8$.
 	\end{sol}
-	\item Let $r$ and $s$ be the usual generators for the dihedral group of order 8 and let $H = \langle s \rangle$. List the left cosets of $H$ in $D_8$ as $1H, rH, r^2H$ and $r^3H$.
+	\item \label{ex4.2.5} Let $r$ and $s$ be the usual generators for the dihedral group of order 8 and let $H = \langle s \rangle$. List the left cosets of $H$ in $D_8$ as $1H, rH, r^2H$ and $r^3H$.
 	\begin{problems}
 		\item Label these cosets with the integers $1,2,3,4$, respectively. Exhibit the image of each element of $D_8$ under the representation $\pi_H$ of $D_8$ into $S_4$ obtained from the action of $D_8$ by left multiplication on the set of 4 left cosets of $H$ in $D_8$. Deduce that this representation is faithful (i.e., the elements of $S_4$ obtained form a subgroup isomorphic to $D_8$).
 		\item Repeat part (a) with the list of cosets relabelled by the integers $1,3,2,4$, respectively. Show that the permutations obtained from this labelling form a subgroup of $S_4$ that is different from the subgroup obtained in part (a).
@@ -392,4 +392,150 @@ Let $G$ be a group and let $A$ be a nonempty set.
     \begin{sol}
 		Let $S$ be the set of all prime factors of $n$. By the Well Ordering Principle, this has a minimal element $p$. By hypothesis, $G$ has a subgroup $P$ of order $n/p$ with index $p$. By Corollary 4.5, $P$ is normal in $G$ since $p$ is the smallest prime dividing $n$. Therefore, $G$ is not simple.
 	\end{sol}
+\end{problems}
+
+\newpage
+
+\subsection{Groups Acting on Themselves by Conjugation---The Class Equation}
+
+Let $G$ be a group.
+
+\begin{problems}
+	\item  Suppose $G$ has a left action on a set $A$, denoted by $g \cdot a$ for all $g \in G$ and $a \in A$. Denote the corresponding right action on $A$ by $a \cdot g$. Prove that the (equivalence) relations $\sim$ and $\sim'$ defined by
+	\[ a \sim b \quad \text{if and only if} \quad a = g \cdot b \quad \text{ for some } g \in G \]
+	and
+	\[ a \sim' b \quad \text{if and only if} \quad a = b \cdot g \quad \text{ for some } g \in G \]
+	are the same relation (i.e., $a \sim b$ if and only if $a \sim' b$).
+	\begin{sol}
+		If $a \sim b$, there exists $g \in G$ such that $a = g \cdot b$. Let $h = g\inv$. Then $b = h \cdot a$, so $a = b \cdot g$. Thus, $a \sim' b$. Conversely, if $a \sim' b$, there exists $g \in G$ such that $a = b \cdot g$. Let $h = g\inv$. Then $b = h \cdot a$, so $a = g \cdot b$. Thus, $a \sim b$. Therefore, the relations $\sim$ and $\sim'$ are the same.
+	\end{sol}
+	\item \label{ex4.3.2} Find all conjugacy classes and their sizes in the following groups:
+	\begin{problems}
+		\item $D_8$
+		\item $Q_8$
+		\item $A_4$
+	\end{problems}
+	\begin{solalph}
+		\item Discussed in the text, the conjugacy classes of $D_8$ are $\{1\}$, $\{r^2\}$, $\{r, r^3\}$, $\{s, sr^2\}$, and $\{sr, sr^3\}$ with sizes 1, 1, 2, 2, and 2 respectively.
+		\item Again discussed in the text, the conjugacy classes of $Q_8$ are $\{1\}$, $\{-1\}$, $\{i, -i\}$, $\{j, -j\}$, and $\{k, -k\}$ with sizes 1, 1, 2, 2, and 2 respectively.
+		\item We proceed similarly as the text. The possible cycle types are $1, (1\ 2\ 3)$, and $(1\ 2)(3\ 4)$.
+		
+		For $(1\ 2\ 3)$, we have $C_{A_4}((1\ 2\ 3)) = \gen{(1\ 2\ 3)}$ since the only permutation that fixes 1, 2, and 3 is the identity. Therefore, the conjugacy class of $(1\ 2\ 3)$ has size $12/3 = 4$. However, there are 8 3-cycles in $A_4$, so there exists a 3-cycle $\sigma \in A_4$ not in the conjugacy class of $(1\ 2\ 3)$. By similar reasoning, the conjugacy class of $\sigma$ also has size 4. There are then 2 conjugacy classes of size 4 corresponding to the 3-cycles.
+
+		For $(1\ 2)(3\ 4)$, it is trivial to calculate that the remaining double transpositions are in its conjugacy class. Therefore, the conjugacy class of $(1\ 2)(3\ 4)$ has size 3.
+	\end{solalph}
+	\item Find all conjugacy classes and their sizes in the following groups:
+	\begin{problems}
+		\item $Z_2 \times S_3$
+		\item $S_3 \times S_3$
+		\item $Z_3 \times A_4$
+	\end{problems}
+	\begin{sol}
+		We first prove a (somewhat) trivial idea: if $G$ and $H$ are groups, let $g \in G$ and $h \in H$. Let $\kk_g$ and $\kk_h$ be the conjugacy classes of $g$ in $G$ and $h$ in $H$ respectively. Then $\kk_{(g,h)} = \kk_g \times \kk_h$ is the conjugacy class of $(g,h)$ in $G \times H$. To see this, note that for any $(x,y) \in G \times H$, we have
+		\[(x,y)(g,h)(x,y)\inv = (xgx\inv, yhy\inv) \in \kk_g \times \kk_h.\]
+		Conversely, for any $(g', h') \in \kk_g \times \kk_h$, there exist $x \in G$ and $y \in H$ such that $g' = xgx\inv$ and $h' = yhy\inv$. Therefore, $(g', h') = (x,y)(g,h)(x,y)\inv$, so $(g', h')$ is in the conjugacy class of $(g,h)$ in $G \times H$. This result shows two important things: the conjugacy classes of $G \times H$ are precisely the products of the conjugacy classes of $G$ and $H$, and the size of the conjugacy class of $(g,h)$ in $G \times H$ is the product of the sizes of the conjugacy classes of $g$ in $G$ and $h$ in $H$. We now use this to answer the question.
+		\begin{problems}
+			\item Let $Z_2 = \gen x$. The conjugacy classes $\kk_1$ and $\kk_x$ of $Z_2$ have sizes 1 and 1 respectively. For $S_3$, the partitions of 3 are 3 1-cycles, 2-cycle and 1-cycle, and a 3-cycle with representatives $1$, $(1\ 2)$, and $(1\ 2\ 3)$ respectively. Since $C_{S_3}((1\ 2)) = \gen{(1\ 2)}$ and $C_{S_3}((1\ 2\ 3)) = \gen{(1\ 2\ 3)}$, then the conjugacy classes $\kk_1$, $\kk_{(1\ 2)}$, and $\kk_{(1\ 2\ 3)}$ of $S_3$ have sizes 1, 3, and 2 respectively. Therefore, $Z_2 \times S_3$ has 6 conjugacy classes of size 1, 3, 2, 1, 3, and 2 respectively.
+			\item By the above, $S_3$ has 3 conjugacy classes of sizes 1, 3, and 2 respectively. Then $S_3 \times S_3$ has 9 conjugacy classes with sizes $1, 3, 2, 3, 9, 6, 2, 6,$ and $4$ respectively.
+			\item $Z_3$ has 3 conjugacy classes of size 1 each. From \hyperref[ex4.3.2]{Exercise 4.3.2}, we know that $A_4$ has 4 conjugacy classes of sizes 1, 4, 4, and 3. Therefore, $Z_3 \times A_4$ has 12 conjugacy classes with sizes $1, 4, 4, 3, 1, 4, 4, 3, 1, 4, 4,$ and $3$ respectively. \qh
+		\end{problems}
+	\end{sol}
+	\item Prove that if $S \subseteq G$ and $g \in G$ then $gN_G(S)g^{-1} = N_G(gSg^{-1})$ and $gC_G(S)g^{-1} = C_G(gSg^{-1}).$
+	\begin{sol}
+		Suppose $x \in gN_G(S)g\inv$, and consider $xgSg\inv x\inv$. Since $x = gng\inv$ for some $n \in N_G(S)$, then we have $gng\inv gSg\inv gn\inv g\inv = g n S n\inv g\inv = g S g\inv$, so that $x \in N_G(gSg\inv)$. Conversely, suppose $x \in N_G(gSg\inv)$. Then $xgSg\inv x\inv = gSg\inv$. Letting $n = g\inv x g$, we have $n S n\inv = S$, so $n \in N_G(S)$ and hence $x \in gN_G(S)g\inv$. Therefore, $gN_G(S)g\inv = N_G(gSg\inv)$.
+
+		Suppose $x \in gC_G(S)g\inv$, and consider $xsx\inv$ for some $s \in gSg\inv$. Since $x = gng\inv$ for some $n \in C_G(S)$, then we have $gng\inv s g n\inv g\inv = g n (g\inv s g) n\inv g\inv = g (g\inv s g) g\inv = s$, so that $x \in C_G(gSg\inv)$. Conversely, suppose $x \in C_G(gSg\inv)$. Then $xsx\inv = s$ for all $s \in gSg\inv$. Letting $n = g\inv x g$, we have $n t n\inv = t$ for all $t \in S$, so $n \in C_G(S)$ and hence $x \in gC_G(S)g\inv$. Therefore, $gC_G(S)g\inv = C_G(gSg\inv)$.
+	\end{sol}
+	\item If the center of $G$ is of index $n$, prove that every conjugacy class has at most $n$ elements.
+
+	\item Assume $G$ is a non-abelian group of order $15$. Prove that $Z(G)=1$. Use the fact that $\langle g \rangle \le C_G(g)$ for all $g \in G$ to show that there is at most one possible class equation for $G$. [Use \hyperref[ex3.1.36]{Exercise 3.1.36}.]
+
+	\item For $n=3,4,6,$ and $7$ make lists of the partitions of $n$ and give representatives for the corresponding conjugacy classes of $S_n$.
+
+	\item Prove that $Z(S_n)=1$ for all $n \ge 3$.
+
+	\item Show that $|C_{S_n}((1\ 2)(3\ 4))| = 8 (n-4)!$ for all $n \ge 4$. Determine the elements in this centralizer explicitly.
+
+	\item Let $\sigma$ be the 5-cycle $(1\ 2\ 3\ 4\ 5)$ in $S_5$. In each of (a) to (c) find an explicit element $\tau \in S_5$ which accomplishes the specified conjugation:
+		\begin{problems}
+			\item $\tau \sigma \tau^{-1} = \sigma^2$
+			\item $\tau \sigma \tau^{-1} = \sigma^{-1}$
+			\item $\tau \sigma \tau^{-1} = \sigma^{-2}$
+		\end{problems}
+
+	\item In each of (a) -- (d) determine whether $\sigma_1$ and $\sigma_2$ are conjugate. If they are, given an explicit permutation $\tau$ such that $\tau \sigma_1 \tau^{-1} = \sigma_2$.
+		\begin{problems}
+			\item $\sigma_1 = (1\ 2)(3\ 4\ 5)$ and $\sigma_2 = (1\ 2\ 3)(4\ 5)$
+			\item $\sigma_1 = (1\ 5)(3\ 7\ 2)(10\ 6\ 8\ 11)$ and $\sigma_2 = (3\ 7\ 5\ 10)(4\ 9)(13\ 11\ 2)$
+			\item $\sigma_1 = (1\ 5)(3\ 7\ 2)(10\ 6\ 8\ 11)$ and $\sigma_2 = \sigma_1^3$
+			\item $\sigma_1 = (1\ 3)(2\ 4\ 6)$ and $\sigma_2 = (3\ 5)(2\ 4)(5\ 6)$
+		\end{problems}
+
+	\item Find a representative for each conjugacy class of elements of order $4$ in $S_8$ and $S_{12}$.
+
+	\item Find all finite groups which have exactly two conjugacy classes.
+
+	\item In \hyperref[ex4.2.1]{Exercise 4.2.1} two labellings of the elements $\set{1, a, b, c}$ of the Klein 4-group $V_4$ were chosen to give two versions of the left regular representation of $V_4$ into $S_4$. Let $\pi_1$ be the version of regular representation obtained in part (a) of that exercise, and let $\pi_2$ be the version obtained via the labelling in part (b). Let $\tau = (2\ 4)$. Show that $\tau \circ \pi_1(g) \circ \tau\inv = \pi_2(g)$ for each $g \in V_4$ (i.e., conjugation by $\tau$ sends the image of $\pi_1$ to the image of $\pi_2$ elementwise).
+
+	\item Find an element of $S_8$ which conjugates the subgroup of $S_8$ obtained in part (a) of \hyperref[ex4.2.3]{Exercise 4.2.3} to the subgroup of $S_8$ obtained in part (b) of that same exercise (both of these subgroups are isomorphic to $D_8$).
+
+	\item Find an element of $S_4$ which conjugates the subgroup of $S_4$ obtained in part (a) of \hyperref[ex4.2.5]{Exercise 4.2.5} to the subgroup of $S_4$ obtained in part (c) of that same exercise (both of these subgroups are isomorphic to $D_8$).
+
+	\item Let $A$ be a nonempty set and let $X$ be any subset of $S_A$. Let
+	\[F(X) = \set{a \in A \mid \sigma(a) = a \text{ for all } \sigma \in X} \qquad \text{---the \textit{fixed set} of $X$}\]
+	Let $M(X) = A - F(X)$ be the elements which are \textit{moved} by some element of $X$. Let $D = \set{\sigma \in S_A \mid |M(\sigma) < \infty}$. Prove that $D$ is a normal subgroup of $S_A$.
+
+	\item Let $A$ be a set, let $H$ be a subgroup of $S_A$, and let $F(H)$ be the fixed points of $H$ on $A$ as defined in the preceding exercise. Prove that if $\tau \in N_{S_A}(H)$, then $\tau$ stabilizes the set $F(H)$ and its complement $A - F(H)$.
+
+	\item Assume $H$ is a normal subgroup of $G$, $\kk$ is a conjugacy class of $G$ contained in $H$ and $x \in \kk$. Prove that $\kk$ is a union of $k$ conjugacy classes of equal size in $H$, where $k = |G : HC_G(x)|$. Deduce that a conjugacy class in $S_n$ which consists of even permutations is either a single conjugacy class under the action of $A_n$ or is a union of two classes of the same size in $A_n$. [Let $A = C_GG(x)$ and $B = H$ so $A \cap B = C_H(x)$. Draw the lattice diagram associated to the Second Isomorphism Theorem and interpret the appropriate indices. See also \hyperref[ex4.1.9]{Exercise 4.1.9}.]
+
+	\item Let $\sigma \in A_n$. Show that all elements in the conjugacy class of $\sigma$ in $S_n$ (i.e., all elements of the same cycle type as $\sigma$) are conjugate in $A_n$ if and only if $\sigma$ commutes with an odd permutation. [Use the preceding exercise.]
+
+	\item Let $\kk$ be a conjugacy class in $S_n$ and assume that $\kk \subseteq A_n$. Show $\sigma \in S_n$ does \textit{not} commute with any odd permutation if and only if the cycle type of $\sigma$ consists of distinct odd integers. Deduce that $\kk$ consists of two conjugacy clases in $A_n$ if and only if the cycle type of an element of $\kk$ consists of distinct odd integers. [Assume first that $\sigma \in \kk$ does not commute with any odd permutation. Observe that $\sigma$ commutes with each individual cycle in its cycle decomposition---use this to show that all its cycles must be of odd length. If two cycles have the same odd length, $k$, find a product of $k$ transpositions which interchanges them and commutes with $\sigma$. Conversely, if the cycle type of $\sigma$ consists of distinct integers, prove that $\sigma$ commutes \textit{only} with the group generated by the cycles in its cycle decomposition.]
+
+	\item Show that if $n$ is odd, then the set of all $n$-cycles consists of two conjugacy classes of equal size in $A_n$.
+
+	\item Recall (cf. \hyperref[ex2.4.16]{Exercise 2.4.16}) that a proper subgroup $M$ of $G$ is called \textit{maximal} if wheneber $M \leq H \leq G$, either $H = M$ or $H = G$. Prove that if $M$ is a maximal subgroup of $G$ then either $N_G(M) = M$ or $N_G(M) = G$. Deduce that if $M$ is a maximal subgroup of $G$ that is not normal in $G$, then the number of nonidentity elements of $G$ that are contained in conjugates of $M$ is at most $(|M| - 1)|G : M|$.
+
+	\item Assume $H$ is a proper subgroup of the finite group $G$. Prove
+	\[G \neq \bigcup_{g \in G} gHg\inv\]
+	i.e., $G$ is not the union of the conjugates of any proper subgroup. [Put $H$ in some maximal subgroup and use the preceding exercise.]
+
+	\item Let $G = \gl_2(\c)$ and let
+	\[H = \set*{\left.
+		\begin{pmatrix}
+			a & b \\
+			0 & c
+		\end{pmatrix}~\right| a, b, c \in \c, ac \neq 0
+	}.\]
+	Prove that every element of $G$ is conjugate to som element of the subgroup $H$ and deduce that $G$ is the union of conjugates of $H$. [Show that every element of $\gl_2(\c)$ has an eigenvector.]
+
+	\item Let $G$ be a transitive permutation group on the finite set $A$ with $\abs A > 1$. Show that there is some $\sigma \in G$ such that $\sigma(a) \neq a$ for all $a \in A$ (such an element $\sigma$ is called \textit{fixed point free}).
+
+	\item Let $g_1, g_2, \ldots, g_r$ be representatives of the conjugacy classes of the finite group $G$ and assume these elements pairwise commute. Prove that $G$ is abelian.
+
+	\item Let $p$ and $q$ be primes with $p < q$. Prove that a non-abelian group $G$ of order $pq$ has a nonnormal subgroup of index $q$ so that there exists an injective homomorphism into $S_q$. Deduce that $G$ is isomorphic to a subgroup of the normalizer in $S_q$ of the cyclic group generated by the $q$-cycle $(1\ 2\ \cdots\ q)$.
+
+	\item Let $p$ be a prime and let $G$ be a group of order $p^\alpha$. Prove that $G$ has a subgroup of order $p^\beta$, for every $\beta$ with $0 \leq \beta \leq \alpha$. [Use Theorem 8 and induction on $\alpha$.]
+
+	\item If $G$ is a group of odd order, prove for any nonidentity element $x \in G$ that $x$ and $x^{-1}$ are not conjugate in $G$.
+
+	\item Using the usual generators and relations for the dihedral group $D_{2n}$ (cf. Section 1.2) show that for $n = 2k$ an even integer the conjugacy classes in $D_{2n}$ are the following: $\set 1, \set{r^k}, \set{r^{\pm 1}}, \set{r^{\pm 2}}, \ldots, \set{r^{\pm(k - 1)}}, \set{sr^{2b} \mid b = 1, \ldots, k}$ and $\set{sr^{2b - 1} \mid b = 1, \ldots, k}$. Give the class equation for $D_{2n}$.
+
+	\item For $n = 2k + 1$ an odd integer, show that the conjugacy classes in $D_{2n}$ are $\set{1}, \set{r^{\pm 1}}, \set{r^{\pm 2}}, \ldots, \set{r^{\pm k}}$, and $\set{sr^b \mid b = 1, \ldots, n}$. Give the class equation for $D_{2n}$.
+
+	\item This exercise gives a formula for the size of each conjugacy class in $S_n$. Let $\sigma$ be a permutation in $S_n$ and let $m_1, m_2, \ldots, m_s$ be the \textit{distinct} integers which appear in the cycle type of $\sigma$ (including 1-cycles). For each $i \set{1, 2, \ldots, s}$ assume $\sigma$ has $k_i$ cycles of length $m_i$ (so that $\sum_1^s k_im_i = n$). Prove that the number of conjugates of $\sigma$ is
+	\[\frac{n!}{(k_1!m_1^{k_1})(k_2!m_2^{k_2}) \cdots (k_s!m_s^{k_s})}\]
+	[See \hyperref[ex1.3.6]{Exercise 1.3.6} and \hyperref[ex1.3.7]{Exercise 1.3.7} where this formula was given in some special cases.]
+
+	\item Prove that if $p$ is a prime and $P$ is a subgroup of $S_p$ of order $p$, then $|N_{S_p})(P)| = p(p - 1)$. [Argue that every conjugate of $P$ contains exactly $p - 1$ $p$-cycles and use the formula for the number of $p$-cycles to compute the index of $N_{S_p}(P)$ in $S_p$.]
+
+	\item Let $p$ be a prime. Find a formula for the number of conjugacy classes of elements of order $p$ in $S_n$ (using the greatest integer function).
+
+	\item Let $\pi : G \to S_G$ be the left regular representation afforded by the action of $G$ on itself by left multiplication. For each $g \in G$ denote the permutation $\pi(g)$ by $\sigma_g$ so that $\sigma_g(x) = gx$ for all $x \in G$. Let $\lambda : G \to S_G$ be the permutation representation afforded by the corresponding right action of $G$ on itself, and for each $h \in G$ denote the permutation $\lambda(h)$ by $\tau_h$. Thus $\tau_h(x) = xh\inv$ for all $x \in G$ ($\lambda$ is called the \textit{right regular representation} of $G$).
+	\begin{problems}
+		\item Prove that $\sigma_g$ and $\tau_h$ commute for all $g, h \in G$. (Thus the centralizer in $S_G$ of $\pi(G)$ contains the subgroup $\lambda(G)$ which is isomorphic to $G$).
+		\item Prove that $\sigma_g = \tau_g$ if and only if $g$ is an element of order 1 or 2 in the center of $G$.
+		\item Prove that $\sigma_g = \tau_h$ if and only if $g$ and $h$ lie in nthe center of $G$. Deduce that $\pi(G) \cap \lambda(G) = \pi(Z(G)) = \lambda(Z(G))$.
+	\end{problems}
 \end{problems}
