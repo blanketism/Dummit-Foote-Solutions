@@ -65,7 +65,7 @@ Let $G$ be a group and let $A$ be a nonempty set.
     \item For each of parts (a) and (b) repeat the preceding exercise but with $S_3$ acting on the specified set:
     \begin{problems}
         \item the set of 27 triples \(\{(i,j,k) \mid 1 \le i,j,k \le 3\}\)
-        \item the set \(\mathcal{P}(\{1,2,3\}) - \{\emptyset\}\) of all 7 nonempty subsets of \(\{1,2,3\}\)
+        \item the set \(\mathcal{P}(\{1,2,3\}) - \{\varnothing\}\) of all 7 nonempty subsets of \(\{1,2,3\}\)
     \end{problems}
     \begin{solalph}
 		\item We begin by classifying these set of triples. There are five types of triples:
@@ -126,7 +126,7 @@ Let $G$ be a group and let $A$ be a nonempty set.
 			\item $(1\ 3\ 2)$: $(1\ 27\ 14)(2\ 25\ 15)(3\ 26\ 13)(4\ 21\ 17)(5\ 19\ 18)(6\ 20\ 16)(7\ 24\ 11)(8\ 22\ 12)(9\ 23\ 10)$
 		\end{itemize}
 		For $\oo_1$, pick $a = (1\ 1\ 1)$. The elements that stabilize $a$ are the identity permutation and $(2\ 3)$, so the stabilizer of $a$ in $S_3$ is $\gen{(2\ 3)}$. We have $|G_a||\oo_1| = 2 \cdot 3 = 6 = |S_3|$. For the other orbits, note that $S_3$ acts transitively on each of them, so the stabilizer of any chosen element in these orbits is trivial. For example, for $\oo_2$, pick $a = (1\ 1\ 2)$. The only element that stabilizes $a$ is the identity permutation, so the stabilizer of $a$ in $S_3$ is 1. We have $|G_a||\oo_2| = 1 \cdot 6 = 6 = |S_3|$. The same logic applies to $\oo_3$, $\oo_4$, and $\oo_5$.
-		\item We begin by classifying the nonempty subsets of $\{1, 2, 3\}$. There are three types of subsets: 1-element subsets, 2-element subsets, and the 3-element subset. We now label the elements of $\mathcal{P}(\{1, 2, 3\}) - \{\emptyset\}$ as follows:
+		\item We begin by classifying the nonempty subsets of $\{1, 2, 3\}$. There are three types of subsets: 1-element subsets, 2-element subsets, and the 3-element subset. We now label the elements of $\mathcal{P}(\{1, 2, 3\}) - \{\varnothing\}$ as follows:
 		\begin{multicols}{4}
 			\begin{itemize}
 				\item $1 = \{1\}$
@@ -138,13 +138,13 @@ Let $G$ be a group and let $A$ be a nonempty set.
 				\item $7 = \{1, 2, 3\}$
 			\end{itemize}
 		\end{multicols}
-		The classification yields the following orbits of $S_3$ acting on $\mathcal{P}(\{1, 2, 3\}) - \{\emptyset\}$:
+		The classification yields the following orbits of $S_3$ acting on $\mathcal{P}(\{1, 2, 3\}) - \{\varnothing\}$:
 		\begin{itemize}
 			\item $\oo_1 = \{\{1\}, \{2\}, \{3\}\}$ with order 3.
 			\item $\oo_2 = \{\{1, 2\}, \{1, 3\}, \{2, 3\}\}$ with order 3.
 			\item $\oo_3 = \{\{1, 2, 3\}\}$ with order 1.
 		\end{itemize}
-		The cycle decompositions for all elements of $S_3$ acting on $\mathcal{P}(\{1, 2, 3\}) - \{\emptyset\}$ are as follows:
+		The cycle decompositions for all elements of $S_3$ acting on $\mathcal{P}(\{1, 2, 3\}) - \{\varnothing\}$ are as follows:
 		\begin{itemize}
 			\item $1 \in S_3$ is the same as $1 \in S_7$.
 			\item $(1\ 2)$: $(1\ 2)(5\ 6)$
@@ -169,7 +169,7 @@ Let $G$ be a group and let $A$ be a nonempty set.
 		\item Note that the stabilizer of \((x_1 + x_2)(x_3 + x_4)\) has order 8 (it is the same as that of \(x_1 x_2 + x_3 x_4\)). Thus, the size of the orbit is 3. The polynomials in the orbit of $S_4$ on $R$ containing \((x_1 + x_2)(x_3 + x_4)\) are
 		\[(x_1 + x_2)(x_3 + x_4), (x_1 + x_3)(x_2 + x_4), (x_1 + x_4)(x_2 + x_3)\qh\]
 	\end{solalph}
-	\item Let $G$ be a transitive permutation group on the finite set $A$. A \textit{block} is a nonempty subset $B$ of $A$ such that for all $\sigma \in G$ either $\sigma(B) = B$ or $\sigma(B) \cap B = \emptyset$ (here $\sigma(B) = \{\sigma(b) \mid b \in B\}$). 
+	\item Let $G$ be a transitive permutation group on the finite set $A$. A \textit{block} is a nonempty subset $B$ of $A$ such that for all $\sigma \in G$ either $\sigma(B) = B$ or $\sigma(B) \cap B = \varnothing$ (here $\sigma(B) = \{\sigma(b) \mid b \in B\}$). 
 	\begin{problems}
 		\item Prove that if $B$ is a block containing the element $a$ of $A$, then the set $G_B$ defined by $G_B = \{\sigma \in G \mid \sigma(B) = B\}$ is a subgroup of $G$ containing $G_a$.
 		\item Show that if $B$ is a block and $\sigma_1(B), \sigma_2(B), \ldots, \sigma_n(B)$ are all the distinct images of $B$ under the elements of $G$, then these form a partition of $A$.
@@ -179,16 +179,16 @@ Let $G$ be a group and let $A$ be a nonempty set.
 	\begin{solalph}
 		\item We first show that $G_B$ is a subgroup of $G$. Since $1(B) = B$, then $1 \in G_B$, hence it is nonempty. If $\sigma, \tau \in G$ such that $\sigma(B) = B$ and $\tau(B) = B$, we note that $\tau\inv(B) = B$ as well, hence $\sigma, \tau\inv \in G_B$. Then $(\sigma\tau\inv)(B) = \sigma(\tau\inv(B)) = \sigma(B) = B$, so $\sigma\tau\inv \in G_B$. Hence $G_B \leq G$.
 		
-		Now, let $a \in B$. If $\sigma \in G_a$, then $\sigma(a) = a$. Since $a \in B$, then $\sigma(a) \in \sigma(B)$. But $\sigma(a) = a \in B$, so $\sigma(B) \cap B \neq \emptyset$. By the definition of a block, this implies that $\sigma(B) = B$, hence $\sigma \in G_B$. Therefore, we have shown that $G_a \leq G_B$.
+		Now, let $a \in B$. If $\sigma \in G_a$, then $\sigma(a) = a$. Since $a \in B$, then $\sigma(a) \in \sigma(B)$. But $\sigma(a) = a \in B$, so $\sigma(B) \cap B \neq \varnothing$. By the definition of a block, this implies that $\sigma(B) = B$, hence $\sigma \in G_B$. Therefore, we have shown that $G_a \leq G_B$.
 		\item Let $B$ be a block and let $\sigma_1(B), \sigma_2(B), \ldots, \sigma_n(B)$ be all the distinct images of $B$ under the elements of $G$. By transitivity of $G$ on $A$, then for some $a \in A$, there exists $b \in B$ such that $\sigma(b) = a$. Then $a \in \sigma(B)$, and since $\sigma(B)$ is one of the sets $\sigma_1(B), \sigma_2(B), \ldots, \sigma_n(B)$, it follows that
 		\[\bigcup_{i=1}^n \sigma_i(B) = A.\]
-		Suppose there existed $i \neq j$ where $\sigma_i(B) \cap \sigma_j(B) \neq \emptyset$. Then there are $b, b' \in B$ such that $\sigma_i(b) = \sigma_j(b')$, or $(\sigma_j\inv\sigma_i)(b) = b'$, hence $\sigma_j\inv\sigma_i(B) \cap B \neq \emptyset$. Since $B$ is a block, then $\sigma_j\inv\sigma_i(B) = B$, hence $\sigma_i(B) = \sigma_j(B)$, contradicting the assumption that they are distinct. Therefore, the sets $\sigma_1(B), \sigma_2(B), \ldots, \sigma_n(B)$ are disjoint, and we conclude that they form a partition of $A$.
-		\item Let $B \subset A$, i.e., a proper subset of $A$. If $|B| = 1$, then it is trivial. Suppose $|B| > 1$, and without loss of generality, let $1 \in B$ and some $1 \neq i \in B$ as well. Then there exists some $\sigma \in S_4$ such that $\sigma(1) = 1$ and $\sigma(i) = j$ for $j \not\in B$. Then $\sigma(B) \cap B \neq \emptyset$ so that $\sigma(B) = B$, hence $j \in B$. We may repeat this to show that $B = A$, contradicting the assumption that $B$ is a proper subset of $A$. Therefore, the only blocks in $A$ are the trivial ones, and $S_4$ is primitive on $A$.
+		Suppose there existed $i \neq j$ where $\sigma_i(B) \cap \sigma_j(B) \neq \varnothing$. Then there are $b, b' \in B$ such that $\sigma_i(b) = \sigma_j(b')$, or $(\sigma_j\inv\sigma_i)(b) = b'$, hence $\sigma_j\inv\sigma_i(B) \cap B \neq \varnothing$. Since $B$ is a block, then $\sigma_j\inv\sigma_i(B) = B$, hence $\sigma_i(B) = \sigma_j(B)$, contradicting the assumption that they are distinct. Therefore, the sets $\sigma_1(B), \sigma_2(B), \ldots, \sigma_n(B)$ are disjoint, and we conclude that they form a partition of $A$.
+		\item Let $B \subset A$, i.e., a proper subset of $A$. If $|B| = 1$, then it is trivial. Suppose $|B| > 1$, and without loss of generality, let $1 \in B$ and some $1 \neq i \in B$ as well. Then there exists some $\sigma \in S_4$ such that $\sigma(1) = 1$ and $\sigma(i) = j$ for $j \not\in B$. Then $\sigma(B) \cap B \neq \varnothing$ so that $\sigma(B) = B$, hence $j \in B$. We may repeat this to show that $B = A$, contradicting the assumption that $B$ is a proper subset of $A$. Therefore, the only blocks in $A$ are the trivial ones, and $S_4$ is primitive on $A$.
 		
-		Now, consider $D_8$ acting on the four vertices of a square. Let $B$ be the set containing the two opposite vertices. Then for any $\sigma \in D_8$, either $\sigma(B) = B$ or $\sigma(B) \cap B = \emptyset$. Thus, $B$ is a nontrivial block, and $D_8$ is not primitive in its action on the four vertices of a square.
+		Now, consider $D_8$ acting on the four vertices of a square. Let $B$ be the set containing the two opposite vertices. Then for any $\sigma \in D_8$, either $\sigma(B) = B$ or $\sigma(B) \cap B = \varnothing$. Thus, $B$ is a nontrivial block, and $D_8$ is not primitive in its action on the four vertices of a square.
 		\item \rightimp If $G$ is primitive on $A$. Let $H \leq G$ such that $G_a \leq H \leq G$, and let $B$ be the orbit of $H$ so that $B = H \cdot a$. Since $1 \in H$ because $H \leq G$, then $1 \cdot a = a \in B$. By part (a), we know that $a \in B$ implies $G_a \leq G_B$ so that $B$ is now a block containing $a$. Primitivity of $G$ implies that $B$ is either $\set a$ or $A$ itself. If $B = \set a$, then for any $\sigma \in H$, we have $\sigma \cdot a \in B$, hence $\sigma \cdot a = a$, so $\sigma \in G_a$. Therefore, $H \leq G_a$, and since $G_a \leq H$, then $H = G_a$. If $B = A$, then for any $b \in A$, there exists some $\sigma \in H$ such that $\sigma \cdot a = b$. Thus, for any $b \in A$, there exists some $\sigma \in H$ such that $\sigma(b) = a$, hence $H$ is transitive on $A$. Therefore, $H = G$. We have shown that the only subgroups of $G$ containing $G_a$ are $G_a$ and $G$.
 		
-		\noindent\leftimp Suppose now that $G_a$ is maximal in $G$. Let $B$ be a block of $A$ that contains some $a \in A$. By part (a), we know that $G_a \leq G_B \leq G$. Maximality of $G_a$ implies that either $G_B = G_a$ or $G_B = G$. If $G_B = G_a$, then for any $\sigma \in G_B$, we have $\sigma \in G_a$, hence $\sigma(a) = a$. Since $a \in B$, then $\sigma(a) \in \sigma(B)$, so $\sigma(a) \in B$. Therefore, $\sigma(a) = a \in B$, and it follows that $\sigma(B) \cap B \neq \emptyset$. By the definition of a block, this implies that $\sigma(B) = B$. Thus, for any $\sigma \in G_B$, we have $\sigma(B) = B$, so $B = \set a$. If $G_B = G$, then for any $b \in A$, there exists some $\sigma \in G$ such that $\sigma(a) = b$. Since $\sigma \in G_B$, then $\sigma(B) = B$, hence $b \in B$. Therefore, $B = A$. We have shown that the only blocks in $A$ are the trivial ones, so $G$ is primitive on $A$.
+		\noindent\leftimp Suppose now that $G_a$ is maximal in $G$. Let $B$ be a block of $A$ that contains some $a \in A$. By part (a), we know that $G_a \leq G_B \leq G$. Maximality of $G_a$ implies that either $G_B = G_a$ or $G_B = G$. If $G_B = G_a$, then for any $\sigma \in G_B$, we have $\sigma \in G_a$, hence $\sigma(a) = a$. Since $a \in B$, then $\sigma(a) \in \sigma(B)$, so $\sigma(a) \in B$. Therefore, $\sigma(a) = a \in B$, and it follows that $\sigma(B) \cap B \neq \varnothing$. By the definition of a block, this implies that $\sigma(B) = B$. Thus, for any $\sigma \in G_B$, we have $\sigma(B) = B$, so $B = \set a$. If $G_B = G$, then for any $b \in A$, there exists some $\sigma \in G$ such that $\sigma(a) = b$. Since $\sigma \in G_B$, then $\sigma(B) = B$, hence $b \in B$. Therefore, $B = A$. We have shown that the only blocks in $A$ are the trivial ones, so $G$ is primitive on $A$.
 	\end{solalph}
 	\item A transitive permutation group $G$ on a set $A$ is called \textit{doubly transitive} if for any (hence all) $a \in A$ the subgroup $G_a$ is transitive on the set $A - \{a\}$.
 	\begin{problems}
@@ -236,7 +236,7 @@ Let $G$ be a group and let $A$ be a nonempty set.
 		
 		Now pick $y \in HxK$. Then there exist $h \in H$ and $k \in K$ such that $y = hxk$. Note that $hxK \in \oo$, so there exists some $i$ such that $hxK = x_iK$. Therefore, $y = hxk \in x_iK \subseteq \kk$, hence $HxK \subseteq \kk$. If $z \in \kk$, then there exists some $i$ and some $k' \in K$ such that $z = x_ik'$. Since $x_iK \in \oo$, then there exists some $h' \in H$ such that $x_iK = h'xK$, hence $x_i = h'xk''$ for some $k'' \in K$. Therefore, $z = x_ik' = h'xkk'' \in HxK$, so $\kk \subseteq HxK$. We have shown that $HxK = \kk$, i.e., $HxK$ is the union of the left cosets $x_1K, \ldots, x_nK$.
 		\item The proof is similar to that of part (a). 
-		\item Let $x, y \in G$. Suppose $HxK \cap HyK \neq \emptyset$. Then there exist $h_1, h_2 \in H$ and $k_1, k_2 \in K$ such that $h_1 x k_1 = h_2 y k_2$. Rearranging, we have $y = h_2\inv h_1 x k_1 k_2\inv$, hence $y \in HxK$. Therefore, $HyK \subseteq HxK$. By symmetry, we also have $HxK \subseteq HyK$, so $HxK = HyK$. We have shown that $HxK$ and $HyK$ are either the same set or are disjoint for all $x, y \in G$. Since every element of $G$ is in some double coset of the form $HxK$, then the set of $HK$ double cosets partitions $G$.
+		\item Let $x, y \in G$. Suppose $HxK \cap HyK \neq \varnothing$. Then there exist $h_1, h_2 \in H$ and $k_1, k_2 \in K$ such that $h_1 x k_1 = h_2 y k_2$. Rearranging, we have $y = h_2\inv h_1 x k_1 k_2\inv$, hence $y \in HxK$. Therefore, $HyK \subseteq HxK$. By symmetry, we also have $HxK \subseteq HyK$, so $HxK = HyK$. We have shown that $HxK$ and $HyK$ are either the same set or are disjoint for all $x, y \in G$. Since every element of $G$ is in some double coset of the form $HxK$, then the set of $HK$ double cosets partitions $G$.
 		\item Recall that the orbit of $xK$ under this action is $\oo = \set{hxK \mid h \in H}$. By Proposition 4.2, we have $|\oo| = |H : H_{xK}|$, where $H_{xK}$ is the stabilizer of $xK$ in $H$. Observe that $H_{xK} = \set{h \in H \mid hxK = xK}$. Then $hxK = xK$ implies that there exists some $k \in K$ such that $hxk = x$, or equivalently, $h = x k x\inv$. Therefore, $H_{xK} = H \cap x K x\inv$. By part (a), we have $|HxK| = |\oo| \cdot |K| = |H : H \cap x K x\inv| \cdot |K|$.
 		\item Similar to part (d).
 	\end{solalph}
@@ -583,30 +583,73 @@ Let $G$ be a group.
 	\end{sol}
 	\item Find an element of $S_8$ which conjugates the subgroup of $S_8$ obtained in part (a) of \hyperref[ex4.2.3]{Exercise 4.2.3} to the subgroup of $S_8$ obtained in part (b) of that same exercise (both of these subgroups are isomorphic to $D_8$).
 	\begin{sol}
-		
+		Recall by \hyperref[ex1.7.17]{Exercise 1.7.17} that left conjugation is an automorphism, so it suffices to find an element which sends the generators of the first subgroup to the generators of the second subgroup. The generators of the first subgroup are $(1\ 2\ 3\ 4)(5\ 8\ 7\ 6)$ and $(1\ 5)(2\ 6)(3\ 7)(4\ 8)$, while the generators of the second subgroup are $(1\ 3\ 5\ 7)(2\ 8\ 6\ 4)$ and $(1\ 2)(3\ 4)(5\ 6)(7\ 8)$ respectively. It suffices to check some element $\tau$ which sends the first generator to the second; the second generator will follow automatically. One such element is $\tau = (5\ 2\ 3)(6\ 4\ 7)$.
 	\end{sol}
-	\item Find an element of $S_4$ which conjugates the subgroup of $S_4$ obtained in part (a) of \hyperref[ex4.2.5]{Exercise 4.2.5} to the subgroup of $S_4$ obtained in part (c) of that same exercise (both of these subgroups are isomorphic to $D_8$).
-
+	\item Find an element of $S_4$ which conjugates the subgroup of $S_4$ obtained in part (a) of \hyperref[ex4.2.5]{Exercise 4.2.5} to the subgroup of $S_4$ obtained in part (b) of that same exercise (both of these subgroups are isomorphic to $D_8$).
+	\begin{sol}
+		We proceed similarly to the preceding exercise. The generators of the first subgroup are $(1\ 2\ 3\ 4)$ and $(2\ 4)$, while the generators of the second subgrgoup are $(1\ 3\ 2\ 4)$ and $(3\ 4)$. We obtain $\tau = (2\ 3)$.
+	\end{sol}
 	\item Let $A$ be a nonempty set and let $X$ be any subset of $S_A$. Let
 	\[F(X) = \set{a \in A \mid \sigma(a) = a \text{ for all } \sigma \in X} \qquad \text{---the \textit{fixed set} of $X$}\]
-	Let $M(X) = A - F(X)$ be the elements which are \textit{moved} by some element of $X$. Let $D = \set{\sigma \in S_A \mid |M(\sigma) < \infty}$. Prove that $D$ is a normal subgroup of $S_A$.
+	Let $M(X) = A - F(X)$ be the elements which are \textit{moved} by some element of $X$. Let $D = \set{\sigma \in S_A \mid |M(\sigma)| < \infty}$. Prove that $D$ is a normal subgroup of $S_A$.
+	\begin{sol}
+		Note that $1 \in D$, since $M(1) = \varnothing$ as it fixes all elements of $A$. Let $\sigma, \tau \in D$. Then $|M(\sigma)| < \infty$ and $|M(\tau)| < \infty$. Suppose $a \in F(\sigma) \cap F(\tau)$. Clearly, $a \in F(\sigma\tau)$. By contrapositive, then $a \in M(\sigma\tau)$ implies $a \in M(\sigma) \cup M(\tau)$, which are both finite, hence $M(\sigma\tau)$ is finite. Therefore, $\sigma\tau \in D$.
+		
+		Now consider $\sigma \in D$. If $a \in A$ is fixed by $\sigma$, then it is fixed by $\sigma\inv$. Therefore, any element moved by $\sigma\inv$ must be moved by $\sigma$, and vice-versa. Hence, $M(\sigma\inv) = M(\sigma)$, which is finite. Therefore, $\sigma\inv \in D$.
 
+		Finally, consider $\sigma \in D$ and $\tau \in S_A$. Suppose $a \in F(\tau\sigma\tau\inv)$ so that $\tau\sigma\tau\inv(a) = a$. Then $\sigma(\tau\inv(a)) = \tau\inv(a)$, hence $\tau\inv(a) \in F(\sigma)$. By contrapositive, if $a \in M(\tau\sigma\tau\inv)$, then $\tau\inv(a) \in M(\sigma)$. Since $M(\sigma)$ is finite, then $M(\tau\sigma\tau\inv)$ is finite. Therefore, $\tau\sigma\tau\inv \in D$.
+	\end{sol}
 	\item Let $A$ be a set, let $H$ be a subgroup of $S_A$, and let $F(H)$ be the fixed points of $H$ on $A$ as defined in the preceding exercise. Prove that if $\tau \in N_{S_A}(H)$, then $\tau$ stabilizes the set $F(H)$ and its complement $A - F(H)$.
+	\begin{sol}
+		Suppose $\sigma \in H$. Since $\tau \in N_{S_A}(H)$, we have $\tau\inv \in N_{S_A}(H)$, hence $\tau\inv\sigma\tau \in H$. Suppose $a \in F(H)$. Then $\tau\inv\sigma\tau(a) = a$, so that $\sigma\tau(a) = \tau(a)$. Therefore, $\tau(a) \in F(H)$, and $\tau(F(H)) \subseteq F(H)$. Bijectivity of $\tau$ also implies that $\tau\inv(F(H)) \subseteq F(H)$, which shows that $F(H) \subseteq \tau(F(H))$, hence $\tau(F(H)) = F(H)$. Therefore, $\tau$ stabilizes $F(H)$. Moreover, since $\tau$ is a bijection, it also stabilizes the complement $A - F(H)$.
+	\end{sol}
+	\item Assume $H$ is a normal subgroup of $G$, $\kk$ is a conjugacy class of $G$ contained in $H$ and $x \in \kk$. Prove that $\kk$ is a union of $k$ conjugacy classes of equal size in $H$, where $k = |G : HC_G(x)|$. Deduce that a conjugacy class in $S_n$ which consists of even permutations is either a single conjugacy class under the action of $A_n$ or is a union of two classes of the same size in $A_n$. [Let $A = C_G(x)$ and $B = H$ so $A \cap B = C_H(x)$. Draw the lattice diagram associated to the Second Isomorphism Theorem and interpret the appropriate indices. See also \hyperref[ex4.1.9]{Exercise 4.1.9}.]
+	\begin{sol}
+		Let $G$ act on $\kk$ by conjugation. Since $\kk$ is a conjugacy class of $G$, this action is transitive. Because $H \nsub G$ and $\kk \subseteq H$, then $H$ also acts on $\kk$ by conjugation. Let $\oo$ be one such orbit of this action, and suppose $y \in \oo$. By Proposition 4.6, we have $|\oo| = |H : C_H(y)|$. By normality of $H$ in $G$, we have $C_H(y) = C_G(y) \cap H$. Using the Second Isomorphism Theorem, we have
+		\[HC_G(y)/C_G(y) \cong H/C_H(y)\]
+		so that $|H : C_H(y)| = |HC_G(y) : C_G(y)|$. Therefore, $|\oo| = |HC_G(y) : C_G(y)|$. Using \hyperref[ex4.1.9]{Exercise 4.1.9}, we know that each orbit of $H$ on $\kk$ has the same size, so every orbit has size $|HC_G(y) : C_G(y)|$. Suppose there are $k$ orbits. Then
+		\[|\kk| = k|HC_G(y) : C_G(y)|.\]
+		By Proposition 4.6, we also have $|\kk| = |G : C_G(y)|$. Therefore,
+		\[|G : C_G(y)| = k|HC_G(y) : C_G(y)|.\]
+		Dividing both sides by $|HC_G(y) : C_G(y)|$, we obtain $k = |G : HC_G(y)|$. Hence, $\kk$ is a union of $k$ conjugacy classes of equal size in $H$.
 
-	\item Assume $H$ is a normal subgroup of $G$, $\kk$ is a conjugacy class of $G$ contained in $H$ and $x \in \kk$. Prove that $\kk$ is a union of $k$ conjugacy classes of equal size in $H$, where $k = |G : HC_G(x)|$. Deduce that a conjugacy class in $S_n$ which consists of even permutations is either a single conjugacy class under the action of $A_n$ or is a union of two classes of the same size in $A_n$. [Let $A = C_GG(x)$ and $B = H$ so $A \cap B = C_H(x)$. Draw the lattice diagram associated to the Second Isomorphism Theorem and interpret the appropriate indices. See also \hyperref[ex4.1.9]{Exercise 4.1.9}.]
-
+		Now suppose $\kk \subseteq A_n$ is a conjugacy class of $S_n$ consisting of even permutations. Let $x \in \kk$. Applying the preceding result with $H = A_n$, we have that $\kk$ is a union of $k$ conjugacy classes of equal size in $A_n$, where $k = |S_n : A_nC_{S_n}(x)|$. Since $|S_n : A_n| = 2$, then $k$ is either 1 or 2. Therefore, $\kk$ is either a single conjugacy class under the action of $A_n$ or is a union of two classes of the same size in $A_n$.
+	\end{sol}
 	\item Let $\sigma \in A_n$. Show that all elements in the conjugacy class of $\sigma$ in $S_n$ (i.e., all elements of the same cycle type as $\sigma$) are conjugate in $A_n$ if and only if $\sigma$ commutes with an odd permutation. [Use the preceding exercise.]
+	\begin{sol}
+		\rightimp Recall by the previous exercise that the conjugacy class of $\sigma$ in $S_n$ is either a single conjugacy class in $A_n$ or a union of two conjugacy classes of equal size in $A_n$. Suppose all elements in the conjugacy class of $\sigma$ in $S_n$ are conjugate in $A_n$. Then the conjugacy class of $\sigma$ in $S_n$ is a single conjugacy class in $A_n$, so that $k = |S_n : A_nC_{S_n}(\sigma)| = 1$. Therefore, $S_n = A_nC_{S_n}(\sigma)$, so that there exists some odd permutation $\tau \in S_n$ such that $\tau \in C_{S_n}(\sigma)$. Hence, $\sigma$ commutes with an odd permutation.
 
+		\leftimp Suppose $\sigma$ commutes with an odd permutation $\tau \in S_n$. Then $\tau \in C_{S_n}(\sigma)$, so that $A_nC_{S_n}(\sigma)$ contains odd permutations. Therefore, $|S_n : A_nC_{S_n}(\sigma)| = 1$, so that the conjugacy class of $\sigma$ in $S_n$ is a single conjugacy class in $A_n$. Hence, all elements in the conjugacy class of $\sigma$ in $S_n$ are conjugate in $A_n$.
+	\end{sol}
 	\item Let $\kk$ be a conjugacy class in $S_n$ and assume that $\kk \subseteq A_n$. Show $\sigma \in S_n$ does \textit{not} commute with any odd permutation if and only if the cycle type of $\sigma$ consists of distinct odd integers. Deduce that $\kk$ consists of two conjugacy clases in $A_n$ if and only if the cycle type of an element of $\kk$ consists of distinct odd integers. [Assume first that $\sigma \in \kk$ does not commute with any odd permutation. Observe that $\sigma$ commutes with each individual cycle in its cycle decomposition---use this to show that all its cycles must be of odd length. If two cycles have the same odd length, $k$, find a product of $k$ transpositions which interchanges them and commutes with $\sigma$. Conversely, if the cycle type of $\sigma$ consists of distinct integers, prove that $\sigma$ commutes \textit{only} with the group generated by the cycles in its cycle decomposition.]
+	\begin{sol}
+		\rightimp Suppose $\sigma \in S_n$ does not commute with any odd permutation. Let the cycle decomposition of $\sigma$ be $\sigma = \tau_1\tau_2\cdots\tau_k$, where each $\tau_i$ is a disjoint cycle. Since $\sigma$ commutes with each $\tau_i$, then each $\tau_i$ must be of odd length; otherwise, $\tau_i$ would be an odd permutation commuting with $\sigma$. Now suppose two cycles $\tau_i$ and $\tau_j$ have the same odd length $m$. Then the product of $m$ transpositions which interchanges the elements of $\tau_i$ and $\tau_j$ is an odd permutation which commutes with $\sigma$, contradicting our assumption. Therefore, all cycles in the cycle decomposition of $\sigma$ must have distinct odd lengths.
 
+		\leftimp Suppose the cycle type of $\sigma$ consists of distinct odd integers. Let the cycle decomposition of $\sigma$ be $\sigma = \tau_1\tau_2\cdots\tau_k$, where each $\tau_i$ is a disjoint cycle of odd length. Any permutation that commutes with $\sigma$ must permute the cycles $\tau_i$ among themselves. However, since the lengths of the cycles are distinct, the only way to permute them while preserving their lengths is to leave them unchanged. Therefore, any permutation that commutes with $\sigma$ must be a product of powers of the individual cycles $\tau_i$. Since each $\tau_i$ has odd length, any such product will be an even permutation. Hence, $\sigma$ does not commute with any odd permutation.
+	\end{sol}
 	\item Show that if $n$ is odd, then the set of all $n$-cycles consists of two conjugacy classes of equal size in $A_n$.
+	\begin{sol}
+		Let $\sigma \in S_n$ be an $n$-cycle. Since $n$ is odd, the cycle type of $\sigma$ consists of the single odd integer $n$, which is distinct. By the previous exercise, $\sigma$ does not commute with any odd permutation. Therefore, by the exercise before that, the conjugacy class of $\sigma$ in $S_n$ consists of two conjugacy classes of equal size in $A_n$. Since this holds for any $n$-cycle $\sigma$, the set of all $n$-cycles consists of two conjugacy classes of equal size in $A_n$.
+	\end{sol}
+	\item Recall (cf. \hyperref[ex2.4.16]{Exercise 2.4.16}) that a proper subgroup $M$ of $G$ is called \textit{maximal} if whenever $M \leq H \leq G$, either $H = M$ or $H = G$. Prove that if $M$ is a maximal subgroup of $G$ then either $N_G(M) = M$ or $N_G(M) = G$. Deduce that if $M$ is a maximal subgroup of $G$ that is not normal in $G$, then the number of nonidentity elements of $G$ that are contained in conjugates of $M$ is at most $(|M| - 1)|G : M|$.
+	\begin{sol}
+		Suppose $M$ is a maximal subgroup of $G$. By definition, $N_G(M)$ is a subgroup of $G$ containing $M$. Therefore, by maximality of $M$, either $N_G(M) = M$ or $N_G(M) = G$.
 
-	\item Recall (cf. \hyperref[ex2.4.16]{Exercise 2.4.16}) that a proper subgroup $M$ of $G$ is called \textit{maximal} if wheneber $M \leq H \leq G$, either $H = M$ or $H = G$. Prove that if $M$ is a maximal subgroup of $G$ then either $N_G(M) = M$ or $N_G(M) = G$. Deduce that if $M$ is a maximal subgroup of $G$ that is not normal in $G$, then the number of nonidentity elements of $G$ that are contained in conjugates of $M$ is at most $(|M| - 1)|G : M|$.
-
-	\item Assume $H$ is a proper subgroup of the finite group $G$. Prove
+		Now suppose $M$ is a maximal subgroup of $G$ that is not normal in $G$. Then by the previous result, we have $N_G(M) = M$. By Proposition 4.6, the size of the conjugacy class of $M$ in $G$ is $|G : N_G(M)| = |G : M|$. Each conjugate of $M$ contains $|M| - 1$ nonidentity elements. Therefore, the total number of nonidentity elements of $G$ contained in conjugates of $M$ is at most $(|M| - 1)|G : M|$.
+	\end{sol}
+	\item \label{ex4.3.24} Assume $H$ is a proper subgroup of the finite group $G$. Prove
 	\[G \neq \bigcup_{g \in G} gHg\inv\]
 	i.e., $G$ is not the union of the conjugates of any proper subgroup. [Put $H$ in some maximal subgroup and use the preceding exercise.]
+	\begin{sol}
+		Suppose $H$ is a proper subgroup of the finite group $G$. Then there exists a maximal subgroup $M$ of $G$ such that $H \leq M < G$. By the previous exercise, either $N_G(M) = M$ or $N_G(M) = G$, so that we have two cases: either $M \nsub G$ or $M$ is not normal in $G$.
 
+		If $M$ is normal in $G$, then all conjugates of $M$ are equal to $M$. Therefore, the union of the conjugates of $H$ is contained in $M$, which is a proper subset of $G$. Hence, 
+		\[G \neq \bigcup_{g \in G} gHg\inv.\]
+		
+		
+		Now suppose $M$ is not normal in $G$. Then by the previous exercise, the number of nonidentity elements of $G$ contained in conjugates of $M$ is at most $(|M| - 1)|G : M|$. Moreover, $H \leq M$ implies that any conjugate of $H$ is contained in a conjugate of $M$. Therefore, the number of nonidentity elements of $G$ contained in conjugates of $H$ is also at most $(|M| - 1)|G : M|$. Since $M$ is a proper subgroup of $G$, then $|G : M| \geq 2$, so that $(|M| - 1)|G : M| < |G| - 1$. Therefore, there exists at least one nonidentity element of $G$ that is not contained in any conjugate of $H$, hence
+		\[G \neq \bigcup_{g \in G} gHg\inv. \qh\]
+	\end{sol}
 	\item Let $G = \gl_2(\c)$ and let
 	\[H = \set*{\left.
 		\begin{pmatrix}
@@ -614,34 +657,104 @@ Let $G$ be a group.
 			0 & c
 		\end{pmatrix}~\right| a, b, c \in \c, ac \neq 0
 	}.\]
-	Prove that every element of $G$ is conjugate to som element of the subgroup $H$ and deduce that $G$ is the union of conjugates of $H$. [Show that every element of $\gl_2(\c)$ has an eigenvector.]
-
+	Prove that every element of $G$ is conjugate to some element of the subgroup $H$ and deduce that $G$ is the union of conjugates of $H$. [Show that every element of $\gl_2(\c)$ has an eigenvector.]
+	\begin{sol}
+		Suppose $X \in G$, where $X$ is the matrix
+		\[
+		\begin{pmatrix}
+			a & b \\
+			c & d
+		\end{pmatrix}\]
+		and consider the characteristic polynomial $\chi_X(t) = \det(X - tI) = t^2 - (a + d)t + (ad - bc)$. Since $\c$ is closed under complex multiplication, $\chi_X(t)$ has at least one root $\lambda \in \c$. Therefore, there exists a nonzero vector $\b v \in \c^2$ such that $X\b v = \lambda \b v$, so that $\b v$ is an eigenvector of $X$ corresponding to the eigenvalue $\lambda$. We may extend $\b v$ to a basis $\set{\b v, \b w}$ of $\c^2$. Let $P$ be the matrix whose columns are $\b v$ and $\b w$. Then $P$ is invertible, and we have
+		\[P\inv XP = \begin{pmatrix}
+			\lambda & \alpha \\
+			0 & \beta
+		\end{pmatrix} \in H.\]
+		for some $\alpha, \beta \in \c$ such that $X\b w = \alpha \b v + \beta \b w$. Therefore, every element of $G$ is conjugate to some element of the subgroup $H$, hence every element of $G$ is contained in some conjugate of $H$. Thus,
+		\[G = \bigcup_{g \in G} gHg\inv. \qh\]
+	\end{sol}
 	\item Let $G$ be a transitive permutation group on the finite set $A$ with $\abs A > 1$. Show that there is some $\sigma \in G$ such that $\sigma(a) \neq a$ for all $a \in A$ (such an element $\sigma$ is called \textit{fixed point free}).
-
+	\begin{sol}
+		For each $a \in A$, consider $G_a$. By transitivity of $G$ on $A$, we have $|G : G_a| = |A| > 1$, so that $G_a$ is a proper subgroup of $G$. By \hyperref[ex4.3.24]{Exercise 4.3.24}, we have
+		\[G \neq \bigcup_{g \in G} gG_ag\inv.\]
+		Therefore, there exists some $\sigma \in G$ such that $\sigma \notin gG_ag\inv$ for all $g \in G$. Moreover, if $\sigma(a) = a$ for some $a \in A$, then $\sigma \in G_a$, hence $\sigma \in gG_ag\inv$ for $g = 1$, a contradiction. Therefore, $\sigma(a) \neq a$ for all $a \in A$.
+	\end{sol}
 	\item Let $g_1, g_2, \ldots, g_r$ be representatives of the conjugacy classes of the finite group $G$ and assume these elements pairwise commute. Prove that $G$ is abelian.
-
+	\begin{sol}
+		Pick some $g_i$ and consider its conjugacy class $\kk_i$. Since $g_i$ commutes with all $g_j$ for $1 \leq j \leq r$, then for any $x \in G$, we have $xg_ix\inv = g_i$ so that $x \in C_G(g_i)$. Therefore, $C_G(g_i) = G$, so that $\kk_i = \set{g_i}$. Since this holds for all $1 \leq i \leq r$, then every conjugacy class of $G$ is a singleton set. Hence, for any $x, y \in G$, we have $xyx\inv = y$, so that $xy = yx$. Therefore, $G$ is abelian.
+	\end{sol}
 	\item Let $p$ and $q$ be primes with $p < q$. Prove that a non-abelian group $G$ of order $pq$ has a nonnormal subgroup of index $q$ so that there exists an injective homomorphism into $S_q$. Deduce that $G$ is isomorphic to a subgroup of the normalizer in $S_q$ of the cyclic group generated by the $q$-cycle $(1\ 2\ \cdots\ q)$.
+	\begin{sol}
+		By Cauchy's Theorem, there exists $g \in G$ such that $\abs g = q$, hence $\gen g$ has order $q$ and is of index $p$. Moreover, $\gen g$ is not normal in $G$, for otherwise $G/\gen g$ would be cyclic and isomorphic to $Z_p$, contradicting that $G$ is non-abelian. Similarly, $G$ also contains a subgroup $P$ of order $p$ and index $q$ and is similarly not normal in $G$.
 
+		Let $G$ act on the left cosets of $P$ in $G$ by left multiplication. Then there is the associated permutation representation $\pi : G \to S_q$. In particular, $\pi$ is injective: If $\pi(x) = 1$ for some $x \in G$, then $xgP = gP$ for every $g \in G$, or $g\inv xg \in P$ for every $g \in G$. But $\ker\pi \nsub G$ and is contained in $P$ so that $\ker\pi$ has order 1 or $p$. If $|\ker\pi| = p$, then $\ker\pi = P$ is normal in $G$, a contradiction. Therefore, $\ker\pi = 1$ and $\pi$ is injective.
+
+		Recall that $\abs g = q$ so that $\abs{\pi(g)} = q$, so $\pi(g)$ acts transitively on $G/P$ since its powers generate $q$ distinct cosets. Now pick $h \in G$. From \hyperref[ex1.1.22]{Exercise 1.1.22}, it follows that $|hgh\inv| = |g| = q$ so that $hgh\inv = g^k$ for some integer $k$ with $1 \leq k < q$. Therefore,
+		\[\pi(h)\pi(g)\pi(h)\inv = \pi(hgh\inv) = \pi(g^k) = (\pi(g))^k \in \gen{\pi(g)}.\]
+		Hence, $\pi(h) \in N_{S_q}(\gen{\pi(g)})$. Since $h$ was arbitrary, we have $G \cong \pi(G) \leq N_{S_q}(\gen{\pi(g)})$. Therefore, $G$ is isomorphic to a subgroup of the normalizer in $S_q$ of the cyclic group generated by the $q$-cycle $(1\ 2\ \cdots\ q)$.
+	\end{sol}
 	\item Let $p$ be a prime and let $G$ be a group of order $p^\alpha$. Prove that $G$ has a subgroup of order $p^\beta$, for every $\beta$ with $0 \leq \beta \leq \alpha$. [Use Theorem 8 and induction on $\alpha$.]
-
+	\begin{sol}
+		We proceed by induction on $\alpha$. If $\alpha = 0$, then $G$ is the trivial group, which has a subgroup of order $p^0 = 1$. Now suppose the result holds for all groups of order $p^k$ for some $k \geq 0$. Let $G$ be a group of order $p^{k + 1}$. By Theorem 8, $Z(G)$ is nontrivial, so there exists some $x \in Z(G)$ such that $\abs x = p$. Then $\gen x$ is a normal subgroup of $G$ of order $p$. Consider the quotient group $G/\gen x$, which has order $p^k$. By the induction hypothesis, for every $\beta$ with $0 \leq \beta \leq k$, there exists a subgroup $H/\gen x$ of $G/\gen x$ such that $\abs{H/\gen x} = p^\beta$. By the Lattice Isomorphism Theorem, there exists a subgroup $H$ of $G$ such that $\gen x \leq H$ and $\abs{H} = p^{\beta + 1}$. Therefore, for every $\beta$ with $1 \leq \beta \leq k + 1$, there exists a subgroup of $G$ of order $p^\beta$. Since the trivial subgroup has order $p^0 = 1$, the result holds for all $\beta$ with $0 \leq \beta \leq k + 1$. By induction, the result holds for all $\alpha \geq 0$.
+	\end{sol}
 	\item If $G$ is a group of odd order, prove for any nonidentity element $x \in G$ that $x$ and $x^{-1}$ are not conjugate in $G$.
-
+	\begin{sol}
+		Suppose for contradiction that $x$ and $x\inv$ are conjugate in $G$. Then there exists $g \in G$ such that $gxg\inv = x\inv$. If we conjugate both sides by $g$ again, we obtain
+		\[g^2xg^{-2} = gx\inv g\inv = (gxg\inv)\inv = (x\inv)\inv = x\]
+		so that $g^2x = xg^2$. Then $g^2 \in C_G(x)$. Consider the quotient group $G/C_G(x)$. Since $g^2 \in C_G(x)$, we have $(gC_G(x))^2 = C_G(x)$, so that the order of $gC_G(x)$ in $G/C_G(x)$ is 1 or 2. However, since $G$ has odd order, then $G/C_G(x)$ also has odd order, so the order of $gC_G(x)$ cannot be 2. Therefore, the order of $gC_G(x)$ is 1, so that $g \in C_G(x)$. But this implies that $gxg\inv = x$, contradicting our assumption. Therefore, $x$ and $x\inv$ are not conjugate in $G$.
+	\end{sol}
 	\item Using the usual generators and relations for the dihedral group $D_{2n}$ (cf. Section 1.2) show that for $n = 2k$ an even integer the conjugacy classes in $D_{2n}$ are the following: $\set 1, \set{r^k}, \set{r^{\pm 1}}, \set{r^{\pm 2}}, \ldots, \set{r^{\pm(k - 1)}}, \set{sr^{2b} \mid b = 1, \ldots, k}$ and $\set{sr^{2b - 1} \mid b = 1, \ldots, k}$. Give the class equation for $D_{2n}$.
-
+	\begin{sol}
+		We immediately have two conjugacy classes, $\set 1$ and $\set{r^n}$, since $r^n \in Z(D_{2n})$ when $n$ is even. Moreover, recall that the elements of $D_{2n}$ are of the form $r^m$ or $sr^m$ for some integer $m$. Consider the conjugacy class of $r^k$ for some $1 \leq k < n$ except $k = n/2$. For any $j$, we have
+		\[r^jr^kr^{-j} = r^k, \longand sr^jr^kr^{-j}s = r^{-k}\]
+		so that the conjugacy class of $r^k$ is $\set{r^{\pm k}}$. Now consider the conjugacy class of $sr^m$ for some integer $m$. For any $j$, we have
+		\[r^jsr^mr^{-j} = sr^{m - 2j}, \longand sr^jsr^mr^{-j}s = r^{-(m - 2j)}\]
+		so that the conjugacy class of $sr^m$ is $\set{sr^{m - 2j} \mid j \in \z}$. If $m$ is even, then this conjugacy class is $\set{sr^{2b} \mid b = 1, \ldots, k}$; if $m$ is odd, then this conjugacy class is $\set{sr^{2b - 1} \mid b = 1, \ldots, k}$. Therefore, the conjugacy classes in $D_{2n}$ when $n$ is even are $\set 1, \set{r^k}, \set{r^{\pm 1}}, \set{r^{\pm 2}}, \ldots, \set{r^{\pm(k - 1)}}, \set{sr^{2b} \mid b = 1, \ldots, k}$ and $\set{sr^{2b - 1} \mid b = 1, \ldots, k}$. Lastly, the class equation for $D_{2n}$ is
+		\[|D_{2n}| = 1 + 1 + 2(k - 1) + k + k.\qedhere\]
+	\end{sol}
 	\item For $n = 2k + 1$ an odd integer, show that the conjugacy classes in $D_{2n}$ are $\set{1}, \set{r^{\pm 1}}, \set{r^{\pm 2}}, \ldots, \set{r^{\pm k}}$, and $\set{sr^b \mid b = 1, \ldots, n}$. Give the class equation for $D_{2n}$.
-
-	\item This exercise gives a formula for the size of each conjugacy class in $S_n$. Let $\sigma$ be a permutation in $S_n$ and let $m_1, m_2, \ldots, m_s$ be the \textit{distinct} integers which appear in the cycle type of $\sigma$ (including 1-cycles). For each $i \set{1, 2, \ldots, s}$ assume $\sigma$ has $k_i$ cycles of length $m_i$ (so that $\sum_1^s k_im_i = n$). Prove that the number of conjugates of $\sigma$ is
+	\begin{sol}
+		We immediately have the conjugacy class $\set 1$. Moreover, recall that the elements of $D_{2n}$ are of the form $r^m$ or $sr^m$ for some integer $m$. Consider the conjugacy class of $r^k$ for some $1 \leq k \leq n$ except $k = n/2$. For any $j$, we have
+		\[r^jr^kr^{-j} = r^k, \longand sr^jr^kr^{-j}s = r^{-k}\]
+		so that the conjugacy class of $r^k$ is $\set{r^{\pm k}}$. Now consider the conjugacy class of $sr^m$ for some integer $m$. For any $j$, we have
+		\[r^jsr^mr^{-j} = sr^{m - 2j}, \longand sr^jsr^mr^{-j}s = r^{-(m - 2j)}\]
+		so that the conjugacy class of $sr^m$ is $\set{sr^{m - 2j} \mid j \in \z}$. Since $n$ is odd, this conjugacy class is $\set{sr^b \mid b = 1, \ldots, n}$. Therefore, the conjugacy classes in $D_{2n}$ when $n$ is odd are $\set{1}, \set{r^{\pm 1}}, \set{r^{\pm 2}}, \ldots, \set{r^{\pm k}}$, and $\set{sr^b \mid b = 1, \ldots, n}$. Lastly, the class equation for $D_{2n}$ is
+		\[|D_{2n}| = 1 + 2k + n.\qedhere\]
+	\end{sol}
+	\item This exercise gives a formula for the size of each conjugacy class in $S_n$. Let $\sigma$ be a permutation in $S_n$ and let $m_1, m_2, \ldots, m_s$ be the \textit{distinct} integers which appear in the cycle type of $\sigma$ (including 1-cycles). For each $i \in \set{1, 2, \ldots, s}$ assume $\sigma$ has $k_i$ cycles of length $m_i$ (so that $\sum_1^s k_im_i = n$). Prove that the number of conjugates of $\sigma$ is
 	\[\frac{n!}{(k_1!m_1^{k_1})(k_2!m_2^{k_2}) \cdots (k_s!m_s^{k_s})}\]
 	[See \hyperref[ex1.3.6]{Exercise 1.3.6} and \hyperref[ex1.3.7]{Exercise 1.3.7} where this formula was given in some special cases.]
+	\begin{sol}
+		We start with $n$ integers. We see that there are $n!$ ways to arrange these integers. Now consider the $k_1$ cycles of length $m_1$ in the cycle decomposition of $\sigma$. Clearly, we must use $k_1m_1$ of the $n$ integers to form these cycles. However, there are $m_1^{k_1}$ ways to arrange the integers within each of these $k_1$ cycles, and there are $k_1!$ ways to arrange the $k_1$ cycles among themselves. Therefore, we must divide $n!$ by $(k_1!m_1^{k_1})$ to account for these arrangements. Continuing in this manner for each $i$ from 1 to $s$, we see that the total number of distinct arrangements of the $n$ integers that correspond to the same cycle type as $\sigma$ is given by
+		\[\frac{n!}{(k_1!m_1^{k_1})(k_2!m_2^{k_2}) \cdots (k_s!m_s^{k_s})}.\]
+		Since the conjugacy class of $\sigma$ in $S_n$ consists of all permutations with the same cycle type as $\sigma$, the number of conjugates of $\sigma$ is given by this formula.
+	\end{sol}
+	\item Prove that if $p$ is a prime and $P$ is a subgroup of $S_p$ of order $p$, then $|N_{S_p}(P)| = p(p - 1)$. [Argue that every conjugate of $P$ contains exactly $p - 1$ $p$-cycles and use the formula for the number of $p$-cycles to compute the index of $N_{S_p}(P)$ in $S_p$.]
+	\begin{sol}
+		Note that $P$ is cyclic of order $p$, so $P = \gen\sigma$ for some $p$-cycle $\sigma \in S_p$. Moreover, every nonidentity element of $P$ is a $p$-cycle, so $P$ contains exactly $p - 1$ $p$-cycles. Now for some $\tau \in S_p$, the conjugate $\tau P\tau\inv = \gen{\tau\sigma\tau\inv}$ also has order $p$ and contains exactly $p - 1$ $p$-cycles. Therefore, each conjugate of $P$ contains exactly $p - 1$ $p$-cycles. Note that the number of distinct $p$-cycles in $S_p$ is given by $p!/p = (p - 1)!$.
 
-	\item Prove that if $p$ is a prime and $P$ is a subgroup of $S_p$ of order $p$, then $|N_{S_p})(P)| = p(p - 1)$. [Argue that every conjugate of $P$ contains exactly $p - 1$ $p$-cycles and use the formula for the number of $p$-cycles to compute the index of $N_{S_p}(P)$ in $S_p$.]
-
+		Recall by Proposition 4.6 that the size of the conjugacy class of $P$ in $S_p$ is given by $|S_p : N_{S_p}(P)|$. Let this index be $k$. Since each conjugate of $P$ contains exactly $p - 1$ $p$-cycles, the total number of distinct $p$-cycles contained in all conjugates of $P$ is $k(p - 1)$. However, since every $p$-cycle in $S_p$ is contained in some conjugate of $P$, we have $k(p - 1) = (p - 1)!$. Therefore, $k = (p - 2)!$, so that
+		\[|N_{S_p}(P)| = \frac{|S_p|}{k} = \frac{p!}{(p - 2)!} = p(p - 1).\qedhere\]
+	\end{sol}
 	\item Let $p$ be a prime. Find a formula for the number of conjugacy classes of elements of order $p$ in $S_n$ (using the greatest integer function).
-
+	\begin{sol}
+		Note that elements of order $p$ in $S_n$ are products of disjoint $p$-cycles. Moreover, each $p$-cycle is conjugate to any other $p$-cycle in $S_n$. Therefore, the conjugacy class of an element of order $p$ in $S_n$ is determined by the number of disjoint $p$-cycles in its cycle decomposition. Let $k$ be the number of disjoint $p$-cycles in the cycle decomposition of such an element. Then we have $1 \leq k \leq \floor{n/p}$, hence the number of conjugacy classes of elements of order $p$ in $S_n$ is given by $\floor{n/p}$.
+	\end{sol}
 	\item Let $\pi : G \to S_G$ be the left regular representation afforded by the action of $G$ on itself by left multiplication. For each $g \in G$ denote the permutation $\pi(g)$ by $\sigma_g$ so that $\sigma_g(x) = gx$ for all $x \in G$. Let $\lambda : G \to S_G$ be the permutation representation afforded by the corresponding right action of $G$ on itself, and for each $h \in G$ denote the permutation $\lambda(h)$ by $\tau_h$. Thus $\tau_h(x) = xh\inv$ for all $x \in G$ ($\lambda$ is called the \textit{right regular representation} of $G$).
 	\begin{problems}
 		\item Prove that $\sigma_g$ and $\tau_h$ commute for all $g, h \in G$. (Thus the centralizer in $S_G$ of $\pi(G)$ contains the subgroup $\lambda(G)$ which is isomorphic to $G$).
 		\item Prove that $\sigma_g = \tau_g$ if and only if $g$ is an element of order 1 or 2 in the center of $G$.
-		\item Prove that $\sigma_g = \tau_h$ if and only if $g$ and $h$ lie in nthe center of $G$. Deduce that $\pi(G) \cap \lambda(G) = \pi(Z(G)) = \lambda(Z(G))$.
+		\item Prove that $\sigma_g = \tau_h$ if and only if $g$ and $h$ lie in the center of $G$. Deduce that $\pi(G) \cap \lambda(G) = \pi(Z(G)) = \lambda(Z(G))$.
 	\end{problems}
+	\begin{solalph}
+		\item For any $x \in G$, we have
+		\[\sigma_g(\tau_h(x)) = \sigma_g(xh\inv) = g(xh\inv) = (gx)h\inv = \tau_h(gx) = \tau_h(\sigma_g(x)).\]
+		Therefore, $\sigma_g$ and $\tau_h$ commute for all $g, h \in G$.
+		\item If $\sigma_g = \tau_g$, then $gx = xg\inv$ for all $x \in G$. In particular, $x = 1$ implies $g = g\inv$ so that $g^2 = 1$, hence $\abs g$ is 1 or 2. Moreover, for any $x \in G$, we have $gx = xg\inv = xg$, so that $g \in Z(G)$
+		
+		If $g$ is an element of order 1 or 2 in the center of $G$, then for any $x \in G$, we have $\sigma_g(x) = gx = xg = xg\inv = \tau_g(x)$. Therefore, $\sigma_g = \tau_g$.
+		\item If $\sigma_g = \tau_h$, then $gx = xh\inv$ for all $x \in G$. In particular, $x = 1$ implies $g = h\inv$, so that $h = g\inv$. Therefore, $gx = xg\inv$ for all $x \in G$, so that by part (b), $g$ lies in the center of $G$. Since $h = g\inv$, then $h$ also lies in the center of $G$.
+		
+		If $g$ and $h$ lie in the center of $G$, then for any $x \in G$, we have $\sigma_g(x) = gx = xg = xh\inv = \tau_h(x)$. Therefore, $\sigma_g = \tau_h$. Moreover, if $\sigma_g \in \pi(G) \cap \lambda(G)$, then there exists $h \in G$ such that $\sigma_g = \tau_h$. By the above result, both $g$ and $h$ lie in the center of $G$, so that $\sigma_g \in \pi(Z(G))$ and $\tau_h \in \lambda(Z(G))$. Conversely, if $g \in Z(G)$, then by part (b), we have $\sigma_g = \tau_g$, so that $\sigma_g \in \pi(G) \cap \lambda(G)$. Therefore, $\pi(G) \cap \lambda(G) = \pi(Z(G)) = \lambda(Z(G))$.
+	\end{solalph}
 \end{problems}
