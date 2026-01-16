@@ -1,11 +1,14 @@
 \documentclass[10pt]{extarticle}
 \usepackage[margin = 1in]{geometry}
 \usepackage[dvipsnames]{xcolor}
-\usepackage{graphicx, fancyhdr}
+\usepackage{graphicx, fancyhdr, lipsum}
 \usepackage{amsfonts, amssymb}
 \usepackage{amsmath, amsthm, lipsum, mathtools}
 \usepackage{xparse, tikz, multicol, enumitem, pgfplots}
-\usepackage{algorithm, algpseudocode, hyperref}
+\usepackage{algorithm, algpseudocode}
+\usepackage{tcolorbox}
+\tcbuselibrary{theorems, breakable, skins}
+\usepackage{hyperref}
 \usepackage{stickstootext}
 \usepackage[stickstoo,vvarbb]{newtxmath}
 \usepackage[framemethod = TikZ]{mdframed}
@@ -16,7 +19,7 @@
 
 \hypersetup{
     colorlinks=true,
-    linkcolor=ProcessBlue,
+    linkcolor=Red,
     filecolor=magenta,      
     urlcolor=cyan,
     pdftitle={},
@@ -42,7 +45,7 @@
 
 \input{Misc Environments/breakable algorithm.tex}
 \input{Base Tex Files/commands.tex}
-\input{Base Tex Files/environments.tex}
+\input{Base Tex Files/exerciseEnvs.tex}
 
 % Extra Commands
 
@@ -50,7 +53,7 @@
 \author{JR}
 \date{October $27^{\text{th}}$, 2025}
 
-\setlength{\jot}{1pt}
+\setlength{\jot}{2pt}
 \setlength{\parindent}{0.5cm}
 
 \begin{document}
