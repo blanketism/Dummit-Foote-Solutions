@@ -729,7 +729,7 @@ Let $G$ be a group.
 		\[\frac{n!}{(k_1!m_1^{k_1})(k_2!m_2^{k_2}) \cdots (k_s!m_s^{k_s})}.\]
 		Since the conjugacy class of $\sigma$ in $S_n$ consists of all permutations with the same cycle type as $\sigma$, the number of conjugates of $\sigma$ is given by this formula.
 	\end{sol}
-	\item Prove that if $p$ is a prime and $P$ is a subgroup of $S_p$ of order $p$, then $|N_{S_p}(P)| = p(p - 1)$. [Argue that every conjugate of $P$ contains exactly $p - 1$ $p$-cycles and use the formula for the number of $p$-cycles to compute the index of $N_{S_p}(P)$ in $S_p$.]
+	\item \label{ex4.3.34} Prove that if $p$ is a prime and $P$ is a subgroup of $S_p$ of order $p$, then $|N_{S_p}(P)| = p(p - 1)$. [Argue that every conjugate of $P$ contains exactly $p - 1$ $p$-cycles and use the formula for the number of $p$-cycles to compute the index of $N_{S_p}(P)$ in $S_p$.]
 	\begin{sol}
 		Note that $P$ is cyclic of order $p$, so $P = \gen\sigma$ for some $p$-cycle $\sigma \in S_p$. Moreover, every nonidentity element of $P$ is a $p$-cycle, so $P$ contains exactly $p - 1$ $p$-cycles. Now for some $\tau \in S_p$, the conjugate $\tau P\tau\inv = \gen{\tau\sigma\tau\inv}$ also has order $p$ and contains exactly $p - 1$ $p$-cycles. Therefore, each conjugate of $P$ contains exactly $p - 1$ $p$-cycles. Note that the number of distinct $p$-cycles in $S_p$ is given by $p!/p = (p - 1)!$.
 
@@ -818,9 +818,17 @@ Let $G$ be a group.
 		By \hyperref[ex3.1.34]{Exercise 3.1.34}, we know $\gen r$ is normal in $D_{2n}$. Moreover, every subgroup of a cyclic group is characteristic, so every subgroup of $\gen r$ is characteristic in $\gen r$. Since $\gen r \nsub D_{2n}$, then by \hyperref[ex4.4.8]{Exercise 4.4.8}, every subgroup of $\gen r$ is normal in $D_{2n}$.
 	\end{sol}
 	\item Let $G$ be a group, let $A$ be an abelian normal subgroup of $G$, and write $\overline{G}=G/A$. Show that $\overline{G}$ acts (on the left) by conjugation on $A$ by $\bar g \cdot a = gag^{-1}$, where $g$ is any representative of the coset $\bar g$ (in particular, show that this action is well defined). Give an explicit example to show that this action is not well defined if $A$ is non-abelian.
+	\begin{sol}
+		Let $\bar g$ and $\bar h$ be the same coset in $\bar G$. Then there exists some $a_0 \in A$ such that $h = ga_0$. Then for any $a \in A$, we have
+		\[\bar g \cdot a = gag\inv = ga a_0a_0\inv g\inv = ga_0a(ga_0)\inv = hah\inv = \bar h \cdot a\]
+		since $A$ is abelian. Therefore, the action is well defined.
 
-	\item If $p$ is a prime and $P$ is a subgroup of $S_p$ of order $p$, prove that $N_{S_p}(P)/C_{S_p}(P) \cong \aut(P)$. (Use Exercise 34, Section 3.)
-
+		Consider $G = S_3$ and $A = S_3$ itself. Then $\bar 1 = \bar{(1\ 2)}$ in $\bar G$. However, for $a = (1\ 3)$, we have $\bar 1 \cdot a = a = (1\ 3)$ but, but $\bar{(1\ 2)} \cdot a = (1\ 2)(1\ 3)(1\ 2) = (2\ 3) \neq a$. Therefore, the action is not well defined if $A$ is non-abelian.
+	\end{sol}
+	\item If $p$ is a prime and $P$ is a subgroup of $S_p$ of order $p$, prove that $N_{S_p}(P)/C_{S_p}(P) \cong \aut(P)$. (Use \hyperref[ex4.3.34]{Exercise 4.3.34}).
+	\begin{sol}
+		
+	\end{sol}
 	\item Let $G$ be a group of order $3825$. Prove that if $H$ is a normal subgroup of order $17$ in $G$ then $H \le Z(G)$.
 
 	\item Let $G$ be a group of order $203$. Prove that if $H$ is a normal subgroup of order $7$ in $G$ then $H \le Z(G)$. Deduce that $G$ is abelian in this case.
