@@ -587,10 +587,10 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
 
 \begin{sol}
     Recall that $\phi(n)$ is defined as the number of integers $a$ such that $1 \leq a \leq n$, and $(a, n) = 1$. Hence, to prove that the number of elements in $\units$ is $\phi(n)$, it suffices to prove that $\bar a \in \units$ if and only if $(a, n) = 1$.
-    \begin{itemize}
-        \item \noindent\rightimp Suppose $\bar a \in \units$. Then there exists some $\bar b \in \units$ such that $\bar a \cdot \bar b = \bar 1$, or $ab \equiv 1 \bmod n$. Then there exists some integer $k$ such that $ab - 1 = kn$, or $ab - kn = 1$. Thus, $(a, n) = 1$.
-        \item \noindent\leftimp Suppose $(a, n) = 1$. Then there exist integers $x$ and $y$ such that $ax + ny = 1$. Then $ax \equiv 1 \bmod n$, so that $\bar a \cdot \bar x = \bar 1$. Thus, $\bar a \in \units$. \qh
-    \end{itemize}
+    \begin{ifandonlyif}
+        \item[\rightimp] Suppose $\bar a \in \units$. Then there exists some $\bar b \in \units$ such that $\bar a \cdot \bar b = \bar 1$, or $ab \equiv 1 \bmod n$. Then there exists some integer $k$ such that $ab - 1 = kn$, or $ab - kn = 1$. Thus, $(a, n) = 1$.
+        \item [\leftimp] Suppose $(a, n) = 1$. Then there exist integers $x$ and $y$ such that $ax + ny = 1$. Then $ax \equiv 1 \bmod n$, so that $\bar a \cdot \bar x = \bar 1$. Thus, $\bar a \in \units$. \qh
+    \end{ifandonlyif}
 \end{sol}
 
 \begin{exercise}
