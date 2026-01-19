@@ -272,8 +272,8 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{solitem}
-    \item \rightimp Suppose $x^2 = 1$. Then $|x| \leq 2$. Since $|x| \in \zp$, then $|x|$ is either $1$ or $2$.
-    \item \leftimp Suppose $|x|$ is either $1$ or $2$. If $|x| = 1$, then $x = 1$ so that $x^2 = 1$. If $|x| = 2$, then $x^2 = 1$.
+    \item[\rightimp] Suppose $x^2 = 1$. Then $|x| \leq 2$. Since $|x| \in \zp$, then $|x|$ is either $1$ or $2$.
+    \item[\leftimp]Suppose $|x|$ is either $1$ or $2$. If $|x| = 1$, then $x = 1$ so that $x^2 = 1$. If $|x| = 2$, then $x^2 = 1$.
 \end{solitem}
 
 
@@ -293,15 +293,15 @@ Let $G$ be a group.
 
 \begin{sol}
     We prove $xy = yx$ if and only if $y\inv xy = x$ first.
-    \begin{itemize}
-        \item \rightimp Suppose $xy = yx$. Then multiplying both sides on the left by $y\inv$ gives $y\inv xy = y\inv yx = 1x = x$.
-        \item \leftimp Suppose $y\inv xy = x$. Then multiplying both sides on the left by $y$ gives $xy = yy\inv xy = yx$.
-    \end{itemize}
+    \begin{ifandonlyif}
+        \item [\rightimp] Suppose $xy = yx$. Then multiplying both sides on the left by $y\inv$ gives $y\inv xy = y\inv yx = 1x = x$.
+        \item [\leftimp] Suppose $y\inv xy = x$. Then multiplying both sides on the left by $y$ gives $xy = yy\inv xy = yx$.
+    \end{ifandonlyif}
     Next, we prove $y\inv xy = x$ if and only if $x\inv y\inv xy = 1$.
-    \begin{itemize}
-        \item \rightimp Suppose $y\inv xy = x$. Then multiplying both sides on the left by $x\inv$ gives $x\inv y\inv xy = x\inv x = 1$.
-        \item \leftimp Suppose $x\inv y\inv xy = 1$. Then multiplying both sides on the left by $x$ gives $y\inv xy = xx\inv = 1x = x$.
-    \end{itemize}
+    \begin{ifandonlyif}
+        \item [\rightimp] Suppose $y\inv xy = x$. Then multiplying both sides on the left by $x\inv$ gives $x\inv y\inv xy = x\inv x = 1$.
+        \item [\leftimp] Suppose $x\inv y\inv xy = 1$. Then multiplying both sides on the left by $x$ gives $y\inv xy = xx\inv = 1x = x$.
+    \end{ifandonlyif}
     The result follows.
 \end{sol}
 
@@ -510,13 +510,13 @@ Let $G$ be a group.
     \[1 = x^i x^i = x^{2i}\]
     Note that $2i$ is even, so $2i \neq n$ since $n$ is odd. Noting that $2i < n$, then the only possibility for $x^{2i} = 1$ is if $2i = 0$, which is impossible since $i \geq 1$. This is a contradiction, hence $x^i \neq x^{-i}$ for all $i = 1, 2, \dots, n-1$.
     \item
-    \begin{itemize}
-        \item \rightimp Suppose $x^i = x^{-i}$ for some $i$ where $1 \leq i < n$. Then
+    \begin{ifandonlyif}
+        \item [\rightimp] Suppose $x^i = x^{-i}$ for some $i$ where $1 \leq i < n$. Then
         \[1 = x^i x^i = x^{2i}\]
         Since $x^n = x^{2k} = 1$, then the only $i$ such that $1 \leq i < 2k$ and $x^{2i} = 1$ is $i = k$.
-        \item \leftimp Suppose $i = k$. Then
+        \item [\leftimp] Suppose $i = k$. Then
         \[x^i = x^k = x^{2k - k} = x^{n - k} = x^{-k} = x^{-i} \qh\]
-    \end{itemize}
+    \end{ifandonlyif}
 \end{solalph}
 
 \begin{exercise}
@@ -974,10 +974,10 @@ In each of Exercises 9 to 13 you can find the order of the group of rigid motion
 \end{specialexercise}
 
 \begin{solitem}
-    \item \rightimp Suppose $\sigma^i$ is an $m$-cycle, and assume, by way of contradiction, that $(m, i) = d > 1$. Then there exist $a, b \in \zp$ such that $ad = i$ and $bd = m$. Since $|\sigma^i| = m$ because it is an $m$-cycle, then
+    \item [\rightimp] Suppose $\sigma^i$ is an $m$-cycle, and assume, by way of contradiction, that $(m, i) = d > 1$. Then there exist $a, b \in \zp$ such that $ad = i$ and $bd = m$. Since $|\sigma^i| = m$ because it is an $m$-cycle, then
     \[(\sigma^i)^b = (\sigma^{ad})^b = (\sigma^{bd})^a = (\sigma^m)^a = \id^a = \id.\]
     However, $bd = m$ with $d > 1$ implies that $b < m$, so $|\sigma^i| \leq b < m$, contradicting that $|\sigma^i| = m$. It follows that $(m, i) = 1$.
-    \item \leftimp Suppose that $(m, i) = 1$. Denote $x' \equiv x \bmod m$. We claim that the integers
+    \item [\leftimp] Suppose that $(m, i) = 1$. Denote $x' \equiv x \bmod m$. We claim that the integers
     \[(1 + i)', (1 + 2i)', \ldots, (1 + (m - 1)i)'\]
     are all distinct. Suppose $(1 + xi)' = (1 + yi)'$ for some $0 \leq x, y \leq m - 1$ with $x \neq y$. Then $i(x - y) \equiv 0 \bmod m$. Since $(m, i) = 1$, then $m \mid (x - y)$. However, since $1 - m \leq x - y \leq m - 1$, then the only choice for $x - y$ is 0, or that $x = y$. Then we have exactly $m$ distinct integers so that
     \[\sigma^i = (1\ (1 + i)'\ (1 + 2i)'\ \ldots\ (1 + (m - 1)i)').\]
@@ -1005,8 +1005,8 @@ In each of Exercises 9 to 13 you can find the order of the group of rigid motion
 \end{exercise}
 
 \begin{solitem}
-    \item \rightimp Let $\sigma \in S_n$ such that $\abs\sigma = 2$. Perform cycle decomposition on $\sigma$ to obtain a product of disjoint cycles. Let $(a_1\ a_2\ \ldots\ a_m)$ be one of the cycles. Since $\sigma \neq 1$, then $\sigma(a_1) = a_2$ and $\sigma^2(a_1) = a_3$. However, $\sigma^2 = 1$, so $\sigma^2(a_1) = a_1$ so that $a_1 = a_3$. Then $m \leq 2$, and the cycle is $(a_1\ a_2)$ so that any cycle in the cycle decomposition of $\sigma$ is of length 2.
-    \item \leftimp Suppose $\sigma$'s cycle decomposition is a product of commuting 2-cycles $(a_1\ b_1)(a_2\ b_2) \ldots (a_k\ b_k)$. Since $(a_1\ b_1)^2 = 1$, and the 2-cycles commute, then $\sigma^2 = 1$. Moreover, because $\sigma \neq 1$, then $\abs\sigma = 2$.
+    \item [\rightimp] Let $\sigma \in S_n$ such that $\abs\sigma = 2$. Perform cycle decomposition on $\sigma$ to obtain a product of disjoint cycles. Let $(a_1\ a_2\ \ldots\ a_m)$ be one of the cycles. Since $\sigma \neq 1$, then $\sigma(a_1) = a_2$ and $\sigma^2(a_1) = a_3$. However, $\sigma^2 = 1$, so $\sigma^2(a_1) = a_1$ so that $a_1 = a_3$. Then $m \leq 2$, and the cycle is $(a_1\ a_2)$ so that any cycle in the cycle decomposition of $\sigma$ is of length 2.
+    \item [\leftimp] Suppose $\sigma$'s cycle decomposition is a product of commuting 2-cycles $(a_1\ b_1)(a_2\ b_2) \ldots (a_k\ b_k)$. Since $(a_1\ b_1)^2 = 1$, and the 2-cycles commute, then $\sigma^2 = 1$. Moreover, because $\sigma \neq 1$, then $\abs\sigma = 2$.
 \end{solitem}
 
 \begin{exercise}
@@ -1014,10 +1014,10 @@ In each of Exercises 9 to 13 you can find the order of the group of rigid motion
 \end{exercise}
 
 \begin{sol} \leavevmode
-    \begin{itemize}
-        \item \rightimp Let $\sigma \in S_n$ such that $\abs\sigma = p$. Perform cycle decomposition on $\sigma$ to obtain a product of disjoint cycles. Let $(a_1\ a_2\ \ldots\ a_m)$ be one of the cycles. Recall from \hyperref[ex1.3.12]{Exercise 1.3.12} (a) that for any $i$, $\sigma^i(a_1) = a_{1 + i}$, where $1 + i$ is replaced by its least residue mod $m$ when $1 + i > m$. Since $\sigma^p = 1$, then $\sigma^p(a_1) = a_1$, so that $a_{1 + p} = a_1$. It follows that $m \mid p$. Since $p$ is prime, then $m = 1$ or $m = p$. However, if $m = 1$, then the cycle is trivial and can be removed from the cycle decomposition. Then every cycle in the cycle decomposition of $\sigma$ has length $p$.
-        \item \leftimp Suppose $\sigma$'s cycle decomposition is a product of commuting $p$-cycles $\pi_1, \pi_2, \ldots, \pi_k$. For any $1 \leq t < p$, then $\pi_i^t \neq 1$ for all $i$. Then $\sigma^t = \pi_1^t \pi_2^t \ldots \pi_k^t \neq 1$. However, $\sigma^p = (\pi_1^p)(\pi_2^p) \ldots (\pi_k^p) = 1$. Then $\abs\sigma = p$.
-    \end{itemize}
+    \begin{ifandonlyif}
+        \item [\rightimp] Let $\sigma \in S_n$ such that $\abs\sigma = p$. Perform cycle decomposition on $\sigma$ to obtain a product of disjoint cycles. Let $(a_1\ a_2\ \ldots\ a_m)$ be one of the cycles. Recall from \hyperref[ex1.3.12]{Exercise 1.3.12} (a) that for any $i$, $\sigma^i(a_1) = a_{1 + i}$, where $1 + i$ is replaced by its least residue mod $m$ when $1 + i > m$. Since $\sigma^p = 1$, then $\sigma^p(a_1) = a_1$, so that $a_{1 + p} = a_1$. It follows that $m \mid p$. Since $p$ is prime, then $m = 1$ or $m = p$. However, if $m = 1$, then the cycle is trivial and can be removed from the cycle decomposition. Then every cycle in the cycle decomposition of $\sigma$ has length $p$.
+        \item [\leftimp] Suppose $\sigma$'s cycle decomposition is a product of commuting $p$-cycles $\pi_1, \pi_2, \ldots, \pi_k$. For any $1 \leq t < p$, then $\pi_i^t \neq 1$ for all $i$. Then $\sigma^t = \pi_1^t \pi_2^t \ldots \pi_k^t \neq 1$. However, $\sigma^p = (\pi_1^p)(\pi_2^p) \ldots (\pi_k^p) = 1$. Then $\abs\sigma = p$.
+    \end{ifandonlyif}
     For a counterexample when $p$ is not prime, consider $\sigma = (1\ 2\ 3)(4\ 5)$ in $S_5$. Then $\abs\sigma = 6$, but the cycle decomposition consists of a 3-cycle and a 2-cycle.
 \end{sol}
 
@@ -1071,7 +1071,7 @@ In each of Exercises 9 to 13 you can find the order of the group of rigid motion
     We have $n$ from 1 to 7. We can have 2 and 5-cycles and 3 and 4-cycles. Then $n = 10$ and 12.
 \end{sol}
 
-\begin{exercise} \label{ex1.4.20}
+\begin{exercise} \label{ex1.3.20}
     Find a set of generators and relations for $S_3$.
 \end{exercise}
 
@@ -1226,10 +1226,10 @@ Let $F$ be a field and let $n \in \zp$.
 \end{exercise}
 
 \begin{solitem}
-    \item \rightimp We proceed by contrapositive. Suppose $F$ has an infinite number of elements. Consider the set of matrices
+    \item [\rightimp] We proceed by contrapositive. Suppose $F$ has an infinite number of elements. Consider the set of matrices
     \[S = \set{\alpha I \mid \alpha \in F\unt}\]
     where $I$ is the identity matrix. It is clear that $S \subseteq \gl_n(F)$ since $\det(\alpha I) = \alpha^n \neq 0$ for all $\alpha \in F\unt$. Moreover, for $\alpha, \beta \in F\unt$ with $\alpha \neq \beta$, then $\alpha I \neq \beta I$, so that $S$ is infinite. It follows that $\gl_n(F)$ is infinite.
-    \item \leftimp Suppose $F$ has a finite number of elements, say $q$. Then each entry of a matrix in $\gl_n(F)$ has $q$ choices, and there are $n^2$ entries in total. Then the total number of matrices with entries from $F$ is $q^{n^2}$. Since $\gl_n(F)$ is a subset of these matrices, then $\gl_n(F)$ is finite.
+    \item [\leftimp] Suppose $F$ has a finite number of elements, say $q$. Then each entry of a matrix in $\gl_n(F)$ has $q$ choices, and there are $n^2$ entries in total. Then the total number of matrices with entries from $F$ is $q^{n^2}$. Since $\gl_n(F)$ is a subset of these matrices, then $\gl_n(F)$ is finite.
 \end{solitem}
 
 \begin{exercise}
@@ -1740,14 +1740,14 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
 
 \begin{sol}
     Since $\phi$ is bijective, then $\phi\inv$ exists and is also an isomorphism. 
-    \begin{itemize}
-        \item \rightimp Suppose $G$ is abelian. Then for any $h_1, h_2 \in H$, there exists $g_1, g_2 \in G$ such that $g_1 = \phi\inv(h_1)$ and $g_2 = \phi\inv(h_2)$. Then
+    \begin{ifandonlyif}
+        \item [\rightimp] Suppose $G$ is abelian. Then for any $h_1, h_2 \in H$, there exists $g_1, g_2 \in G$ such that $g_1 = \phi\inv(h_1)$ and $g_2 = \phi\inv(h_2)$. Then
         \[h_1h_2 = \phi(g_1)\phi(g_2) = \phi(g_1g_2) = \phi(g_2g_1) = \phi(g_2)\phi(g_1) = h_2h_1\]
         so that $H$ is abelian.
-        \item \leftimp Suppose $H$ is abelian. Then for any $g_1, g_2 \in G$, there exists $h_1, h_2 \in H$ such that $h_1 = \phi(g_1)$ and $h_2 = \phi(g_2)$. Then
+        \item [\leftimp] Suppose $H$ is abelian. Then for any $g_1, g_2 \in G$, there exists $h_1, h_2 \in H$ such that $h_1 = \phi(g_1)$ and $h_2 = \phi(g_2)$. Then
         \[g_1g_2 = \phi\inv(h_1)\phi\inv(h_2) = \phi\inv(h_1h_2) = \phi\inv(h_2h_1) = \phi\inv(h_2)\phi\inv(h_1) = g_2g_1\]
         so that $G$ is abelian.
-    \end{itemize}
+    \end{ifandonlyif}
     To see what conditions are sufficient for the homomorphism to imply that its codomain is abelian if its domain is abelian, let $\phi : G \to H$ be a homomorphism. Then for $h_1, h_2 \in H$, then see by the previous proof that if there exists $g_1, g_2 \in G$ such that $h_1 = \phi(g_1)$ and $h_2 = \phi(g_2)$, then $H$ is abelian whenever $G$ is abelian. Thus, it suffices to ensure that such $g_1$ and $g_2$ always exist, which is true if $\phi$ is surjective. Hence, we may deduce that to ensure that if $G$ is abelian, then so is $H$, it suffices to require that $\phi$ is surjective.
 \end{sol}
 
@@ -1883,12 +1883,12 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
     so that $g_1g_2 \in \ker\phi$. Finally, for any $g \in \ker\phi$, we have
     \[\phi(g\inv) = \phi(g)\inv = 1_H\inv = 1_H\]
     so that $g\inv \in \ker\phi$. Therefore, $\ker\phi$ is a subgroup of $G$.
-    \begin{itemize}
-        \item \rightimp Suppose $\phi$ is injective. Let $g \in \ker\phi$. Then $\phi(g) = 1_H = \phi(1_G)$, and since $\phi$ is injective, then $g = 1_G$. Hence, $\ker\phi = \{1_G\}$.
-        \item \leftimp Suppose $\ker\phi = \{1_G\}$. Let $g_1, g_2 \in G$ be such that $\phi(g_1) = \phi(g_2)$. Then
+    \begin{ifandonlyif}
+        \item [\rightimp] Suppose $\phi$ is injective. Let $g \in \ker\phi$. Then $\phi(g) = 1_H = \phi(1_G)$, and since $\phi$ is injective, then $g = 1_G$. Hence, $\ker\phi = \{1_G\}$.
+        \item [\leftimp] Suppose $\ker\phi = \{1_G\}$. Let $g_1, g_2 \in G$ be such that $\phi(g_1) = \phi(g_2)$. Then
         \[1_H = \phi(g_1)\phi(g_2)\inv = \phi(g_1g_2\inv)\]
         so that $g_1g_2\inv \in \ker\phi$. By assumption, then $g_1g_2\inv = 1_G$, and hence $g_1 = g_2$. Therefore, $\phi$ is injective.
-    \end{itemize}
+    \end{ifandonlyif}
 \end{sol}
 
 \begin{exercise}
@@ -1922,10 +1922,10 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
 \end{exercise}
 
 \begin{solitem}
-    \item \rightimp Suppose $\phi$ is a homomorphism. Then for $g, h \in G$, we have
+    \item [\rightimp] Suppose $\phi$ is a homomorphism. Then for $g, h \in G$, we have
     \[(gh)\inv = \phi(gh) = \phi(g)\phi(h) = g\inv h\inv\]
     Since inverses are unique, then $hg = gh$ so that $G$ is abelian.
-    \item \leftimp Suppose $G$ is abelian. Then for $g, h \in G$, we have
+    \item [\leftimp] Suppose $G$ is abelian. Then for $g, h \in G$, we have
     \[\phi(gh) = (gh)\inv = h\inv g\inv = g\inv h\inv = \phi(g)\phi(h)\]
     so that $\phi$ is a homomorphism.
 \end{solitem}
@@ -1935,10 +1935,10 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
 \end{exercise}
 
 \begin{solitem}
-    \item \rightimp Suppose $\phi$ is a homomorphism. Then for $g, h \in G$, we have
+    \item [\rightimp] Suppose $\phi$ is a homomorphism. Then for $g, h \in G$, we have
     \[(gh)^2 = \phi(gh) = \phi(g)\phi(h) = g^2 h^2\]
     Then $ghgh = g^2h^2$, so that multiplying both sides on the left by $g\inv$ and on the right by $h\inv$ yields $hg = gh$ and $G$ is abelian.
-    \item \leftimp Suppose $G$ is abelian. Then for $g, h \in G$, we have
+    \item [\leftimp] Suppose $G$ is abelian. Then for $g, h \in G$, we have
     \[\phi(gh) = (gh)^2 = g^2 h^2 = \phi(g)\phi(h)\]
     so that $\phi$ is a homomorphism.
 \end{solitem}
@@ -2246,8 +2246,8 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
 \end{specialexercise}
 
 \begin{solitem}
-    \item \rightimp Suppose $G$ acts faithfully on $A$. Let $g$ be in the kernel of the action. Then for every $a \in A$, we have $g \cdot a = a$. Since the action is faithful, then $g$ must be the identity element of $G$. Hence, the kernel of the action is the set consisting only of the identity.
-    \item \leftimp Suppose the kernel of the action is the set consisting only of the identity. Let $g, h \in G$ be such that $g \cdot a = h \cdot a$ for every $a \in A$. Then
+    \item [\rightimp] Suppose $G$ acts faithfully on $A$. Let $g$ be in the kernel of the action. Then for every $a \in A$, we have $g \cdot a = a$. Since the action is faithful, then $g$ must be the identity element of $G$. Hence, the kernel of the action is the set consisting only of the identity.
+    \item [\leftimp] Suppose the kernel of the action is the set consisting only of the identity. Let $g, h \in G$ be such that $g \cdot a = h \cdot a$ for every $a \in A$. Then
     \[h\inv g \cdot a = h\inv \cdot (g \cdot a) = h\inv \cdot (h \cdot a) = (h\inv h) \cdot a = 1 \cdot a = a\]
     so that $h\inv g$ is in the kernel of the action. By assumption, then $h\inv g$ is the identity element of $G$, and $g = h$. Therefore, the action is faithful.
 \end{solitem}
