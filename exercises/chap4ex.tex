@@ -951,7 +951,7 @@ Let $G$ be a group.
 	\[|D_{2n}| = 1 + 2k + n.\qedhere\]
 \end{sol}
 
-\begin{specialexercise}
+\begin{specialexercise} \label{ex4.3.33}
 	This exercise gives a formula for the size of each conjugacy class in $S_n$. Let $\sigma$ be a permutation in $S_n$ and let $m_1, m_2, \ldots, m_s$ be the \textit{distinct} integers which appear in the cycle type of $\sigma$ (including 1-cycles). For each $i \in \set{1, 2, \ldots, s}$ assume $\sigma$ has $k_i$ cycles of length $m_i$ (so that $\sum_1^s k_im_i = n$). Prove that the number of conjugates of $\sigma$ is
 	\[\frac{n!}{(k_1!m_1^{k_1})(k_2!m_2^{k_2}) \cdots (k_s!m_s^{k_s})}\]
 	[See \hyperref[ex1.3.6]{Exercise 1.3.6} and \hyperref[ex1.3.7]{Exercise 1.3.7} where this formula was given in some special cases.]
@@ -1202,11 +1202,11 @@ Let $G$ be a group.
 	\end{itemize}
 \end{sol}
 
-\begin{exercise}
+\begin{specialexercise}
 	This exercise shows that for $n\neq 6$ every automorphism of $S_n$ is inner. Fix an integer $n\ge 2$ with $n\neq 6$.
 	\begin{subproblems}
 		\item Prove that the automorphism group of a group $G$ permutes the conjugacy classes of $G$, i.e.\ for each $\sigma\in\aut(G)$ and each conjugacy class $\mathcal K$ of $G$, the set $\sigma(\mathcal K)$ is also a conjugacy class of $G$.
-		\item Let $\mathcal K$ be the conjugacy class of transpositions in $S_n$ and let $\mathcal K'$ be the conjugacy class of any element of order $2$ in $S_n$ that is not a transposition. Prove that $|\mathcal K|\neq|\mathcal K'|$. Deduce that any automorphism of $S_n$ sends transpositions to transpositions. (See Exercise 33 in Section 3.)
+		\item Let $\mathcal K$ be the conjugacy class of transpositions in $S_n$ and let $\mathcal K'$ be the conjugacy class of any element of order $2$ in $S_n$ that is not a transposition. Prove that $|\mathcal K|\neq|\mathcal K'|$. Deduce that any automorphism of $S_n$ sends transpositions to transpositions. (See \hyperref[ex4.3.33]{Exercise 4.3.33}.)
 		\item Prove that for each $\sigma\in\aut(S_n)$,
 		\[
 		\sigma:(1\,2)\mapsto(a\,b_2),\qquad \sigma:(1\,3)\mapsto(a\,b_3),\qquad \ldots,\qquad \sigma:(1\,n)\mapsto(a\,b_n),
@@ -1214,24 +1214,81 @@ Let $G$ be a group.
 		for some distinct integers $a,b_2,b_3,\ldots,b_n\in\{1,2,\ldots,n\}$.
 		\item Show that $(1\,2),(1\,3),\ldots,(1\,n)$ generate $S_n$ and deduce that any automorphism of $S_n$ is uniquely determined by its action on these elements. Use (c) to show that $S_n$ has at most $n!$ automorphisms and conclude that $\aut(S_n)=\inn(S_n)$ for $n\neq 6$.
 	\end{subproblems}
-\end{exercise}
+\end{specialexercise}
 
-\begin{exercise}
+\begin{solalph}
+	\item Let $\mathcal K$ be a conjugacy class of $G$ and let $\sigma \in \aut(G)$. For any $x \in \mathcal K$, we have $\sigma(x) \in G$. Consider the conjugacy class $\mathcal K'$ of $\sigma(x)$ in $G$. For any $y \in \mathcal K$, there exists some $g \in G$ such that $y = gxg\inv$. Then
+	\[\sigma(y) = \sigma(gxg\inv) = \sigma(g)\sigma(x)\sigma(g)\inv \in \mathcal K'.\]
+	Therefore, $\sigma(\mathcal K) \subseteq \mathcal K'$.
+
+	Now let $z \in \mathcal K'$. Then there exists some $h \in G$ such that $z = h\sigma(x)h\inv$. Since $\sigma$ is an automorphism, there exists some $g \in G$ such that $\sigma(g) = h$. Then
+	\[z = h\sigma(x)h\inv = \sigma(g)\sigma(x)\sigma(g)\inv = \sigma(gxg\inv) \in \sigma(\mathcal K).\]
+	Therefore, $\mathcal K' \subseteq \sigma(\mathcal K)$. Hence, $\sigma(\mathcal K) = \mathcal K'$, so that $\aut(G)$ permutes the conjugacy classes of $G$.
+	\item By \hyperref[ex4.3.33]{Exercise 4.3.33}, the formulas for each conjugacy class is given by
+	\[|\mathcal K| = \binom n2 = \frac{n(n - 1)}{2}, \longand |\mathcal K'| = \frac{n!}{2^k k! (n - 2k)!}\]
+	for some $k \geq 2$. Assume, by way of contradiction, that $|\mathcal K| = |\mathcal K'|$. Equating the two expressions and cancellation, we obtain
+	\[(n - 2)(n - 3) \cdots (n - 2k + 1) = 2^k k!.\]
+	Observe that the left-hand side contains $2k - 2$ consecutive integers, which has at most $k - 1$ powers of 2. The right-hand side has at least $k$ powers of 2, so that the two sides cannot be equal. Therefore, $|\mathcal K| \neq |\mathcal K'|$. Hence, by (a), any automorphism of $S_n$ sends transpositions to transpositions.
+	\item Let $\sigma \in \aut(S_n)$. By (b), we know that $\sigma$ sends transpositions to transpositions. In particular,
+	\[\sigma((1\ 2)) = (a\ b_2), \quad \sigma((1\ 3)) = (c\ d_3)\]
+	for distinct integers. Note that if $\{a, b_2\} \cap \{c, d_3\} = \varnothing$, then
+	\[\sigma((1\ 2)(1\ 3)) = \sigma((1\ 2))\sigma((1\ 3)) = (a\ b_2)(c\ d_3)\]
+	is a product of two disjoint transpositions. However, $(1\ 2)(1\ 3) = (1\ 3\ 2)$ is a 3-cycle, so this is impossible. Therefore, $\{a, b_2\} \cap \{c, d_3\} \neq \varnothing$. Without loss of generality, assume that $a = c$ since we may interchange the order within the transposition. Repeating this argument for all transpositions $(1\ k)$ for $k = 4, \ldots, n$, we obtain the desired result. Moreover, these integers must be distinct since $\sigma$ is injective.
+	\item Note that $(1\ 2), (1\ 3), \ldots, (1\ n)$ generate $S_n$ since any transposition $(i\ j)$ can be written as
+	\[(i\ j) = (1\ i)(1\ j)(1\ i).\]
+	Therefore, any automorphism of $S_n$ is uniquely determined by its action on these elements. By (c), there are at most $n!$ ways to assign images to these transpositions since there are $n$ choices for the image of $(1\ 2)$, $n - 1$ choices for the image of $(1\ 3)$, and so on. Therefore, $|\aut(S_n)| \leq n!$. However, $|\inn(S_n)| = |S_n/Z(S_n)| = n!$ since $Z(S_n)$ is trivial for $n \geq 3$. Since $\inn(S_n) \leq \aut(S_n)$, we must have $\aut(S_n) = \inn(S_n)$ for $n \neq 6$.
+\end{solalph}
+
+\begin{specialexercise}
 	This exercise shows that $|\aut(S_6):\inn(S_6)|\le 2$ (Exercise 10 in Section 6.3 shows that equality holds by exhibiting an automorphism of $S_6$ that is not inner).
 	\begin{subproblems}
 		\item Let $\mathcal K$ be the conjugacy class of transpositions in $S_6$ and let $\mathcal K'$ be the conjugacy class of any element of order $2$ in $S_6$ that is not a transposition. Prove that $|\mathcal K|\neq|\mathcal K'|$ unless $\mathcal K'$ is the conjugacy class of products of three disjoint transpositions. Deduce that $\aut(S_6)$ has a subgroup of index at most $2$ which sends transpositions to transpositions.
 		\item Prove that $|\aut(S_6):\inn(S_6)|\le 2$. (Follow the same steps as in (c) and (d) of the preceding exercise to show that any automorphism that sends transpositions to transpositions is inner.)
 	\end{subproblems}
-\end{exercise}
+\end{specialexercise}
 
-\begin{exercise}
+\begin{solalph}
+	\item This is similar to (b) in the previous exercise. By \hyperref[ex4.3.33]{Exercise 4.3.33}, the formulas for each conjugacy class is given by
+	\[|\mathcal K| = \binom 62 = 15, \longand |\mathcal K'| = \frac{6!}{2^k k! (6 - 2k)!}\]
+	for some $k \geq 2$. Since we are working in $S_6$, we only need to check $k = 2$ and $k = 3$. For $k = 2$, we have
+	\[|\mathcal K'| = \frac{6!}{2^2 \cdot 2! \cdot 2!} = 45 \neq 15 = |\mathcal K|.\]
+	For $k = 3$, we have
+	\[|\mathcal K'| = \frac{6!}{2^3 \cdot 3! \cdot 0!} = 15 = |\mathcal K|.\]
+	Therefore, $|\mathcal K| \neq |\mathcal K'|$ unless $\mathcal K'$ is the conjugacy class of products of three disjoint transpositions. Hence, by (a) in the previous exercise, $\aut(S_6)$ has a subgroup of index at most 2 which sends transpositions to transpositions.
+	\item Following the same steps as in (c) and (d) of the previous exercise, we can show that any automorphism that sends transpositions to transpositions is inner. Therefore, by (a), we have $|\aut(S_6) : \inn(S_6)| \leq 2$.
+\end{solalph}
+
+\begin{specialexercise}
 	For any finite group $P$ let $d(P)$ be the minimum number of generators of $P$ (so, for example, $d(P)=1$ if and only if $P$ is a nontrivial cyclic group and $d(Q_8)=2$). Let $m(P)$ be the maximum of the integers $d(A)$ as $A$ runs over all abelian subgroups of $P$ (so, for example, $m(Q_8)=1$ and $m(D_8)=2$). Define
 	\[J(P)=\langle A \mid A \text{ is an abelian subgroup of } P \text{ with } d(A)=m(P)\rangle.\]
 	($J(P)$ is called the \emph{Thompson subgroup} of $P$.)
 	\begin{subproblems}
 		\item Prove that $J(P)$ is a characteristic subgroup of $P$.
-		\item For each of the following groups $P$, list all abelian subgroups $A$ of $P$ that satisfy $d(A)=m(P)$: $Q_8$, $D_8$, $D_{16}$, and $QD_{16}$ (where $QD_{16}$ is the quasidihedral group of order $16$ defined in Exercise 11 of Section 2.5). (Use the lattices of subgroups for these groups in Section 2.5.)
+		\item For each of the following groups $P$, list all abelian subgroups $A$ of $P$ that satisfy $d(A)=m(P)$: $Q_8$, $D_8$, $D_{16}$, and $QD_{16}$ (where $QD_{16}$ is the quasidihedral group of order $16$ defined in \hyperref[ex2.5.11]{Exercise 2.5.11}). (Use the lattices of subgroups for these groups in Section 2.5.)
 		\item Show that $J(Q_8)=Q_8$, $J(D_8)=D_8$, $J(D_{16})=D_{16}$, and $J(QD_{16})$ is a dihedral subgroup of order $8$ in $QD_{16}$.
 		\item Prove that if $Q\le P$ and $J(P)$ is a subgroup of $Q$, then $J(P)=J(Q)$. Deduce that if $P$ is a subgroup (not necessarily normal) of the finite group $G$ and $J(P)$ is contained in some subgroup $Q$ of $P$ such that $Q \nsub G$, then $J(P) \nsub G$.
 	\end{subproblems}
-\end{exercise}
+\end{specialexercise}
+
+\begin{solalph}
+	\item Let $\sigma \in \aut(P)$. Let $A$ be an abelian subgroup of $P$ such that $d(A) = m(P)$. Then $\sigma(A)$ is also an abelian subgroup of $P$. Moreover, it is clear that $d(\sigma(A)) = d(A) = m(P)$. Therefore, $\sigma(J(P)) = J(P)$, so that $J(P)$ is characteristic in $P$.
+	\item 
+	\begin{itemize}
+		\item $Q_8$: From the lattice, we see that every abelian subgroup is cyclic so that $m(Q_8) = 1$. The abelian subgroups $A$ with $d(A) = 1$ are $\gen{i}$, $\gen{j}$, and $\gen{k}$.
+		\item $D_8$: From the lattice, we see that the abelian subgroups with maximum number of generators are those isomorphic to $V_4$, hence $m(D_8) = 2$. The abelian subgroups $A$ with $d(A) = 2$ are $\gen{r^2, s}$ and $\gen{r^2, rs}$.
+		\item $D_{16}$: From the lattice, we see that the abelian subgroups with maximum number of generators are those isomorphic to $V_4$, hence $m(D_{16}) = 2$. The abelian subgroups $A$ with $d(A) = 2$ are $\gen{r^4, s}$, $\gen{r^4, r^5s}$, $\gen{r^4, r^2s}$, and $\gen{r^4, r^3s}$.
+		\item $QD_{16}$: From the lattice, we see that the abelian subgroups with maximum number of generators are those isomorphic to $V_4$, hence $m(QD_{16}) = 2$. The abelian subgroups $A$ with $d(A) = 2$ are $\gen{\tau\sigma^2, \sigma^4}$ and $\gen{\tau, \sigma^4}$.
+	\end{itemize}
+	\item 
+	\begin{itemize}
+		\item Any pair of the abelian subgroups in (b) generate $Q_8$, so that $J(Q_8) = Q_8$.
+		\item Note that $r, s \in \gen{r^2, s} \cup \gen{r^2, rs}$, so that $J(D_8) = D_8$.
+		\item Note that $r^3 = r^3s \cdot s$ and $r = r^4 \cdot r^{-3}$ so that the join of all abelian subgroups in (b) generates $D_{16}$. Therefore, $J(D_{16}) = D_{16}$.
+		\item Observe that
+		\[\gen{\tau\sigma^2, \sigma^4} = \{1, \sigma^4, \tau\sigma^2, \tau\sigma^6\} \longand \gen{\tau, \sigma^4} = \{1, \sigma^4, \tau, \tau\sigma^4\}.\]
+		The join of these two subgroups is the subgroup $\gen{\sigma^2, \tau}$, which has order 8. Since $\tau^2 = (\sigma^2)^4 = 1$, and $\sigma^2\tau = \tau\sigma^6$, then the mapping $\phi : D_8 \to \gen{\sigma^2, \tau}$ defined by $\phi(r) = \sigma^2$ and $\phi(s) = \tau$ is an isomorphism. Therefore, $J(QD_{16})$ is a dihedral subgroup of order 8 in $QD_{16}$.
+	\end{itemize}
+	\item Note that any abelian subgroup of $Q$ is also an abelian subgroup of $P$. Therefore, $m(Q) \leq m(P)$. Since $J(P) \leq Q$, then every abelian subgroup $A$ of $P$ with $d(A) = m(P)$ is also an abelian subgroup of $Q$. Therefore, $m(P) \leq m(Q)$. Hence, $m(P) = m(Q)$. Moreover, any abelian subgroup $B$ of $Q$ with $d(B) = m(Q) = m(P)$ is also an abelian subgroup of $P$. Therefore, $J(P) = J(Q)$.
+	
+	Using that $J(P) = J(Q)$, then part (a) implies that $J(P) \cha Q$. Since $Q \nsub G$, then $J(P) \nsub G$.
+\end{solalph}
