@@ -890,7 +890,9 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-	Pick some $g_i$ and consider its conjugacy class $\kk_i$. Since $g_i$ commutes with all $g_j$ for $1 \leq j \leq r$, then for any $x \in G$, we have $xg_ix\inv = g_i$ so that $x \in C_G(g_i)$. Therefore, $C_G(g_i) = G$, so that $\kk_i = \set{g_i}$. Since this holds for all $1 \leq i \leq r$, then every conjugacy class of $G$ is a singleton set. Hence, for any $x, y \in G$, we have $xyx\inv = y$, so that $xy = yx$. Therefore, $G$ is abelian.
+	It is clear that $g_i \in C_G(g_j)$ for any two representatives $g_i$ and $g_j$. Let $S$ be the set of class representatives, so that we may write $S \subseteq C_G(g_i)$. Then $|C_G(g_i)| \geq |S| = r$ for all $i$. From the class equation, we get that
+	\[|G| = \sum_{i = 1}^r |G : C_G(g_i)| \leq \sum_{i = 1}^r \frac{|G|}{r} = |G|\]
+	Each term in the sum must be equal to $|G|/r$ so that $|C_G(g_i)| = r$ for all $i$. Therefore, $C_G(g_i) = S$ for all $i$. Recall that one of the $g_i$ must be 1, so that $C_G(1) = G$. Therefore, $G = S$, so that $G$ is abelian.
 \end{sol}
 
 \begin{exercise}
@@ -1564,4 +1566,88 @@ Let $G$ be a finite group and let $p$ be a prime.
 	Note that $105 = 3 \cdot 5 \cdot 7$. Recall that $n_7 \equiv 1 \bmod 7$ and $n_7 \mid 15$, so that $n_7 = 1$ or $15$. Moreover, $n_5 \equiv 1 \bmod 5$ and $n_5 \mid 21$, so that $n_5 = 1$ or $21$. Assume, by way of contradiction, that both $n_7 = 15$ and $n_5 = 21$. Then there are at least $15 \cdot 6 = 90$ elements of order 7 and at least $21 \cdot 4 = 84$ elements of order 5, giving a total of at least 174 elements, which is impossible. Therefore, either $n_7 = 1$ or $n_5 = 1$, so that there is a normal Sylow subgroup for either prime.
 
 	Without loss of generality, let $P \in \syl_5(G)$ be normal. Then $G/P$ has order 21, and $G/P$ contains a normal Sylow 7-subgroup $Q/P$. Taking the preimage of $Q/P$ under the projection homomorphism $\pi$, then $\pi\inv(Q/P)$ contains a normal Sylow 7-subgroup $Q$ of $G$. From Corollary 4.20, we know that $Q$ is characteristic in $\pi\inv(Q/P)$, and $\pi\inv(Q/P)$ is normal in $G$, so that $Q$ is normal in $G$ as well. Therefore, there is a normal Sylow 5-subgroup and a normal Sylow 7-subgroup in $G$.
+\end{sol}
+
+\begin{exercise}\label{ex4.5.18}
+	Prove that a group of order 200 has a normal Sylow 5-subgroup.
+\end{exercise}
+
+\begin{sol}
+	We have $n_5 \equiv 1 \bmod 5$, and $n_5 \mid 8$. The only choice is $n_5 = 1$, so that there is a normal Sylow 5-subgroup in the group.
+\end{sol}
+
+\begin{exercise}\label{ex4.5.19}
+	Prove that if $|G| = 6545$ then $G$ is not simple.
+\end{exercise}
+
+\begin{sol}
+	Note that $6545 = 5 \cdot 7 \cdot 11 \cdot 17$. Moreover, $n_5 \equiv 1 \bmod 5$ and $n_5 \mid 7 \cdot 11 \cdot 17 = 1309$. Since $n_5$ is not modulo 5 when it is 7, 77, or 1309, then $n_5 = 1$. Therefore, there is a normal Sylow 5-subgroup in $G$, so that $G$ is not simple.
+\end{sol}
+
+\begin{exercise}\label{ex4.5.20}
+	Prove that if $|G| = 1365$ then $G$ is not simple.
+\end{exercise}
+
+\begin{sol}
+	Note that $1365 = 3 \cdot 5 \cdot 7 \cdot 13$. Suppose that none of the $n_i \equiv 1 \bmod i$ for $i = 3, 5, 7, 13$ is equal to 1. Then $n_{13} = 1$ or 105, $n_7 = 1$ or 15, $n_5 = 1, 21$, or 91, and $n_3 = 1, 13$, or 91. Then the number of elements of order 13 is at least $105 \cdot 12 = 1260$, the number of elements of order 7 is at least $15 \cdot 6 = 90$, the number of elements of order 5 is at least $21 \cdot 4 = 84$, and the number of elements of order 3 is at least $13 \cdot 2 = 26$. This gives a total of at least $1260 + 90 + 84 + 26 = 1460$ elements, which is impossible. Therefore, there must be a normal Sylow subgroup in $G$, so that $G$ is not simple.
+\end{sol}
+
+\begin{exercise}\label{ex4.5.21}
+	Prove that if $|G| = 2907$ then $G$ is not simple.
+\end{exercise}
+
+\begin{sol}
+	Note that $2907 = 3^2 \cdot 17 \cdot 19$. Suppose that none of the $n_i \equiv 1 \bmod i$ for $i = 3, 17, 19$ is equal to 1. Then $n_{19} = 1$ or 153, $n_{17} = 1$ or 171, and $n_3 = 1$ or 19. Assuming that the Sylow 3-subgroups intersect nontrivially, then there are at least $19 \cdot 6 = 114$ elements of 3-power order, at least $153 \cdot 18 = 2754$ elements of order 19, and at least $171 \cdot 16 = 2736$ elements of order 17, giving a total of at least $114 + 2754 + 2736 = 5604$ elements, which is impossible. Therefore, there must be a normal Sylow subgroup in $G$, so that $G$ is not simple.
+\end{sol}
+
+\begin{exercise}\label{ex4.5.22}
+	Prove that if $|G| = 132$ then $G$ is not simple.
+\end{exercise}
+
+\begin{sol}
+	Note that $132 = 2^2 \cdot 3 \cdot 11$. Suppose that none of the $n_i \equiv 1 \bmod i$ for $i = 2, 3, 11$ is equal to 1. Then $n_{11} = 1$ or 12, $n_3 = 1$ or 22, and $n_2 = 1, 11$ or 33. Assuming that the Sylow 2-subgroups intersect nontrivially, then there are at least $11 \cdot 3 = 33$ elements of order 2-power order, at least $22 \cdot 2 = 44$ elements of order 3, and at least $12 \cdot 10 = 120$ elements of order 11, giving a total of at least $33 + 44 + 120 = 197$ elements, which is impossible. Therefore, there must be a normal Sylow subgroup in $G$, so that $G$ is not simple.
+\end{sol}
+
+\begin{exercise}\label{ex4.5.23}
+	Prove that if $|G| = 462$ then $G$ is not simple.
+\end{exercise}
+
+\begin{sol}
+	Note that $462 = 2 \cdot 3 \cdot 7 \cdot 11$. Since $n_{11} \equiv 1 \bmod 11$, and no divisor of $462/11 = 42$ is congruent to 1 modulo 11, then $n_{11} = 1$. Therefore, there is a normal Sylow 11-subgroup in $G$, so that $G$ is not simple.
+\end{sol}
+
+\begin{exercise}\label{ex4.5.24}
+	Prove that if $G$ is a group of order 231 then $Z(G)$ contains a Sylow 11-subgroup of $G$ and a Sylow 7-subgroup is normal in $G$.
+\end{exercise}
+
+\begin{sol}
+	Note that $231 = 3 \cdot 7 \cdot 11$. Since $n_{11} \equiv 1 \bmod 11$, and no divisor of $231/11 = 21$ is congruent to 1 modulo 11, then $n_{11} = 1$. Therefore, there is a normal Sylow 11-subgroup in $G$. Let $P$ be the Sylow 11-subgroup so that $P \nsub G$. We proceed similarly to the text regarding groups of order $pq$. Since $P$ is normal, then $G/C_G(P)$ is isomorphic to a subgroup of $\aut(P)$. Since $P \cong Z_{11}$, then $|\aut(P)| = 10$. Moreover, the image of the action of $G$ on $P$ by conjugation has order dividing 10 but also divides 231, so that the image is trivial. Therefore, $G/C_G(P)$ is trivial, so that $C_G(P) = G$. This means that $P \leq Z(G)$, so that $Z(G)$ contains a Sylow 11-subgroup of $G$.
+
+	Next, we show that a Sylow 7-subgroup is normal in $G$. Since $n_7 \equiv 1 \bmod 7$ and no divisor of 33 is congruent to 1 modulo 7, then $n_7 = 1$. Therefore, there is a normal Sylow 7-subgroup in $G$.
+\end{sol}
+
+\begin{exercise}\label{ex4.5.25}
+	Prove that if $G$ is a group of order 385 then $Z(G)$ contains a Sylow-7 subgroup of $G$ and a Sylow 11-subgroup is normal in $G$.
+\end{exercise}
+
+\begin{sol}
+	Note that $385 = 5 \cdot 7 \cdot 11$. Since $n_7 \equiv 1 \bmod 7$, and no divisor of $385/7 = 55$ is congruent to 1 modulo 7, then $n_7 = 1$. Therefore, there is a normal Sylow 7-subgroup in $G$. Let $P$ be the Sylow 7-subgroup so that $P \nsub G$. Similarly to the previous problem, it's trivial to see that $|\aut(P)| = 6$, and the image of the action of $G$ on $P$ by conjugation has order dividing 6 but also divides 385, so that the image is trivial. Therefore, $G/C_G(P)$ is trivial, so that $C_G(P) = G$. This means that $P \leq Z(G)$, so that $Z(G)$ contains a Sylow 7-subgroup of $G$.
+
+	Next, we show that a Sylow 11-subgroup is normal in $G$. Since $n_{11} \equiv 1 \bmod 11$ and no divisor of 35 is congruent to 1 modulo 11, then $n_{11} = 1$. Therefore, there is a normal Sylow 11-subgroup in $G$.
+\end{sol}
+
+\begin{exercise}\label{ex4.5.26}
+	Let $G$ be a group of order 105. Prove that if a Sylow 3-subgroup of $G$ is normal then $G$ is abelian.
+\end{exercise}
+
+\begin{sol}
+	Let $P$ be the Sylow 3-subgroup of $G$. Since $P$ is normal, then $|G/P| = 35$. Then $|\aut(P)| = 2$, so that the image of the action of $G$ on $P$ by conjugation has order dividing 2 but also divides 35, so that the image is trivial. Therefore, $G/C_G(P)$ is trivial, so that $C_G(P) = G$. This means that $P \leq Z(G)$, so that $Z(G)$ contains a Sylow 3-subgroup of $G$. In particular, $|G/Z(G)| \leq |G/P| = 35$. Since groups of order 35 are cyclic and $|G/Z(G)|$ divides 35, then $G/Z(G)$ is cyclic. By \hyperref[ex3.1.36]{Exercise 3.1.36}, then $G$ is abelian.
+\end{sol}
+
+\begin{exercise}\label{ex4.5.27}
+	Let $G$ be a group of order 315 which has a normal Sylow 3-subgroup. Prove that $Z(G)$ contains a Sylow 3-subgroup of $G$ and deduce that $G$ is abelian.
+\end{exercise}
+
+\begin{sol}
+	Let $P$ be the Sylow 3-subgroup of $G$. Note that $|P| = 9$, and $|G/P| = 35$. Then either $P \cong Z_9$ or $P \cong Z_3 \times Z_3$. In the first case, $|\aut(P)| = 6$, and in the second case, $|\aut(P)| = 48$. In both cases, $|\aut(P)|$ divides $|G/P| = 35$, so that the image of the action of $G$ on $P$ by conjugation is trivial. Therefore, $G/C_G(P)$ is trivial, so that $C_G(P) = G$. This means that $P \leq Z(G)$, so that $Z(G)$ contains a Sylow 3-subgroup of $G$. In particular, $|G/Z(G)| \leq |G/P| = 35$. Since groups of order 35 are cyclic and $|G/Z(G)|$ divides 35, then $G/Z(G)$ is cyclic. By \hyperref[ex3.1.36]{Exercise 3.1.36}, then $G$ is abelian.
 \end{sol}
