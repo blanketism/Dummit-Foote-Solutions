@@ -1651,3 +1651,78 @@ Let $G$ be a finite group and let $p$ be a prime.
 \begin{sol}
 	Let $P$ be the Sylow 3-subgroup of $G$. Note that $|P| = 9$, and $|G/P| = 35$. Then either $P \cong Z_9$ or $P \cong Z_3 \times Z_3$. In the first case, $|\aut(P)| = 6$, and in the second case, $|\aut(P)| = 48$. In both cases, $|\aut(P)|$ divides $|G/P| = 35$, so that the image of the action of $G$ on $P$ by conjugation is trivial. Therefore, $G/C_G(P)$ is trivial, so that $C_G(P) = G$. This means that $P \leq Z(G)$, so that $Z(G)$ contains a Sylow 3-subgroup of $G$. In particular, $|G/Z(G)| \leq |G/P| = 35$. Since groups of order 35 are cyclic and $|G/Z(G)|$ divides 35, then $G/Z(G)$ is cyclic. By \hyperref[ex3.1.36]{Exercise 3.1.36}, then $G$ is abelian.
 \end{sol}
+
+\begin{exercise}\label{ex4.5.28}
+	Let $G$ be a group of order 1575. Prove that if a Sylow 3-subgroup of $G$ is normal, then a Sylow 5-subgroup and a Sylow 7-subgroup are normal. In this situation prove that $G$ is abelian.
+\end{exercise}
+
+\begin{sol}
+	Note that $|G| = 3^2 \cdot 5^2 \cdot 7$. Let $P$ be the normal Sylow-3 subgroup of $G$. Let $Q$ be a Sylow 5-subgroup and $R$ be a Sylow 7-subgroup of $G$. Since $P \nsub G$, then $PQ \leq G$ and $PR \leq G$ with orders $3^2 \cdot 5^2$ and $3^2 \cdot 7$ respectively. 
+
+	Consider a Sylow 5-subgroup of $PQ$. Note that $n_5(PQ) \equiv 1 \bmod 5$ and $n_5(PQ) \mid 9$, so that $n_5(PQ) = 1$. Therefore, there is a normal Sylow 5-subgroup in $PQ$, which must be $Q$ since $Q$ is a Sylow 5-subgroup of $PQ$. It also follows that $P \leq N_{PQ}(Q) \leq N_G(Q)$. Since $|G : N_G(Q)|$ divides $|G : PQ| = 7$ so that $n_5(G) = 1$. We may use similar reasoning to show that $n_7(G) = 1$ as well. Therefore, there is a normal Sylow 5-subgroup and a normal Sylow 7-subgroup in $G$. Moreover, it is easy to see that the subgroups $P, Q$, and $R$ are all abelian since $p^2$-order groups are abelian, and $R$ has prime order hence it is cyclic.
+
+	Observe that the pairwise intersections of $P, Q$, and $R$ are trivial since their orders are pairwise coprime. Then $PQR \leq G$ and $|PQR| = 3^2 \cdot 5^2 \cdot 7 = |G|$, so that $G = PQR$. Since $P, Q$, and $R$ are all abelian, then $G$ is abelian as well.
+\end{sol}
+
+\begin{specialexercise}\label{ex4.5.29}
+	If $G$ is a non-abelian simple group of order $< 100$, prove that $G \cong A_5$. (Eliminate all orders but 60.)
+\end{specialexercise}
+
+\begin{sol}
+	Let $p, q, r$ be distinct primes. From the text, orders of 12, 30, $pq$, and $p^2q$ where $p < q$ are eliminated. Moreover, orders of $p$ are eliminated as they are cyclic, $p^n$ are eliminated as they have nontrivial centers by Theorem 4.8, and $pqr$ are eliminated by \hyperref[ex4.5.16]{Exercise 4.5.16}. The only remaining orders are 24, 36, 40, 48, 54, 56, 72, 80, 84, 90, and 96. We examine each in detail:
+	\begin{itemize}
+		\item $|G| = 24$: If $n_3 = 4$, then we may have $G$ acting on the set of Sylow 3-subgroups by conjugation. Simplicity of $G$ implies that $\ker\phi$ is either trivial or all of $G$. If $\ker\phi = \set 1$, then $G \cong S_4$, which is not simple. If $\ker\phi = G$, then every Sylow 3-subgroup is normal, which is also a contradiction. 
+		\item $|G| = 36$: If $n_3 = 4$, let $P_1$ and $P_2$ be two distinct Sylow 3-subgroups. Observe that $P_1 \cap P_2 \geq 3$ since $P_1P_2$ would have 81 elements otherwise. Then $N_G(P_1 \cap P_2)$ contains both $P_1$ and $P_2$. Moreover, $P_1 \subseteq N_G(P_1 \cap P_2)$ and $P_2 \subseteq N_G(P_1 \cap P_2)$. Then $|N_G(P_1 \cap P_2)|$ is a multiple of 9 but cannot be 9, since $P$ and $Q$ are both contained such that $P \neq Q$ as $n_3 = 4$. Then $|N_G(P_1 \cap P_2)|$ is either 18 or 36. If it is the former, then it has index 2 which means $N_G(P_1 \cap P_2)$ is normal in $G$, which is a contradiction. If it is the latter, then $P_1 \cap P_2$ is normal in $G$, which is also a contradiction. 
+		\item $|G| = 40$: Note that $n_5 \equiv 1 \bmod 5$ and $n_5 \mid 8$, so that $n_5 = 1$. Therefore, there is a normal Sylow 5-subgroup in $G$, which is a contradiction.
+		\item $|G| = 48$: By simplicity, we see that $n_2 = 3$. Let $P$ and $Q$ be distinct Sylow-2 subgroups. Note that $|P \cap Q|$ cannot be 1 or 16 as $P$ and $Q$ are distinct. Moreover, they cannot be 2 or 4 since $|PQ|$ would be 128 or 16. Then $|P \cap Q| = 8$. Consider its normalizer $N_G(P \cap Q)$. Observe that $|N_G(P \cap Q)| > 16$ since $P$ and $Q$ are distinct, and the normalizer also divides 48. It follows that $|N_G(P \cap Q)| = 48$ so that $P \cap Q \nsub G$, which is a contradiction.
+		\item $|G| = 54$: Note that $n_3 \equiv 1 \bmod 3$ and $n_3 \mid 2$, so that $n_3 = 1$. Therefore, there is a normal Sylow 3-subgroup in $G$, which is a contradiction.
+		\item $|G| = 56$: If $n_7 = 8$, then there are at least $8 \cdot 6 = 48$ elements of order 7, leaving 8 elements left. Since $|P| = 8$ for some $P \in \syl_2(G)$, then we only have room for one Sylow 2-subgroup, so that $n_2 = 1$. Therefore, there is a normal Sylow 2-subgroup in $G$, which is a contradiction.
+		\item $|G| = 72$: Suppose $n_3 = 4$. Then the induced homomorphism $\phi : G \to S_4$ cannot have a non-trivial kernel. Then $G$ has a non-trivial normal subgroup, which is a contradiction.
+		\item $|G| = 80$: If $n_6 = 16$, then there are at least $16 \cdot 4 = 64$ elements of order 5, leaving only 16 elements left. Since $|P| = 16$ for some $P \in \syl_2(G)$, then we only have room for one Sylow 2-subgroup, so that $n_2 = 1$. Therefore, there is a normal Sylow 2-subgroup in $G$, which is a contradiction.
+		\item $|G| = 84$: Since $n_7 \equiv 1 \bmod 7$ and $n_7 \mid 12$, then $n_7 = 1$. Therefore, there is a normal Sylow 7-subgroup in $G$, which is a contradiction.
+		\item $|G| = 90$: If $n_5 = 6$, then there are at least 24 elements of order 5. Moreover, $n_3 = 10$ such that all the Sylow-3 subgroups intersect trivially, then there are at least $10 \cdot 8 = 80$ elements of order 3, which is impossible. Then the Sylow-3 subgroups must intersect nontrivially. If $P, Q \in \syl_3(G)$ such that $|P \cap Q| = 3$, we may use a similar argument as in $|G| = 36$ to determine that $N_G(P \cap Q)$ has order 45 or 90.
+		\item $|G| = 96$: We have that either $n_3 = 4$ or $n_3 = 16$, since $n_3 \mid 32$. Consider $N_G(P)$ for some $P \in \syl_3(G)$. Then $|G : N_G(P)| = 4$ if $n_3 = 4$ so that an induced homomorphism from $G$ to $S_4$ has a non-trivial kernel, which is a contradiction. If $n_3 = 16$, we may use the same arguments as $|G| = 36$ or 90 to show a contradiction as well.
+	\end{itemize}
+	By Theorem 4.23, we know that simple groups of order 60 are isomorphic to $A_5$. Therefore, if $G$ is a non-abelian simple group of order less than 100, then $G \cong A_5$.
+\end{sol}
+
+\begin{exercise}\label{ex4.5.30}
+	How many elements of order 7 must there be in a simple group of order 168?
+\end{exercise}
+
+\begin{sol}
+	Note that $168 = 2^3 \cdot 3 \cdot 7$. Since $n_7 \equiv 1 \bmod 7$ and $n_7 \mid 24$, then $n_7 = 1$ or $8$. If $n_7 = 1$, then there is a normal Sylow 7-subgroup in the group, which is a contradiction. Therefore, $n_7 = 8$. Since each Sylow-7 subgroup has 6 elements of order 7, and the Sylow-7 subgroups intersect trivially, then there are $8 \cdot 6 = 48$ elements of order 7 in a simple group of order 168.
+\end{sol}
+
+\begin{exercise}\label{ex4.5.31}
+	For $p = 2, 3$ and 5, find $n_p(A_5)$ and $n_p(S_5)$. (Note that $A_4 \leq A_5$.)
+\end{exercise}
+
+\begin{sol}
+	Recall that $A_5$ is simple. Then for $A_5$:
+	\begin{itemize}
+		\item $n_2(A_5)$: Since $A_4 \leq A_5$ and $A_4$ contains 3 Sylow-2 subgroups, then $n_2(A_5) \geq 3$. Note that the elements of any $P \in \syl_2(A_5)$ are of the form $(a\ b)(c\ d)$. Then there are 15 elements of order 2 in $A_5$, and each Sylow-2 subgroup has 3 elements of order 2, so that there are $15/3 = 5$ Sylow-2 subgroups in $A_5$.
+		\item $n_3(A_5)$: Since $A_5$ contains 20 elements of order 3, and each Sylow-3 subgroup has 2 elements of order 3, then there are $20/2 = 10$ Sylow-3 subgroups in $A_5$.
+		\item $n_5(A_5)$: Since $n_5 \equiv 1 \bmod 5$ and $n_5 \mid 12, n_5(A_5) = 6$.
+	\end{itemize}
+	For $S_5$:
+	\begin{itemize}
+		\item $n_2(S_5)$: Consider subgroups of the form $\gen{(a\ b\ c\ d), (a\ c)}$ where $a$ is minimal out of the 4 integers. Subgroups of this form can be checked to see that they are indeed order 8 and are thus Sylow-2 subgroups (in fact, these are isomorphic to $D_8$). We may construct 15 such subgroups so that $n_2(S_5) \geq 15$. Since $n_2 \equiv 1 \bmod 2$ and $n_2 \mid 15$, then $n_2(S_5) = 15$.
+		\item $n_3(S_5)$: We may use a similar counting argument as $n_2(A_5)$ to show that there are 10 Sylow-3 subgroups in $S_5$ as well.
+		\item $n_5(S_5)$: Since we have more than two Sylow-5 subgroups in $S_5$, then $n_5(S_5) = 6$.
+	\end{itemize}	
+\end{sol}
+
+\begin{exercise}\label{ex4.5.32}
+	Let $P$ be a Sylow $p$-subgroup of $H$ and let $H$ be a subgroup of $K$. If $P \nsub H$ and $H \nsub K$, prove that $P$ is normal in $K$. Deduce that if $P \in \syl_p(G)$ and $H = N_G(P)$, then $N_G(H) = H$ (in words: normalizers of Sylow $p$-subgroups are self-normalizing).
+\end{exercise}
+
+\begin{sol}
+	Let $k \in K$. Note that $kPk\inv \leq kHk\inv = H$ since $H \nsub K$. Moreover, $kPk\inv$ is a Sylow $p$-subgroup of $H$ since $P$ is a Sylow $p$-subgroup of $H$. However, $P \nsub H$ implies that $P$ is the unique Sylow $p$-subgroup of $H$. Therefore, $kPk\inv = P$, so that $P \nsub K$.
+
+	By assumption, $P \nsub H$ and $H \nsub N_G(H)$ by definition. The previous part shows that $P \nsub N_G(H)$. Since $P$ is a Sylow $p$-subgroup of $H$, then $P$ is a Sylow $p$-subgroup of $N_G(H)$ as well. Then by the previous part, $P \nsub N_G(H)$ implies that $N_G(H) \nsub N_G(H)$, so that $N_G(H) = H$.
+\end{sol}
+
+\begin{exercise}\label{ex4.5.33}
+	Let $P$ be a normal $p$-subgroup of $G$ and let $H$ be any subgroup of $G$. Prove that $P \cap H$ is the unique Sylow $p$-subgroup of $H$.
+\end{exercise}
