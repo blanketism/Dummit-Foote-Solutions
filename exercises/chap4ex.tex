@@ -1724,5 +1724,17 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{sol}
 
 \begin{exercise}\label{ex4.5.33}
-	Let $P$ be a normal $p$-subgroup of $G$ and let $H$ be any subgroup of $G$. Prove that $P \cap H$ is the unique Sylow $p$-subgroup of $H$.
+	Let $P$ be a normal Sylow $p$-subgroup of $G$ and let $H$ be any subgroup of $G$. Prove that $P \cap H$ is the unique Sylow $p$-subgroup of $H$.
 \end{exercise}
+
+\begin{sol}
+	Assume that $P \cap H$ is not the unique Sylow $p$-subgroup of $H$. Then there is some $Q \in \syl_p(H)$ such that $P \cap H$ is not contained in $Q$. Since $P \nsub G$ and $Q$ is a $p$-subgroup of $G$, then $Q \leq P$ since $P$ is the unique Sylow $p$-subgroup of $G$. Moreover, $Q \leq H$, so that $Q \leq P \cap H$, which is a contradiction. Therefore, $P \cap H \nsub H$.
+\end{sol}
+
+\begin{exercise}\label{ex4.5.34}
+	Let $P \in \syl_p(G)$ and assume $N \nsub G$. Use the conjugacy part of Sylow's Theorem to prove that $P \cap N$ is a Sylow $p$-subgroup of $N$. Deduce that $PN/N$ is a Sylow $p$-subgroup of $G/N$ (note that this may also be done by the Second Isomorphism Theorem—cf. \hyperref[ex3.3.9]{Exercise 3.3.9}).
+\end{exercise}
+
+\begin{sol}
+	We first note that it is clear that for any $g \in G$, then $g(P \cap N)g\inv = (gPg\inv) \cap (gNg\inv) = (gPg\inv) \cap N$ since $N \nsub G$. Since $P$ is a Sylow $p$-subgroup of $G$, then $gPg\inv$ is also a Sylow $p$-subgroup of $G$. Moreover, $P \cap N$ is a 
+\end{sol}
