@@ -1795,5 +1795,118 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	
+	Let $G$ act on $\syl_p(G) = \{P_1, P_2, \ldots P_{n_p}\}$ by conjugation. Note that $P = P_1$ also acts on $\syl_p(G)$ by conjugation, which we can then decomposte into the orbits
+	\[\syl_p(G) = \oo_1 \cup \oo_2 \cup \cdots \cup \oo_k, \quad n_p = \sum_{i = 1}^k |\oo_i|\]
+	By definition, $|\oo_i| = |P : N_P(P_i)|$. Using Lemma 4.19, we see that $N_P(P_i) = P \cap N_G(P_i) = P \cap P_i$, hence $|\oo_i| = |P : P \cap P_i|$. We also note that $|\oo_1| = 1$ since $P \in \syl_p(G)$ is fixed by the action of $P$ on $\syl_p(G)$ by conjugation, and $|\oo_i| > 1$ for $i > 1$ since $P_i$ is not fixed by the action of $P$ on $\syl_p(G)$ by conjugation.
+
+	By definition, each $P_i$ is a $p$-group, hence their intersections are also $p$-groups. It follows that each $|\oo_i|$ is a power of $p$. If the orders of each $\oo_i$ are all at least $p^2$, hence
+	\[n_p = |\oo_1| + \sum_{i = 2}^k |\oo_i| \equiv 1 \bmod p^2\]
+	Then $n_p$ is congruent to $1 \bmod p^2$, which is a contradiction. Therefore, there exists some $i > 1$ such that $|\oo_i| = p$. Let $Q = P_i$. Then $|P : P \cap Q| = p$ as desired. By symmetry, we also have that $|Q : P \cap Q| = p$.
+\end{sol}
+
+\begin{exercise}\label{ex4.5.39}
+	Show that the subgroup of strictly upper triangular matrices in $\gl_n(\f_p)$ (cf. \hyperref[ex2.1.17]{Exercise 2.1.17}) is a Sylow $p$-subgroup of this finite group. (Use the order formula in Section 1.4 to find the order of a Sylow $p$-subgroup of $\gl_n(\f_p)$.)
+\end{exercise}
+
+\begin{sol}
+	According to the definition of $\gl_n(\f_p)$, we have that
+	\[|\gl_n(\f_p)| = \prod_{i = 0}^{n-1} (p^n - p^i) = p^{n(n - 1)/2} \prod_{i = 1}^n (p^i - 1)\]
+	Then the order of a Sylow $p$-subgroup of $\gl_n(\f_p)$ is $p^{n(n - 1)/2}$. Let $P$ be the subgroup of strictly upper triangular matrices in $\gl_n(\f_p)$. We know by \hyperref[ex2.1.17]{Exercise 2.1.17} that $P$ is a subgroup of $\gl_n(\f_p)$. If the main diagonal of a matrix in $P$ are all 1's, then there are $n(n - 1)/2$ entries above the main diagonal, and each entry can be any element of $\f_p$. It follows that $|P| = p^{n(n - 1)/2}$, so that $P$ is a Sylow $p$-subgroup of $\gl_n(\f_p)$.
+\end{sol}
+
+\begin{exercise}\label{ex4.5.40}
+	Prove that the number of Sylow $p$-subgroups of $\gl_2(\f_p)$ is $p + 1$. (Exhibit two distinct Sylow $p$-subgroups.)
+\end{exercise}
+
+\begin{sol}
+	Since $n_p = |G : N_P(G)|$ for any $P \in \syl_p(G)$, we can find $n_p$ by finding the normalizer of a Sylow $p$-subgroup of $\gl_2(\f_p)$. Let $P$ be the subgroup of strictly upper triangular matrices in $\gl_2(\f_p)$. We have that
+	\[P = 
+	\left\{\left.
+		\begin{pmatrix}
+			1 & a \\
+			0 & 1
+		\end{pmatrix}~\right| a \in \f_p
+	\right\}
+	= 
+	\left\langle
+		\begin{pmatrix}
+			1 & 1 \\
+			0 & 1
+		\end{pmatrix}
+	\right\rangle
+	\]
+	Let $A$ be the generator of $P$. Let $X \in G$ be an arbitrary element of $\gl_2(\f_p)$. For $X$ to be in $N_G(P)$, then we must have that $XAX\inv \in P$, or $XAX\inv = A^k$ for some $k \in \f_p$. Let
+	\[X =
+	\begin{pmatrix}
+		a & b \\
+		c & d
+	\end{pmatrix}, \quad
+	X\inv =
+	\frac{1}{ad - bc}
+	\begin{pmatrix}
+		d & -b \\
+		-c & a
+	\end{pmatrix}
+	\]
+	Then we have that
+	\[XAX\inv =
+	\frac{1}{ad - bc}
+	\begin{pmatrix}
+		ad - ac - bc & a^2 \\
+		-c^2 & -bc + ac + ad
+	\end{pmatrix}
+	\]
+	For $XAX\inv$ to be in $P$, we must have that $c = 0$. It follows that
+	\[
+	XAX\inv = 
+	\frac{1}{ad}
+	\begin{pmatrix}
+		ad & a^2 \\
+		0 & ad
+	\end{pmatrix}, \quad
+	N_G(P) = 
+	\left\{\left.
+		\begin{pmatrix}
+			a & b \\
+			0 & d
+		\end{pmatrix}~\right| a, d \in \f_p^\times, b \in \f_p
+	\right\}
+	\]
+	where $a, d \in \f_p\unt$ since $X$ must be invertible. We have that $|N_G(P)| = p(p - 1)^2$, so that
+	\[n_p = |G : N_G(P)| = \frac{|\gl_2(\f_p)|}{|N_G(P)|} = \frac{p(p - 1)^2(p + 1)}{p(p - 1)^2} = p + 1 \qh\]
+\end{sol}
+
+\np
+
+\begin{exercise}\label{ex4.5.41}
+	Prove that $\speclin_2(\f_4) \cong A_5$ (cf. \hyperref[ex2.1.9]{Exercise 2.1.9} for the definition of $\speclin_2(\f_4)$).
+\end{exercise}
+
+\begin{sol}
+	It is clear that $|\speclin_2(\f_4)| = 60$. Moreover, $n_5 \equiv 1 \bmod 5$, so we only need to exhibit 2 distinct Sylow-5 subgroups of $\speclin_2(\f_4)$ to show that $\speclin_2(\f_4)$ is simple.
+
+	Let $\alpha$ and $\beta$ be the two remaining elements of $\f_4$ that aren't 0 or 1. Since $\f_4\unt$ is cyclic, then $\alpha$ and $\beta$ are generators of $\f_4\unt$, are inverses of each other, and satisfy $\alpha^2 = \beta$ and $\beta^2 = \alpha$, hence $\f_4 = \{0, 1, \alpha, \alpha^2\}$. We also claim that $\f_4 \cong V_4$ as additive groups. If $\f_4 \cong \intmod[4]$ instead, then we may suppose that $1 + 1 = \alpha$. Then $(1 + 1)(1 + 1) = \alpha^2 \neq 1$. But by distribution, we have that $(1 + 1)(1 + 1) = 1 + 1 + 1 + 1 = 0$, which is a contradiction. Therefore, $\f_4 \cong V_4$, and every element has additive order 2.
+
+	To find two distinct Sylow-5 groups of $\speclin_2(\f_4)$, we first find an element of order 5 in $\speclin_2(\f_4)$. Noting that $\alpha + 1 = \alpha^2$, consider the matrix
+	\[A =
+	\begin{pmatrix}
+		0 & 1 \\
+		1 & \alpha
+	\end{pmatrix}
+	\]
+	Then we have that
+	\[A^2 =
+	\begin{pmatrix}
+		1 & \alpha \\
+		\alpha & \alpha^2 + 1
+	\end{pmatrix}
+	\]
+	where $\alpha^2 + 1 = 1 + \alpha + 1 = \alpha$. We also have
+	\[A^3 =
+	\begin{pmatrix}
+		\alpha & \alpha \\
+		\alpha & 1
+	\end{pmatrix}
+	\]
+	In computing $A^3 \cdot A^2$, we obtain $\alpha^2 + \alpha = \alpha(\alpha + 1) = 1$ so that $|A| = 5$. Considering $B$ with $\alpha^2$ in place of $\alpha$ in $A$, it can be similarly concluded that $|B| = 5$ with $\gen B \neq \gen A$. Since we have produced 2 distinct Sylow-5 subgroups of $\speclin_2(\f_4)$, then $\speclin_2(\f_4)$ is simple. By Theorem 4.23, we have that $\speclin_2(\f_4) \cong A_5$.
 \end{sol}
