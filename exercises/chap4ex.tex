@@ -751,7 +751,7 @@ Let $G$ be a group.
 	We proceed similarly to the preceding exercise. The generators of the first subgroup are $(1\ 2\ 3\ 4)$ and $(2\ 4)$, while the generators of the second subgrgoup are $(1\ 3\ 2\ 4)$ and $(3\ 4)$. We obtain $\tau = (2\ 3)$.
 \end{sol}
 
-\begin{specialexercise}
+\begin{specialexercise}\label{ex4.3.17}
 	Let $A$ be a nonempty set and let $X$ be any subset of $S_A$. Let
 	\[F(X) = \set{a \in A \mid \sigma(a) = a \text{ for all } \sigma \in X} \qquad \text{---the \textit{fixed set} of $X$}\]
 	Let $M(X) = A - F(X)$ be the elements which are \textit{moved} by some element of $X$. Let $D = \set{\sigma \in S_A \mid |M(\sigma)| < \infty}$. Prove that $D$ is a normal subgroup of $S_A$.
@@ -2036,17 +2036,131 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	
+	Assume for the sake of contradiction that $G$ is simple. We first note that $G$ is the union of its maximal subgroups, since every proper subgroup of $G$ is contained in a maximal subgroup. Moreover, conjugates of maximal subgroups are also maximal: if $M$ is a maximal subgroup of $G$ with $g \in G$ such that $gMg \inv \leq H$ for some $H \leq G$, then $M \leq g\inv Hg$ so that $g\inv Hg = G$ or $M$. It follows that $gMg\inv = G$ or $M$, hence $gMg\inv = M$ since $M$ is a proper subgroup of $G$. Therefore, $gMg\inv$ is a maximal subgroup of $G$. Lastly, simplicity of $G$ forces $M$ to be a non-normal subgroup, hence $N_G(M) = M$ by maximality of $M$.
+
+	We now show that there are at least two distinct conjugacy classes of maximal subgroups of $G$. Assume by way of contradiction that there is only one conjugacy class of maximal subgroups of $G$. Let $M$ be a maximal subgroup of $G$ such that for any maximal subgroup $N$ of $G$, there exists some $g \in G$ such that $gMg\inv = N$. Moreover, recall that the number of conjugates of $M$ is $|G : N_G(M)| = |G : M|$. Since conjugates intersect trivially by \hyperref[ex4.5.52]{Exercise 4.5.52}, then the number of elements in the union of all conjugates of $M$ is $|G : M|(|M| - 1) + 1$, or $|G| - |G : M| + 1$. However, $M \neq G$, hence $|G : M| > 1$, so that $|G| - |G : M| + 1 < |G|$. This is a contradiction since $G$ is the union of its maximal subgroups. Therefore, there are at least two distinct conjugacy classes of maximal subgroups of $G$.
+
+	Lastly, observe that $|M| \geq 2$ and $|N| \geq 2$ since $M$ and $N$ are non-abelian. It follows that
+	\[|G| - |G : M| - |G : N| = |G|\left(1 - \frac{1}{|M|} - \frac{1}{|N|}\right) \geq 0.\]
+	From this, we see that
+	\[|G| + (|G| - |G : M| - |G : N|) + 1 > |G|\]
+	so that $G$ has more than $|G|$ elements, which is a contradiction. Therefore, $G$ is not simple.
 \end{sol}
 
 \begin{exercise}\label{ex4.5.54}
 	Prove the following classification: if $G$ is a finite group of order $p_1p_2 \cdots p_r$ where the $p_i$'s are distinct primes such that $p_i$ does not divide $p_j - 1$ for all $i$ and $j$, then $G$ is cyclic. (By induction, every proper subgroup of $G$ is cyclic, so $G$ is not simple by the preceding exercise. If $N$ is a nontrivial proper normal subgroup, $N$ is cyclic and $G/N$ acts as automorphisms of $N$. Use Proposition 16 to show that $N \leq Z(G)$ and use induction to show $G/Z(G)$ is cyclic, hence $G$ is abelian by \hyperref[ex3.1.36]{Exercise 3.1.36}.)
 \end{exercise}
 
+\begin{sol}
+	We proceed by induction on $r$. For $r = 1$, then $|G| = p_1$ which implies that $G$ is cyclic.
+
+	Assume by way of contradiction that $G$ is not abelian. By \hyperref[ex4.5.53]{Exercise 4.5.53}, $G$ is not simple. Let $N$ be a nontrivial normal subgroup of $G$ with $|N| = q_1q_2 \cdots q_s$ are primes from $p_1, p_2, \ldots, p_r$. Moreover, $N$ is cyclic by the inductive hypothesis.
+
+	By $N \nsub G$, then $G$ acts on $N$ which induces the homomorphism $\psi : G \to \aut(N)$. Moreover, cyclicity of $N$ implies that
+	\[|\aut(N)| = \phi(|N|) = \prod_{i = 1}^s (q_i - 1).\]
+	By definition, we have that no $p_i$ divides any of $q_i - 1$, hence $\ker\psi = G$. It follows that $G$ acts trivially on $N$, so that $N \leq Z(G)$. We then see that $G/Z(G)$ is cyclic by the inductive hypothesis since $|G/Z(G)|$ divides $|G|$. By \hyperref[ex3.1.36]{Exercise 3.1.36}, $G$ is abelian, which is a contradiction. Therefore, $G$ is abelian.
+
+	Finally, we show that $G$ is cyclic. Let $g_i$ be a generator of the Sylow $p_i$-subgroup of $G$ for each $i$. Since the Sylow $p_i$-subgroups of $G$ are all cyclic, then $\gen{g_i} \cap \gen{g_j} = 1$ for all $i \neq j$. It follows that $g_1g_2 \cdots g_r$ has order $p_1p_2 \cdots p_r$, so that $G = \gen{g_1g_2 \cdots g_r}$ is cyclic.
+\end{sol}
+
 \begin{exercise}\label{ex4.5.55}
 	Prove the converse to the preceding exercise: if $n \geq 2$ is an integer such that every group of order $n$ is cyclic, then $n = p_1p_2 \cdots p_r$ is a product of distinct primes and $p_i$ does not divide $p_j - 1$ for all $i, j$. (If $n$ is not of this form, construct noncyclic groups of order $n$ using direct products of noncyclic groups of order $p^2$ and $pq$, where $p \mid q - 1$.)
 \end{exercise}
 
+\begin{sol}
+	We proceed by contrapositive, i.e., if $n$ is not a product of distinct primes, or if $n$ is a product of distinct primes but there exist some $i$ and $j$ such that $p_i \mid p_j - 1$, then there exists some non-cyclic group of order $n$.
+	\begin{itemize}
+		\item Suppose $n$ is not a product of distinct primes, i.e., $n = p^2m$ for some prime $p$ and some integer $m \geq 1$. Consider the group $\intmod[p] \times \intmod[p] \times \intmod[m]$. Note that $\intmod[p] \times \intmod[p]$ is a non-cyclic group of order $p^2$, since every non-identity element of $\intmod[p]$ has order $p$. If $G$ were cyclic, then the isomorphic copy of $\intmod[p] \times \intmod[p]$ in $G$, namely $\intmod[p] \times \intmod[p] \times \{0\}$, would also be cyclic, which is a contradiction. Therefore, $\intmod[p] \times \intmod[p] \times \intmod[m]$ is a non-cyclic group of order $n$.
+		\item By the text, if $p \mid q - 1$, then there exists a non-abelian group of order $pq$. Let $H$ be such a group, and let $m$ be an integer such that $n = pqm$, and $(pq, m) = 1$. Consider the group $H \times \intmod[m]$. Using similar reasoning as in the previous case, $(H \times \set 0) \cong H$ is a non-cyclic subgroup of $H \times \intmod[m]$, so that $H \times \intmod[m]$ is a non-cyclic group of order $n$. \qh
+	\end{itemize}
+\end{sol}
+
 \begin{exercise}\label{ex4.5.56}
 	If $G$ is a finite group in which every proper subgroup is abelian, show that $G$ is solvable.
 \end{exercise}
+
+\begin{sol}
+	We proceed by induction on $|G|$. If $G$ is abelian, then $G$ is solvable. Assume that the hypothesis holds for all groups of order less than $|G|$. If $G$ is not simple, then there exists some nontrivial normal subgroup $N$ of $G$. Since $N$ and $G/N$ are both groups in which every proper subgroup is abelian (specifically, $G/N$ has every proper subgroup abelian because each $H/N \leq G/N$ has some $H \leq G$ that is abelian, by hypothesis), then by the inductive hypothesis, $N$ and $G/N$ are solvable. It follows that $G$ is solvable as well. If $G$ is simple, then by \hyperref[ex4.5.53]{Exercise 4.5.53}, $G$ is abelian, hence solvable. Therefore, in either case, $G$ is solvable.
+\end{sol}
+
+\np
+
+\subsection{\texorpdfstring{The Simplicity of $A_n$}{The Simplicity of An}}
+
+Let $G$ be a group and let $\Omega$ be an infinite set.
+
+\begin{exercise}\label{ex4.6.1}
+	Prove that $A_n$ does not have a proper subgroup of index $< n$ for all $n \geq 5$.
+\end{exercise}
+
+\begin{sol}
+	Suppose $H \leq A_n$ is a proper subgroup of index $k < n$. Then $A_n$ acts on the left cosets of $H$ by left multiplication, inducing a homomorphism $\phi : A_n \to S_k$. Observe that $n/2 > 0$ for all $n \geq 5$. This lets us conclude that $\ker\phi$ must be non-trivial, for otherwise $\phi$ would be injective and $|A_n| \leq |S_k|$. However, $k < n$ implies $k \leq n - 1$, or $k! \leq (n - 1)! < n!/2 = |A_n|$, which is a contradiction. Since $\ker\phi$ is a non-trivial normal subgroup of $A_n$, then $\ker\phi = A_n$ since $A_n$ is simple for all $n \geq 5$. It follows that $\phi$ is the trivial homomorphism, so that $H = A_n$, which is a contradiction. Therefore, $A_n$ does not have a proper subgroup of index $< n$ for all $n \geq 5$.
+\end{sol}
+
+\begin{exercise}\label{ex4.6.2}
+	Find all normal subgroups of $S_n$ for all $n \geq 5$.
+\end{exercise}
+
+\begin{sol}
+	Observe some normal subgroups of $S_n$ are $1, A_n$, and $S_n$ for all $n \geq 5$. To see that these are the only normal subgroups of $S_n$, let $N \nsub S_n$ be a normal subgroup, and consider $N \cap A_n$. We claim that $N \cap A_n \nsub A_n$.
+
+	Let $\sigma \in N \cap A_n$. Then for any $\tau \in A_n$, we have that $\tau \sigma \tau\inv \in A_n$ since $A_n$ is a subgroup of $S_n$. Moreover, $\tau \sigma \tau\inv \in N$ since $N \nsub S_n$. It follows that $\tau \sigma \tau\inv \in N \cap A_n$, so that $N \cap A_n \nsub A_n$. Since $A_n$ is simple for all $n \geq 5$, then $N \cap A_n$ is either $1$ or $A_n$.
+	\begin{enumerate}
+		\item If $N \cap A_n = A_n$, then $A_n \subseteq N$. By maximality of $A_n$ in $S_n$, then $N = A_n$ or $N = S_n$.
+		\item If $N \cap A_n = 1$, consider $NA_n \leq S_n$ because $N \nsub S_n$ and $A_n \nsub S_n$. It follows that $|NA_n| = |N||A_n|$. Because $NA_n \leq S_n$, then $|NA_n| = |N||A_n| \leq |S_n|$, so that $|N| \leq 2$. If $|N| = 2$, then $N = \gen\rho$ for some order 2 element $\rho$. However, $N \nsub S_n$ implies that $\tau\rho\tau\inv = \rho$ for all $\tau \in S_n$, or that $\rho \in Z(S_n)$, which is a contradiction since $Z(S_n) = 1$ for all $n \geq 3$. Therefore, $|N| = 1$, so that $N = 1$. \qh
+	\end{enumerate}
+\end{sol}
+
+\begin{exercise}\label{ex4.6.3}
+	Prove that $A_n$ is the only proper subgroup of index $< n$ in $S_n$ for all $n \geq 5$.
+\end{exercise}
+
+\begin{sol}
+	Let $H \leq S_n$ be a proper subgroup where $|S_n : H| = k < n$. Then $S_n$ acts on the left cosets of $H$ by left multiplication, inducing a homomorphism $\phi : S_n \to S_k$. Observe that $n/2 > 0$ for all $n \geq 5$. This lets us conclude that $\ker\phi$ must be non-trivial, for otherwise $\phi$ would be injective and $|S_n| \leq |S_k|$. However, $k < n$ implies $k \leq n - 1$, or $k! \leq (n - 1)! < n! = |S_n|$, which is a contradiction. Since $\ker\phi$ is a non-trivial normal subgroup of $S_n$, then $\ker\phi = A_n$ or $\ker\phi = S_n$ since these are the only normal subgroups of $S_n$ for all $n \geq 5$. If $\ker\phi = S_n$, then $\phi$ is the trivial homomorphism, so that $H = S_n$, which is a contradiction. Therefore, $\ker\phi = A_n$, so that $A_n \subseteq H$. By maximality of $A_n$ in $S_n$, then $H = A_n$. Therefore, $A_n$ is the only proper subgroup of index $< n$ in $S_n$ for all $n \geq 5$.
+\end{sol}
+
+\begin{exercise}\label{ex4.6.4}
+	Prove that $A_n$ is generated by the set of all 3-cycles for each $n \geq 3$.
+\end{exercise}
+
+\begin{sol}
+	Let $S$ be the set of all 3-cycles in $A_n$. Observe that $\gen S \leq A_n$ since $S \subseteq A_n$. To show the other direction, let $\sigma \in A_n$. We show that two transpositions in $\sigma$ can be replaced by 3-cycles. There are two cases to discuss: Let $(a\ b), (c\ d)$ be two transpositions in $\sigma$.
+	\begin{itemize}
+		\item If $\{a, b\} \cap \{c, d\} = \emptyset$, then we can replace $(a\ b)(c\ d)$ by the product of 3-cycles $(a\ c\ d)(a\ d\ c)$.
+		\item If $\{a, b\} \cap \{c, d\} = \{x\}$ for some $x$, then we can replace $(a\ b)(c\ d)$ by the 3-cycle $(a\ c\ d)$ if $x = a$ or $x = c$, and by the 3-cycle $(b\ c\ d)$ if $x = b$ or $x = d$.
+	\end{itemize}
+\end{sol}
+
+\begin{exercise}\label{ex4.6.5}
+	Prove that if there exists a chain of subgroups $G_1 \leq G_2 \leq \cdots \leq G$ such that
+	\[G = \bigcup_{i = 1}^\infty G_i\]
+	and each $G_i$ is simple, then $G$ is simple.
+\end{exercise}
+
+\begin{sol}
+	Let $N \nsub G$. We first note that $N \cap G_i \nsub G_i$ for every $i$ as follows: for some $x \in N \cap G_i$ and $g \in G_i$, then $gxg\inv \in G_i$ since $G_i$ is a subgroup of $G$. Moreover, $gxg\inv \in N$ since $N \nsub G$. It follows that $gxg\inv \in N \cap G_i$, so that $N \cap G_i \nsub G_i$.
+
+	By simplicity of each $G_i$, then $N \cap G_i$ is either $1$ or $G_i$. If $N \cap G_i = G_i$ for some $i$, then $G_i \subseteq N$. In particular, we have for some $G_j$ with $j > i$ that $G_i \subseteq G_j \subseteq N$, so that $N = G$. If $N \cap G_i = 1$ for all $i$, then $N$ is the union of the trivial subgroup, so that $N = 1$. Therefore, in either case, $N$ is either $1$ or $G$, so that $G$ is simple.
+\end{sol}
+
+\begin{exercise}\label{ex4.6.6}
+	Let $D$ be the subgroup of $S_\Omega$ consisting of permutations which move only a finite number of elements of $\Omega$ (described in \hyperref[ex4.3.17]{Exercise 4.3.17}), and let $A$ be the set of all elements $\sigma \in D$ such that $\sigma$ acts as an even permutation on the (finite) set of points it moves. Prove that $A$ is an infinite simple group. (Show that every pair of elements of $D$ lie in a finite simple subgroup of $D$.)
+\end{exercise}
+
+\begin{sol}
+	Note that for $\sigma, \tau \in A$, then $\sigma\tau\inv$ is an even permutation on the set of points moved by $\sigma$ and $\tau$, so that $A$ is a subgroup of $D$. Moreover, $A$ is normal in $D$ since for any $\sigma \in A$ and any $\tau \in D$, then $\tau\sigma\tau\inv$ is an even permutation on the set of points moved by $\sigma$ and $\tau$, so that $\tau\sigma\tau\inv \in A$. Therefore, $A \nsub D$. Moreover, $A$ is infinite since $\Omega$ is infinite, so that there are infinitely many even permutations on $\Omega$ that move only a finite number of elements of $\Omega$.
+
+	Since $\Omega$ is infinite, for each $n \geq 5$, we can consider the subset $\Omega_n$ such that $|\Omega_n| = n$, and $\Omega_n \subseteq \Omega_{n + 1}$ for all $n$. Define
+	\[B_n = \set{\sigma \in A \mid M(\sigma) \subseteq \Omega_n}\]
+	Consider the bijection $\phi : B_n \to A_n$ defined by $\phi(\sigma) = \sigma|_{\Omega_n}$, where $\sigma|_{\Omega_n}$ is the restriction of $\sigma$ to $\Omega_n$. It is clear that this is a homomorphism, hence $B_n \cong A_n$. Moreover, $B_n$ is simple since $A_n$ is simple for all $n \geq 5$. Considering the chain of subgroups $B_5 \leq B_6 \leq \cdots$, we see that
+	\[A = \bigcup_{n = 5}^\infty B_n.\]
+	By \hyperref[ex4.6.5]{Exercise 4.6.5}, $A$ is simple.
+\end{sol}
+
+\begin{exercise}\label{ex4.6.7}
+	Under the notation of the preceding exercise, prove that if $H \nsub S_\Omega$ and $H \neq 1$, then $A \leq H$, i.e., $A$ is the unique (nontrivial) minimal normal subgroup of $S_\Omega$.
+\end{exercise}
+
+\begin{sol}
+	We first show that $H$ contains a 3-cycle. Consider some nonidentity $\sigma \in H$
+\end{sol}
