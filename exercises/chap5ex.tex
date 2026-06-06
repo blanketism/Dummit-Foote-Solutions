@@ -294,3 +294,297 @@
     \[\phi((a_1, a_2, a_3, \ldots)) = ((a_1, a_3, a_5, \ldots), (a_2, a_4, a_6, \ldots)).\]
     It is clear that $\phi$ is a homomorphism. Moreover, if $\phi((a_1, a_2, a_3, \ldots)) = ((0, 0, 0, \ldots), (0, 0, 0, \ldots))$, then $a_i = 0$ for all $i$, so $\phi$ is injective. Finally, let $((b_1, b_2, b_3, \ldots), (c_1, c_2, c_3, \ldots))$ be an element of $G \times G$. Then $\phi((b_1, c_1, b_2, c_2, b_3, c_3, \ldots)) = ((b_1, b_2, b_3, \ldots), (c_1, c_2, c_3, \ldots))$, so $\phi$ is surjective. Thus, $\phi$ is an isomorphism and $G \cong G \times G$.
 \end{solalph}
+
+\newpage
+
+\subsection{The Fundamental Theorem of Finitely Generated Abelian Groups}
+
+\begin{exercise}\label{ex5.2.1}
+    In each parts (a) to (e), give the number of nonisomorphic abelian groups of the specified order---do not list the groups:
+
+    \noindent (a) order 100, \quad (b) order 576, \quad (c) order 1155, \quad (d) order 42875, \quad (e) order 2704.
+\end{exercise}
+
+\begin{solalph}
+    \item $100 = 2^2 \cdot 5^2$; 2 partitions of 2, hence $2 \cdot 2 = 4$ nonisomorphic abelian groups of order 100.
+    \item $576 = 2^6 \cdot 3^2$; 11 partitions of 6, hence $11 \cdot 2 = 22$ nonisomorphic abelian groups of order 576.
+    \item $1155 = 3 \cdot 5 \cdot 7 \cdot 11$. Only one abelian group of order 1155.
+    \item $42875 = 5^3 \cdot 7^3$; 3 partitions of 3, hence $3 \cdot 3 = 9$ nonisomorphic abelian groups of order 42875.
+    \item $2704 = 2^4 \cdot 13^2$; 5 partitions of 4, hence $5 \cdot 2 = 10$ nonisomorphic abelian groups of order 2704.
+\end{solalph}
+
+\begin{exercise}\label{ex5.2.2}
+    In each of parts (a) to (e), give the lists of invariant factors for all abelian groups of the specified order:
+
+    \noindent (a) group 270, \quad (b) order 9801, \quad (c) order 320, \quad (d) order 105, \quad (e) order 44100.
+\end{exercise}
+
+\begin{solalph}
+    \item $270 = 2 \cdot 3^3 \cdot 5$. The invariant factors are $\set{270}, \set{90, 3}, \set{30, 3, 3}$.
+    \item $9801 = 3^4 \cdot 11^2$. The invariant factors are $\set{9801}, \set{891, 11}, \set{3267, 3}, \set{297, 33}, \set{1089, 9}, \set{99, 99}, \\
+    \set{1089, 3, 3}, \set{99, 33, 3}, \set{363, 3, 3, 3}, \set{33, 33, 3, 3}$.
+    \item $320 = 2^6 \cdot 5$. The invariant factors are $\set{320}, \set{160, 2}, \set{80, 4}, \set{80, 2, 2}, \set{40, 8}, \set{40, 4, 2}, \set{40, 2, 2, 2}, \\
+    \set{20, 4, 4}, \set{20, 4, 2, 2}, \set{20, 2, 2, 2, 2}, \set{10, 2, 2, 2, 2, 2}$.
+    \item $105 = 3 \cdot 5 \cdot 7$. The invariant factors are $\set{105}$.
+    \item $44100 = 2^2 \cdot 3^2 \cdot 5^2 \cdot 7^2$. The invariant factors are $\set{44100}, \set{22050, 2}, \set{14700, 3}, \set{8820, 5}, \set{6300, 7}, \set{4410, 10}, \\
+    \set{3150, 14}, \set{2205, 15}, \set{1800, 21}, \set{1260, 35}, \set{1470, 30}, \set{1050, 42}, \set{630, 70}, \set{420, 105}, \set{210, 210}$.
+\end{solalph}
+
+\begin{exercise}\label{ex5.2.3}
+    In each of the parts (a) to (e), give the lists of elementary divisors for all abelian groups of the specified order, and then match each list with the corresponding list of invariant factors found in the preceding exercise:
+
+    \noindent (a) group 270, \quad (b) order 9801, \quad (c) order 320, \quad (d) order 105, \quad (e) order 44100.
+\end{exercise}
+
+\begin{solalph}
+    \item $\set{2, 27, 5}, \set{2, 9, 5, 3}, \set{2, 3, 5, 3, 3}$.
+    \item $\set{81, 121}, \set{81, 11, 11}, \set{27, 121, 3}, \set{27, 11, 3, 11}, \set{9, 121, 9}, \set{9, 11, 9, 11}, \set{9, 121, 3, 3}, \set{9, 11, 3, 11, 3}, \\
+    \set{3, 121, 3, 3, 3}, \set{3, 11, 3, 11, 3, 3}$.
+    \item $\set{64, 5}, \set{32, 5, 2}, \set{16, 5, 4}, \set{16, 5, 2, 2}, \set{8, 5, 8}, \set{8, 5, 4, 2}, \set{8, 5, 2, 2, 2}, \set{4, 5, 4, 4}, \set{4, 5, 4, 2, 2}, \\
+    \set{4, 5, 2, 2, 2, 2}, \set{2, 5, 2, 2, 2, 2, 2}$.
+    \item $\set{3, 5, 7}$.
+    \item $\set{4, 9, 25, 49}, \set{2, 9, 25, 49, 2}, \set{4, 3, 25, 49, 3}, \set{4, 9, 5, 49, 5}, \set{4, 9, 25, 7, 7}, \set{2, 3, 25, 49, 2, 3}, \set{2, 9, 5, 49, 2, 5}, \\
+    \set{2, 9, 25, 7, 2, 7}, \set{4, 3, 5, 49, 3, 5}, \set{2, 3, 25, 49, 2, 3}, \set{2, 9, 5, 49, 2, 7}, \set{4, 3, 25, 7, 3, 7}, \set{2, 3, 5, 49, 2, 3, 5}, \\
+    \set{2, 3, 25, 7, 2, 3, 7}, \set{4, 3, 5, 7, 3, 5, 7}, \set{2, 3, 5, 7, 2, 3, 5, 7}$.
+\end{solalph}
+
+\begin{exercise}\label{ex5.2.4}
+    In each of parts (a) to (d), determine which pairs of abelian groups listed are isomorphic (here the expression $\set{a_1, a_2, \ldots, a_k}$ denotes the abelian group $Z_{a_1} \times Z_{a_2} \times \cdots \times Z_{a_k}$).
+    \begin{subproblems}
+        \item $\{4, 9\}$, \quad $\{6, 6\}$, \quad $\{8, 3\}$, \quad $\{9, 4\}$, \quad $\{6, 4\}$, \quad $\{64\}$.
+        \item $\{2^2, 2 \cdot 3^2\}$, \quad $\{2^2 \cdot 3, 2 \cdot 3\}$, \quad $\{2^3 \cdot 3^2\}$, \quad $\{2^2 \cdot 3^2, 2\}$.
+        \item $\{5^2 \cdot 7^2,\ 3^2 \cdot 5 \cdot 7\}$, \quad $\{3^2 \cdot 5^2 \cdot 7,\ 5 \cdot 7^2\}$, \quad $\{3 \cdot 5^2,\ 7^2,\ 3 \cdot 5 \cdot 7\}$,
+        \quad $\{5^2 \cdot 7,\ 3^2 \cdot 5,\ 7^2\}$.
+        \item $\{2^2 \cdot 5 \cdot 7,\ 2^3 \cdot 5^3,\ 2 \cdot 5^2\}$, \quad $\{2^3 \cdot 5^3 \cdot 7,\ 2^3 \cdot 5^3\}$, \quad $\{2^2,\ 2 \cdot 7,\ 2^3,\ 5^3,\ 5^3\}, \quad \{2 \cdot 5^3,\ 2^2 \cdot 5^3,\ 2^3,\ 7\}$.
+    \end{subproblems}
+\end{exercise}
+
+\begin{solalph}
+    \item $\set{4, 9}$ and $\set{9, 4}$ have the same elementary divisors, so they are isomorphic. In order, the other four groups have elementary divisors $\set{3, 2, 3, 2}$, $\set{8, 3}$, $\set{3, 2, 4}$, and $\set{64}$, so they are not isomorphic to each other or to $\set{4, 9}$.
+    \item $\set{2^2, 2 \cdot 3^2}$ and $\set{2^2 \cdot 3^2, 2}$ have the same elementary divisors, so they are isomorphic. In order, the other two groups have elementary divisors $\set{2^2 \cdot 3, 2 \cdot 3}$ and $\set{2^3 \cdot 3^2}$, so they are not isomorphic to each other or to $\set{2^2, 2 \cdot 3^2}$.
+    \item The first, second, and fourth groups have the same elementary divisors $\set{5^2, 7^2, 3^2, 5, 7}$, so they are isomorphic. The third group has elementary divisors $\set{3, 5^2, 7^2, 3, 5, 7}$, so it is not isomorphic to the other three groups.
+    \item The third and fourth groups have the elementary divisors $\set{2, 125, 4, 125, 8, 7}$, so they are isomorphic.
+\end{solalph}
+
+\begin{exercise}\label{ex5.2.5}
+    Let $G$ be a finite abelian group of type $(n_1, n_2, \ldots, n_t)$. Prove that $G$ contains an element of order $m$ if and only if $m \mid n_1$. Deduce that $G$ is of exponent $n_1$.
+\end{exercise}
+
+\begin{sol}
+    \leavevmode
+    \begin{ifandonlyif}
+        \item[\rightimp] Let $g = (g_1, g_2, \ldots, g_t) \in G$ have order $m$. Then $m = \lcm(|g_1|, |g_2|, \ldots, |g_t|)$, so $|g_i| \mid m$ for all $i$. Since $G$ is of type $(n_1, n_2, \ldots, n_t)$, we have $|g_i| \mid n_i$ for all $i$, so $m$ divides $\lcm(n_1, n_2, \ldots, n_t) = n_1$.
+        \item[\leftimp] If $m \mid n_1$, then there exists an element of order $m$ in the cyclic subgroup of order $n_1$.
+    \end{ifandonlyif}
+    Since $G$ contains an element of order $n_1$, the exponent of $G$ is at least $n_1$. On the other hand, if $g \in G$, then $|g| \mid n_1$, so the exponent of $G$ divides $n_1$. Thus, the exponent of $G$ is exactly $n_1$.
+\end{sol}
+
+\begin{exercise}\label{ex5.2.6}
+    Prove that any finite group has a finite exponent. Give an example of an infinite group with finite exponent. Does a finite group of exponent $m$ always contain an element of order $m$?
+\end{exercise}
+
+\begin{sol}
+    Let $G$ be a finite group. Then there are only finitely many elements of $G$, so there are only finitely many orders of elements in $G$. Let $m$ be the least common multiple of the orders of all elements of $G$. Then for any $g \in G$, we have $g^m = e$, so $G$ has exponent dividing $m$.
+    
+    An example of an infinite group with finite exponent is the infinite direct product $\intmod[2] \times \intmod[2] \times \cdots$. Every element of this group has order 1 or 2, so the exponent of this group is 2.
+    
+    A finite group of exponent $m$ does not always contain an element of order $m$: consider $S_3$, which has exponent 6 but does not contain an element of order 6.
+\end{sol}
+
+\begin{exercise}\label{ex5.2.7}
+    Let $p$ be a prime and let $A = \langle x_1 \rangle \times \langle x_2 \rangle \times \cdots \times \langle x_n \rangle$ be an abelian $p$-group, where $|x_i| = p^{\alpha_i} > 1$ for all $i$. Define the $p^{\text{th}}$-\textit{power map}
+    \[\phi : A \to A \quad \text{by} \quad \phi : x \mapsto x^p.\]
+    \begin{subproblems}
+        \item Prove that $\phi$ is a homomorphism.
+        \item Describe the image and kernel of $\phi$ in terms of the given generators.
+        \item Prove both $\ker \phi$ and $A / \operatorname{im} \phi$ have rank $n$ (i.e., have the same rank as $A$) and prove these groups are both isomorphic to the elementary abelian group, $E_{p^n}$, of order $p^n$.
+    \end{subproblems}
+\end{exercise}
+
+\begin{solalph}
+    \item Let $x = (x_1^{s_1}, x_2^{s_2}, \ldots, x_n^{s_n})$ and $y = (x_1^{t_1}, x_2^{t_2}, \ldots, x_n^{t_n})$ be elements of $A$. Then
+    \begin{align*}
+        \phi(xy) & = \phi((x_1^{s_1 + t_1}, x_2^{s_2 + t_2}, \ldots, x_n^{s_n + t_n})) \\
+        & = (x_1^{p(s_1 + t_1)}, x_2^{p(s_2 + t_2)}, \ldots, x_n^{p(s_n + t_n)}) \\
+        & = (x_1^{ps_1} x_1^{pt_1}, x_2^{ps_2} x_2^{pt_2}, \ldots, x_n^{ps_n} x_n^{pt_n}) \\
+        & = (x_1^{ps_1}, x_2^{ps_2}, \ldots, x_n^{ps_n})(x_1^{pt_1}, x_2^{pt_2}, \ldots, x_n^{pt_n}) \\
+        & = \phi(x)\phi(y)
+    \end{align*}
+    as desired.
+    \item $\phi$ collects all the $p$-powers, so $\im\phi = \langle x_1^p \rangle \times \langle x_2^p \rangle \times \cdots \times \langle x_n^p \rangle$. Moreover, $\ker\phi$ consists of all elements $(x_1^{s_1}, x_2^{s_2}, \ldots, x_n^{s_n})$ such that $x_1^{ps_1} = x_2^{ps_2} = \cdots = x_n^{ps_n} = e$, which implies that $ps_i$ is a multiple of $p^{\alpha_i}$ for all $i$, so $s_i$ is a multiple of $p^{\alpha_i - 1}$ for all $i$. Thus,
+    \[\ker\phi = \left\langle x_1^{p^{\alpha_1-1}} \right\rangle \times \left\langle x_2^{p^{\alpha_2-1}} \right\rangle \times \cdots \times \left\langle x_n^{p^{\alpha_n-1}} \right\rangle.\]
+    \item Note that $x_i^{p^{\alpha_i - 1}}$ has order $p$ for all $i$, so $\ker\phi$ is an elementary abelian group of order $p^n$. Moreover, note that each $\gen{x_i}$ is cyclic, hence every group is normal. Examining $\gen{x_i} / \gen{x_i^p}$, we see that $\gen{x_i} / \gen{x_i^p}$ is an elementary abelian group of order $p$. Since $A / \im\phi$ is the direct product of the $\gen{x_i} / \gen{x_i^p}$, we conclude that $A / \im\phi$ is an elementary abelian group of order $p^n$, by \hyperref[ex5.1.14]{Exercise 5.1.14}.
+\end{solalph}
+
+\begin{exercise}\label{ex5.2.8}
+    Let $A$ be a finite abelian group (written multiplicatively) and let $p$ be a prime. Let
+    \[A^p = \{a^p \mid a \in A\} \qquad \text{and} \qquad A_p = \{x \mid x^p = 1\}\]
+    (so $A^p$ and $A_p$ are the image and kernel of the $p^{\text{th}}$-power map, respectively).
+    \begin{subproblems}
+        \item Prove that $A/A^p \cong A_p$. [Show that they are both elementary abelian and they have the same order.]
+        \item Prove that the number of subgroups of $A$ of order $p$ equals the number of subgroups of $A$ of index $p$. [Reduce to the case where $A$ is an elementary abelian $p$-group.]
+    \end{subproblems}
+\end{exercise}
+
+\begin{solalph}
+    \item By Theorem 5.5, we may write $A$ as a direct product:
+    \[A \cong A_{p_1} \times A_{p_2} \times \cdots \times A_{p_k},\]
+    where each $A_{p_i}$ is a $p_i$-group for distinct primes $p_1, p_2, \ldots, p_k$. There are two cases:
+    \begin{itemize}
+        \item If $p \neq p_i$ for all $i$, then then $(p, p_i) = 1$ for all $i$, so the $p$-th power map is an automorphism of each $A_{p_i}$, so $A^p = A$ and $A_p = \{1\}$, so $A/A^p \cong A_p$.
+        \item If $p = p_i$ for some $i$, then it is an automorphism for all $A_j$ for $j \neq i$, while the case for $A_{p_i}$ is handled by \hyperref[ex5.2.7]{Exercise 5.2.7}. Thus,
+        \[A^p = A_{p_1} \times \cdots \times A_{p_{i-1}} \times A_{p_i}^p \times A_{p_{i+1}} \times \cdots \times A_{p_k}\]
+        and
+        \[A_p = \set 1 \times \cdots \times \set 1 \times (A_{p_i})_p \times \set 1 \times \cdots \times \set 1.\]
+        We may again use \hyperref[ex5.1.14]{Exercise 5.1.14} along with the fact that $A_{p_i} / A_{p_i}^p \cong A_{p_i}^p$ to conclude that $A/A^p \cong A_p$.
+    \end{itemize}
+    \item Let $H \leq A$ such that $|A : H| = p$. Let $a \in A$. Then $aH \in A/H$. Since $|A : H| = p$, then $|aH| = 1$ or $p$. If $|aH| = 1$, then $a \in H$. If $|aH| = p$, then $a^pH = H$, or $a^p \in H$. In either case, we have $a^p \in H$, so $A^p \subseteq H$. By the Lattice Isomorphism Theorem, then subgroups of $A$ containing $A^p$ are in bijection with subgroups of $A/A^p$. By the previous part, $A/A^p \cong A_p$, so the number of index $p$ subgroups of $A$ equals the number of index $p$ subgroups of $A_p$.
+    
+    Now let $K \leq A$ where $|K| = p$. For any $k \in K$, we know $k^p = 1$, so $K \subseteq A_p$. Then subgroups of order $p$ in $A$ are exactly the subgroups of order $p$ in $A_p$, since $A_p \leq A$. Thus, the number of subgroups of order $p$ in $A$ equals the number of subgroups of order $p$ in $A_p$.
+
+    Note that $A_p$ is an elementary abelian $p$-group, so it is isomorphic to $E_{p^n}$ for some $n$. By \hyperref[ex5.1.11]{Exercise 5.1.11}, the number of subgroups of order $p$ in $E_{p^n}$ is $\frac{p^n - 1}{p - 1}$. To see that the number of subgroups of index $p$ in $E_{p^n}$ is also $\frac{p^n - 1}{p - 1}$, we note that there are $p^n - 1$ surjective homomorphisms from $E_{p^n}$ to $E_p$, and each subgroup of index $p$ is the kernel of exactly $p - 1$ such homomorphisms, so there are $\frac{p^n - 1}{p - 1}$ subgroups of index $p$ in $E_{p^n}$.
+\end{solalph}
+
+\begin{exercise}\label{ex5.2.9}
+    Let $A = Z_{60} \times Z_{45} \times Z_{12} \times Z_{36}$. Find the number of elements of order 2 and the number of subgroups of index 2 in $A$.
+\end{exercise}
+
+\begin{sol}
+    Note that
+    \begin{itemize}
+        \item $Z_{60} \cong Z_4 \times Z_3 \times Z_5$,
+        \item $Z_{45} \cong Z_9 \times Z_5$,
+        \item $Z_{12} \cong Z_4 \times Z_3$, and
+        \item $Z_{36} \cong Z_4 \times Z_9$.
+    \end{itemize}
+    Thus, the 2-power part of $A$ is $Z_4 \times Z_4 \times Z_4$. Elements of order 2 in $A$ are elements of the 2-power part as well as trivial parts of the other groups. The 2-power map sends $(a, b, c)$ to $(2a, 2b, 2c)$, so the kernel of the 2-power map is $\set{0, 2} \times \set{0, 2} \times \set{0, 2}$, which has 8 elements, 7 of which have order 2. Thus, there are 7 elements of order 2 in $A$.
+\end{sol}
+
+\begin{exercise}\label{ex5.2.10}
+    Let $n$ and $k$ be positive integers and let $A$ be the free abelian group of rank $n$ (written additively). Prove that $A/kA$ is isomorphic to the direct product of $n$ copies of $\intmod[k]$ (here, $kA = \set{ka \mid a \in A}$). [See \hyperref[ex5.1.14]{Exercise 5.1.14}.]
+\end{exercise}
+
+\begin{sol}
+    It is easy to see that $kA = k\z \times \cdots \times k\z$. Since $\z$ is abelian, then $k\z \nsub \z$. By \hyperref[ex5.1.14]{Exercise 5.1.14}, we have $A/kA \cong \intmod[k] \times \cdots \times \intmod[k].$
+\end{sol}
+
+\np
+
+\begin{exercise}\label{ex5.2.11}
+    Let $G$ be a nontrivial, finite abelian group of rank $t$.
+    \begin{subproblems}
+        \item Prove that the rank of $G$ equals the maximum of the ranks of its Sylow subgroups.
+        \item Prove that $G$ can be generated by $t$ elements, but no subset with fewer than $t$ elements generates $G$. (One way of doing this is by using part(a) together with \hyperref[ex5.2.7]{Exercise 5.2.7}.)
+    \end{subproblems}
+\end{exercise}
+
+\begin{solalph}
+    \item Let $G$ be of type $(n_1, n_2, \ldots, n_t)$, and consider the invariant factor decomposition of $G$:
+    \[G \cong Z_{n_1} \times Z_{n_2} \times \cdots \times Z_{n_t}.\]
+    Let $p$ be a prime dividing the smallest factor $n_t$. Then the Sylow $p$-subgroup of $G$ is isomorphic to $Z_{p^{\alpha_1}} \times Z_{p^{\alpha_2}} \times \cdots \times Z_{p^{\alpha_t}}$, where $\alpha_i$ is the largest power of $p$ dividing $n_i$. Since $\alpha_t > 0$, the Sylow $p$-subgroup has rank $t$. On the other hand, if $q$ is any prime, then for any $Q \in \syl_q(G)$, we have
+    \[Q \cong Z_{q^{\beta_1}} \times Z_{q^{\beta_2}} \times \cdots \times Z_{q^{\beta_t}},\]
+    where $\beta_i \mid n_i$ for all $i$ with some potentially trivial factors, so the rank of $Q$ is at most $t$. Thus, the rank of $G$ equals the maximum of the ranks of its Sylow subgroups.
+    \item It is clear that $G$ is generated by $t$ elements. Suppose $G = \gen{g_1, g_2, \ldots, g_{t-1}}$ and some $P \in \syl_p(G)$, which has rank $t$. Projecting $G$ onto $P$, we see that $P = \gen{\pi(g_1), \pi(g_2), \ldots, \pi(g_{t-1})}$. However, letting $\phi$ be the $p$-power map on $P$ as defined in \hyperref[ex5.2.7]{Exercise 5.2.7}, we have that $P/\im\phi \cong E_{p^t}$, so $P/\im\phi$ has rank $t$. Since $\pi(g_1), \pi(g_2), \ldots, \pi(g_{t-1})$ generate $P/\im\phi$, we have a contradiction. Thus, no subset with fewer than $t$ elements generates $G$.
+\end{solalph}
+
+\begin{specialexercise}\label{ex5.2.12}
+    Let $n$ and $m$ be positive integers with $d = (n, m)$. Let $Z_n = \gen x$ and $Z_m = \gen y$. Let $A$ be the central product of $\gen x$ and $\gen y$ with an element of order $d$ identified, which has presentation
+    \[\gen{x, y \mid x^n = y^m = 1, xy = yx, x^{n/d} = y^{m/d}}.\]
+    Describe $A$ as a direct product of two cyclic groups.
+    \down
+    \noindent\textbf{Note}: While the problem specifically calls for two direct products, the proof shows that for any general $n, m$, $A$ is actually cyclic with order $Z_{nm/d}$, so the second direct product is trivial. I'm not sure if this is a typo, but just know that the problem will have a trivial direct product in the end.
+\end{specialexercise}
+
+\begin{sol}
+    Since we have an element of order $d$ identified, it is easy to see that $|A| = nm/d$. By \hyperref[ex5.2.5]{Exercise 5.2.5}, we know that $\exp(Z_n \times Z_m) = \lcm(n, m) = nm/d$. Note that $|x| = n$ and $|y| = m$ in $A$ still, for otherwise there would be a contradiction to the order of $A$ as we would not be able to account for all the elements of $A$.
+
+    Again, by \hyperref[ex5.2.5]{Exercise 5.2.5}, we know that $A$ contains an element of order $n$ iff $n \mid \exp(A)$, and $A$ contains an element of order $m$ iff $m \mid \exp(A)$. Since $\exp(A) \mid |A| = nm/d$, we have that $\exp(A)$ is a common multiple of $n$ and $m$, so $\exp(A)$ is a multiple of $\lcm(n, m) = nm/d$, hence $\lcm(n, m) \mid \exp(A)$. On the other hand, $\exp(A) \mid |A| = nm/d$ since the order of any element divides the order of the group, so $\exp(A) \mid \lcm(n, m)$. Thus, $\exp(A) = \lcm(n, m)$. We now conclude that $A$ is cyclic, so $A \cong Z_{nm/d} \times Z_1$.
+\end{sol}
+
+\np
+
+\begin{exercise}\label{ex5.2.13}
+    Let $A = \gen{x_1} \times \gen{x_2} \times \cdots \times \gen{x_r}$ be a finite abelian group with $|x_i| = n_i$ for $1 \leq i \leq r$. Find a presentation for $A$. Prove that if $G$ is any group containing commuting elements $g_1, \ldots, g_r$ such that $g_i^{n_i} = 1$ for $1 \leq i \leq r$, then there is a unique homomorphism from $A$ to $G$ which sends $x_i$ to $g_i$ for all $i$.
+\end{exercise}
+
+\begin{sol}
+    A presentation for $A$ is given by
+    \[\gen{x_1, x_2, \ldots, x_r \mid x_i^{n_i} = 1 \text{ for } 1 \leq i \leq r, x_ix_j = x_jx_i \text{ for } 1 \leq i < j \leq r}.\]
+    Now, observe that every element of $A$ is of the form $x_1^{s_1} x_2^{s_2} \cdots x_r^{s_r}$ for some integers $s_1, s_2, \ldots, s_r$. Define $\phi : A \to G$ by $\phi(x_1^{s_1} x_2^{s_2} \cdots x_r^{s_r}) = g_1^{s_1} g_2^{s_2} \cdots g_r^{s_r}$. Since the $g_i$ commute, $\phi$ is well-defined. Moreover, $\phi$ is a homomorphism since
+    \begin{align*}
+        \phi((x_1^{s_1} x_2^{s_2} \cdots x_r^{s_r})(x_1^{t_1} x_2^{t_2} \cdots x_r^{t_r})) & = \phi(x_1^{s_1 + t_1} x_2^{s_2 + t_2} \cdots x_r^{s_r + t_r}) \\
+        & = g_1^{s_1 + t_1} g_2^{s_2 + t_2} \cdots g_r^{s_r + t_r} \\
+        & = (g_1^{s_1} g_2^{s_2} \cdots g_r^{s_r})(g_1^{t_1} g_2^{t_2} \cdots g_r^{t_r}) \\
+        & = \phi(x_1^{s_1} x_2^{s_2} \cdots x_r^{s_r})\phi(x_1^{t_1} x_2^{t_2} \cdots x_r^{t_r})
+    \end{align*}
+    for all integers $s_1, s_2, \ldots, s_r$ and $t_1, t_2, \ldots, t_r$. Finally, $\phi(x_i) = g_i$ for all $i$ by definition. To see that $\phi$ is the unique homomorphism from $A$ to $G$ sending $x_i$ to $g_i$ for all $i$, let $\psi : A \to G$ be any such homomorphism. Then $\psi(x_1^{s_1} x_2^{s_2} \cdots x_r^{s_r}) = \psi(x_1)^{s_1} \psi(x_2)^{s_2} \cdots \psi(x_r)^{s_r} = g_1^{s_1} g_2^{s_2} \cdots g_r^{s_r}$ for all integers $s_1, s_2, \ldots, s_r$, so $\psi = \phi$.
+\end{sol}
+
+\begin{specialexercise}\label{ex5.2.14}
+    For any group $G$ define the \textit{dual group} of $G$ (denoted $\wh{G}$) to be the set of all homomorphisms from $G$ into the multiplicative group of roots of unity in $\mathbb{C}$. Define a group operation in $\wh{G}$ by pointwise multiplication of functions: if $\chi, \psi$ are homomorphisms from $G$ into the group of roots of unity then $\chi\psi$ is the homomorphism given by $(\chi\psi)(g) = \chi(g)\psi(g)$ for all $g \in G$, where the latter multiplication takes place in $\mathbb{C}$.
+    \begin{subproblems}
+        \item Show that this operation on $\wh{G}$ makes $\wh{G}$ into an abelian group. [Show that the identity is the map $g \mapsto 1$ for all $g \in G$ and the inverse of $\chi \in \wh{G}$ is the map $g \mapsto \chi(g)^{-1}$.]
+        \item If $G$ is a finite abelian group, prove that $\wh{G} \cong G$. [Write $G$ as $\langle x_1 \rangle \times \cdots \times \langle x_r \rangle$ and if $n_i = |x_i|$ define $\chi_i$ to be the homomorphism which sends $x_i$ to $e^{2\pi i/n_i}$ and sends $x_j$ to $1$, for all $j \neq i$. Prove $\chi_i$ has order $n_i$ in $\wh{G}$ and $\wh{G} = \langle \chi_1 \rangle \times \cdots \times \langle \chi_r \rangle$.]
+    \end{subproblems}
+\end{specialexercise}
+
+\begin{solalph}
+    \item Multiplication in $\c$ is already associative and commutative, so pointwise multiplication of functions is also associative and commutative. The map $\ep : G \to \c$ given by $\ep(g) = 1$ for all $g \in G$ is a homomorphism, since $\ep(gh) = 1 = 1 \cdot 1 = \ep(g)\ep(h)$ for all $g, h \in G$, and 1 is a root of unity. Moreover, for any $\chi \in \wh G$, then $(\chi\ep)(g) = \chi(g)\ep(g) = \chi(g) \cdot 1 = \chi(g)$ for all $g \in G$. Thus, $\ep$ is the identity element of $\wh{G}$. Finally, if $\chi \in \wh{G}$, then the map $\chi^{-1} : G \to \c$ given by $\chi^{-1}(g) = \chi(g)^{-1}$ is a homomorphism, since $\chi^{-1}(gh) = \chi(gh)^{-1} = (\chi(g)\chi(h))^{-1} = \chi(g)^{-1}\chi(h)^{-1} = \chi^{-1}(g)\chi^{-1}(h)$ for all $g, h \in G$, and $\chi(g)^{-1}$ is a root of unity since $\chi(g)$ is a root of unity. Moreover, $\chi\chi^{-1} = \ep$, so $\chi^{-1}$ is the inverse of $\chi$ in $\wh{G}$.
+    \item To see that $\chi_i$ has order $n_i$ in $\wh G$, let $g = x_1^{s_1} \cdots x_r^{s_r} \in G$. Then
+    \[\chi_i(g) = \chi_i(x_1^{s_1} \cdots x_r^{s_r}) = \chi_i(x_1)^{s_1} \cdots \chi_i(x_r)^{s_r} = e^{2\pi i s_i / n_i},\]
+    where all terms $\chi_i(x_j)^{s_j}$ for $j \neq i$ are 1. Thus, $\chi_i^k(g) = e^{2\pi i k s_i / n_i}$ for all integers $k$, so $\chi_i^k = \ep$ if and only if $n_i \mid k$. Thus, $\chi_i$ has order $n_i$ in $\wh{G}$. Now, note by \hyperref[ex5.2.13]{Exercise 5.2.13} that there exists a unique homomorphism $\phi : G \to \wh G$ such that $\phi(x_i) = \chi_i$ for all $i$. We now show that $\phi$ is an isomorphism.
+
+    Let $g = x_1^{s_1} \cdots x_r^{s_r} \in G$ such that $\phi(g) = \ep$. Then for any $x_i$, we have that
+    \[\phi(g)(x_i) = (\chi_1^{s_1} \cdots \chi_r^{s_r})(x_i) = \chi_i^{s_i}(x_i) = e^{2\pi i s_i / n_i} = 1.\]
+    Thus, $n_i \mid s_i$ for all $i$, so $g = x_1^{s_1} \cdots x_r^{s_r} = 1$. Therefore, $\phi$ is injective. Similarly, for any $\chi \in \wh G$, and $x_i^{n_i} = 1$ for some $i$, then $\chi(x_i)^{n_i} = \chi(x_i^{n_i}) = \chi(1) = 1$, so $\chi(x_i)$ is an $n_i$-th root of unity, so $\chi(x_i) = e^{2\pi i s_i / n_i}$ for some integer $s_i$. Thus, $\chi = \phi(x_1^{s_1} \cdots x_r^{s_r})$, so $\phi$ is surjective. Therefore, $\phi$ is an isomorphism, so $\wh{G} \cong G$.
+\end{solalph}
+
+\begin{exercise}\label{ex5.2.15}
+    Let $G = \gen x \times \gen y$, where $|x| = 8$ and $|y| = 4$.
+    \begin{subproblems}
+        \item Find all pairs $a, b$ in $G$ such that $G = \gen a \times \gen b$ (where $a$ and $b$ are expressed in terms of $x$ and $y$).
+        \item Let $H = \gen{x^2y, y^2} \cong Z_4 \times Z_2$. Prove that there are no elements $a, b$ of $G$ such that $G = \gen a \times \gen b$ and $H = \gen{a^2} \times \gen{b^2}$ (i.e., one cannot pick direct product generators for $G$ in such a way that some powers of these are direct product generators for $H$).
+    \end{subproblems}
+\end{exercise}
+
+\begin{solalph}
+    \item From the description of $G$, we see that $G$ is of type $(8, 4)$, so we have the following conditions for $G = \gen a \times \gen b$:
+    \begin{itemize}
+        \item $|a| = 8$ and $|b| = 4$,
+        \item $\gen a \cap \gen b = 1$.
+    \end{itemize}
+    Let $a = x^s y^t$ and $b = x^u y^v$ for some integers $s, t, u, v$. Then $|a| = \lcm(8/\gcd(8, s), 4/\gcd(4, t))$ and $|b| = \lcm(8/\gcd(8, u), 4/\gcd(4, v))$. For $|a|$ to be 8, we must have $\gcd(8, s) = 1$, implying that $s$ must be odd, while $t$ may range freely. For $|b|$ to be 4, then $8/\gcd(8, u) \mid 4$ and $\max(8/\gcd(8, u), 4/\gcd(4, v)) = 4$, so we have the following cases:
+    \begin{enumerate}[label=(\arabic*)]
+        \item If $\gcd(8, u) = 8$, then $u = 0$ and $v$ must be odd.
+        \item If $\gcd(8, u) = 4$, then $u = 4$ and $v$ must be odd.
+        \item If $\gcd(8, u) = 2$, then $u = 2, 6$ and $v$ can be free.
+    \end{enumerate}
+    To have trivial intersection, we must have that $x^{ks} y^{kt} = x^{\ell u} y^{\ell v} = 1$, or $ks \equiv \ell u \bmod 8$ and $kt \equiv \ell v \bmod 4$ implies that $k \equiv 0 \bmod 8$ and $\ell \equiv 0 \bmod 4$, which is seen from $a^k = 1$ and $b^\ell = 1$ iff $8 \mid k$ and $4 \mid \ell$. Thus, we check the cases for $|b|$:
+    \begin{enumerate}[label=(\arabic*)]
+        \item $u = 0$ and $v$ is odd: We have $ks \equiv 0 \bmod 8$ and $kt \equiv \ell v \bmod 4$. Since $s$ is odd, then $k \equiv 0 \bmod 8$. Then $kt \equiv 0 \bmod 4$, hence $\ell v \equiv 0 \bmod 4$. Since $v$ is odd, then $\ell \equiv 0 \bmod 4$, so we have trivial intersection.
+        \item $u = 4$ and $v$ is odd: We have $ks \equiv 4\ell \bmod 8$ and $kt \equiv \ell v \bmod 4$. Since $s$ is odd, then $k \equiv 4\ell s\inv \bmod 8$. Note that $k \equiv 0 \bmod 4$, so $kt \equiv 0 \bmod 4$, hence $\ell v \equiv 0 \bmod 4$. Since $v$ is odd, then $\ell \equiv 0 \bmod 4$, so we have trivial intersection.
+        \item $u = 2$ and $v$ free (the case $u = 6$ and $v$ free is similar): We have $ks \equiv 2\ell \bmod 8$ and $kt \equiv \ell v \bmod 4$. Since $s$ is odd, then $k \equiv 2 \ell s\inv \bmod 8$. We know that intersection will be nontrivial when $k \not\equiv 0 \bmod 8$ and $\ell \not\equiv 0 \bmod 4$. By inspection, we see that $\ell = 2$ gives $k \equiv 4s\inv \equiv 4 \bmod 8$ and $4t \equiv 2v \bmod 4$, which has nontrivial solution when $v$ is even. Inspecting odd $v$, we see that $k \equiv 2\ell s\inv \bmod 8$ reduced mod 4 gives $k \equiv 2 \ell s\inv \bmod 4$. Then $2 \ell s\inv \equiv \ell v \bmod 4$ implies that $\ell(2s\inv - v) \equiv 0 \bmod 4$. Since $v$ is odd, then $2s\inv - v$ is odd, so $\ell \equiv 0 \bmod 4$, so we have trivial intersection.
+    \end{enumerate}
+    Therefore, the pairs $a, b$ such that $G = \gen a \times \gen b$ are given by
+    \begin{itemize}
+        \item $a = x^s y^t$ and $b = y^v$ for some odd integers $s, v$ and any integer $t$,
+        \item $a = x^s y^t$ and $b = x^4 y^v$ for some odd integers $s, v$ and any integer $t$,
+        \item $a = x^s y^t$ and $b = x^2 y^v$ for some odd integer $s$, any integer $t$, and any odd integer $v$, or
+        \item $a = x^s y^t$ and $b = x^6 y^v$ for some odd integer $s$, any integer $t$, and any odd integer $v$.
+    \end{itemize}
+    \item We begin with the elements of $H$:
+    \[H = \set{1, x^2y, x^4y^2, x^6y^3, y^2, x^2y^3, x^4y, x^6y^2}\]
+    Note that $H = \gen{x^2y} \times \gen{y^2}$, so it suffices to check whether or not $a^2$ generates $\gen{x^2y}$ from the choices of $a$ from part (a). Note that $a^2 = x^{2s} y^{2t}$, which implies that $y$ will always have an even exponent. However, the only element with even exponent on $y$ from $\gen{x^2y}$ is with the term $x^4y^2$, which would imply that $\gen{x^4y^2} = \gen{x^2y}$, which is a contradiction since $x^2y$ has order 4 while $x^4y^2$ has order 2. Thus, there are no elements $a, b$ of $G$ such that $G = \gen a \times \gen b$ and $H = \gen{a^2} \times \gen{b^2}$.
+\end{solalph}
+
+\np
+
+\begin{exercise}\label{ex5.2.16}
+    Prove that no finitely generated abelian group is divisible (cf. \hyperref[ex2.4.19]{Exercise 2.4.19}).
+\end{exercise}
+
+\begin{sol}
+    Let $A$ be a finitely generated abelian group. By Theorem 5.5, we can write $A$ as a direct product of cyclic groups:
+    \[A \cong \z^r \times Z_{n_1} \times Z_{n_2} \times \cdots \times Z_{n_t},\]
+    where $n_i > 1$ for all $i$ and $r \geq 0$. For $r > 0$, observe that $\z$ is not divisible, since there is no $x \in \z$ such that $2x = 1$. For $r = 0$, observe that $A$ is a finite abelian group. By \hyperref[ex2.4.19]{Exercise 2.4.19}, finite abelian groups are not divisible. Thus, no finitely generated abelian group is divisible.
+\end{sol}
