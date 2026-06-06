@@ -2,7 +2,7 @@
 
 \subsection{Definitions and Examples}
 
-\begin{exercise}
+\begin{exercise}\label{ex2.1.1}
     In each of (a)-(e) prove that the specified subset is a subgroup of the given group:
     \begin{subproblems}
         \item the set of complex numbers of the form $a + ai$, $a \in \mathbb{R}$ (under addition)
@@ -36,7 +36,7 @@
 
 \newpage
 
-\begin{exercise}
+\begin{exercise}\label{ex2.1.2}
     In each of (a)--(e) prove that the specified subset is \emph{not} a subgroup of the given group:
     \begin{subproblems}
         \item the set of $2$-cycles in $S_n$ for $n \ge 3$
@@ -60,7 +60,7 @@
     \end{subproblems}
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}\label{ex2.1.3}
     Show that the following subsets of the dihedral group $D_8$ are actually subgroups:
     \begin{subproblems}
         \item $\{1, r^2, s, sr^2\}$
@@ -94,7 +94,7 @@
     Both tables show closure, since no product is an element outside of the subset.
 \end{solalph}
 
-\begin{exercise}
+\begin{exercise}\label{ex2.1.4}
     Give an explicit example of a group $G$ and an infinite subset $H$ of $G$ that is closed under the group operation but is not a subgroup of $G$.
 \end{exercise}
 
@@ -104,7 +104,7 @@
 
 \newpage
 
-\begin{exercise}
+\begin{exercise}\label{ex2.1.5}
     Prove that $G$ cannot have a subgroup $H$ with $|H| = n - 1$, where $n = |G| > 2$.
 \end{exercise}
 
@@ -126,7 +126,7 @@
     It is easy to show by induction that $(fg)^n(x) = x - n$ for all $n \in \zp$, so that $\abs{fg} = \infty$. Then $fg \not\in \tor(G)$, hence $\tor(G)$ is not a subgroup of $G$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise} \label{ex2.1.7}
     Fix some $n \in \mathbb{Z}$ with $n>1$. Find the torsion subgroup (cf. the previous exercise) of $\mathbb{Z} \times (\mathbb{Z}/n\mathbb{Z})$. Show that the set of elements of infinite order together with the identity is \emph{not} a subgroup of this direct product.
 \end{exercise}
 
@@ -138,7 +138,7 @@
     since $\abs{(0, 1)} = n < \infty$. Hence, $H$ is not a subgroup of $\z \times \intmod$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise} \label{ex2.1.8}
     Let $H$ and $K$ be subgroups of $G$. Prove that $H \cup K$ is a subgroup if and only if either $H \subseteq K$ or $K \subseteq H$.
 \end{exercise}
 
@@ -175,7 +175,7 @@
     Since $1 \in H_i$ for all $i \in I$, then $1 \in H$. Suppose $a, b \in H$. Then $a, b \in H_i$ for all $i \in I$. Since each $H_i$ is a subgroup of $G$, then $ab\inv \in H_i$ for all $i \in I$. Hence, $ab\inv \in H$, and $H \leq G$.
 \end{solalph}
 
-\begin{exercise}
+\begin{exercise} \label{ex2.1.11}
     Let $A$ and $B$ be groups. Prove that the following sets are subgroups of the direct product $A \times B$:
     \begin{subproblems}
         \item $\{ (a, 1) \mid a \in A \}$
@@ -199,7 +199,7 @@
     \end{subproblems}
 \end{sol}
 
-\begin{exercise}
+\begin{exercise} \label{ex2.1.12}
     Let $A$ be an abelian group and fix some $n \in \mathbb{Z}$. Prove that the following sets are subgroups of $A$:
     \begin{subproblems}
         \item $\{ a^n \mid a \in A \}$
@@ -219,7 +219,7 @@
     \end{subproblems}
 \end{sol}
 
-\begin{exercise}
+\begin{exercise} \label{ex2.1.13}
     Let $H$ be a subgroup of the additive group of rational numbers with the property that $1/x \in H$ for every nonzero element $x$ of $H$. Prove that $H = 0$ or $\mathbb{Q}$.
 \end{exercise}
 
@@ -229,7 +229,7 @@
     Since $a/b \in H$, then $b(a/b) = a \in H$ so that $1/a \in H$. Then $a(1/a) = 1 \in H$. From this, we can see that $\z \subseteq H$. Now let $c/d \in \q$ for some $c, d \in \z$ with $d \neq 0$. Since $1 \in H$, then $d(1) = d \in H$ so that $1/d \in H$. Then $c(1/d) = c/d \in H$. Since $c/d$ was arbitrary, then $\q \subseteq H$. Hence, $H = \q$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise} \label{ex2.1.14}
     Show that $\{ x \in D_{2n} \mid x^2 = 1 \}$ is \emph{not} a subgroup of $D_{2n}$ (here $n \ge 3$).
 \end{exercise}
 
@@ -239,7 +239,7 @@
     so that $|sr| = 2$ and $sr \in H$. However, $s(sr) = r \not\in H$ since $\abs r = n > 2$. Hence, $H$ is not a subgroup of $D_{2n}$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise} \label{ex2.1.15}
     Let $H_1 \subseteq H_2 \subseteq \cdots$ be an ascending chain of subgroups of $G$. Prove that $\bigcup_{i=1}^\infty H_i$ is a subgroup of $G$.
 \end{exercise}
 
@@ -251,7 +251,7 @@
 
 \newpage
 
-\begin{specialexercise}
+\begin{specialexercise} \label{ex2.1.16}
     Let $n \in \mathbb{Z}^+$ and let $F$ be a field. Prove that the set $\{ (a_{ij}) \in \gl_n(F) \mid a_{ij} = 0 \text{ for all } i > j \}$ is a subgroup of $\gl_n(F)$ (called the group of upper triangular matrices).
 \end{specialexercise}
 
@@ -302,7 +302,7 @@
     where $\b a_{12}, \b d_{12}, \b d_{21}^T$ are $n \times 1$ column vectors, and $a_{22}, d_{22} \in F$. We can see that $A_0 D_0 = I_n$ so that $D_0 \in \ut_n(F)$ by assumption. Moreover, $a_{22} \b d_{21}^T = \b 0_{n \times 1}^T$. Since $a_{22} \neq 0$ because $A \in \ut_{n + 1}(F)$, then $\b d_{21}^T = \b 0_{n \times 1}^T$. By induction, then $D \in \ut_{n + 1}(F)$, hence the inverse of any upper triangular matrix is also upper triangular.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise} \label{ex2.1.17}
     Let $n \in \mathbb{Z}^+$ and let $F$ be a field. Prove that the set $\{ (a_{ij}) \in \gl_n(F) \mid a_{ij} = 0 \text{ for all } i > j,\ \text{and } a_{ii} = 1 \text{ for all } i \}$ is a subgroup of $\gl_n(F)$.
 \end{exercise}
 
@@ -316,7 +316,7 @@
 
 \subsection{Centralizers and Normalizers, Stabilizers and Kernels}
 
-\begin{exercise}
+\begin{exercise} \label{ex2.2.1}
     Prove that $C_G(A)=\{g\in G\mid g^{-1}ag=a\text{ for all }a\in A\}.$
 \end{exercise}
 
@@ -324,7 +324,7 @@
     For any $a \in A \subseteq G$, then $g \in C_G(A)$ if and only if $gag\inv = a$ if and only if $ga = ag$ if and only if $g\inv ag = a$. Hence, $C_G(A) = \{g \in G \mid g\inv ag = a \text{ for all } a \in A\}$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise} \label{ex2.2.2}
     Prove that $C_G(Z(G))=G$ and deduce that $N_G(Z(G))=G.$
 \end{exercise}
 
@@ -332,7 +332,7 @@
     By definition, $C_G(Z(G)) \subseteq G$. Now let $g \in G$ and $z \in Z(G)$. Then $gz = zg$, or $gzg\inv = z$. Then $g \in C_G(Z(G))$, hence $G \subseteq C_G(Z(G))$. It follows that $C_G(Z(G)) = G$. Since $C_G(Z(G)) \leq N_G(Z(G)) \leq G$, then $N_G(Z(G)) = G$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise} \label{ex2.2.3}
     Prove that if $A$ and $B$ are subsets of $G$ with $A \subseteq B$ then $C_G(B)$ is a subgroup of $C_G(A)$.
 \end{exercise}
 
@@ -340,7 +340,7 @@
     Pick $g \in C_G(B)$. Then $gbg\inv = b$ for all $b \in B$. In particular, $gag\inv = a$ for all $a \in A$ because $A \subseteq B$. Then $C_G(B) \subseteq C_G(A)$. Since $C_G(B)$ and $C_G(A)$ are subgroups of $G$, then $C_G(B) \leq C_G(A)$.
 \end{sol}
 
-\begin{specialexercise}
+\begin{specialexercise} \label{ex2.2.4}
     For each of $S_3$, $D_8$, and $Q_8$ compute the centralizers of each element and find the center of each group. Does Lagrange's Theorem (\hyperref[ex1.7.19]{Exercise 1.7.19}) simplify your work?
 \end{specialexercise}
 
@@ -368,7 +368,7 @@
     and $Z(Q_8) = \set{1, -1}$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise} \label{ex2.2.5}
     In each of parts (a) to (c) show that for the specified group $G$ and subgroup $A$ of $G$, $C_G(A)=A$ and $N_G(A)=G.$
     \begin{subproblems}
         \item $G=S_3$ and $A=\{1,(1\ 2\ 3),(1\ 3\ 2)\}.$
@@ -389,7 +389,7 @@
     so that $s \in N_G(A)$. Then $|N_G(A)| \neq 5$, hence $|N_G(A)| = 10$ and $N_G(A) = G$.
 \end{solalph}
 
-\begin{exercise}
+\begin{exercise} \label{ex2.2.6}
     Let $H$ be a subgroup of the group $G.$
     \begin{subproblems}
         \item Show that $H\le N_G(H).$ Give an example to show that this is not necessarily true if $H$ is not a subgroup.
@@ -434,7 +434,7 @@
     \end{subproblems}
 \end{sol}
 
-\begin{exercise}
+\begin{exercise} \label{ex2.2.8}
     Let $G=S_n$, fix an $i \in \{1, 2, \dots, n\}$ and let $G_i=\{\sigma\in G\mid\sigma(i)=i\}$ (the stabilizer of $i$ in $G$). Use group actions to prove that $G_i$ is a subgroup of $G$. Find $|G_i|$.
 \end{exercise}
 
@@ -448,7 +448,7 @@
     To find $|G_i|$, observe that any $\sigma \in G_i$ is completely determined by its action on the set $\{1, 2, \ldots, n\} \setminus \{i\}$, which has $n - 1$ elements. Since $\sigma$ is a permutation, then there are $(n - 1)!$ ways to permute these $n - 1$ elements. It follows that $|G_i| = (n - 1)!$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise} \label{ex2.2.9}
     For any subgroup $H$ of $G$ and any nonempty subset $A$ of $G$ define $N_H(A)$ to be the set $\{h \in H \mid hAh^{-1} = A\}$. Show that $N_H(A) = N_G(A) \cap H$ and deduce that $N_H(A)$ is a subgroup of $H$ (note that $A$ need not be a subset of $H$).
 \end{exercise}
 
@@ -460,7 +460,7 @@
 
 \newpage
 
-\begin{exercise}
+\begin{exercise} \label{ex2.2.10}
     Let $H$ be a subgroup of order $2$ in $G$. Show that $N_G(H) = C_G(H)$. Deduce that if $N_G(H) = G$ then $H \le Z(G)$.
 \end{exercise}
 
@@ -472,7 +472,7 @@
     Now suppose $N_G(H) = G$. Then $C_G(H) = G$, so that for any $g \in G$, we have $g h g\inv = h$. It follows that $h g = g h$ for all $g \in G$, hence $H \leq Z(G)$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise} \label{ex2.2.11}
     Prove that $Z(G)\le N_G(A)$ for any subset $A$ of $G$.
 \end{exercise}
 
@@ -534,7 +534,7 @@
     \item The permutations that stabilize $(x_1 + x_2)(x_3 + x_4)$ must either swap 1 and 2 or fix them, and either swap 3 and 4 or fix them. Additionally, it may swap the pairs $(1\ 2)$ and $(3\ 4)$. These are exactly the same permutations found in part (e). \qh
 \end{solalph}
 
-\begin{exercise}
+\begin{exercise} \label{ex2.2.13}
     Let $n$ be a positive integer and let $R$ be the set of all polynomials with integer coefficients in the independent variables $x_1, x_2, \ldots, x_n$, i.e., the members of $R$ are finite sums of elements of the form $ax_1^{r_1}x_2^{r_2} \cdots x_n^{r_n}$ where $a$ is any integer and $r_1, \ldots, r_n$ are nonnegative integers. For each $\sigma \in S_n$ define a map
     \[\sigma : R \to R \quad \text{by} \quad \sigma \cdot p(x_1, x_2, \ldots, x_n) = p(x_{\sigma(1)}, x_{\sigma(2)}, \ldots, x_{\sigma(n)})\]
     Prove that this defines a (left) group action of $S_n$ on $R$.
@@ -550,7 +550,7 @@
     Hence, this defines a (left) group action of $S_n$ on $R$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise} \label{ex2.2.14}
     Let $H(F)$ be the Heisenberg group over the field $F$ introduced in \hyperref[ex1.4.11]{Exercise 1.4.11}. Determine which matrices lie in the center of $H(F)$ and prove that $Z(H(F))$ is isomorphic to the additive group $F$.
 \end{exercise}
 
@@ -623,7 +623,7 @@
 
 \subsection{Cyclic Groups and Cyclic Subgroups}
 
-\begin{exercise}
+\begin{exercise} \label{ex2.3.1}
     Find all subgroups of $Z_{45} = \gen x$, giving a generator for each. Describe the containments between these subgroups.
 \end{exercise}
 
@@ -641,7 +641,7 @@
     \end{align*}
 \end{sol}
 
-\begin{exercise}
+\begin{exercise} \label{ex2.3.2}
     If $x$ is an element of the finite group $G$ and $\abs x = \abs G$, prove that $G = \gen x$. Give an explicit example to show that this result need not be true if $G$ is an infinite group.
 \end{exercise}
 
@@ -1309,10 +1309,10 @@
 
 \begin{solalph}
     \item Suppose $p/q \in \q$. Then $(p/qn)n = p/q$, where $p/qn \in \q$.
-    \item Suppose we have a finite abelian group $G$ with $\abs G = n$. Pick some nonidentity $g \in G$. Then there is no such $h \in $ where $h^n = g$, since $h^n = 1$.
+    \item Let $G$ be finite abelian with $|G| = n$. For some nontrivial $g \in G$, we have $g^n = 1$. If $G$ was divisible, then there would be some $x \in G$ such that $x^n = g$. But then $g = x^n = 1$, contradicting that $g$ is nontrivial.
 \end{solalph}
 
-\begin{exercise}
+\begin{exercise} \label{ex2.4.20}
     Prove that if $A$ and $B$ are nontrivial abelian groups, then $A\times B$ is divisible if and only if both $A$ and $B$ are divisible.
 \end{exercise}
 
