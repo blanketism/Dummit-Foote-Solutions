@@ -144,7 +144,7 @@
     as desired.
 \end{sol}
 
-\begin{specialexercise}\label{ex}
+\begin{specialexercise}\label{ex5.1.12}
     Let $A$ and $B$ be groups. Assume $Z(A)$ contains a subgroup $Z_1$ and $Z(B)$ contains a subgroup $Z_2$ with $Z_1 \cong Z_2$. Let this isomorphism be given by the map $x_i \mapsto y_i$ for all $x_i \in Z_1$. A \textbf{\textit{central product}} of $A$ and $B$ is a quotient
     \[(A \times B)/Z \quad \text{where} \quad Z = \{(x_i, y_i^{-1}) \mid x_i \in Z_1\}\]
     and is denoted by $A * B$ --- it is not unique since it depends on $Z_1$, $Z_2$ and the isomorphism between them. (Think of $A * B$ as the direct product of $A$ and $B$ ``collapsed'' by identifying each element $x_i \in Z_1$ with its corresponding element $y_i \in Z_2$.)
@@ -587,4 +587,52 @@
     Let $A$ be a finitely generated abelian group. By Theorem 5.5, we can write $A$ as a direct product of cyclic groups:
     \[A \cong \z^r \times Z_{n_1} \times Z_{n_2} \times \cdots \times Z_{n_t},\]
     where $n_i > 1$ for all $i$ and $r \geq 0$. For $r > 0$, observe that $\z$ is not divisible, since there is no $x \in \z$ such that $2x = 1$. For $r = 0$, observe that $A$ is a finite abelian group. By \hyperref[ex2.4.19]{Exercise 2.4.19}, finite abelian groups are not divisible. Thus, no finitely generated abelian group is divisible.
+\end{sol}
+
+\newpage
+
+\subsection{Table of Groups of Small Order}
+
+\begin{exercise}\label{ex5.3.1}
+    Prove that $D_{16}, Z_2 \times D_8, Z_2 \times Q_8, Z_4 * D_8, QD_{16}$, and $M$ are nonisomorphic, non-abelian groups of order 16 (where $Z_4 * D_8$ is described in \hyperref[ex5.1.12]{Exercise 5.1.12} and $QD_{16}$ and $M$ are described in \hyperref[ex2.5.11]{Exercise 2.5.11} and \hyperref[ex2.5.14]{Exercise 2.5.14} respectively).
+\end{exercise}
+
+\begin{sol}
+    We do a ``decision tree''-like process to show that these are non-isomorphic:
+    \begin{itemize}
+        \item $D_{16}$
+        \begin{itemize}
+            \item $Z_2 \times D_8$ has no element of order 8, while $D_{16}$ does.
+            \item $Z_2 \times Q_8$ has no element of order 8, while $D_{16}$ does.
+            \item $Z_4 * D_8$ has no elements of order 8, since quotienting preserves only divisibility of orders from $Z_4 \times D_8$, which has no elements of order 8, while $D_{16}$ does.
+            \item In $QD_{16}$, we have $|\sigma^4| = 2$, and $|\sigma^k\tau| = 2$ when
+            \[\sigma^k\tau\sigma^k\tau = \sigma^k\sigma^{3k}\tau\tau = \sigma^{4k},\]
+            hence $\sigma^{4k} = 1$ when $k$ is even, hence there are only 5 elements of order 2 in $QD_{16}$, while there are 8 reflections of order 2, plus the central rotation $r^4$, for a total of 9 elements of order 2 in $D_{16}$.
+            \item $M$ has $|u| = 2$, with
+            \[uv^kuv^k = uuv^{5k}v^k = v^{6k},\]
+            so $v^{6k} = 1$ when $8 \mid 6k$, or $4 \mid 3k$, or $4 \mid k$. Then only $k = 4$ works, giving $M$ a total of 3 elements of order 2.
+        \end{itemize}
+        \item $Z_2 \times D_8$
+        \begin{itemize}
+            \item $Z_2 \times Q_8$ does not have the same number of elements of order 2 as $Z_2 \times D_8$ does, since $D_8$ has 5 elements of order 2, while $Q_8$ has only 1 element of order 2.
+            \item Note that $\bar{(x^k, q)} \in Z_4 * Q_8 \cong Z_4 * D_8$ has order 2 when $(x^k, q)^2 = (1, 1)$ or $(x^2, -1)$. Since we already identify $x^2$ with $-1$ in the quotient, then the case of $q^2 = 1$ and $2i \equiv 0 \bmod 4$ gives the same element, hence only 1 element of order 2. The other case of $q^2 = -1$ and $2i \equiv 2 \bmod 4$, or $i$ odd and $q = Q_8 \setminus Z(Q_8)$ gives 6 elements of order 2, for a total of 7 elements of order 2 in $Z_4 * D_8$, while $Z_2 \times D_8$ has 11 elements of order 2.
+            \item $QD_{16}$ contains elements of order 8, while $Z_2 \times D_8$ does not.
+            \item $M$ contains elements of order 8, while $Z_2 \times D_8$ does not.
+        \end{itemize}
+        \item $Z_2 \times Q_8$
+        \begin{itemize}
+            \item Note that $Z_2 \times Q_8$ only has 3 elements of order 2, while $Z_4 * D_8$ has 7 elements of order 2.
+            \item $QD_{16}$ contains elements of order 8, while $Z_2 \times Q_8$ does not.
+            \item $M$ contains elements of order 8, while $Z_2 \times Q_8$ does not.
+        \end{itemize}
+        \item $Z_4 * D_8$
+        \begin{itemize}
+            \item $QD_{16}$ contains elements of order 8, while $Z_4 * D_8$ does not.
+            \item $M$ contains elements of order 8, while $Z_4 * D_8$ does not.
+        \end{itemize}
+        \item $QD_{16}$
+        \begin{itemize}
+            \item $M$ has only 3 elements of order 2, while $QD_{16}$ has 5 elements of order 2. \qh
+        \end{itemize}
+    \end{itemize}
 \end{sol}
