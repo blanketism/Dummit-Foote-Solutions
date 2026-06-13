@@ -12,7 +12,7 @@ $$M =
 \end{pmatrix}$$
 and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times 2$ matrices with real entries.
 
-\begin{exercise}
+\begin{exercise}\label{ex0.1.1}
     Determine which of the following elements of $\ac$ lie in $\bb$:
     $$
     \begin{pmatrix}
@@ -118,7 +118,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
     So that $MX \neq XM$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}\label{ex0.1.2}
     Prove that if $P, Q \in \bb$, then $P + Q \in \bb$ where $+$ denotes the usual sum of two matrices.
 \end{exercise}
 
@@ -177,7 +177,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
     \end{align*}
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}\label{ex0.1.3}
     Prove that if $P, Q \in \bb$, then $P\cdot Q \in \bb$ where $\cdot$ denotes the usual product of two matrices.
 \end{exercise}
 
@@ -185,7 +185,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
     Using $PQ$, proceed as we did above with $M(PQ)$. Rewriting the entries will result in $(MP)Q$. Since $P \in \bb$, then we have $(PM)Q$. We rewrite entries again to result in $P(MQ)$. Because $Q \in \bb$, we have $P(QM)$, and a final rewrite results in $(PQ)M$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}\label{ex0.1.4}
     Find conditions on $p, q, r, s$ which determine precisely when $
     \begin{pmatrix}
         p & q \\
@@ -241,7 +241,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
     \end{pmatrix}\,\right|\, p, q \in \r} \qh\]
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}\label{ex0.1.5}
     Determine whether the following functions $f$ are well defined:
     \begin{subproblems}
         \item $f : \q \to \z$ defined by $f(a/b) = a$.
@@ -254,7 +254,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
     \item Yes; suppose $a/b = c/d$. Then $ad = bc$, or that $a^2d^2 = b^2c^2$. Then $a^2/b^2 = c^2/d^2$, or $f(a/b) = f(c/d)$. 
 \end{solalph}
 
-\begin{exercise}
+\begin{exercise}\label{ex0.1.6}
     Determine whether the function $f: \r^+ \to \z$ defined by mapping a real number $r$ to the first digit to the right of the decimal point in a decimal expansion of $r$ is well defined.
 \end{exercise}
 
@@ -264,7 +264,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
 
 \newpage
 
-\begin{exercise}
+\begin{exercise}\label{ex0.1.7}
     Let $f: A \to B$ be a surjective map of sets. Prove that the relation
     $$a \sim b \iff f(a) = f(b)$$
     is an equivalence relation whose equivalence classes are the fibers of $f$.
@@ -317,7 +317,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
     \end{subproblems}
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}\label{ex0.2.2}
     Prove that if the integer $k$ divides the integers $a$ and $b$ then $k$ divides $as + bt$ for every pair of integers $s$ and $t$. 
 \end{exercise}
 
@@ -325,7 +325,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
     Since $k \mid a$ and $k \mid b$, there exists $x, y \in \z$ such that $a = kx$ and $b = ky$. Then for any $s, t \in \z$, we have $as + bt = kxs + kyt = k(xs + yt)$ which is divisible by $k$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}\label{ex0.2.3}
     Prove that if $n$ is composite then there are integers $a$ and $b$ such that $n$ divides $ab$ but $n$ does not divide either $a$ or $b$.
 \end{exercise}
 
@@ -333,7 +333,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
     By the Fundamental Theorem of Arithmetic, $n$ has at least two prime factors $a, b$ such that $1 < a, b < n$. Putting $n = ab$, then $n \mid ab$ but $n \nmid a$ and $n \nmid b$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}\label{ex0.2.4}
     Let $a, b$ and $N$ be fixed integers with $a$ and $b$ nonzero and let $d = (a, b)$ be the greatest common divisor of $a$ and $b$. Suppose $x_0$ and $y_0$ are particular solutions to $ax + by = N$ (i.e., $ax_0 + by_0 = N$). Prove for any integer $t$ that the integers
     $$x = x_0 + \frac bdt \text{ and } y = y_0 - \frac adt$$
     are also solutions to $ax + by = N$ (this is in fact the general solution).
@@ -348,7 +348,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
     \end{align*}
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}\label{ex0.2.5}
     Determine the value $\phi(n)$  each integer $n \leq 30$ where $\phi$ denotes the Euler $\phi$-function.
 \end{exercise}
 
@@ -365,7 +365,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
     \end{array}$$
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}\label{ex0.2.6}
     Prove the Well Ordering Property of $\z$ by induction and prove the minimal element is unique.
 \end{exercise}
 
@@ -375,7 +375,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
     To prove uniqueness of the minimal element, suppose $S$ has two minimal elements $x$ and $y$. Then by definition of minimality, $x \leq y$ and $y \leq x$, so that $x = y$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}\label{ex0.2.7}
     If $p$ is a prime, prove that there do not exist nonzero integers $a$ and $b$ such that $a^2 = pb^2$ (i.e., $\sqrt p$ is not a rational number).
 \end{exercise}
 
@@ -423,7 +423,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
 
 \np
 
-\begin{exercise}
+\begin{exercise}\label{ex0.2.10}
     Prove for any given positive integer $N$ there exist only finitely many integers $n$ with $\phi(n) = N$ where $\phi$ denotes Euler's $\phi$-function. Conclude in particular that $\phi$ tends to infinity as $n$ tends to infinity.
 \end{exercise}
 
@@ -435,7 +435,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
     To see that $\phi$ tends to infinity as $n$ tends to infinity, assume, by way of contradiction, that $\phi$ does not tend to infinity as $n$ tends to infinity. Then there exists $M \in \zp$ such that $\phi(n) \leq M$ for infinitely many $n$. However, there are only finitely many $n$ such that $\phi(n) \leq K$ for all $K \leq M$ by the first part of this exercise, contradicting our assumption. Thus, $\phi$ tends to infinity as $n$ tends to infinity.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}\label{ex0.2.11}
     Prove that if $d$ divides $n$ then $\phi(d)$ divides $\phi(n)$ where $\phi$ denotes Euler's $\phi$-function.
 \end{exercise}
 
@@ -449,7 +449,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
 
 \subsection{\texorpdfstring{$\intmod$: The Integers Modulo $n$}{Z/nZ: The Integers Modulo n}}
 
-\begin{exercise}
+\begin{exercise}\label{ex0.3.1}
     Write down explicitly all the elements in the residue classes of $\intmod[18]$.
 \end{exercise}
 
@@ -477,7 +477,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
     \end{align*}
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}\label{ex0.3.2}
     Prove that the distinct equivalence classes in $\intmod$ are precisely $\bar 0, \bar 1, \bar 2, \ldots, \bar{n - 1}$ (use the Division Algorithm).
 \end{exercise}
 
@@ -485,7 +485,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
     Let $a \in \z$. By the Division Algorithm, there exists unique integers $q$ and $r$ such that $a = nq + r$ where $0 \leq r < n$. Then $a \equiv r \bmod n$, so that $a \in \bar r$. Since $0 \leq r < n$, then $\bar r$ is one of $\bar 0, \bar 1, \ldots, \bar{n - 1}$. Thus, every equivalence class in $\intmod$ is one of $\bar 0, \bar 1, \ldots, \bar{n - 1}$. Moreover, these equivalence classes are distinct since if $\bar i = \bar j$ for some $0 \leq i, j < n$, then $i \equiv j \bmod n$, so that $n \mid (i - j)$. However, since $-n < i - j < n$, then $i - j = 0$, or $i = j$. Thus, the distinct equivalence classes in $\intmod$ are precisely $\bar 0, \bar 1, \ldots, \bar{n - 1}$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}\label{ex0.3.3}
     Prove that if $a = a_n10^n + a_{n - 1}10^{n - 1} + \cdots + a_110 + a_0$ is any positive integer then $a \equiv (a_n + a_{n - 1} + \cdots + a_1 + a_0) \bmod 9$ (note that this is the usual arithmetic rule that the remainder after division by 9 is the same as the sum of the decimal digits mod 9—in particular an integer is divisible by 9 if and only if the sum of its digits is divisible by 9) [note that $10 \equiv 1 \bmod 9$].
 \end{exercise}
 
@@ -498,7 +498,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
     \end{align*}
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}\label{ex0.3.4}
     Compute the remainder when $37^{100}$ is divided by $29$.
 \end{exercise}
 
@@ -517,7 +517,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
     Hence the remainder when dividing $37^{100}$ by $29$ is $23$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}\label{ex0.3.5}
     Compute the last two digits of $9^{1500}$.
 \end{exercise}
 
@@ -559,7 +559,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
     In any of the sums, there is no remainder of $3$ when dividing by $4$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}\label{ex0.3.8}
     Prove that the equation $a^2 + b^2 = 3c^2$ has no solutions in nonzero integers $a, b$ and $c$. [Consider the equation mod 4 as in the previous two exercises and show that $a, b$ and $c$ would all have to be divisible by $2$. Then each of $a^2, b^2$ and $c^2$ has a factor of $4$ and by dividing through by $4$ show that there would be a smaller set of solutions to the original equation. Iterate to reach a contradiction.]
 \end{exercise}
 
@@ -571,7 +571,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
     However, this contradicts our assumption that $a, b,$ and $c$ are nonzero integers, since we have found a smaller set of integers $a_0, b_0,$ and $c_0$ that satisfy the same equation. Iterating this process leads to a contradiction, so there are no nonzero integers $a, b,$ and $c$ such that $a^2 + b^2 = 3c^2$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}\label{ex0.3.9}
     Prove that the square of any odd integer always leaves a remainder of $1$ when divided by $8$.
 \end{exercise}
 
@@ -581,7 +581,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
     Since one of $k$ or $k + 1$ is even, then $2 \mid k(k + 1)$, hence $8 \mid 4k(k + 1)$. Thus, $a^2 \equiv 1 \bmod 8$.
 \end{sol}
 
-\begin{specialexercise}
+\begin{specialexercise}\label{ex0.3.10}
     Prove that the number of elements of $\units$ is $\phi(n)$ where $\phi$ denotes the Euler $\phi$-function.
 \end{specialexercise}
 
@@ -593,7 +593,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
     \end{ifandonlyif}
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}\label{ex0.3.11}
     Prove that if $\bar a, \bar b \in \units$, then $\bar a \cdot \bar b \in \units$.
 \end{exercise}
 
@@ -605,7 +605,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
 
 \newpage
 
-\begin{exercise}
+\begin{exercise}\label{ex0.3.12}
     Let $n \in \z, n > 1$ and let $a \in \z$ with $1 \leq a \leq n$. Prove if $a$ and $n$ are not relatively prime, there exists an integer $b$ with $1 \leq b < n$ such that $ab \equiv 0 \bmod n$ and deduce that there cannot be an integer $c$ such that $ac \equiv 1 \bmod n$.
 \end{exercise}
 
@@ -615,7 +615,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
     so that such a $b$ exists, since $a/d, n/d \in \z$. Moreover, if there existed some integer $c$ such that $ac \equiv 1 \bmod n$, then we would have $(ac)b = (ab)c \equiv b \bmod n$. This contradicts that $ab \equiv 0 \bmod n$, so such a $c$ cannot exist.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}\label{ex0.3.13}
     Let $n \in \z, n > 1$ and let $a \in \z$ with $1 \leq a \leq n$. Prove that if $a$ and $n$ are relatively prime then there is an integer $c$ such that $ac \equiv 1 \bmod n$ [use the fact that the g.c.d. of two integers is a $\z$-linear combination of the integers].
 \end{exercise}
 
@@ -623,7 +623,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
     Since $(a, n) = 1$, there exists $c, x \in \z$ such that $ac + nx = 1$. Then $ac \equiv 1 \bmod n$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}\label{ex0.3.14}
     Conclude from the previous two exercises that $\units$ is the set of elements $\bar a$ of $\intmod$ with $(a, n) = 1$ and hence prove Proposition 4. Verify this directly in the case $n = 12$.
 \end{exercise}
 
@@ -631,7 +631,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
     The previous two exercises show that $a$ and $n$ are relatively prime if and only if there exists $b$ such that $ab \equiv 1 \bmod n$, which is exactly the proposition. For $n = 12$, the elements $1, 5, 7, 11$ are relatively prime to $12$, so that $\units[11] = \{\bar 1, \bar 5, \bar 7, \bar{11}\} $ whose inverses are $\bar 1, \bar 7, \bar 5, \bar{11}$ respectively. 
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}\label{ex0.3.15}
     For each of the following pairs of integers $a$ and $n$, show that $a$ is relatively prime to $n$ and determine the multiplicative inverse of $\bar a$ in $\intmod$.
     \begin{subproblems}
         \item $a = 13, n = 20$
@@ -653,7 +653,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
 
 \newpage
 
-\begin{exercise}
+\begin{exercise}\label{ex0.3.16}
     Write a computer program to add and multiply mod $n$, for any $n$ given as input. The output of these operations should be the least residues of the sums and products of two integers. Also include the feature that if $(a, n) = 1$, an integer $c$ between $1$ and $n - 1$ such that $\bar a \cdot \bar c = \bar 1$ may be printed on request. (Your program should not, of course, simply quote "mod" functions already built into many systems).
 \end{exercise}
 
