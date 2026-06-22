@@ -8,7 +8,5 @@
 *.toc
 *.code-workspace
 !dummit_foote_exercises.pdf
-dummit_foote_notes.tex
-notes/
-Base*Tex*Files/
-Misc*Environments/
+!dummit_foote_notes.pdf
+.vscode/
