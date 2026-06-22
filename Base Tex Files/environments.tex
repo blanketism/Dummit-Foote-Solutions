@@ -1,0 +1,89 @@
+\counterwithin{equation}{section}
+
+\newenvironment{proofnum}{\begin{proof}\leavevmode%
+    \begin{enumerate}%
+    \setlength{\parindent}{0.5cm}}
+{\qedhere\end{enumerate}\end{proof}}
+
+\newenvironment{proofitem}{\begin{proof}\leavevmode%
+    \begin{itemize}%
+    \setlength{\parindent}{0.5cm}}
+{\qedhere\end{itemize}\end{proof}}
+
+\setlist{nosep, listparindent=0.5cm}
+
+\newcounter{definition}[section]
+\counterwithin{definition}{section}
+\newcounter{proposition}[section]
+\counterwithin{proposition}{section}
+\newcounter{theorem}[section]
+\counterwithin{theorem}{section}
+\newcounter{corollary}[section]
+\counterwithin{corollary}{section}
+\newcounter{lemma}[section]
+\counterwithin{lemma}{section}
+
+\def\definitionautorefname{Definition}
+\def\propositionautorefname{Proposition}
+\def\theoremautorefname{Theorem}
+\def\corollaryautorefname{Corollary}
+\def\lemmaautorefname{Lemma}
+
+\setlist[enumerate, 1]{label = (\roman*)}
+\setlist[itemize, 2]{label = $\diamond$}
+
+\newcommand{\dspace}{\vspace{0.2cm}}
+\newcommand{\uspace}{\vspace{-0.25cm}}
+
+\definecolor{corcolor}{HTML}{00A9A5}
+\definecolor{notecolor}{HTML}{0D4C18}
+\definecolor{lemcolor}{HTML}{D15C9F}
+\definecolor{excolor}{HTML}{EE8905}
+
+\newcommand{\defi}{\noindent\textcolor{red!80}%
+    {\mbox{\hspace{-0.2pt}\raisebox{0.2ex}{\small\rotatebox[origin=c]{45}{$\blacksquare$}} \hspace{-0.25pt}\squad \textsc{Definition:~}}}}
+
+\newcommand{\theo}[1][]{\noindent
+    \refstepcounter{lemma}\refstepcounter{corollary}\refstepcounter{proposition}\refstepcounter{theorem}%
+    \textcolor{Plum}%
+    {\mbox{{\large♥} \squad \hspace{0.5pt}\textsc{Theorem~\thetheorem:~{#1}}}}
+    
+}
+
+\newcommand{\prop}[1][]{\noindent
+    \refstepcounter{theorem}\refstepcounter{lemma}\refstepcounter{corollary}\refstepcounter{proposition}%
+    \textcolor{NavyBlue}%
+    {\mbox{{\large$\spadesuit$} \squad \textsc{Proposition~\theproposition:~{#1}}}}
+    
+}
+
+\newcommand{\cor}[1][]{\noindent
+    \refstepcounter{lemma}\refstepcounter{proposition}\refstepcounter{theorem}\refstepcounter{corollary}%
+    \textcolor{corcolor}%
+    {\mbox{{\large$\clubsuit$} \squad \textsc{Corollary~\thecorollary:~{#1}}}}
+    
+}
+
+\newcommand{\lem}[1][]{\noindent
+    \refstepcounter{lemma}\refstepcounter{proposition}\refstepcounter{theorem}\refstepcounter{corollary}%
+    \textcolor{lemcolor}%
+    {\mbox{{$\star$} \squad \hspace{0.2pt}\textsc{Lemma~\thelemma:~{#1}}}}
+    
+}
+
+\newcommand{\note}{\noindent\textcolor{notecolor}%
+    {\mbox{\hspace{0.2pt}\raisebox{0.1ex}{$\blacktriangleright$} \squad\textsc{Note:~}}}}
+
+\newcommand{\ex}{\noindent\textcolor{excolor}%
+    {\mbox{{\hspace{0.2pt}\small$\checkmark$}\hspace{-0.4pt} \squad\textsc{Example:~}}}}
+
+\newenvironment{defn}{{\color{BrickRed}%
+    \begin{center}%
+        {\Large{\textsc{Basic Definitions}}}%
+
+        \rule[0.45ex]{5cm}{1pt} \squad $\diamond$ \squad {\small\rotatebox[origin=c]{45}{$\blacksquare$}} \squad $\diamond$ \squad \rule[0.45ex]{5cm}{1pt}%
+    \end{center}\up
+    }
+    \begin{itemize}}
+    {\end{itemize}%
+    }

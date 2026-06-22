@@ -1,0 +1,106 @@
+\counterwithin{equation}{section}
+
+\newcounter{exercount}[subsection]
+\counterwithin{exercount}{subsection}
+
+\newtcbtheorem[use counter=exercount, number within=subsection]{exer}% environment name
+    {Exercise}% Title text
+    {enhanced, % tcolorbox styles
+    attach boxed title to top left = {yshift=-3mm, xshift=5mm},
+    drop shadow = RoyalBlue!20,
+    boxrule=0.5pt,
+    arc=2mm,
+    colback=RoyalBlue!7, colframe=CadetBlue, colbacktitle=DarkOrchid!10, coltitle=black,
+    boxed title style={size=small,colframe=Fuchsia!40},
+    fonttitle=\bfseries
+    }%
+{}
+
+\newenvironment{exercise}{\begin{exer}{}{}\vspace{2mm}}{\end{exer}}
+
+\newenvironment{specialexercise}{\begin{exer}%
+    [title = $(*)$ Exercise \theexercount,%
+    drop shadow = red!30,%
+    boxrule=0.75pt,%
+    colback=YellowOrange!19, colframe=YellowOrange!70,%
+    colbacktitle=Red!16, 
+    boxed title style ={colframe=Bittersweet!70}]{}{}\vspace{2mm}}{\end{exer}}
+
+\setlist{nosep, leftmargin=*, listparindent=0.5cm}
+
+\newcounter{definition}[section]
+\counterwithin{definition}{section}
+\newcounter{proposition}[section]
+\counterwithin{proposition}{section}
+\newcounter{theorem}[section]
+\counterwithin{theorem}{section}
+\newcounter{corollary}[section]
+\counterwithin{corollary}{section}
+
+\def\definitionautorefname{Definition}
+\def\propositionautorefname{Proposition}
+\def\theoremautorefname{Theorem}
+\def\corollaryautorefname{Corollary}
+
+\renewcommand{\subsectionautorefname}{Section}
+
+\newlist{subproblems}{enumerate}{3}
+\setlist[subproblems, 1]{label = (\alph*), labelsep = 1.5pt, topsep = 3pt, itemsep = 2pt, align=left}
+\setlist[subproblems, 2]{label = (\alph*), topsep = 3pt, itemsep = 2pt, align=left}
+\setlist[subproblems, 3]{label = (\alph*), topsep = 3pt, itemsep = 2pt, align=left}
+
+\newlist{ifandonlyif}{itemize}{1}
+\setlist[ifandonlyif, 1]{label = *, labelindent=0.55cm, labelsep=2pt}
+
+\newlist{problems}{enumerate}{2}
+\setlist[problems, 1]{label = (\arabic*), topsep = 3pt, itemsep = 2pt}
+\setlist[problems, 2]{label = (\alph*), topsep = 3pt, itemsep = 2pt}
+
+\newenvironment{sol}{%
+\begin{proof}[{\textbf{Solution}}]\setlength{\parindent}{0.5cm}%
+}{\end{proof}}
+
+\newenvironment{solalph}{%
+\begin{proof}[{\textbf{Solution}}]%
+\leavevmode\begin{subproblems}%
+\setlength{\parindent}{0.5cm}}{\qedhere\end{subproblems}\end{proof}}
+
+\newenvironment{solitem}{%
+\begin{proof}[{\textbf{Solution}}]%
+\leavevmode\begin{ifandonlyif}%
+\setlength{\parindent}{0.5cm}}{\qedhere\end{ifandonlyif}\end{proof}}
+
+\newenvironment{defi}[1][]{\noindent%
+\refstepcounter{definition}%
+\textcolor{red}{\textbf{Definition~\thedefinition~$\blacktriangleright$~{#1}}}
+
+}
+{\vskip 0.20cm}
+
+\newenvironment{theo}[1][]{\noindent%
+\refstepcounter{corollary}\refstepcounter{proposition}\refstepcounter{theorem}%
+\textcolor{orange}{\textbf{Theorem~\thetheorem~$\blacktriangleright$~{#1}}}
+
+}{}
+
+\newenvironment{prop}[1][]{\noindent%
+\refstepcounter{theorem}\refstepcounter{corollary}\refstepcounter{proposition}%
+\textcolor{cyan}{\textbf{Proposition~\theproposition~$\blacktriangleright$~{#1}}}
+
+}{}
+
+\newenvironment{cor}[1][]{\noindent%
+\refstepcounter{theorem}\refstepcounter{proposition}\refstepcounter{corollary}%
+\textcolor{Lavender}{\textbf{Corollary~\thecorollary~$\blacktriangleright$~{#1}}}
+
+}{}
+
+\newenvironment{ex}[1][]{\noindent%
+\textcolor{Emerald}{\textbf{Example~$\blacktriangleright$~{#1}}}
+
+}{\vskip 0.20cm}
+
+\newenvironment{note}[1][]{\noindent%
+\textcolor{CadetBlue}{\textbf{Note~$\blacktriangleright$~{#1}}}
+
+}{\vskip 0.20cm}
