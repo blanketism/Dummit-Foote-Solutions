@@ -315,6 +315,35 @@ Let $g, h \in G$ and $H \leq G$. Then
     and hence $G/H$ is abelian.
     \item Clear from (iv).
 \end{proofnum}
+
+\ex A group $G$ is abelian if and only if $G' = 1$. To see this, simply note that abelian $G$ implies $[g, h] = 1$ for every $g, h \in G$. The converse is clear from assuming trivial $G'$.
+
+\ex Let $D_{2n}$ have usual representation. Note that $[r, s] = r^{-2}$, hence $\gen{r^{-2}} = \gen{r^2} \leq D_{2n}'$. Moreover, $\gen{r^2} \nsub D_{2n}$, since $sr^2s\inv = r^{-2} \in \gen{r^2}$. Note that $|\bar s| = |\bar r| = 2$, hence $\bar{sr} = \bar{rs}$, and $D_{2n}/\gen{r^2}$ is abelian. By \autoref{prop5.7}(iv), we have $D_{2n}' \leq \gen{r^2}$, and hence $D_{2n}' = \gen{r^2}$. If $n$ is odd, then $\gen{r^2} = \gen r$, whereas $n$ even implies $\gen{r^2}$ is of index 2 in $\gen r$. Hence, $D_{2n}'$ is of index 2 or 4 in $D_{2n}$ whether $n$ is odd or even, respectively.
+
+\newpage
+
+\prop[Counting Factorization in Product Subgroup] \label{prop5.8}
+Let $H, K \leq G$. Then the number of distinct factorizations of $g \in HK$ as $g = hk$ with $h \in H$ and $k \in K$ is $|H \cap K|$. In particular, $H \cap K = 1$ implies each $g \in HK$ has unique factorization as $g = hk$ with $h \in H$ and $k \in K$.
+
+\begin{proof}
+    Let $g = h_0k_0 \in HK$ for some $h_0 \in H, k_0 \in K$. Then $g \in h_0K$. If $g = hk$ for some $h \in H, k \in K$, then $g \in hK$, hence $hK = h_0K$. This implies $h\inv h_0 \in K$, and since $h\inv h_0 \in H$, we have $h\inv h_0 \in H \cap K$. Set $h_0 = hx$ for some $x \in H \cap K$. Since $g = hk = h_0k_0$, we know $hk = hxk_0$, hence $k = xk_0$. Then every factorization of $g$ has the form $g = (h_0x\inv)(xk_0)$ for $x \in H \cap K$. Conversely, for any $x \in H \cap K$, we have $g = (h_0x\inv)(xk_0)$, and hence the number of distinct factorizations of $g$ is $|H \cap K|$.
+\end{proof}
+
+\theo[Direct Product Recognition Theorem] \label{theo5.9}
+Let $H, K \leq G$ such that
+\begin{enumerate}
+    \item $H \nsub G$ and $K \nsub G$, and
+    \item $H \cap K = 1$.
+\end{enumerate}
+Then $HK \cong H \times K$.
+\begin{proof}
+    We know $HK \leq G$ by \autoref{cor3.15}. Let $h \in H$ and $k \in K$. Observe $[h, k] \in H \cap K = 1$, hence $hk = kh$. By \autoref{prop5.8}, every $g \in HK$ has unique factorization as $g = hk$ with $h \in H$ and $k \in K$. Define $\phi : H \times K \to HK$ by $\phi(h, k) = hk$. This is a bijection by the uniqueness of factorization. Moreover, for $(h_1, k_1), (h_2, k_2) \in H \times K$, we have
+    \[\phi((h_1, k_1)(h_2, k_2)) = \phi(h_1h_2, k_1k_2) = h_1h_2k_1k_2 = h_1k_1h_2k_2 = \phi(h_1, k_1)\phi(h_2, k_2),\]
+    and hence $\phi$ is a homomorphism. Therefore, $HK \cong H \times K$.
+\end{proof}
+
+\defi Let $H \nsub G$ and $K \nsub G$ with $H \cap K = 1$. Then $HK$ is the \textbf{internal direct product} of $H$ and $K$. We call $H \times K$ the \textbf{external direct product} of $H$ and $K$.
+
 \subsection{Semidirect Products}
 
 \begin{defn}

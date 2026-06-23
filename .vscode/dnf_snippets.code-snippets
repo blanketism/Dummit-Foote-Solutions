@@ -1,0 +1,169 @@
+{
+	"defi":{
+		"prefix": "defi",
+		"body": [
+			"\\defi "
+		],
+		"description": "definition environment"
+	},
+	"prop": {
+		"prefix": "prop",
+		"body": [
+			"\\prop[$1] \\label{prop$2}",
+		],
+		"description": "proposition environment"
+	},
+	"theo": {
+		"prefix": "theo",
+		"body": [
+			"\\theo[$1] \\label{theo$2}",
+		],
+		"description": "theorem environment"
+	},
+	"cor": {
+		"prefix": "cor",
+		"body": [
+			"\\cor[$1] \\label{cor$2}",
+		],
+		"description": "corollary environment"
+	},
+	"lem": {
+		"prefix": "lem",
+		"body": [
+			"\\lem[$1] \\label{lem$2}",
+		],
+		"description": "lemma environment"
+	},
+	"bold text": {
+		"prefix": "bf",
+		"body": [
+			"\\textbf{$1}"
+		],
+		"description": "bold text"
+	},
+	"italics text": {
+		"prefix": "it",
+		"body": [
+			"\\textit{$1}"
+		],
+		"description": "italics text"
+	},
+	"Tikz Picture": {
+		"prefix": "tikz",
+		"body": [
+			"\\begin{center}",
+			"\t\\begin{tikzpicture}",
+			"\t\t$2",
+			"\t\\end{tikzpicture}",
+			"\\end{center}"
+		],
+		"description": "Tikz picture environment"
+	},
+	"iff proof": {
+		"prefix": "iff",
+		"body": [
+			"\\leavevmode",
+			"\\begin{ifandonlyif}",
+			"\t\\item[\\rightimp]",
+			"\t\\item[\\leftimp]",
+			"\\end{ifandonlyif}"
+		],
+		"description": "if and only if proof structure"
+	},
+	"Proof": {
+		"prefix": "proof",
+		"body": [
+			"\\begin{proof}",
+			"\t$1",
+			"\\end{proof}"
+		],
+		"description": "proof environment"
+	},
+	"Proofnum": {
+		"prefix": "proofnum",
+		"body": [
+			"\\begin{proofnum}",
+			"\t\\item $1",
+			"\\end{proofnum}"
+		],
+		"description": "proof environment with numbered steps"
+	},
+	"Proofitem": {
+		"prefix": "proofitem",
+		"body": [
+			"\\begin{proofitem}",
+			"\t\\item $1",
+			"\\end{proofitem}"
+		],
+		"description": "proof environment with bullet points"
+	},
+	"Exercise Reference": {
+		"prefix": "exref",
+		"body": [
+			"\\hyperref[ex$1]{Exercise $1}"
+		],
+		"description": "hyperref to an exercise"
+	},
+	"Begin Non-Title Env": {
+		"prefix": "beg",
+		"body": [
+			"\\begin{$1}",
+			"\t$2",
+			"\\end{$1}"
+		],
+		"description": "beginning environments with no title"
+	}, 
+	"Display Math": {
+		"prefix": "dm",
+		"body": [
+			"\\[$1\\]"
+		],
+		"description": "display math environment"
+	},
+	"Solution": {
+		"prefix": "sol",
+		"body": [
+			"\\begin{sol}",
+			"\t$1",
+			"\\end{sol}"
+		],
+		"description": "solution environment"
+	},
+	"Solution Enumerated": {
+		"prefix": "sole",
+		"body": [
+			"\\begin{solalph}",
+			"\t\\item $1",
+			"\\end{solalph}"
+		],
+		"description": "solution environment with enumerated list"
+	},
+	"Begin Title Env": {
+		"prefix": "begin",
+		"body": [
+			"\\begin{$1}[$2]",
+			"\t\\label{$3}",
+			"\t$4",
+			"\\end{$1}"
+		],
+		"description": "beginning environments with title"
+	},
+	"Problem": {
+		"prefix": "exercise",
+		"body": [
+			"\\begin{exercise}\\label{ex$1}",
+			"\t$2",
+			"\\end{exercise}"
+		],
+		"description": "problem environment"
+	},
+	"Begin Example": {
+		"prefix": "bex",
+		"body": [
+			"\\begin{ex}[$1]",
+			"\t$2",
+			"\\end{ex}"
+		],
+		"description": "beginning example environment"
+	}
+}
