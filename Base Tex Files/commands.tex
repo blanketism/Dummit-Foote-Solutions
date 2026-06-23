@@ -96,6 +96,10 @@
 \DeclareMathOperator{\hol}{Hol}
 \newcommand{\unt}{^\times}
 \newcommand{\nsub}{\trianglelefteq}
+\let\oldrtimes\rtimes
+\renewcommand{\rtimes}{%
+  \mathbin{\raisebox{-0.15ex}{\scalebox{1}[1.4]{$\oldrtimes$}}}%
+}
 \newcommand{\semidir}{\rtimes}
 \newcommand{\units}[1][n]{(\z/{#1}\z)^\times}
 \newcommand{\intmod}[1][n]{\z/{#1}\z}
