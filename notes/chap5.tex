@@ -344,123 +344,46 @@ Then $HK \cong H \times K$.
 
 \defi Let $H \nsub G$ and $K \nsub G$ with $H \cap K = 1$. Then $HK$ is the \textbf{internal direct product} of $H$ and $K$. We call $H \times K$ the \textbf{external direct product} of $H$ and $K$.
 
+\ex Let $n$ be positive odd. We claim $D_{4n} \cong D_{2n} \times Z_2$. Let $D_{4n}$ have its usual presentation. Put $H = \gen{s, r^2}$ and $K = \gen{r^n}$. It is clear that $H$ has index 2 in $D_{4n}$, since we may just associate it with the regular $n$-gon inscribed in the regular $2n$-gon, hence $H \nsub D_{4n}$. Moreover, $sr^ns\inv = r^{-n} = r^n$, hence $s$ centralizes $r^n$, and $K \nsub D_{4n}$. Since $r^2$ always has odd order, then $r^2 \not\in K$, hence $H \cap K$ is trivial. Then \autoref{theo5.9} finishes the proof.
+
+\ex Let $I \subseteq \set{1, 2, \ldots, n}$. Let $G$ be the setwise stabilizer of $I$ in $S_n$, i.e.,
+\[G = \set{\sigma \in S_n \mid \sigma(I) = I}.\]
+Let $J = \set{1, 2, \ldots, n} - I$. Note $\sigma(J) = J$ for $\sigma \in G$. Let $P_I$ and $P_J$ be the pointwise stabilizers of $I$ and $J$ respectively:
+\[P_I = \set{\sigma \in S_n \mid \sigma(i) = i \text{ for all $i \in I$}}, \quad P_J = \set{\sigma \in S_n \mid \sigma(j) = j \text{ for all $j \in J$}}.\]
+By definition, $\sigma \in G$ setwise stabilizes both $I$ and $J$, i.e., decomposes into cycles $\sigma_I\sigma_J$, where $\sigma_I \in P_I$ and $\sigma_J \in P_J$. It follows that $G = P_IP_J \cong P_I \times P_J$ by \autoref{theo5.9}. Lastly, we may extend permutations of $J$ into permutations in $S_n$ by letting them act as the identity on $I$, which are precisely the permutations in $H$. Similarly, the permutations of $K$ are those that act as the identity on $J$, hence,
+\[P_I \cong S_J, \quad P_J \cong S_I, \quad G \cong S_{|J|} \times S_{n - |J|}.\]
+
+\ex Building off the previous example, suppose $\tau \in S_n$ such that $\tau$ pointwise stabilizes $I$. Let $C = C_{S_n}(\tau)$, and observe that $\tau$ stabilizes both $I$ and $J$, by Exercise 4.3.18. Then $C \cong T \leq P_J \times P_I$. Observe that $\tau \in P_I$. Then each $\gamma \in C$ is written in the form $\gamma_I \gamma_J$ for $\gamma_I \in P_I$ and $\gamma_J \in P_J$. If $\rho \in P_J$, then $\tau\rho = \rho\tau$. It follows that $C$ contains all $\rho$, or that $P_J \leq C$. Hence, every element of $C$ has form $\gamma_I\gamma_J$ such that $\gamma_J \in P_J$ is arbitrary, and $\gamma_I$ commutes with $\tau$:
+\[C_{S_n}(\tau) = C_H(\tau) \times K \cong C_{S_J}(\tau) \times S_I.\]
+Moreover, if $\tau$ is an $\ell$-cycle, then
+\[C_{S_n}(\tau) = \gen\tau \times S_{n - \ell}.\]
+
+\newpage
+
 \subsection{Semidirect Products}
 
-\begin{defn}
-    \item Let $H$ and $K$ be groups, and let $\phi : K \to \aut(H)$ be a homomorphism. The \textbf{semidirect product} of $H$ and $K$ with respect to $\phi$ is the group $H \semidir_\phi K$. If the homomorphism $\phi$ is clear from the context, then we simply write $H \semidir K$.
-    \item The \textbf{generalized quaternion group of order $2^{n + 1}$} is the group
-    \[Q_{2^{n + 1}} = \gen{h, x \mid h^{2^n} = x^4 = 1, x\inv hx = h\inv, h^{2^{n - 1}} = x^2}\]
-    for $n \geq 2$.
-    \item Let $H$ be a group with $K = \aut(H)$, and $\phi = \id$. Then the semidirect product $H \semidir_\phi K$ is called the \textbf{holomorph} of $H$, denoted $\hol(H)$.
-\end{defn}
-
-\begin{theo}[Semidirect Product Construction]
-    \label{theo5.10}
-    Let $H$ and $K$ be groups, and let $\phi : K \to \aut(H)$ be a homomorphism. Let $\cdot$ be the action of $K$ on $H$ determined by $\phi$. Let $G$ be the set of ordered pairs $(h, k)$ with $h \in H$ and $k \in K$ with the defined multiplication:
-    \[(h_1, k_1)(h_2, k_2) = (h_1 (k_1 \cdot h_2), k_1 k_2).\]
-    \begin{enumerate}
-        \item $G$ is a group with order $|H||K|$.
-        \item The sets $\set{(h, 1) \mid h \in H}$ and $\set{(1, k) \mid k \in K}$ are subgroups of $G$ isomorphic to $H$ and $K$ via the maps $h \mapsto (h, 1)$ and $k \mapsto (1, k)$, respectively. We identify these subgroups with $H$ and $K$, or
-        \[H \cong \set{(h, 1) \mid h \in H}, \quad K \cong \set{(1, k) \mid k \in K}.\]
-    \end{enumerate}
-    Upon identification in $G$, we have the following properties:
-    \begin{enumerate}[resume]
-        \item $H \nsub G$,
-        \item $H \cap K = 1$,
-        \item for all $h \in H$ and $k \in K$, then $khk\inv = k \cdot h = \phi(k)(h)$.
-    \end{enumerate}
-\end{theo}
+\theo[Semidirect Product Construction] \label{theo5.10}
+Let $H, K$ be groups and $\phi : K \to \aut(H)$ be a homomorphism. Let $\cdot$ be the action of $K$ on $H$ determined by $\phi$. Let $G = H \times K$, and define $\star$ on $G$ as:
+\[(h_1, k_1) \star (h_2, k_2) = (h_1 k_1 \cdot h_2, k_1k_2).\]
+\begin{enumerate}
+    \item $G$ is a group with order $|G| = |H||K|$.
+    \item The sets $G_H = \set{(h, 1) \mid h \in H}$ and $G_K = \set{(1, k) \mid k \in K}$ are subgroups of $G$. The maps $h \mapsto (h, 1)$ and $k \mapsto (1, k)$ are isomorphisms, and $H \cong G_H, K \cong G_K$.
+\end{enumerate}
+Identifying $H$ and $K$ with their copies in $G$, we have
+\begin{enumerate}[resume]
+    \item $H \nsub G$,
+    \item $H \cap K = 1$,
+    \item for $h \in H$ and $k \in K$, $khk\inv = k \cdot h = \phi(k)h$.
+\end{enumerate}
 
 \begin{proofnum}
-    \item To see that $G$ is a group, we verify the group axioms:
-    \begin{itemize}
-        \item Closure: For any $(h_1, k_1), (h_2, k_2) \in G$, then $h_1 (k_1 \cdot h_2) \in H$ and $k_1 k_2 \in K$, so $(h_1 (k_1 \cdot h_2), k_1 k_2) \in G$.
-        \item Associativity: For any $(h_1, k_1), (h_2, k_2), (h_3, k_3) \in G$, then
-        \begin{align*}
-            ((h_1, k_1)(h_2, k_2))(h_3, k_3) &= (h_1 (k_1 \cdot h_2), k_1 k_2)(h_3, k_3) \\
-            &= ((h_1 (k_1 \cdot h_2)) ((k_1 k_2) \cdot h_3), (k_1 k_2) k_3) \\
-            &= (h_1 ((k_1 \cdot h_2) ((k_1 k_2) \cdot h_3)), k_1 (k_2 k_3)) \\
-            &= (h_1 ((k_1 \cdot h_2) (k_1 \cdot (k_2 \cdot h_3))), k_1 (k_2 k_3)) \\
-            &= (h_1 (k_1 \cdot (h_2 (k_2 \cdot h_3))), k_1 (k_2 k_3)) \\
-            &= (h_1, k_1)((h_2, k_2)(h_3, k_3))
-        \end{align*}
-        where the fourth equality follows from the definition of a group action.
-        \item Identity: $(1, 1)$ is the identity element of $G$ since for any $(h, k) \in G$, then
-        \[(1, 1)(h, k) = (1 (1 \cdot h), 1 k) = (h, k)\]
-        and
-        \[(h, k)(1, 1) = (h (k \cdot 1), k 1) = (h, k).\]
-        \item Inverses: For any $(h, k) \in G$, then
-        \[(h, k)(k\inv \cdot h\inv, k\inv) = (h (k \cdot (k\inv \cdot h\inv)), k k\inv) = (h h\inv, 1) = (1, 1)\]
-        and
-        \[(k\inv \cdot h\inv, k\inv)(h, k) = ((k\inv \cdot h\inv) (k\inv \cdot h), k\inv k) = (1, 1).\]
-        Hence, $(h, k)\inv = (k\inv \cdot h\inv, k\inv)$.
-    \end{itemize}
-    \item Let $\wt H = \set{(h, 1) \mid h \in H}$ and $\wt K = \set{(1, k) \mid k \in K}$. Observe that $\wt H$ and $\wt K$ are subgroups of $G$ since for any $h_1, h_2 \in H$ and $k_1, k_2 \in K$, then
-    \[(h_1, 1)(h_2, 1) = (h_1 h_2, 1) \in \wt H\]
-    and
-    \[(1, k_1)(1, k_2) = (1, k_1 k_2) \in \wt K.\]
-    Moreover, the maps $h \mapsto (h, 1)$ and $k \mapsto (1, k)$ are isomorphisms since they are bijective homomorphisms. Hence, $\wt H$ and $\wt K$ are subgroups of $G$ isomorphic to $H$ and $K$.
-    \item Under the identification of $\wt H$ and $\wt K$ with $H$ and $K$, we see that $K \leq N_G(H)$ since for any $h \in H$ and $k \in K$, then
-    \[k\inv hk = (1, k)\inv (h, 1)(1, k) = (k\inv \cdot h, 1) \in H.\]
-    Hence, $H \nsub G$.
-    \item It is clear that $\wt H \cap \wt K = 1$, so $H \cap K = 1$ under the identification.
-    \item For $(1, k) \in \wt K$ and $(h, 1) \in \wt H$, then
-    \[(1, k)(h, 1)(1, k)\inv = (1, k)(h, 1)(k\inv \cdot 1, k\inv) = (k \cdot h, 1)\]
-    so that $khk\inv = k \cdot h = \phi(k)(h)$ under the identification.
+    \item Trivial, via group actions. Note that $1 = (1, 1)$, and $(h, k)\inv = (k\inv \cdot h\inv, k\inv)$.
+    \item Trivial to see $G_H, G_K \leq G$. The maps are clear isomorphisms.
+    \item For $(h_0, 1) \in H$ and $(h, k) \in G$, then
+    \[(h, k)(h_0, 1)(h, k)\inv = (hh_0, k)(k\inv \cdot h\inv, k\inv) = (hh_0h\inv, 1) \in H,\]
+    hence $H \nsub G$.
+    \item Clear.
+    \item Use a similar process from (iii) to deduce (v).
 \end{proofnum}
 
-\begin{prop}[Criterion for Equivalence of Semidirect and Direct Products]
-    \label{prop5.11}
-    Let $H$ and $K$ be groups, and let $\phi : K \to \aut(H)$ be a homomorphism. Then the following are equivalent:
-    \begin{enumerate}
-        \item The identity (set) map between $H \semidir K$ and $H \times K$ is a group homomorphism, or $H \semidir K \cong H \times K$.
-        \item $\phi$ is the trivial homomorphism, i.e., $\phi(k) = 1$ for all $k \in K$,
-        \item $K \nsub H \semidir K$.
-    \end{enumerate}
-\end{prop}
-
-\begin{proof}
-    \leavevmode\newline
-    $(1) \Rightarrow (2)$: By definition for $h_1, h_2 \in H$ and $k_1, k_2 \in K$ in $H \semidir K$, we have
-    \[(h_1, k_1)(h_2, k_2) = (h_1 (k_1 \cdot h_2), k_1 k_2)\]
-    If the identity map is a homomorphism, then $(h_1, k_1)(h_2, k_2) = (h_1 h_2, k_1 k_2)$ in $H \times K$. Hence, $h_1 (k_1 \cdot h_2) = h_1 h_2$ for all $h_1, h_2 \in H$ and $k_1 \in K$, so $\phi(k) = 1$ for all $k \in K$.
-
-    \noindent $(2) \Rightarrow (3)$: If $\phi$ is trivial, then the action of $K$ on $H$ is trivial, so the multiplication in $H \semidir K$ is given by
-    \[(h_1, k_1)(h_2, k_2) = (h_1 h_2, k_1 k_2)\]
-    so that $H \semidir K = H \times K$. Since $K \nsub H \times K$, then $K \nsub H \semidir K$.
-
-    \noindent $(3) \Rightarrow (1)$: If $K \nsub H \semidir K$, then (referencing \autoref{theo5.9}) for all $h \in H$ and $k \in K$, we have $[h, k] \in H \cap K = 1$. Then $kh = hk$, so the action of $K$ on $H$ is trivial, or $\phi(k) = 1$ for all $k \in K$. Hence, the multiplication in $H \semidir K$ is given by
-    \[(h_1, k_1)(h_2, k_2) = (h_1 h_2, k_1 k_2)\]
-    so that $H \semidir K = H \times K$.
-\end{proof}
-
-\begin{ex}[Examples of Semidirect Products]
-    Let $H$ and $K$ be groups with homomorphism $\phi : K \to \aut(H)$. Let $G = H \semidir K$, and identify $H$ and $K$ as subgroups of $G$ as in \autoref{theo5.10}(2). We will use \autoref{prop4.16} and \autoref{prop4.17} to determine homomorphisms $\phi$ for specific $H$. The proofs for showing $\phi$ is a homomorphism are omitted, since $K$ will often by cyclic.
-    \begin{enumerate}
-        \item Let $H$ be abelian (and positively infinite), and let $K = \gen x \cong Z_2$. Define $\phi : K \to \aut(H)$ that maps $x$ to the inverting automorphism of $H$ so that $x \cdot h = h\inv$ for every $h \in H$. Then $G$ contains $H$ as a normal subgroup of index 2, and
-        \[xhx\inv = h\inv \quad \text{for all $h \in H$.}\]
-        When $H = Z_n$, then $G \cong D_{2n}$, the dihedral group of order $2n$. If $H = \gen z$, then $G = D_\infty$, the infinite dihedral group.
-        \item Generalizing the previous example, let $H$ be abelian and $K = \gen x \cong Z_{2n}$. Using the same $\phi$ as before, then $x^2$ acts trivially on $H$. In $G$, we have $xhx\inv = h\inv$, and $x^2hx^{-2} = h$ for all $h \in H$. Then $x^2 \in Z(G)$. If we take $H = Z_3$ and $K = Z_4$, then $G$ is non-abelian of order 12 that is not isomorphic to $A_4$ or $D_{12}$ because its Sylow-2 subgroup, $K$, is cyclic of order 4.
-        \item Another generalization of (1) is to let $H = \gen H \cong Z_{2^n}$, $K = \gen x \cong Z_4$ with $xhx\inv = h\inv$. By above, $x^2 \in Z(G)$, and $x$ inverting $H$ implies that $x$ inverts $\gen z$, where $z = h^{2^{n - 1}}$. Then $xzx\inv = z\inv = z$, so $z \in Z(G)$. Then $x^2z \in Z(G)$, or $\gen{x^2z} \nsub G$.
-        
-        Let $\bar G = G/\gen{x^2z}$. Because $x^2$ and $z$ are distinct commuting elements of order 2, then $|x^2z| = 2$, hence $|\bar G| = 2^{n + 1}$. By factoring out $x^2z$, which implies $x^2 = z\inv = z$, then we may identify $x^2$ and $h^{2^{n - 1}}$ in $\bar G$. For $n = 2$, this implies that $\bar x$ and $\bar h$ are elements of order 4. To see this, suppose $\bar x^2 = 1$. Then $x^2 \in \gen{x^2z}$, so $x^2 = x^2z$ or $x^2 = 1$. Since $z \neq 1$, and $|x| = 4$, this cannot hold. To see that $|\bar h|= 4$, we note that its order divides 4, and $\bar h^2 = \bar x^2 \neq 1$, so its order is 4. We also have that $\bar x$ inverts $\bar h$, and $\bar h^2 = \bar x^2$ is central in $\bar G$. Then $\bar G$ satisfies the same presentation as $Q_8$, so $\bar G \cong Q_8$.
-
-        Suppose $n > 2$. We show that $\bar G$ has a unique subgroup of order 2, namely $\gen{\bar x^2}$. Let $\bar h^i \bar x^j$ be an element in $\bar G$. We split into three cases:
-        \begin{itemize}
-            \item If $j = 0$, then $\bar h^i$ has order 2 if and only if $\bar h^i = \bar h^{2^{n - 1}} = \bar x^2$.
-            \item If $j = 2$, then $(\bar h^i\bar x^2)^2 = \bar h^{2i}$ has order 2 if and only if $\bar h^{2i} = \bar h^{2^{n - 1}} = \bar x^2$, hence $\bar h^i\bar x^2$ has order 4.
-            \item If $j = 1$ or $3$, then $\bar x^j$ inverts $\bar h$, so $(\bar h^i \bar x^j)^2 = \bar h^i \bar x^j \bar h^i \bar x^j = \bar h^i (\bar x^j \bar h^i \bar x^{-j}) \bar x^{2j} = \bar h^i \bar h^{-i}\bar x^{2j} = \bar x^2$, so $\bar h^i \bar x^j$ has order 4.
-        \end{itemize}
-
-        We claim that $Z(\bar G) = \gen{\bar x^2}$. To see that $\bar x^2 \in Z(\bar G)$, recall that $\bar x^2 = \bar h^{2^{n - 1}}$. This commutes with $\bar h$ trivially, while $\bar x^2$ clearly commutes with $\bar x$. We call $\bar G$ the \textbf{generalized quaternion group} of order $2^{n + 1}$, which is denoted by $Q_{2^{n + 1}}$ with the presentation:
-        \[Q_{2^{n + 1}} = \gen{h, x \mid h^{2^n} = x^4 = 1, x\inv hx = h\inv, h^{2^{n - 1}} = x^2}\]
-            \item Let $H = (\q, +)$ and $K = \gen x \cong \z$. Let $\phi$ be the map of multiplying by 2 on $H$, hence $x \cdot h = 2h$ for every $h \in H$. Note that $x \z x\inv = 2\z \subset \z$, but $2z \neq \z$, hence $x \not\in N_G(\z)$. This shows that containment is not enough to guarantee normality. 
-        \item The semidirect $H \semidir \aut(H)$ is called the \textbf{holomorph} of $H$, denoted $\hol(H)$. Some common holomorphs are:
-        \begin{itemize}
-            \item $\hol(Z_2 \times Z_2) \cong S_4$,
-            \item Let $|G| = n$ and $\pi : G \to S_n$ be the left regular representation. Then $N_{S_n}(\pi(G)) \cong \hol(G)$. Note that the left regular reprsentation of a generator of $Z_n$ is an $n$-cycle in $S_n$, hence
-            \[N_{S_n}(\gen{(1\, 2 \ldots n)}) \cong \hol(Z_n) = Z_n \semidir \aut(Z_n)\]
-        \end{itemize}
-        \item 
-    \end{enumerate}
-\end{ex}
+\defi Let $H$ and $K$ be groups with homomorphism $\phi : K \to \aut(H)$. Then $G$ in \autoref{theo5.10} is the \textbf{semidirect product} of $H$ and $K$ with respect to $\phi$, denoted as $H \semidir_\phi K$.
