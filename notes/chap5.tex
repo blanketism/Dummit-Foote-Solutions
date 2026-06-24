@@ -387,3 +387,44 @@ Identifying $H$ and $K$ with their copies in $G$, we have
 \end{proofnum}
 
 \defi Let $H$ and $K$ be groups with homomorphism $\phi : K \to \aut(H)$. Then $G$ in \autoref{theo5.10} is the \textbf{semidirect product} of $H$ and $K$ with respect to $\phi$, denoted as $H \semidir_\phi K$.
+
+\prop[Reduction of Semidirect Product to Direct Product] \label{prop5.11}
+Let $H, K$ be groups with homomorphism $\phi : K \to \aut(H)$. Then the following are equivalent:
+\begin{enumerate}
+    \item $\id : H \semidir K \to H \times K$ is an isomorphism,
+    \item $\phi$ is trivial, and
+    \item $K \nsub H \semidir K$.
+\end{enumerate}
+
+\begin{proofitem}
+    \item By definition, $\id$ is a homomorphism when $(h_1, k_1)(h_2, k_2) = (h_1k_1 \cdot h_2, k_1k_2) = (h_1h_2, k_1k_2)$ for all $h_i \in H$ and $k_i \in K$. Equating factors, we get $h_1 k_1 \cdot h_2 = h_1h_2$, which is equivalent to $\phi$ being trivial.
+    \item $\phi = \id$ implies $khk\inv = k \cdot h = h$, hence $kh = hk$, and $H$ commutes with $K$. From that, $H \nsub K$ and $K \nsub H$, hence $K \nsub H \semidir K$.
+    \item $K \nsub H \semidir K$ implies $[h, k] \in H \cap K = 1$ for all $h \in H$ and $k \in K$, hence $kh = hk$, and $\phi$ is trivial. It follows $(h_1, k_1)(h_2, k_2) = (h_1k_1 \cdot h_2, k_1k_2) = (h_1h_2, k_1k_2)$ for all $h_i \in H$ and $k_i \in K$, and hence $\id$ is an isomorphism.
+\end{proofitem}
+
+\ex Let $H$ be abelian and $K = \gen k \cong Z_2$. Define $\phi : K \to \aut(H)$ by mapping $k$ to the inversion map, hence $k \cdot h = h\inv$ for all $h \in H$. Then $H \leq G$ has index 2, and $khk\inv = h\inv$ for all $h \in H$. If $H = Z_n$, then $G \cong D_{2n}$, and if $H = \z$, then $G \cong D_\infty$.
+
+\newpage
+
+\defi The \textbf{generalized quaternion group} of order $2^{n + 1}$ is the group $Q_{2^{n + 1}}$ with presentation
+\[\gen{h, k \mid h^{2^n} = k^4 = 1, k\inv hk = h\inv, h^{2^{n-1}} = k^2}.\]
+
+\ex To construct $Q_{2^{n + 1}}$, let $H = \gen h \cong Z_{2^n}$ and $K = \gen k \cong Z_4$ with $khk\inv = h\inv$ in $G$. Note $k^2 \in Z(G)$ since $k \cdot (k \cdot h) = k \cdot h\inv = h$. Let $\gen z \leq H$ be the unique subgroup of order 2, where $z = \smash{h^{2^{n-1}}}$. Since $z = z\inv$, then $kzk\inv = z$, hence $z \in Z(G)$. Then $k^2z \in Z(G)$, hence $\gen{k^2z} \nsub G$. Note that $k^2z$ has order 2, hence $\bar G = G/\gen{k^2z}$ has order $2^{n + 1}$. We may now identify $\bbar k[2]$ and $\bbar h[2^{n-1}]$ in $\bar G$.
+
+For $n = 2$, we have that $\bar k = \bar h = 4$, $\bbar k[2] = \bbar h[2]$, and $\bar k$ inverts $\bar h$. Hence, $\bar G \cong Q_8$. For general $n \geq 3$, we claim that $Z(\bar G) = \gen{\bbar k[2]}$: We first note that $\bar{k^2z} = \bar 1$, hence $\bbar k[2] = \bbar z = \bbar h[2^{n-1}]$. From this, it is clear that $\gen{\bbar k[2]} \leq Z(\bar G)$. Conversely, if $\bar x \in Z(\bar G)$, then
+\begin{itemize}
+    \item If $\bar x = \bbar h[i]$, then observe that $\bbar k[-1] \bbar h[i] \bbar k = \bbar h[-i] = \bbar h[i]$ implies $i = 0$ or $i = 2^{n-1}$, hence $\bar x \in \gen{\bbar k[2]}$.
+    \item If $\bar x = \bbar h[i] \bar k$, then $\bbar h[-1]\bar x \bar h = \bar x$ implies $\bbar h[-1] \bbar h[i] \bar k \bar h = \bbar h[i] \bar k$. Using the inversion relation, the left-hand side is $\bbar h[-1] \bbar h[i] \bbar h[-1] \bar k = \bbar h[i-2] \bar k$, hence $\bbar h[2] = \bar 1$, which is impossible. Therefore, $\bar x \not\in Z(\bar G)$.
+\end{itemize}
+
+\note For $g \in G$ infinite and $H \leq G$, then $gHg\inv \leq H$ does not imply $gHg\inv = H$. For example, let $H = (\q, +)$ and $K = \gen k \cong \z$ with $k \cdot h = 2h$ for all $h \in H$, and consider $\z \leq H$. Observe that $k\z k\inv = 2\z \leq \z$, but $k\inv \z k \not\leq \z$.
+
+\defi Let $H$ and $K = \aut(H)$ with $\phi = \id$. Then $H \semidir K$ is the \textbf{holomorph} of $H$, denoted $\hol(H)$.
+
+\ex Some examples of holomorphs are as follows:
+\begin{enumerate}
+    \item $\hol(Z_2 \times Z_2) \cong S_4$.
+    \item If $|G| = n$ with $\pi : G \to S_n$ the left regular representation, then $N_{S_n}(\pi(G)) \cong \hol(G)$. In particular, because the left regular representation of a generator of $Z_n$ is an $n$ cycle, we have
+    \[N_{S_n}(\gen{(1\ 2 \cdots n)}) \cong \hol(Z_n) = Z_n \semidir \aut(Z_n),\]
+    where $|Z_n \semidir \aut(Z_n)| = n\phi(n)$.
+\end{enumerate}
