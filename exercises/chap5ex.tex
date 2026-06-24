@@ -948,3 +948,33 @@ Let $G$ be a group.
     \end{bmatrix}\]
     for some $z \in F$. Clearly, $af - cd \in F$, so $[X, Y] \in Z(H(F))$, hence $H(F)' \leq Z(H(F))$. On the other hand, for any $z \in F$, we may choose $a = 1$, $f = z$, and $c = d = 0$ to get that $Z(H(F)) \leq H(F)'$. Therefore, $H(F)' = Z(H(F))$.
 \end{sol}
+
+\newpage
+
+\subsection{Semidirect Products}
+
+Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and identify $H, K \leq G = H \semidir_\phi K$.
+
+\begin{exercise}\label{ex5.5.1}
+    Prove that $C_K(H) = \ker\phi$ (recall that $C_K(H) = C_G(H) \cap K$).
+\end{exercise}
+
+\begin{sol}
+    Let $k \in C_K(H)$. Then $k \in K$ and $kh = hk$ for all $h \in H$. Then $\phi(k)(h) = khk\inv = h$ for all $h \in H$, so $k \in \ker\phi$. Conversely, let $k \in \ker\phi$. Then $\phi(k)(h) = khk\inv = h$ for all $h \in H$, so $kh = hk$ for all $h \in H$, hence $k \in C_K(H)$. Therefore, $C_K(H) = \ker\phi$.
+\end{sol}
+
+\begin{exercise}\label{ex5.5.2}
+    Prove that $C_H(K) = N_H(K)$.
+\end{exercise}
+
+\begin{sol}
+    It is clear that $C_H(K) \leq N_H(K)$. Now let $h \in N_H(K)$. Then $hKh\inv = K$, so for any $k \in K$, we have $hkh\inv \in K$. Since $H \cap K = 1$, and $[h, k] = hkh\inv k\inv \in H \cap K$, we must have $[h, k] = 1$, so $hk = kh$ for all $k \in K$. Hence, $h \in C_H(K)$, so $N_H(K) \leq C_H(K)$. Therefore, $C_H(K) = N_H(K)$.
+\end{sol}
+
+\begin{exercise}\label{ex5.5.3}
+    In Example 1 following the proof of Proposition 5.11, prove that every element of $G - H$ has order 2. Prove that $G$ is abelian if and only if $h^2 = 1$ for all $h \in H$.
+\end{exercise}
+
+\begin{sol}
+    
+\end{sol}
