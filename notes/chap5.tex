@@ -482,4 +482,23 @@ Let $\phi : K \to \aut(H)$ map $k \in K$ to left conjugation by $k$ on $H$. Then
 
 \ex Let $|G| = pq$ for primes $p, q$. Let $P \in \syl_p(G)$ and $Q \in \syl_q(G)$. We know $G \cong Q \semidir P$ for $\phi : P \to \aut(Q)$. Note that $P$ and $Q$ are cyclic. Moreover, $\aut(Q)$ is cyclic with order $q - 1$. If $p \nmid q - 1$, then the only homomorphism from $P$ to $\aut(Q)$ is trivial, hence $G \cong P \times Q \cong Z_{pq}$.
 
-If $p \mid q - 1$, put $P = \gen a$. Cyclicity of $\aut(Q)$ implies a unique subgroup of order $p$, say $\gen\alpha$. Then any $\phi : P \to \aut(Q)$ maps $a$ to powers of $\alpha$, or $\phi_i : a \mapsto \alpha^i$ for $0 \leq i \leq p - 1$. Note that $Q \semidir_{\phi_0} P \cong Q \times P$ since $\phi_0$ is trivial. 
+If $p \mid q - 1$, put $P = \gen a$. Cyclicity of $\aut(Q)$ implies a unique subgroup of order $p$, say $\gen\alpha$. Then any $\phi : P \to \aut(Q)$ maps $a$ to powers of $\alpha$, or $\phi_i(a) = \alpha^i$ for $0 \leq i \leq p - 1$. Note that $Q \semidir_{\phi_0} P \cong Q \times P$ since $\phi_0$ is trivial. Each $\phi_i$ gives rise to a non-abelian group $G_i$ of order $pq$. To see that $G_i \cong G_j$ for some $i \neq j$, note that there is $a_i \in P$ such that $\phi_i(a_i) = \alpha$. Hence, $G_i \cong G_1$ for all $i \neq 0$. Then there are $p - 1$ non-abelian groups of order $pq$ up to isomorphism, and one abelian group of order $pq$.
+
+\ex Recall every group of order 30 has a subgroup $H$ of order 15. Since $15 = 3 \cdot 5$, then $H \cong Z_{15}$ and it has index 2 in $G$. Moreover, there exists $K \in \syl_2(G)$. Then $G = HK$ with $H \cap K = 1$. Then there exists $\phi : K \to \aut(H)$ such that $G \cong H \semidir K$. Now,
+\[\aut(Z_{15}) \cong \units[15] \cong Z_4 \times Z_2,\]
+where we know that $H = \gen x \times \gen y \cong Z_5 \times Z_3$. Since $\gen x \cha H$ and $\gen y \cha H$, we have
+\[\aut(H) \cong \aut(Z_5) \times \aut(Z_3) \cong Z_4 \times Z_2.\]
+Then $\aut(H)$ contains exactly 3 elements of order 2, which are the maps:
+\[
+\begin{cases}
+    x \mapsto x \\
+    y \mapsto y\inv
+\end{cases} \qquad
+\begin{cases}
+    x \mapsto x\inv \\
+    y \mapsto y
+\end{cases} \qquad
+\begin{cases}
+    x \mapsto x\inv \\
+    y \mapsto y\inv
+\end{cases}\]
