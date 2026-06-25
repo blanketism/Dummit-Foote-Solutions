@@ -976,5 +976,51 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 \end{exercise}
 
 \begin{sol}
-    
+    Recall that $H \nsub G$. It is clear to see that $G/H = \set{H, Hk}$ for $k \in H$, since $H$ consists of elements $hk$ with trivial $k$ component. Then for any $hk \in Hk$, and noting the fact that $kh = h\inv k$ for all $h \in H$, we have
+    \[(hk)^2 = h(kh)k = h(h\inv k)k = kk = 1.\]
+    If $hk = 1$, then $h = k\inv \in H \cap K = 1$, so $hk = 1$ if and only if $h = k = 1$. Hence, every element of $G - H$ has order 2.
+
+    If $G$ is abelian, then for any $h \in H$ and $k \in K$, we have $hk = kh$. Moreover, $kh = h\inv k$, hence $hk = h\inv k$, so $h^2 = 1$. Conversely, if $h^2 = 1$ for all $h \in H$, then any $h \in H$ and $k \in K$ commute, because $kh = h\inv k = hk$ by $h^2 = 1$. Then for any $h_1, h_2 \in H$ and $k_1, k_2 \in K$, we have
+    \[(h_1k_1)(h_2k_2) = h_1(h_2k_1)k_2 = (h_2h_1)(k_2k_1) = (h_2k_2)(h_1k_1),\]
+    so $G$ is abelian.
 \end{sol}
+
+\begin{exercise}\label{ex5.5.4}
+    Let $p = 2$ and check that the construction of the two non-abelian groups of order $p^3$ is valid in this case. Prove that \textit{both} resulting groups are isomorphic to $D_8$.
+\end{exercise}
+
+\begin{exercise}\label{ex5.5.5}
+    Let $G = \hol(Z_2 \times Z_2)$.
+    \begin{enumerate}
+        \item Prove that $G = H \semidir K$, where $H = Z_2 \times Z_2$ and $K \cong S_3$. Deduce that $|G| = 24$.
+        \item Prove that $G$ is isomorphic to $S_4$. [Obtain a homomorphism from $G$ into $S_4$ by letting $G$ act on the left cosets of $K$. Use \hyperref[ex5.5.1]{Exercise 5.5.1} to show that this representation is faithful.]
+    \end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}\label{ex5.5.6}
+    Assume that $K$ is a cyclic group, $H$ is an arbitrary group, and $\phi_1$ and $\phi_2$ are homomorphisms from $K$ into $\aut(H)$ such that $\phi_1(K)$ and $\phi_2(K)$ are conjugate subgroups of $\aut(H)$. If $K$ is infinite, assume $\phi_1$ and $\phi_2$ are injective. Prove, by constructing an explicit isomorphism, that
+    \[H \rtimes_{\phi_1} K \cong H \rtimes_{\phi_2} K\]
+    (in particular, if the subgroups $\phi_1(K)$ and $\phi_2(K)$ are equal in $\aut(H)$, then the resulting semidirect products are isomorphic). [Suppose $\sigma\phi_1(K)\sigma\inv = \phi_2(K)$ so that for some $a \in \z$ we have $\sigma\phi_1(k)\sigma\inv = \phi_2(k)^a$ for all $k \in K$. Show that the map
+    \[\psi : H \rtimes_{\phi_1} K \to H \rtimes_{\phi_2} K\]
+    defined by $\psi((h,k)) = (\sigma(h), k^a)$ is a homomorphism. Show $\psi$ is bijective by constructing a 2-sided inverse.]
+\end{exercise}
+
+\begin{exercise}\label{ex5.5.7}
+    This exercise describes thirteen isomorphism types of groups of order 56. (It is not too difficult to show that every group of order 56 is isomorphic to one of these.)
+    \begin{subproblems}
+        \item Prove that there are three abelian groups of order 56.
+        \item Prove that every group of order 56 has either a normal Sylow 2-subgroup or a normal Sylow 7-subgroup.
+        \item Construct the following non-abelian groups of order 56 which have a normal Sylow 7-subgroup and whose Sylow 2-subgroup $S$ is as specified:
+        \begin{itemize}
+            \item one group when $S \cong Z_2 \times Z_2 \times Z_2$
+            \item two nonisomorphic groups when $S \cong Z_4 \times Z_2$
+            \item one group when $S \cong Z_8$
+            \item two nonisomorphic groups when $S \cong Q_8$
+            \item three nonisomorphic groups when $S \cong D_8$
+        \end{itemize}
+        [For a particular $S$, two groups are not isomorphic if the kernels of the maps from $S$ into $\aut(Z_7)$ are not isomorphic.]
+        \item Let $G$ be a group of order 56 with a nonnormal Sylow 7-subgroup. Prove that if $S$ is the Sylow 2-subgroup of $G$ then $S \cong Z_2 \times Z_2 \times Z_2$. [Let an element of order 7 act by conjugation on the seven nonidentity elements of $S$ and deduce that they all have the same order.]
+        \item Prove that there is a unique group of order 56 with a nonnormal Sylow 7-subgroup. [For existence use the fact that $|GL_3(\f_2)| = 168$; for uniqueness use Exercise 6.]
+    \end{subproblems}
+\end{exercise}
