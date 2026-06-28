@@ -797,7 +797,7 @@ In each of Exercises 9 to 13 you can find the order of the group of rigid motion
     Let $\sigma$ be the permutation
     \begin{align*}
         1 &\mapsto 13 & 2 &\mapsto 2 & 3 & \mapsto 15 & 4 & \mapsto 14 & 5 & \mapsto 10  \\
-        6 &\mapsto 7 & 7 &\mapsto 12 & 8 & \mapsto 9 & 9 & \mapsto 3 & 10 & \mapsto 1 \\
+        6 &\mapsto 6 & 7 &\mapsto 12 & 8 & \mapsto 9 & 9 & \mapsto 3 & 10 & \mapsto 1 \\
         11 &\mapsto 7 & 12 &\mapsto 9 & 13 & \mapsto 5 & 14 & \mapsto 11 & 15 & \mapsto 8
     \end{align*}
     and let $\tau$ be the permutation
@@ -811,8 +811,8 @@ In each of Exercises 9 to 13 you can find the order of the group of rigid motion
 
 \begin{sol}
     \begin{align*}
-        \sigma & = (1\ 13\ 5\ 1)(3\ 15\ 8)(4\ 14\ 11\ 7\ 12\ 9) & \tau & = (1\ 14)(2\ 9\ 15\ 13\ 4)(3\ 10)(5\ 12\ 7)(8\ 11)\\
-        \sigma^2 & = (1\ 5)(3\ 8\ 15)(4\ 11\ 12)(7\ 9\ 14)(10\ 13) & \sigma\tau & = (1\ 11\ 3)(2\ 4)(5\ 9\ 8\ 7\ 10\ 15)(8\ 10\ 14)\\
+        \sigma & = (1\ 13\ 5\ 10)(3\ 15\ 8)(4\ 14\ 11\ 7\ 12\ 9) & \tau & = (1\ 14)(2\ 9\ 15\ 13\ 4)(3\ 10)(5\ 12\ 7)(8\ 11) \\
+        \sigma^2 & = (1\ 5)(3\ 8\ 15)(4\ 11\ 12)(7\ 9\ 14)(10\ 13) & \sigma\tau & = (1\ 11\ 3)(2\ 4)(5\ 9\ 8\ 7\ 10\ 15)(13\ 14) \\
         \tau\sigma & = (1\ 4)(2\ 9)(3\ 13\ 12\ 15\ 11\ 5)(8\ 10\ 14) & \tau^2\sigma & = (1\ 2\ 15\ 8\ 3\ 4\ 14\ 11\ 12\ 13\ 7\ 5\ 10) \qh
     \end{align*}
 \end{sol}
@@ -1623,7 +1623,7 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
         & = (na + a, (na)c + n(n - 1)ac/2 + nb + b, nc + c) \\
         & = ((n + 1)a, n(n + 1)ac/2 + (n + 1)b, (n + 1)c)
     \end{align*}
-    so that the relationship is true by induction. Since $A \neq I$, then at least one of $a, b, c$ must be nonzero. Then for any $n \in \zp$, none of the integers $na, n(n - 1)ac/2 + nb,$ or $nc$ are 0. Then no power of $(a, b, c)$ results in $(0, 0, 0)$, hence no nonidentity element of $H(\r)$ has any finite order. Therefore, every nonidentity element of $H(\r)$ has infinite order.
+    so that the relationship is true by induction. Since $A \neq I$, then at least one of $a, b, c$ must be nonzero. It is clear that if $a \neq 0$ or $c \neq 0$, then $A^n \neq I$ for all $n \in \zp$. If $a = c = 0$, then $b \neq 0$, and we have $(0, b, 0)^n = (0, nb, 0)$. Since $b \neq 0$, then $nb \neq 0$ for all $n \in \zp$, so that $(0, b, 0)^n \neq I$ for all $n \in \zp$. Thus, every nonidentity of the group $H(\r)$ has infinite order.
 \end{solalph}
 
 \newpage

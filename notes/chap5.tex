@@ -404,6 +404,8 @@ Let $H, K$ be groups with homomorphism $\phi : K \to \aut(H)$. Then the followin
 
 \ex Let $H$ be abelian and $K = \gen k \cong Z_2$. Define $\phi : K \to \aut(H)$ by mapping $k$ to the inversion map, hence $k \cdot h = h\inv$ for all $h \in H$. Then $H \leq G$ has index 2, and $khk\inv = h\inv$ for all $h \in H$. If $H = Z_n$, then $G \cong D_{2n}$, and if $H = \z$, then $G \cong D_\infty$.
 
+\ex Let $H$ be abelian and $K = \gen k \cong Z_{2n}$. If $\phi$ is defined to map $k$ to the inversion map, then $k^2$ centralizes $H$, and $khk\inv = h\inv$ for all $h \in H$. In particular, putting $H = Z_3$ and $K = Z_4$, then $G = Z_3 \semidir Z_4$ is of order 12 that is not isomorphic to $A_4$ or $D_{12}$ because its Sylow 2-subgroup is cyclic.
+
 \newpage
 
 \defi The \textbf{generalized quaternion group} of order $2^{n + 1}$ is the group $Q_{2^{n + 1}}$ with presentation
@@ -489,16 +491,59 @@ If $p \mid q - 1$, put $P = \gen a$. Cyclicity of $\aut(Q)$ implies a unique sub
 where we know that $H = \gen x \times \gen y \cong Z_5 \times Z_3$. Since $\gen x \cha H$ and $\gen y \cha H$, we have
 \[\aut(H) \cong \aut(Z_5) \times \aut(Z_3) \cong Z_4 \times Z_2.\]
 Then $\aut(H)$ contains exactly 3 elements of order 2, which are the maps:
-\[
+\[\phi_1 = 
 \begin{cases}
     x \mapsto x \\
     y \mapsto y\inv
 \end{cases} \qquad
+\phi_2 =
 \begin{cases}
     x \mapsto x\inv \\
     y \mapsto y
 \end{cases} \qquad
+\phi_3 =
 \begin{cases}
     x \mapsto x\inv \\
     y \mapsto y\inv
 \end{cases}\]
+Let $K = \gen k \cong Z_2$.
+\begin{itemize}
+    \item If $\phi(k) = \phi_1$, then $G_1 \cong Z_5 \times D_6$ as follows: $x \in H$ is centralized, while $y \in H$ is inverted, so we have $\gen x \times \gen{y, k}$. Since $k$ acts as a reflection on $\gen y$, then $\gen{y, k} \cong D_6$.
+    \item If $\phi(k) = \phi_2$, then $G_2 \cong D_{10} \times Z_3$. Again, $y$ is centralized and $x$ is inverted.
+    \item If $\phi(k) = \phi_3$, then $G_3 \cong D_{30}$. $k$ inverts the generator $xy$ of $H$.
+\end{itemize}
+
+\ex Let $|G| = 12$. Let $A \in \syl_2(G)$ and $B \in \syl_3(G)$. We know either $A \nsub G$ or $B \nsub G$. Since $A \cap B = 1$, then $G = AB$ and $G \cong A \semidir B$. We also classify $A \cong Z_4$ or $V_4$, and $B \cong Z_3$.
+\begin{enumerate}
+    \item Suppose $A \nsub G$. If $A \cong Z_4$, then $\aut(V) \cong Z_2$, hence no nontrivial homomorphism from $B$ to $\aut(A)$ exists. Hence, $G \cong Z_{12}$.
+    
+    If $A \cong V_4$ instead, then $\aut(A) \cong S_3$, and there is a unique order 3 subgroup of $\aut(A)$; put it as $\gen\tau$. If $T = \gen t$, then we have three homomorphisms
+    \[\phi_i : T \to \aut(A), \quad \phi_i(t) = \tau^i, \quad i = 0, 1, 2.\]
+    Recall $\phi_0$ is trivial, while $\phi_1$ and $\phi_2$ give isomorphic semidirect products as they only differ by the choice of generator of $T$, either $t$ or $t^2 = t\inv$. Hence, the unique nonabelian group of order 12 with $A \nsub G$ is $V_4 \semidir T \cong A_4$.
+    \item If $B \nsub G$, observe that $\aut(B) \cong Z_2 = \gen\alpha$, where $\alpha$ is the inversion map on $B$. If $A = \gen a \cong Z_4$, then there are two homomorphisms $\phi_i : A \to \aut(B)$, $i = 0, 1$, where $\phi_0$ is trivial and $\phi_1(a) = \alpha$. Then $B \semidir_{\phi_0} A \cong Z_{12}$ and $B \semidir_{\phi_1} A \cong Z_3 \semidir Z_4$ in the example following \autoref{prop5.11}.
+    
+    Suppose $A = \gen x \times \gen y \cong V_4$. Then we have three homomorphisms from $A$ to $\aut(B)$ by specifying the kernel of the homomorphism:
+    \begin{itemize}
+        \item If $\phi_1(x) = \phi_1(y) = \alpha$, then $\phi_1(xy) = \id$, hence $\ker\phi_1 = \gen{xy}$.
+        \item If $\phi_2(x) = \alpha$ and $\phi_2(y) = \id$, then $\ker\phi_2 = \gen y$.
+        \item If $\phi_3(x) = \id$ and $\phi_3(y) = \alpha$, then $\ker\phi_3 = \gen x$.
+    \end{itemize}
+    All three $\phi_i$ give rise to isomorphic semidirect products that are isomorphic to $S_3 \times Z_2$, where $Z_2$ represents the kernel of each homomorphism. As an example, if we consider $\phi_1$, then $\gen{xy} = Z_2$, while $\gen{x, B}$ is a nonabelian group of order 6, hence isomorphic to $S_3$ by Exercise 4.2.10.
+\end{enumerate}
+
+\ex Let $|G| = p^3$ for odd prime $p$ such that $G$ is not cyclic. We know $g \mapsto g^p$ from $G$ to $Z(G)$ is a homomorphism with kernel $p^2$ or $p^3$ from Exercise 5.4.9. In the former case, $G$ must have an element of $p^2$: if $g \in G$ is nonidentity, then $|g| \neq 1$ or $p$. Since $G$ is not cyclic, then $|g| = p^2$. In the latter case, $g^p = 1$ for all $g \in G$, hence every nonidentity element has order $p$.
+\begin{enumerate}
+    \item If $h \in G$ has order $p^2$, put $H = \gen h$. Then $H \nsub G$ since it has index $p$. Let $K$ be the kernel of the $p$ power map. Then $K \cong Z_p \times Z_p$, and $H \cap K = \gen{h^p}$, Put $x \in E - H$, and consider $X = \gen x$. Then $H \cap X = 1$ by construction, hence $G \cong Z_{p^2} \semidir Z_p$ for some $\phi : X \to \aut(H)$. Considering nontrivial homomorphisms, observe that $\aut(H) = Z_{p(p - 1)}$ is cyclic with unique subgroup of order $p$, say $\gen\chi$ such that
+    \[\chi(h) = h^{1 + p}.\]
+    Up to a choice of generator for $X$, there is the unique nontrivial homomorphism $\phi : X \to \aut(H)$ such that $\phi(x) = \chi$. We have seen this presentation before.
+    \item If $g^p = 1$ for all $g \in G$, let $H \leq G$ with $|H| = p^2$, where this exists by Exercise 4.3.29. Then $H \cong Z_p \times Z_p$. Let $k \in G - H$, and consider $K = \gen k \cong Z_p$. It is clear that $H \nsub G$ since $|G : H| = p$. Moreover, construction of $K$ dictates that $H \cap K = 1$, hence $G \cong H \semidir K$ for some $\phi : K \to \aut(H)$. Let $\phi$ be nontrivial, and observe that $\aut(H) \cong \gl_2(\f_p)$ so that $|\aut(H)| = (p^2 - 1)(p^2 - p)$.
+    
+    For any $P \in \syl_p(\aut(H))$, we know $|P| = p$, hence all subgroups of order $p$ are conjugate to $P$, by Sylow's Theorems. More explicitly, let $P = \gen\chi$ for $\chi \in \aut(H)$ with order $p$, and let $H = \gen x \times \gen y$. Then
+    \[\chi(x) = xy, \quad \chi(y) = y.\]
+    We may consider the $\f_p$-basis of $x, y$ for $H$, and $\chi$ is represented by the nonsingular linear transformation
+    \[\begin{bmatrix}
+        1 & 0 \\
+        1 & 1
+    \end{bmatrix} \in \gl_2(\f_p).\]
+    We then have the unique nontrivial homomorphism $\phi : K \to \aut(H)$ such that $\phi(k) = \chi$. We have seen this presentation before.
+\end{enumerate}
