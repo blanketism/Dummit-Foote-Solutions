@@ -52,9 +52,7 @@
 \newlist{ifandonlyif}{itemize}{1}
 \setlist[ifandonlyif, 1]{label = *, labelindent=0.55cm, labelsep=2pt}
 
-\newlist{problems}{enumerate}{2}
-\setlist[problems, 1]{label = (\arabic*), topsep = 3pt, itemsep = 2pt}
-\setlist[problems, 2]{label = (\alph*), topsep = 3pt, itemsep = 2pt}
+\setlist[enumerate, 1]{label = (\arabic*), nosep, align=left}
 
 \newenvironment{sol}{%
 \begin{proof}[{\textbf{Solution}}]\setlength{\parindent}{0.5cm}%
