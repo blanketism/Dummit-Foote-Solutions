@@ -515,11 +515,11 @@ Let $K = \gen k \cong Z_2$.
 
 \ex Let $|G| = 12$. Let $A \in \syl_2(G)$ and $B \in \syl_3(G)$. We know either $A \nsub G$ or $B \nsub G$. Since $A \cap B = 1$, then $G = AB$ and $G \cong A \semidir B$. We also classify $A \cong Z_4$ or $V_4$, and $B \cong Z_3$.
 \begin{enumerate}
-    \item Suppose $A \nsub G$. If $A \cong Z_4$, then $\aut(V) \cong Z_2$, hence no nontrivial homomorphism from $B$ to $\aut(A)$ exists. Hence, $G \cong Z_{12}$.
+    \item Suppose $A \nsub G$. If $A \cong Z_4$, then $\aut(A) \cong Z_2$, hence no nontrivial homomorphism from $B$ to $\aut(A)$ exists. Hence, $G \cong Z_{12}$.
     
-    If $A \cong V_4$ instead, then $\aut(A) \cong S_3$, and there is a unique order 3 subgroup of $\aut(A)$; put it as $\gen\tau$. If $T = \gen t$, then we have three homomorphisms
-    \[\phi_i : T \to \aut(A), \quad \phi_i(t) = \tau^i, \quad i = 0, 1, 2.\]
-    Recall $\phi_0$ is trivial, while $\phi_1$ and $\phi_2$ give isomorphic semidirect products as they only differ by the choice of generator of $T$, either $t$ or $t^2 = t\inv$. Hence, the unique nonabelian group of order 12 with $A \nsub G$ is $V_4 \semidir T \cong A_4$.
+    If $A \cong V_4$ instead, then $\aut(A) \cong S_3$, and there is a unique order 3 subgroup of $\aut(A)$; put it as $\gen\beta$. If $B = \gen b$, then we have three homomorphisms
+    \[\phi_i : B \to \aut(A), \quad \phi_i(b) = \beta^i, \quad i = 0, 1, 2.\]
+    Recall $\phi_0$ is trivial, while $\phi_1$ and $\phi_2$ give isomorphic semidirect products as they only differ by the choice of generator of $B$, either $b$ or $b^2 = b\inv$. Hence, the unique nonabelian group of order 12 with $A \nsub G$ is $V_4 \semidir B \cong A_4$.
     \item If $B \nsub G$, observe that $\aut(B) \cong Z_2 = \gen\alpha$, where $\alpha$ is the inversion map on $B$. If $A = \gen a \cong Z_4$, then there are two homomorphisms $\phi_i : A \to \aut(B)$, $i = 0, 1$, where $\phi_0$ is trivial and $\phi_1(a) = \alpha$. Then $B \semidir_{\phi_0} A \cong Z_{12}$ and $B \semidir_{\phi_1} A \cong Z_3 \semidir Z_4$ in the example following \autoref{prop5.11}.
     
     Suppose $A = \gen x \times \gen y \cong V_4$. Then we have three homomorphisms from $A$ to $\aut(B)$ by specifying the kernel of the homomorphism:
