@@ -56,7 +56,7 @@
 \end{sol}
 
 \begin{exercise}\label{ex5.1.5}
-    Exhibit a nonnormal subgroup of $Q_8 \times Z_4$ (note that every subgroup of each factor is normal).
+    Exhibit a non-normal subgroup of $Q_8 \times Z_4$ (note that every subgroup of each factor is normal).
 \end{exercise}
 
 \begin{sol}
@@ -131,7 +131,7 @@
 \end{exercise}
 
 \begin{sol}
-    Note that any proper, nontrivial subgroup of $E$ must have order $p$, and every element of $E$ has order $p$. The text shows that there are $p + 1$ subgroups of $E$ of order $p$, so it suffices to show that the subgroups listed in the problem statement are distinct. Note that $\gen x$ and $\gen y$ are distinct since they have different generators. Moreover, $\gen{xy^i}$ is distinct from $\gen x$ and $\gen y$ for all $i$, since $xy^i$ is not a power of $x$ or $y$ (as can be seen because $\gen x \cap \gen y$ is trivial). Finally, $\gen{xy^i}$ is distinct from $\gen{xy^j}$ for $i \neq j$, since if $\gen{xy^i} = \gen{xy^j}$, then $xy^i$ is a power of $xy^j$, which implies $y^{i-j}$ is a power of $x$, which is impossible since $\gen x \cap \gen y$ is trivial. Thus, all the subgroups listed in the problem statement are distinct.
+    Note that any proper, non-trivial subgroup of $E$ must have order $p$, and every element of $E$ has order $p$. The text shows that there are $p + 1$ subgroups of $E$ of order $p$, so it suffices to show that the subgroups listed in the problem statement are distinct. Note that $\gen x$ and $\gen y$ are distinct since they have different generators. Moreover, $\gen{xy^i}$ is distinct from $\gen x$ and $\gen y$ for all $i$, since $xy^i$ is not a power of $x$ or $y$ (as can be seen because $\gen x \cap \gen y$ is trivial). Finally, $\gen{xy^i}$ is distinct from $\gen{xy^j}$ for $i \neq j$, since if $\gen{xy^i} = \gen{xy^j}$, then $xy^i$ is a power of $xy^j$, which implies $y^{i-j}$ is a power of $x$, which is impossible since $\gen x \cap \gen y$ is trivial. Thus, all the subgroups listed in the problem statement are distinct.
 \end{sol}
 
 \begin{exercise}\label{ex5.1.11}
@@ -281,7 +281,7 @@
         \item an infinite group in which every element has finite order but for each positive integer $n$ there is an element of order $n$
         \item a group with an element of infinite order and an element of order 2
         \item a group $G$ such that every finite group is isomorphic to some subgroup of $G$
-        \item a nontrivial group $G$ such that $G \cong G \times G$.
+        \item a non-trivial group $G$ such that $G \cong G \times G$.
     \end{subproblems}
 \end{exercise}
 
@@ -300,17 +300,17 @@
 \subsection{The Fundamental Theorem of Finitely Generated Abelian Groups}
 
 \begin{exercise}\label{ex5.2.1}
-    In each parts (a) to (e), give the number of nonisomorphic abelian groups of the specified order---do not list the groups:
+    In each parts (a) to (e), give the number of non-isomorphic abelian groups of the specified order---do not list the groups:
 
     \noindent (a) order 100, \quad (b) order 576, \quad (c) order 1155, \quad (d) order 42875, \quad (e) order 2704.
 \end{exercise}
 
 \begin{solalph}
-    \item $100 = 2^2 \cdot 5^2$; 2 partitions of 2, hence $2 \cdot 2 = 4$ nonisomorphic abelian groups of order 100.
-    \item $576 = 2^6 \cdot 3^2$; 11 partitions of 6, hence $11 \cdot 2 = 22$ nonisomorphic abelian groups of order 576.
+    \item $100 = 2^2 \cdot 5^2$; 2 partitions of 2, hence $2 \cdot 2 = 4$ non-isomorphic abelian groups of order 100.
+    \item $576 = 2^6 \cdot 3^2$; 11 partitions of 6, hence $11 \cdot 2 = 22$ non-isomorphic abelian groups of order 576.
     \item $1155 = 3 \cdot 5 \cdot 7 \cdot 11$. Only one abelian group of order 1155.
-    \item $42875 = 5^3 \cdot 7^3$; 3 partitions of 3, hence $3 \cdot 3 = 9$ nonisomorphic abelian groups of order 42875.
-    \item $2704 = 2^4 \cdot 13^2$; 5 partitions of 4, hence $5 \cdot 2 = 10$ nonisomorphic abelian groups of order 2704.
+    \item $42875 = 5^3 \cdot 7^3$; 3 partitions of 3, hence $3 \cdot 3 = 9$ non-isomorphic abelian groups of order 42875.
+    \item $2704 = 2^4 \cdot 13^2$; 5 partitions of 4, hence $5 \cdot 2 = 10$ non-isomorphic abelian groups of order 2704.
 \end{solalph}
 
 \begin{exercise}\label{ex5.2.2}
@@ -326,8 +326,9 @@
     \item $320 = 2^6 \cdot 5$. The invariant factors are $\set{320}, \set{160, 2}, \set{80, 4}, \set{80, 2, 2}, \set{40, 8}, \set{40, 4, 2}, \set{40, 2, 2, 2}, \\
     \set{20, 4, 4}, \set{20, 4, 2, 2}, \set{20, 2, 2, 2, 2}, \set{10, 2, 2, 2, 2, 2}$.
     \item $105 = 3 \cdot 5 \cdot 7$. The invariant factors are $\set{105}$.
-    \item $44100 = 2^2 \cdot 3^2 \cdot 5^2 \cdot 7^2$. The invariant factors are $\set{44100}, \set{22050, 2}, \set{14700, 3}, \set{8820, 5}, \set{6300, 7}, \set{4410, 10}, \\
-    \set{3150, 14}, \set{2205, 15}, \set{1800, 21}, \set{1260, 35}, \set{1470, 30}, \set{1050, 42}, \set{630, 70}, \set{420, 105}, \set{210, 210}$.
+    \item $44100 = 2^2 \cdot 3^2 \cdot 5^2 \cdot 7^2$. The invariant factors are $\set{44100}, \set{22050, 2}, \set{14700, 3}, \set{8820, 5}, \set{6300, 7}, \\
+    \set{4410, 10}, \set{3150, 14}, \set{2205, 15}, \set{1800, 21}, \set{1260, 35}, \set{1470, 30}, \set{1050, 42}, \set{630, 70}, \set{420, 105},\\
+    \set{210, 210}$.
 \end{solalph}
 
 \begin{exercise}\label{ex5.2.3}
@@ -471,7 +472,7 @@
 \newpage
 
 \begin{exercise}\label{ex5.2.11}
-    Let $G$ be a nontrivial, finite abelian group of rank $t$.
+    Let $G$ be a non-trivial, finite abelian group of rank $t$.
     \begin{subproblems}
         \item Prove that the rank of $G$ equals the maximum of the ranks of its Sylow subgroups.
         \item Prove that $G$ can be generated by $t$ elements, but no subset with fewer than $t$ elements generates $G$. (One way of doing this is by using part(a) together with \hyperref[ex5.2.7]{Exercise 5.2.7}.)
@@ -563,7 +564,7 @@
     \begin{enumerate}[label=(\arabic*)]
         \item $u = 0$ and $v$ is odd: We have $ks \equiv 0 \bmod 8$ and $kt \equiv \ell v \bmod 4$. Since $s$ is odd, then $k \equiv 0 \bmod 8$. Then $kt \equiv 0 \bmod 4$, hence $\ell v \equiv 0 \bmod 4$. Since $v$ is odd, then $\ell \equiv 0 \bmod 4$, so we have trivial intersection.
         \item $u = 4$ and $v$ is odd: We have $ks \equiv 4\ell \bmod 8$ and $kt \equiv \ell v \bmod 4$. Since $s$ is odd, then $k \equiv 4\ell s\inv \bmod 8$. Note that $k \equiv 0 \bmod 4$, so $kt \equiv 0 \bmod 4$, hence $\ell v \equiv 0 \bmod 4$. Since $v$ is odd, then $\ell \equiv 0 \bmod 4$, so we have trivial intersection.
-        \item $u = 2$ and $v$ free (the case $u = 6$ and $v$ free is similar): We have $ks \equiv 2\ell \bmod 8$ and $kt \equiv \ell v \bmod 4$. Since $s$ is odd, then $k \equiv 2 \ell s\inv \bmod 8$. We know that intersection will be nontrivial when $k \not\equiv 0 \bmod 8$ and $\ell \not\equiv 0 \bmod 4$. By inspection, we see that $\ell = 2$ gives $k \equiv 4s\inv \equiv 4 \bmod 8$ and $4t \equiv 2v \bmod 4$, which has nontrivial solution when $v$ is even. Inspecting odd $v$, we see that $k \equiv 2\ell s\inv \bmod 8$ reduced mod 4 gives $k \equiv 2 \ell s\inv \bmod 4$. Then $2 \ell s\inv \equiv \ell v \bmod 4$ implies that $\ell(2s\inv - v) \equiv 0 \bmod 4$. Since $v$ is odd, then $2s\inv - v$ is odd, so $\ell \equiv 0 \bmod 4$, so we have trivial intersection.
+        \item $u = 2$ and $v$ free (the case $u = 6$ and $v$ free is similar): We have $ks \equiv 2\ell \bmod 8$ and $kt \equiv \ell v \bmod 4$. Since $s$ is odd, then $k \equiv 2 \ell s\inv \bmod 8$. We know that intersection will be non-trivial when $k \not\equiv 0 \bmod 8$ and $\ell \not\equiv 0 \bmod 4$. By inspection, we see that $\ell = 2$ gives $k \equiv 4s\inv \equiv 4 \bmod 8$ and $4t \equiv 2v \bmod 4$, which has non-trivial solution when $v$ is even. Inspecting odd $v$, we see that $k \equiv 2\ell s\inv \bmod 8$ reduced mod 4 gives $k \equiv 2 \ell s\inv \bmod 4$. Then $2 \ell s\inv \equiv \ell v \bmod 4$ implies that $\ell(2s\inv - v) \equiv 0 \bmod 4$. Since $v$ is odd, then $2s\inv - v$ is odd, so $\ell \equiv 0 \bmod 4$, so we have trivial intersection.
     \end{enumerate}
     Therefore, the pairs $a, b$ such that $G = \gen a \times \gen b$ are given by
     \begin{itemize}
@@ -594,7 +595,7 @@
 \subsection{Table of Groups of Small Order}
 
 \begin{exercise}\label{ex5.3.1}
-    Prove that $D_{16}, Z_2 \times D_8, Z_2 \times Q_8, Z_4 * D_8, QD_{16}$, and $M$ are nonisomorphic, non-abelian groups of order 16 (where $Z_4 * D_8$ is described in \hyperref[ex5.1.12]{Exercise 5.1.12} and $QD_{16}$ and $M$ are described in \hyperref[ex2.5.11]{Exercise 2.5.11} and \hyperref[ex2.5.14]{Exercise 2.5.14} respectively).
+    Prove that $D_{16}, Z_2 \times D_8, Z_2 \times Q_8, Z_4 * D_8, QD_{16}$, and $M$ are non-isomorphic, non-abelian groups of order 16 (where $Z_4 * D_8$ is described in \hyperref[ex5.1.12]{Exercise 5.1.12} and $QD_{16}$ and $M$ are described in \hyperref[ex2.5.11]{Exercise 2.5.11} and \hyperref[ex2.5.14]{Exercise 2.5.14} respectively).
 \end{exercise}
 
 \begin{sol}
@@ -683,7 +684,7 @@ Let $G$ be a group.
     \[(a\ b\ c) = (a\ b)\inv (a\ c)\inv (a\ b) (a\ c) = [(a\ c), (a\ b)],\]
     so $A_4 \leq [S_4, S_4]$. Thus, $[S_4, S_4] = A_4$. 
 
-    By \hyperref[ex3.5.9]{Exercise 3.5.9}, we know that $V_4 \nsub A_4$ and $A_4/V_4 \cong Z_3$, which is abelian, so $[A_4, A_4] \leq V_4$. On the other hand, $A_4$ is non-abelian, so $[A_4, A_4]$ is nontrivial. Since $V_4$ is the only nontrivial subgroup of $A_4$ that is normal, we must have $[A_4, A_4] = V_4$. \qh
+    By \hyperref[ex3.5.9]{Exercise 3.5.9}, we know that $V_4 \nsub A_4$ and $A_4/V_4 \cong Z_3$, which is abelian, so $[A_4, A_4] \leq V_4$. On the other hand, $A_4$ is non-abelian, so $[A_4, A_4]$ is non-trivial. Since $V_4$ is the only non-trivial subgroup of $A_4$ that is normal, we must have $[A_4, A_4] = V_4$. \qh
 \end{sol}
 
 \begin{exercise}\label{ex5.4.5}
@@ -748,7 +749,7 @@ Let $G$ be a group.
     \[(xy)^p = x^p y^p [y, x]^{\frac{p(p-1)}{2}} = x^p y^p,\]
     where the last equality holds since $[y, x]$ has order dividing $p$ and $\frac{p(p-1)}{2}$ is divisible by $p$ when $p$ is odd. Thus, the $p$-th power map is a homomorphism of $P$ into $Z(P)$. To see that $x^p \in Z(P)$ for all $x \in P$, note that for any $y \in P$, we have
     \[y x^py\inv = (y x y\inv)^p = (x [y, x])^p = x^p [y, x]^p = x^p.\]
-    Suppose now that $P$ is not cyclic. Since the map is to $Z(P)$, which has order $p$, the image of the map has order dividing $p$. If the image is trivial, then the kernel is all of $P$, so the kernel has order $p^3$. If the image is nontrivial, then the kernel has order $p^2$ by the First Isomorphism Theorem.
+    Suppose now that $P$ is not cyclic. Since the map is to $Z(P)$, which has order $p$, the image of the map has order dividing $p$. If the image is trivial, then the kernel is all of $P$, so the kernel has order $p^3$. If the image is non-trivial, then the kernel has order $p^2$ by the First Isomorphism Theorem.
 
     For the squaring map in non-abelian groups of order 8, we have $Q_8$ and $D_8$. In $Q_8$, observe that $(ij)^2 = (k)^2 = -1$, while $i^2j^2 = 1$. In $D_8$, we similarly have $(rs)^2 = 1$, while $r^2s^2 = r^2$. Thus, the squaring map is not a homomorphism in non-abelian groups of order 8. Lastly, the oddness of $p$ is needed in the proof to ensure that $\frac{p(p-1)}{2}$ is divisible by $p$, which allows us to conclude that $[y, x]^{\frac{p(p-1)}{2}} = 1$.
 \end{sol}
@@ -855,7 +856,7 @@ Let $G$ be a group.
     \[(1, \ldots, g_i, \ldots, 1) x (1, \ldots, g_i\inv, \ldots, 1) = (a_1, \ldots, g_i a_i g_i\inv, \ldots, a_n).\]
     Hence,
     \[(1, \ldots, g_i, \ldots, 1) x (1, \ldots, g_i\inv, \ldots, 1) x\inv = (1, \ldots, [g_i, a_i], \ldots, 1) \in N.\]
-    Since $[g_i, a_i]$ is nontrivial and is an element of the simple group $K_i$, we have that $\langle [g_i, a_i]^{K_i} \rangle \nsub K_i$. However, simplicity of $K_i$ forces $\langle [g_i, a_i]^{K_i} \rangle = K_i$, so $K_i \leq N$. By repeating this argument for any other nontrivial component of an element of $N$, we can find some subset $I$ of $\set{1, 2, \ldots n}$ such that $G_I = K_{i_1} \times K_{i_2} \times \cdots K_{i_k} \leq N$, where $\set{i_1, i_2, \ldots i_k} = I$, which shows $G_I \leq N$. On the other hand, if $N$ contains some element $x = (a_1, a_2, \ldots, a_n)$ such that $a_j \neq 1$ for some $j \notin I$, then we can similarly find some element of $N$ that has nontrivial component in the $j$-th position, which contradicts that $K_j \not\leq N$. Thus, $N \leq G_I$. Therefore, $N = G_I$.
+    Since $[g_i, a_i]$ is non-trivial and is an element of the simple group $K_i$, we have that $\langle [g_i, a_i]^{K_i} \rangle \nsub K_i$. However, simplicity of $K_i$ forces $\langle [g_i, a_i]^{K_i} \rangle = K_i$, so $K_i \leq N$. By repeating this argument for any other non-trivial component of an element of $N$, we can find some subset $I$ of $\set{1, 2, \ldots n}$ such that $G_I = K_{i_1} \times K_{i_2} \times \cdots K_{i_k} \leq N$, where $\set{i_1, i_2, \ldots i_k} = I$, which shows $G_I \leq N$. On the other hand, if $N$ contains some element $x = (a_1, a_2, \ldots, a_n)$ such that $a_j \neq 1$ for some $j \notin I$, then we can similarly find some element of $N$ that has non-trivial component in the $j$-th position, which contradicts that $K_j \not\leq N$. Thus, $N \leq G_I$. Therefore, $N = G_I$.
 \end{sol}
 
 \begin{exercise}\label{ex5.4.19}
@@ -864,7 +865,7 @@ Let $G$ be a group.
         \item Prove that every non-abelian simple group is perfect.
         \item Prove that if $H$ and $K$ are perfect subgroups of a group $G$, then $\gen{H, K}$ is also perfect. Extend this to show that the subgroup of $G$ generated by any collection of perfect subgroups is perfect.
         \item Prove that any conjugate of a perfect subgroup is perfect.
-        \item Prove that any group $G$ has a maximal perfet subgroup, and that this subgroup is normal.
+        \item Prove that any group $G$ has a maximal perfect subgroup, and that this subgroup is normal.
     \end{subproblems}
 \end{exercise}
 
@@ -990,7 +991,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 \end{exercise}
 
 \begin{sol}
-    Let $U = \gen u \cong Z_4$ and $V = \gen v \cong Z_2$. Then $\aut(U) \cong Z_2$, so there is a unique nontrivial homomorphism $\phi : V \to \aut(U)$, which sends $v$ to the automorphism of $U$ that sends $u$ to $u\inv$. Then the semidirect product $U \semidir_\phi V$ has order 8, and is generated by $u$ and $v$ with relations
+    Let $U = \gen u \cong Z_4$ and $V = \gen v \cong Z_2$. Then $\aut(U) \cong Z_2$, so there is a unique non-trivial homomorphism $\phi : V \to \aut(U)$, which sends $v$ to the automorphism of $U$ that sends $u$ to $u\inv$. Then the semidirect product $U \semidir_\phi V$ has order 8, and is generated by $u$ and $v$ with relations
     \[u^4 = v^2 = 1, \quad vu = u\inv v.\]
     It is clear that $U \semidir_\phi V$ is non-abelian, since $vu \neq uv$. Let $r = u$ and $s = v$. Then $r^4 = s^2 = 1$, and $sr = vu = u\inv v = r\inv s$, so $U \semidir_\phi V$ has the same presentation as $D_8$, hence $U \semidir_\phi V \cong D_8$.
 
@@ -1017,7 +1018,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     \[\ker\phi = \bigcap_{g \in G} gKg^{-1} \nsub G\]
     such that $\ker\phi \leq K$. Putting $N = \ker\phi$, then $N = \set{1, A_3, K}$. If $N = K$, then $K \nsub G$, which is a contradiction since $K$ is not normal in $G$ because $\psi$ is injective. If $N = A_3$, let $n \in N$ be a nonidentity element. Then $hnh\inv \in N$ for every $h$. However, \hyperref[ex5.5.1]{Exercise 5.5.1} says that $\ker\psi = C_K(H)$. Since $\psi$ is injective (an isomorphism, actually), then $C_K(H) = 1$, so $n$ does not commute with some $h_0 \in H$, i.e., $nh_0n\inv \neq h_0$. However, from $N \nsub G$, we know that $h_0nh_0\inv \in N$. 
     
-    Observe that $h_0nh_0\inv = (h_0nh_0\inv n\inv)n = [h_0, n]n$. Observe that $h_0(nh_0\inv n\inv) \in H$ by definition of the semidirect product, so $[h_0, n] \in H$. If $[h_0, n] = 1$, then $h_0nh_0\inv = n \in N$, contradicting our choice of $h_0$. Hence $h_0nh_0\inv$ has nontrivial component in $H$, so $h_0nh_0\inv \notin N$, which is a contradiction. Therefore, $N = 1$, so $\phi$ is injective, hence $G \cong \phi(G) \leq S_4$. Since $|G| = |S_4| = 24$, we have $G \cong S_4$.
+    Observe that $h_0nh_0\inv = (h_0nh_0\inv n\inv)n = [h_0, n]n$. Observe that $h_0(nh_0\inv n\inv) \in H$ by definition of the semidirect product, so $[h_0, n] \in H$. If $[h_0, n] = 1$, then $h_0nh_0\inv = n \in N$, contradicting our choice of $h_0$. Hence $h_0nh_0\inv$ has non-trivial component in $H$, so $h_0nh_0\inv \notin N$, which is a contradiction. Therefore, $N = 1$, so $\phi$ is injective, hence $G \cong \phi(G) \leq S_4$. Since $|G| = |S_4| = 24$, we have $G \cong S_4$.
 \end{solalph}
 
 \begin{specialexercise}\label{ex5.5.6}
@@ -1060,7 +1061,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     \end{enumerate}
 \end{sol}
 
-\begin{exercise}\label{ex5.5.7}
+\begin{specialexercise}\label{ex5.5.7}
     This exercise describes thirteen isomorphism types of groups of order 56. (It is not too difficult to show that every group of order 56 is isomorphic to one of these.)
     \begin{subproblems}
         \item Prove that there are three abelian groups of order 56.
@@ -1068,23 +1069,23 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
         \item Construct the following non-abelian groups of order 56 which have a normal Sylow 7-subgroup and whose Sylow 2-subgroup $S$ is as specified:
         \begin{itemize}
             \item one group when $S \cong Z_2 \times Z_2 \times Z_2$
-            \item two nonisomorphic groups when $S \cong Z_4 \times Z_2$
+            \item two non-isomorphic groups when $S \cong Z_4 \times Z_2$
             \item one group when $S \cong Z_8$
-            \item two nonisomorphic groups when $S \cong Q_8$
-            \item three nonisomorphic groups when $S \cong D_8$
+            \item two non-isomorphic groups when $S \cong Q_8$
+            \item three non-isomorphic groups when $S \cong D_8$
         \end{itemize}
         [For a particular $S$, two groups are not isomorphic if the kernels of the maps from $S$ into $\aut(Z_7)$ are not isomorphic.]
-        \item Let $G$ be a group of order 56 with a nonnormal Sylow 7-subgroup. Prove that if $S$ is the Sylow 2-subgroup of $G$ then $S \cong Z_2 \times Z_2 \times Z_2$. [Let an element of order 7 act by conjugation on the seven nonidentity elements of $S$ and deduce that they all have the same order.]
-        \item Prove that there is a unique group of order 56 with a nonnormal Sylow 7-subgroup. [For existence use the fact that $|GL_3(\f_2)| = 168$; for uniqueness use \hyperref[ex5.5.6]{Exercise 5.5.6}.]
+        \item Let $G$ be a group of order 56 with a non-normal Sylow 7-subgroup. Prove that if $S$ is the Sylow 2-subgroup of $G$ then $S \cong Z_2 \times Z_2 \times Z_2$. [Let an element of order 7 act by conjugation on the seven nonidentity elements of $S$ and deduce that they all have the same order.]
+        \item Prove that there is a unique group of order 56 with a non-normal Sylow 7-subgroup. [For existence use the fact that $|GL_3(\f_2)| = 168$; for uniqueness use \hyperref[ex5.5.6]{Exercise 5.5.6}.]
     \end{subproblems}
-\end{exercise}
+\end{specialexercise}
 
 \begin{solalph}
     \item Note that $56 = 2^3 \cdot 7$. By the Fundamental Theorem of Finite Abelian Groups, the partitions of 3 are $3, 2 + 1, 1 + 1 + 1$, so the abelian groups of order 56 are of the form $Z_8 \times Z_7$, $Z_4 \times Z_2 \times Z_7$, and $Z_2 \times Z_2 \times Z_2 \times Z_7$.
     \item Let $n_7$ be the number of Sylow 7-subgroups of $G$. Then $n_7 \equiv 1 \bmod 7$ and $n_7 \mid 2^3$, so $n_7 = 1$ or $8$. If $n_7 = 1$, then the unique Sylow 7-subgroup is normal. Suppose $n_7 = 8$. Then there are $8 \cdot 6 = 48$ elements of order 7 in $G$, so the remaining $56 - 48 = 8$ elements of $G$ must be the identity and the elements of a Sylow 2-subgroup. Hence, the Sylow 2-subgroup is unique, so it is normal.
     \item Let $P \in \syl_7(G)$ such that $P \nsub G$. Then $P = \gen p \cong Z_7$, and $\aut(P) \cong Z_6$.
     \begin{itemize}
-        \item If $S \cong Z_2 \times Z_2 \times Z_2$, put $S = \gen a \times \gen b \times \gen c$. Let $\phi : S \to \aut(P)$ be a homomorphism. We disregard $a, b, c$ being sent to $\id$ as that is the trivial homomorphism. Since $a, b, c$ have order 2, they can only be sent to elements of order 1 or 2 in $\aut(P)$. Put $\alpha \in \aut(P)$ such that $|\alpha| = 2$, where $\alpha$ is unique since $\aut(P)$ is cyclic. Then we have the following nontrivial homomorphisms:
+        \item If $S \cong Z_2 \times Z_2 \times Z_2$, put $S = \gen a \times \gen b \times \gen c$. Let $\phi : S \to \aut(P)$ be a homomorphism. We disregard $a, b, c$ being sent to $\id$ as that is the trivial homomorphism. Since $a, b, c$ have order 2, they can only be sent to elements of order 1 or 2 in $\aut(P)$. Put $\alpha \in \aut(P)$ such that $|\alpha| = 2$, where $\alpha$ is unique since $\aut(P)$ is cyclic. Then we have the following non-trivial homomorphisms:
         \[\phi_1 = 
         \begin{cases}
             a \mapsto \alpha, \\
@@ -1105,7 +1106,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
         \end{cases}\]
         Note that $\ker\phi_1 = \gen b \times \gen c$, $\ker\phi_2 = \gen{ab, c}$, and $\ker\phi_3 = \gen{ab, ac}$. Note that these are all isomorphic to $V_4$, hence the resulting semidirect products are isomorphic by \hyperref[ex5.5.6]{Exercise 5.5.6}. Without loss of generality, consider $\phi_1$. Then $a$ acts on $P$ by sending $p$ to the inversion automorphism of $P$, or $apa\inv = p\inv$. It is clear that $b$ and $c$ centralize $P$ and commute with $a$. Observe that $\gen{p, a \mid apa\inv = p\inv, a^2 = p^7 = 1} \cong D_{14}$ and has trivial intersection with $\gen b \times \gen c$, so
         \[G \cong P \semidir_{\phi_1} S \cong D_{14} \times Z_2 \times Z_2.\]
-        \item Put $S = Z_4 \times Z_2 \cong \gen a \times \gen b$. Let $\alpha \in \aut(P)$ be the unique element of order 2 again. Then we have the following nontrivial homomorphisms:
+        \item Put $S = Z_4 \times Z_2 \cong \gen a \times \gen b$. Let $\alpha \in \aut(P)$ be the unique element of order 2 again. Then we have the following non-trivial homomorphisms:
         \[\phi_1 =
         \begin{cases}
             a \mapsto \alpha, \\
@@ -1125,9 +1126,9 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
         \[G \cong P \semidir_{\phi_2} S \cong D_{14} \times Z_4.\]
         For $\phi_1$, we see that $\gen b$ centralizes $P$, and $a$ acts on $P$ by sending $p$ to the inversion automorphism of $P$. Moreover, consider the subgroup $P_0 = \gen{p, a \mid apa\inv = p\inv, a^4 = p^7 = 1}$. It is easy to see that $P \cap \gen a = 1$, so $|P_0| = |P||\gen a| = 28$. Moreover, $pPp\inv = P$, and $aPa\inv = P$ since $apa\inv = p\inv$ under the action of $\phi_1$ restricted to $\gen a$. Hence, $P_0 \cong Z_7 \semidir Z_4$. It is clear that $P_0$ is normal in $G$, and $\gen b$ centralizes $P_0$, so
         \[G \cong P \semidir_{\phi_1} S \cong (Z_7 \semidir Z_4) \times Z_2.\]
-        \item For $S \cong Z_8$, let $S = \gen s$. Since $\aut(P) \cong Z_6$, and $(8, 6) = 2$, then the only nontrivial homomorphism $\phi : S \to \aut(P)$ is the one that sends $s$ to the inversion automorphism $\alpha$ of $P$. Moreover, cyclicity of $S$ guarantees uniqueness of the homomorphism. Then $sps\inv = p\inv$, and
+        \item For $S \cong Z_8$, let $S = \gen s$. Since $\aut(P) \cong Z_6$, and $(8, 6) = 2$, then the only non-trivial homomorphism $\phi : S \to \aut(P)$ is the one that sends $s$ to the inversion automorphism $\alpha$ of $P$. Moreover, cyclicity of $S$ guarantees uniqueness of the homomorphism. Then $sps\inv = p\inv$, and
         \[G \cong P \semidir_\phi S \cong Z_7 \semidir Z_8.\]
-        \item Let $S \cong Q_8 = \gen{i, j} = \set{1, i, i^2, i^3, j, ij, i^2j, i^3j}$. If we consider the trivial homomorphism, then $G \cong P \times S \cong Z_7 \times Q_8$. Now consider the nontrivial homomorphism that sends some generator of $S$ to $\alpha$. We have three cases:
+        \item Let $S \cong Q_8 = \gen{i, j} = \set{1, i, i^2, i^3, j, ij, i^2j, i^3j}$. If we consider the trivial homomorphism, then $G \cong P \times S \cong Z_7 \times Q_8$. Now consider the non-trivial homomorphism that sends some generator of $S$ to $\alpha$. We have three cases:
         \[\phi_1 = 
         \begin{cases}
             i \mapsto \alpha, \\
@@ -1145,8 +1146,8 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
         \end{cases}\]
         We have $\ker\phi_1 = \gen j, \ker\phi_2 = \gen i$, and $\ker\phi_3 = \gen{ij}$. These are all isomorphic to $Z_4$, so the semidirect products will be isomorphic to each other. Pick $\phi_1$ without loss of generality. Then $i$ acts on $P$, and $ipi\inv = p\inv$. Unlike the other cases, $j$ does not centralize $P$, since $jij\inv = i\inv$, so $jpj\inv = p\inv$. Hence, we have
         \[G \cong P \semidir_{\phi_1} S \cong Z_7 \semidir Q_8 = \set{p, i, j \mid i^4 = j^4 = 1, i^2 = j^2, iji\inv = j\inv, iji\inv = jpj\inv = p\inv}\]
-        Note that nontriviality of the homomorphism implies that some $s \in S$ does not centralize $P$. If $G$ could be written as a direct product, then $S$ would centralize $P$, which is a contradiction. Hence, $G$ is not a direct product.
-        \item Let $S \cong D_8 = \gen{r, s} = \set{1, r, r^2, r^3, s, rs, r^2s, r^3s}$. If we consider the trivial homomorphism, then $G \cong P \times S \cong Z_7 \times D_8$. Now consider the nontrivial homomorphism that sends some generator of $S$ to $\alpha$. We have three cases:
+        Note that non-triviality of the homomorphism implies that some $s \in S$ does not centralize $P$. If $G$ could be written as a direct product, then $S$ would centralize $P$, which is a contradiction. Hence, $G$ is not a direct product.
+        \item Let $S \cong D_8 = \gen{r, s} = \set{1, r, r^2, r^3, s, rs, r^2s, r^3s}$. If we consider the trivial homomorphism, then $G \cong P \times S \cong Z_7 \times D_8$. Now consider the non-trivial homomorphism that sends some generator of $S$ to $\alpha$. We have three cases:
         \[\phi_1 = 
         \begin{cases}
             r \mapsto \alpha, \\
@@ -1167,7 +1168,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
         If we pick $\phi_2$, then $s$ acts on $P$, and $sps\inv = p\inv$. Moreover, note that $r$ centralizes $P$, hence $|rp| = 28$. Since $s(rp)s = srps\inv = (srs\inv)(sps\inv) = r\inv p\inv = (rp)\inv$, then
         \[G \cong P \semidir_{\phi_2} S \cong D_{56}.\]
     \end{itemize}
-    \item Suppose $G$ has a nonnormal Sylow 7-subgroup. We know that $S \in \syl_2(G)$ must be normal by part (b). Let $P \in \syl_7(G)$, and put $P = \gen p$. Let $p$ act by conjugation on the seven nonidentity elements of $S$. Note that the stabilizer of any nonidentity element $s \in S$ is a subgroup of $P$, hence $|G_s| = 1$ or 7. If $|G_s| = 7$, then the orbit is trivial, hence $psp\inv = s$, or $p = sps\inv \in P$, which contradicts that $|s|$ is a power of 2. Then $|G_s| = 1$, so the orbit $\oo_s$ of $s$ has size 7. Since $|S - 1| = 7$, then $\oo_s$ contains all nonidentity elements of $S$. Hence, all nonidentity elements of $S$ have the same order.
+    \item Suppose $G$ has a non-normal Sylow 7-subgroup. We know that $S \in \syl_2(G)$ must be normal by part (b). Let $P \in \syl_7(G)$, and put $P = \gen p$. Let $p$ act by conjugation on the seven nonidentity elements of $S$. Note that the stabilizer of any nonidentity element $s \in S$ is a subgroup of $P$, hence $|G_s| = 1$ or 7. If $|G_s| = 7$, then the orbit is trivial, hence $psp\inv = s$, or $p = sps\inv \in P$, which contradicts that $|s|$ is a power of 2. Then $|G_s| = 1$, so the orbit $\oo_s$ of $s$ has size 7. Since $|S - 1| = 7$, then $\oo_s$ contains all nonidentity elements of $S$. Hence, all nonidentity elements of $S$ have the same order.
     
     If they all had order 8, then $s^2$ would have order 4, but $(s^2)^4 = s^8 = 1$. A similar reasoning eliminates the possibility of order 4. Hence, all nonidentity elements of $S$ have order 2, so $S \cong Z_2 \times Z_2 \times Z_2$.
     \item Let $H = Z_2 \times Z_2 \times Z_2$ and $K = \gen k \cong Z_7$. Then $\aut(H) \cong \gl_3(\f_2)$, which has order 168. Let $\phi : K \to \aut(H)$ be a homomorphism. Since $|K| = 7$, then $|\phi(K)| = 1$ or 7. If $|\phi(K)| = 1$, then the resulting semidirect product is abelian, which is a contradiction. Hence, $|\phi(K)| = 7$. Since $\aut(H)$ has order 168, then there exists a unique subgroup of order 7 in $\aut(H)$, call it $\psi$. Then $\phi : K \to \aut(H)$ given by $\phi(k) = \psi$ is a homomorphism, and the resulting semidirect product $H \semidir_\phi K$ has order $|H||K| = 8 \cdot 7 = 56$. We now claim that $K$ is not normal in $H \semidir_\phi K$.
@@ -1187,7 +1188,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
         \item Suppose $P \cong Z_{25}$. Then $\aut(P) \cong \units[25]$, which has order 20. Since $|Q| = 3$, then the only homomorphism $\phi : Q \to \aut(P)$ is the trivial homomorphism, so $G \cong P \semidir Q \cong P \times Q \cong Z_{25} \times Z_3$.
         
         If we consider $G \cong Q \semidir P$, then we have a homomorphism $\phi : P \to \aut(Q)$. Since $|\aut(Q)| = 2$, then the only homomorphism $\phi : P \to \aut(Q)$ is the trivial homomorphism, so $G \cong Q \semidir P \cong Q \times P \cong Z_3 \times Z_{25}$.
-        \item Suppose $P \cong Z_5 \times Z_5$ with $\aut(P) \cong \gl_2(\f_5)$, which has order 480. Since $|Q| = 3$, then there exists a nontrivial homomorphism $\phi : Q \to \aut(P)$, which is unique since $|\aut(P)| = 480$ and $(480, 3) = 3$. We may use similar reasoning as the previous exercise in that $\phi_1(Q)$ and $\phi_2(Q)$ are conjugate subgroups of $\aut(P)$, and $\phi_1(Q), \phi_2(Q) \in \syl_3(\aut(P))$, so they are conjugate by the Sylow theorems. Hence, by \hyperref[ex5.5.6]{Exercise 5.5.6}, we have $P \semidir_{\phi_1} Q \cong P \semidir_{\phi_2} Q$. Therefore, $P \semidir_\phi Q$ is unique, and $G \cong P \semidir_\phi Q$ is non-abelian.
+        \item Suppose $P \cong Z_5 \times Z_5$ with $\aut(P) \cong \gl_2(\f_5)$, which has order 480. Since $|Q| = 3$, then there exists a non-trivial homomorphism $\phi : Q \to \aut(P)$, which is unique since $|\aut(P)| = 480$ and $(480, 3) = 3$. We may use similar reasoning as the previous exercise in that $\phi_1(Q)$ and $\phi_2(Q)$ are conjugate subgroups of $\aut(P)$, and $\phi_1(Q), \phi_2(Q) \in \syl_3(\aut(P))$, so they are conjugate by the Sylow theorems. Hence, by \hyperref[ex5.5.6]{Exercise 5.5.6}, we have $P \semidir_{\phi_1} Q \cong P \semidir_{\phi_2} Q$. Therefore, $P \semidir_\phi Q$ is unique, and $G \cong P \semidir_\phi Q$ is non-abelian.
         
         If we consider $G \cong Q \semidir P$, then we have a homomorphism $\phi : P \to \aut(Q)$. Since $|\aut(Q)| = 2$, then the only homomorphism $\phi : P \to \aut(Q)$ is the trivial homomorphism, so $G \cong Q \semidir P \cong Q \times P \cong Z_3 \times (Z_5 \times Z_5)$.
     \end{itemize}
@@ -1204,11 +1205,213 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 \end{exercise}
 
 \begin{sol}
-     Let $M$ be the given matrix. It is easy to calculate that
-     \[M^5 = 
-     \begin{bmatrix}
-        -56 & -209 \\
-        209 & 780
-     \end{bmatrix},\]
-     where, once entries are taken mod 19, results in $I_2$, hence $|M| = 5$.
+    Let $M$ be the given matrix. It is easy to calculate that
+    \[M^5 = 
+    \begin{bmatrix}
+       -56 & -209 \\
+       209 & 780
+    \end{bmatrix},\]
+    where, once entries are taken mod 19, results in $I_2$, hence $|M| = 5$. Moreover, we know that $1805 = 19^2 \cdot 5$. Since $n_{19} \equiv 1 \bmod 19$ and $n_{19} \mid 5$, then $n_{19} = 1$, so $P \in \syl_{19}(G)$ is normal. Moreover, we have $P \cong Z_{361}$ or $P \cong Z_{19} \times Z_{19}$. If $P \cong Z_{361}$, then $\aut(P) \cong \units[361]$, which has order 19 * 18 = 342. Since $|Q| = 5$, then the only homomorphism $\phi : Q \to \aut(P)$ is the trivial homomorphism, so $G \cong P \semidir Q \cong P \times Q \cong Z_{361} \times Z_5$.
+
+    If $P \cong Z_{19} \times Z_{19}$, then $\aut(P) \cong \gl_2(\f_{19})$, which has order 123120. If we take $\phi$ to be the trivial homomorphism, then $G \cong Z_{19} \times Z_{19} \times Z_5$. Now, since $|Q| = 5$, then there exists a non-trivial homomorphism $\phi : Q \to \aut(P)$, which is unique since $|\aut(P)| = 123120$ and $(123120, 5) = 5$. We may use similar reasoning as the previous exercise in that $\phi_1(Q)$ and $\phi_2(Q)$ are conjugate subgroups of $\aut(P)$, and $\phi_1(Q), \phi_2(Q) \in \syl_5(\aut(P))$, so they are conjugate by the Sylow theorems. Hence, by \hyperref[ex5.5.6]{Exercise 5.5.6}, we have $P \semidir_{\phi_1} Q \cong P \semidir_{\phi_2} Q$. Therefore, $P \semidir_\phi Q$ is unique, and $G \cong P \semidir_\phi Q$ is non-abelian.
 \end{sol}
+
+\begin{specialexercise}\label{ex5.5.10}
+    This exercise classifies the groups of order 147 (there are six isomorphism types).
+    \begin{subproblems}
+        \item Prove that there are two abelian groups of order 147.
+        \item Prove that every group of order 147 has a normal Sylow 7-subgroup.
+        \item Prove that there is a unique non-abelian group of order 147 whose Sylow 7-subgroup is cyclic.
+        \item Let
+        \[t_1 = 
+        \begin{bmatrix}
+            2 & 0 \\
+            0 & 1
+        \end{bmatrix}, \quad
+        t_2 = 
+        \begin{bmatrix}
+            1 & 0 \\
+            0 & 2
+        \end{bmatrix}\]
+        be elements of $\gl_2(\f_7)$. Prove $P = \gen{t_1, t_2}$ is a Sylow 3-subgroup of $\gl_2(\f_7)$, and that $P \cong Z_3 \times Z_3$. Deduce that every subgroup of order 3 is conjugate in $\gl_2(\f_7)$ to a subgroup of $P$.
+        \item By Example 3 in Section 1, the group $P$ has four subgroups of order 3, and these are: $P_1 = \gen{t_1}, P_2 = \gen{t_2}, P_3 = \gen{t_1t_2}$, and $P_4 = \gen{t_1t_2^2}$. For $i = 1, 2, 3, 4$, let $G_i = (Z_7 \times Z_7) \semidir_{\phi_i} P_i$, where $\phi_i$ is an isomorphism of $Z_3$ with the subgroup $P_i$ of $\aut(Z_7 \times Z_7)$. For each $i$, describe $G_i$ in terms of generators and relations. Deduce that $G_1 \cong G_2$.
+        \item Prove that $G_1$ is not isomorphic to either $G_3$ or $G_4$. [Show that the center of $G_1$ has order 7, whereas the centers of $G_3$ and $G_4$ are trivial.]
+        \item Prove that $G_3$ is not isomorphic to $G_4$.
+        \item Classify the groups of order 147 by showing that the six non-isomorphic groups described above (two from part (a), one from part (c), and $G_1, G_3$, and $G_4$) are all the groups of order 147. [Use \hyperref[ex5.5.6]{Exercise 5.5.6} and part (d).] (The classification of groups of order $pq^2$, where $p$ and $q$ are primes with $p < q$ and $p \mid q - 1$, is quite similar.)
+    \end{subproblems}
+\end{specialexercise}
+
+\begin{solalph}
+    \item Note that $147 = 3 \cdot 7^2$. By the Fundamental Theorem of Finite Abelian Groups, the partitions of 2 are $2, 1 + 1$, so the abelian groups of order 147 are of the form $Z_{49} \times Z_3$ and $Z_7 \times Z_7 \times Z_3$.
+    \item Let $n_7$ be the number of Sylow 7-subgroups of $G$. Then $n_7 \equiv 1 \bmod 7$ and $n_7 \mid 3$, so $n_7 = 1$. Hence, the unique Sylow 7-subgroup is normal.
+    \item Let $P \cong Z_{49}$ and $Q \cong Z_3$. Then $\aut(P) \cong \units[49]$, which has order $7 \cdot 6 = 42$. Since $|Q| = 3$, then there exists non-trivial homomorphisms $\phi : Q \to \aut(P)$, where $q \in Q = \gen q$ is mapped to a generator of the unique subgroup of order 3 in $\aut(P)$, say $\alpha$. Then either $q \mapsto \alpha$ or $q \mapsto \alpha^2$. Let $\phi_1, \phi_2 : Q \to \aut(P)$ be the two homomorphisms defined by $\phi_1(q) = \alpha$ and $\phi_2(q) = \alpha^2$. Since $\phi_1(Q) = \phi_2(Q) = \gen\alpha$, then by \hyperref[ex5.5.6]{Exercise 5.5.6}, we have $P \semidir_{\phi_1} Q \cong P \semidir_{\phi_2} Q$. Hence, there is a unique non-abelian group of order 147 whose Sylow 7-subgroup is cyclic.
+    \item Recall that $|\gl_2(\f_7)| = (7^2 - 1)(7^2 - 7) = 48 \cdot 42 = 2016 = 2^5 \cdot 3^2 \cdot 7$. Observe that
+    \[t_1^3 = 
+    \begin{bmatrix}
+        8 & 0 \\
+        0 & 1
+    \end{bmatrix}, \quad 
+    t_2^3 = 
+    \begin{bmatrix}
+        1 & 0 \\
+        0 & 8
+    \end{bmatrix}, \quad
+    t_1t_2 = 
+    \begin{bmatrix}
+        2 & 0 \\
+        0 & 2
+    \end{bmatrix} = t_2t_1.\]
+    Taking entries mod 7, then $t_1^3 = t_2^3 = I_2$, so $|t_1| = |t_2| = 3$. Moreover, $t_1t_2 = t_2t_1$, so $P = \gen{t_1}\gen{t_2}$. To see that this is isomorphic to $\gen{t_1} \times \gen{t_2}$, note that $\gen{t_1} \cap \gen{t_2} = 1$. Moreover, commutativity shows that ${t_1} \nsub P$ and ${t_2} \nsub P$, so $P \cong \gen{t_1} \times \gen{t_2} \cong Z_3 \times Z_3$. Since $|P| = 9$, then $P$ is a Sylow 3-subgroup of $\gl_2(\f_7)$.
+
+    Let $R$ be a subgroup of order 3 in $\gl_2(\f_7)$. Then $R \leq gPg\inv$ for some $g \in \gl_2(\f_7)$ by the Sylow theorems. Then $gRg\inv \leq P$, so $gRg\inv$ is a subgroup of order 3 in $P$. Hence, every subgroup of order 3 is conjugate in $\gl_2(\f_7)$ to a subgroup of $P$.
+    \item Let $Z_7 \times Z_7 = \gen a \times \gen b$. Then $\aut(Z_7 \times Z_7) \cong \gl_2(\f_7)$, and $P_i$ is a subgroup of $\aut(Z_7 \times Z_7)$ for $i = 1, 2, 3, 4$. Let $\phi_i : Z_3 \to P_i$ be an isomorphism. We check each $i$:
+    \begin{itemize}
+        \item For $i = 1$, we have $\phi_1 : Z_3 \to P_1$ given by $\phi_1(q) = t_1$. Then $qaq\inv = \phi_1(q)(a) = t_1(a) = a^2$, and $qbq\inv = \phi_1(q)(b) = t_1(b) = b$. Hence, we have for a na\"ive presentation of $G_1$:
+        \[G_1 = \set{a, b, q \mid a^7 = b^7 = q^3 = 1, ab = ba, qaq\inv = a^2, qbq\inv = b}.\]
+        However, note that $b$ is central in $G_1$ as it commutes with both $a$ and $q$. It follows that $\gen b \nsub G_1$ with $|\gen b| = 7$. Observe that $\gen b \cap \gen{a, q} = 1$ by construction. To see that $\gen{a, q} \nsub G_1$, observe that $b\gen{a, q}b\inv = \gen{a, q}$ because $b \in Z(G_1)$. Then $G_1 \cong Z_7 \times \gen{a, q}$.
+
+        If we consider a homomorphism $\psi : Z_3 \to \aut(Z_7)$, then $q \mapsto \alpha$ or $q \mapsto \alpha^2$ such that $\alpha$ generates the unique subgroup of order 3 in $\aut(Z_7)$. In either case, we have $\gen{a, q} \cong Z_7 \semidir_\psi Z_3$ as it satisfies the relations $qaq\inv = a^2$ in the na\"ive presentation. Hence, we have
+        \[G_1 \cong Z_7 \times (Z_7 \semidir_\psi Z_3).\]
+        \item For $i = 2$, simply note that $t_2$ takes the place of $t_1$ in the previous case, $aq = qa$, and $qbq\inv = b^2$. Hence, we have
+        \[G_2 = \set{a, b, q \mid a^7 = b^7 = q^3 = 1, ab = ba, qaq\inv = a, qbq\inv = b^2}.\]
+        By similar reasoning as the previous case, we have $G_2 \cong Z_7 \times (Z_7 \semidir_\psi Z_3)$, so $G_1 \cong G_2$.
+        \item For $i = 3$, we have $\phi_3 : Z_3 \to P_3$ given by $\phi_3(q) = t_1t_2$. Then $qaq\inv = \phi_3(q)(a) = t_1t_2(a) = t_1(a) = a^2$, and $qbq\inv = \phi_3(q)(b) = t_1t_2(b) = t_1(b^2) = b^2$. A presentation of $G_3$ is
+        \[G_3 = \set{a, b, q \mid a^7 = b^7 = q^3 = 1, ab = ba, qaq\inv = a^2, qbq\inv = b^2}.\]
+        \item For $i = 4$, we have $\phi_4 : Z_3 \to P_4$ given by $\phi_4(q) = t_1t_2^2$. Then $qaq\inv = \phi_4(q)(a) = t_1t_2^2(a) = t_1(a) = a^2$, and $qbq\inv = \phi_4(q)(b) = t_1t_2^2(b) = t_1(b^4) = b^4$. Then a presentation of $G_4$ is
+        \[G_4 = \set{a, b, q \mid a^7 = b^7 = q^3 = 1, ab = ba, qaq\inv = a^2, qbq\inv = b^4}.\]
+    \end{itemize}
+    \item The prior discussion showed that $Z(G_1) = \gen b$, so $|Z(G_1)| = 7$. Now, consider $G_3$, and let $z \in Z(G_3)$. We first consider when $z \in Z(G_3) \cap (\gen a \times \gen b)$. Then $z = a^ib^j$ for some $0 \leq i, j \leq 6$. Since $z$ commutes with $q$, then 
+    \[a^ib^j = z = qzq\inv = qa^ib^jq\inv = qaq\inv qbq\inv = a^{2i}b^{2j}.\]
+    Then this implies that $2i \equiv i \bmod 7$ and $2j \equiv j \bmod 7$, so $i = j =0$. Hence, $Z(G_3) \cap (\gen a \times \gen b) = 1$. Now, consider when $z \in Z(G_3) - (\gen a \times \gen b)$. Then $z = a^ib^jq^k$ for some $0 \leq i, j \leq 6$ and $1 \leq k \leq 2$. Since $z$ commutes with $a$, then 
+    \[a^ib^jq^k = z = aza\inv = aa^ib^jq^ka\inv = a^{i+1}b^jq^ka\inv = a^{i+1}b^jq^ka^{-1}.\]
+    However, since $q$ does not centralize $\gen a$, then this is a contradiction. Hence, $Z(G_3) - (\gen a \times \gen b) = 1$, so $Z(G_3) = 1$. A similar argument shows that $Z(G_4) = 1$.
+    \item To show that $G_3 \not\cong G_4$, we first observe that $G_3$ and $G_4$ have the same subgroups of order 7, since $Z_7 \times Z_7$ is the unique Sylow 7-subgroup of both groups. Hence, $G_3$ and $G_4$ have the list of subgroups
+    \[\ss = \set{\gen a, \gen b, \gen{ab}, \gen{ab^2}, \gen{ab^3}, \gen{ab^4}, \gen{ab^5}, \gen{ab^6}}.\]
+    Let $q$ act on $\ss$ by conjugation. In $G_3$, for any $\gen{ab^i} \in \ss$, then
+    \[q(ab^i)q\inv = (qaq\inv)(qb^iq\inv) = a^2b^{2i}.\]
+    It is clear that $a^2b^{2i} \in \gen{ab^i}$, so $q$ stabilizes $\gen{ab^i}$. Hence, $q$ stabilizes all subgroups of order 7 in $G_3$, and each subgroup of order 7 is normal in $G_3$. In $G_4$, consider $\gen{ab} \in \ss$. Then
+    \[q(ab)q\inv = (qaq\inv)(qbq\inv) = a^2b^4 \notin \gen{ab},\]
+    so $q$ does not stabilize $\gen{ab}$. Hence, $\gen{ab}$ is not normal in $G_4$. Since $G_3$ and $G_4$ have different numbers of normal subgroups of order 7, then $G_3 \not\cong G_4$.
+    \item By part (b), every group of order 147 has a normal Sylow 7-subgroup. Let $P \in \syl_7(G)$ and $Q \in \syl_3(G)$. Since $P \cap Q = 1$ because (49, 3) = 1, and $|G| = |P||Q|$, then $G = PQ$, and $G \cong P \semidir Q$. If the homomorphism is trivial, then we have the two abelian groups from part (a). If the homomorphism is non-trivial and $P$ is cyclic, then we have the unique non-abelian group from part (c). If the homomorphism is non-trivial and $P$ is not cyclic, then $\phi(Q)$ is a subgroup of order 3 in $\aut(P) \cong \gl_2(\f_7)$. By part (d), every subgroup of order 3 is conjugate in $\gl_2(\f_7)$ to a subgroup of $P$, so by \hyperref[ex5.5.6]{Exercise 5.5.6} we have the three non-abelian groups $G_1, G_3$, and $G_4$ from part (e). Hence, the six non-isomorphic groups described above are all the groups of order 147.
+\end{solalph}
+
+\begin{exercise}\label{ex5.5.11}
+    Classify groups of order 28 (there are four isomorphism types).
+\end{exercise}
+
+\begin{sol}
+    Note $28 = 2^2 \cdot 7$. We have the abelian groups $Z_7 \times Z_4$ and $Z_7 \times Z_2 \times Z_2$. Let $P \in \syl_7(G)$ and $S \in \syl_2(G)$. Then $|P| = 7$ and $|S| = 4$. By the Sylow theorems, we have $n_7 \equiv 1 \bmod 7$ and $n_7 \mid 4$, so $n_7 = 1$. Hence, the unique Sylow 7-subgroup is normal. Moreover, we have $P \cong Z_7$ and $S \cong Z_4$ or $Z_2 \times Z_2$. We then have two cases to consider:
+    \begin{itemize}
+        \item Suppose $S \cong Z_4 = \gen s$. If we consider the trivial homomorphism, then $G \cong P \times S \cong Z_7 \times Z_4$. Now consider the non-trivial homomorphism that sends $s$ to $\alpha$, a generator of the unique subgroup of order 2 in $\aut(P)$. Then $s$ acts on $P$, and $sps\inv = p\inv$. Hence, we have
+        \[G \cong P \semidir S \cong Z_7 \semidir Z_4 = \set{p, s \mid p^7 = s^4 = 1, sps\inv = p\inv}.\]
+        \item Suppose $S \cong Z_2 \times Z_2 = \gen s \times \gen t$. If we consider the trivial homomorphism, then $G \cong P \times S \cong Z_7 \times (Z_2 \times Z_2)$. Now consider a non-trivial homomorphism that sends some generator of $S$ to $\alpha$. We have the three homomorphisms
+        \[\theta_1 = 
+        \begin{cases}
+            s \mapsto \alpha, \\
+            t \mapsto \id,
+        \end{cases} \quad
+        \theta_2 = 
+        \begin{cases}
+            s \mapsto \id, \\
+            t \mapsto \alpha,
+        \end{cases} \quad
+        \theta_3 = 
+        \begin{cases}
+            s \mapsto \alpha, \\
+            t \mapsto \alpha,
+        \end{cases}\]
+        Observe that $\ker\theta_1 = \gen t, \ker\theta_2 = \gen s$, and $\ker\theta_3 = \gen{st}$. Hence, the semidirect products corresponding to $\theta_1, \theta_2$, and $\theta_3$ are all isomorphic to each other. Pick $\theta_1$ without loss of generality. Then $s$ acts on $P$, and $sps\inv = p\inv$. Moreover, $t$ centralizes $P$, hence $|tp| = 14$. Since
+        \[s(tp)s\inv = stps\inv = (sts\inv)(sps\inv) = tp\inv = (tp)\inv,\]
+        then
+        \[G \cong P \semidir_{\theta_1} S \cong \set{p, s, t \mid p^7 = s^2 = t^2 = 1, st = ts, sps\inv = p\inv, tpt\inv = p} \cong D_{28}. \qh\] 
+    \end{itemize}
+\end{sol}
+
+\begin{exercise}\label{ex5.5.12}
+    Classify the groups of order 20 (there are five isomorphism types).
+\end{exercise}
+
+\begin{sol}
+    We have the abelian groups $Z_5 \times Z_4$ and $Z_5 \times Z_2 \times Z_2$. Let $P \in \syl_5(G)$ and $S \in \syl_2(G)$. Then $|P| = 5$ and $|S| = 4$. By the Sylow theorems, we have $n_5 \equiv 1 \bmod 5$ and $n_5 \mid 4$, so $n_5 = 1$. Hence, the unique Sylow 5-subgroup is normal. Moreover, we have $P \cong Z_5$ and $S \cong Z_4$ or $Z_2 \times Z_2$. We then have two cases to consider:
+    \begin{itemize}
+        \item If $S \cong Z_4 = \gen s$, then $s$ has four candidates to be sent to: $\id, \alpha$, $\alpha^2$, or $\alpha^3$, where $\aut(Z_5) = \gen\alpha$. Define the homomorphisms
+        \[\phi_1 : s \mapsto \id, \quad \phi_2 : s \mapsto \alpha, \quad \phi_3 : s \mapsto \alpha^2, \quad \phi_4 : s \mapsto \alpha^3\]
+        Since $\phi_1$ is trivial, then $G \cong P \semidir_{\phi_1} S \cong P \times S \cong Z_5 \times Z_4$. Also observe that $\ker\phi_2 = \ker\phi_4 = 1$ while $\ker\phi_3 = \gen{s^2}$. Then the resulting semidirect products from $\phi_2$ and $\phi_4$ are isomorphic, since $\phi_2(S) = \phi_4(S) = \gen\alpha$, so by \hyperref[ex5.5.6]{Exercise 5.5.6}, we have $P \semidir_{\phi_2} S \cong P \semidir_{\phi_4} S$. Moreover, $\ker\phi_3 = \gen{s^2}$, which is the unique subgroup of order 2 in $\aut(P)$, so $P \semidir_{\phi_3} S$ is not isomorphic to $P \semidir_{\phi_2} S$. Hence, we have two non-abelian groups of order 20, and we have
+        \[G \cong P \semidir_{\phi_2} S \cong \set{p, s \mid p^5 = s^4 = 1, sps\inv = p^2} \cong F_{20}.\]
+        In the case of $\phi_3$, we have $sps\inv = p\inv$. Then
+        \[G \cong P \semidir_{\phi_3} S \cong \set{p, s \mid p^5 = s^4 = 1, sps\inv = p\inv} \cong Z_5 \semidir Z_4.\]
+        \item If $S \cong Z_2 \times Z_2 = \gen s \times \gen t$, then we have the trivial homomorphism $\theta_1 : S \to \aut(P)$, which gives $G \cong P \semidir_{\theta_1} S \cong P \times S \cong Z_5 \times (Z_2 \times Z_2)$. If $\alpha^2$ is the generator of the unique subgroup of order 2 in $\aut(P)$, then we have the three non-trivial homomorphisms
+        \[\theta_2 = 
+        \begin{cases}
+            s \mapsto \alpha^2, \\
+            t \mapsto \id,
+        \end{cases} \quad
+        \theta_3 = 
+        \begin{cases}
+            s \mapsto \id, \\
+            t \mapsto \alpha^2,
+        \end{cases} \quad
+        \theta_4 =
+        \begin{cases}
+            s \mapsto \alpha^2, \\
+            t \mapsto \alpha^2,
+        \end{cases}\]
+        This is the same situation as in the previous exercise, since $\ker\theta_2 = \gen t, \ker\theta_3 = \gen s$, and $\ker\theta_4 = \gen{st}$. Hence, the semidirect products corresponding to $\theta_2, \theta_3$, and $\theta_4$ are all isomorphic to each other. Pick $\theta_2$ without loss of generality. Then $s$ acts on $P$, and $sps\inv = p\inv$. Moreover, $t$ centralizes $P$, hence $|tp| = 10$. Since
+        \[s(tp)s\inv = stps\inv = (sts\inv)(sps\inv) = tp\inv = (tp)\inv,\]
+        then
+        \[G \cong P \semidir_{\theta_2} S \cong \set{p, s, t \mid p^5 = s^2 = t^2 = 1, st = ts, sps\inv = p\inv, tpt\inv = p} \cong D_{20}. \qh\]
+    \end{itemize}
+\end{sol}
+
+\begin{exercise}\label{ex5.5.13}
+    Classify groups of order $4p$, where $p$ is a prime greater than 3. [There are four isomorphism types when $p \equiv 3 \bmod 4$, and five isomorphism types when $p \equiv 1 \bmod 4$.]
+\end{exercise}
+
+\begin{sol}
+    We have a framework for each case of $p$, namely \hyperref[ex5.5.11]{Exercise 5.5.11} when $p \equiv 3 \bmod 4$, and \hyperref[ex5.5.12]{Exercise 5.5.12} when $p \equiv 1 \bmod 4$. The only difference is that we have $P \in \syl_p(G)$ and $S \in \syl_2(G)$, where $|P| = p$ and $|S| = 4$. By the Sylow theorems, we have $n_p \equiv 1 \bmod p$ and $n_p \mid 4$, so $n_p = 1$. Hence, the unique Sylow $p$-subgroup is normal. Moreover, we have $P = \gen q \cong Z_p$ and $S \cong Z_4$ or $Z_2 \times Z_2$. We then have two cases to consider:
+    \begin{itemize}
+        \item If $S \cong Z_4 = \gen s$, then $s$ has different candidates to be sent to in $\aut(P) = \units[p]$, which has order $p - 1$. If $p \equiv 3 \bmod 4$, then $p - 1 \equiv 2 \bmod 4$, hence $\phi(s)$ can only be sent to $\id$ or the unique element of order 2 in $\aut(P)$. If we have the latter case, then $sqs\inv = q\inv$, and we have
+        \[G \cong P \semidir S \cong Z_p \semidir Z_4 = \set{q, s \mid q^p = s^4 = 1, sqs\inv = q\inv}.\]
+        
+        If $p \equiv 1 \bmod 4$, then $p - 1 \equiv 0 \bmod 4$, hence $\phi(s)$ can be sent to $\id$ or one of the two elements of order 4 in $\aut(P)$ (which are isomorphic since their images generate the same subgroup), or the unique element of order 2 in $\aut(P)$. If $\aut(P) = \gen\alpha$, let $\rho = \alpha^{(p - 1)/4}$, which has order 4. Then we have the three non-trivial homomorphisms
+        \[\phi_1 : s \mapsto \rho, \quad \phi_2 : s \mapsto \rho^3, \quad \phi_3 : s \mapsto \rho^2.\]
+        We know that $\phi_1$ and $\phi_2$ give isomorphic semidirect products, since $\phi_1(S) = \phi_2(S) = \gen\rho$. Hence, we have two non-abelian groups of order $4p$, and we have
+        \[G \cong P \semidir_{\phi_1} S \cong \set{q, s \mid q^p = s^4 = 1, sqs\inv = q^k}.\]
+        for some $k \in \units[p]$ such that $|k| = 4$. In the case of $\phi_3$, we have $sqs\inv = q\inv$. Then
+        \[G \cong P \semidir_{\phi_3} S \cong \set{q, s \mid q^p = s^4 = 1, sqs\inv = q\inv}.\]
+        \item If $S \cong Z_2 \times Z_2 = \gen s \times \gen t$, then we have the trivial homomorphism $\theta_1 : S \to \aut(P)$, which gives $G \cong P \semidir_{\theta_1} S \cong P \times S \cong Z_p \times (Z_2 \times Z_2)$. If $\rho^2$ is the generator of the unique subgroup of order 2 in $\aut(P)$, then we have the three non-trivial homomorphisms
+        \[\theta_2 = 
+        \begin{cases}
+            s \mapsto \rho^2, \\
+            t \mapsto \id,
+        \end{cases} \quad
+        \theta_3 =
+        \begin{cases}
+            s \mapsto \id, \\
+            t \mapsto \rho^2,
+        \end{cases} \quad
+        \theta_4 =
+        \begin{cases}
+            s \mapsto \rho^2, \\
+            t \mapsto \rho^2,
+        \end{cases}\]
+        Again, we know that $\ker\theta_2 = \gen t, \ker\theta_3 = \gen s$, and $\ker\theta_4 = \gen{st}$. Hence, the semidirect products corresponding to $\theta_2, \theta_3$, and $\theta_4$ are all isomorphic to each other. Pick $\theta_2$ without loss of generality. Then $s$ acts on $P$, and $sqs\inv = q\inv$. Moreover, $t$ centralizes $P$, hence $|tq| = 2p$. Since
+        \[s(tq)s\inv = stqs\inv = (sts\inv)(sqs\inv) = tq\inv = (tq)\inv,\]
+        then
+        \[G \cong P \semidir_{\theta_2} S \cong \set{q, s, t \mid (tq)^2 = s^2 = 1, st = ts, sqs\inv = q\inv, tqt\inv = q} \cong D_{4p}. \qh\]
+    \end{itemize}
+\end{sol}
+
+\begin{exercise}\label{ex5.5.14}
+    This exercise classifies the groups of order 60 (there are thirteen isomorphism types). Let $G$ be a group of order 60, let $P$ be a Sylow 5-subgroup of $G$, and let $Q$ be a Sylow 3-subgroup of $G$.
+    \begin{subproblems}
+        \item Prove that if $P$ is not normal in $G$, then $G \cong A_5$. [See Section 4.5.]
+        \item Prove that if $P \nsub G$ but $Q$ is not normal in $G$, then $G \cong A_4 \times Z_5$. [Show in this case that $P \leq Z(G), G/P \cong A_4$, a Sylow 2-subgroup $T$ of $G$ is normal, and $TQ \cong A_4$.]
+        \item Prove that if both $P$ and $Q$ are normal in $G$, then $G \cong Z_{15} \semidir T$, where $T \cong Z_4$ or $Z_2 \times Z_2$. Show in this case that there are six isomorphism types when $T$ is cyclic (one abelian), and there are five isomorphism types when $T$ is the Klein 4-group (one abelian). [Use the same ideas as in the classification of groups of order 30 and 20.]
+    \end{subproblems}
+\end{exercise}
+
+\begin{solalph}
+    \item Clear, from Corollary 4.22.
+    \item Let $n_5$ be the number of Sylow 5-subgroups of $G$. Then $n_5 \equiv 1 \bmod 5$ and $n_5 \mid 12$, so $n_5 = 6$. Let $P = \gen p$ and $Q = \gen q$. Then $|P| = 5$ and $|Q| = 3$. Since $n_5 = 6$, then there are six distinct Sylow 5-subgroups, say $\set{P_1, P_2, P_3, P_4, P_5, P_6}$. Since each Sylow 5-subgroup has four non-identity elements, then there are $6 \cdot 4 = 24$ elements of order 5 in $G$. Since $|G| = 60$, then there are $60 - 24 - 1 = 35$ elements of order not equal to 1 or 5. Since $Q$ is not normal in $G$, then let $n_3$ be the number of Sylow 3-subgroups of $G$. Then $n_3 \equiv 1 \bmod 3$ and $n_3 \mid 20$, so either $n_3 = 4$ or $n_3 = 10$. If we have the latter case, then there are ten distinct Sylow 3-subgroups, say $\set{Q_1, Q_2, Q_3, Q_4, Q_5, Q_6, Q_7, Q_8, Q_9, Q_{10}}$. Since each Sylow 3-subgroup has two non-identity elements, then there are $10 \cdot 2 = 20$ elements of order 3 in $G$. However, this is a contradiction because we only have at most 35 elements of order not equal to 1 or 5. Hence, we must have that $n_3 =4$, so there are four distinct Sylow 3-subgroups. Let $\set{Q_1, Q_2, Q_3, Q_4}$ be the four distinct Sylow 3-subgroups. Since each Sylow 3-subgroup has two non-identity elements, then there are a total of eight elements of order three in $G$. Since $|G| = 60$, then there are $60 - 24 - 8 - 1 = 27$ elements of order not equal to 1
+\end{solalph}
