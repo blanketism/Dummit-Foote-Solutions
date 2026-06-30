@@ -1413,5 +1413,21 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 
 \begin{solalph}
     \item Clear, from Corollary 4.22.
-    \item Let $n_5$ be the number of Sylow 5-subgroups of $G$. Then $n_5 \equiv 1 \bmod 5$ and $n_5 \mid 12$, so $n_5 = 6$. Let $P = \gen p$ and $Q = \gen q$. Then $|P| = 5$ and $|Q| = 3$. Since $n_5 = 6$, then there are six distinct Sylow 5-subgroups, say $\set{P_1, P_2, P_3, P_4, P_5, P_6}$. Since each Sylow 5-subgroup has four non-identity elements, then there are $6 \cdot 4 = 24$ elements of order 5 in $G$. Since $|G| = 60$, then there are $60 - 24 - 1 = 35$ elements of order not equal to 1 or 5. Since $Q$ is not normal in $G$, then let $n_3$ be the number of Sylow 3-subgroups of $G$. Then $n_3 \equiv 1 \bmod 3$ and $n_3 \mid 20$, so either $n_3 = 4$ or $n_3 = 10$. If we have the latter case, then there are ten distinct Sylow 3-subgroups, say $\set{Q_1, Q_2, Q_3, Q_4, Q_5, Q_6, Q_7, Q_8, Q_9, Q_{10}}$. Since each Sylow 3-subgroup has two non-identity elements, then there are $10 \cdot 2 = 20$ elements of order 3 in $G$. However, this is a contradiction because we only have at most 35 elements of order not equal to 1 or 5. Hence, we must have that $n_3 =4$, so there are four distinct Sylow 3-subgroups. Let $\set{Q_1, Q_2, Q_3, Q_4}$ be the four distinct Sylow 3-subgroups. Since each Sylow 3-subgroup has two non-identity elements, then there are a total of eight elements of order three in $G$. Since $|G| = 60$, then there are $60 - 24 - 8 - 1 = 27$ elements of order not equal to 1
+    \item If $Q$ is not normal in $G$, then $n_3 \equiv 1 \bmod 3$ and $n_3 \mid 20$ implies that $n_3 = 4$ or 10. If $n_3 = 10$, then since $P \nsub G$, we know that $PQ_i$ is a subgroup of $G$ that is cyclic. But then $PQ_i \cap PQ_j = 5$ intersect at $P$, which means there would be $10 \cdot 10$ elements in $G$, which would be a contradiction. Hence, $n_3 = 4$. Again, each $PQ_i$ intersect non-trivially at $P$, and $P$ commutes with the non-identity elements of each $PQ_i$. Then there are $5 + 10 \cdot 4 = 45$ elements in $C_G(P)$. Since $C_G(P) \leq G$, then $|C_G(P)| = 60$ so that $C_G(P) = G$, showing that $P \leq Z(G)$.
 \end{solalph}
+
+\begin{exercise}\label{ex5.5.15}
+    Let $p$ be an odd prime. Prove that every element of order 2 in $\gl_2(\f_p)$ is conjugate to a diagonal matrix with $\pm 1$'s on the diagonal. Classify the groups of order $2p^2$. [If $A$ is a $2 \times 2$ matrix with $A^2 = I$ and $v_1, v_2$ is a basis for the underlying vector space, look at $A$ acting on the vectors $w_1 = v_1 + v_2$ and $w_2 = v_1 - v_2$.]
+\end{exercise}
+
+\begin{exercise}\label{ex5.5.16}
+    Show that there are exactly 4 distinct homomorphisms from $Z_2$ into $\aut(Z_8)$. Prove that the resulting semidirect products are the groups $Z_8 \times Z_2, D_{16}$, the quasidihedral group $QD_{16}$, and the modular group $M$.
+\end{exercise}
+
+\begin{exercise}\label{ex5.5.17}
+    Show that for any $n \geq 3$, there are exactly 4 distinct homomorphisms from $Z_2$ into $\aut(Z_{2^n})$. Prove that the resulting semidirect groups give 4 non-isomorphic groups of order $2^{n + 1}$. [Recall \hyperref[ex2.3.21]{Exercise 2.3.21} through \hyperref[ex2.3.23]{Exercise 2.3.23}.] (These four groups together with the cyclic group and the generalized quaternion group $Q_{2^{n + 1}}$ are all the groups of order $2^{n + 1}$ which possess a cyclic subgroup of index 2.)
+\end{exercise}
+
+\begin{exercise}\label{ex5.5.18}
+    Show that if $H$ is any group, then there is a group $G$ that contains $H$ as a normal subgroup with the property that for every automorphism $\sigma$ of $H$, there is an element $g \in G$ such that conjugation by $g$ when restricted to $H$ is the given automorphism $\sigma$, i.e., every automorphism of $H$ is obtained as an inner automorphism of $G$ restricted to $H$.
+\end{exercise}
