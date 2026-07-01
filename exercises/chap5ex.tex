@@ -292,7 +292,9 @@
     \item By Cayley's Theorem, every finite group is isomorphic to a subgroup of some symmetric group $S_n$. We may then consider the group $G = S_1 \times S_2 \times S_3 \times \cdots$. For any finite group $H$, there is some $n$ such that $H$ is isomorphic to a subgroup of $S_n$, so $H$ is isomorphic to a subgroup of $G$.
     \item Let $G = \z \times \z \times \cdots$. Consider the map $\phi : G \to G \times G$ defined by
     \[\phi((a_1, a_2, a_3, \ldots)) = ((a_1, a_3, a_5, \ldots), (a_2, a_4, a_6, \ldots)).\]
-    It is clear that $\phi$ is a homomorphism. Moreover, if $\phi((a_1, a_2, a_3, \ldots)) = ((0, 0, 0, \ldots), (0, 0, 0, \ldots))$, then $a_i = 0$ for all $i$, so $\phi$ is injective. Finally, let $((b_1, b_2, b_3, \ldots), (c_1, c_2, c_3, \ldots))$ be an element of $G \times G$. Then $\phi((b_1, c_1, b_2, c_2, b_3, c_3, \ldots)) = ((b_1, b_2, b_3, \ldots), (c_1, c_2, c_3, \ldots))$, so $\phi$ is surjective. Thus, $\phi$ is an isomorphism and $G \cong G \times G$.
+    It is clear that $\phi$ is a homomorphism. Moreover, if $\phi((a_1, a_2, a_3, \ldots)) = ((0, 0, 0, \ldots), (0, 0, 0, \ldots))$, then $a_i = 0$ for all $i$, so $\phi$ is injective. Finally, let $((b_1, b_2, b_3, \ldots), (c_1, c_2, c_3, \ldots))$ be an element of $G \times G$. Then 
+    \[\phi((b_1, c_1, b_2, c_2, b_3, c_3, \ldots)) = ((b_1, b_2, b_3, \ldots), (c_1, c_2, c_3, \ldots)),\]
+    so $\phi$ is surjective. Thus, $\phi$ is an isomorphism and $G \cong G \times G$.
 \end{solalph}
 
 \newpage
@@ -1402,18 +1404,179 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     \end{itemize}
 \end{sol}
 
-\begin{exercise}\label{ex5.5.14}
+\begin{specialexercise}\label{ex5.5.14}
     This exercise classifies the groups of order 60 (there are thirteen isomorphism types). Let $G$ be a group of order 60, let $P$ be a Sylow 5-subgroup of $G$, and let $Q$ be a Sylow 3-subgroup of $G$.
     \begin{subproblems}
         \item Prove that if $P$ is not normal in $G$, then $G \cong A_5$. [See Section 4.5.]
         \item Prove that if $P \nsub G$ but $Q$ is not normal in $G$, then $G \cong A_4 \times Z_5$. [Show in this case that $P \leq Z(G), G/P \cong A_4$, a Sylow 2-subgroup $T$ of $G$ is normal, and $TQ \cong A_4$.]
         \item Prove that if both $P$ and $Q$ are normal in $G$, then $G \cong Z_{15} \semidir T$, where $T \cong Z_4$ or $Z_2 \times Z_2$. Show in this case that there are six isomorphism types when $T$ is cyclic (one abelian), and there are five isomorphism types when $T$ is the Klein 4-group (one abelian). [Use the same ideas as in the classification of groups of order 30 and 20.]
     \end{subproblems}
-\end{exercise}
+\end{specialexercise}
 
 \begin{solalph}
     \item Clear, from Corollary 4.22.
     \item If $Q$ is not normal in $G$, then $n_3 \equiv 1 \bmod 3$ and $n_3 \mid 20$ implies that $n_3 = 4$ or 10. If $n_3 = 10$, then since $P \nsub G$, we know that $PQ_i$ is a subgroup of $G$ that is cyclic. But then $PQ_i \cap PQ_j = 5$ intersect at $P$, which means there would be $10 \cdot 10$ elements in $G$, which would be a contradiction. Hence, $n_3 = 4$. Again, each $PQ_i$ intersect non-trivially at $P$, and $P$ commutes with the non-identity elements of each $PQ_i$. Then there are $5 + 10 \cdot 4 = 45$ elements in $C_G(P)$. Since $C_G(P) \leq G$, then $|C_G(P)| = 60$ so that $C_G(P) = G$, showing that $P \leq Z(G)$.
+    
+    Consider $G/P$, where $|G/P| = 12$. If we consider $\pi$ to be the natural projection map from $G$ to $G/P$, we claim that the map $\psi : \syl_3(G) \to \syl_3(G/P)$ given by $\psi(Q_i) \to \pi(Q_i)$ is a bijection. Note that this is a well-defined map, since $\pi(Q_i) = Q_iP/P$ is a subgroup of $G/P$, and since $Q_iP \leq G$ with order 15, then $Q_iP/P$ has order 3, so $\pi(Q_i) \in \syl_3(G/P)$. To see that $\psi$ is injective, suppose that $\psi(Q_i) = \psi(Q_j)$, then $Q_iP/P = Q_jP/P$, which implies that $Q_iP = Q_jP$. Since $|Q_iP| = |Q_jP| = 15$, and $n_3(Q_iP) \equiv 1 \bmod 3$ and $n_3(Q_iP) \mid 5$, then $n_3(Q_iP) = 1$. Hence, $Q_i = Q_j$, so $\psi$ is injective. Since $n_3(G) = 4$, then $|\syl_3(G/P)| \geq 4$. By injectivity, it must be that $\psi$ is a bijection, hence $n_3(G/P) = 4$. We now consider the classification of groups of order 12, which are $Z_{12}, Z_2 \times Z_6, D_{12}, A_4$, and $Z_3 \semidir Z_4$.
+    \begin{itemize}
+        \item We know $Z_{12}$ and $Z_2 \times Z_6$ are abelian, so any group of order 3 in these groups is normal, which is a contradiction.
+        \item For $D_{12} \cong S_3 \times Z_2$, let $\alpha \in S_3$ be a 3-cycle. Then $\gen{(\alpha, 1)}$ is a subgroup of order 3. Recall that conjugating $\alpha$ by any cycle in $S_3$ gives $\alpha$ or $\alpha^2$, hence $\gen{(\alpha, 1)}$ is normal in $D_{12}$, which is a contradiction.
+        \item For $Z_3 \semidir Z_4$, we know that $Z_3$ is normal in this group, which is a contradiction.
+    \end{itemize}
+    Then the only possibility is that $G/P \cong A_4$.
+
+    Let $T_1, T_2 \in \syl_2(G)$ be distinct, and consider $T_1P$ and $T_2P$. Since $P \leq Z(G)$, then $T_iP \cong T_i \times P$ for $i = 1, 2$. If there was some $t \in T_1$ such that $t \in T_2P$, observe that $|t|$ is divisible by 4. Since all non-identity elements of $P$ have order 5, then $t \in T_2$. But $T_1$ and $T_2$ are distinct by assumption, hence there must be some $t^* \in T_1$ such that $t^* \not\in T_2P$. Then $T_1P \neq T_2P$, and $T_1P/P, T_2P/P \in \syl_2(G/P)$. Since $n_2(G/P) = 1$, then $T_1P/P = T_2P/P$, which implies that $T_1P = T_2P$. But this is a contradiction, so there is a unique Sylow 2-subgroup of $G$, which we call $T$.
+
+    Consider $TQ$. It is clear that $T \cap Q = 1$, and $|TQ| = 12$. If $Q \nsub TQ$, then since $P \leq Z(G)$ also normalizes $Q$, then $Q \nsub G$, which is a contradiction. Then $n_3(TQ) \neq 1$, and by a similar argument as above, we conclude that $TQ \cong A_4$. If we now consider $\phi : TQ \to \aut(P)$, note that $\phi$ is trivial since $TQ$ is generated by 3-cycles, while $\aut(P) \cong Z_4$ has no elements of order 3. Then $G \cong P \times TQ \cong Z_5 \times A_4$.
+    \item If $P$ and $Q$ are both normal in $G$, then we have $PQ \nsub G$. Since $P \cap Q = 1$, then $PQ \cong P \times Q \cong Z_5 \times Z_3 \cong Z_{15}$. Put $P = \gen p$ and $Q = \gen q$. Let $T \in \syl_2(G)$, and consider a homomorphism from $T$ to $\aut(Z_{15})$, where $\aut(Z_{15}) \cong Z_4 \times Z_2$. From the text, we know that there are exactly 3 automorphisms of order 2:
+    \[\alpha_1 = 
+    \begin{cases}
+        p \mapsto p\inv \\
+        q \mapsto q
+    \end{cases} \quad
+    \alpha_2 = 
+    \begin{cases}
+        p \mapsto p \\
+        q \mapsto q\inv
+    \end{cases} \quad
+    \alpha_3 = 
+    \begin{cases}
+        p \mapsto p\inv \\
+        q \mapsto q\inv
+    \end{cases}\]
+    Moreover, there are 4 automorphisms of order 4:
+    \[\beta_1 = 
+    \begin{cases}
+        p \mapsto p^2 \\
+        q \mapsto q
+    \end{cases} \quad
+    \beta_2 =
+    \begin{cases}
+        p \mapsto p^2 \\
+        q \mapsto q\inv
+    \end{cases} \quad
+    \beta_3 =
+    \begin{cases}
+        p \mapsto p^3 \\
+        q \mapsto q
+    \end{cases} \quad
+    \beta_4 =
+    \begin{cases}
+        p \mapsto p^3 \\
+        q \mapsto q\inv
+    \end{cases}\]
+    However, note that $\gen{\beta_1} = \gen{\beta_3}$ and $\gen{\beta_2} = \gen{\beta_4}$, so there are only two distinct subgroups of order 4 in $\aut(Z_{15})$. Without loss of generality, we may consider the automorphisms $\alpha_1, \alpha_2, \alpha_3, \beta_1$, and $\beta_2$. We then have the following cases to consider for the Sylow 2-subgroup $T$:
+    \begin{itemize}
+        \item Suppose $T = \gen t \cong Z_4$. Then we have the trivial homomorphism, which gives $G \cong Z_{15} \times Z_4$. Then we have the non-trivial homomorphisms
+        \[\phi_1 : t \mapsto \alpha_1, \quad \phi_2 : t \mapsto \alpha_2, \quad \phi_3 : t \mapsto \alpha_3, \quad \phi_4 : t \mapsto \beta_1, \quad \phi_5 : t \mapsto \beta_2\]
+        \begin{enumerate}
+            \item For $G_1 = Z_{15} \semidir_{\phi_1} Z_4$, we have $tpt\inv = p\inv$ and $tqt\inv = q$. Since $q \in G_1$ is centralized, we have the factorization
+            \[G_1 \cong \gen{p, t} \times \gen q \cong (Z_5 \semidir Z_4) \times Z_3.\]
+            \item For $G_2 = Z_{15} \semidir_{\phi_2} Z_4$, we have $tpt\inv = p$ and $tqt\inv = q\inv$. Since $p \in G_2$ is centralized, we have the factorization
+            \[G_2 \cong \gen{q, t} \times \gen p \cong (Z_3 \semidir Z_4) \times Z_5.\]
+            \item For $G_3 = Z_{15} \semidir_{\phi_3} Z_4$, we have $tpt\inv = p\inv$ and $tqt\inv = q\inv$. Then
+            \[G_3 \cong Z_{15} \semidir Z_4 = \set{p, q, t \mid p^5 = q^3 = t^4 = 1, pq = qp, tpt\inv = p\inv, tqt\inv = q\inv}.\]
+            \item For $G_4 = Z_{15} \semidir_{\phi_4} Z_4$, we have $tpt\inv = p^2$ and $tqt\inv = q$. Since $q \in G_4$ is centralized, we have the factorization
+            \[G_4 \cong \gen{p, t} \times \gen q \cong F_{20} \times Z_3.\]
+            \item For $G_5 = Z_{15} \semidir_{\phi_5} Z_4$, we have $tpt\inv = p^2$ and $tqt\inv = q\inv$. Then
+            \[G_5 \cong \set{p, q, t \mid p^5 = q^3 = t^4 = 1, pq = qp, tpt\inv = p^2, tqt\inv = q\inv} = F_{20} \semidir Z_3.\]
+        \end{enumerate}
+        \item Suppose $T = \gen u \times \gen v \cong Z_2 \times Z_2$. While this may seem like a lot of cases, observe that $\beta_i^2 = \alpha_1$ for all $i = 1, 2, 3, 4$, since either $q \mapsto q\inv \mapsto q$, or $p \mapsto p^2 \mapsto p^4 = p\inv$ ($p^3$ is handled similarly). Hence, we only need to consider the homomorphisms that send $u$ and $v$ to the the images of the $\alpha_i$'s in $\aut(Z_{15})$. Moreover, we know by \hyperref[ex5.5.6]{Exercise 5.5.6} that homomorphisms from the cyclic subgroups of $T$, i.e., $\gen u, \gen v, \gen{uv}$, to $\aut(Z_{15})$ that have conjugate (same, since $\aut(Z_{15})$ is abelian) images give isomorphic semidirect products. For completeness, we will list all potential non-trivial homomorphisms, but group them by their images in $\aut(Z_{15})$:
+        \begin{itemize}
+            \item With image $\gen{\alpha_1}$, we have the three homomorphisms
+            \[\theta_1 = 
+            \begin{cases}
+                u \mapsto \alpha_1, \\
+                v \mapsto \id,
+            \end{cases} \quad
+            \theta_2 =
+            \begin{cases}
+                u \mapsto \id, \\
+                v \mapsto \alpha_1,
+            \end{cases} \quad
+            \theta_3 =
+            \begin{cases}
+                u \mapsto \alpha_1, \\
+                v \mapsto \alpha_1,
+            \end{cases}\]
+            \item With image $\gen{\alpha_2}$, we have the three homomorphisms
+            \[\rho_1 = 
+            \begin{cases}
+                u \mapsto \alpha_2, \\
+                v \mapsto \id,
+            \end{cases} \quad
+            \rho_2 =
+            \begin{cases}
+                u \mapsto \id, \\
+                v \mapsto \alpha_2,
+            \end{cases} \quad
+            \rho_3 =
+            \begin{cases}
+                u \mapsto \alpha_2, \\
+                v \mapsto \alpha_2,
+            \end{cases}\]
+            \item With image $\gen{\alpha_3}$, we have the three homomorphisms
+            \[\sigma_1 = 
+            \begin{cases}
+                u \mapsto \alpha_3, \\
+                v \mapsto \id,
+            \end{cases} \quad
+            \sigma_2 =
+            \begin{cases}
+                u \mapsto \id, \\
+                v \mapsto \alpha_3,
+            \end{cases} \quad
+            \sigma_3 =
+            \begin{cases}
+                u \mapsto \alpha_3, \\
+                v \mapsto \alpha_3,
+            \end{cases}\]
+            \item With image $V_4 = \gen{\alpha_1, \alpha_2}$ (where $\alpha_1\alpha_2 = \alpha_3$), we have the homomorphisms
+            \[\tau_1 = 
+            \begin{cases}
+                u \mapsto \alpha_1, \\
+                v \mapsto \alpha_2,
+            \end{cases} \hspace{-2pt}
+            \tau_2 =
+            \begin{cases}
+                u \mapsto \alpha_2, \\
+                v \mapsto \alpha_1,
+            \end{cases} \hspace{-2pt}
+            \tau_3 =
+            \begin{cases}
+                u \mapsto \alpha_1, \\
+                v \mapsto \alpha_3,
+            \end{cases} \hspace{-2pt}
+            \tau_4 =
+            \begin{cases}
+                u \mapsto \alpha_3, \\
+                v \mapsto \alpha_1,
+            \end{cases} \hspace{-2pt}
+            \tau_5 = 
+            \begin{cases}
+                u \mapsto \alpha_2, \\
+                v \mapsto \alpha_3,
+            \end{cases} \hspace{-2pt}
+            \tau_6 =
+            \begin{cases}
+                u \mapsto \alpha_3, \\
+                v \mapsto \alpha_2,
+            \end{cases}\]
+        \end{itemize}
+        Hence, we may consider the semidirect products corresponding to $\theta_1, \rho_1, \sigma_1$, and $\tau_1$ without loss of generality. Then we have
+        \begin{enumerate}
+            \item For $G_\theta = Z_{15} \semidir_{\theta_1} (Z_2 \times Z_2)$, we have $u$ acting on $Z_{15}$ by $\alpha_1$, and $v$ centralizing $Z_{15}$. Then we have the factorization $\gen v \times \gen{p, q, u}$. Observe that $q$ is centralized by $u$, and $p$ is inverted by $u$. Hence, we have
+            \[G_\theta \cong \gen v \times \gen q \times \gen{p, u} \cong Z_2 \times Z_3 \times D_{10} \cong Z_6 \times D_{10}.\]
+            \item For $G_\rho = Z_{15} \semidir_{\rho_1} (Z_2 \times Z_2)$, we have $u$ acting on $Z_{15}$ by $\alpha_2$, and $v$ centralizing $Z_{15}$. Then we have the factorization $\gen v \times \gen{p, q, u}$. Observe that $p$ is centralized by $u$, and $q$ is inverted by $u$. Hence, we have
+            \[G_\rho \cong \gen v \times \gen p \times \gen{q, u} \cong Z_2 \times Z_5 \times D_6 \cong Z_{10} \times D_6.\]
+            \item For $G_\sigma = Z_{15} \semidir_{\sigma_1} (Z_2 \times Z_2)$, we have $u$ acting on $Z_{15}$ by $\alpha_3$, and $v$ centralizing $Z_{15}$. Then we have the factorization $\gen v \times \gen{p, q, u}$. Observe that both $p$ and $q$ are inverted by $u$. Hence, we have
+            \[G_\sigma \cong \gen v \times \gen{p, q, u} \cong Z_2 \times D_{30}.\]
+            However, we can simplify this further by noting that $u$ inverts the element $pqv$, which has order 30. Hence, we have
+            \[G_\sigma \cong \gen{pqv, u} \cong D_{60}.\]
+            \item For $G_\tau = Z_{15} \semidir_{\tau_1} (Z_2 \times Z_2)$, we have $u$ acting on $Z_{15}$ by $\alpha_1$, and $v$ acting on $Z_{15}$ by $\alpha_2$. Then we have the factorization $\gen{p, q, u, v}$. Observe that $p$ is inverted by $u$ and centralized by $v$, while $q$ is inverted by $v$ and centralized by $u$. Hence, we have
+            \[G_\tau \cong \gen{p, u} \times \gen{q, v} \cong D_{10} \times D_6 \cong D_{10} \times S_6. \qh\]
+        \end{enumerate}
+    \end{itemize}
 \end{solalph}
 
 \begin{exercise}\label{ex5.5.15}
@@ -1430,4 +1593,45 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 
 \begin{exercise}\label{ex5.5.18}
     Show that if $H$ is any group, then there is a group $G$ that contains $H$ as a normal subgroup with the property that for every automorphism $\sigma$ of $H$, there is an element $g \in G$ such that conjugation by $g$ when restricted to $H$ is the given automorphism $\sigma$, i.e., every automorphism of $H$ is obtained as an inner automorphism of $G$ restricted to $H$.
+\end{exercise}
+
+\begin{exercise}\label{ex5.5.19}
+    Let $H$ be a group of order $n$, let $K = \aut(H)$, and form $G = \hol(H) = H \semidir K$ (where $\phi$ is the identity homomorphism). Let $G$ act by left multiplication on the left cosets of $K$ in $G$, and let $\pi$ be the associated permutation representation $\pi : G \to S_n$.
+    \begin{subproblems}
+        \item Prove that the elements of $H$ are coset representatives for the left cosets of $K$ in $G$, and with this choice of coset representatives, $\pi$ restricted to $H$ is the regular representation of $H$.
+        \item Prove $\pi(G)$ is the normalizer in $S_n$ of $\pi(H)$. Deduce that, under the regular representation of any finite group $H$ of order $n$, the normalizer in $S_n$ of the image of $H$ is isomorphic to $\hol(H)$. [Show $|G| = |N_{S_n}(\pi(H))|$ using \hyperref[ex5.5.1]{Exercise 5.5.1} and \hyperref[ex5.5.2]{Exercise 5.5.2}.]
+        \item Deduce that the normalizer of the group generated by an $n$-cycle in $S_n$ is isomorphic to $\hol(Z_n)$ and has order $n\phi(n)$.
+    \end{subproblems}
+\end{exercise}
+
+\begin{exercise}\label{ex5.5.20}
+    Let $p$ be an odd prime. Prove that if $P$ is a non-cyclic $p$ group, then $P$ contains a normal subgroup $U$ with $U \cong Z_p \times Z_p$. Deduce that, for odd primes $p$, a $p$-group that contains a unique subgroup of order $p$ is cyclic. (For $p = 2$, it is a theorem that the generalized quaternion groups $Q_{2^n}$ are the only non-cyclic 2-groups which contain a unique subgroup of order 2.) [Proceed by induction on $|P|$. Let $Z$ be a subgroup of order $p$ in $Z(P)$, and let $\bbar P = P/Z$. If $\bbar P$ is cyclic, then $P$ is abelian by \hyperref[ex3.1.36]{Exercise 3.1.36}---show that the result is true for abelian groups. When $\bbar P$ is not cyclic, use induction to produce a normal subgroup $\bbar H$ of $\bbar P$ with $\bbar H \cong Z_p \times Z_p$. Let $H$ be the complete preimage of $\bbar H$ in $P$, so $|H| = p^3$. Let $H_0 = \set{x \in H \mid x^p = 1}$, so that $H_0$ is a characteristic subgroup of $H$ of order $p^2$ or $p^3$ by \hyperref[ex5.4.9]{Exercise 5.4.9}. Show that a suitable subgroup of $H_0$ gives the desired normal subgroup $U$].
+\end{exercise}
+
+\begin{exercise}\label{ex5.5.21}
+    Let $p$ be an odd prime, and let $P$ be a $p$-group. Prove that if every subgroup of $P$ is normal, then $P$ is abelian. (Note that $Q_8$ is a non-abelian 2-group with this property, so the result is false for $p = 2$.) [Use the preceding exercises and \hyperref[ex5.4.15]{Exercise 5.4.15}.]
+\end{exercise}
+
+\begin{exercise}\label{ex5.5.22}
+    Let $F$ be a field, let $n$ be a positive integer, and let $G$ be a group of upper triangular matrices in $\gl_n(F)$ (cf. \hyperref[ex2.1.16]{Exercise 2.1.16})
+    \begin{subproblems}
+        \item Prove that $G$ is the semidirect product $U \semidir D$, where $U$ is the set of upper triangular matrices with 1's down the diagonal (cf \hyperref[ex2.1.17]{Exercise 2.1.17}), and $D$ is the set of diagonal matrices in $\gl_n(F)$.
+        \item Let $n = 2$. Recall that $U \cong F$, and $D \cong F\unt \times F\unt$ (cf \hyperref[ex3.1.11]{Exercise 3.1.11}). Describe the homomorphism from $D$ into $\aut(U)$ explicitly in terms of these isomorphisms (i.e., show how each element of $F\unt \times F\unt$ acts as an automorphism on $F$).
+    \end{subproblems}
+\end{exercise}
+
+\begin{exercise}\label{ex5.5.23}
+    Let $K$ and $L$ be groups, let $n$ be a positive integer, let $\rho : K \to S_n$ be a homomorphism and let $H$ be the direct product of $n$ copies of $L$. In \hyperref[ex5.1.8]{Exercise 5.1.8}, an injective homomorphism $\psi$ from $S_n$ into $\aut(H)$ was constructed by letting the elements of $S_n$ permute the $n$ factors of $H$. The composition $\psi \circ \rho$ is a homomorphism from $G$ into $\aut(H)$. The \emph{wreath product} of $L$ by $K$ is the semidirect product $H \semidir K$ with respect to this homomorphism and is denoted by $L \wr K$ (this wreath product depends on the choice of permutation representation $\rho$ of $K$---if none is given explicitly, $\rho$ is assumed to be the left regular representation of $K$).
+    \begin{subproblems}
+        \item Assume $K$ and $L$ are finite groups and $\rho$ is the left regular representation of $K$. Find $|L \wr K|$ in terms of $|K|$ and $|L|$.
+        \item Let $p$ be a prime, let $K = L = Z_p$ and let $\rho$ be the left regular representation of $K$. Prove that $Z_p \wr Z_p$ is a non-abelian group of order $p^{p+1}$ and is isomorphic to a Sylow $p$-subgroup of $S_{p^2}$. [The $p$ copies of $Z_p$ whose direct product makes up $H$ may be represented by $p$ disjoint $p$-cycles; these are cyclically permuted by $K$.]
+    \end{subproblems}
+\end{exercise}
+
+\begin{exercise}\label{ex5.5.24}
+    Let $n$ be an integer $> 1$. Prove the following classification: every group of order $n$ is abelian if and only if $n = p_1^{\alpha_1} p_2^{\alpha_2} \cdots p_r^{\alpha_r}$, where $p_1, \ldots, p_r$ are distinct primes, $\alpha_i = 1$ or $2$ for all $i \in \{1, \ldots, r\}$ and $p_i$ does not divide $p_j^{\alpha_j} - 1$ for all $i$ and $j$. [See \hyperref[ex4.5.56]{Exercise 4.5.56}.]
+\end{exercise}
+
+\begin{exercise}\label{ex5.5.25}
+    Let $H(\f_p)$ be the Heisenberg group over the finite field $\f_p = \z/p\z$ (cf. \hyperref[ex5.4.20]{Exercise 5.4.20}). Prove that $H(\f_2) \cong D_8$, and that $H(\f_p)$ has exponent $p$ and is isomorphic to the first non-abelian group in Example 7.
 \end{exercise}
