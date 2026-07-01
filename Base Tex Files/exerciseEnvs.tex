@@ -47,14 +47,14 @@
 \renewcommand{\subsectionautorefname}{Section}
 
 \newlist{subproblems}{enumerate}{3}
-\setlist[subproblems, 1]{label = (\alph*), nosep, align=left}
-\setlist[subproblems, 2]{label = (\alph*), topsep = 3pt, itemsep = 2pt, align=left}
-\setlist[subproblems, 3]{label = (\alph*), topsep = 3pt, itemsep = 2pt, align=left}
+\setlist[subproblems, 1]{label = (\alph*), labelsep = 0pt, nosep, align=left}
 
 \newlist{ifandonlyif}{itemize}{1}
 \setlist[ifandonlyif, 1]{label = *, labelindent=0.55cm, labelsep=2pt}
 
 \setlist[enumerate, 1]{label = (\arabic*), nosep, align=left}
+
+\setlist[itemize, 1]{labelsep = 4pt}
 
 \newenvironment{sol}{%
 \begin{proof}[{\textbf{Solution}}]\setlength{\parindent}{0.5cm}%
@@ -69,38 +69,3 @@
 \begin{proof}[{\textbf{Solution}}]%
 \leavevmode\begin{ifandonlyif}%
 \setlength{\parindent}{0.5cm}}{\qedhere\end{ifandonlyif}\end{proof}}
-
-\newenvironment{defi}[1][]{\noindent%
-\refstepcounter{definition}%
-\textcolor{red}{\textbf{Definition~\thedefinition~$\blacktriangleright$~{#1}}}
-
-}
-{\vskip 0.20cm}
-
-\newenvironment{theo}[1][]{\noindent%
-\refstepcounter{corollary}\refstepcounter{proposition}\refstepcounter{theorem}%
-\textcolor{orange}{\textbf{Theorem~\thetheorem~$\blacktriangleright$~{#1}}}
-
-}{}
-
-\newenvironment{prop}[1][]{\noindent%
-\refstepcounter{theorem}\refstepcounter{corollary}\refstepcounter{proposition}%
-\textcolor{cyan}{\textbf{Proposition~\theproposition~$\blacktriangleright$~{#1}}}
-
-}{}
-
-\newenvironment{cor}[1][]{\noindent%
-\refstepcounter{theorem}\refstepcounter{proposition}\refstepcounter{corollary}%
-\textcolor{Lavender}{\textbf{Corollary~\thecorollary~$\blacktriangleright$~{#1}}}
-
-}{}
-
-\newenvironment{ex}[1][]{\noindent%
-\textcolor{Emerald}{\textbf{Example~$\blacktriangleright$~{#1}}}
-
-}{\vskip 0.20cm}
-
-\newenvironment{note}[1][]{\noindent%
-\textcolor{CadetBlue}{\textbf{Note~$\blacktriangleright$~{#1}}}
-
-}{\vskip 0.20cm}
