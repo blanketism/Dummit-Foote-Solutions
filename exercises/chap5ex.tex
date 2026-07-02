@@ -1661,6 +1661,34 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     Show that for any $n \geq 3$, there are exactly 4 distinct homomorphisms from $Z_2$ into $\aut(Z_{2^n})$. Prove that the resulting semidirect groups give 4 non-isomorphic groups of order $2^{n + 1}$. [Recall \hyperref[ex2.3.21]{Exercise 2.3.21} through \hyperref[ex2.3.23]{Exercise 2.3.23}.] (These four groups together with the cyclic group and the generalized quaternion group $Q_{2^{n + 1}}$ are all the groups of order $2^{n + 1}$ which possess a cyclic subgroup of index 2.)
 \end{exercise}
 
+\begin{sol}
+    Let $Z_{2^n} = \gen a$ and $Z_2 = \gen b$. Recall that $\aut(Z_{2^n}) \cong Z_2 \times Z_{2^{n - 2}}$ for $n \geq 3$. Then the elements of order dividing 2 in $\aut(Z_{2^n})$ are the elements in $\set{0, x} \times {0, y^{2^{n - 2}}}$, where $x$ is the generator of $Z_2$ and $y$ is the generator of $Z_{2^{n - 2}}$. Let $(0, 0)$ represent the identity automorphism, $(x, 0)$ represent the inversion map, $(0, y^{2^{n - 2}})$ represent the automorphism $a \mapsto a^{2^{n - 1} + 1}$, and $(x, y^{2^{n - 2}})$ represent the automorphism $a \mapsto a^{2^{n - 1} - 1}$. Then the four distinct homomorphisms from $Z_2$ into $\aut(Z_{2^n})$ are given by
+    \[\phi_1 : b \mapsto (0, 0), \quad \phi_2 : b \mapsto (x, 0), \quad \phi_3 : b \mapsto (0, y^{2^{n - 2}}), \quad \phi_4 : b \mapsto (x, y^{2^{n - 2}}).\]
+    Then the resulting semidirect products are:
+    \begin{itemize}
+        \item $G_1 \cong Z_{2^n} \semidir_{\phi_1} Z_2 \cong Z_{2^n} \times Z_2$, since $\phi_1$ is the trivial homomorphism.
+        \item $G_2 \cong Z_{2^n} \semidir_{\phi_2} Z_2$ has the inversion map $bab\inv = a\inv$, hence $G_2 \cong D_{2^{n + 1}}$.
+        \item $G_3 \cong Z_{2^n} \semidir_{\phi_3} Z_2$ has the automorphism $bab\inv = a^{2^{n - 1} + 1}$, hence we have the presentation
+        \[G_3 \cong \gen{a, b \mid a^{2^n} = b^2 = 1, bab\inv = a^{2^{n - 1} + 1}}.\]
+        \item $G_4 \cong Z_{2^n} \semidir_{\phi_4} Z_2$ has the automorphism $bab\inv = a^{2^{n - 1} - 1}$, hence we have the presentation
+        \[G_4 \cong \gen{a, b \mid a^{2^n} = b^2 = 1, bab\inv = a^{2^{n - 1} - 1}}.\]
+    \end{itemize}
+    Since $G_1$ is abelian, it is not isomorphic to the other three groups. To see that the other groups are not pairwise isomorphic, we begin by analyzing the centers of each group.
+
+    We first claim that elements of the form $a^ib$ are not in the center of $G_2, G_3$, or $G_4$. To see this, observe that $a^ib$ commutes with $a$ in particular, hence $a^{i + 1}b = a^iba$ implies that $ab = ba$, or $bab\inv = a$ (where $b = b\inv$ since it has order 2). However, this only occurs in $G_1$, hence $a^ib \notin Z(G_2), Z(G_3), Z(G_4)$. We can conclude that $Z(G_2), Z(G_3), Z(G_4) \subseteq \gen a$. Note that for $a^i$ to commute with $b$, then $ba^ib\inv = a^i$, or that $a^{ri} = a^i$, where $r = -1, 2^{n - 1} + 1, 2^{n - 1} - 1$ for $G_2, G_3, G_4$, respectively. Equating exponents, it must be that $i(r - 1) \equiv 0 \bmod 2^n$. We analyze each group:
+    \begin{itemize}
+        \item For $G_2$, we have $r - 1 = -2$, hence $i \equiv 0 \bmod 2^{n - 1}$. Then $Z(G_2) = \gen{a^{2^{n - 1}}} \cong Z_2$. (Alternatively, we know that $D_{2^{n + 1}} = D_{2k}$ for some even $k$, and $Z(D_{2k}) = \gen{r^k} \cong Z_2$.)
+        \item For $G_3$, we have $r - 1 = 2^{n - 1}$, hence $i \equiv 0 \bmod 2$. Then $Z(G_3) = \gen{a^2} \cong Z_{2^{n - 1}}$.
+        \item For $G_4$, we have $r - 1 = 2^{n - 1} - 2$, hence $2i(2^{n - 2} - 1) \equiv 0 \bmod 2^n$. Since $2^{n - 2} - 1$ is odd, then $i \equiv 0 \bmod 2^{n - 1}$. Then $Z(G_4) = \gen{a^{2^{n - 1}}} \cong Z_2$.
+    \end{itemize}
+    We see that $Z(G_2) \cong Z(G_4)$, but $Z(G_3)$ is not isomorphic to either of them. Hence, $G_3$ is not isomorphic to $G_2$ or $G_4$. To see that $G_2$ and $G_4$ are not isomorphic, we analyze the elements of order 2 in each group. In particular, consider the elements of the form $a^ib$. Then $(a^ib)^2 = a^iba^ib = a^iba^ib\inv = a^{i + ri} = a^{i(r + 1)}$, where $r$ is as above. We analyze each group:
+    \begin{itemize}
+        \item For $G_2$, we have $r + 1 = 0$, hence $(a^ib)^2 = a^0 = 1$. Then all elements of the form $a^ib$ have order 2, and there are $2^n$ such elements.
+        \item For $G_4$, we have $r + 1 = 2^{n - 1}$, hence $(a^ib)^2 = a^{i2^{n - 1}}$. Then $(a^ib)^2 = 1$ if and only if $i \equiv 0 \bmod 2$, hence there are $2^{n - 1}$ such elements.
+    \end{itemize}
+    Since $G_2$ and $G_4$ have different numbers of elements of order 2, they are not isomorphic. Hence, we have shown that the four groups are pairwise non-isomorphic.
+\end{sol}
+
 \begin{specialexercise}\label{ex5.5.18}
     Show that if $H$ is any group, then there is a group $G$ that contains $H$ as a normal subgroup with the property that for every automorphism $\sigma$ of $H$, there is an element $g \in G$ such that conjugation by $g$ when restricted to $H$ is the given automorphism $\sigma$, i.e., every automorphism of $H$ is obtained as an inner automorphism of $G$ restricted to $H$.
 \end{specialexercise}
@@ -1680,13 +1708,45 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     \end{subproblems}
 \end{exercise}
 
+\begin{solalph}
+    \item Recall that elements of $G$ are of the form $(h, \alpha)$, where $h \in H$ and $\alpha \in K$. Then the left cosets of $K$ in $G$ are of the form $(h, \alpha)K = (h, 1)(1, \alpha)K = (h, 1)K$. Hence, the elements of $H$ are coset representatives for the left cosets of $K$ in $G$. Let $\pi : G \to S_n$ be the associated permutation representation. Then for any $h_1, h_2 \in H$, we have
+    \[\pi(h_1)(h_2K) = (h_1, 1)(h_2K) = (h_1h_2, 1)K = (h_1h_2)K.\]
+    Hence, $\pi$ restricted to $H$ is the regular representation of $H$.
+    \item Let $N = N_{S_n}(\pi(H))$. To see that $\pi$ is injective, let $(h, \alpha) \in \ker\pi$. Then for any $h' \in H$, we have
+    \[(h, \alpha)(h'K) = (h, 1)(1, \alpha)(h'K) = (h, 1)(\alpha(h')K) = (h\alpha(h'), 1)K = h\alpha(h')K.\]
+    Now let $h\alpha(h') = h'$ for all $h' \in H$. Then in particular, $h' = 1$ gives $h = 1$. Then we have $\alpha(h') = h'$ for all $h' \in H$, hence $\alpha = 1$. Therefore, $(h, \alpha) = (1, 1)$, and $\pi$ is injective.
+
+    To see that $\pi(G) \leq N$, note that $H \nsub G$. Hence, $ghg\inv \in H$ for any $g \in G$ and $h \in H$. Consequently, $\pi(ghg\inv) \in \pi(H)$, hence $\pi(g)\pi(h)\pi(g)\inv \in \pi(H)$, and $\pi(G) \leq N$. Now let $\kappa$ be the coset $K$ in $G$. Let $N_\kappa$ denote the stabilizer of $\kappa$ in $N$. Observe, by definition, that $\pi(H) \nsub N$. From part (a), we know that $\pi(H)$ acts transitively on the left cosets of $K$ in $G$, so $N = \pi(H) \cdot N_\kappa$. Moreover, $\pi(H)$ stabilizes no coset, hence $N_\kappa \cap \pi(H) = 1$. Then $N = \pi(H) \semidir N_\kappa$, and $|N| = n|N_\kappa|$.
+
+    Observe that conjugation by elements of $N_\kappa$ on $\pi(H)$ gives automorphisms of $\pi(H)$. Hence, we have a homomorphism $\psi : N_\kappa \to \aut(\pi(H))$. To see that $\psi$ is injective, let $g \in \ker\psi$. Then $ghg\inv = h$ for all $h \in H$, hence $g$ centralizes $\pi(H)$. Moreover, $g$ stabilizes $\kappa$, hence $g \in \pi(H)$. Then
+    \[g(hK) = g(\pi(h)(\kappa)) = \pi(h)(g(\kappa)) = \pi(h)(\kappa) = hK.\]
+    Hence, $g = 1$, and $\psi$ is injective. Then we have
+    \[|N_\kappa| \leq |\aut(\pi(H))| = |\aut(H)|.\]
+    Hence, $|N| = n|N_\kappa| \leq n|\aut(H)| = |G|$. Since $\pi$ is injective, then $|G| = |\pi(G)| \leq |N|$. Hence, $|N| = |G|$, and $\pi(G) = N$.
+    \item Let $\sigma \in S_n$ be an $n$-cycle. Then $\gen\sigma \cong Z_n$ acts transitively on the set $\set{1, 2, \ldots, n}$, hence the associated permutation representation is the regular representation of $Z_n$. Since any subgroup of $S_n$ isomorphic to $Z_n$ are conjugate in $S_n$, then the normalizer of any subgroup generated by an $n$-cycle is isomorphic to the normalizer of $\gen\sigma$. By part (b), we have
+    \[N_{S_n}(\gen\sigma) \cong N_{S_n}(\pi(Z_n)) \cong \hol(Z_n).\]
+    Since $\aut(Z_n) \cong \units[n]$, then $|N_{S_n}(\gen\sigma)| = |\hol(Z_n)| = n\phi(n)$.
+\end{solalph}
+
 \begin{exercise}\label{ex5.5.20}
     Let $p$ be an odd prime. Prove that if $P$ is a non-cyclic $p$ group, then $P$ contains a normal subgroup $U$ with $U \cong Z_p \times Z_p$. Deduce that, for odd primes $p$, a $p$-group that contains a unique subgroup of order $p$ is cyclic. (For $p = 2$, it is a theorem that the generalized quaternion groups $Q_{2^n}$ are the only non-cyclic 2-groups which contain a unique subgroup of order 2.) [Proceed by induction on $|P|$. Let $Z$ be a subgroup of order $p$ in $Z(P)$, and let $\bbar P = P/Z$. If $\bbar P$ is cyclic, then $P$ is abelian by \hyperref[ex3.1.36]{Exercise 3.1.36}---show that the result is true for abelian groups. When $\bbar P$ is not cyclic, use induction to produce a normal subgroup $\bbar H$ of $\bbar P$ with $\bbar H \cong Z_p \times Z_p$. Let $H$ be the complete preimage of $\bbar H$ in $P$, so $|H| = p^3$. Let $H_0 = \set{x \in H \mid x^p = 1}$, so that $H_0$ is a characteristic subgroup of $H$ of order $p^2$ or $p^3$ by \hyperref[ex5.4.9]{Exercise 5.4.9}. Show that a suitable subgroup of $H_0$ gives the desired normal subgroup $U$].
 \end{exercise}
 
+\begin{sol}
+    The base case of $n = 2$ is clear, since $P \cong Z_p \times Z_p$ is a non-cyclic $p$-group of order $p^2$. Let $|P| = p^n$ for some $n > 2$, and assume the result is true for all non-cyclic $p$-groups of order less than $p^n$. Let $Z \leq Z(P)$ be a subgroup of order $p$, and let $\bbar P = P/Z$. If $\bbar P$ is cyclic, then by \hyperref[ex3.1.36]{Exercise 3.1.36}, we have that $P$ is abelian, hence $P$ has at least 2 invariant factors. Then the subgroup generated by the elements of order $p$ in $P$ is a normal subgroup of order $p^2$, which is isomorphic to $Z_p \times Z_p$. If $\bbar P$ is not cyclic, then by induction, there exists a normal subgroup $\bbar H \leq \bbar P$ with $\bbar H \cong Z_p \times Z_p$. Let $H$ be the complete preimage of $\bbar H$ in $P$, so that $|H| = p^3$. Let
+    \[H_0 = \set{x \in H \mid x^p = 1}.\]
+    Then $H_0$ is a characteristic subgroup of $H$ of order $p^2$ or $p^3$ by \hyperref[ex5.4.9]{Exercise 5.4.9}. If $|H_0| = p^2$, then $H_0$ is characteristic in $H$ where $H \nsub P$, so $H_0 \nsub P$, and $H_0 \cong Z_p \times Z_p$, and we can take $U = H_0$. If $|H_0| = p^3$, let $P$ act on $H$ by conjugation. Since $Z \leq Z(P)$, then we may have $P$ act on $\bbar H$ by conjugation. We use the class equation, but we instead consider the action of $P$ on $\bbar H$ by conjugation. Since $|\bbar H| = p^2$, then the class equation gives
+    \[|\bbar H| = |C_{\bbar H}(P)| + \sum_{i = 1}^k |P : C_P(\dbar x[i])|,\]
+    where $\dbar x[1], \ldots, \dbar x[k]$ are representatives of the non-singleton orbits of the $P$-conjugation on $\bbar H$. Note that $|P : C_P(\dbar x[i])|$ is a power of $p$, hence $|C_{\bbar H}(P)| \equiv |\bbar H| \equiv 0 \bmod p$. Since $\bbar 1 \in C_{\bbar H}(P)$, then $|C_{\bbar H}(P)| \geq p$. Then there exists some $\bbar h \in C_{\bbar H}(P)$ with $\bbar h \neq \bbar 1$. Let $h \in H$ be the preimage of $\bbar h$ in $H$. Then $h \notin Z$, and $h^p \in Z$. Let $U = \gen{h, Z}$. Then $|U| = p^2$. Since $Z \nsub P$ is clear, we observe that for any $g \in P$, then $ghg\inv \in \bbar h \subseteq U$, hence $U \nsub P$. Moreover, $h^p = 1$, since $H_0 = H$, and $|h| = p$ with $h \not\in Z$, hence $\gen h \cap Z = 1$. Lastly, $Z \leq Z(P)$ implies that $h$ commutes with all of $Z$. Then $U \cong Z_p \times Z_p$, and we are done.
+\end{sol}
+
 \begin{exercise}\label{ex5.5.21}
     Let $p$ be an odd prime, and let $P$ be a $p$-group. Prove that if every subgroup of $P$ is normal, then $P$ is abelian. (Note that $Q_8$ is a non-abelian 2-group with this property, so the result is false for $p = 2$.) [Use the preceding exercises and \hyperref[ex5.4.15]{Exercise 5.4.15}.]
 \end{exercise}
+
+\begin{sol}
+
+\end{sol}
 
 \begin{exercise}\label{ex5.5.22}
     Let $F$ be a field, let $n$ be a positive integer, and let $G$ be a group of upper triangular matrices in $\gl_n(F)$ (cf. \hyperref[ex2.1.16]{Exercise 2.1.16})
