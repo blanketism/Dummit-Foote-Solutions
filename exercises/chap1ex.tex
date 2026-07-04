@@ -5,54 +5,36 @@
 Let $G$ be a group.
 
 \begin{exercise}\label{ex1.1.1}
-    Determine which of the following binary operations are associative:
+    Determine which of the following binary operations are associative.
     \begin{subproblems}
-        \item the operation $\star$ on $\z$ defined by $a \star b = a - b$
-        \item the operation $\star$ on $\r$ defined by $a \star b = a + b + ab$
-        \item the operation $\star$ on $\q$ defined by $a \star b = \dfrac{a + b}{5}$
-        \item the operation $\star$ on $\z \times \z$ defined by 
-        \[
-        (a,b) \star (c,d) = (ad + bc, \, bd)
-        \]
-        \item the operation $\star$ on $\q - \{0\}$ defined by $a \star b = \dfrac{a}{b}$
+        \item The operation $\star$ on $\z$ defined by $a \star b = a - b$.
+        \item The operation $\star$ on $\r$ defined by $a \star b = a + b + ab$.
+        \item The operation $\star$ on $\q$ defined by
+        \[a \star b = \dfrac{a + b}{5}.\]
+        \item The operation $\star$ on $\z \times \z$ defined by $(a,b) \star (c,d) = (ad + bc, \, bd)$.
+        \item The operation $\star$ on $\q - \{0\}$ defined by
+        \[a \star b = \dfrac{a}{b}.\]
     \end{subproblems}
 \end{exercise}
 
 \begin{solalph}
     \item Not associative: $(1 \star 0) \star 1 = 0 \neq 2 = 1 \star (0 \star 1)$.
-    \item Associative:
-    \begin{align*}
-        (a \star b) \star c & = (a + b + ab) \star c \\
-        & = (a + b + ab) + c + (a + b + ab)c \\
-        & = a + b + ab + c + ac + bc + abc \\
-        & = a + b + c + bc + ab + ac + abc \\
-        & = a + (b + c + bc) + a(b + c + bc) \\
-        & = a \star (b + c + bc) \\
-        & = a \star (b \star c)
-    \end{align*}
+    \item Associative: $(a \star b) \star c = (a + b + ab) \star c = a + b + ab + c + ac + bc + abc = a \star (b \star c)$.
     \item Not associative: $(1 \star 0) \star 2 = 11/25 \neq 7/25 = 1 \star (0 \star 2)$.
-    \item Associative:
-    \begin{align*}
-        [(a, b) \star (c, d)] \star (e, f) & = (ad + bc, bd) \star (e, f) \\
-        & = ((ad + bc)f + bde, bdf) \\
-        & = (adf + bcf + bde, bdf) \\
-        & = (adf + b(cf + de), bdf) \\
-        & = (a, b) \star (cf + de, df) \\
-        & = (a, b) \star [(c, d) \star (e, f)]
-    \end{align*}
+    \item Associative: $((a,b) \star (c,d)) \star (e,f) = (ad + bc, bd) \star (e,f) = ((ad + bc)f + bde, bdf) = (adf + bcf + bde, bdf) = (a,b) \star ((c,d) \star (e,f))$.
     \item Not associative: $(1 \star 2) \star 3 = 1/6 \neq 3/2 = 1 \star (2 \star 3)$.
 \end{solalph}
-
-\newpage
 
 \begin{exercise}\label{ex1.1.2}
     Decide which of the binary operations in the preceding exercise are commutative.
     \begin{subproblems}
-        \item the operation $\star$ on $\z$ defined by $a \star b = a - b$
-        \item the operation $\star$ on $\r$ defined by $a \star b = a + b + ab$
-        \item the operation $\star$ on $\q$ defined by $a \star b = \dfrac{a + b}{5}$
-        \item the operation $\star$ on $\z \times \z$ defined by $(a,b) \star (c,d) = (ad + bc, \, bd)$
-        \item the operation $\star$ on $\q - \{0\}$ defined by $a \star b = \dfrac{a}{b}$
+        \item The operation $\star$ on $\z$ defined by $a \star b = a - b$.
+        \item The operation $\star$ on $\r$ defined by $a \star b = a + b + ab$.
+        \item The operation $\star$ on $\q$ defined by
+        \[a \star b = \dfrac{a + b}{5}.\]
+        \item The operation $\star$ on $\z \times \z$ defined by $(a,b) \star (c,d) = (ad + bc, \, bd)$.
+        \item The operation $\star$ on $\q - \{0\}$ defined by
+        \[a \star b = \dfrac{a}{b}.\]
     \end{subproblems}
 \end{exercise}
 
@@ -65,26 +47,20 @@ Let $G$ be a group.
 \end{solalph}
 
 \begin{exercise}\label{ex1.1.3}
-    Prove that addition of residue classes in $\intmod$ is associative (you may assume it is well defined).
+    Prove that addition of residue classes in $\intmod$ is associative (you may assume it is well-defined).
 \end{exercise}
 
 \begin{sol}
-    Let $\bar a, \bar b, \bar c \in \intmod$. Then
-    \begin{align*}
-        (\bar a + \bar b) + \bar c & = \bar{a + b} + \bar c \\
-        & = \bar{(a + b) + c} \\
-        & = \bar{a + (b + c)} \\
-        & = \bar a + \bar{b + c} \\
-        & = \bar a + (\bar b + \bar c) \qh
-    \end{align*}
+    Let $\bar a, \bar b, \bar c \in \intmod$. By associativity of addition in $\z$, we have:
+    \[(\bar a + \bar b) + \bar c = \bar{(a + b) + c} = \bar{a + (b + c)} = \bar a + (\bar b + \bar c).\qh\]
 \end{sol}
 
 \begin{exercise}\label{ex1.1.4}
-    Prove that multiplication of residue classes in $\intmod$ is associative (you may assume it is well defined).
+    Prove that multiplication of residue classes in $\intmod$ is associative (you may assume it is well-defined).
 \end{exercise}
 
 \begin{sol}
-    Since $\cdot$ is associative over $\z$, we may use the same argument as in the previous exercise.
+    Use the same argument as in the previous exercise, replacing $+$ with $\cdot$.
 \end{sol}
 
 \begin{exercise}\label{ex1.1.5}
@@ -92,10 +68,8 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-    Note that $\bar 0 \in \intmod$, but there is no $\bar a$ such that $\bar 0 \cdot \bar a = \bar 1$. Hence, $\intmod$ does not have an identity under multiplication, so it is not a group.
+    Since $0 \cdot a = 0$ for all $a \in \z$, so $\bar a \cdot \bar 0 = \bar 0$.
 \end{sol}
-
-\newpage
 
 \begin{exercise}\label{ex1.1.6}
     Determine which of the following sets are groups under addition:
@@ -112,95 +86,84 @@ Let $G$ be a group.
 \begin{sol}
     Let $S$ denote the set in each part.
     \begin{subproblems}
-        \item Clearly, $0 \in S$. Moreover, for any $s \in S$, then $-s \in S$. Since $\q$ is associative under addition, then so is $S$. To show closure, let $a/b, c/d \in S$, where $b$ and $d$ are odd, and $(a, b) = (c, d) = 1$. Then
+        \item Let $a/b \in S$. Since $a/b + 0 = a/b$, and $0 = 0/1$, then $0 \in S$. Also, $a/b - a/b = 0$, so $-a/b \in S$. Moreover, $S$ inherits associativity from $\q$. Finally, let $c/d \in S$ such that $(a, b) = (c, d) = 1$. Then
         \[\frac ab + \frac cd = \frac{ad + bc}{bd}\]
-        where $bd$ is odd. Note that a number is even when at least one of its factors is even. It follows that any common factor of $ad + bc$ and $bd$ must also be odd, hence the fraction in its lowest terms will still have an odd denominator. Thus, $S$ is closed under addition and is a group.
-        \item $S$ is not a group, since $1/2 \in S$, but $1/2 + 1/2 = 2/2 = 1/1 \not\in S$.
-        \item Same as previous.
-        \item $S$ is not a group, since $3/2, 1 \in S$, but $3/2-1 = 1/2 \not\in S$.
-        \item Since $0 = 0/1$, then $0 \in S$. Moreover, for any $s \in S$, then $-s \in S$. Since $\q$ is associative under addition, then so is $S$. To show closure, we first note that $s \in S$ has the form
-        \[s = a \quad \text{or} \quad s = a + \frac 12\]
-        for some $a \in \z$. If any two $s_1, s_2 \in S$ have the same form, then $s_1 + s_2 \in S$. Otherwise, suppose without loss of generality that $s_1$ has the first form and $s_2$ has the second form. Then
-        \[s_1 + s_2 = a + \left(b + \frac 12\right) = (a + b) + \frac 12 \in S\]
-        so that $S$ is closed under addition and is a group.
-        \item $S$ is not a group, since $1/2, 1/3 \in S$, but $1/2 + 1/3 = 5/6 \not\in S$. \qh
+        where $bd$ is odd. Recall that an even number must have a factor of $2$. Since $bd$ is odd, then it cannot have a factor of 2. Hence, if reducing to the lowest terms is needed, the denominator is still odd, hence $S$ is closed.
+        \item No; $1/2 \in S$, but $1/2 + 1/2 = 2/2 = 1/1 \not\in S$.
+        \item Same as (c).
+        \item No; $3/2, 1 \in S$, but $3/2 - 1 = 1/2 \not\in S$.
+        \item Identity, inverses, and associativity are satisfied. Let $a, b \in \z$. Then
+        \[\frac a1 + \frac b1 = \frac{a + b}1, \quad \frac a2 + \frac b2 = \frac{a + b}2, \quad \frac a1 + \frac b2 = \frac{2a + b}2,\]
+        where the last case is chosen without loss of generality. Hence, $S$ is closed.
+        \item No; $1/3, 1/2 \in S$, but $1/3 + 1/2 = 5/6 \not\in S$. \qh
     \end{subproblems}
 \end{sol}
 
-\newpage
+\begin{specialexercise}[Real Numbers Mod $1$]\label{ex1.1.7}
+    Let $G = \{ x \in \r \mid 0 \le x < 1 \}$ and for $x, y \in G$ let $x \star y$ be the fractional part of $x + y$ (i.e., $x \star y = x + y - [x + y]$ where $[a]$ is the greatest integer less than or equal to $a$). Prove that $\star$ is a well-defined binary operation on $G$ and that $G$ is an Abelian group under $\star$.
+\end{specialexercise}
 
-\begin{exercise}\label{ex1.1.7}
-    Let $G = \{ x \in \r \mid 0 \le x < 1 \}$ and for $x, y \in G$ let $x \star y$ be the fractional part of $x + y$ (i.e., $x \star y = x + y - [x + y]$ where $[a]$ is the greatest integer less than or equal to $a$). Prove that $\star$ is a well defined binary operation on $G$ and that $G$ is an abelian group under $\star$ (called the \textit{real numbers mod $I$}).
-\end{exercise}
-
-\begin{sol}
-    Suppose $x, y \in G$. To show closure, there are two cases:
-    \begin{itemize}
-        \item Suppose $0 \leq x + y < 1$. Then $[x + y] = 0$ so that $x \star y = x + y - 0 = x + y \in G$.
-        \item Suppose $1 \leq x + y < 2$. Then $[x + y] = 1$ so that $x \star y = x + y - 1 \in G$.
-    \end{itemize}
-    To show associativity, let $x, y, z \in G$. Recall that $[a \pm b] = [a] \pm b$ for all $a \in \r$ and $b \in \z$. Then
+\begin{solitem}
+    \item Let $x, y \in G$. Then $0 \leq x + y < 2$. If $x + y < 1$, then $[x + y] = 0$ and $x \star y = x + y - 0 = x + y \in G$. If $1 \leq x + y < 2$, then $[x + y] = 1$ and $x \star y = x + y - 1 \in G$. Hence, $G$ is closed under $\star$.
+    \item Let $x \in G$. Then $x \star 0 = x + 0 - [x + 0] = x - [x] = x$ since $[x] = 0$. Hence, $0$ is the identity of $G$ under $\star$.
+    \item Let $x \in G$. Then $x \star (1 - x) = x + (1 - x) - [x + (1 - x)] = 1 - [1] = 0$ since $[1] = 1$. Hence, $1 - x$ is the inverse of $x$ under $\star$.
+    \item Let $x, y, z \in G$. Then
     \begin{align*}
         (x \star y) \star z & = (x + y - [x + y]) \star z \\
-        & = (x + y - [x + y]) + z - [(x + y - [x + y]) + z] \\
-        & = x + y + z - [x + y] - [x + y + z - [x + y]] \\
-        & = x + y + z - [x + y] - [x + y + z] + [x + y] \\
-        & = x + y + z - [x + y + z] \\
-        & = x + y + z - [y + z] - [x + y + z] + [y + z] \\
-        & = x + y + z - [y + z] - [x + y + z - [y + z]] \\
-        & = x + (y + z - [y + z]) - [x + (y + z - [y + z])] \\
-        & = x \star (y + z - [y + z]) \\
-        & = x \star (y \star z)
+        & = (x + y + z) - [x + y] - [x + y + z] + [x + y] \\
+        & = (x + y + z) - [x + y + z] \\
+        & = (x + y + z) - [y + z] - [x + y + z] + [y + z] \\
+        & = x \star (y + z - [y + z]) = x \star (y \star z).
     \end{align*}
-    Moreover, $0 \in G$ is the identity since for any $x \in G$, then $x \star 0 = x + 0 - [x + 0] = x$. Additionally, for any $x \in G$, its inverse is $1 - x$ if $x \neq 0$ and $0$ if $x = 0$, since
-    \[x \star (1 - x) = x + (1 - x) - [x + (1 - x)] = 1 - 1 = 0\]
-    Finally, $\star$ is commutative since $x \star y = x + y - [x + y] = y + x - [y + x] = y \star x$. Hence, $G$ is abelian under $\star$.
-\end{sol}
+    \item Let $x, y \in G$. Then $x \star y = x + y - [x + y] = y + x - [y + x] = y \star x$. Hence, $G$ is Abelian under $\star$.
+\end{solitem}
 
 \begin{exercise}\label{ex1.1.8}
     Let $G = \{z \in \c \mid z^n = 1 \text{ for some } n \in \zp \}$.
     \begin{subproblems}
-        \item Prove that $G$ is a group under multiplication (called the group of roots of unity in $\c$).
+        \item Prove that $G$ is a group under multiplication (called the \textbf{group of roots of unity in} $\c$).
         \item Prove that $G$ is not a group under addition.
     \end{subproblems}
 \end{exercise}
 
 \begin{solalph}
-    \item Since $1^1 = 1$, then $1 \in G$. Moreover, for any $z \in G$ such that $z^n = 1$, then its inverse $z\inv$ satisfies $(z\inv)^n = (z^n)\inv = 1\inv = 1$ so that $z\inv \in G$. Since multiplication in $\c$ is associative, then so is $G$. Finally, let $z, w \in G$ such that $z^n = 1$ and $w^m = 1$ for some $n, m \in \zp$. Then
-    \[(zw)^{nm} = z^{nm} w^{nm} = (z^n)^m (w^m)^n = 1 \cdot 1 = 1\]
+    \item Since $1^1 = 1$, then $1 \in G$. If $z \in G$ for some $n$, then $(z\inv)^n = (z^n)\inv = 1\inv = 1$, so that $z\inv \in G$. Associativity from $\c$ is inherited by $G$. Finally, let $z, w \in G$ such that $z^n = w^m = 1$ for $n, m \in \zp$. Then
+    \[(zw)^{nm} = z^{nm} w^{nm} = (z^n)^m (w^m)^n = 1 \cdot 1 = 1,\]
     so that $zw \in G$. Hence, $G$ is a group under multiplication.
-    \item Not a group, since $1 \in G$ and $-1 \in G$, but $1 + (-1) = 0 \not\in G$ since $0^n \neq 1$ for all $n \in \zp$.
+    \item No; note $1, -1 \in G$, but $1 + (-1) = 0 \not\in G$ since $0^n = 0 \neq 1$ for any $n \in \zp$.
 \end{solalph}
 
-\newpage
-
-\begin{specialexercise}\label{ex1.1.9}
+\begin{specialexercise}[The Quadratic Field $\smash{\q(\sqrt{2})}$]\label{ex1.1.9}
     Let $G = \{ a + b\sqrt{2} \in \r \mid a, b \in \q \}$.
     \begin{subproblems}
         \item Prove that $G$ is a group under addition.
-        \item Prove that the nonzero elements of $G$ are a group under multiplication. [``Rationalize the denominators'' to find multiplicative inverses.]
+        \item Prove that the nonzero elements of $G$ are a group under multiplication.
+        
+        \hint{``Rationalize the denominators'' to find multiplicative inverses.}
     \end{subproblems}
 \end{specialexercise}
 
 \begin{solalph}
-    \item Since $0 + 0 \sqrt 2 \in G$, then $G$ has an identity. Moreover, for any $a + b\sqrt 2 \in G$, its inverse is $-a - b\sqrt 2 \in G$. Since addition in $\r$ is associative, then so is $G$. Finally, let $a + b\sqrt 2, c + d\sqrt 2 \in G$ for some $a, b, c, d \in \q$. Then
-    \[(a + b\sqrt 2) + (c + d\sqrt 2) = (a + c) + (b + d)\sqrt 2 \in G\]
-    since $a + c, b + d \in \q$. Hence, $G$ is a group under addition.
-    \item Since $1 + 0\sqrt 2 \in G$, then $G$ has an identity. Moreover, for any nonzero $a + b\sqrt 2 \in G$, its inverse is
-    \[(a + b\sqrt 2)\inv = \frac{1}{a + b\sqrt 2} = \frac{1}{a + b\sqrt 2} \cdot \frac{a - b\sqrt 2}{a - b\sqrt 2} = \frac{a - b\sqrt 2}{a^2 - 2b^2} = \frac a{a^2 - 2b^2} - \frac b{a^2 - 2b^2}\sqrt 2\]
-    where $a^2 - 2b^2 \neq 0$ since $a + b\sqrt 2 \neq 0$. Since multiplication in $\r$ is associative, then so is $G$. Finally, let $a + b\sqrt 2, c + d\sqrt 2 \in G$ for some nonzero $a, b, c, d \in \q$. Then
-    \[(a + b\sqrt 2)(c + d\sqrt 2) = (ac + 2bd) + (ad + bc)\sqrt 2 \in G\]
-    since $ac + 2bd, ad + bc \in \q$. Hence, the nonzero elements of $G$ are a group under multiplication.
+    \item Note that addition of two elements in $G$ is given by
+    \[(a + b\sqrt 2) + (c + d\sqrt 2) = (a + c) + (b + d)\sqrt 2 \in G.\]
+    From this, we see that $G$ is closed under addition. The identity is $0 + 0\sqrt 2 = 0$, and the inverse of $a + b\sqrt 2$ is $-a - b\sqrt 2$. Associativity is inherited from $\r$. Hence, $G$ is a group under addition.
+    \item Note that multiplication of two elements in $G$ is given by
+    \[(a + b\sqrt 2)(c + d\sqrt 2) = (ac + 2bd) + (ad + bc)\sqrt 2 \in G.\]
+    From this, we see that $G$ is closed under multiplication. The identity is $1 + 0\sqrt 2 = 1$, and the inverse of a nonzero element $a + b\sqrt 2$ is
+    \[(a + b\sqrt 2)\inv = \frac{1}{a + b\sqrt 2} = \frac{1}{a + b\sqrt 2} \cdot \frac{a - b\sqrt 2}{a - b\sqrt 2} = \frac{a - b\sqrt 2}{a^2 - 2b^2} = \frac a{a^2 - 2b^2} - \frac b{a^2 - 2b^2}\sqrt 2.\]
+    Observe that $a - b\sqrt 2 \neq 0$, since that would imply $a = b\sqrt 2$, contradicting that $a \in \q$. Moreover, $a + b\sqrt 2 \neq 0$ implies $a^2 - 2b^2 \neq 0$. Hence, the inverse is well-defined and in $G$. Associativity is inherited from $\r$. Hence, the nonzero elements of $G$ are a group under multiplication.
 \end{solalph}
 
 \begin{exercise}\label{ex1.1.10}
-    Prove that a finite group is abelian if and only if its group table is a symmetric matrix.
+    Prove that a finite group is Abelian if and only if its group table is a symmetric matrix.
 \end{exercise}
 
 \begin{sol}
-    Let $G$ be a finite group, and let $G = \{g_1, g_2, \ldots, g_n\}$ for some $n \in \zp$ with $g_1 = 1$. Note that $g_ig_j$ is the $(i, j)$-th entry of the group table, and a symmetric matrix implies that the $(i, j)$-th entry is equal to the $(j, i)$-th entry for all $1 \leq i, j \leq n$.
-
-    We have that $G$ is abelian if and only if $g_ig_j = g_jg_i$ for all $1 \leq i, j \leq n$, which holds if and only if the $(i, j)$-th entry is equal to the $(j, i)$-th entry for all $1 \leq i, j \leq n$. This is true if and only if the group table is a symmetric matrix.
+    Let $G = \set{g_1, g_2, \ldots, g_n}$ be a finite group.
+    \begin{itemize}
+        \item [\rightimp] If $G$ is Abelian, then $g_i g_j = g_j g_i$ for all $i, j$. Hence, the $(i, j)$-th entry of the group table is equal to the $(j, i)$-th entry for all $i, j$, so that the group table is symmetric.
+        \item [\leftimp] If the group table is symmetric, then $g_i g_j = g_j g_i$ for all $i, j$. Hence, $G$ is Abelian. \qh
+    \end{itemize}
 \end{sol}
 
 \begin{exercise}\label{ex1.1.11}
@@ -209,11 +172,11 @@ Let $G$ be a group.
 
 \begin{sol}
     For each $\bar x \in \intmod[12]$, add it to itself until we arrive at $\bar 0$. $|\bar 0| = 1$, and $\bar 1 = 12$ since $12 \cdot \bar 1 = \bar{12} = \bar 0$. In particular, we have:
-    $$\begin{array}{c|c|c|c|c|c|c|c|c|c|c|c|c}
+    \[\begin{array}{c|c|c|c|c|c|c|c|c|c|c|c|c}
         \bar x & \bar 0 & \bar 1 & \bar 2 & \bar 3 & \bar 4 & \bar 5 & \bar 6 & \bar 7 & \bar 8 & \bar 9 & \bar{10} & \bar{11} \\
         \hline
         |\bar x| & 1 & 12 & 6 & 4 & 3 & 12 & 2 & 12 & 3 & 4 & 6 & 12
-    \end{array}$$
+    \end{array}\,. \qh\]
 \end{sol}
 
 \begin{exercise}\label{ex1.1.12}
@@ -221,11 +184,11 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-    $$\begin{array}{c|c|c|c|c|c|c}
+    \[\begin{array}{c|c|c|c|c|c|c}
         \bar x & \bar{1} & \bar{-1} & \bar{5} & \bar{7} & \bar{-7} & \bar{13} \\
         \hline
         |\bar x| & 1 & 2 & 2 & 2 & 2 & 1
-    \end{array}$$
+    \end{array}\,. \qh\]
 \end{sol}
 
 \begin{exercise}\label{ex1.1.13}
@@ -233,11 +196,11 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-    $$\begin{array}{c|c|c|c|c|c|c|c|c|c}
+    \[\begin{array}{c|c|c|c|c|c|c|c|c|c}
             \bar x & \bar 1 & \bar 2 & \bar 6 & \bar 9 & \bar{10} & \bar{12} & \bar{-1} & \bar{-10} & \bar{-18} \\
             \hline
             |\bar x| & 36 & 18 & 6 & 4 & 18 & 3 & 36 & 18 & 2
-    \end{array}$$
+    \end{array}\,. \qh\]
 \end{sol}
 
 \begin{exercise}\label{ex1.1.14}
@@ -245,11 +208,11 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-    $$\begin{array}{c|c|c|c|c|c|c}
+    \[\begin{array}{c|c|c|c|c|c|c}
         \bar x & \bar 1 & \bar{-1} & \bar 5 & \bar{13} & \bar{-13} & \bar{17} \\
         \hline
         |\bar x| & 1 & 2 & 6 & 3 & 6 & 2
-    \end{array}$$
+    \end{array}\,. \qh\]
 \end{sol}
 
 \begin{exercise}\label{ex1.1.15}
@@ -257,14 +220,8 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-    We proceed by induction. For $n = 1$, the result is clear. Suppose it is true for some $n \in \zp$. Then for $n + 1$, we have
-    \begin{align*}
-        (a_1 a_2 \ldots a_n a_{n + 1})^{-1} & = ((a_1 a_2 \ldots a_n) a_{n + 1})^{-1} \\
-        & = a_{n + 1}^{-1} (a_1 a_2 \ldots a_n)^{-1} \\
-        & = a_{n + 1}^{-1} (a_n^{-1} a_{n - 1}^{-1} \ldots a_1^{-1}) \\
-        & = a_{n + 1}^{-1} a_n^{-1} a_{n - 1}^{-1} \ldots a_1^{-1}
-    \end{align*}
-    The result follows by induction.
+    We proceed by induction. This holds for $n = 2$ by Proposition 1.1 (iv). Suppose it holds for some $n \in \zp$. Then for $n + 1$, we have
+    \[(a_1 a_2 \ldots a_n a_{n+1})^{-1} = a_{n+1}^{-1} (a_1 a_2 \ldots a_n)^{-1} = a_{n+1}^{-1} a_n^{-1} a_{n-1}^{-1} \ldots a_1^{-1}. \qh\]
 \end{sol}
 
 \begin{exercise}\label{ex1.1.16}
@@ -273,9 +230,8 @@ Let $G$ be a group.
 
 \begin{solitem}
     \item[\rightimp] Suppose $x^2 = 1$. Then $|x| \leq 2$. Since $|x| \in \zp$, then $|x|$ is either $1$ or $2$.
-    \item[\leftimp]Suppose $|x|$ is either $1$ or $2$. If $|x| = 1$, then $x = 1$ so that $x^2 = 1$. If $|x| = 2$, then $x^2 = 1$.
+    \item[\leftimp] If $|x| = 1$, then $x = 1$ and $x^2 = 1$. If $|x| = 2$, then $x^2 = 1$ by definition. \qh
 \end{solitem}
-
 
 \begin{exercise}\label{ex1.1.17}
     Let $x$ be an element of $G$. Prove that if $|x| = n$ for some positive integer $n$, then $x^{-1} = x^{n-1}$.
@@ -285,49 +241,41 @@ Let $G$ be a group.
     Note that $x^n = x^{n - 1}x = 1$. Then $x^{n - 1} = x\inv$.
 \end{sol}
 
-\newpage
-
 \begin{exercise}\label{ex1.1.18}
-    Let $x, y$ be elements of $G$. Prove that $xy = yx$ if and only if $y^{-1}xy = x$ if and only if $x^{-1}y^{-1}xy = 1$.
+    Let $x, y$ be elements of $G$. Prove that the following are equivalent:
+
+    (i) $xy = yx$; \quad (ii) $y\inv xy = x$; \quad (iii) $x\inv y\inv xy = 1$.
 \end{exercise}
 
 \begin{sol}
-    We prove $xy = yx$ if and only if $y\inv xy = x$ first.
-    \begin{ifandonlyif}
-        \item [\rightimp] Suppose $xy = yx$. Then multiplying both sides on the left by $y\inv$ gives $y\inv xy = y\inv yx = 1x = x$.
-        \item [\leftimp] Suppose $y\inv xy = x$. Then multiplying both sides on the left by $y$ gives $xy = yy\inv xy = yx$.
-    \end{ifandonlyif}
-    Next, we prove $y\inv xy = x$ if and only if $x\inv y\inv xy = 1$.
-    \begin{ifandonlyif}
-        \item [\rightimp] Suppose $y\inv xy = x$. Then multiplying both sides on the left by $x\inv$ gives $x\inv y\inv xy = x\inv x = 1$.
-        \item [\leftimp] Suppose $x\inv y\inv xy = 1$. Then multiplying both sides on the left by $x$ gives $y\inv xy = xx\inv = 1x = x$.
-    \end{ifandonlyif}
-    The result follows.
+    $xy = yx \iff y\inv xy = y\inv yx = x \iff x\inv y\inv xy = x\inv x = 1$.
 \end{sol}
 
-\begin{specialexercise} \label{ex1.1.19}
+\begin{specialexercise}[Exponent Laws in Groups] \label{ex1.1.19}
     Let $x \in G$ and let $a, b \in \zp$.
     \begin{subproblems}
         \item Prove that $x^{a+b} = x^a x^b$ and $(x^a)^b = x^{ab}$.
         \item Prove that $(x^a)^{-1} = x^{-a}$.
-        \item Establish part (a) for arbitrary integers $a$ and $b$ (positive, negative, or zero).
+        \item Establish part (a) for arbitrary integers $a$ and $b$.
     \end{subproblems}
 \end{specialexercise}
 
 \begin{solalph}
-    \item Since $x^a$ has $a$ amount of $x$ and $x^b$ has $b$ amount of $x$, then $x^a x^b$ has $a + b$ amount of $x$, or $x^{a + b}$. Similarly, $(x^a)^b$ has $ab$ amount of $x$, or $x^{ab}$.
-    \item Recall that $x^{-a} = (x\inv)^a$. We proceed by induction. For $a = 1$, we have $x^{-1} = (x\inv)^1$. Suppose $(x^a)\inv = (x\inv)^a$ for some $a \in \zp$. Then for $a + 1$, we have
-    \[(x^{a + 1})\inv = (x^ax)\inv = x\inv(x^a)\inv = x\inv(x\inv)^a = (x\inv)^{a + 1}\]
-    hence the result follows by induction.
-    \item There are three cases to consider:
+    \item There are $a$ instances of $x$ in $x^a$ and $b$ instances of $x$ in $x^b$. Hence, there are $a + b$ instances of $x$ in $x^a x^b$, so that $x^{a+b} = x^a x^b$. There are $a$ instances of $x$ in $x^a$, and there are $b$ instances of $x^a$ in $(x^a)^b$. Hence, there are $ab$ instances of $x$ in $(x^a)^b$, so that $(x^a)^b = x^{ab}$.
+    \item By \hyperref[ex1.1.15]{Exercise 1.1.15}, then $(x^a)\inv$ consists of $a$ instances of $x\inv$, so that $(x^a)\inv = x^{-a}$.
+    \item We consider the following cases:
     \begin{itemize}
-        \item If both $a, b \in \zp$, then we proceed as in part (a).
-        \item If one of $a$ or $b$ is 0, we may assume without loss of generality that $b = 0$. Then $x^{a + 0} = x^ax^0 = x^a$. Moreover, we have $(x^a)^0 = 1$ by definition, so $x^{a \cdot 0} = x^0 = 1$.
-        \item If one of $a$ or $b$ is negative, we may assume without loss of generality that $b < 0$, hence $-b \in \zp$. For the first part of (a), we have
-        \[x^a = x^{a + b - b} = x^{a + b} x^{-b} = x^{a + b}(x^b)\inv\]
-        so that $x^ax^b = x^{a + b}$. For the second part of (a), we have
-        \[(x^a)^b = ((x^a)^{-b})\inv = (x^{-ab})\inv = x^{ab}.\]
-        Hence, the result follows. \qh
+        \item If $a, b \in \zp$, then the result follows from part (a).
+        \item If $a \in \zp$ and $b < 0$ (the case of $a < 0$ and $b \in \zp$ is analogous), suppose $a + b \geq 0$. Then
+        \[x^a = x^{a + b - b} = x^{a + b}x^{-b},\]
+        so that $x^{a + b} = x^a x^b$. If $a + b < 0$, then
+        \[(x^{a + b})\inv = x^{-a - b} = x^{-b} x^{-a} = (x^a x^b)\inv,\]
+        implying that $x^{a + b} = x^a x^b$, since inverses are unique. Moreover,
+        \[(x^a)^b = (x^a)^{-(-b)} = ((x^a)^{-b})\inv = (x^{-ab})\inv = x^{ab}.\]
+        \item If $a < 0$ and $b < 0$, then $a + b < 0$ and
+        \[x^{a + b} = x^{b + a} = (x^{-b - a})\inv = (x^{-b} x^{-a})\inv = (x^{-a})\inv (x^{-b})\inv = x^a x^b.\]
+        Moreover,
+        \[(x^a)^b = ((x^{-a})\inv)^b = ((x^{-a})^b)\inv = (x^{(-a)b})\inv = x^{ab}. \qh\]
     \end{itemize}
 \end{solalph}
 
@@ -340,7 +288,7 @@ Let $G$ be a group.
     \[(x\inv)^n = (x^n)\inv = 1\inv = 1\]
     so that $|x\inv| \leq n$ and has finite order. Similarly, suppose $|x\inv| = m \in \zp$. Then
     \[x^m = ((x\inv)^m)\inv = 1\inv = 1\]
-    so that $|x| \leq m$ and has finite order. Hence, $|x| = |x\inv|$. Moreover, the above shows that if either $x$ or $x\inv$ has finite order, then so does the other. Hence, they both have finite or infinite order.
+    so that $|x| \leq m$ and has finite order. Then $n = m$, and $|x| = |x\inv|$. Specifically, $x$ has finite order if and only if $x\inv$ has finite order, hence $x$ has infinite order if and only if $x\inv$ has infinite order.
 \end{sol}
 
 \begin{exercise}\label{ex1.1.21}
@@ -348,29 +296,27 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-    Since $n$ is odd, then $n = 2m - 1$ for some $m \in \zp$. Since $\abs x = n$, then
-    \[1 = x^n = x^{2m - 1} = (x^2)^m x\inv\]
-    so that $x = (x^2)^m$.
+    Put $n = 2k - 1$ for $k \in \zp$. Then $x^n = x^{2k - 1} = 1$, so that $x^{2k} = x$. Hence, $x = (x^2)^k$.
 \end{sol}
 
-\begin{specialexercise} \label{ex1.1.22}
+\begin{specialexercise}[Conjugate Elements] \label{ex1.1.22}
     If $x$ and $g$ are elements of the group $G$, prove that $|x| = |g^{-1} x g|$. Deduce that $|ab| = |ba|$ for all $a, b \in G$.
 \end{specialexercise}
 
 \begin{sol}
-    We first show that $(g\inv xg)^n = g\inv x^n g$ for all $n \in \zp$ by induction. For $n = 1$, the result is clear. Suppose it holds for some $n \in \zp$. Then for $n + 1$, we have
-    \[(g\inv xg)^{n+1} = (g\inv xg)^n (g\inv xg) = (g\inv x^n g)(g\inv x g) = g\inv x^{n+1} g\]
-    so the result follows by induction.
+    We first prove the lemma that $(g\inv xg)^n = g\inv x^n g$ for all $n \in \zp$.
+    \begin{lemma}
+        We proceed by induction, where $n = 1$ is clear. If it holds for $n \in \zp$, then for $n + 1$, we have
+        \[(g\inv xg)^{n + 1} = (g\inv xg)^n (g\inv xg) = (g\inv x^n g)(g\inv xg) = g\inv x^{n + 1} g.\]
+        Hence, the result follows by induction for all $n \in \zp$.
+    \end{lemma}
+    Let $|x| = m \in \zp$. Then
+    \[(g\inv xg)^m = g\inv x^m g = g\inv 1 g = 1,\]
+    so that $|g\inv xg| \leq m$. Similarly, let $|g\inv xg| = n \in \zp$. Then
+    \[x^n = (gg\inv) x^n (gg\inv) = g(g\inv xg)^n g\inv = g 1 g\inv = 1,\]
+    so that $|x| \leq n$. Hence, $m = n$, and $|x| = |g\inv x g|$.
 
-    Let $|x| = n \in \zp$. Then
-    \[(g\inv x g)^n = g\inv x^n g = g\inv 1 g = 1\]
-    so that $|g\inv x g| \leq n$. Similarly, let $|g\inv x g| = m \in \zp$. Then
-    \[x^m = (gg\inv) x^m (gg\inv) = g(g\inv xg)^m g\inv = g1g\inv = 1\]
-    so that $|x| \leq m$. Hence, $|x| = |g\inv x g|$. We may use similar reasoning to show that if either $x$ or $g\inv x g$ has finite order, then so does the other. Hence, they both have finite or infinite order.
-
-    To deduce that $|ab| = |ba|$ for all $a, b \in G$, let $x = ba$ and $g = b$. Using the fact that $|x| = |g\inv x g|$, we have
-    \[|ba| = |b\inv (ba) b| = |ab|\]
-    Hence, the result follows.
+    Let $a, b \in G$. Then $|ab| = |b\inv (ab) b| = |ba|$ by the above result.
 \end{sol}
 
 \begin{exercise}\label{ex1.1.23}
@@ -379,55 +325,48 @@ Let $G$ be a group.
 
 \begin{sol}
     Let $|x^s| = r \in \zp$. Then
-    \[1 = (x^s)^r = x^{sr}\]
+    \[(x^s)^t = x^{st} = x^n = 1,\]
     so that $r \leq t$. Moreover,
-    \[(x^s)^r = x^{sr} = 1\]
+    \[x^{sr} = (x^s)^r = 1\]
     implies that $|x| = st \leq sr$, hence $t \leq r$. Thus, $|x^s| = r = t$.
 \end{sol}
 
 \begin{exercise}\label{ex1.1.24}
-    If $a$ and $b$ are commuting elements of $G$, prove that $(ab)^n = a^n b^n$ for all $n \in \z$. [Do this by induction for positive $n$ first.]
+    If $a$ and $b$ are commuting elements of $G$, prove that $(ab)^n = a^n b^n$ for all $n \in \z$. 
+    
+    \hint{Do this by induction for positive $n$ first.}
 \end{exercise}
 
 \begin{sol}
-    We proceed by induction. For $n = 1$, the result is clear. Suppose it holds for some $n \in \zp$. Then for $n + 1$, we have
-    \[(ab)^{n + 1} = (ab)^n (ab) = (a^n b^n)(ab) = a^{n + 1} b^{n + 1}\]
-    so the result follows by induction for all positive $n$. For $n = 0$, we have $(ab)^0 = 1 = 1 \cdot 1 = a^0 b^0$. Finally, for negative $n$, we have
-    \[(ab)^n = ((ab)^{-n})\inv = (a^{-n} b^{-n})\inv = (b^{-n} a^{-n})\inv = a^n b^n\]
-    since $a$ and $b$ commute. Hence, the result holds for all $n \in \z$.
+    The case for $n = 0$ and $n = 1$ is clear. If it holds for some $n \in \zp$, then for $n + 1$, we have
+    \[(ab)^{n + 1} = (ab)^n (ab) = (a^n b^n)(ab) = a^n (b^n a) b = a^n (ab^n) b = a^{n + 1} b^{n + 1}.\]
+    For $n < 0$, then $(ab)^n = ((ab)^{-n})\inv = (b^{-n} a^{-n})\inv = a^n b^n$.
 \end{sol}
 
 \begin{exercise}\label{ex1.1.25}
-    Prove that if $x^2 = 1$ for all $x \in G$, then $G$ is abelian.
+    Prove that if $x^2 = 1$ for all $x \in G$, then $G$ is Abelian.
 \end{exercise}
 
 \begin{sol}
     Since $x^2 = 1$, then $x = x\inv$ for all $x \in G$. Let $a, b \in G$. Then
-    \[ab = (ab)\inv = b\inv a\inv = ba\]
-    so that $G$ is abelian.
+    \[ab = (ab)\inv = b\inv a\inv = ba. \qh\]
 \end{sol}
 
-\begin{specialexercise} \label{ex1.1.26}
-    Assume $H$ is a nonempty subset of $(G, \star)$ which is closed under the binary operation on $G$ and is closed under inverses, i.e., for all $h, k \in H$, $hk, \, h^{-1} \in H$. Prove that $H$ is a group under the operation $\star$ restricted to $H$ (such a subset $H$ is called a \textit{subgroup} of $G$).
+\begin{specialexercise}[Subgroups] \label{ex1.1.26}
+    Assume $H$ is a nonempty subset of $(G, \star)$ which is closed under the binary operation on $G$ and is closed under inverses, i.e., for all $h, k \in H$, $hk, \, h^{-1} \in H$. Prove that $H$ is a group under the operation $\star$ restricted to $H$ (such a subset $H$ is called a \textbf{subgroup} of $G$).
 \end{specialexercise}
 
 \begin{sol}
-    Let $H$ be a nonempty subset of $(G, \star)$ which is closed under the binary operation on $G$ and is closed under inverses. Since $H$ is nonempty, there exists some $h \in H$. Since $H$ is closed under inverses, then $h\inv \in H$. Since $H$ is closed under the binary operation on $G$, then $hh\inv = 1 \in H$ so that $H$ has an identity. Moreover, for any $k \in H$, its inverse $k\inv \in H$ since $H$ is closed under inverses. Since $\star$ is associative on $G$, then it is also associative on $H$. Hence, $H$ is a group under the operation $\star$ restricted to $H$.
+    Let $H \subseteq (G, \star)$ be nonempty and closed under the binary operation on $G$ and inverses. Let $h \in H$. Then $h\inv \in H$, so that $hh\inv = 1 \in H$. Hence, $H$ has an identity. Associativity is inherited from $G$. Hence, $(H, \star|_H)$ is a group.
 \end{sol}
 
-\begin{specialexercise} \label{ex1.1.27}
-    Prove that if $x$ is an element of the group $G$, then $\{x^n \mid n \in \z \}$ is a subgroup. (cf. the preceding exercise) of $G$ (called the \textit{cyclic subgroup} of $G$ generated by $x$).
+\begin{specialexercise}[Cyclic Subgroups] \label{ex1.1.27}
+    Prove that if $x$ is an element of the group $G$, then $\{x^n \mid n \in \z \}$ is a subgroup (cf. \hyperref[ex1.1.26]{Exercise 1.1.26}) of $G$ (called the \textbf{cyclic subgroup} of $G$ generated by $x$).
 \end{specialexercise}
 
 \begin{sol}
-    Let $H = \{x^n \mid n \in \z \}$. Since $x^0 = 1 \in H$, then $H$ is nonempty. Moreover, for any $x^a, x^b \in H$ where $a, b \in \z$, we have
-    \[x^a x^b = x^{a + b} \in H\]
-    by \hyperref[ex1.1.19]{Exercise 1.1.19} so that $H$ is closed under the binary operation on $G$. Additionally, we have
-    \[(x^a)\inv = x^{-a} \in H\]
-    so that $H$ is closed under inverses. Hence, by the preceding exercise, $H$ is a subgroup of $G$.
+    Let $H$ be the set in question. Then $1 = x^0 \in H$, so that $H$ is nonempty. Let $x^m, x^n \in H$. Then $x^m x^n = x^{m + n} \in H$ and $(x^m)\inv = x^{-m} \in H$. Hence, $H$ is closed under the binary operation on $G$ and inverses. By \hyperref[ex1.1.26]{Exercise 1.1.26}, then $H$ is a subgroup of $G$.
 \end{sol}
-
-\newpage
 
 \begin{exercise}\label{ex1.1.28}
     Let $(A, \star)$ and $(B, \diamond)$ be groups and let $A \times B$ be their direct product (as defined in Example 6). Verify all the group axioms for $A \times B$:
@@ -449,20 +388,20 @@ Let $G$ be a group.
         & = (a_1,b_1)(a_2a_3, b_2b_3) \\
         & = (a_1, b_1)[(a_2, b_2)(a_3, b_3)]
     \end{align*}
-    \item For $a \in A, b \in B$, we have $(a, b)(1, 1) = (a \star 1, b \diamond 1) = a, b)$.
-    \item We have $(a, b)(a\inv, b\inv) = (a \star a\inv, b \diamond b\inv) = (1, 1)$.
+    \item For $a \in A, b \in B$, we have $(a, b)(1, 1) = (a \star 1, b \diamond 1) = (a, b)$.
+    \item $(a, b)(a\inv, b\inv) = (a \star a\inv, b \diamond b\inv) = (1, 1)$.
 \end{solalph}
 
 \begin{exercise} \label{ex1.1.29}
-    Prove that $A \times B$ is an abelian group if and only if both $A$ and $B$ are abelian.
+    Prove that $A \times B$ is an Abelian group if and only if both $A$ and $B$ are Abelian.
 \end{exercise}
 
 \begin{sol}
-    Let $a, a' \in A$ and $b, b' \in B$. Suppose $A \times B$ is abelian. Then
+    Let $a, a' \in A$ and $b, b' \in B$. Suppose $A \times B$ is Abelian. Then
     \[(aa', bb') = (a, b)(a', b') = (a', b')(a, b) = (a'a, b'b)\]
-    so that $A$ and $B$ are abelian. If $A$ and $B$ are both abelian, then
+    so that $A$ and $B$ are Abelian. If $A$ and $B$ are both Abelian, then
     \[(a, b)(a', b) = (aa', bb') = (a'a, b'b) = (a', b')(a, b)\]
-    hence $A \times B$ is abelian.
+    hence $A \times B$ is Abelian.
 \end{sol}
 
 \begin{exercise}\label{ex1.1.30}
@@ -477,14 +416,14 @@ Let $G$ be a group.
     so that $|(a, b)| \leq \ell$. Moreover, if $(a, b)^k = (1, 1)$ for some $k \in \zp$, then $a^k = 1$ and $b^k = 1$ so that both $|a|$ and $|b|$ divide $k$. Hence, $\ell$ divides $k$ so that $\ell \leq k$. Thus, $|(a, b)| = \ell$.
 \end{sol}
 
-\newpage
-
 \begin{exercise} \label{ex1.1.31}
-    Prove that any finite group $G$ of even order contains an element of order 2. [Let $t(G)$ be the set $\{g \in G \mid g \neq g^{-1}\}$. Show that $t(G)$ has an even number of elements and every nonidentity element of $G - t(G)$ has order 2.]
+    Prove that any finite group $G$ of even order contains an element of order 2. 
+    
+    \hint{Let $t(G)$ be the set $\{g \in G \mid g \neq g^{-1}\}$. Show that $t(G)$ has an even number of elements and every non-identity element of $G - t(G)$ has order 2.}
 \end{exercise}
 
 \begin{sol}
-    Let $g \in G$. If $g \neq g\inv$, then $g \in t(G)$. Moreover, $g\inv \neq (g\inv)\inv = g$ so that $g\inv \in t(G)$ as well. It follows that the elements of $t(G)$ may be paired off as $(g, g\inv)$ where $g \neq g\inv$, hence $t(G)$ has an even number of elements. Since $G$ has even order, then $G - t(G)$ also has an even number of elements. Note that $1 \notin t(G)$ since $1 = 1\inv$. Thus, $G - t(G)$ contains at least one nonidentity element $x$. Since $x \notin t(G)$, then $x = x\inv$ so that $x^2 = 1$ and $|x| = 2$.
+    Let $g \in G$ with $g \neq g\inv$, so $g \in t(G)$. Since $(g\inv)\inv = g$, then $g\inv \in t(G)$. Then elements of $t(G)$ come in pairs, so that $t(G)$ has even order. Since $G$ has even order, then $G - t(G)$ has even order. Moreover, $1 \not\in t(G)$ since $1\inv = 1$, hence $G$ contains a non-identity element $h$. Then $h = h\inv$, so that $h^2 = 1$ and $|h| = 2$.
 \end{sol}
 
 \begin{exercise} \label{ex1.1.32}
@@ -510,13 +449,13 @@ Let $G$ be a group.
     \[1 = x^i x^i = x^{2i}\]
     Note that $2i$ is even, so $2i \neq n$ since $n$ is odd. Noting that $2i < n$, then the only possibility for $x^{2i} = 1$ is if $2i = 0$, which is impossible since $i \geq 1$. This is a contradiction, hence $x^i \neq x^{-i}$ for all $i = 1, 2, \dots, n-1$.
     \item
-    \begin{ifandonlyif}
+    \begin{itemize}
         \item [\rightimp] Suppose $x^i = x^{-i}$ for some $i$ where $1 \leq i < n$. Then
         \[1 = x^i x^i = x^{2i}\]
         Since $x^n = x^{2k} = 1$, then the only $i$ such that $1 \leq i < 2k$ and $x^{2i} = 1$ is $i = k$.
         \item [\leftimp] Suppose $i = k$. Then
         \[x^i = x^k = x^{2k - k} = x^{n - k} = x^{-k} = x^{-i} \qh\]
-    \end{ifandonlyif}
+    \end{itemize}
 \end{solalph}
 
 \begin{exercise}\label{ex1.1.34}
@@ -530,7 +469,9 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise} \label{ex1.1.35}
-    If $x$ is an element of finite order $n$ in $G$, use the Division Algorithm to show that any integral power of $x$ equals one of the elements in the set $\{1, x, x^2, \dots, x^{n-1}\}$ (so these are all the distinct elements of the cyclic subgroup (cf. \hyperref[ex1.1.27]{Exercise 1.1.27}) of $G$ generated by $x$).
+    If $x$ is an element of finite order $n$ in $G$, use the Division Algorithm to show that any integral power of $x$ equals one of the elements in the set $\{1, x, x^2, \dots, x^{n-1}\}$.
+    
+    \remark{These are the distinct elements of the cyclic subgroup of $G$ generated by $x$.}
 \end{exercise}
 
 \begin{sol}
@@ -542,7 +483,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{specialexercise} \label{ex1.1.36} 
-    Assume $G = \{1, a, b, c\}$ is a group of order 4 with identity 1. Assume also that $G$ has no elements of order 4 (so by \hyperref[ex1.1.32]{Exercise 1.1.32}, every element has order $\leq 3$). Use the cancellation laws to show that there is a unique group table for $G$. Deduce that $G$ is abelian.
+    Assume $G = \{1, a, b, c\}$ is a group of order 4 with identity 1. Assume also that $G$ has no elements of order 4 (so by \hyperref[ex1.1.32]{Exercise 1.1.32}, every element has order $\leq 3$). Use the cancellation laws to show that there is a unique group table for $G$. Deduce that $G$ is Abelian.
 \end{specialexercise}
 
 \begin{sol}
@@ -560,7 +501,7 @@ Let $G$ be a group.
         b & b & c & 1 & a \\
         c & c & b & a & 1
     \end{array}\]
-    from which we may deduce that $G$ is abelian.
+    from which we may deduce that $G$ is Abelian.
 \end{sol}
 
 \newpage
@@ -578,7 +519,9 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 \end{exercise}
 
 \begin{sol}
-    For any reflection $sr^k \in D_{2n}$, it is clear that $sr^k \neq 1$. Moreover, $(sr^k)^2 = s(r^ks)r^k = s(sr^{-k})r^k = r^{-k}r^k = 1$ so that every reflection has order 2. We now compute the orders of the rotations in each group.
+    For any reflection $sr^k \in D_{2n}$, it is clear that $sr^k \neq 1$. Moreover,
+    \[(sr^k)^2 = s(r^ks)r^k = s(sr^{-k})r^k = r^{-k}r^k = 1\]
+    so that every reflection has order 2. We now compute the orders of the rotations in each group.
     \begin{subproblems}
         \item $D_6 = \{1, r, r^2, s, sr, sr^2\}$. Then $|1| = 1$ and $|r| = |r^2| = 2$.
         \item $D_8 = \{1, r, r^2, r^3, s, sr, sr^2, sr^3\}$. Then $|1| = 1, |r^2| = 2$ and $|r| = |r^3| = 4$.
@@ -596,7 +539,9 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 \end{sol}
 
 \begin{exercise}\label{ex1.2.3}
-    Use the generators and relations above to show that every element of $D_{2n}$ which is not a power of $r$ has order $2$. Deduce that $D_{2n}$ is generated by the two elements $s$ and $sr$, both of which have order $2$. [cf. \hyperref[ex1.1.33]{Exercise 1.1.33}.]
+    Use the generators and relations above to show that every element of $D_{2n}$ which is not a power of $r$ has order $2$. Deduce that $D_{2n}$ is generated by the two elements $s$ and $sr$, both of which have order $2$.
+
+    \hint{cf. \hyperref[ex1.1.33]{Exercise 1.1.33}.}
 \end{exercise}
  
 \begin{sol}
@@ -608,7 +553,9 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 \end{sol}
 
 \begin{exercise}\label{ex1.2.4}
-    If $n = 2k$ is even and $n \ge 4$, show that $z = r^k$ is an element of order $2$ which commutes with all elements of $D_{2n}$. Show also that $z$ is the only nonidentity element of $D_{2n}$ which commutes with all elements of $D_{2n}$. [cf. \hyperref[ex1.1.33]{Exercise 1.1.33}.]
+    If $n = 2k$ is even and $n \ge 4$, show that $z = r^k$ is an element of order $2$ which commutes with all elements of $D_{2n}$. Show also that $z$ is the only non-identity element of $D_{2n}$ which commutes with all elements of $D_{2n}$.
+
+    \hint{cf. \hyperref[ex1.1.33]{Exercise 1.1.33}.}
 \end{exercise}
    
 \begin{sol}
@@ -624,7 +571,7 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 \end{exercise}
 
 \begin{sol}
-    We use a similar argument as the previous exercise. If there was such a nonidentity $w \in D_{2n}$, we may use the odd case in \hyperref[ex1.1.33]{Exercise 1.1.33} if we assume $w$ is a rotation. We would get $r^k = r^{-k}$, which is never true since $n$ is odd. If $w$ is a reflection, then we would have the same contradiction as before. Hence, the identity is the only element of $D_{2n}$ which commutes with all elements of $D_{2n}$.
+    We use a similar argument as the previous exercise. If there was such a non-identity $w \in D_{2n}$, we may use the odd case in \hyperref[ex1.1.33]{Exercise 1.1.33} if we assume $w$ is a rotation. We would get $r^k = r^{-k}$, which is never true since $n$ is odd. If $w$ is a reflection, then we would have the same contradiction as before. Hence, the identity is the only element of $D_{2n}$ which commutes with all elements of $D_{2n}$.
 \end{sol}
 
 \begin{exercise}\label{ex1.2.6}
@@ -654,8 +601,6 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 \begin{sol}
     Let $H = \gen r$ be the cyclic subgroup of $D_{2n}$ generated by $r$. Since $\abs r = n$, then by \hyperref[ex1.1.35]{Exercise 1.1.35}, the distinct elements of $H$ are $1, r, r^2, \dots, r^{n-1}$. It follows that $|H| = n$.
 \end{sol}
-
-In each of Exercises 9 to 13 you can find the order of the group of rigid motions in $\r^3$ (also called the group of rotations) of the given Platonic solid by following the proof for the order of $D_{2n}$: find the number of positions to which an adjacent pair of vertices can be sent. Alternatively, you can find the number of places to which a given face may be sent and, once a face is fixed, the number of positions to which a vertex on that face may be sent. 
 
 \begin{exercise} \label{ex1.2.9} 
     Let $G$ be the group of rigid motions in $\r^3$ of a tetrahedron. Show that $|G| = 12$.
@@ -714,25 +659,25 @@ In each of Exercises 9 to 13 you can find the order of the group of rigid motion
 \end{sol}
 
 \begin{exercise}\label{ex1.2.16}
-    Show that the group $\langle x_1, y_1 \mid x_1^2 = y_1^2 = (x_1 y_1)^2 = 1 \rangle$ is the dihedral group $D_4$ (where $x_1$ may be replaced by the letter $r$ and $y_1$ by $s$). (Show that the last relation is the same as $x_1 y_1 = y_1 x_1^{-1}$.)
+    Show that the group $\langle x_1, y_1 \mid x_1^2 = y_1^2 = (x_1 y_1)^2 = 1 \rangle$ is the dihedral group $D_4$ (where $x_1$ may be replaced by the letter $r$ and $y_1$ by $s$).
+
+    \hint{Show that the last relation is the same as $x_1 y_1 = y_1 x_1^{-1}$.}
 \end{exercise}
 
 \begin{sol}
-    Let $D_4$ have the usual presentation $\gen{r, s \mid r^2 = s^2 = 1, rs = sr\inv}$. Since $r^2 = 1$, then $r = r\inv$, hence $rs = sr\inv$ is equivalent to $rs = sr$. Let $x_1 = r$ and $y_1 = s$. Then $x_1^2 = r^2 = 1$ and $y_1^2 = s^2 = 1$. Suppose $rs = sr$. Then
-    \[1 = rs sr = (rs)^2 = x_1 y_1 x_1 y_1 = (x_1 y_1)^2\]
-    Conversely, suppose $(x_1 y_1)^2 = 1$. Then
-    \[rs = x_1 y_1 = (x_1 y_1)^{-1} = y_1^{-1} x_1^{-1} = y_1 x_1 = sr\]
-    Thus, the two presentations are equivalent.
+    Note that $y_1^2 = 1$, then $y_1\inv = y_1$. Then
+    \[(x_1y_1)^2 = 1 \iff x_1y_1x_1y_1 = 1 \iff x_1y_1x_1 = y_1\inv = y_1 \iff x_1y_1 = y_1x_1\inv\]
+    Then the relations of $D_4$ are satisfied by $x_1$ and $y_1$ if we set $r = x_1$ and $s = y_1$.
 \end{sol}
-
-\newpage
 
 \begin{exercise}\label{ex1.2.17}
     Let $X_{2n}$ be the group whose presentation is displayed in (1.2).
     \[X_{2n} = \gen{x, y \mid x^n = y^2 = 1, xy = yx^2}\]
     \begin{subproblems}
         \item Show that if $n = 3k$, then $X_{2n}$ has order $6$, and it has the same generators and relations as $D_6$ when $x$ is replaced by $r$ and $y$ by $s$.
-        \item Show that if $(3, n) = 1$, then $x$ satisfies the additional relation: $x = 1$. In this case deduce that $X_{2n}$ has order $2$. [use the facts that $x^n = 1$ and $x^3 = 1$.]
+        \item Show that if $(3, n) = 1$, then $x$ satisfies the additional relation: $x = 1$. In this case deduce that $X_{2n}$ has order $2$.
+        
+        \hint{Use the facts that $x^n = 1$ and $x^3 = 1$.}
     \end{subproblems}
 \end{exercise}
 
@@ -755,12 +700,24 @@ In each of Exercises 9 to 13 you can find the order of the group of rigid motion
 
 \begin{exercise}\label{ex1.2.18}
     Let $Y$ be the group whose presentation is displayed in (1.3).
+
+    \[Y = \gen{u, v \mid u^4 = v^3 = 1, uv = v^2u^2}.\]
     \begin{subproblems}
-        \item Show that $v^2 = v^{-1}$. [Use the relation $v^3 = 1$.]
-        \item Show that $v$ commutes with $u^3$. [Show that $v^2 u^3v = u^3$ by writing the left-hand side as $(v^2u^2)(uv)$ and using the relations to reduce this to the right-hand side. Then use part (a).]
-        \item Show that $v$ commutes with $u$. [Show that $u^9 = u$ and then use part (b).]
-        \item Show that $uv = 1$. [Use part (c) and the last relation.]
-        \item Show that $u = 1$. Deduce that $v = 1$, and conclude that $Y = 1$. [Use part (d) and the equation $u^4 v^3 = 1$.]
+        \item Show that $v^2 = v^{-1}$.
+        
+        \hint{Use the relation $v^3 = 1$.}
+        \item Show that $v$ commutes with $u^3$.
+        
+        \hint{Show that $v^2 u^3v = u^3$ by writing the left-hand side as $(v^2u^2)(uv)$ and using the relations to reduce this to the right-hand side. Then use part (a).}
+        \item Show that $v$ commutes with $u$.
+        
+        \hint{Show that $u^9 = u$ and then use part (b).}
+        \item Show that $uv = 1$.
+        
+        \hint{Use part (c) and the last relation.}
+        \item Show that $u = 1$. Deduce that $v = 1$, and conclude that $Y = 1$.
+        
+        \hint{Use part (d) and the equation $u^4 v^3 = 1$.}
     \end{subproblems}
 \end{exercise}
 
@@ -822,7 +779,7 @@ In each of Exercises 9 to 13 you can find the order of the group of rigid motion
 \end{exercise}
 
 \begin{sol}
-    Note that the order of a cycle decomposition is the $\lcm$ of the orders of each of the cycles, and that the order of an $m$-cycle is $m$. Then the orders are the following (the first number will be for Exercise 1, and the second for Exercise 2):
+    Note that the order of a cycle decomposition is the $\lcm$ of the orders of each of the cycles, and that the order of an $m$-cycle is $m$.
     \begin{align*}
         \abs\sigma & = 6, 12 & \abs\tau & = 2, 30 \\
         \abs{\sigma^2} & = 3, 6 & \abs{\sigma\tau} & = 4, 6 \\
@@ -923,11 +880,7 @@ In each of Exercises 9 to 13 you can find the order of the group of rigid motion
 \end{exercise}
 
 \begin{sol}
-    For each $n \in \zp$, consider the permutation $\sigma_n$ defined by
-    \[\sigma_n = (2n - 1\ 2n)\]
-    Note that $\sigma_n \in S_\Omega$. Moreover, for $m, n \in \zp$ with $m \neq n$, then $\sigma_m \neq \sigma_n$, since $\sigma_m$ moves $2m - 1$ while $\sigma_n$ does not, hence each $\sigma_n$ is distinct. Then the set
-    \[A = \{\sigma_n \mid n \in \zp\} \subseteq S_\Omega\]
-    is infinite, so $S_\Omega$ is infinite as well.
+    For each $n \in \zp$, consider the permutation $\sigma_n = (1\ n)$. Then $\sigma_n \in S_\Omega$ and $\sigma_n \neq \sigma_m$ for $n \neq m$, since they move different elements. Hence, $S_{\Omega}$ contains an infinite collection of distinct elements, so $S_\Omega$ is infinite.
 \end{sol}
 
 \begin{exercise}\label{ex1.3.9}
@@ -937,52 +890,46 @@ In each of Exercises 9 to 13 you can find the order of the group of rigid motion
         \item Let $\tau$ be the 8-cycle $(1\ 2\ 3\ 4\ 5\ 6\ 7\ 8)$. For which positive integers $i$ is $\tau^i$ also an 8-cycle?
         \item Let $\omega$ be the 14-cycle $(1\ 2\ 3\ 4\ 5\ 6\ 7\ 8\ 9\ 10\ 11\ 12\ 13\ 14)$. For which positive integers $i$ is $\omega^i$ also a 14-cycle?
     \end{subproblems}
+    \authornote{The reader should notice a pattern: integers $i$ such that $(m, i) = 1$ produce an $m$-cycle, while integers $i$ such that $(m, i) = k$ produce $k$ disjoint $m/k$-cycles.}
 \end{exercise}
 
-\begin{sol}
-    We will compute the explicit powers for the first problem, notice a pattern with the integers that produce a 12-cycle, and apply that pattern to the other problems.
-    \begin{subproblems}
-        \item For each integer between 1 and 11, we compute the cycle:
-        \begin{align*}
-            \sigma^1 & = \sigma & \sigma^2 & = (1\ 3\ 5\ 7\ 9\ 11)(2\ 4\ 6\ 8\ 10\ 12) \\
-            \sigma^3 & = (1\ 4\ 7\ 10)(2\ 5\ 8\ 11)(3\ 6\ 9\ 12)& \sigma^4 & = (1\ 5\ 9)(2\ 6\ 10)(3\ 7\ 11)(4\ 8\ 12) \\
-            \sigma^5 & = \sigma & \sigma^6 & = (1\ 7)(2\ 8)(3\ 9)(4\ 10)(5\ 11)(6\ 12) \\
-            \sigma^7 & = \sigma & \sigma^8 & = \sigma^4 \\
-            \sigma^9 & = \sigma^3 & \sigma^{10} & = \sigma^2 \\
-            \sigma^{11} & = \sigma & 
-        \end{align*}
-        From direct calculations, it seems that the integers $i$ such that $(12, i) = 1$ produce a 12-cycle, while $i$ such that $(12, i) = k$ produces $k$ $12/k$-cycles. In this particular case, the set of integers that produce a 12-cycle is the set $\{x + 12k \mid x \in \{1, 5, 7, 11\}, k \in \z\}$.
-        \item $\{x + 8k \mid x \in \{1, 3, 5, 7\}, k \in \z\}$.
-        \item $\{x + 14k \mid x \in \{1, 3, 5, 9, 11, 13\}, k \in \z\}$. \qh
-    \end{subproblems}
-\end{sol}
+\begin{solalph}
+    \item Computing the cycle for each integer 0 to 12:
+    \begin{align*}
+        \sigma^1 & = \sigma & \sigma^7 & = \sigma \\
+        \sigma^2 & = (1\ 3\ 5\ 7\ 9\ 11)(2\ 4\ 6\ 8\ 10\ 12) & \sigma^8 & = \sigma^4 \\
+        \sigma^3 & = (1\ 4\ 7\ 10)(2\ 5\ 8\ 11)(3\ 6\ 9\ 12) & \sigma^9 & = \sigma^3 \\
+        \sigma^4 & = (1\ 5\ 9)(2\ 6\ 10)(3\ 7\ 11)(4\ 8\ 12) & \sigma^{10} & = \sigma^2 \\
+        \sigma^5 & = \sigma & \sigma^{11} & = \sigma \\
+        \sigma^6 & = (1\ 7)(2\ 8)(3\ 9)(4\ 10)(5\ 11)(6\ 12) & \sigma^{12} & = \id
+    \end{align*}
+    Hence, the set of integers that produce a 12-cycle is the set $\{i + 12k \mid i \in \{1, 5, 7, 11\}, k \in \z\}$.
+    \item $\{i + 8k \mid i \in \{1, 3, 5, 7\}, k \in \z\}$.
+    \item $\{i + 14k \mid i \in \{1, 3, 5, 9, 11, 13\}, k \in \z\}$. \qh
+\end{solalph}
 
 \begin{exercise} \label{ex1.3.10}
     Prove that if $\sigma$ is the $m$-cycle $(a_1\ a_2\ \dots\ a_m)$, then for all $i \in \{1,2,\dots,m\}$, $\sigma^i(a_k) = a_{k+i}$, where $k+i$ is replaced by its least residue mod $m$ when $k+i > m$. Deduce that $|\sigma| = m$.
 \end{exercise}
 
 \begin{sol}
-    We proceed by induction on the first part. For $i = 1$, then $\sigma^1(a_k) = \sigma(a_k) = a_{k+1}$, where $k + 1$ is replaced by its least residue mod $m$ when $k + 1 > m$. Suppose the statement is true for some $i$. Then
-    \[\sigma^{i + 1}(a_k) = \sigma(\sigma^i(a_k)) = \sigma(a_{k + i}) = a_{k + i + 1},\]
-    where $k + i + 1$ is replaced by its least residue mod $m$ when $k + i + 1 > m$. By induction, the statement is true for all $i \in \zp$.
+    Inducting on $i$, we have for $i = 1$ that $\sigma(a_k) = a_{k+1}$, where $k+1$ is replaced by its least residue mod $m$ when $k+1 > m$. Suppose that $\sigma^i(a_k) = a_{k+i}$ for some $i \in \{1,2,\dots,m-1\}$. Then
+    \[\sigma^{i+1}(a_k) = \sigma(\sigma^i(a_k)) = \sigma(a_{k+i}) = a_{k+i+1},\]
+    where $k+i+1$ is replaced by its least residue mod $m$ when $k+i+1 > m$. The result holds by induction.
 
-    To determine the order of $\sigma$, note that there are $m$ distinct elements $a_1, a_2, \ldots, a_m$ in the cycle. Then for any $i$ where $1 \leq i < m$, then $\sigma^i(a_1) = a_{1 + i} \neq a_1$. For $\sigma^m$, then $\sigma^m(a_1) = a_{1 + m} = a_1$. In particular, this holds for all $a_k$. Then $\sigma^m = \id$, and $|\sigma| = m$.
+    To see that $|\sigma| = m$, note that $\sigma^m(a_k) = a_{k+m} = a_k$ for all $k \in \{1,2,\dots,m\}$, so that $\sigma^m = \id$. If $|\sigma| = i < m$, then $\sigma^i(a_1) = a_{1+i} = a_1$, which implies that $i \equiv 0 \bmod m$, contradicting that $i < m$. Hence, $|\sigma| = m$.
 \end{sol}
 
-\newpage
-
-\begin{specialexercise}\label{ex1.3.11}
+\begin{specialexercise}[Generators of Cyclic Permutations]\label{ex1.3.11}
     Let $\sigma$ be the $m$-cycle $(1\ 2\ \dots\ m)$. Show that $\sigma^i$ is also an $m$-cycle if and only if $i$ is relatively prime to $m$.
 \end{specialexercise}
 
 \begin{solitem}
-    \item [\rightimp] Suppose $\sigma^i$ is an $m$-cycle, and assume, by way of contradiction, that $(m, i) = d > 1$. Then there exist $a, b \in \zp$ such that $ad = i$ and $bd = m$. Since $|\sigma^i| = m$ because it is an $m$-cycle, then
-    \[(\sigma^i)^b = (\sigma^{ad})^b = (\sigma^{bd})^a = (\sigma^m)^a = \id^a = \id.\]
-    However, $bd = m$ with $d > 1$ implies that $b < m$, so $|\sigma^i| \leq b < m$, contradicting that $|\sigma^i| = m$. It follows that $(m, i) = 1$.
-    \item [\leftimp] Suppose that $(m, i) = 1$. Denote $x' \equiv x \bmod m$. We claim that the integers
-    \[(1 + i)', (1 + 2i)', \ldots, (1 + (m - 1)i)'\]
-    are all distinct. Suppose $(1 + xi)' = (1 + yi)'$ for some $0 \leq x, y \leq m - 1$ with $x \neq y$. Then $i(x - y) \equiv 0 \bmod m$. Since $(m, i) = 1$, then $m \mid (x - y)$. However, since $1 - m \leq x - y \leq m - 1$, then the only choice for $x - y$ is 0, or that $x = y$. Then we have exactly $m$ distinct integers so that
-    \[\sigma^i = (1\ (1 + i)'\ (1 + 2i)'\ \ldots\ (1 + (m - 1)i)').\]
+    \item [\rightimp] Suppose $(m, i) = k > 1$. If $i > m$, replace $i$ with $i \bmod m$ since $\sigma^i = \sigma^{i \bmod m}$. Then $i = k\ell$ for $\ell \in \zp$. It is clear that $(\sigma^i)^{m/k} = \sigma^{\ell m} = \id$, so that $|\sigma^i| \leq m/k < m$. Hence, $\sigma^i$ is not an $m$-cycle.
+    \item [\leftimp] Suppose that $(m, i) = 1$. Denote $x_m \equiv x \bmod m$. We claim that the integers
+    \[1_m, (1 + i)_m, (1 + 2i)_m, \ldots, (1 + (m - 1)i)_m\]
+    are all distinct. Suppose $(1 + xi)_m = (1 + yi)_m$ for some $0 \leq x, y \leq m - 1$ with $x \neq y$. Then $i(x - y) \equiv 0 \bmod m$. Since $(m, i) = 1$, then $m \mid (x - y)$. However, since $1 - m \leq x - y \leq m - 1$, then the only choice for $x - y$ is 0, or that $x = y$. Then we have exactly $m$ distinct integers so that
+    \[\sigma^i = (1\ (1 + i)_m\ (1 + 2i)_m\ \ldots\ (1 + (m - 1)i)_m).\]
     Thus, $\sigma^i$ is an $m$-cycle.
 \end{solitem}
 
@@ -995,19 +942,20 @@ In each of Exercises 9 to 13 you can find the order of the group of rigid motion
 
 \begin{solalph}
     \item We first observe that for any $n$-cycle $\sigma$, then $\sigma^k$ sends any element $a_i$ to $a_{i + k}$, where $i + k$ is replaced by its least residue mod $n$ when $i + k > n$. In this specific problem, $\tau$ consists of 2-cycles, which means that $\sigma^k$ must send each element to itself after two applications. Then $2k \equiv 0 \bmod n$, but $k \not\equiv 0 \bmod n$ since $\sigma^k \neq 1$. It follows that $n \mid 2k$ but $n \nmid k$, so it must be that $n = 2k$. We see that $\sigma^k$ will be a product of $k$ 2-cycles. However, $\tau$ is a product of 5 2-cycles, so $k = 5$ and $n = 10$. Thus, there exists an $n$-cycle $\sigma$ such that $\sigma^5 = \tau$ when $n = 10$, and $\sigma = (1\ 6\ 2\ 7\ 3\ 8\ 4\ 9\ 5\ 10)$.
-    \item We first prove that $(ac, bc) = c(a, b)$. Let $d = (a, b)$ and $d' = (ac, bc)$. Then there exist $x, y \in \z$ such that $ax + by = d$. Then $acx + bcy = dc$. Since $d'$ is the smallest integer that is written of the form $acx' + bcy'$ for $x', y' \in \z$ (if there were any greater, then $d' \neq (ac, bc)$), then $d' \leq dc$. Moreover, $d \mid a$ and $d \mid b$ implies $cd \mid ac$ and $cd \mid bc$. Then $cd \mid d'$, or $cd \leq d'$. Then $dc = d'$, or $c(a, b) = (ac, dc)$.
+    \item We first prove that $(ac, bc) = c(a, b)$ for $a, b, c \in \z$.
+    \begin{lemma}
+        Let $d = (a, b)$ and $d' = (ac, bc)$. Then there exist $s, t \in \z$ such that $d = as + bt$. Consider $cd = acs + bct$. Then $d' = (ac, bc)$ implies that $d' \mid cd$. Since $d \mid a$ and $d \mid b$, then $cd \mid ac$ and $cd \mid bc$, so that $cd \mid (ac, bc) = d'$. Then $d' = cd$ or $d' = c(a, b)$.
+    \end{lemma}
     
-    Suppose there existed some $n$-cycle $\sigma$ and $k$ such that $\sigma^k = \tau$. Then $\sigma^{2k}(1) = 1$, or $2k \equiv 0 \bmod n$. Moreover, $\sigma^{3k}(3) = 3$, or that $3k \equiv 0 \bmod n$. Then $n \mid 2k$ and $n \mid 3k$ so that $n \mid (2k,3k)$. By the above, then $(2k, 3k) = k(2, 3) = k$, and $n \mid k$. But then $\sigma^k = (\sigma^n)^q = 1$, contradicting that $\sigma^k = \tau$.
+    Assume for contradiction that there exists an $n$-cycle $\sigma$ and $k$ such that $\sigma^k = \tau$. Then $\tau^2(1) = 1$, hence $\sigma^{2k}(1) = 1$, or $2k \equiv 0 \bmod n$. Moreover, $\tau^3(3) = 3$, hence $\sigma^{3k}(3) = 3$, or $3k \equiv 0 \bmod n$. Then $n \mid 2k$ and $n \mid 3k$, so that $n \mid (2k, 3k)$. By the lemma, $(2k, 3k) = k(2, 3) = k$, so that $n \mid k$. However, $\sigma^k \neq 1$, so $n \nmid k$. This is a contradiction, so there does not exist an $n$-cycle $\sigma$ such that $\sigma^k = \tau$.
 \end{solalph}
-
-\newpage
 
 \begin{exercise}\label{ex1.3.13}
     Show that an element has order 2 in $S_n$ if and only if its cycle decomposition is a product of commuting 2-cycles.
 \end{exercise}
 
 \begin{solitem}
-    \item [\rightimp] Let $\sigma \in S_n$ such that $\abs\sigma = 2$. Perform cycle decomposition on $\sigma$ to obtain a product of disjoint cycles. Let $(a_1\ a_2\ \ldots\ a_m)$ be one of the cycles. Since $\sigma \neq 1$, then $\sigma(a_1) = a_2$ and $\sigma^2(a_1) = a_3$. However, $\sigma^2 = 1$, so $\sigma^2(a_1) = a_1$ so that $a_1 = a_3$. Then $m \leq 2$, and the cycle is $(a_1\ a_2)$ so that any cycle in the cycle decomposition of $\sigma$ is of length 2.
+    \item [\rightimp] Let $\sigma \in S_n$ with $\abs\sigma = 2$. Let $(a_1\ a_2\ \ldots\ a_m)$ be one of the cycles in its cycle decomposition. Since $\sigma \neq \id$ and $\sigma^2 = 1$, then $\sigma(a_1) = a_2$ and $\sigma(a_2) = a_1$. Then $m = 2$, and the cycle is a 2-cycle.
     \item [\leftimp] Suppose $\sigma$'s cycle decomposition is a product of commuting 2-cycles $(a_1\ b_1)(a_2\ b_2) \ldots (a_k\ b_k)$. Since each 2-cycle has order 2, and the 2-cycles commute, then $\sigma^2 = \id$. Because $\sigma \neq \id$, then $\abs\sigma = 2$.
 \end{solitem}
 
@@ -1017,10 +965,10 @@ In each of Exercises 9 to 13 you can find the order of the group of rigid motion
 
 \begin{sol}
     \leavevmode
-    \begin{ifandonlyif}
-        \item [\rightimp] Let $\sigma \in S_n$ such that $\abs\sigma = p$. Perform cycle decomposition on $\sigma$ to obtain a product of disjoint cycles. Let $(a_1\ a_2\ \ldots\ a_m)$ be one of the cycles. Recall from \hyperref[ex1.3.12]{Exercise 1.3.12} (a) that for any $i$, $\sigma^i(a_1) = a_{1 + i}$, where $1 + i$ is replaced by its least residue mod $m$ when $1 + i > m$. Since $\sigma^p = 1$, then $\sigma^p(a_1) = a_1$, so that $a_{1 + p} = a_1$. It follows that $m \mid p$. Since $p$ is prime, then $m = 1$ or $m = p$. However, if $m = 1$, then the cycle is trivial and can be removed from the cycle decomposition. Then every cycle in the cycle decomposition of $\sigma$ has length $p$.
-        \item [\leftimp] Suppose $\sigma$'s cycle decomposition is a product of commuting $p$-cycles $\pi_1, \pi_2, \ldots, \pi_k$. For any $1 \leq t < p$, then $\pi_i^t \neq 1$ for all $i$. Then $\sigma^t = \pi_1^t \pi_2^t \ldots \pi_k^t \neq 1$. However, $\sigma^p = (\pi_1^p)(\pi_2^p) \ldots (\pi_k^p) = 1$. Then $\abs\sigma = p$.
-    \end{ifandonlyif}
+    \begin{itemize}
+        \item [\rightimp] Let $\sigma \in S_n$ with $\abs\sigma = p$. Let $(a_1\ a_2\ \ldots\ a_m)$ be one of the cycles in its cycle decomposition. By \hyperref[ex1.3.10]{Exercise 1.3.10}, we know $\sigma^i(a_i) = a_{1 + i}$ where $1 + i$ is taken mod $m$ when $1 + i > m$. Then $\sigma^p(a_1) = a_{1 + p} = a_1$, so that $m \mid p$. Since $p$ is prime, then either $m = 1$ or $m = p$. If $m = 1$, the cycle is trivial and can be omitted from the cycle decomposition. Then $m = p$, hence any cycle in the cycle decomposition of $\sigma$ is a $p$-cycle.
+        \item [\leftimp] Let $\sigma = \tau_1\tau_2 \ldots \tau_k$ be the cycle decomposition of $\sigma$, where each $\tau_i$ is a $p$-cycle. Since the cycles are disjoint, they commute. Moreover, $\tau_i^t$ is a non-trivial $p$-cycle for $t < p$ by \hyperref[ex1.3.11]{Exercise 1.3.11}. Then $\sigma^t = \tau_1^t\tau_2^t \ldots \tau_k^t$ is a product of non-trivial $p$-cycles for $t < p$, so that $\sigma^t \neq 1$. However, $\sigma^p = \tau_1^p\tau_2^p \ldots \tau_k^p = 1$, so that $\abs\sigma = p$.
+    \end{itemize}
     For a counterexample when $p$ is not prime, consider $\sigma = (1\ 2\ 3)(4\ 5)$ in $S_5$. Then $\abs\sigma = 6$, but the cycle decomposition consists of a 3-cycle and a 2-cycle.
 \end{sol}
 
@@ -1029,21 +977,13 @@ In each of Exercises 9 to 13 you can find the order of the group of rigid motion
 \end{exercise}
 
 \begin{sol}
-    Let $\sigma \in S_n$ have the cycle decomposition
-    \[\sigma = \pi_1\pi_2 \ldots \pi_k\]
-    where each $\pi_i$ is a disjoint cycle of length $m_i$. Note that since the cycles are disjoint, they commute. Then
-    \[\sigma^t = \pi_1^t \pi_2^t \ldots \pi_k^t\]
-    Suppose $|\sigma| = m$. Then $\sigma^m = \id$. Let $x$ be in some cycle $\pi_i$. Note that for all other $\pi_j$ where $j \neq i$, then $\pi_j$ fixes $x$. Then 
-    \[\sigma^m(x) = \pi_i^m(x) = x\]
-    so that $\pi_i^m = \id$. It follows that $m_i \mid m$ for all $i$, so $\lcm(m_1, m_2, \ldots, m_k) \mid m$. Morover, let $l = \lcm(m_1, m_2, \ldots, m_k)$. Then
-    \[\sigma^l = \pi_1^l \pi_2^l \ldots \pi_k^l = \id\]
-    so that $m \mid l$. It follows that $m = l$.
+    Let $\sigma \in S_n$ have cycle decomposition $\tau_1\tau_2 \ldots \tau_k$, where each $\tau_i$ is a cycle of length $m_i$. Then $\abs{\tau_i} = m_i$ by \hyperref[ex1.3.10]{Exercise 1.3.10}. Since the cycles are disjoint, they commute, so that $\sigma^t = \tau_1^t\tau_2^t \ldots \tau_k^t$. Then $\sigma^t = 1$ if and only if $\tau_i^t = 1$ for all $i$, which occurs if and only if $m_i \mid t$ for all $i$. Hence, the order of $\sigma$ is the least common multiple of the lengths of the cycles in its cycle decomposition.
 \end{sol}
 
-\begin{specialexercise}\label{ex1.3.16}
+\begin{specialexercise}[Order Formula]\label{ex1.3.16}
     Show that if $n \ge m$ then the number of $m$-cycles in $S_n$ is given by
     \[\frac{n(n-1)(n-2)\dots(n-m+1)}{m}.\]
-    [Count the number of ways of forming an $m$-cycle and divide by the number of representations of a particular $m$-cycle.]
+    \hint{Count the number of ways of forming an $m$-cycle and divide by the number of representations of a particular $m$-cycle.}
 \end{specialexercise}
 
 \begin{sol}
@@ -1051,11 +991,12 @@ In each of Exercises 9 to 13 you can find the order of the group of rigid motion
 \end{sol}
 
 \begin{exercise}\label{ex1.3.17}
-    Show that if $n \geq 4$ then the number of permutations in $S_n$ which are the product of two disjoint 2-cycles is $n(n - 1)(n - 2)(n - 3)/8$.
+    Show that if $n \geq 4$ then the number of permutations in $S_n$ which are the product of two disjoint 2-cycles is
+    \[\frac{n(n - 1)(n - 2)(n - 3)}{8}.\]
 \end{exercise}
 
 \begin{sol}
-    The first 2-cycle has $n(n - 1)/2$ choices, and the second 2-cycle has $(n - 2)(n - 3)/2$ choices. Moreover, there are 2 representations for the same set of 2-cycles, so multiply the above quantities and divide by 2 to obtain $n(n - 1)(n - 2)(n - 3)/8$.
+    The first 2-cycle has $n(n - 1)/2$ choices, and the second 2-cycle has $(n - 2)(n - 3)/2$ choices. Moreover, there are 2 representations for the same set of 2-cycles, so multiply the given quantities and divide by 2.
 \end{sol}
 
 \begin{exercise}\label{ex1.3.18}
@@ -1064,7 +1005,7 @@ In each of Exercises 9 to 13 you can find the order of the group of rigid motion
 \end{exercise}
 
 \begin{sol}
-    $S_5$ contains elements of order 1 through 5. Moreover, we can have a 2 and 3-cycle together whose lcm is 6. Then $n = 1, 2, 3, 4, 5, 6$.
+    $S_5$ contains elements of order 1 through 5. Moreover, we can have a 2 and 3-cycle together whose LCM is 6. Then $n = 1, 2, 3, 4, 5, 6$.
 \end{sol}
 
 \begin{exercise}\label{ex1.3.19}
@@ -1135,7 +1076,7 @@ Let $F$ be a field and let $n \in \zp$.
 \end{exercise}
 
 \begin{sol}
-    By direct calcuation, we obtain the following:
+    By direct calculation, we obtain the following:
     \[
     \begin{array}{c|c|c|c|c|c|c}
         A & 
@@ -1170,7 +1111,7 @@ Let $F$ be a field and let $n \in \zp$.
 \end{sol}
 
 \begin{exercise} \label{ex1.4.3}
-    Show that $\gl_2(\f_2)$ is non-abelian.
+    Show that $\gl_2(\f_2)$ is non-Abelian.
 \end{exercise}
 
 \begin{sol}
@@ -1212,7 +1153,7 @@ Let $F$ be a field and let $n \in \zp$.
         1 & 1
     \end{pmatrix}
     \]
-    Since the two products are not equal, then $\gl_2(\f_2)$ is non-abelian.
+    Since the two products are not equal, then $\gl_2(\f_2)$ is non-Abelian.
 \end{sol}
 
 \begin{exercise}\label{ex1.4.4}
@@ -1230,73 +1171,87 @@ Let $F$ be a field and let $n \in \zp$.
 \end{exercise}
 
 \begin{solitem}
-    \item [\rightimp] We proceed by contrapositive. Suppose $F$ has an infinite number of elements. Consider the set of matrices
-    \[S = \set{\alpha I \mid \alpha \in F\unt}\]
-    where $I$ is the identity matrix. It is clear that $S \subseteq \gl_n(F)$ since $\det(\alpha I) = \alpha^n \neq 0$ for all $\alpha \in F\unt$. Moreover, for $\alpha, \beta \in F\unt$ with $\alpha \neq \beta$, then $\alpha I \neq \beta I$, so that $S$ is infinite. It follows that $\gl_n(F)$ is infinite.
-    \item [\leftimp] Suppose $F$ has a finite number of elements, say $q$. Then each entry of a matrix in $\gl_n(F)$ has $q$ choices, and there are $n^2$ entries in total. Then the total number of matrices with entries from $F$ is $q^{n^2}$. Since $\gl_n(F)$ is a subset of these matrices, then $\gl_n(F)$ is finite.
+    \item [\rightimp] Proceeding by contrapositive, suppose $F$ has an infinite number of elements. If $I_n$ is the $n \times n$ identity matrix, then $\alpha I_n \in \gl_n(F)$ for all $\alpha \in F$. Since $F$ is infinite, then $\gl_n(F)$ is infinite.
+    \item [\leftimp] Suppose $|F| = q$. Then an $n \times n$ matrix over $F$ has $q^{n^2}$ possible entries. Since $\gl_n(F)$ is a subset of the set of all $n \times n$ matrices over $F$, then $\gl_n(F)$ is finite.
 \end{solitem}
 
 \begin{exercise}\label{ex1.4.6}
-    If $|F| = q$ is finite prove that $|\gl_n(F)| < q^{n^2}$.
+    If $|F| = q$ is finite, prove that $|\gl_n(F)| < q^{n^2}$.
 \end{exercise}
 
 \begin{sol}
-    See the right-to-left implication in the previous exercise.
+    See \leftimp in \hyperref[ex1.4.5]{Exercise 1.4.5}.
 \end{sol}
 
 \begin{exercise}\label{ex1.4.7}
     
-Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + p$ (do not just quote the order formula in this section). [Subtract the number of $2 \times 2$ matrices which are \textit{not} invertible from the total number of $2 \times 2$ matrices over $\f_p$. You may use the fact that a $2 \times 2$ matrix is not invertible if and only if one row is a multiple of the other.]
+Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + p$.
+
+\remark{Do not just quote the order formula in this section.}
+
+\hint{Subtract the number of $2 \times 2$ matrices which are \textit{not} invertible from the total number of $2 \times 2$ matrices over $\f_p$. You may use the fact that a $2 \times 2$ matrix is not invertible if and only if one row is a multiple of the other.}
 \end{exercise}
 
 \begin{sol}
-    Observe that the total number of $2 \times 2$ matrices over $\f_p$ is $p^4$ since each of the 4 entries has $p$ choices. Next, we count the number of non-invertible matrices. Using the given fact that a $2 \times 2$ matrix is not invertible if and only if one row is a multiple of the other, we may view a $2 \times 2$ matrix as the matrix $\begin{pmatrix} r_1 \\ r_2 \end{pmatrix}^T$ where $r_1$ and $r_2$ are the first and second rows respectively. Thus, this matrix is not invertible if and only if $r_2 = \alpha r_1$ for some $\alpha \in \f_p$. We have two cases:
+    Observe that there are $p^4$ total $2 \times 2$ matrices over $\f_p$. The number of non-invertible matrices is as follows:
     \begin{itemize}
-        \item If $r_1 = \b 0_{1 \times 2}$, then $r_2$ has $p^2$ choices as it has 2 entries with $p$ choices each.
-        \item If $r_1 \neq \b 0_{1 \times 2}$, then $r_1$ has $p^2 - 1$ choices (all possible rows except the zero row). For each such $r_1$, there are $p$ choices for $\alpha$, so $r_2$ has $p$ choices. Then there are $(p^2 - 1)p = p^3 - p$ such matrices.
+        \item If the first row is $(0, 0)$, then there are $p^2$ choices for the second row.
+        \item If the first row is $(a, b) \neq (0, 0)$, then there are $p$ choices for the second row, since it must be a multiple of the first row. There are $p^2 - 1$ choices for the first row.
     \end{itemize}
-    Then the total number of non-invertible matrices is $p^2 + p^3 - p = p^3 + p^2 - p$. Subtracting this from the total number of matrices, we obtain $|\gl_2(\f_p)| = p^4 - (p^3 + p^2 - p) = p^4 - p^3 - p^2 + p$.
+    Then the number of non-invertible matrices is $p^2 + p(p^2 - 1) = p^3 + p^2 - p$. Subtracting from the total number of matrices, we have the desired number.
 \end{sol}
 
 \begin{exercise}\label{ex1.4.8}
-    Show that $\gl_n(F)$ is non-abelian for any $n \geq 2$ and any $F$.
+    Show that $\gl_n(F)$ is non-Abelian for any $n \geq 2$ and any $F$.
 \end{exercise}
 
 \begin{sol}
-    Note that for any field $F$, the field $\f_2 = \set{0, 1}$ is a subset of $F$. We proceed with the proof over $\f_2$, which will imply the result for any field $F$.
-
-    We proceed by induction on $n$. For $n = 2$, see \hyperref[ex1.4.3]{Exercise 1.4.3}. Suppose that $\gl_n(\f_2)$ is non-abelian for some $n \geq 2$. Let $A, B \in \gl_{n + 1}(\f_2)$, and let $A_0, B_0 \in \gl_n(\f_2)$ be the top-left $n \times n$ block matrices of $A$ and $B$ respectively. Then
-    \[
-    AB = 
+    Consider the subset $S = \set{0, 1}$ of $F$. Then $\gl_n(S)$ is a subset of $\gl_n(F)$. We proceed by induction on this subset. For $n = 2$, we have $\gl_2(S)$ is non-Abelian by \hyperref[ex1.4.3]{Exercise 1.4.3}. Suppose that $\gl_n(S)$ is non-Abelian for some $n \geq 2$. Then there exist $A, B \in \gl_n(S)$ such that $AB \neq BA$. Consider the matrices
+    \[A_0 = 
     \begin{pmatrix}
-        A_0 & 0 \\
+        A & 0 \\
+        0 & 1
+    \end{pmatrix},
+    B_0 =
+    \begin{pmatrix}
+        B & 0 \\
+        0 & 1
+    \end{pmatrix} \in \gl_{n + 1}(S).\]
+    Then
+    \[A_0B_0 =
+    \begin{pmatrix}
+        A & 0 \\
         0 & 1
     \end{pmatrix}
     \begin{pmatrix}
-        B_0 & 0 \\
+        B & 0 \\
         0 & 1
-    \end{pmatrix} = 
+    \end{pmatrix} =
     \begin{pmatrix}
-        A_0B_0 & 0 \\
+        AB & 0 \\
         0 & 1
-    \end{pmatrix} \neq 
+    \end{pmatrix}\]
+    and
+    \[B_0A_0 =
     \begin{pmatrix}
-        B_0A_0 & 0 \\
+        B & 0 \\
         0 & 1
     \end{pmatrix}
     \begin{pmatrix}
-        B_0 & 0 \\
+        A & 0 \\
         0 & 1
-    \end{pmatrix}
+    \end{pmatrix} =
     \begin{pmatrix}
-        A_0 & 0 \\
+        BA & 0 \\
         0 & 1
-    \end{pmatrix} = BA\]
-    since $A_0B_0 \neq B_0A_0$ by the inductive hypothesis. Thus, $\gl_{n + 1}(\f_2)$ is non-abelian. By induction, $\gl_n(\f_2)$ is non-abelian for all $n \geq 2$, which implies that $\gl_n(F)$ is non-abelian for any field $F$.
+    \end{pmatrix}.\]
+    Since $AB \neq BA$, then $A_0B_0 \neq B_0A_0$. Hence, $\gl_{n + 1}(S)$ is non-Abelian. By induction, $\gl_n(S)$ is non-Abelian for all $n \geq 2$. Since $\gl_n(S) \subseteq \gl_n(F)$, then $\gl_n(F)$ is non-Abelian for all $n \geq 2$.
 \end{sol}
 
 \begin{exercise}\label{ex1.4.9}
     Prove that the binary operation of matrix multiplication of $2 \times 2$ matrices with real number entries is associative.
+
+    \authornote{Warning, annoyingly long and tedious.}
 \end{exercise}
 
 \begin{sol}
@@ -1307,36 +1262,36 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
             c & d
         \end{pmatrix}
         \begin{pmatrix}
-            a' & b' \\
-            c' & d'
+            i & j \\
+            k & \ell
         \end{pmatrix}
         \right]
         \begin{pmatrix}
-            a'' & b'' \\
-            c'' & d''
+            w & x \\
+            y & z
         \end{pmatrix} & = 
         \begin{pmatrix}
-            aa' + bc' & ab' +bd' \\
-            ca' + dc' & cb' + dd'
+            ai + bk & aj +b\ell \\
+            ci + dk & cj + d\ell
         \end{pmatrix}
         \begin{pmatrix}
-            a'' & b'' \\
-            c'' & d''
+            w & x \\
+            y & z
         \end{pmatrix} \\
         & = 
         \begin{pmatrix}
-            (aa'+ bc')a'' + (ab'+bd')c'' & (aa' + bc')b'' + (ab' + bd')d'' \\
-            (ca' + dc')a'' + (cb' + dd')c' & (ca' + dc')b'' + (cb' + dd')d''
+            (ai+ bk)w + (aj+b\ell)y & (ai + bk)x + (aj + b\ell)z \\
+            (ci + dk)w + (cj + d\ell)y & (ci + dk)x + (cj + d\ell)z
         \end{pmatrix} \\
         & = 
         \begin{pmatrix}
-            aa'a'' + bca'' + ab'c'' + bd'c'' & aa'b'' + bc'b'' + ab'd'' + bd'd'' \\
-            ca'a'' + dc'a'' + cb'c' + dd'c' & ca'b'' + dc'b'' + cb'd'' + dd'd''
+            aiw + bkw + ajy + b\ell y & aix + bkx + ajz + b\ell z \\
+            ciw + dkw + cjy + d\ell y & cix + dkx + cjz + d\ell z
         \end{pmatrix} \\
         & = 
         \begin{pmatrix}
-            a(a'a'' + b'c'') + b(c'a'' + d'c'') & a(a'b'' + b'd'') + b(c'b'' + d'd'') \\
-            c(a'a'' + b'c'') + d(c'a'' + d'c'') & c(a'b'' + b'd'') + d(c'b'' + d'd'')
+            a(iw + jy) + b(kw + \ell y) & a(ix + jz) + b(kx + \ell z) \\
+            c(iw + jy) + d(kw + \ell y) & c(ix + jz) + d(kx + \ell z)
         \end{pmatrix} \\
         & = 
         \begin{pmatrix}
@@ -1344,8 +1299,8 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
             c & d
         \end{pmatrix}
         \begin{pmatrix}
-            a'a''  + b'c'' & a'b'' + b'd'' \\
-            c'a'' + d'c'' & c'b'' + d'd''
+            iw  + jy & ix + jz \\
+            kw + \ell y & kx + \ell z
         \end{pmatrix} \\
         & = 
         \begin{pmatrix}
@@ -1354,12 +1309,12 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
         \end{pmatrix}
         \left[
         \begin{pmatrix}
-            a' & b' \\
-            c' & d'
+            i & j \\
+            k & \ell
         \end{pmatrix}
         \begin{pmatrix}
-            a'' & b'' \\
-            c'' & d''
+            w & x \\
+            y & z
         \end{pmatrix}
         \right] \qh
     \end{align*}
@@ -1462,8 +1417,8 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
         1 & a & b \\
         0 & 1 & c \\
         0 & 0 & 1
-    \end{pmatrix}\,\right|\, a, b, c \in F\right\}\]
-    called the \textit{Heisenberg group} over $F$. Let
+    \end{pmatrix}\,\right|\, a, b, c \in F\right\},\]
+    called the \textbf{Heisenberg group} over $F$. Let
     \[X = 
     \begin{pmatrix}
         1 & a & b \\
@@ -1477,14 +1432,16 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
     \end{pmatrix}\]
     be elements of $H(F)$.
     \begin{subproblems}
-        \item Compute the matrix product $XY$ and deduce that $H(F)$ is closed under matrix multiplication. Exhibit explicit matrices such that $XY \neq YX$ (so that $H(F)$ is always non-abelian).
+        \item Compute the matrix product $XY$ and deduce that $H(F)$ is closed under matrix multiplication. Exhibit explicit matrices such that $XY \neq YX$ (so that $H(F)$ is always non-Abelian).
         \item Find an explicit formula for the matrix inverse $X\inv$ and deduce that $H(F)$ is closed under inverses.
         \item Prove the associative law for $H(F)$ and deduce that $H(F)$ is a group of order $|F|^3$. (Do not assume that matrix multiplication is associative.)
         \item Find the order of each element of the finite group $H(\intmod[2])$.
-        \item Prove that every nonidentity of the group $H(\r)$ has infinite order.
+        
+        \authornote{This may inadvertently use the fact that the order of an element divides the order of the group, but the idea is that working in $\intmod[2]$ limits the number of cases to check.}
+        \item Prove that every non-identity of the group $H(\r)$ has infinite order.
     \end{subproblems}
+    \authornote{The choice of rewriting the matrix as a tuple is simply a time saver/ease of notation for the sake of computation. However, it does allow one to encode $H(F)$ in the multiplication law of the field.}
 \end{exercise}
-
 
 \begin{solalph}
     \item Calculating the product, we have
@@ -1527,103 +1484,37 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
         0 & 0 & 1
     \end{pmatrix}
     = BA\]
-    \item Using augmented matrices, we have
-    \[\left(\begin{array}{ccc|ccc}
-        1 & a & b & 1 & 0 & 0 \\
-        0 & 1 & c & 0 & 1 & 0 \\
-        0 & 0 & 1 & 0 & 0 & 1
-    \end{array}\right) \implies
-    \left(\begin{array}{ccc|ccc}
-        1 & 0 & 0 & 1 & -a & ac - b \\
-        0 & 1 & 0 & 0 & 1 & -c \\
-        0 & 0 & 1 & 0 & 0 & 1
-    \end{array}\right)\]
-    Calling the right matrix $Z$, it is easy to see that $XZ = ZX = I_3$, hence $Z  = X\inv$.
-    \item It is clear that each of $a, b, c$ has $|F|$ choices, so that there are $|F|^3$ elements in $H(F)$. Moreover:
-    \begin{align*}
-        \left[\begin{pmatrix}
-            1 & a & b \\
-            0 & 1 & c \\
-            0 & 0 & 1
-        \end{pmatrix}
-        \begin{pmatrix}
-            1 & d & e \\
-            0 & 1 & f \\
-            0 & 0 & 1
-        \end{pmatrix}\right]
-        \begin{pmatrix}
-            1 & g & h \\
-            0 & 1 & i \\
-            0 & 0 & 1
-        \end{pmatrix} & = 
-        \begin{pmatrix}
-            1 & a + d & af + b + e \\
-            0 & 1 & c + f \\
-            0 & 0 & 1
-        \end{pmatrix}
-        \begin{pmatrix}
-            1 & g & h \\
-            0 & 1 & i \\
-            0 & 0 & 1
-        \end{pmatrix} \\
-        & = 
-        \begin{pmatrix}
-            1 & a + d + g & ai + ad + af + b + e + h \\
-            0 & 1 & c + f + i \\
-            0 & 0 & 1
-        \end{pmatrix} \\
-        & = 
-        \begin{pmatrix}
-            1 & a & b \\
-            0 & 1 & c \\
-            0 & 0 & 1
-        \end{pmatrix}
-        \begin{pmatrix}
-            1 & d + g & di + e + h \\
-            0 & 1 & f + i \\
-            0 & 0 & 1
-        \end{pmatrix} \\
-        & = 
-        \begin{pmatrix}
-            1 & a & b \\
-            0 & 1 & c \\
-            0 & 0 & 1
-        \end{pmatrix}
-        \left[\begin{pmatrix}
-            1 & d & e \\
-            0 & 1 & f \\
-            0 & 0 & 1
-        \end{pmatrix}
-        \begin{pmatrix}
-            1 & g & h \\
-            0 & 1 & i \\
-            0 & 0 & 1
-        \end{pmatrix}\right]
-    \end{align*}
-    \item Denote a matrix in $H(\intmod[2])$ as $(a, b, c)$, where $a, b, c \in \intmod[2]$. We may view matrix multiplication in $H(\intmod[2])$ as
+    \item From part (a), we know $G$ is closed under matrix multiplication. For ease of notation, represent a matrix as a tuple: $X = (a, b, c)$ and $Y = (d, e, f)$. Then we may represent matrix multiplication in $H(F)$ as
     \[(a, b, c)(d, e, f) = (a + d, af + b + e, c + f)\]
-    Moreover, we identify the identity matrix as $(0, 0, 0)$. Lastly, the elements of $H(\intmod[2])$ are
-    \[
-    (0, 0, 0), (1, 0, 0), (0, 1, 0), (0, 0, 1), (1, 1, 0), (1, 0, 1), (0, 1, 1), (1, 1, 1)\]
-    Noting that $(a, b, c)^2 = (2a, ac + 2b, 2c) = (0, ac, 0)$ in $\intmod[2]$, we may consider two cases instead of computing the order of each element directly:
-    \begin{itemize}
-        \item If $ac = 0$, then at least one of $a$ or $c$ is 0, while $b$ varies. These are the matrices
-        \[(0, 0, 0), (1, 0, 0), (0, 1, 0), (0, 0, 1), (1, 1, 0), (1, 0, 1), (0, 1, 1)\]
-        Except for the identity matrix which has order 1, squaring any of these matrices results in $(0, 0, 0)$ so that they all have order 2.
-        \item If $ac = 1$, then both $a$ and $c$ are 1, while $b$ varies. These are the matrices
-        \[(1, 0, 1), (1, 1, 1)\]
-        The square of either matrix is $(0, 1, 0)$, which has order 2. Then the matrices have order 4.
-    \end{itemize}
-    \item Utilizing the same formulation as in part (d), let $A = (a, b, c) \in H(\r)$. We prove that
-    $$(a, b, c)^n = (na, n(n - 1)ac/2 + nb, nc)$$
-    To that end, it is clear that $n = 1$ holds true. Suppose it holds for some $n$. Then for $n + 1$, we have
+    Now we want to find $(x, y, z)$ such that $(a, b, c)(x, y, z) = (0, 0, 0)$. Then $(a + x, az + b + y, c + z) = (0, 0, 0)$ implies $x = -a$, $y = -b + ac$, and $z = -c$. It follows that $X\inv = (-a, -b + ac, -c)$.
+    \item For some $(a, b, c) \in H(F)$, we know that there are $|F|$ choices for each of $a, b, c$. Then $|H(F)| = |F|^3$. Now let $(a, b, c), (d, e, f), (g, h, i) \in H(F)$. Then we have
     \begin{align*}
-        (a, b, c)^{n + 1} & = (a, b, c)^n(a, b, c) \\
-        & = (na, n(n - 1)ac/2 + nb, nc)(a, b, c) \\
-        & = (na + a, (na)c + n(n - 1)ac/2 + nb + b, nc + c) \\
-        & = ((n + 1)a, n(n + 1)ac/2 + (n + 1)b, (n + 1)c)
+        ((a, b, c)(d, e, f))(g, h, i) & = (a + d, af + b + e, c + f)(g, h, i) \\
+        & = (a + d + g, (a + d)i + af + b + e + h, c + f + i) \\
+        & = (a + d + g, ai + di + af + b + e + h, c + f + i) \\
+        & = (a, b, c)(d + g, e + h, f + i) \\
+        & = (a, b, c)((d, e, f)(g, h, i))
     \end{align*}
-    so that the relationship is true by induction. Since $A \neq I$, then at least one of $a, b, c$ must be nonzero. It is clear that if $a \neq 0$ or $c \neq 0$, then $A^n \neq I$ for all $n \in \zp$. If $a = c = 0$, then $b \neq 0$, and we have $(0, b, 0)^n = (0, nb, 0)$. Since $b \neq 0$, then $nb \neq 0$ for all $n \in \zp$, so that $(0, b, 0)^n \neq I$ for all $n \in \zp$. Thus, every nonidentity of the group $H(\r)$ has infinite order.
+    \item The elements of $H(\intmod[2])$ are
+    \[ (0, 0, 0), (1, 0, 0), (0, 1, 0), (0, 0, 1), (1, 1, 0), (1, 0, 1), (0, 1, 1), (1, 1, 1).\]
+    Since $(a, b, c)^2 = (2a, 2b + ac, 2c) = (0, ac, 0)$ in $\intmod[2]$, then we have two cases:
+    \begin{itemize}
+        \item If $ac = 0$, then at least one of $a$ or $c$ is 0, while $b$ varies. These are the matrices that have order 2:
+        \[(0, 0, 0), (1, 0, 0), (0, 1, 0), (0, 0, 1), (1, 1, 0), (1, 0, 1), (0, 1, 1).\]
+        \item If $ac = 1$, then both $a$ and $c$ are 1, while $b$ varies. These are the matrices that have order 4:
+        \[(1, 0, 1), (1, 1, 1).\]
+    \end{itemize}
+    \item Let $X \in H(\r)$ be non-identity. We first prove via induction that
+    \[X^n = (na, na(n - 1)/2 + nb, nc)\]
+    for all $n \in \zp$. The base case is trivial. Now suppose that the formula holds for some $n \in \zp$. Then
+    \begin{align*}
+        X^{n + 1} & = (a, b, c)^n(a, b, c) \\
+        & = (na, na(n - 1)/2 + nb, nc)(a, b, c) \\
+        & = (na + a, na(n - 1)/2 + nb + nc + b, nc + c) \\
+        & = ((n + 1)a, na(n - 1)/2 + nb + nc + b, (n + 1)c) \\
+        & = ((n + 1)a, (n + 1)na/2 + (n + 1)b, (n + 1)c)
+    \end{align*}
+    Then the formula holds for $n + 1$. By induction, the formula holds for all $n \in \zp$. Since $X \neq I_3$, then at least one of $a, b, c$ is nonzero. It is clear that $a \neq 0$ or $c \neq 0$ implies $X^n \neq I_3$. Now suppose $a = c = 0$ and $b \neq 0$. Then $X^n = (0, nb, 0)$. Since $b \neq 0$, then $nb \neq 0$ for all $n \in \zp$. Hence, $X^n \neq I_3$ for all $n \in \zp$. Therefore, every non-identity element of $H(\r)$ has infinite order.
 \end{solalph}
 
 \newpage
@@ -1647,7 +1538,9 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
 \end{exercise}
 
 \begin{sol}
-    $S_3$:
+    \leavevmode
+
+    \noindent $S_3$:
     \[\begin{array}{c|c|c|c|c|c|c}
         \circ & 1 & (1\ 2) & (1\ 3) & (2\ 3) & (1\ 2\ 3) & (1\ 3\ 2) \\
         \hline
@@ -1691,8 +1584,7 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
 \end{exercise}
 
 \begin{sol}
-    An extra relation is necessary to intertwine $i, j, k$ together, so a presentation for $Q_8$ is:
-    \[Q_8 = \gen{-1, i, j, k \mid i^2 = j^2 = k^2 = ijk = -1} \qh\]
+    $\gen{i, j \mid i^4 = 1, i^2 = j^2, ij = -ji}$.
 \end{sol}
 
 \newpage
@@ -1708,19 +1600,17 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
 \end{exercise}
 
 \begin{solalph}
-    \item We proceed by induction on $n$. For $n = 1$, the result holds. Suppose it holds for some $n \in \zp$. Then for $n + 1$, we have
-    \[\phi(x^{n + 1}) = \phi(x^n x) = \phi(x^n)\phi(x) = \phi(x)^n \phi(x) = \phi(x)^{n + 1}\]
-    so that the result holds by induction.
-    \item We first show that the result holds for $n = 0$, i.e., identities map to identities. Let $1_G$ and $1_H$ be the identities of $G$ and $H$ respectively. Then
-    \[\phi(1_G) = \phi(1_G \cdot 1_G) = \phi(1_G)\phi(1_G)\]
-    so that multiplying both sides on the left by $\phi(1_G)\inv$ yields $\phi(1_G) = 1_H$. Let $x \in G$. Then for $n = -1$, we have
+    \item Inducting on $n$, the base case of $n = 1$ is trivial. Suppose that the result holds for some $n \in \zp$. Then
+    \[\phi(x^{n + 1}) = \phi(x^nx) = \phi(x^n)\phi(x) = \phi(x)^n\phi(x) = \phi(x)^{n + 1}.\]
+    \item Let $1_G$ and $1_H$ be the identity elements of $G$ and $H$, respectively. Then for $n = 0$, we have
+    \[1_H = \phi(1_G) = \phi(1_G \cdot 1_G) = \phi(1_G)\phi(1_G)\]
+    so that $\phi(1_G) = 1_H$. For $n = -1$ and $x \in G$, we have
     \[1_H = \phi(1_G) = \phi(xx\inv) = \phi(x)\phi(x\inv)\]
-    Left multiplying both sides by $\phi(x)\inv$ yields $\phi(x\inv) = \phi(x)\inv$. Finally, for $n < -1$, we have
-    \[\phi(x^n) = \phi(x\inv)^{-n} = \phi(x)^{-n} = \phi(x)^n\]
-    so that the result holds for all $n \in \z$.
+    so that $\phi(x\inv) = \phi(x)\inv$. Then for $n < -1$, we have
+    \[\phi(x^n) = \phi((x\inv)^{-n}) = \phi(x\inv)^{-n} = \phi(x)^{-n} = \phi(x)^n. \qh\]
 \end{solalph}
 
-\begin{specialexercise} \label{ex1.6.2}
+\begin{specialexercise}[Isomorphisms Preserve Order] \label{ex1.6.2}
     If $\phi : G \to H$ is an isomorphism, prove that $|\phi(x)| = |x|$ for all $x \in G$. Deduce that any two isomorphic groups have the same number of elements of order $n$ for each $n \in \z^+$. Is the result true if $\phi$ is only assumed to be a homomorphism?
 \end{specialexercise}
 
@@ -1729,30 +1619,26 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
     \[1_H = \phi(1_G) = \phi(x^m) = \phi(x)^m\]
     so that $n \leq m$. Similarly,
     \[1_G = \phi\inv(1_H) = \phi\inv(\phi(x)^n) = x^n\]
-    so that $m \leq n$. It follows that $m = n$, i.e., $|\phi(x)| = |x|$.
-    
-    Assume, by way of contradiction and without loss of generality that $x$ has infinite order in $G$ but $\phi(x)$ has finite order in $H$. Then by the above result, $|\phi(x)| = |x|$ implies that $x$ must also have finite order, a contradiction. Thus, both $x$ and $\phi(x)$ both must have either finite or infinite order. Moreover, for any $n \in \z^+$, the number of elements of order $n$ in $G$ must equal the number of elements of order $n$ in $H$ since $\phi$ is bijective and preserves order.
+    so that $m \leq n$. It follows that $m = n$, i.e., $|\phi(x)| = |x|$. In particular, this shows that both $x$ and $\phi(x)$ both have either finite or infinite order. Moreover, since $\phi$ is bijective, it must be bijective between the elements of order $n$ in $G$ and the elements of order $n$ in $H$. Hence, any two isomorphic groups have the same number of elements of order $n$ for each $n \in \z^+$.
 
-    The result does not always hold if $\phi$ is only a homomorphism. Let $G$ be any group, and let $H$ be the trivial group. Consider the mapping $\phi : G \to H$ defined by $\phi(g) = 1_H$ for all $g \in G$. Clearly, $\phi$ is a homomorphism, but all elements of $H$ have order 1, while $G$ may have elements of various orders.
+    The result is not true if $\phi$ is only assumed to be a homomorphism: the map $\phi : G \to 1$ is a homomorphism for any group $G$, but $G$ may have elements of various orders while $1$ has only the identity element of order 1.
 \end{sol}
 
-\newpage
-
 \begin{exercise}\label{ex1.6.3}
-    If $\phi : G \to H$ is an isomorphism, prove that $G$ is abelian if and only if $H$ is abelian. If $\phi : G \to H$ is a homomorphism, what additional conditions on $\phi$ (if any) are sufficient to ensure that if $G$ is abelian, then so is $H$?
+    If $\phi : G \to H$ is an isomorphism, prove that $G$ is Abelian if and only if $H$ is Abelian. If $\phi : G \to H$ is a homomorphism, what additional conditions on $\phi$ (if any) are sufficient to ensure that if $G$ is Abelian, then so is $H$?
 \end{exercise}
 
 \begin{sol}
-    Since $\phi$ is bijective, then $\phi\inv$ exists and is also an isomorphism. 
-    \begin{ifandonlyif}
-        \item [\rightimp] Suppose $G$ is abelian. Then for any $h_1, h_2 \in H$, there exists $g_1, g_2 \in G$ such that $g_1 = \phi\inv(h_1)$ and $g_2 = \phi\inv(h_2)$. Then
-        \[h_1h_2 = \phi(g_1)\phi(g_2) = \phi(g_1g_2) = \phi(g_2g_1) = \phi(g_2)\phi(g_1) = h_2h_1\]
-        so that $H$ is abelian.
-        \item [\leftimp] Suppose $H$ is abelian. Then for any $g_1, g_2 \in G$, there exists $h_1, h_2 \in H$ such that $h_1 = \phi(g_1)$ and $h_2 = \phi(g_2)$. Then
-        \[g_1g_2 = \phi\inv(h_1)\phi\inv(h_2) = \phi\inv(h_1h_2) = \phi\inv(h_2h_1) = \phi\inv(h_2)\phi\inv(h_1) = g_2g_1\]
-        so that $G$ is abelian.
-    \end{ifandonlyif}
-    To see what conditions are sufficient for the homomorphism to imply that its codomain is abelian if its domain is abelian, let $\phi : G \to H$ be a homomorphism. Then for $h_1, h_2 \in H$, then see by the previous proof that if there exists $g_1, g_2 \in G$ such that $h_1 = \phi(g_1)$ and $h_2 = \phi(g_2)$, then $H$ is abelian whenever $G$ is abelian. Thus, it suffices to ensure that such $g_1$ and $g_2$ always exist, which is true if $\phi$ is surjective. Hence, we may deduce that to ensure that if $G$ is abelian, then so is $H$, it suffices to require that $\phi$ is surjective.
+    Note that $\phi$ is bijective, hence $\phi\inv$ exists and is also an isomorphism.
+    \begin{itemize}
+        \item [\rightimp] Suppose that $G$ is Abelian. Then for $h_1 = \phi(g_1), h_2 = \phi(g_2) \in H$ for some $g_1, g_2 \in G$, we have
+        \[h_1h_2 = \phi(g_1)\phi(g_2) = \phi(g_1g_2) = \phi(g_2g_1) = \phi(g_2)\phi(g_1) = h_2h_1.\]
+        Hence, $H$ is Abelian.
+        \item [\leftimp] Suppose that $H$ is Abelian. Then for $g_1 = \phi\inv(h_1), g_2 = \phi\inv(h_2) \in G$ for some $h_1, h_2 \in H$, we have
+        \[g_1g_2 = \phi\inv(h_1)\phi\inv(h_2) = \phi\inv(h_1h_2) = \phi\inv(h_2h_1) = \phi\inv(h_2)\phi\inv(h_1) = g_2g_1.\]
+        Hence, $G$ is Abelian.
+    \end{itemize}
+    Let $\phi : G \to H$ be a homomorphism. In the \rightimp direction, observe that the only property of $\phi$ used was its surjectivity to guarantee the existence of $g_1$ and $g_2$ such that $\phi(g_1) = h_1$ and $\phi(g_2) = h_2$. Hence, if $\phi$ is surjective, then $H$ is Abelian whenever $G$ is Abelian.
 \end{sol}
 
 \begin{exercise}\label{ex1.6.4}
@@ -1760,7 +1646,7 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
 \end{exercise}
 
 \begin{sol}
-    Note that $i \in C \nz$ has order 4, but there is no element in $\r \nz$ that has order 4.
+    Note that $i \in \c \nz$ has order 4, but there is no element in $\r \nz$ that has order 4.
 \end{sol}
 
 \begin{exercise}\label{ex1.6.5}
@@ -1768,7 +1654,7 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
 \end{exercise}
 
 \begin{sol}
-    Since $\r$ is uncountable while $\q$ is countable, there cannot exist a bijection between the two groups, hence they cannot be isomorphic.
+    $\r$ is uncountable, while $\q$ is countable. But bijections preserve cardinality.
 \end{sol}
 
 \begin{exercise}\label{ex1.6.6}
@@ -1776,7 +1662,7 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
 \end{exercise}
 
 \begin{sol}
-    For every $n \in \z$, there exists no $x \in \z$ such that $nx = 0$. However, for every $q \in \q$ of the form $1/k$ for some $k \in \z$ with $k \neq 0$, we have $kq = 0$. Thus, there cannot exist a bijection between the two groups that preserves addition, hence they cannot be isomorphic.
+    Every nonzero element of $\z$ has infinite order. However, $1/k \in \q$ has order $k$.
 \end{sol}
 
 \begin{exercise}\label{ex1.6.7}
@@ -1800,7 +1686,7 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
 \end{exercise}
 
 \begin{sol}
-    $D_{24}$ has elements of order 12 (e.g. $r$) but $S_4$ has no elements of order 12, since every element of $S_4$ is either a 2-cycle, 3-cycle, 4-cycle, or a combination of 2-cycles.
+    $D_{24}$ has elements of order 12, but $S_4$ does not.
 \end{sol}
 
 \begin{exercise} \label{ex1.6.10}
@@ -1814,11 +1700,15 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
         \item Prove that $\phi$ is a bijection from $S_\Delta$ onto $S_\Omega$ by finding a two-sided inverse for $\phi$.
         \item Prove that $\phi$ is a homomorphism, that is, $\phi(\sigma \circ \tau) = \phi(\sigma) \circ \phi(\tau)$.
     \end{subproblems}
-    Note the similarity to the change of basis or similarity transformations for matrices (we shall see the connections between these later in the text).
+    \remark{Note the similarity to the change of basis or similarity transformations for matrices (we shall see the connections between these later in the text)}.
 \end{exercise}
 
 \begin{solalph}
-    \item We show that a composition of bijections is a bijection. Let $A, B, C$ be nonempty sets, and let $f : A \to B$ and $g : B \to C$ be bijections. We show that $g \circ f : A \to C$ is a bijection. For injectivity, let $a_1, a_2 \in A$ such that $(g \circ f)(a_1) = (g \circ f)(a_2)$. Then $g(f(a_1)) = g(f(a_2))$, and since $g$ is injective, then $f(a_1) = f(a_2)$. Since $f$ is also injective, then $a_1 = a_2$. For surjectivity, let $c \in C$. Since $g$ is surjective, there exists some $b \in B$ such that $g(b) = c$. Since $f$ is surjective, there exists some $a \in A$ such that $f(a) = b$. Then $(g \circ f)(a) = g(f(a)) = g(b) = c$. Hence, $g \circ f$ is a bijection.
+    \item We first prove that a composition of bijections is a bijection.
+    
+    \begin{lemma}
+        Let $A, B, C$ be nonempty sets, and let $f : A \to B$ and $g : B \to C$ be bijections. Clearly, $g \circ f : A \to C$ is well-defined. Let $a_1, a_2 \in A$ such that $(g \circ f)(a_1) = (g \circ f)(a_2)$. Then $g(f(a_1)) = g(f(a_2))$, and since $g$ is injective, then $f(a_1) = f(a_2)$. Since $f$ is injective, then $a_1 = a_2$. Hence, $g \circ f$ is injective. Now let $c \in C$. Since $g$ is surjective, there exists $b \in B$ such that $g(b) = c$. Since $f$ is surjective, there exists $a \in A$ such that $f(a) = b$. Then $(g \circ f)(a) = g(f(a)) = g(b) = c$, so that $g \circ f$ is surjective. Therefore, $g \circ f$ is a bijection.
+    \end{lemma}
     
     Now, by assumption, $\theta : \Delta \to \Omega$ is a bijection, and since $\sigma : \Delta \to \Delta$ is also a bijection, then by the above result, $\theta \circ \sigma : \Delta \to \Omega$ is a bijection. Finally, since $\theta\inv : \Omega \to \Delta$ is a bijection, then by the above result again, $\theta \circ \sigma \circ \theta\inv : \Omega \to \Omega$ is a bijection. Hence, $\phi$ is well-defined.
     \item Consider the mapping 
@@ -1832,8 +1722,6 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
     \[\phi(\sigma \circ \tau) = \theta \circ (\sigma \circ \tau) \circ \theta\inv = (\theta \circ \sigma) \circ (\tau \circ \theta\inv) = (\theta \circ \sigma \circ \theta\inv) \circ (\theta \circ \tau \circ \theta\inv) = \phi(\sigma) \circ \phi(\tau)\]
     so that $\phi$ is a homomorphism. By the above, $\phi$ is an isomorphism, and hence $S_\Delta \cong S_\Omega$.
 \end{solalph}
-
-\newpage
 
 \begin{exercise}\label{ex1.6.11}
     Let $A$ and $B$ be groups. Prove that $A \times B \cong B \times A$.
@@ -1857,42 +1745,38 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
     for all $a \in A$, $b \in B$, and $c \in C$. The proof is similar to the previous exercise, hence we omit the details to conclude that $\phi$ is an isomorphism and $G \times C \cong A \times H$.
 \end{sol}
 
-\begin{specialexercise} \label{ex1.6.13}
+\begin{specialexercise}[Soire\'e Into the Isomorphism Theorems] \label{ex1.6.13}
     Let $G$ and $H$ be groups and let $\phi : G \to H$ be a homomorphism. Prove that the image of $\phi$, $\phi(G)$, is a subgroup of $H$ (cf. \hyperref[ex1.1.26]{Exercise 1.1.26}). Prove that if $\phi$ is injective then $G \cong \phi(G)$.
 \end{specialexercise}
 
 \begin{sol}
-    We first show that $\phi(G) = \{\phi(g) \mid g \in G\}$ is a subgroup of $H$. Note that $1_H = \phi(1_G) \in \phi(G)$ so that it is nonempty. To show closure, let $h_1, h_2 \in \phi(G)$. Then there exists $g_1, g_2 \in G$ such that $h_1 = \phi(g_1)$ and $h_2 = \phi(g_2)$. Then
+    Observe that $1_H \in \phi(G)$ since $\phi(1_G) = 1_H$, so that $\phi(G)$ is nonempty. To show closure, let $h_1, h_2 \in \phi(G)$. Then there exist $g_1, g_2 \in G$ such that $\phi(g_1) = h_1$ and $\phi(g_2) = h_2$. Then
     \[h_1h_2 = \phi(g_1)\phi(g_2) = \phi(g_1g_2) \in \phi(G)\]
-    so that $\phi(G)$ is closed under the group operation of $H$. Finally, for any $h \in \phi(G)$, there exists some $g \in G$ such that $h = \phi(g)$. Then
-    \[h\inv = \phi(g)\inv = \phi(g\inv) \in \phi(G)\]
-    so that $\phi(G)$ is closed under taking inverses. Therefore, $\phi(G)$ is a subgroup of $H$.
+    so that $h_1h_2 \in \phi(G)$. Finally,
+    \[h_1\inv = \phi(g_1)\inv = \phi(g_1\inv) \in \phi(G)\]
+    so that $h_1\inv \in \phi(G)$. Therefore, $\phi(G)$ is a subgroup of $H$.
 
-    Now suppose $\phi$ is injective. Consider the mapping
+    Suppose $\phi$ is injective. Then the mapping
     \[\psi : G \to \phi(G) \quad \text{by} \quad g \mapsto \phi(g)\]
-    for all $g \in G$. For any $g_1, g_2 \in G$, we have
+    is well-defined. For any $g_1, g_2 \in G$,
     \[\psi(g_1g_2) = \phi(g_1g_2) = \phi(g_1)\phi(g_2) = \psi(g_1)\psi(g_2)\]
-    so that $\psi$ is a homomorphism. Moreover, suppose $g_1, g_2 \in G$ are such that $\psi(g_1) = \psi(g_2)$. Then $\phi(g_1) = \phi(g_2)$, and since $\phi$ is injective, then $g_1 = g_2$. Hence, $\psi$ is injective. Finally, for any $h \in \phi(G)$, there exists some $g \in G$ such that $h = \phi(g) = \psi(g)$ so that $\psi$ is surjective. Therefore, $\psi$ is an isomorphism and $G \cong \phi(G)$.
+    so that $\psi$ is a homomorphism. Moreover, if $\psi(g_1) = \psi(g_2)$, then $\phi(g_1) = \phi(g_2)$, and since $\phi$ is injective, $g_1 = g_2$. Hence, $\psi$ is injective. For any $h \in \phi(G)$, there exists $g \in G$ such that $\phi(g) = h$, and hence $\psi(g) = h$. Therefore, $\psi$ is surjective, hence $\psi$ is an isomorphism and $G \cong \phi(G)$.
 \end{sol}
 
-\newpage
-
-\begin{specialexercise} \label{ex1.6.14}
-    Let $G$ and $H$ be groups and let $\phi : G \to H$ be a homomorphism. Define the \emph{kernel} of $\phi$ to be $\{ g \in G \mid \phi(g) = 1_H \}$ (so the kernel is the set of elements in $G$ which map to the identity of $H$, i.e., is the fiber over the identity of $H$). Prove that the kernel of $\phi$ is a subgroup of $G$. Prove that $\phi$ is injective if and only if the kernel of $\phi$ is the identity subgroup of $G$.
+\begin{specialexercise}[Kernels] \label{ex1.6.14}
+    Let $G$ and $H$ be groups and let $\phi : G \to H$ be a homomorphism. Define the \textbf{kernel} of $\phi$ to be $\{ g \in G \mid \phi(g) = 1_H \}$ (so the kernel is the set of elements in $G$ which map to the identity of $H$, i.e., is the fiber over the identity of $H$). Prove that the kernel of $\phi$ is a subgroup of $G$. Prove that $\phi$ is injective if and only if the kernel of $\phi$ is the identity subgroup of $G$.
 \end{specialexercise}
 
 \begin{sol}
-    Let $\ker\phi$ denote the kernel of $\phi$. Note that $1_G \in \ker\phi$ since $\phi(1_G) = 1_H$, so that $\ker\phi$ is nonempty. To show closure, let $g_1, g_2 \in \ker\phi$. Then
-    \[\phi(g_1g_2) = \phi(g_1)\phi(g_2) = 1_H 1_H = 1_H\]
-    so that $g_1g_2 \in \ker\phi$. Finally, for any $g \in \ker\phi$, we have
-    \[\phi(g\inv) = \phi(g)\inv = 1_H\inv = 1_H\]
-    so that $g\inv \in \ker\phi$. Therefore, $\ker\phi$ is a subgroup of $G$.
-    \begin{ifandonlyif}
-        \item [\rightimp] Suppose $\phi$ is injective. Let $g \in \ker\phi$. Then $\phi(g) = 1_H = \phi(1_G)$, and since $\phi$ is injective, then $g = 1_G$. Hence, $\ker\phi = \{1_G\}$.
-        \item [\leftimp] Suppose $\ker\phi = \{1_G\}$. Let $g_1, g_2 \in G$ be such that $\phi(g_1) = \phi(g_2)$. Then
-        \[1_H = \phi(g_1)\phi(g_2)\inv = \phi(g_1g_2\inv)\]
-        so that $g_1g_2\inv \in \ker\phi$. By assumption, then $g_1g_2\inv = 1_G$, and hence $g_1 = g_2$. Therefore, $\phi$ is injective.
-    \end{ifandonlyif}
+    Denote the kernel of $\phi$ by $\ker\phi$. Since $\phi(1_G) = 1_H$, then $1_G \in \ker\phi$, so that $\ker\phi$ is nonempty. To show closure, let $g_1, g_2 \in \ker\phi$. Then
+    \[\phi(g_1g_2) = \phi(g_1)\phi(g_2) = 1_H1_H = 1_H\]
+    so that $g_1g_2 \in \ker\phi$. Finally,
+    \[\phi(g_1\inv) = \phi(g_1)\inv = 1_H\inv = 1_H\]
+    so that $g_1\inv \in \ker\phi$. Therefore, $\ker\phi$ is a subgroup of $G$.
+    \begin{itemize}
+        \item [\rightimp] If $\phi$ is injective, then for $g \in \ker\phi$, we have $\phi(g) = 1_H = \phi(1_G)$. Then $g = 1_G$, so that $\ker\phi = \{1_G\}$.
+        \item [\leftimp] If $\ker\phi = \{1_G\}$, then for $g_1, g_2 \in G$, if $\phi(g_1) = \phi(g_2)$, we have $\phi(g_1)\phi(g_2)\inv = 1_H$, so $g_1g_2\inv \in \ker\phi$. Hence, $g_1g_2\inv = 1_G$, and thus $g_1 = g_2$. Therefore, $\phi$ is injective. \qh
+    \end{itemize}
 \end{sol}
 
 \begin{exercise}\label{ex1.6.15}
@@ -1911,68 +1795,53 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
 \end{exercise}
 
 \begin{sol}
-    For any $(a_1, b_1), (a_2, b_2) \in G$, we have
-    \[\pi_1((a_1, b_1)(a_2, b_2)) = \pi_1((a_1a_2, b_1b_2)) = a_1a_2 = \pi_1((a_1, b_1))\pi_1((a_2, b_2))\]
-    and
-    \[\pi_2((a_1, b_1)(a_2, b_2)) = \pi_2((a_1a_2, b_1b_2)) = b_1b_2 = \pi_2((a_1, b_1))\pi_2((a_2, b_2))\]
-    so that both $\pi_1$ and $\pi_2$ are homomorphisms. Moreover, if $(a, b) \in \ker(\pi_1)$, then $\pi_1((a, b)) = a = 1_A$. Also, if $(a, b) \in \ker(\pi_2)$, then $\pi_2((a, b)) = b = 1_B$. Hence,
-    \[\ker(\pi_1) = \{(1_A, b) \mid b \in B\} \quad \text{and} \quad \ker(\pi_2) = \{(a, 1_B) \mid a \in A\} \qh\]
+    The proof is similar to the previous exercise, hence we omit the details to conclude that $\pi_1$ and $\pi_2$ are homomorphisms. Moreover, if $(a, b) \in \ker(\pi_1)$, then $\pi_1((a, b)) = a = 1_A$. If $(a, b) \in \ker(\pi_2)$, then $\pi_2((a, b)) = b = 1_B$. Hence,
+    \[\ker(\pi_1) = \{(1_A, b) \mid b \in B\}, \quad \text{and} \quad \ker(\pi_2) = \{(a, 1_B) \mid a \in A\} \qh\]
 \end{sol}
 
-\newpage
-
 \begin{exercise} \label{ex1.6.17}
-    Let $G$ be any group. Prove that the map from $G$ to itself defined by $g \mapsto g^{-1}$ is a homomorphism if and only if $G$ is abelian.
+    Let $G$ be any group. Prove that the map from $G$ to itself defined by $g \mapsto g^{-1}$ is a homomorphism if and only if $G$ is Abelian.
 \end{exercise}
 
 \begin{solitem}
     \item [\rightimp] Suppose $\phi$ is a homomorphism. Then for $g, h \in G$, we have
-    \[(gh)\inv = \phi(gh) = \phi(g)\phi(h) = g\inv h\inv\]
-    Since inverses are unique, then $hg = gh$ so that $G$ is abelian.
-    \item [\leftimp] Suppose $G$ is abelian. Then for $g, h \in G$, we have
-    \[\phi(gh) = (gh)\inv = h\inv g\inv = g\inv h\inv = \phi(g)\phi(h)\]
+    \[(gh)\inv = \phi(gh) = \phi(g)\phi(h) = g\inv h\inv = h\inv g\inv.\]
+    Since inverses are unique, then $hg = gh$ so that $G$ is Abelian.
+    \item [\leftimp] Suppose $G$ is Abelian. Then for $g, h \in G$, we have
+    \[\phi(gh) = (gh)\inv = h\inv g\inv = g\inv h\inv = \phi(g)\phi(h),\]
     so that $\phi$ is a homomorphism.
 \end{solitem}
 
 \begin{exercise}\label{ex1.6.18}
-    Let $G$ be any group. Prove that the map from $G$ to itself defined by $g \mapsto g^2$ is a homomorphism if and only if $G$ is abelian.
+    Let $G$ be any group. Prove that the map from $G$ to itself defined by $g \mapsto g^2$ is a homomorphism if and only if $G$ is Abelian.
 \end{exercise}
 
-\begin{solitem}
-    \item [\rightimp] Suppose $\phi$ is a homomorphism. Then for $g, h \in G$, we have
-    \[(gh)^2 = \phi(gh) = \phi(g)\phi(h) = g^2 h^2\]
-    Then $ghgh = g^2h^2$, so that multiplying both sides on the left by $g\inv$ and on the right by $h\inv$ yields $hg = gh$ and $G$ is abelian.
-    \item [\leftimp] Suppose $G$ is abelian. Then for $g, h \in G$, we have
-    \[\phi(gh) = (gh)^2 = g^2 h^2 = \phi(g)\phi(h)\]
-    so that $\phi$ is a homomorphism.
-\end{solitem}
+\begin{sol}
+    The proof is similar to the previous exercise, hence we omit the details.
+\end{sol}
 
 \begin{exercise}\label{ex1.6.19}
     Let $G = \{ z \in \mathbb{C} \mid z^n = 1 \text{ for some } n \in \z^+ \}$. Prove that for any fixed integer $k > 1$ the map from $G$ to itself defined by $z \mapsto z^k$ is a surjective homomorphism but is not an isomorphism.
 \end{exercise}
 
 \begin{sol}
-    Recall that the polar form of a complex number is $z = r(\cos\theta + i\sin\theta) = re^{i\theta}$, where $r$ is the modulus and $\theta = \arg(z)$ is the argument. By definition, every $z \in G$ has modulus $r = 1$ so that every element of $G$ is of the form $e^{i\theta}$. Moreover, $z \in G$ implies that $z^n = 1$ for some $n \in \zp$. Using the polar representation of $1 = e^{2\pi im}$ for some $m \in \z$, then we have $e^{in\theta} = e^{2\pi im}$. This implies that $\theta = 2\pi m/n$, and we can reformulate $G$ as the following:
-    \[G = \{e^{2\pi im/n} \in \c \mid m \in \z, n \in \zp\}\]
-    We show that $\phi$ is a homomorphism. For any $z, w \in G$, we have
-    \[\phi(zw) = (zw)^k = z^k w^k = \phi(z)\phi(w)\]
-    so that $\phi$ is a homomorphism. To show surjectivity, let $w \in G$. Then $w = e^{2\pi im/n}$ for some $m \in \z$ and $n \in \zp$. Since $z = e^{2\pi im/nk} \in G$ because $nk \in \zp$, then
-    \[z^k = (e^{2\pi im/nk})^k = e^{2\pi im/n} = w\]
-    so that $\phi(z) = w$ and $\phi$ is surjective. Lastly, we show that $\phi$ is not an isomorphism by finding its kernel. Note that every $z \in \ker\phi$ satisfies $z^k = 1$. Then $z = e^{2\pi im/k}$ for some $m \in \z$. Since there are $k$ distinct values of $m$ modulo $k$, then $\ker\phi$ contains $k$ distinct elements, namely
-    \[\ker\phi = \{e^{2\pi im/k} \mid m = 0, 1, \ldots, k-1\}\]
-    Since $k > 1$, then $\ker\phi$ contains more than just the identity element, so that $\phi$ is not injective by \hyperref[ex1.6.14]{Exercise 1.6.14}. Hence, $\phi$ is not an isomorphism.
+    Since $G \subseteq \c$, then $G$ is Abelian. Let $\phi : z \to z^k$. Hence, for any $z, w \in G$, we have
+    \[\phi(zw) = (zw)^k = z^kw^k = \phi(z)\phi(w)\]
+    so that $\phi$ is a homomorphism. To show surjectivity, let $w \in G$ such that $w^n = 1$ for some $n \in \zp$. Note that $z^{1/k} \in G$ because $(z^{1/k})^{nk} = z^n = 1$. Then
+    \[\phi(z^{1/k}) = (z^{1/k})^k = z\]
+    so that $\phi$ is surjective. Finally, any $z = e^{2\pi i/k} \in G$ is such that $\phi(z) = z^k = 1$ with $z \neq 1$ since $k > 1$. Hence, $\phi$ is not injective and thus not an isomorphism.
 \end{sol}
 
-\begin{specialexercise}\label{ex1.6.20}
-    Let $G$ be a group and let $\aut(G)$ be the set of all isomorphisms from $G$ onto $G$. Prove that $\aut(G)$ is a group under function composition (called the \emph{automorphism group} of $G$ and the elements of $\aut(G)$ are called \emph{automorphisms} of $G$).
+\begin{specialexercise}[Automorphism Group]\label{ex1.6.20}
+    Let $G$ be a group and let $\aut(G)$ be the set of all isomorphisms from $G$ onto $G$. Prove that $\aut(G)$ is a group under function composition (called the \textbf{automorphism group} of $G$ and the elements of $\aut(G)$ are called \textbf{automorphisms} of $G$).
 \end{specialexercise}
 
 \begin{sol}
-    Since function composition is associative, then it is also associative on $\aut(G)$. By the proof in \hyperref[ex1.6.10]{Exercise 1.6.10}, the composition of two bijections is a bijection. We now show that the composition of two isomorphisms is an isomorphism. Let $\phi, \psi \in \aut(G)$. Then for any $g_1, g_2 \in G$, we have
-    \[(\phi \circ \psi)(g_1g_2) = \phi(\psi(g_1g_2)) = \phi(\psi(g_1)\psi(g_2)) = \phi(\psi(g_1))\phi(\psi(g_2)) = (\phi \circ \psi)(g_1)(\phi \circ \psi)(g_2)\]
-    so that $\phi \circ \psi$ is a homomorphism. Since $\phi \circ \psi$ is also a bijection, then it is an isomorphism and $\phi \circ \psi \in \aut(G)$. The identity map $\id_G : G \to G$ defined by $\id_G(g) = g$ for all $g \in G$ is an isomorphism, so that $\id_G \in \aut(G)$ and is the identity element of $\aut(G)$. Finally, for any $\phi \in \aut(G)$, since $\phi$ is a bijection, then $\phi\inv$ exists. We show that $\phi\inv$ is also an isomorphism. For any $g_1, g_2 \in G$, we have
-    \[\phi\inv(g_1g_2) = \phi\inv(\phi(\phi\inv(g_1g_2))) = \phi\inv(\phi(\phi\inv(g_1)\phi\inv(g_2))) = \phi\inv(g_1)\phi\inv(g_2)\]
-    so that $\phi\inv$ is a homomorphism. Since $\phi\inv$ is also a bijection, then it is an isomorphism and $\phi\inv \in \aut(G)$. Therefore, $\aut(G)$ is a group under function composition.
+    Function composition is associative, hence $\aut(G)$ is associative. The identity map $\id_G : G \to G$ is an automorphism, hence the identity element of $\aut(G)$. By the lemma in \hyperref[ex1.6.10]{Exercise 1.6.10}, we know that the composition of two bijections is a bijection. Hence, for $\phi, \psi \in \aut(G)$, then $\phi \circ \psi$ is a bijection. Moreover, for any $g, h \in G$, we have
+    \[(\phi \circ \psi)(gh) = \phi(\psi(gh)) = \phi(\psi(g)\psi(h)) = \phi(\psi(g))\phi(\psi(h)) = (\phi \circ \psi)(g)(\phi \circ \psi)(h)\]
+    so that $\phi \circ \psi$ is a homomorphism. Hence, $\phi \circ \psi \in \aut(G)$, and $\aut(G)$ is closed under function composition. Finally, for any $\phi \in \aut(G)$, then $\phi\inv$ exists and is a bijection. Then
+    \[\phi\inv(gh) = \phi\inv(\phi(\phi\inv(g))\phi(\phi\inv(h))) = \phi\inv(\phi(\phi\inv(g)\phi\inv(h))) = \phi\inv(g)\phi\inv(h),\]
+    so that $\phi\inv$ is a homomorphism. Hence, $\phi\inv \in \aut(G)$, and $(\aut(G), \circ)$ is a group.
 \end{sol}
 
 \begin{exercise} \label{ex1.6.21}
@@ -1980,13 +1849,13 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
 \end{exercise}
 
 \begin{sol}
-    Let $\phi : \q \to \q$ be defined by $\phi(q) = kq$ for all $q \in \q$. For any $q_1, q_2 \in \q$, we have
-    \[\phi(q_1 + q_2) = k(q_1 + q_2) = kq_1 + kq_2 = \phi(q_1) + \phi(q_2)\]
-    so that $\phi$ is a homomorphism. Moreover, suppose $q_1, q_2 \in \q$ are such that $\phi(q_1) = \phi(q_2)$. Then $kq_1 = kq_2$, and since $k \neq 0$, then $q_1 = q_2$. Hence, $\phi$ is injective. Finally, for any $q \in \q$, we have $\phi(q/k) = k(q/k) = q$ so that $\phi$ is surjective. Therefore, $\phi$ is an automorphism of $\q$.
+    Let $\phi : q \mapsto kq$. For $p, q \in \q$, we have
+    \[\phi(p + q) = k(p + q) = kp + kq = \phi(p) + \phi(q)\]
+    so that $\phi$ is a homomorphism. Moreover, if $\phi(p) = \phi(q)$, then $kp = kq$ implies $p = q$ since $k \neq 0$. Lastly, for any $q \in \q$, we have $\phi(q/k) = k(q/k) = q$, so that $\phi$ is bijective. Hence, $\phi \in \aut(\q)$.
 \end{sol}
 
 \begin{exercise}\label{ex1.6.22}
-    Let $A$ be an abelian group and fix some $k \in \z$. Prove that the map $a \mapsto a^k$ is a homomorphism from $A$ to itself. If $k = -1$ prove that this homomorphism is an isomorphism (i.e., is an automorphism of $A$).
+    Let $A$ be an Abelian group and fix some $k \in \z$. Prove that the map $a \mapsto a^k$ is a homomorphism from $A$ to itself. If $k = -1$ prove that this homomorphism is an isomorphism (i.e., is an automorphism of $A$).
 \end{exercise}
 
 \begin{sol}
@@ -1995,24 +1864,22 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
     so that $\phi$ is a homomorphism. For $k = -1$, see \hyperref[ex1.6.17]{Exercise 1.6.17} to conclude that $\phi \in \aut(A)$.
 \end{sol}
 
-\newpage
-
 \begin{exercise}\label{ex1.6.23}
-    Let $G$ be a finite group which possesses an automorphism $\sigma$ such that $\sigma(g) = g$ if and only if $g = 1$. If $\sigma^2$ is the identity map from $G$ to $G$, prove that $G$ is abelian (such an automorphism $\sigma$ is called \emph{fixed point free} of order 2). [Show that every element of $G$ can be written in the form $x^{-1}\sigma(x)$ and apply $\sigma$ to such an expression.]
+    Let $G$ be a finite group which possesses an automorphism $\sigma$ such that $\sigma(g) = g$ if and only if $g = 1$. If $\sigma^2$ is the identity map from $G$ to $G$, prove that $G$ is Abelian (such an automorphism $\sigma$ is called \textbf{fixed point free} of order 2).
+
+    \hint{Show that every element of $G$ can be written in the form $x^{-1}\sigma(x)$ and apply $\sigma$ to such an expression.}
 \end{exercise}
 
 \begin{sol}
-    To show that every $g \in G$ is of the form $x\inv \sigma(x)$ for some $x \in G$, we must show that the map
-    \[\phi : G \to G \quad \text{by} \quad x \mapsto x\inv \sigma(x)\]
-    is injective. Supppose $x, y \in G$ are such that $\phi(x) = \phi(y)$. Then
-    \[x\inv \sigma(x) = y\inv \sigma(y)\]
-    so that $yx\inv = \sigma(yx\inv)$. Since $\sigma$ is fixed point free, then $yx\inv = 1$ and $x = y$. Hence, $\phi$ is injective. Since $G$ is finite, then $\phi$ is also surjective, and every element of $G$ may be written in the form $x\inv \sigma(x)$ for some $x \in G$. 
+    Define the map
+    \[f : G \to G \quad \text{by} \quad x \mapsto x\inv \sigma(x)\]
+    for all $x \in G$. If $f(x) = f(y)$ for $x, y \in G$, then $x\inv \sigma(x) = y\inv \sigma(y)$ so that $yx\inv = \sigma(yx\inv)$. Since $\sigma$ is fixed point free, then $yx\inv = 1$ and $x = y$. Hence, $f$ is injective. Since $G$ is finite, then $f$ is also surjective, and every element of $G$ may be written in the form $x\inv \sigma(x)$ for some $x \in G$.
 
-    To show that $G$ is abelian, observe for any $g \in G$ that
-    \[\sigma(g) = \sigma(x\inv \sigma(x)) = \sigma(x\inv) \sigma^2(x) = \sigma(x)\inv x = (x\inv \sigma(x))\inv = g\inv\]
-    where $\sigma^2 = \id_G$ was used. Now, for any $g, h \in G$, we have
-    \[\sigma(gh) = (gh)\inv = h\inv g\inv = \sigma(h) \sigma(g) = \sigma(hg)\]
-    Since $\sigma$ is injective, then $gh = hg$ and $G$ is abelian.
+    Let $g \in G$ be arbitrary. Then there exists $x \in G$ such that $g = x\inv \sigma(x)$. Applying $\sigma$ to both sides, we have
+    \[\sigma(g) = \sigma(x\inv \sigma(x)) = \sigma(x\inv) \sigma^2(x) = \sigma(x)\inv x = (x\inv \sigma(x))\inv = g\inv.\]
+    Then for any $g, h \in G$, we have
+    \[\sigma(gh) = (gh)\inv = h\inv g\inv = \sigma(h) \sigma(g) = \sigma(hg).\]
+    Since $\sigma$ is injective, then $gh = hg$ and $G$ is Abelian.
 \end{sol}
 
 \begin{exercise}\label{ex1.6.24}
@@ -2022,7 +1889,7 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
 \begin{sol}
     To show that $G$ is isomorphic to $D_{2n}$, we first need to produce an element $t \in G$ of order $n$ along with an element $x \in G$ of order 2 such that $xt = t\inv x$. The clear choice is to let $t = xy$ and keep $x$ as is. Note that $|t| = |xy| = n$ by assumption, and $|x| = 2$ by assumption. Moreover,
     \[xt = x(xy) = (xx)y = y = (xy)\inv x = t\inv x\]
-    so that the elements $x, t \in G$ satisfy the relations of $D_{2n}$. Moreover, observe that $y = xt$ so that $t$ and $x$ generate $G$. Following this, it is easy to see that every element of $G$ can be written in the form $x^i t^j$ for $i \in \{0, 1\}$ and $0 \leq j < n$. For $x = 0$, we have the elements in the cyclic subgroup generated by $t$, and for $x = 1$, we have the elements $\set{x, xt, xt^2, \ldots, xt^{n-1}}$. Since $|t| = n$, then these are all distinct elements of $G$. Hence, $|G| = 2n$.
+    so that the elements $x, t \in G$ satisfy the relations of $D_{2n}$. Additionally, observe that $y = xt$ so that $t$ and $x$ generate $G$. Following this, it is easy to see that every element of $G$ can be written in the form $x^i t^j$ for $i \in \{0, 1\}$ and $0 \leq j < n$. For $x = 0$, we have the elements in the cyclic subgroup generated by $t$, and for $x = 1$, we have the elements $\set{x, xt, xt^2, \ldots, xt^{n-1}}$. Since $|t| = n$, then these are all distinct elements of $G$. Hence, $|G| = 2n$.
 
     Since the relations of $D_{2n}$ are satisfied by $x, t \in G$, $G$ is generated by $x$ and $t$, and $|G| = |D_{2n}| = 2n$, it follows that the map
     \[\phi : D_{2n} \to G \quad \text{by} \quad r \mapsto t, s \mapsto x\]
@@ -2216,11 +2083,11 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
     Moreover, $0 \cdot (x, y) = (x + 0, y) = (x, y)$ so that the group action axioms are satisfied and $\r$ acts on $\r^2$.
 \end{sol}
 
-\begin{specialexercise}\label{ex1.7.4}
+\begin{specialexercise}[Stabilizers]\label{ex1.7.4}
     Let $G$ be a group acting on a set $A$ and fix some $a\in A$. Show that the following sets are subgroups of $G$ (cf. \hyperref[ex1.1.26]{Exercise 1.1.26}):
     \begin{subproblems}
         \item the kernel of the action,
-        \item $\{g\in G \mid g a = a\}$ — this subgroup is called the \emph{stabilizer} of $a$ in $G$.
+        \item $\{g\in G \mid g a = a\}$---this subgroup is called the \textbf{stabilizer} of $a$ in $G$.
     \end{subproblems}
 \end{specialexercise}
 
@@ -2245,12 +2112,12 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
     Let $K$ denote the kernel of the action, and let $K'$ denote $\ker\phi$, where $\phi : G \to S_A$ is the permutation representation corresponding to the action. Suppose $g \in K$. Then $g \cdot a = a$ for every $a \in A$, hence $\phi(g)$ is the identity permutation in $S_A$ and $g \in K'$. Conversely, suppose $g \in K'$. Then $\phi(g)$ is the identity permutation in $S_A$, so that for every $a \in A$, we have $\phi(g)(a) = a$. But $\phi(g)(a) = g \cdot a$ by definition of the permutation representation, so that $g \cdot a = a$ for every $a \in A$ and $g \in K$. Therefore, $K = K'$.
 \end{sol}
 
-\begin{specialexercise}\label{ex1.7.6}
+\begin{exercise}\label{ex1.7.6}
     Prove that a group $G$ acts faithfully on a set $A$ if and only if the kernel of the action is the set consisting only of the identity.
-\end{specialexercise}
+\end{exercise}
 
 \begin{solitem}
-    \item [\rightimp] Suppose $G$ acts faithfully on $A$. Let $g$ be in the kernel of the action. Then for every $a \in A$, we have $g \cdot a = a$. Since the action is faithful, then $g$ must be the identity element of $G$. Hence, the kernel of the action is the set consisting only of the identity.
+    \item [\rightimp] Suppose $G$ acts faithfully on $A$ with kernel $K$. Certainly, $1 \cdot a = a$ for all $a \in A$, hence $1 \in K$. If $g \in K$, then $g \cdot a = a$. Faithfulness of the action implies that $g = 1$, so that $K = \{1\}$.
     \item [\leftimp] Suppose the kernel of the action is the set consisting only of the identity. Let $g, h \in G$ be such that $g \cdot a = h \cdot a$ for every $a \in A$. Then
     \[h\inv g \cdot a = h\inv \cdot (g \cdot a) = h\inv \cdot (h \cdot a) = (h\inv h) \cdot a = 1 \cdot a = a\]
     so that $h\inv g$ is in the kernel of the action. By assumption, then $h\inv g$ is the identity element of $G$, and $g = h$. Therefore, the action is faithful.
@@ -2297,7 +2164,9 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
 \end{solalph}
 
 \begin{exercise}\label{ex1.7.9}
-    Do both parts of the preceding exercise with ``ordered $k$-tuples'' in place of ``$k$-element subsets,'' where the action on $k$-tuples is defined as above but with set braces replaced by parentheses (note that, for example, the $2$-tuples $(1,2)$ and $(2,1)$ are different even though the sets $\{1,2\}$ and $\{2,1\}$ are the same, so the sets being acted upon are different).
+    Do both parts of the preceding exercise with ``ordered $k$-tuples'' in place of ``$k$-element subsets,'' where the action on $k$-tuples is defined as above but with set braces replaced by parentheses.
+    
+    \remark{Note that, for example, the $2$-tuples $(1,2)$ and $(2,1)$ are different even though the sets $\{1,2\}$ and $\{2,1\}$ are the same, so the sets being acted upon are different.}
 \end{exercise}
 
 \begin{sol}
@@ -2329,29 +2198,24 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
         \phi(1) & = 1 & \phi(r) & = (1\ 2\ 3\ 4) \\
         \phi(r^2) & = (1\ 3)(2\ 4) & \phi(r^3) & = (1\ 4\ 3\ 2) \\
         \phi(s) & = (2\ 4) & \phi(sr) & = (1\ 4)(2\ 3) \\
-        \phi(sr^2) & = (1\ 3) & \phi(sr^3) & = (1\ 2)(3\ 4) \qh
+        \phi(sr^2) & = (1\ 3) & \phi(sr^3) & = (1\ 2)(3\ 4). \qh
     \end{align*}
 \end{sol}
 
-\newpage
-
-\begin{specialexercise} \label{ex1.7.12}
+\begin{exercise} \label{ex1.7.12}
     Assume $n$ is an even positive integer and show that $D_{2n}$ acts on the set consisting of pairs of opposite vertices of a regular $n$-gon. Find the kernel of this action (label vertices as usual).
-\end{specialexercise}
+\end{exercise}
 
 \begin{sol}
-    Let the vertices of the regular $n$-gon be labeled $1, 2, \ldots, n$ in order around the polygon. Let $P_k$ denote the pair of opposite vertices, i.e.,
-    \[P_k = \set{k, k + n/2} \quad \text{defined for all $1 \leq k \leq n/2$}\]
-    Let $P$ denote the set of all such pairs of opposite vertices. Note that $\abs P = n/2$. Define a mapping from $D_{2n} \times P \to P$ by
+    Let the $n$-gon have the usual labeling of vertices. Put $P_k$ as the pair of opposite vertices
+    \[P_k = \set{k, k + n/2} \quad \text{defined for all $1 \leq k \leq n/2$},\]
+    with $P$ denoting the set of all opposite pairs of vertices. Let $D_{2n}$ act on $P$ by
     \[g \cdot P_i = g(P_i) = P_j\]
-    where $P_j$ is the pair of opposite vertices containing the images of the vertices in $P_i$ under the action of $g$ on the vertices of the $n$-gon. It is straightforward to verify that this mapping satisfies the group action axioms, since any rotation or reflection of the $n$-gon will map pairs of opposite vertices to other pairs of opposite vertices. Hence, $D_{2n}$ acts on $P$.
+    where $P_j$ is the pair of opposite vertices containing the images of the vertices in $P_i$ under the action of $g$ on the vertices of the $n$-gon. Since elements of $D_{2n}$ are symmetries of the $n$-gon, then they will map pairs of opposite vertices to other pairs of opposite vertices. Hence, $D_{2n}$ acts on $P$.
 
-    To find the kernel of this action, let $g \in D_{2n}$ be in the kernel. Then for every pair of opposite vertices $P_i \in P$, we have $g \cdot P_i = P_i$. In particular, consider the pair $P_1 = \set{1, 1 + n/2}$. Then $g$ must map vertex $1$ to either vertex $1$ or vertex $1 + n/2$. If $g$ maps vertex $1$ to vertex $1 + n/2$, then it must also map vertex $1 + n/2$ to vertex $1$, which is only possible if $g$ is a rotation by $180^\circ = r^{n/2}$. On the other hand, if $g$ maps vertex $1$ to vertex $1$, then $g$ is the identity element. Moreover, no reflection can be in the kernel:
-    \begin{itemize}
-        \item If the reflection is about an axis through vertex $k$ and $k + n/2$, then the vertex $k + 1$ is mapped to vertex $k - 1$, which in general is not equal to either $k + 1$ or $k + 1 + n/2$.
-        \item If the reflection is about an axis through the midpoints of the edges between vertices $k$ and $k + 1$ and between vertices $k + n/2$ and $k + n/2 + 1$, then vertex $k$ is mapped to vertex $k + 1$, which in general is not equal to either $k$ or $k + n/2$.
-    \end{itemize}
-    Therefore, the kernel of this action is $\set{1, r^{n/2}}$. In particular, the kernel for $n = 2$ is the whole group $D_4$ since there is only one pair of opposite vertices.
+    Let $g \in D_{2n}$ be in the kernel of this action. Then $g \cdot P_i = P_i$ for every $P_i \in P$. Consider some $P_i = \set{i, i + n/2} \in P$. If $g$ maps $i$ to $i + n/2$, then it must map $i + n/2$ to $i$, which corresponds to the rotation $r^{n/2}$. If $g$ maps $i$ to $i$, then it must map $i + n/2$ to $i + n/2$, which corresponds to the identity element. 
+
+    Suppose $g$ is a reflection. If the reflection is about the axis through the vertices in $P_i$, then $i + 1$ is mapped to $i - 1$. Then either $i - 1 = i + 1$ or $i - 1 = i + 1 + n/2$, which is impossible. If the reflection is about the axis through the midpoints of the edges between $i$ and $i + 1$ and between $i + n/2$ and $i + n/2 + 1$, then $i$ is mapped to $i + 1$. Then either $i + 1 = i$ or $i + 1 = i + n/2$, which is impossible. Therefore, no reflection can be in the kernel of this action.
 \end{sol}
 
 \begin{exercise}\label{ex1.7.13}
@@ -2363,13 +2227,13 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
 \end{sol}
 
 \begin{exercise}\label{ex1.7.14}
-    Let $G$ be a group and let $A = G$. Show that if $G$ is non-abelian then the maps defined by  
+    Let $G$ be a group and let $A = G$. Show that if $G$ is non-Abelian then the maps defined by  
     \[ g \cdot a = ag \quad \text{for all } g,a\in G \]
     do not satisfy the axioms of a (left) group action of $G$ on itself.
 \end{exercise}
 
 \begin{sol}
-    Since $G$ is non-abelian, there exists $g, h \in G$ such that $gh \neq hg$. Assume, by way of contradiction, that the above maps do satisfy the axioms of a left group action. Then for any $a \in A$, we have
+    Since $G$ is non-Abelian, there exists $g, h \in G$ such that $gh \neq hg$. Assume, by way of contradiction, that the above maps do satisfy the axioms of a left group action. Then for any $a \in A$, we have
     \[g \cdot (h \cdot a) = g \cdot (ah) = (ah)g = a(hg) \]
     On the other hand, $(gh) \cdot a = a(gh)$. Since $gh \neq hg$, then $a(hg) \neq a(gh)$ for some $a \in A$. This contradicts the assumption that the above maps satisfy the axioms of a left group action. Therefore, the maps do not satisfy the axioms of a left group action.
 \end{sol}
@@ -2381,12 +2245,12 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
 \end{exercise}
 
 \begin{sol}
-    Let $g, h \in G$. Then for any $a \in A$, we ahve
+    Let $g, h \in G$. Then for any $a \in A$, we have
     \[g \cdot (h \cdot a) = g \cdot (ah\inv) = a(h\inv g\inv) = a(gh)\inv = (gh) \cdot a\]
     Moreover, $1 \cdot a = a1\inv = a1 = a$. Then the maps define a left group action.
 \end{sol}
 
-\begin{specialexercise}\label{ex1.7.16}
+\begin{specialexercise}[Conjugation]\label{ex1.7.16}
     Let $G$ be any group and let $A = G$. Show that the maps defined by  
     \[ g \cdot a = gag^{-1} \quad \text{for all } g,a\in G \]
     do satisfy the axioms of a (left) group action (this action of $G$ on itself is called \emph{conjugation}).
@@ -2401,7 +2265,7 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
 \begin{exercise} \label{ex1.7.17}
     Let $G$ be a group and let $G$ act on itself by left conjugation, so each $g\in G$ maps $G$ to $G$ by
     \[ x \mapsto gxg^{-1}. \]
-    For fixed $g\in G$, prove that conjugation by $g$ is an isomorphism from $G$ onto itself (i.e.\ an automorphism of $G$). Deduce that $x$ and $gxg^{-1}$ have the same order for all $x\in G$ and that for any subset $A$ of $G$, $|A| = |gAg^{-1}|$ (here $gAg^{-1} = \{gag^{-1} \mid a\in A\}$).
+    For fixed $g\in G$, prove that conjugation by $g$ is an isomorphism from $G$ onto itself (i.e., an automorphism of $G$). Deduce that $x$ and $gxg^{-1}$ have the same order for all $x\in G$ and that for any subset $A$ of $G$, $|A| = |gAg^{-1}|$ (here $gAg^{-1} = \{gag^{-1} \mid a\in A\}$).
 \end{exercise}
 
 \begin{sol}
@@ -2414,35 +2278,25 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
     From \hyperref[ex1.6.2]{Exercise 1.6.2}, we know that isomorphisms preserve order, so $\abs x = \abs{gxg\inv}$ for all $x \in G$. If we consider the restriction of $\phi$ to a subset $A$ of $G$, then $\phi|_A : A \to gAg\inv$ remains a bijection so that $\abs A = \abs{gAg\inv}$.
 \end{sol}
 
-\newpage
-
-\begin{specialexercise} \label{ex1.7.18}
+\begin{specialexercise}[Orbits and Equivalence Relations] \label{ex1.7.18}
     Let $H$ be a group acting on a set $A$. Prove that the relation $\sim$ on $A$ defined by  
-    \[
-    a \sim b \quad \text{if and only if} \quad a = hb \text{ for some } h\in H
-    \]
-    is an equivalence relation. (For each $x\in A$ the equivalence class of $x$ under $\sim$ is called the \textit{orbit} of $x$ under the action of $H$. The orbits under the action of $H$ partition the set $A$.)
+    \[a \sim b \quad \text{if and only if} \quad a = hb \text{ for some } h \in H\]
+    is an equivalence relation. (For each $x\in A$ the equivalence class of $x$ under $\sim$ is called the \textbf{orbit} of $x$ under the action of $H$. The orbits under the action of $H$ partition the set $A$.)
 \end{specialexercise}
 
-\begin{sol}
-    We verify that $\sim$ is an equivalence relation by checking the three properties:
-    \begin{itemize}
-        \item Reflexivity: For any $a \in A$, we have $a = 1 \cdot a$ where $1$ is the identity element of $H$. Hence, $a \sim a$.
-        \item Symmetry: Suppose $a, b \in A$ such that $a \sim b$. Then there exists some $h \in H$ such that $a = hb$. Multiplying both sides by $h\inv$, we have $h\inv a = b$, so that $b = h\inv a$. Since $h\inv \in H$, then $b \sim a$.
-        \item Transitivity: Suppose $a, b, c \in A$ such that $a \sim b$ and $b \sim c$. Then there exist some $h_1, h_2 \in H$ such that $a = h_1 b$ and $b = h_2 c$. Substituting the second equation into the first, we have
-        \[a = h_1 (h_2 c) = (h_1 h_2) c\]
-        Since $h_1 h_2 \in H$, then $a \sim c$.
-    \end{itemize}
-    Therefore, $\sim$ is an equivalence relation on $A$.
-\end{sol}
+\begin{solitem}
+    \item Let $a \in A$. Then $a = 1a$, hence $a \sim a$.
+    \item Let $a, b \in A$ such that $a \sim b$. Then $a = bh$ for some $h \in H$. Then $b = h\inv a$, hence $b \sim a$.
+    \item Let $a, b, c \in A$ such that $a \sim b$ and $b \sim c$. Then $a = bh_1$ and $b = ch_2$ for some $h_1, h_2 \in H$. Then $a = (ch_2)h_1 = c(h_2h_1)$, hence $a \sim c$.
+\end{solitem}
 
-\begin{specialexercise} \label{ex1.7.19}
+\begin{specialexercise}[Orbits and Lagrange's Theorem] \label{ex1.7.19}
     Let $H$ be a subgroup of the finite group $G$ and let $H$ act on $G$ (here $A = G$) by left multiplication. Let $x\in G$ and let $\mathcal{O}$ be the orbit of $x$ under this action of $H$. Prove that the map  
     \[
     H \to \mathcal{O}, \qquad h \mapsto hx
     \]
-    is a bijection (hence all orbits have cardinality $|H|$). From this and the preceding exercise deduce \textit{Lagrange's Theorem}:  
-    \[\textit{If $G$ is a finite group and $H$ is a subgroup of $G$ then $|H|$ divides $|G|$}\]
+    is a bijection (hence all orbits have cardinality $|H|$). From this and the preceding exercise deduce \textbf{Lagrange's Theorem}:  
+    \[\textit{If $G$ is a finite group and $H$ is a subgroup of $G$ then $|H|$ divides $|G|$}.\]
 \end{specialexercise}
 
 \begin{sol}
@@ -2458,7 +2312,7 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
 \end{exercise}
 
 \begin{sol}
-    Let $G$ be the group of rigit motions of a tetrahedron with vertices labeled $1, 2, 3, 4$. Then each $\alpha \in G$ sends some vertex to another vertex so that $G$ acts on the set of vertices $A = \{1, 2, 3, 4\}$.
+    Let $G$ be the group of rigid motions of a tetrahedron with vertices labeled $1, 2, 3, 4$. Then each $\alpha \in G$ sends some vertex to another vertex so that $G$ acts on the set of vertices $A = \{1, 2, 3, 4\}$.
 
     Since $G$ acts on $A$, this gives rise to a homomorphism 
     \[\phi : G \to S_4 \quad \text{where} \quad \phi(\alpha)(i) = \alpha(i) \quad \text{for all} \quad i \in A.\]
@@ -2486,7 +2340,7 @@ Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + 
     Let $G$ be the group of rigid motions of an octahedron. Let $A = \set{f_1, f_2, f_3, f_4}$ be the set of pairs of opposite faces of the octahedron. Then each $\alpha \in G$ sends some pair of opposite faces to another pair of opposite faces so that $G$ acts on $A$.
 
     Using similar reasoning as in the previous exercises, we have an injective homomorphism
-    \[\phi : G \to S_4 \quad \text{where} \phi(\alpha)(f_i) = \alpha(f_i) \quad \text{for all} \quad f_i \in A.\]
+    \[\phi : G \to S_4 \quad \text{where} \quad \phi(\alpha)(f_i) = \alpha(f_i) \quad \text{for all} \quad f_i \in A.\]
     Therefore, $G$ is isomorphic to a subgroup of $S_4$. From \hyperref[ex1.2.11]{Exercise 1.2.11}, we know that $|G| = 24$, hence $G \cong S_4$. From the previous exercise, we know that the group of rigid motions of a cube is also isomorphic to $S_4$, so the groups of rigid motions of a cube and of an octahedron are isomorphic.
 \end{sol}
 

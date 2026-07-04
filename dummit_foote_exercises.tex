@@ -17,9 +17,8 @@
 \usetikzlibrary{decorations.markings}
 \pgfplotsset{compat=newest}
 
-\input{Misc Environments/breakable algorithm.tex}
-\input{Base Tex Files/commands.tex}
-\input{Base Tex Files/exerciseEnvs.tex}
+\input{base-tex-files/commands.tex}
+\input{base-tex-files/exercise_macros.tex}
 
 \hypersetup{
     colorlinks=true,
@@ -53,9 +52,9 @@
 \date{October $27^{\text{th}}$, 2025}
 
 \setlength{\jot}{2pt}
-\setlength{\parindent}{0.5cm}
+\setlength{\parindent}{0.75cm}
 
-\includeonly{exercises/chap0ex}
+\includeonly{exercises/chap1ex}
 
 \begin{document}
 
@@ -68,19 +67,21 @@
 \section*{Preface}
 \addcontentsline{toc}{section}{\protect\numberline{}Preface}
 
-This is a collection of solutions to the exercises in Dummit and Foote's \textit{Abstract Algebra}, $3^{\text{rd}}$ edition. These solutions were written by me as I worked through the book, and are intended to serve as a reference for myself and others who are studying abstract algebra. I have made every effort to ensure the correctness of these solutions, but I cannot guarantee that they are free of errors. If you find any mistakes or have suggestions for improvement, please feel free to contact me.
+This is a collection of solutions to the exercises in Dummit and Foote's \textit{Abstract Algebra}, $3^{\text{rd}}$ edition, written as I worked through the book to serve as a reference for myself and others studying abstract algebra. While I have made every effort to ensure correctness, I cannot guarantee the solutions are error-free; if you find any mistakes, please feel free to contact me.
 
-I've attempted to format the solutions in a clear and consistent manner, using \LaTeX\ for typesetting. Each chapter's exercises are included in separate files for better organization if viewing on GitHub. Moreover, solutions to exercises only utilize techniques that are available to an advanced undergraduate student or beginning graduate student, in line with the intended audience of the textbook. As an aside, I've graduated from a bachelor's program in mathematics but have not pursued graduate studies, so my background is primarily at the undergraduate level.
+I have formatted the solutions clearly and consistently using \LaTeX, with each chapter's exercises in separate files for better organization. The solutions employ only techniques accessible to advanced undergraduates or beginning graduate students, consistent with the textbook's intended audience. As context, I hold a bachelor's degree in mathematics but have not pursued graduate studies, so my background is primarily at the undergraduate level.
 
-Some suggestions I've been given to improve the guide are citing particularly important exercises that will prove useful in reading subsequent chapters, and providing writeups/discussions for why I choose a particular method of solution (such as functions/homomorphisms that may appear out of nowhere). Most problems are enclosed in the following environment:
+Exercises are numbered by chapter and section. For clarity: ``remark'' denotes Dummit and Foote's expository remarks, ``hints'' refers to their exercise hints (which vary in detail), and ``A/N'' marks my author's notes with additional insights, alternative approaches, or clarifications intended to help readers develop a deeper understanding of the material.
+
 \begin{exercise}
     Example exercise.
 \end{exercise}
-However, there are some exercises that I found to be either challenging, interesting, or useful for the development of later material. These exercises are enclosed in a special environment:
-\begin{specialexercise}
+
+I have marked certain exercises as ``special exercises'' because they are particularly important, interesting, or involve complex solutions. These are highlighted in a distinct color with a more visually appealing format. Since the results from these exercises frequently appear in later chapters, I have provided more detailed solutions to help readers deepen their understanding of the material.
+
+\begin{specialexercise}[Example Special Exercise]
     Example special exercise.
 \end{specialexercise}
-This is to highlight these exercises for future readers who may want to focus on them.
 
 Many thanks to the authors, David S. Dummit and Richard M. Foote, for writing such an excellent textbook that has been a valuable resource for my recreational studies in abstract algebra. I've received requests on Reddit for individuals to assist me in completing this project, but at this time I prefer to work on it independently. However, I welcome feedback and suggestions from anyone who is interested in contributing to the project in the future.
 

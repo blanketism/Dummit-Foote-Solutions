@@ -193,7 +193,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
 \end{sol}
 
 \begin{exercise}\label{ex0.1.5}
-    Determine whether the following functions $f$ are well defined:
+    Determine whether the following functions $f$ are well-defined:
     \begin{subproblems}
         \item $f : \q \to \z$ defined by $f(a/b) = a$.
         \item $f : \q \to \q$ defined by $f(a/b) = a^2/b^2$.
@@ -206,7 +206,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
 \end{solalph}
 
 \begin{exercise}\label{ex0.1.6}
-    Determine whether the function $f: \r^+ \to \z$ defined by mapping a real number $r$ to the first digit to the right of the decimal point in a decimal expansion of $r$ is well defined.
+    Determine whether the function $f: \r^+ \to \z$ defined by mapping a real number $r$ to the first digit to the right of the decimal point in a decimal expansion of $r$ is well-defined.
 \end{exercise}
 
 \begin{sol}
@@ -500,21 +500,19 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
 \end{exercise}
 
 \begin{sol}
-    Let $a$ be odd, so $a = 2k + 1$ for $k \in \z$. Then
-    \[a^2 = (2k + 1)^2 = 4k^2 + 4k + 1 = 4k(k + 1) + 1.\]
-    Since $k$ and $k + 1$ are consecutive integers, one must be even. Then $2 \mid k(k + 1)$, hence $8 \mid 4k(k + 1)$.
+    Put $a = 2k + 1$ for $k \in \z$. Then $a^2 = 4k(k + 1) + 1 \equiv 1 \bmod 8$ since $k(k + 1)$ is always even.
 \end{sol}
 
 \begin{specialexercise}\label{ex0.3.10}
-    Prove that the number of elements of $\units$ is $\phi(n)$ where $\phi$ denotes the Euler $\phi$-function.
+    Prove that the number of elements of $\units$ is $\phi(n)$, where $\phi$ denotes the Euler $\phi$-function.
 \end{specialexercise}
 
 \begin{sol}
-    Recall that $\phi(n)$ is defined as the number of integers $a$ such that $1 \leq a \leq n$, and $(a, n) = 1$. Hence, to prove that the number of elements in $\units$ is $\phi(n)$, it suffices to prove that $\bar a \in \units$ if and only if $(a, n) = 1$.
-    \begin{ifandonlyif}
-        \item[\rightimp] Suppose $\bar a \in \units$. Then there exists some $\bar b \in \units$ such that $\bar a \cdot \bar b = \bar 1$, or $ab \equiv 1 \bmod n$. Then there exists some integer $k$ such that $ab - 1 = kn$, or $ab - kn = 1$. Thus, $(a, n) = 1$.
-        \item [\leftimp] Suppose $(a, n) = 1$. Then there exist integers $x$ and $y$ such that $ax + ny = 1$. Then $ax \equiv 1 \bmod n$, so that $\bar a \cdot \bar x = \bar 1$. Thus, $\bar a \in \units$. \qh
-    \end{ifandonlyif}
+    It suffices to show that $\bar a \in \units$ if and only if $(a, n) = 1$.
+    \begin{itemize}
+        \item[\rightimp] If $\bar a \in \units$, then there exists $\bar b \in \intmod$ such that $\bar a \cdot \bar b = \bar 1$. Then $ab \equiv 1 \bmod n$ implies the existence of $k \in \z$ such that $ab - 1 = kn$, or $ab - kn = 1$. Thus, $(a, n) = 1$.
+        \item[\leftimp] By $(a, n) = 1$, there exists $x, y \in \z$ such that $ax + ny = 1$, or $ax = 1 - ny$. We then have $ax \equiv 1 \bmod n$, so that $\bar a \cdot \bar x = \bar 1$. Thus, $\bar a \in \units$. \qh
+    \end{itemize}
 \end{sol}
 
 \begin{exercise}\label{ex0.3.11}
@@ -522,8 +520,8 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
 \end{exercise}
 
 \begin{sol}
-    Since $\bar a, \bar b \in \units$, then there exist $\bar c, \bar d \in \units$ such that $\bar a \cdot \bar c = \bar 1$ and $\bar b \cdot \bar d = \bar 1$. Then
-    \[(\bar a \cdot \bar b)(\bar c \cdot \bar d) = \bar a(\bar b \cdot \bar d) \cdot \bar c = \bar a \cdot \bar 1 \cdot \bar c = \bar a \cdot \bar c = \bar 1,\]
+    Since $\bar a, \bar b \in \units$, there exist $\bar c, \bar d \in \intmod$ such that $\bar a \cdot \bar c = \bar b \cdot \bar d = \bar 1$. Then
+    \[(\bar a \cdot \bar b)(\bar c \cdot \bar d) = (\bar a \cdot \bar c)(\bar b \cdot \bar d) = \bar 1 \cdot \bar 1 = \bar 1,\]
     so that $\bar a \cdot \bar b \in \units$.
 \end{sol}
 
@@ -532,13 +530,15 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
 \end{exercise}
 
 \begin{sol}
-    Since $(a, n) = d > 1$, then there exist integers $x$ and $y$ such that $ax + ny = d$. Let $b = n/d$. Then
-    \[ab = a(n/d) = n(a/d) \equiv 0 \bmod n,\]
-    so that such a $b$ exists, since $a/d, n/d \in \z$. Moreover, if there existed some integer $c$ such that $ac \equiv 1 \bmod n$, then we would have $(ac)b = (ab)c \equiv b \bmod n$. This contradicts that $ab \equiv 0 \bmod n$, so such a $c$ cannot exist.
+    Let $(a, n) = d > 1$. Then $a/d, n/d \in \z$ and $1 \leq a/d < n/d$. Put $b = n/d$, so that $1 \leq b < n$ and
+    \[ab = a(n/d) = (a/d)n \equiv 0 \bmod n.\]
+    If there existed some $c \in \z$ such that $ac \equiv 1 \bmod n$, then $(ac)b \equiv b \bmod n$. However, $ab \equiv 0 \bmod n$, so that $0 \equiv b \bmod n$, which is impossible since $1 \leq b < n$.
 \end{sol}
 
 \begin{exercise}\label{ex0.3.13}
-    Let $n \in \z, n > 1$ and let $a \in \z$ with $1 \leq a \leq n$. Prove that if $a$ and $n$ are relatively prime then there is an integer $c$ such that $ac \equiv 1 \bmod n$ [use the fact that the g.c.d. of two integers is a $\z$-linear combination of the integers].
+    Let $n \in \z, n > 1$ and let $a \in \z$ with $1 \leq a \leq n$. Prove that if $a$ and $n$ are relatively prime then there is an integer $c$ such that $ac \equiv 1 \bmod n$.
+
+    \hint{Use the fact that the GCD of two integers is a $\z$-linear combination of the integers.}
 \end{exercise}
 
 \begin{sol}
@@ -564,59 +564,21 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
 \end{exercise}
 
 \begin{sol}
-    To proceed with these exercises, we will need to use the Euclidean Algorithm to find $(a, n)$, then use the series of quotients and remainders to express $1$ as a $\z$-linear combination of $a$ and $n$ in order to find the inverse. In particular, we will obtain a combination in the form of $ax + ny = 1$. Then $ax \equiv 1 \bmod n$ so that the inverse of $a$ is $x$. Refer to \hyperref[ex0.2.1]{Exercise 0.2.1} to see how we applied the Euclidean Algorithm.
+    Refer to \hyperref[ex0.2.1]{Exercise 0.2.1} to see how the Euclidean Algorithm is used to find $x, y \in \z$ such that $ax + ny = 1$. From this, it follows that $ax \equiv 1 \bmod n$, so that $\bar x$ is the multiplicative inverse of $\bar a$ in $\intmod$.
     \begin{subproblems}
         \item $-3(13) + 2(20) = 1 \implies -3 \cdot 13 \equiv 1 \bmod 20$, so the inverse is $\bar{-3} = \bar{17}$.
         \item $40(69) - 31(89) = 1 \implies 40 \cdot 69 \equiv 1 \bmod 89$, so the inverse is $\bar{40}$.
         \item $253(1891) - 126(3797) = 1 \implies 253 \cdot 1891 \equiv 1 \bmod 3797$, so the inverse is $\bar{253}$.
-        \item $17n - 220a = 1 \implies -220a \equiv 1 \bmod n \implies 77695237193a \equiv 1 \bmod n$, so the inverse is $\bar{77695237193}$.
+        \item $17n - 220a = 1 \implies -220a \equiv 1 \bmod n \implies 77695237193a \equiv 1 \bmod n$, so the inverse is $\bar{77695237193}$. \qh
     \end{subproblems}
 \end{sol}
 
-\newpage
-
 \begin{exercise}\label{ex0.3.16}
-    Write a computer program to add and multiply mod $n$, for any $n$ given as input. The output of these operations should be the least residues of the sums and products of two integers. Also include the feature that if $(a, n) = 1$, an integer $c$ between $1$ and $n - 1$ such that $\bar a \cdot \bar c = \bar 1$ may be printed on request. (Your program should not, of course, simply quote "mod" functions already built into many systems).
+    Write a computer program to add and multiply mod $n$, for any $n$ given as input. The output of these operations should be the least residues of the sums and products of two integers. Also include the feature that if $(a, n) = 1$, an integer $c$ between $1$ and $n - 1$ such that $\bar a \cdot \bar c = \bar 1$ may be printed on request. 
+    
+    \remark{Your program should not, of course, simply quote ``mod'' functions already built into many systems.}
 \end{exercise}
 
-\noindent \textbf{\textit{Solution.}}~~Using the function \textsc{GCD} from \hyperref[ex0.2.9]{Exercise 0.2.9}, we have the following algorithm:
-\begin{breakablealgorithm}
-    \begin{algorithmic}[1]
-        \Require Integers $a, b, n$ with $n > 1$
-        \Ensure $\bar a + \bar b$ and $\bar a \cdot \bar b$, reduced modulo $n$, and if $(a, n) = 1$, the multiplicative inverse of $\bar a$ mod $n$
-        \Procedure{AddMod}{$a, b, n$}
-            \State {$s \gets a + b$}
-            \While {$s < 0$}:
-                \State {$s \gets s + n$}
-            \EndWhile
-            \While {$s \geq 0$}:
-                \State {$s \gets s - n$}
-            \EndWhile
-            \State \Return {$s$}
-        \EndProcedure
-        \Procedure{MultiplyMod}{$a, b, n$}
-            \State {$p \gets a \cdot b$}
-            \While {$p < 0$}:
-                \State {$p \gets p + n$}
-            \EndWhile
-            \While {$p \geq 0$}:
-                \State {$p \gets p - n$}
-            \EndWhile
-            \State \Return {$p$}
-        \EndProcedure
-        \Procedure{InverseMod}{$a, n$}
-            \State {$(g, x, y) \gets$ \Call{\textsc{GCD}}{$a, n$}}
-            \If {$g \neq 1$}
-                \State \Return {``No inverse exists''}
-            \Else
-                \While {$x < 0$}:
-                    \State {$x \gets x + n$}
-                \EndWhile
-                \While {$x \geq 0$}:
-                    \State {$x \gets x - n$}
-                \EndWhile
-                \State \Return {$x$}
-            \EndIf
-        \EndProcedure
-    \end{algorithmic}
-\end{breakablealgorithm}
+\begin{sol}
+    Please see \verb|modular_arithmetic.py| for the solution.
+\end{sol}
