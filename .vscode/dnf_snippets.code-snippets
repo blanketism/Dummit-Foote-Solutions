@@ -53,28 +53,17 @@
 		"body": [
 			"\\begin{center}",
 			"\t\\begin{tikzpicture}",
-			"\t\t$2",
+			"\t\t$0",
 			"\t\\end{tikzpicture}",
 			"\\end{center}"
 		],
 		"description": "Tikz picture environment"
 	},
-	"iff proof": {
-		"prefix": "iff",
-		"body": [
-			"\\leavevmode",
-			"\\begin{ifandonlyif}",
-			"\t\\item[\\rightimp]",
-			"\t\\item[\\leftimp]",
-			"\\end{ifandonlyif}"
-		],
-		"description": "if and only if proof structure"
-	},
 	"Proof": {
 		"prefix": "proof",
 		"body": [
 			"\\begin{proof}",
-			"\t$1",
+			"\t$0",
 			"\\end{proof}"
 		],
 		"description": "proof environment"
@@ -83,7 +72,7 @@
 		"prefix": "proofnum",
 		"body": [
 			"\\begin{proofnum}",
-			"\t\\item $1",
+			"\t\\item $0",
 			"\\end{proofnum}"
 		],
 		"description": "proof environment with numbered steps"
@@ -92,7 +81,7 @@
 		"prefix": "proofitem",
 		"body": [
 			"\\begin{proofitem}",
-			"\t\\item $1",
+			"\t\\item $0",
 			"\\end{proofitem}"
 		],
 		"description": "proof environment with bullet points"
@@ -108,7 +97,7 @@
 		"prefix": "beg",
 		"body": [
 			"\\begin{$1}",
-			"\t$2",
+			"\t$0",
 			"\\end{$1}"
 		],
 		"description": "beginning environments with no title"
@@ -116,7 +105,7 @@
 	"Display Math": {
 		"prefix": "dm",
 		"body": [
-			"\\[$1\\]"
+			"\\[$0\\]"
 		],
 		"description": "display math environment"
 	},
@@ -124,7 +113,7 @@
 		"prefix": "sol",
 		"body": [
 			"\\begin{sol}",
-			"\t$1",
+			"\t$0",
 			"\\end{sol}"
 		],
 		"description": "solution environment"
@@ -133,17 +122,56 @@
 		"prefix": "sole",
 		"body": [
 			"\\begin{solalph}",
-			"\t\\item $1",
+			"\t\\item $0",
 			"\\end{solalph}"
 		],
 		"description": "solution environment with enumerated list"
+	},
+	"Solution Itemized": {
+		"prefix": "soli",
+		"body": [
+			"\\begin{solitem}",
+			"\t\\item $0",
+			"\\end{solitem}"
+		],
+		"description": "solution environment with itemized list"
+	},
+	"Solution If and Only If": {
+		"prefix": "solf",
+		"body": [
+			"\\begin{solitem}",
+			"\t\\item [\\rightimp]$0",
+			"\t\\item [\\leftimp]",
+			"\\end{solitem}"
+		],
+		"description": "solution environment with if and only if structure"
+	},
+	"If and Only If": {
+		"prefix": "iff",
+		"body": [
+			"\\begin{itemize}",
+			"\t\\item [\\rightimp] $0",
+			"\t\\item [\\leftimp] ",
+			"\\end{itemize}"
+		],
+		"description": "if and only if structure"
+	},
+	"Set Equality": {
+		"prefix": "sete",
+		"body": [
+			"\\begin{itemize}",
+			"\t\\item [\\subseteq] $0",
+			"\t\\item [\\supseteq] ",
+			"\\end{itemize}"
+		],
+		"description": "set equality structure"
 	},
 	"Begin Title Env": {
 		"prefix": "begin",
 		"body": [
 			"\\begin{$1}[$2]",
 			"\t\\label{$3}",
-			"\t$4",
+			"\t$0",
 			"\\end{$1}"
 		],
 		"description": "beginning environments with title"
@@ -152,18 +180,9 @@
 		"prefix": "exercise",
 		"body": [
 			"\\begin{exercise}\\label{ex$1}",
-			"\t$2",
+			"\t$0",
 			"\\end{exercise}"
 		],
 		"description": "problem environment"
-	},
-	"Begin Example": {
-		"prefix": "bex",
-		"body": [
-			"\\begin{ex}[$1]",
-			"\t$2",
-			"\\end{ex}"
-		],
-		"description": "beginning example environment"
 	}
 }

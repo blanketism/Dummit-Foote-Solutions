@@ -1,0 +1,77 @@
+% LTeX: enabled=false
+
+\newcommand{\hint}[1]{\textcolor{WildStrawberry}{\textsc{Hint.}} \textit{#1}}
+\newcommand{\remark}[1]{\textcolor{Brown}{\textsc{Remark.}} \textit{#1}}
+\newcommand{\authornote}[1]{\textcolor{CarnationPink}{\textsc{A/N.}} \textit{#1}}
+
+\definecolor{pagecolor}{HTML}{faecca}
+
+\counterwithin{equation}{section}
+
+\newcounter{exercount}[subsection]
+\counterwithin{exercount}{subsection}
+
+\newcounter{definition}[section]
+\counterwithin{definition}{section}
+\newcounter{proposition}[section]
+\counterwithin{proposition}{section}
+\newcounter{theorem}[section]
+\counterwithin{theorem}{section}
+\newcounter{corollary}[section]
+\counterwithin{corollary}{section}
+
+\def\definitionautorefname{Definition}
+\def\propositionautorefname{Proposition}
+\def\theoremautorefname{Theorem}
+\def\corollaryautorefname{Corollary}
+
+\renewcommand{\subsectionautorefname}{Section}
+
+\newtcbtheorem[use counter=exercount, number within=subsection]{exer}% environment name
+    {Exercise}% Title text
+    {enhanced, % tcolorbox styles
+    attach boxed title to top left = {yshift=-3mm, xshift=5mm}, %
+    drop shadow = ForestGreen!30, %
+    boxrule=0.5pt, %
+    arc=2mm, %
+    colback=Green!8!White, colframe=PineGreen!60, %
+    colbacktitle=OliveGreen!12, coltitle=black!60, %
+    boxed title style={size=small,colframe=ForestGreen!60}, %
+    fonttitle=\bfseries%
+    }%
+{}
+
+\newenvironment{exercise}{\begin{exer}{}{}\vspace{2mm}}{\end{exer}}
+
+\newenvironment{specialexercise}[1][]{\begin{exer}%
+    [title = Exercise~\theexercount~--~{#1},%
+    drop shadow = blue!20,%
+    boxrule=0.75pt,%
+    colback=RoyalBlue!8, colframe=CadetBlue!60,%
+    colbacktitle=BlueViolet!15, coltitle=MidnightBlue,%
+    boxed title style ={colframe=NavyBlue!70}]{}{}\vspace{2mm}}{\end{exer}}
+
+\setlist{topsep = 0pt, itemsep = 0pt, parsep = 0pt, partopsep = 0pt, itemindent = 0pt, listparindent = \parindent}
+
+\newlist{subproblems}{enumerate}{3}
+\setlist[subproblems, 1]{label = (\alph*), labelsep = 4pt}
+
+\setlist[enumerate, 1]{label = (\arabic*)}
+
+\newenvironment{sol}{%
+\begin{proof}[{\textbf{Solution}}]%
+}{\end{proof}}
+
+\newenvironment{solalph}{%
+\begin{proof}[{\textbf{Solution}}]%
+\leavevmode\begin{subproblems}%
+}{\qedhere\end{subproblems}\end{proof}}
+
+\newenvironment{solitem}{%
+\begin{proof}[{\textbf{Solution}}]%
+\leavevmode\begin{itemize}%
+}{\qedhere\end{itemize}\end{proof}}
+
+\newenvironment{lemma}{%
+\begin{proof}[Lemma Proof]\renewcommand{\qedsymbol}{$\square$}%
+}{\end{proof}}
