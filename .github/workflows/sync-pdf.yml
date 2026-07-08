@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v3
  
       - name: Clone GitHub Pages repo
-        run: git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/blanketism/blanketism.github.io.git pages-repo
+        run: git clone https://x-access-token:${{ secrets.sync_pdf_token }}@github.com/blanketism/blanketism.github.io.git pages-repo
  
       - name: Copy PDF
         run: |
