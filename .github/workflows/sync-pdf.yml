@@ -1,0 +1,30 @@
+name: Sync PDF to GitHub Pages
+ 
+on:
+  push:
+    branches:
+      - main
+ 
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Dummit-Foote-Solutions
+        uses: actions/checkout@v3
+ 
+      - name: Clone GitHub Pages repo
+        run: git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/blanketism/blanketism.github.io.git pages-repo
+ 
+      - name: Copy PDF
+        run: |
+          mkdir -p pages-repo/pdfs
+          cp dummit_foote_exercises.pdf pages-repo/pdfs/
+ 
+      - name: Push to GitHub Pages
+        run: |
+          cd pages-repo
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add pdfs/dummit_foote_exercises.pdf
+          git commit -m "Auto-sync PDF from Dummit-Foote-Solutions" || true
+          git push
