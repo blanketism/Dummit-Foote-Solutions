@@ -113,13 +113,10 @@
 
 % Other Commands
 
-\newcommand{\up}{\vspace{-0.3cm}}
-\newcommand{\down}{\vskip 0.2cm}
 \newcommand{\squad}{\hspace{0.5em}}
 \renewcommand{\emptyset}{\varnothing}
-\renewcommand{\bar}{\widebar}
-\NewDocumentCommand{\bbar}{m O{}}{\bar{#1}{}^{#2}}
-\NewDocumentCommand{\dbar}{m O{}}{\bar{#1}{}_{#2}}
+\RenewDocumentCommand{\bar}{m O{}}{\widebar{#1}{}^{#2}}
+\NewDocumentCommand{\dbar}{m O{}}{\widebar{#1}{}_{#2}}
 \renewcommand{\b}{\textbf}
 \newcommand{\longand}{\quad \text{and} \quad}
 \newcommand{\nexnum}{\stepcounter{global}}
@@ -129,8 +126,6 @@
 \newcommand{\leftimp}{($\Leftarrow$) }
 \newcommand{\ep}{\varepsilon}
 \newcommand{\bl}{\backslash}
-\newcommand{\pinf}{+\infty}
-\newcommand{\ninf}{-\infty}
 \newcommand{\qh}{\qedhere}
 \newcommand{\wt}[1]{\widetilde{#1}}
 \newcommand{\wh}[1]{\smash{\widehat{#1}}}
