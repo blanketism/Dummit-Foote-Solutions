@@ -3,18 +3,18 @@
 \subsection{Definitions and Examples}
 
 \begin{exercise}\label{ex2.1.1}
-    In each of (a)-(e) prove that the specified subset is a subgroup of the given group:
+    In each of (a) -- (e) prove that the specified subset is a subgroup of the given group.
     \begin{subproblems}
-        \item the set of complex numbers of the form $a + ai$, $a \in \mathbb{R}$ (under addition)
-        \item the set of complex numbers of absolute value $1$, i.e., the unit circle in the complex plane (under multiplication)
-        \item for fixed $n \in \mathbb{Z}^+$ the set of rational numbers whose denominators divide $n$ (under addition)
-        \item for fixed $n \in \mathbb{Z}^+$ the set of rational numbers whose denominators are relatively prime to $n$ (under addition)
-        \item the set of nonzero real numbers whose square is a rational number (under multiplication)
+        \item The set of complex numbers of the form $a + ai$, $a \in \mathbb{R}$ (under addition).
+        \item The set of complex numbers of absolute value $1$, i.e., the unit circle in the complex plane (under multiplication).
+        \item For fixed $n \in \mathbb{Z}^+$, the set of rational numbers whose denominators divide $n$ (under addition).
+        \item For fixed $n \in \mathbb{Z}^+$, the set of rational numbers whose denominators are relatively prime to $n$ (under addition).
+        \item The set of nonzero real numbers whose square is a rational number (under multiplication).
     \end{subproblems}
 \end{exercise}
 
 \begin{sol}
-    Let $G$ be the group and $H$ be the subset in equestion.
+    Let $G$ be the group and $H$ be the subset in question.
     \begin{subproblems}
         \item Since $0 + 0i \in H$, then $H$ is nonempty. For $a + ai, b + bi \in H$,
         \[(a + ai) - (b + bi) = (a - b) + (a - b)i \in H\]
@@ -23,27 +23,25 @@
         \[|zw\inv| = |z||w\inv| = 1 \cdot 1 = 1\]
         so that $zw\inv \in H$, hence $H \leq G$.
         \item Fix $n \in \zp$. Since $0 = 0/k$ for some $k$ such that $k \mid n$, then $0 \in H$ so that $H$ is nonempty. Let $a/b, c/d \in H$ such that $(a, c) = (b, d) = 1$, and $b \mid n$ and $d \mid n$. Then there exists $x, y \in \zp$ such that $bx = n$ and $dy = n$. Then
-        \[\frac ab - \frac cd = \frac{ax - cy}{n}\]
-        where reducing this fraction still yields a denominator that divides $n$. Then $H \leq G$.
+        \[\frac ab - \frac cd = \frac{ax - cy}{n}.\]
+        Reducing this fraction still yields a denominator that divides $n$. Then $H \leq G$.
         \item Fix $n \in \zp$. Since $0 = 0/k$ for some $k$ such that $(k, n) = 1$, then $0 \in H$ so that $H$ is nonempty. Let $a/b, c/d \in H$ such that $(a, c) = 1$, $(b, n) = 1$, and $(d, n) = 1$. Then
         \[\frac ab - \frac cd = \frac{ad - bc}{bd}\]
-        Assume, by way of contradiction, that $(bd, n) \neq 1$. Then there exists some prime $p$ such that $p \mid bd$ and $p \mid n$. Then $p \mid b$ or $p \mid d$, contradicting our assumption. Then $(bd, n) = 1$ so that $H \leq G$.
+        If $(bd, n) \neq 1$, this would imply some $p \mid bd$ and $p \mid n$. Then $p \mid b$ or $p \mid d$, contradicting our assumption. Hence, $(bd, n) = 1$, so that $H \leq G$.
         \item Since $1 = 1^1 = 1/1$, then $1 \in H$ so that $H$ is nonempty. For $x, y \in H$, then $x^2, y^2 \in \q$. Then
         \[\left(\frac xy\right)^2 = \frac{x^2}{y^2} \in \q\]
         so that $x/y \in H$, hence $H \leq G$. \qh
     \end{subproblems}
 \end{sol}
 
-\newpage
-
 \begin{exercise}\label{ex2.1.2}
-    In each of (a)--(e) prove that the specified subset is \emph{not} a subgroup of the given group:
+    In each of (a) -- (e) prove that the specified subset is \emph{not} a subgroup of the given group.
     \begin{subproblems}
-        \item the set of $2$-cycles in $S_n$ for $n \ge 3$
-        \item the set of reflections in $D_{2n}$ for $n \ge 3$
-        \item for $n$ a composite integer $>1$ and $G$ a group containing an element of order $n$, the set $\{x \in G \mid |x| = n\} \cup \{1\}$
-        \item the set of (positive and negative) odd integers in $\mathbb{Z}$ together with $0$
-        \item the set of real numbers whose square is a rational number (under addition)
+        \item The set of $2$-cycles in $S_n$ for $n \ge 3$.
+        \item The set of reflections in $D_{2n}$ for $n \ge 3$.
+        \item For $n$ a composite integer $>1$ and $G$ a group containing an element of order $n$, the set $\{x \in G \mid |x| = n\} \cup \{1\}$.
+        \item The set of (positive and negative) odd integers in $\mathbb{Z}$ together with $0$.
+        \item The set of real numbers whose square is a rational number (under addition).
     \end{subproblems}
 \end{exercise}
 
@@ -91,7 +89,7 @@
         sr^3 & sr^3 & sr & r^2 & 1
     \end{array}
     \]
-    Both tables show closure, since no product is an element outside of the subset.
+    Both tables show closure, since no product is an element outside the subset.
 \end{solalph}
 
 \begin{exercise}\label{ex2.1.4}
@@ -102,8 +100,6 @@
     Let $G = \z$ and $H = \zp$. Then for any $m, n \in \zp$, we have $m + n \in \zp$ but $m - n \not\in \zp$ when $m < n$. Hence, $H$ is not a subgroup of $G$.
 \end{sol}
 
-\newpage
-
 \begin{exercise}\label{ex2.1.5}
     Prove that $G$ cannot have a subgroup $H$ with $|H| = n - 1$, where $n = |G| > 2$.
 \end{exercise}
@@ -112,16 +108,16 @@
     Assume, by way of contradiction, that $G$ has a subgroup $H$ where $\abs H = n - 1$. By Lagrange's Theorem, $\abs H$ divides $\abs G$, so there exists some $k \in \zp$ such that $k(n - 1) = kn - k = n$, Equivalently, $n = k/(k - 1)$. Since $n > 2$, then $k > 2$. Then $k/(k - 1)$ is not an integer, a contradiction. Hence, no such subgroup $H$ exists.
 \end{sol}
 
-\begin{specialexercise} \label{ex2.1.6}
-    Let $G$ be an abelian group. Prove that $\{ g \in G \mid |g| < \infty \}$ is a subgroup of $G$ (called the torsion subgroup of $G$). Give an explicit example where this set is not a subgroup when $G$ is non-abelian.
+\begin{specialexercise}[Torsion Subgroup] \label{ex2.1.6}
+    Let $G$ be an Abelian group. Prove that $\{ g \in G \mid |g| < \infty \}$ is a subgroup of $G$ (called the \textbf{torsion subgroup} of $G$). Give an explicit example where this set is not a subgroup when $G$ is non-Abelian.
 \end{specialexercise}
 
 \begin{sol}
     Denote the set as $\tor(G)$. Since $\abs 1 = 1$, then $1 \in \tor(G)$ so that $\tor(G)$ is nonempty. Suppose $g, h \in \tor(G)$ where $\abs g = m$ and $\abs h = n$ for $m, n \in \zp$. Then
     \[(gh\inv)^{mn} = g^{mn}(h\inv)^{mn} = (g^m)^n((h^n)\inv)^m = 1^n(1\inv)^m = 1\]
-    where we use the fact that $G$ is abelian to rearrange the terms. Then $\abs{gh\inv} \leq mn < \infty$ so that $gh\inv \in \tor(G)$, hence $\tor(G) \leq G$.
+    where we use the fact that $G$ is Abelian to rearrange the terms. Then $\abs{gh\inv} \leq mn < \infty$ so that $gh\inv \in \tor(G)$, hence $\tor(G) \leq G$.
 
-    For a non-abelian example, let $G = \aut(\r)$. Consider the elements $f, g \in G$ defined as $f(x) = -x$ and $g(x) = 1 - x$. Note that $\abs f = 2$ and $\abs g = 2$, but
+    For a non-Abelian example, let $G = \aut(\r)$. Consider the elements $f, g \in G$ defined as $f(x) = -x$ and $g(x) = 1 - x$. Note that $\abs f = 2$ and $\abs g = 2$, but
     \[(fg)(x) = f(g(x)) = f(1 - x) = x - 1\]
     It is easy to show by induction that $(fg)^n(x) = x - n$ for all $n \in \zp$, so that $\abs{fg} = \infty$. Then $fg \not\in \tor(G)$, hence $\tor(G)$ is not a subgroup of $G$.
 \end{sol}
@@ -145,14 +141,14 @@
 \begin{solitem}
     \item[\rightimp] Suppose $H \cup K$ is a subgroup. If $H \subseteq K$, then we are done. Suppose that $H \nsubseteq K$. Then there exists some $h \in H$ such that $h \not\in K$. Since $H \cup K$ is a subgroup, then for any $k \in K$, we have $hk \in H \cup K$.
     
-    Observe that $k\inv \in K$ since $K \leq G$. If $hk \in K$, then $h = (hk)k\inv \in K$, contradicting our assumption. It must be that $hk \in H$. Since $h \in H$, then $h\inv H$ as $H \leq G$. Then $h\inv(hk) = k \in H$, hence $K \subseteq H$.
+    Observe that $k\inv \in K$ since $K \leq G$. If $hk \in K$, then $h = (hk)k\inv \in K$, contradicting our assumption. It must be that $hk \in H$. Since $h \in H$, then $h\inv \in H$ as $H \leq G$. Then $h\inv(hk) = k \in H$, hence $K \subseteq H$.
     \item[\leftimp] If $H \subseteq K$, then $H \cup K = K \leq G$. Similarly, if $K \subseteq H$, then $H \cup K = H \leq G$.
 \end{solitem}
 
-\begin{specialexercise} \label{ex2.1.9}
+\begin{specialexercise}[Special Linear Group] \label{ex2.1.9}
     Let $G = \gl_n(F)$, where $F$ is any field. Define
     \[\speclin_n(F) = \{ A \in \gl_n(F) \mid \det(A) = 1 \}\]
-    (called the special linear group). Prove that $\speclin_n(F) \le \gl_n(F)$.
+    (called the \textbf{special linear group}). Prove that $\speclin_n(F) \le \gl_n(F)$.
 \end{specialexercise}
 
 \begin{sol}
@@ -200,10 +196,10 @@
 \end{sol}
 
 \begin{exercise} \label{ex2.1.12}
-    Let $A$ be an abelian group and fix some $n \in \mathbb{Z}$. Prove that the following sets are subgroups of $A$:
+    Let $A$ be an Abelian group and fix some $n \in \mathbb{Z}$. Prove that the following sets are subgroups of $A$.
     \begin{subproblems}
-        \item $\{ a^n \mid a \in A \}$
-        \item $\{ a \in A \mid a^n = 1 \}$
+        \item $\{ a^n \mid a \in A \}$.
+        \item $\{ a \in A \mid a^n = 1 \}$.
     \end{subproblems}
 \end{exercise}
 
@@ -212,10 +208,10 @@
     \begin{subproblems}
         \item Since $1 = 1^n$, then $1 \in B$ so that $B$ is nonempty. Suppose $a^n, b^n \in B$. Then
         \item \[(a^n)(b^n)\inv = a^n b^{-n} = (ab\inv)^n \in B\]
-        where the last equality follows from the fact that $A$ is abelian. Hence, $B \leq A$.
+        where the last equality follows from the fact that $A$ is Abelian. Hence, $B \leq A$.
         \item Since $1^n = 1$, then $1 \in B$ so that $B$ is nonempty. Suppose $a, b \in B$. Then
         \[(ab\inv)^n = a^n (b\inv)^n = a^n (b^n)\inv = 1 \cdot 1\inv = 1\]
-        where the second equality follows from the fact that $A$ is abelian. Hence, $B \leq A$. \qh
+        where the second equality follows from the fact that $A$ is Abelian. Hence, $B \leq A$. \qh
     \end{subproblems}
 \end{sol}
 
@@ -249,11 +245,10 @@
     Since $H_i \leq G$ for each $i \in \zp$, then $1 \in H_i$ for all $i \in \zp$, hence $1 \in H$ so that $H$ is nonempty. Suppose $a, b \in H$. Then there exists some $m, n \in \zp$ such that $a \in H_m$ and $b \in H_n$. Let $k = \max(m, n)$. Since $H_m \subseteq H_k$ and $H_n \subseteq H_k$, then $a, b \in H_k$. Since $H_k \leq G$, then $ab\inv \in H_k$, hence $ab\inv \in H$. It follows that $H \leq G$.
 \end{sol}
 
-\newpage
 
-\begin{specialexercise} \label{ex2.1.16}
+\begin{exercise} \label{ex2.1.16}
     Let $n \in \mathbb{Z}^+$ and let $F$ be a field. Prove that the set $\{ (a_{ij}) \in \gl_n(F) \mid a_{ij} = 0 \text{ for all } i > j \}$ is a subgroup of $\gl_n(F)$ (called the group of upper triangular matrices).
-\end{specialexercise}
+\end{exercise}
 
 \begin{sol}
     Let $\ut_n(F)$ denote the set of $n \times n$ upper triangular matrices with entries from $F$. Observe that $I_n$ contains $0$'s everywhere except the diagonal, hence $I_n \in \ut_n(F)$ so that $\ut_n(F)$ is nonempty. Suppose $A, B \in \ut_n(F)$, and consider $C = AB$. Then the $(i, j)$-th entry of $C$ is given by
@@ -314,6 +309,8 @@
     where we use the above to collapse the $ii$-th term of $DA$. Then $d_{ii} = 1$, hence $D \in H$, and $H$ is closed under inverses. Hence, $H \leq \gl_n(F)$.
 \end{sol}
 
+\newpage
+
 \subsection{Centralizers and Normalizers, Stabilizers and Kernels}
 
 \begin{exercise} \label{ex2.2.1}
@@ -321,7 +318,7 @@
 \end{exercise}
 
 \begin{sol}
-    For any $a \in A \subseteq G$, then $g \in C_G(A)$ if and only if $gag\inv = a$ if and only if $ga = ag$ if and only if $g\inv ag = a$. Hence, $C_G(A) = \{g \in G \mid g\inv ag = a \text{ for all } a \in A\}$.
+    $g \in C_G(A) \iff ga = ag$ for all $a \in A \iff g^{-1}ga = g^{-1}ag \iff a = g^{-1}ag$ for all $a \in A$.
 \end{sol}
 
 \begin{exercise} \label{ex2.2.2}
@@ -340,16 +337,14 @@
     Pick $g \in C_G(B)$. Then $gbg\inv = b$ for all $b \in B$. In particular, $gag\inv = a$ for all $a \in A$ because $A \subseteq B$. Then $C_G(B) \subseteq C_G(A)$. Since $C_G(B)$ and $C_G(A)$ are subgroups of $G$, then $C_G(B) \leq C_G(A)$.
 \end{sol}
 
-\begin{specialexercise} \label{ex2.2.4}
+\begin{specialexercise}[Centralizer Computations] \label{ex2.2.4}
     For each of $S_3$, $D_8$, and $Q_8$ compute the centralizers of each element and find the center of each group. Does Lagrange's Theorem (\hyperref[ex1.7.19]{Exercise 1.7.19}) simplify your work?
 \end{specialexercise}
 
 \begin{sol}
-    To compute the center of a group $G$, we need to compute the centralizer of each element in $G$ and then take the intersection of all these centralizers. The proof of this is trivial.
-
-    We begin with $S_3$. It is trivial to see that $C_G(1) = G$ for any group $G$, since $1$ commutes with every element of $g$. Now consider $(1\ 2) \in S_3$, and consider the subgroup $A = \set{1, (1\ 2)}$. Since $A$ is a subgroup, then $A \leq C_{S_3}((1\ 2))$. By Lagrange's Theorem, then 2 divides $|C_{S_3}((1\ 2))|$ and $|C_{S_3}((1\ 2))|$ divides 6. Since $(1\ 3)(1\ 2) = (1\ 2\ 3) \neq (1\ 3\ 2) = (1\ 2)(1\ 3)$, then $(1\ 3) \not\in C_{S_3}((1\ 2))$. By \hyperref[ex1.3.20]{Exercise 1.3.20}, we know that $(1\ 2)$ and $(1\ 3)$ generate $S_3$ so that $|C_{S_3}((1\ 2))| \neq 6$. Then $|C_{S_3}((1\ 2))| = 2$ so that $C_{S_3}((1\ 2)) = A$. By symmetry, the same argument holds for $(1\ 3)$ and $(2\ 3)$, so that
-    \[C_{S_3}((1\ 3)) = \set{1, (1\ 3)}, \quad C_{S_3}((2\ 3)) = \set{1, (2\ 3)}\]
-    Now consider $(1\ 2\ 3) \in S_3$, and the subgroup $B = \set{1, (1\ 2\ 3), (1\ 3\ 2)}$. Since $B$ is a subgroup, then $B \leq C_{S_3}((1\ 2\ 3))$. By Lagrange's Theorem, then 3 divides $|C_{S_3}((1\ 2\ 3))|$ and $|C_{S_3}((1\ 2\ 3))|$ divides 6. Observe that $(1\ 2) \not\in C_{S_3}((1\ 2\ 3))$ since $(1\ 2)(1\ 2\ 3) \neq (1\ 2\ 3)(1\ 2)$. Then $|C_{S_3}((1\ 2\ 3))| \neq 6$, so that $|C_{S_3}((1\ 2\ 3))| = 3$ and $C_{S_3}((1\ 2\ 3)) = B$. By symmetry, the same argument holds for $(1\ 3\ 2)$. Moreover, $Z(G) = \set 1$.
+    Note that $Z(G)$ is the intersection of all centralizers of $G$, so that we can compute $Z(G)$ after computing all centralizers. Note that $C_G(1) = G$ for any group $G$, so we only need to compute the centralizers of the non-identity elements. Beginning with $S_3$, we know by \hyperref[ex1.3.20]{Exercise 1.3.20} that $(1\ 2)$ and $(1\ 3)$ generate $S_3$, hence $C_{S_3}((1\ 2))$ cannot be the whole group. Since $\set{1, (1\ 2)} \leq C_{S_3}((1\ 2))$, then $|C_{S_3}((1\ 2))| = 2$. By symmetry, the same argument holds for $(1\ 3)$ and $(2\ 3)$, so that
+    \[C_{S_3}((1\ 3)) = \set{1, (1\ 3)}, \quad C_{S_3}((2\ 3)) = \set{1, (2\ 3)}.\]
+    A similar argument for $(1\ 2\ 3)$ along with the observation that $(1\ 2)(1\ 2\ 3) \neq (1\ 2\ 3)(1\ 2)$ shows that $C_{S_3}((1\ 2\ 3)) = \set{1, (1\ 2\ 3), (1\ 3\ 2)}$. By symmetry, the same argument holds for $(1\ 3\ 2)$. Then $C_{S_3}((1\ 3\ 2)) = \set{1, (1\ 2\ 3), (1\ 3\ 2)}$. Finally, $Z(S_3) = \set 1$.
     
     The following are the centralizers for each element in $D_8$:
     \begin{align*}
@@ -381,7 +376,7 @@
     \item Observe that $A$ is generated by $(1\ 2\ 3)$. From the previous exercise, we know that $C_{S_3}((1\ 2\ 3)) = A$, hence $C_{S_3}(A) = A$. Since $C_G(A) \leq N_G(A)$, we know that 3 divides $|N_G(A)|$ and $|N_G(A)|$ divides 6 by Lagrange's Theorem. Consider $(1\ 2) \in S_3$. Then
     \[(1\ 2)A(1\ 2) = \set{(1\ 2)(1)(1\ 2), (1\ 2)(1\ 2\ 3)(1\ 2), (1\ 2)(1\ 3\ 2)(1\ 2)} = \set{1, (1\ 3\ 2), (1\ 2\ 3)} = A\]
     so that $(1\ 2) \in N_G(A)$. Then $|N_G(A)| \neq 3$, hence $|N_G(A)| = 6$ and $N_G(A) = G$.
-    \item Since $A \subseteq C_G(A)$ is abelian and $C_G(A) \leq G$, then $A \leq G$. Since $|A| = 4$, then 4 divides $|C_G(A)|$ and $|C_G(A)|$ divides 8 by Lagrange's Theorem. Observe that $r \not\in C_G(A)$ since $rs = sr^3 \neq sr$. Then $|C_G(A)| \neq 8$, hence $|C_G(A)| = 4$ and $C_G(A) = A$. Since $C_G(A) \leq N_G(A)$, then 4 divides $|N_G(A)|$ and $|N_G(A)|$ divides 8 by Lagrange's Theorem. Consider $r \in D_8$. Then
+    \item Since $A \subseteq C_G(A)$ is Abelian and $C_G(A) \leq G$, then $A \leq G$. Since $|A| = 4$, then 4 divides $|C_G(A)|$ and $|C_G(A)|$ divides 8 by Lagrange's Theorem. Observe that $r \not\in C_G(A)$ since $rs = sr^3 \neq sr$. Then $|C_G(A)| \neq 8$, hence $|C_G(A)| = 4$ and $C_G(A) = A$. Since $C_G(A) \leq N_G(A)$, then 4 divides $|N_G(A)|$ and $|N_G(A)|$ divides 8 by Lagrange's Theorem. Consider $r \in D_8$. Then
     \[rA r\inv = \set{r(1)r\inv, r(s)r\inv, r(r^2)r\inv, r(sr^2)r\inv} = \set{1, sr^3, r^2, sr} = A\]
     so that $r \in N_G(A)$. Then $|N_G(A)| \neq 4$, hence $|N_G(A)| = 8$ and $N_G(A) = G$.
     \item Since $A \leq C_G(A)$ and $|A| = 5$, then 5 divides $|C_G(A)|$ and $|C_G(A)|$ divides 10 by Lagrange's Theorem. Observe that $s \not\in C_G(A)$ since $sr = r^4 s \neq rs$. Then $|C_G(A)| \neq 10$, hence $|C_G(A)| = 5$ and $C_G(A) = A$. Since $C_G(A) \leq N_G(A)$, then 5 divides $|N_G(A)|$ and $|N_G(A)|$ divides 10 by Lagrange's Theorem. Consider $s \in D_{10}$. Then
@@ -393,7 +388,7 @@
     Let $H$ be a subgroup of the group $G.$
     \begin{subproblems}
         \item Show that $H\le N_G(H).$ Give an example to show that this is not necessarily true if $H$ is not a subgroup.
-        \item Show that $H\le C_G(H)$ if and only if $H$ is abelian.
+        \item Show that $H\le C_G(H)$ if and only if $H$ is Abelian.
     \end{subproblems}
 \end{exercise}
 
@@ -407,8 +402,8 @@
     so that $r$ does not normalize $H$, and $H$ is not a subgroup of $N_G(H)$.
     \item 
     \begin{itemize}
-        \item \rightimp Suppose $H \leq C_G(H)$. Then for any $h_1, h_2 \in H$, we have $h_1 h_2 = h_2 h_1$ since $h_1 \in C_G(H)$. Hence, $H$ is abelian.
-        \item \leftimp Suppose $H$ is abelian, and let $h_1 \in H$. Then for any $h_2 \in H$, we have $h_1 h_2 = h_2 h_1$, so that $h_1 \in C_G(H)$. Since $h_1$ was arbitrary, then $H \leq C_G(H)$.
+        \item [\rightimp] Suppose $H \leq C_G(H)$. Then for any $h_1, h_2 \in H$, we have $h_1 h_2 = h_2 h_1$ since $h_1 \in C_G(H)$. Hence, $H$ is Abelian.
+        \item [\leftimp] Suppose $H$ is Abelian, and let $h_1 \in H$. Then for any $h_2 \in H$, we have $h_1 h_2 = h_2 h_1$, so that $h_1 \in C_G(H)$. Since $h_1$ was arbitrary, then $H \leq C_G(H)$.
     \end{itemize}
 \end{solalph}
 
@@ -458,7 +453,6 @@
     Now suppose $h \in N_G(A) \cap H$. Then $hAh\inv = A$ and $h \in H$. By definition, then $h \in N_H(A)$. It follows that $N_G(A) \cap H \subseteq N_H(A)$. Hence, $N_H(A) = N_G(A) \cap H$. Since $N_G(A) \leq G$ and $H \leq G$, and $N_H(A)$ is the intersection of these two subgroups, then $N_H(A) \leq H$ by \hyperref[ex2.1.10]{Exercise 2.1.10}.
 \end{sol}
 
-\newpage
 
 \begin{exercise} \label{ex2.2.10}
     Let $H$ be a subgroup of order $2$ in $G$. Show that $N_G(H) = C_G(H)$. Deduce that if $N_G(H) = G$ then $H \le Z(G)$.
@@ -491,19 +485,16 @@
     \end{equation}
     is a typical element of $R$. Each $\sigma \in S_4$ gives a permutation of $\set{x_1, \ldots, x_4}$ by defining $\sigma \cdot x_i = x_{\sigma(i)}$. This may be extended to a map from $R$ to $R$ by defining
     \[\sigma \cdot p(x_1, x_2, x_3, x_4) = p(x_{\sigma(1)}, x_{\sigma(2)}, x_{\sigma(3)}, x_{\sigma(4)})\]
-    for all $p(x_1, x_2, x_3, x_4) \in R$ (i.e., $\sigma$ simply permutes the indices of the variables). For example, if $\sigma = (1\ 2)(3\ 4)$ and $p(x_1, \ldots, x_4)$ is the polynomial in \eqref{ex2.2.11eq} above, then
-    \begin{align*}
-        \sigma \cdot p(x_1, x_2, x_3, x_4) & = 12x_2^5x_1^7x_4 - 18x_1^3x_4 + 11x_2^6x_1x_4^3x_3^{23} \\
-        & = 12x_1^7x_2^5x_4 - 18x_1^3x_4 + 11x_1x_2^6x_3^{23}x_4^3.
-    \end{align*}
+    for all $p(x_1, x_2, x_3, x_4) \in R$ (i.e., $\sigma$ simply permutes the indices of the variables).
     \begin{subproblems}
         \item Let $p = p(x_1, \ldots, x_4)$ be the polynomial in \eqref{ex2.2.11eq} above, let $\sigma = (1\ 2\ 3\ 4)$ and let $\tau = (1\ 2\ 3)$. Compute $\sigma \cdot p, \tau \cdot (\sigma \cdot p), (\tau \circ \sigma) \cdot p$, and $(\sigma \circ \tau) \cdot p$.
         \item Prove that these definitions give a (left) group action of $S_4$ on $R$.
         \item Exhibit all permutations in $S_4$ that stabilize $x_4$ and prove that they form a subgroup isomorphic to $S_3$.
-        \item Exhibit all permutations in $S_4$ that stabilize the element $x_1 + x_2$ and prove that they form an abelian subgroup of order 4.
+        \item Exhibit all permutations in $S_4$ that stabilize the element $x_1 + x_2$ and prove that they form an Abelian subgroup of order 4.
         \item Exhibit all permutations in $S_4$ that stabilize the element $x_1x_2 + x_3x_4$ and prove that they form a subgroup isomorphic to the dihedral group of order 8.
-        \item Show that the permutations in $S_4$ that stabilizes the element $(x_1 + x_2)(x_3 + x_4)$ are exactly the same as those found in part (e). (The two polynomials appearing in parts (e) and (f) and the subgroup that stabilizes them will play an important role in the study of roots of quartic equations in Section 14.6.)
+        \item Show that the permutations in $S_4$ that stabilize the element $(x_1 + x_2)(x_3 + x_4)$ are exactly the same as those found in part (e).
     \end{subproblems}
+    \remark{The two polynomials appearing in parts (e) and (f) and the subgroup that stabilizes them will play an important role in the study of roots of quartic equations in Section 14.6.}
 \end{exercise}
 
 \begin{solalph}
@@ -520,15 +511,14 @@
         & = p(x_{\sigma(\tau(1))}, x_{\sigma(\tau(2))}, x_{\sigma(\tau(3))}, x_{\sigma(\tau(4))}) \\
         & = (\sigma \circ \tau) \cdot p(x_1, x_2, x_3, x_4)
     \end{align*}
-    \item The permutations in $S_4$ that stabilize $x_4$ are those that fix 4 and permute $\{1, 2, 3\}$. These are exactly the elements of the subgroup
-    \[G = \set{1, (1\ 2), (1\ 3), (2\ 3), (1\ 2\ 3), (1\ 3\ 2)}\]
-    which is clearly isomorphic to $S_3$.
-    \item To stabilize $x_1 + x_2$, a permutation must either fix both 1 and 2 or swap them. The permutations that do this are
+    \item The permutations that stabilize $x_4$ fix 4 and permute $\{1, 2, 3\}$:
+    \[G = \set{1, (1\ 2), (1\ 3), (2\ 3), (1\ 2\ 3), (1\ 3\ 2)} \cong S_3.\]
+    \item The permutations that stabilize $x_1 + x_2$ swap 1 and 2 or fix them:
     \[H = \set{1, (1\ 2), (3\ 4), (1\ 2)(3\ 4)}\]
-    which is abelian since every nonidentity element has order 2. Moreover, $|H| = 4$.
-    \item To stabilize $x_1 x_2 + x_3 x_4$, a permutation must either swap 1 and 2 or fix them, and either swap 3 and 4 or fix them. Additionally, it may swap the pairs $(1\ 2)$ and $(3\ 4)$. The permutations that do this are
-    \[K = \set{1, (1\ 2), (3\ 4), (1\ 2)(3\ 4), (1\ 3)(2\ 4), (1\ 4)(2\ 3), (1\ 3\ 2\ 4), (1\ 4\ 2\ 3)}\]
-    It is straightforward to see that $K$ is generated by $(1\ 2)$ and $(1\ 3\ 2\ 4)$. Consider the mapping $\phi : D_8 \to K$ defined by
+    which is Abelian since every non-identity element has order 2. Moreover, $|H| = 4$.
+    \item The permutations that stabilize $x_1x_2 + x_3x_4$ swap 1 and 2 or fix them, swap 3 and 4 or fix them, swap the pairs $(1\ 2)$ and $(3\ 4)$, or swap all four elements:
+    \[K = \set{1, (1\ 2), (3\ 4), (1\ 2)(3\ 4), (1\ 3)(2\ 4), (1\ 4)(2\ 3), (1\ 3\ 2\ 4), (1\ 4\ 2\ 3)}.\]
+    It is straightforward to see that $K$ is generated by $(1\ 2)$ and $(1\ 3\ 2\ 4)$. Let $\phi : D_8 \to K$ be defined by
     \[\phi(r) = (1\ 3\ 2\ 4), \quad \phi(s) = (1\ 2)\]
     Since $\phi(r)^4 = \phi(s)^2 = 1$ and $\phi(s) \phi(r) = (1\ 2)(1\ 3\ 2\ 4) = (1\ 4)(2\ 3) = \phi(r)\inv \phi(s)$, then $\phi$ is a homomorphism. Since $\phi$ is clearly surjective and $|D_8| = |K| = 8$, then $\phi$ is an isomorphism, so that $K \cong D_8$.
     \item The permutations that stabilize $(x_1 + x_2)(x_3 + x_4)$ must either swap 1 and 2 or fix them, and either swap 3 and 4 or fix them. Additionally, it may swap the pairs $(1\ 2)$ and $(3\ 4)$. These are exactly the same permutations found in part (e). \qh
@@ -556,67 +546,16 @@
 
 \begin{sol}
     Let $X, Y \in H(F)$ be written as
-    \[
-    X = 
-    \begin{pmatrix}
-        1 & a & b \\
-        0 & 1 & c \\
-        0 & 0 & 1
-    \end{pmatrix} \quad \text{and} \quad Y = 
-    \begin{pmatrix}
-        1 & d & e \\
-        0 & 1 & f \\
-        0 & 0 &1
-    \end{pmatrix}
-    \]
+    \[X = (a, b, c) \quad \text{and} \quad Y = (d, e, f)\]
     where $X \in Z(H(F))$. Then $XY = YX$, implying that
-    \[
-    XY = 
-    \begin{pmatrix}
-        1 & a + d & af + b + e \\
-        0 & 1 & c + f \\
-        0 & 0 & 1
-    \end{pmatrix} = 
-    \begin{pmatrix}
-        1 & d + a & dc + e + b \\
-        0 & 1 & f + c \\
-        0 & 0 & 1
-    \end{pmatrix} = YX
-    \]
+    \[XY = (a + d, b + e + af, c + f) = (d + a, e + b + dc, f + c) = YX\]
     so that $af + b + e = dc + e + b$. Simplifying, we have $af = dc$. Since this must hold for all $d, f \in F$, then $a = 0$ and $c = 0$. It follows that
-    \[Z(H(F)) = 
-    \set*{\left.
-    \begin{pmatrix}
-        1 & 0 & x \\
-        0 & 1 & 0 \\
-        0 & 0 & 1
-    \end{pmatrix}~\right|x \in F}
-    \]
+    \[Z(H(F)) = \set{(0, x, 0) \mid x \in F}\]
     Moreover, the mapping $\phi : F \to Z(H(F))$ defined by
-    \[\phi(x) = 
-    \begin{pmatrix}
-        1 & 0 & x \\
-        0 & 1 & 0 \\
-        0 & 0 & 1
-    \end{pmatrix}\]
-    is clearly surjective. If $\phi(x) = I_3$, then $x = 0$, so that $\phi$ is injective. Finally, for any $x, y \in F$, we have
-    \[\phi(x + y) =
-    \begin{pmatrix}
-        1 & 0 & x + y \\
-        0 & 1 & 0 \\
-        0 & 0 & 1
-    \end{pmatrix} =
-    \begin{pmatrix}
-        1 & 0 & x \\
-        0 & 1 & 0 \\
-        0 & 0 & 1
-    \end{pmatrix}
-    \begin{pmatrix}
-        1 & 0 & y \\
-        0 & 1 & 0 \\
-        0 & 0 & 1
-    \end{pmatrix} = \phi(x) \phi(y)\]
-    so that $\phi$ is a homomorphism. Hence, $\phi$ is an isomorphism, and $F \cong Z(H(F))$.
+    \[\phi(x) = (0, x, 0)\]
+    is clearly surjective. If $\phi(x) = (0, 0, 0)$, then $x = 0$, so that $\phi$ is injective. Finally, for any $x, y \in F$, we have
+    \[\phi(x + y) = (0, x + y, 0) = (0, x, 0)(0, y, 0) = \phi(x) \phi(y).\]
+    Hence, $\phi$ is an isomorphism, so that $Z(H(F)) \cong F$.
 \end{sol}
 
 \newpage
@@ -720,14 +659,12 @@
 \end{exercise}
 
 \begin{sol}
-    We know that $\bar 1$ generates $\intmod[48]$. By Theorem 2.4, $\phi_a$ extends to an isomorphism if and only if $x^a$ generates $Z_{48}$. By Proposition 2.5, this occurs if and only if $(a, 48) = 1$. Hence, the integers $a$ such that $\phi_a$ extends to an isomorphism are
-    \[a \in \set{1, 5, 7, 11, 13, 17, 19, 23, 25, 29, 31, 35, 37, 41, 43, 47} \qh\]
+    We know that $\bar 1$ generates $\intmod[48]$. By Theorem 2.4, $\phi_a$ extends to an isomorphism if and only if $x^a$ generates $Z_{48}$. By Proposition 2.5, this occurs if and only if $(a, 48) = 1$. Hence, the integers $a$ such that $\phi_a$ extends to an isomorphism are the $a$ from \hyperref[ex2.3.3]{Exercise 2.3.3}.
 \end{sol}
 
-\newpage
 
 \begin{exercise}\label{ex2.3.9}
-    Let $Z_{36} = \gen x$. For which integers $a$ does the map $\psi_a$ defined by $\psi_a : \bar 1 \mapsto x^a$ extend to a \textit{well defined homomorphism} from $\intmod[48]$ into $Z_{36}$. Can $\psi_a$ ever be a surjective homomorphism?
+    Let $Z_{36} = \gen x$. For which integers $a$ does the map $\psi_a$ defined by $\psi_a : \bar 1 \mapsto x^a$ extend to a \emph{well defined homomorphism} from $\intmod[48]$ into $Z_{36}$. Can $\psi_a$ ever be a surjective homomorphism?
 \end{exercise}
 
 \begin{sol}
@@ -775,10 +712,9 @@
     Moreover, a proper subgroup that is not cyclic is $\gen{r^2, s} = \{1, r^2, s, sr^2\}$.
 \end{sol}
 
-\newpage
 
 \begin{exercise}\label{ex2.3.12}
-    Prove that the following groups are \textit{not} cyclic:
+    Prove that the following groups are \emph{not} cyclic:
     \begin{subproblems}
         \item $Z_2 \times Z_2$ \quad (b)~~$Z_2 \times \z$ \quad (c)~~$\z \times \z$
     \end{subproblems}
@@ -798,7 +734,7 @@
 \end{solalph}
 
 \begin{exercise}\label{ex2.3.13}
-    Prove that the following pairs of groups are \textit{not} isomorphic:
+    Prove that the following pairs of groups are \emph{not} isomorphic:
     \begin{subproblems}
         \item $\z \times Z_2$ and $\z$ \quad (b)~~$\q \times Z_2$ and $\q$.
     \end{subproblems}
@@ -828,7 +764,6 @@
     \end{align*}
 \end{sol}
 
-\newpage
 
 \begin{exercise}\label{ex2.3.15}
     Prove that $\q \times \q$ is not cyclic.
@@ -839,13 +774,13 @@
 \end{sol}
 
 \begin{exercise}\label{ex2.3.16}
-    Assume $\abs x = n$ and $\abs y = m$. Suppose that $x$ and $y$ \textit{commute}: $xy = yx$. Prove that $\abs{xy}$ divides the least common multiple of $m$ and $n$. Need this be true of $x$ and $y$ do \textit{not} commute? Give an example of commuting elements $x$ and $y$ such that the order of $xy$ is not equal to the least common multiple of $\abs x$ and $\abs y$.
+    Assume $\abs x = n$ and $\abs y = m$. Suppose that $x$ and $y$ \emph{commute}: $xy = yx$. Prove that $\abs{xy}$ divides the least common multiple of $m$ and $n$. Need this be true of $x$ and $y$ do \emph{not} commute? Give an example of commuting elements $x$ and $y$ such that the order of $xy$ is not equal to the least common multiple of $\abs x$ and $\abs y$.
 \end{exercise}
 
 \begin{sol}
     Let $\ell$ be the least common multiple of $m$ and $n$. Then there exist $a, b \in \z$ such that $\ell = am = bn$. Then
     \[(xy)^\ell = x^\ell y^\ell = x^{bn}y^{am} = 1 \cdot 1 = 1\]
-    so that by Proposition 2.3, then $|xy|$ divides $\ell$. Moreover, this is not true if $x$ and $y$ do not commute. If we consider $r, s \in D_8$, then $\abs r = 4$ and $\abs s = 2$, but $\abs{rs} = 2$ which 4 does not divide.
+    so that by Proposition 2.3, then $|xy|$ divides $\ell$. Moreover, this is not true if $x$ and $y$ do not commute. If we consider $r, s \in D_8$, then $\abs r = 4$ and $\abs s = 2$, but $\abs{rs} = 2$ which 4 does not divide. Moreover, consider $r^2, s \in D_8$. Then $\abs{r^2} = 2$ and $\abs s = 2$, but $\abs{r^2s} = 4$ which is not equal to the least common multiple of 2 and 2.
 \end{sol}
 
 \begin{exercise}\label{ex2.3.17}
@@ -857,7 +792,7 @@
 \end{sol}
 
 \begin{exercise}\label{ex2.3.18}
-    Show that if $H$ is any group and $h$ is an element of $H$ with $h^n = 1$, then there is a unique homomorphism from $Z_n = \gen x$ to $h$ such that $x \mapsto h$.
+    Show that if $H$ is any group and $h$ is an element of $H$ with $h^n = 1$, then there is a unique homomorphism from $Z_n = \gen x \to H$ such that $x \mapsto h$.
 \end{exercise}
 
 \begin{sol}
@@ -890,7 +825,7 @@
     If $x^{p^n} = 1$, then Proposition 2.3 says that $|x|$ divides $p^n$. Since $p$ is prime, then $|x|$ must also be a power of $p$ that is at most $n$.
 \end{sol}
 
-\begin{specialexercise}\label{ex2.3.21}
+\begin{specialexercise}[Cyclicity of {$\units[p^n]$}]\label{ex2.3.21}
     Let $p$ be an odd prime and let $n$ be a positive integer. Use the Binomial Theorem to show that $(1 + p)^{p^{n - 1}} \equiv 1 \bmod p^n$ but $(1 + p)^{p^{n - 2}} \not\equiv 1 \bmod p^n$. Deduce that $1 + p$ is an element of order $p^{n - 1}$ in the multiplicative group $\units[p^n]$.
 \end{specialexercise}
 
@@ -898,26 +833,35 @@
     By the Binomial Theorem, then
     \[(1 + p)^{p^{n - 1}} = \sum_{k = 0}^{p^{n - 1}} \binom{p^{n - 1}}k p^k = 1 + p^n + \sum_{k = 2}^{p^{n - 1} - 2} \binom{p^{n - 1}}k p^k\]
     Observe that for $k \geq 2$, the binomial coefficient is
-    \[\binom{p^{n - 1}}{k} = \frac{p^{n - 1}(p^{n - 1}) \cdots (p^{n - 1} - k + 1)}{k!}\]
-    where we note that the denominator $k!$ contains at most $p^{k - 1}$ as a factor since $p$ is prime. Then the numerator contains at least $p^{n - 1}$ as a factor, so that the entire term contains at least $p^{n - 1 - (k - 1)} = p^{n - k}$ as a factor. Since this is multiplied by $p^k$ in the summation, then each term for $k \geq 2$ contains at least $p^n$ as a factor, so that $(1 + p)^{p^{n - 1}} \equiv 1 \bmod p^n$.
+    \[\binom{p^{n - 1}}{k} = \frac{p^{n - 1}(p^{n - 1} - 1) \cdots (p^{n - 1} - k + 1)}{k!}\]
+    We now claim that $k!$ contains at most $p^{k - 1}$ as a factor. 
+    \begin{lemma}
+        To see this, we use the formula obtained in \hyperref[ex0.2.8]{Exercise 0.2.8} to find the largest power of $p$ that divides $k!$:
+        \[\sum_{i = 1}^{\infty} \floor*{\frac{k}{p^i}} \leq \sum_{i = 1}^\infty \frac{k}{p^i} = k \cdot \frac{1/p}{1 - 1/p} = \frac{k}{p - 1} \leq \frac k2 \leq k - 1. \qh\]
+    \end{lemma}
+    Then the numerator contains at least $p^{n - 1}$ as a factor, so that the entire term contains at least $p^{n - 1 - (k - 1)} = p^{n - k}$ as a factor. Since this is multiplied by $p^k$ in the summation, then each term for $k \geq 2$ contains at least $p^n$ as a factor, so that $(1 + p)^{p^{n - 1}} \equiv 1 \bmod p^n$.
 
     Now consider $(1 + p)^{p^{n - 2}}$. Using the Binomial Theorem again, we have
     \[(1 + p)^{p^{n - 2}} = \sum_{k = 0}^{p^{n - 2}} \binom{p^{n - 2}}k p^k = 1 + p^{n - 1} + \sum_{k = 2}^{p^{n - 2} - 2} \binom{p^{n - 2}}k p^k\]
     While the rest of the summation terms are divisible by $p^n$ like before, the $k = 1$ term is $p^{n - 1}$ which is not divisible by $p^n$. Hence, $(1 + p)^{p^{n - 2}} \not\equiv 1 \bmod p^n$. Since the only integers that divide $p^n$ are $1, p, p^2, \ldots, p^n$, and the first power that results in $1 \bmod p^n$ is $p^{n - 1}$, it follows that the order of $1 + p$ in $\units[p^n]$ is $p^{n - 1}$.
 \end{sol}
 
-\begin{specialexercise}\label{ex2.3.22}
+\begin{specialexercise}[Structure of {$\units[2^n]$}]\label{ex2.3.22}
     Let $n$ be an integer $\geq 3$. Use the Binomial Theorem to show that $(1 + 2^2)^{2^{n - 2}} \equiv 1 \bmod 2^n$ but $(1 + 2^2)^{2^{n - 3}} \not\equiv 1 \bmod 2^n$. Deduce that 5 is an element of order $2^{n - 2}$ in the multiplicative group $\units[2^n]$.
 \end{specialexercise}
 
 \begin{sol}
     The process is similar to the previous exercise, where we use the Binomial Theorem to expand $(1 + 2^2)^{2^{n - 2}}$ and see that $k = 0$ and $k = 1$ terms are $1$ and $2^n$ respectively. For $k \geq 2$, we have the summand as
     \[\binom{2^{n - 2}}k 2^{2k} = \frac{2^{n - 2}(2^{n - 2} - 1) \cdots (2^{n - 2} - k + 1)}{k!} 2^{2k}\]
-    Using the formula obtained in \hyperref[ex0.2.8]{Exercise 0.2.8}, note that the largest power of 2 that $k!$ divides is $k - 1$. Then $k!$ contains at most $2^{k - 1}$ as a factor, while the numerator contains at least $2^{n - 1}$ as a factor. Along with $2^{2k}$, the entire term contains at least $2^{n - 1 - (k - 1) + 2k} = 2^{n + k}$ as a factor. Since $k \geq 2$, then $n + k \geq n + 2 > n$, so that each term for $k \geq 2$ contains at least $2^n$ as a factor. Hence, $(1 + 2^2)^{2^{n - 2}} \equiv 1 \bmod 2^n$ as desired. Moreover, considering $(1 + 2^2)^{2^{n - 3}}$, the $k = 1$ term is $2^{n - 1}$ which is not divisible by $2^n$. Hence, $(1 + 2^2)^{2^{n - 3}} \not\equiv 1 \bmod 2^n$. Since the only integers that divide $2^n$ are $1, 2, 2^2, \ldots, 2^n$, and the first power that results in $1 \bmod 2^n$ is $2^{n - 2}$, it follows that the order of $5$ in $\units[2^n]$ is $2^{n - 2}$.
+    Using a similar formulation as above, we know that
+    \[\sum_{i = 1}^\infty \floor*{\frac{k}{2^i}} \leq \sum_{i = 1}^\infty \frac{k}{2^i} = k\]
+    Since infinity is never achieved, then we may take this as strict, hence the greatest power of 2 is at most $k - 1$. With $2^{2k}$, the entire term contains at least $2^{n - 1 - (k - 1) + 2k} = 2^{n + k}$ as a factor. Since $k \geq 2$, then $n + k \geq n + 2 > n$, so that each term for $k \geq 2$ contains at least $2^n$ as a factor. Hence, $(1 + 2^2)^{2^{n - 2}} \equiv 1 \bmod 2^n$ as desired. Moreover, considering $(1 + 2^2)^{2^{n - 3}}$, the $k = 1$ term is $2^{n - 1}$ which is not divisible by $2^n$. Hence, $(1 + 2^2)^{2^{n - 3}} \not\equiv 1 \bmod 2^n$. Since the only integers that divide $2^n$ are $1, 2, 2^2, \ldots, 2^n$, and the first power that results in $1 \bmod 2^n$ is $2^{n - 2}$, it follows that the order of $5$ in $\units[2^n]$ is $2^{n - 2}$.
 \end{sol}
 
 \begin{exercise}\label{ex2.3.23}
-    Show that $\units[2^n]$ is not cyclic for any $n \ge 3$. [Find two distinct subgroups of order 2.]
+    Show that $\units[2^n]$ is not cyclic for any $n \ge 3$.
+    
+    \hint{Find two distinct subgroups of order 2.}
 \end{exercise}
 
 \begin{sol}
@@ -932,9 +876,11 @@
     Let $G$ be a finite group and let $x \in G$.
     \begin{subproblems}
         \item Prove that if $g \in N_G(\gen x)$ then $gxg\inv = x^a$ for some $a \in \z$.
-        \item Prove conversely that if $gxg\inv = x^a$ for some $a \in \z$ then $g \in N_G(\gen x)$. [Show first that $gx^kg\inv = (gxg\inv)^k = x^{ak}$ for any integer $k$ so that $g\gen xg\inv \leq \gen x$. If $x$ has order $n$, show that the elements $gx^ig\inv, i = 0, 1, \ldots, n - 1$ are distinct, so that $\abs{g \gen xg\inv} = \abs{\gen x} = n$ and conclude that $g\gen xg\inv = \gen x$.]
+        \item Prove conversely that if $gxg\inv = x^a$ for some $a \in \z$ then $g \in N_G(\gen x)$.
+        
+        \hint{Show first that $gx^kg\inv = (gxg\inv)^k = x^{ak}$ for any integer $k$ so that $g\gen xg\inv \leq \gen x$. If $x$ has order $n$, show that the elements $gx^ig\inv, i = 0, 1, \ldots, n - 1$ are distinct, so that $\abs{g \gen xg\inv} = \abs{\gen x} = n$ and conclude that $g\gen xg\inv = \gen x$.}
     \end{subproblems}
-    Note that this cuts down some of the work in commuting normalizers of cyclic subgroups since one does not have to check $ghg\inv \in \gen x$ for every $h \in \gen x$.
+    \remark{Note that this cuts down some work in commuting normalizers of cyclic subgroups since one does not have to check $ghg\inv \in \gen x$ for every $h \in \gen x$.}
 \end{exercise}
 
 \begin{solalph}
@@ -953,7 +899,7 @@
 \end{exercise}
 
 \begin{sol}
-    Fix $k \in \zp$ such that $(k, n) = 1$. Since $G$ is cyclic, then $G = \gen x$ for some $x \in G$. For any $y \in G$, there exists some integer $m$ such that $y = x^m$. Since $(k, n) = 1$, there exist integers $s, t$ such that $ks + nt = 1$. Then
+    Fix $k \in \zp$ such that $(k, n) = 1$. Let $\phi : x \mapsto x^k$. Since $G$ is cyclic, then $G = \gen x$ for some $x \in G$. For any $y \in G$, there exists some integer $m$ such that $y = x^m$. Since $(k, n) = 1$, there exist integers $s, t$ such that $ks + nt = 1$. Then
     \[\phi(x^{ms}) = x^{kms} = x^{m(1 - nt)} = x^m (x^n)^{-mt} = x^m \cdot 1 = y\]
     so that $\phi$ is surjective.
 
@@ -966,38 +912,38 @@
     \begin{subproblems}
         \item Prove that $\sigma_a$ is an automorphism of $Z_n$ if and only if $a$ and $n$ are relatively prime.
         \item Prove that $\sigma_a = \sigma_b$ if and only if $a \equiv b \bmod n$.
-        \item Prove that \textit{every} automorphism of $Z_n$ is equal to $\sigma_a$ for some integer $a$.
-        \item Prove that $\sigma_a \circ \sigma_b = \sigma_{ab}$. Deduce that the map $\bar a \mapsto \sigma_a$ is an isomorphism of $\units$ onto the automorphism group of $Z_n$ (so $\aut(Z_n)$ is an abelian group of order $\phi(n)$).
+        \item Prove that \emph{every} automorphism of $Z_n$ is equal to $\sigma_a$ for some integer $a$.
+        \item Prove that $\sigma_a \circ \sigma_b = \sigma_{ab}$. Deduce that the map $\bar a \mapsto \sigma_a$ is an isomorphism of $\units$ onto the automorphism group of $Z_n$ (so $\aut(Z_n)$ is an Abelian group of order $\phi(n)$).
     \end{subproblems}
 \end{specialexercise}
 
 \begin{solalph}
     \item 
     \begin{itemize}
-        \item \rightimp Suppose $\sigma_a \in \aut(Z_n)$, and let $d = (n, a)$. Assume, by way of contradiction, that $d \neq 1$. Then there are $s, t \in \z$ such that $n = ds$ and $a = dt$. Let $Z_n = \gen x$. Then
-        \[\phi(x^s) = x^{as} = x^{dts} = x^{ns} = 1\]
+        \item [\rightimp] Suppose $\sigma_a \in \aut(Z_n)$, and let $d = (n, a)$. Assume, by way of contradiction, that $d \neq 1$. Then there are $s, t \in \z$ such that $n = ds$ and $a = dt$. Let $Z_n = \gen x$. Then
+        \[\sigma_a(x^s) = x^{as} = x^{dts} = x^{ns} = 1\]
         If $x^s \neq 1$, then $\ker\sigma_a$ would be non-trivial, contradicting that $\sigma_a$ is an automorphism. Hence, $x^s = 1$, and since $\abs x = n$ and $n \mid s$, then $s = n$ so that $d = 1$.
-        \item \leftimp Suppose that $(a, n) = 1$. By the previous exercise, then $\sigma_a$ is a surjective map. Since $Z_n$ is finite, then $\sigma_a$ is also bijective. Moreover,
+        \item [\leftimp] Suppose that $(a, n) = 1$. By the previous exercise, then $\sigma_a$ is a surjective map. Since $Z_n$ is finite, then $\sigma_a$ is also bijective. Moreover,
         \[\sigma_a(xy) = (xy)^a = x^ay^a = \sigma_a(x)\sigma_a(y)\]
         for some $x, y \in Z_n$. Then $\sigma_a$ is also a homomorphism, hence $\sigma_a \in \aut(Z_n)$.
     \end{itemize}
     \item
     \begin{itemize}
-        \item \rightimp Suppose $\sigma_a = \sigma_b$. Let $Z_n = \gen x$. Then
+        \item [\rightimp] Suppose $\sigma_a = \sigma_b$. Let $Z_n = \gen x$. Then
         \[x^a = \sigma_a(x) = \sigma_b(x) = x^b\]
         so that $n \mid (a - b)$, or $a \equiv b \bmod n$.
-        \item \leftimp Suppose $a \equiv b \bmod n$. Then there exists some integer $k$ such that $a - b = nk$. Let $Z_n = \gen x$. For any $x^m \in Z_n$, we have
+        \item [\leftimp] Suppose $a \equiv b \bmod n$. Then there exists some integer $k$ such that $a - b = nk$. Let $Z_n = \gen x$. For any $x^m \in Z_n$, we have
         \[\sigma_a(x^m) = x^{am} = x^{(b + nk)m} = x^{bm} (x^n)^{km} = x^{bm} \cdot 1 = \sigma_b(x^m)\]
         so that $\sigma_a = \sigma_b$.
     \end{itemize}
-    \item Let $Z_n = \gen x$ and let $\phi \in \aut(Z_n)$. Since $\phi$ is surjective, then there exists some integer $a$ such that $\phi(x) = x^a$. For any $x^m \in Z_n$, we have
+    \item Let $Z_n = \gen x$ and let $\phi \in \aut(Z_n)$. Since $Z_n$ is cyclic, there exists some integer $a$ such that $\phi(x) = x^a$. For any $x^m \in Z_n$, we have
     \[\phi(x^m) = \phi(x)^m = (x^a)^m = x^{am} = \sigma_a(x^m)\]
     so that $\phi = \sigma_a$.
     \item Let $Z_n = \gen x$. For any $x^m \in Z_n$, we have
     \[\sigma_a \circ \sigma_b (x^m) = \sigma_a(x^{bm}) = x^{abm} = \sigma_{ab}(x^m)\]
     so that $\sigma_a \circ \sigma_b = \sigma_{ab}$. Consider the map
     \[\phi : \units \to \aut(Z_n) \quad \text{by} \quad \phi(\bar a) = \sigma_a\]
-    By part (b), $\phi$ is well defined. Part (a) shows that $\phi$ is injective, while part (c) shows that $\phi$ is surjective. The first part of (d) shows that $\phi$ is a homomorphism. Hence, $\phi$ is an isomorphism of $\units$ onto $\aut(Z_n)$.
+    By part (b), $\phi$ is well-defined. Part (a) shows that $\phi$ is injective, while part (c) shows that $\phi$ is surjective. The first part of (d) shows that $\phi$ is a homomorphism. Hence, $\phi$ is an isomorphism of $\units$ onto $\aut(Z_n)$.
 \end{solalph}
 
 \newpage
@@ -1023,17 +969,17 @@
 \end{sol}
 
 \begin{exercise}\label{ex2.4.3}
-    Prove that if $H$ is an abelian subgroup of a group $G$ then $\langle H, Z(G)\rangle$ is abelian. Give an explicit example of an abelian subgroup $H$ of a group $G$ such that $\langle H, C_G(H)\rangle$ is not abelian.
+    Prove that if $H$ is an Abelian subgroup of a group $G$ then $\langle H, Z(G)\rangle$ is Abelian. Give an explicit example of an Abelian subgroup $H$ of a group $G$ such that $\langle H, C_G(H)\rangle$ is not Abelian.
 \end{exercise}
 
 \begin{sol}
     Let $g, h \in \gen{H, Z(G)}$. Using Proposition 2.9, we may put them as follows:
     \[g = g_1^{\ep_1}g_2^{\ep_2} \ldots g_m^{\ep_m}, \quad h = h_1^{\delta_1}h_2^{\delta_2} \ldots h_n^{\delta_n}\]
-    where $\ep_i = \delta_i = \pm 1$, and $g_i, h_i \in H \cup Z(G)$ for all $i$. Since both $H$ and $Z(G)$ are abelian, then elements of $H$ and $Z(G)$ commute with each other. Then
+    where $\ep_i = \delta_i = \pm 1$, and $g_i, h_i \in H \cup Z(G)$ for all $i$. Since $H$ is Abelian, elements of $H$ commute with each other. Since elements of $Z(G)$ commute with all elements of $G$, then elements of $Z(G)$ commute with elements of $H$. Hence, we may rearrange the terms in the product to obtain
     \[gh = g_1^{\ep_1} \ldots g_m^{\ep_m}h_1^{\delta_1} \ldots h_n^{\delta_n} = h_1^{\delta_1} \ldots h_n^{\delta_n}g_1^{\ep_1} \ldots g_m^{\ep_m} = hg\]
-    so that $\gen{H, Z(G)}$ is abelian.
+    so that $\gen{H, Z(G)}$ is Abelian.
 
-    To obtain an example, consider groups that are non-abelian and their centers. Let $G = D_8$ and $H = Z(G) = \set{1, r^2}$. Then $C_G(H) = G$ since $H \leq Z(G)$. However, $\gen{H, C_G(H)} = \gen{Z(G), G} = G$ which is non-abelian.
+    To obtain an example, consider groups that are non-Abelian and their centers. Let $G = D_8$ and $H = Z(G) = \set{1, r^2}$. Then $C_G(H) = G$ since $H \leq Z(G)$. However, $\gen{H, C_G(H)} = \gen{Z(G), G} = G$ which is non-Abelian.
 \end{sol}
 
 \begin{exercise}\label{ex2.4.4}
@@ -1166,7 +1112,6 @@
     Recall that $Q_8$ and $S_4$ both have 6 elements of order 4. However, no two elements in $Q_8$ can generate the entirety of $\speclin_2(\f_3)$ since $\abs{Q_8} = 8$, while $S_4 = \gen{(1\ 2\ 3\ 4), (1\ 2\ 4\ 3)}$, hence they cannot be isomorphic.
 \end{sol}
 
-\newpage
 
 \begin{specialexercise}\label{ex2.4.12}
     Prove that the subgroup of upper triangular matrices in $\mathrm{GL}_3(\mathbb{F}_2)$ is isomorphic to the dihedral group of order $8$. (First find the order of this subgroup.)
@@ -1198,7 +1143,6 @@
     Let $q \in \q\unt_+$. Then $q = m/n$ for some $m \in \zp \cup \set 0$ and $n \in \zp$. By the Fundamental Theorem of Arithmetic, both $m$ and $n$ can be expressed as a product of primes. Then $m/n = q \in \gen P$ since $\gen P$ is closed under multiplication. Hence, $\q\unt_+ \subseteq \gen P$. Since $P \subseteq \q\unt_+$, then $\gen P \subseteq \q\unt_+$. Therefore, $\gen P = \q\unt_+$.
 \end{sol}
 
-\newpage
 
 \begin{specialexercise}\label{ex2.4.14}
     A group $H$ is called \emph{finitely generated} if there is a finite set $A$ such that $H=\langle A\rangle$.
@@ -1217,7 +1161,7 @@
     \[A = \set*{\frac{p_1}{q_1}, \frac{p_2}{q_2}, \ldots, \frac{p_n}{q_n}}\]
     where $(p_i, q_i) = 1$ for all $1 \leq i \leq n$. Then every element $h \in H$ is of the form
     \[h = \sum_{i = 1}^n a_i\frac{p_i}{q_i}, \quad a_i \in \z\]
-    since $\q$ is abelian. Define the quantities
+    since $\q$ is Abelian. Define the quantities
     \[k = \prod_{i = 1}^n q_i, \quad k_j = k/q_j\]
     so that $k$ is the product of all denominators in $A$, and $k_j$ is the product of all denominators except the denominator in the $j$-th fraction of $A$. We may then rewrite $h$ as
     \[h = \frac 1k \sum_{i = 1}^n a_ip_ik_i\]
@@ -1300,20 +1244,20 @@
 \end{solalph}
 
 \begin{specialexercise}\label{ex2.4.19} 
-    A nontrivial abelian group $A$ (written multiplicatively) is called \emph{divisible} if for each element $a\in A$ and each nonzero integer $k$ there is an element $x\in A$ such that $x^k=a$.  
+    A nontrivial Abelian group $A$ (written multiplicatively) is called \emph{divisible} if for each element $a\in A$ and each nonzero integer $k$ there is an element $x\in A$ such that $x^k=a$.  
     \begin{subproblems}
         \item Prove that the additive group of rational numbers $\mathbb{Q}$ is divisible.
-        \item Prove that no finite abelian group is divisible.
+        \item Prove that no finite Abelian group is divisible.
     \end{subproblems}
 \end{specialexercise}
 
 \begin{solalph}
     \item Suppose $p/q \in \q$. Then $(p/qn)n = p/q$, where $p/qn \in \q$.
-    \item Let $G$ be finite abelian with $|G| = n$. For some nontrivial $g \in G$, we have $g^n = 1$. If $G$ was divisible, then there would be some $x \in G$ such that $x^n = g$. But then $g = x^n = 1$, contradicting that $g$ is nontrivial.
+    \item Let $G$ be finite Abelian with $|G| = n$. For some nontrivial $g \in G$, we have $g^n = 1$. If $G$ was divisible, then there would be some $x \in G$ such that $x^n = g$. But then $g = x^n = 1$, contradicting that $g$ is nontrivial.
 \end{solalph}
 
 \begin{exercise}\label{ex2.4.20}
-    Prove that if $A$ and $B$ are nontrivial abelian groups, then $A\times B$ is divisible if and only if both $A$ and $B$ are divisible.
+    Prove that if $A$ and $B$ are nontrivial Abelian groups, then $A\times B$ is divisible if and only if both $A$ and $B$ are divisible.
 \end{exercise}
 
 \begin{sol}
@@ -1384,7 +1328,6 @@
     \end{subproblems}
 \end{sol}
 
-\newpage
 
 \begin{exercise}\label{ex2.5.3}
     Show that the subgroup $\gen{s, r^2}$ of $D_8$ is isomorphic to $V_4$.
@@ -1481,7 +1424,6 @@
     so that $j \in N_{Q_8}(\gen i)$. Then $N_{Q_8}(\gen i) = Q_8$. By symmetry, the same holds for $\gen j$ and $\gen k$.
 \end{solalph}
 
-\newpage
 
 \begin{exercise}\label{ex2.5.9}
     Draw the lattices of subgroups of the following groups:
@@ -1554,12 +1496,11 @@
     Suppose $G$ is not cyclic. Then every nonidentity element has order 2 by Lagrange's Theorem. In particular, $a^2 = b^2 = c^2 = 1$. Note that $ab \neq 1$, since otherwise $b = a\inv = a$. Similarly, $ab \neq a$ and $ab \neq b$, so that $ab = c$. By similar reasoning, we have $bc = a$ and $ca = b$. This is precisely the definition of $V_4$, so that $G \cong V_4$.
 \end{sol}
 
-\newpage
 
 \begin{exercise} \label{ex2.5.11} 
     Consider the group of order 16 with the following presentation:
     \[QD_{16} = \gen{\sigma, \tau \mid \sigma^8 = \tau^2 = 1, \sigma\tau = \tau\sigma^3}\]
-    (called the \textit{quasidihedral} or \textit{semidihedral} group of order 16). This group has three subgroups of order 8: $\gen{\tau, \sigma^2} \cong D_8, \gen \sigma \cong Z_8$, and $\gen{\sigma^2, \sigma\tau} \cong Q_8$, and every proper subgroup is contained in one of these three subgroups. Fill in the missing subgroups in the lattice of all subgroups of the quasidihedral group, exhibiting each subgroup with at most two generators.
+    (called the \emph{quasidihedral} or \emph{semidihedral} group of order 16). This group has three subgroups of order 8: $\gen{\tau, \sigma^2} \cong D_8, \gen \sigma \cong Z_8$, and $\gen{\sigma^2, \sigma\tau} \cong Q_8$, and every proper subgroup is contained in one of these three subgroups. Fill in the missing subgroups in the lattice of all subgroups of the quasidihedral group, exhibiting each subgroup with at most two generators.
     \begin{center}
         \begin{tikzpicture}[xscale=1.15, yscale=1.4]
             \node (G) at (0, 0) {$QD_{16}$};
@@ -1654,7 +1595,7 @@
 \end{exercise}
 
 \begin{sol}
-    Observe that $A$ is the direct product of two abelian groups, so $A$ is abelian, and we may write it as
+    Observe that $A$ is the direct product of two Abelian groups, so $A$ is Abelian, and we may write it as
     \[A = \set{1, a, b, b^2, b^3, ab, ab^2, ab^3}\]
     We know that $A$ has three subgroups of order 4: $\gen{a, b^2}, \gen b$, and $\gen{ab}$. To find what the containment relations are, observe that $\gen{a, b}^2$ has three subgroups of order 2: $\gen{b^2}, \gen a$, and $\gen{ab^2}$. $\gen b$ has the single subgroup of order 2: $\gen{b^2}$, and $\gen{ab}$ has the single subgroup of order 2: $\gen{ab^2}$. Then the subgroup lattice of $A$ is
     \begin{center}
@@ -1718,13 +1659,13 @@
 \begin{exercise} \label{ex2.5.14} 
     Let $M$ be the group of order 16 with the following presentation:
     \[\gen{u, v \mid u^2 = v^8 = 1, vu = uv^5}\]
-    (sometimes called the \textit{modular} group of order 16). It has three subgroups of order 8: $\gen{u, v^2}, \gen v$, and $\gen{uv}$, and every proper subgroup is contained in one of those three. Prove that $\gen{u, v^2} \cong Z_2 \times Z_4, \gen v \cong Z_8$, and $\gen{uv} \cong Z_8$. Show that the lattice of subgroups of $M$ is the same as the lattice of subgroups of $Z_2 \times Z_8$ (cf. Exercise 13) but that these two groups are not isomorphic.
+    (sometimes called the \emph{modular} group of order 16). It has three subgroups of order 8: $\gen{u, v^2}, \gen v$, and $\gen{uv}$, and every proper subgroup is contained in one of those three. Prove that $\gen{u, v^2} \cong Z_2 \times Z_4, \gen v \cong Z_8$, and $\gen{uv} \cong Z_8$. Show that the lattice of subgroups of $M$ is the same as the lattice of subgroups of $Z_2 \times Z_8$ (cf. Exercise 13) but that these two groups are not isomorphic.
 \end{exercise}
 
 \begin{sol}
     It is clear that $\abs v = 8$ implies that $\gen v \cong Z_8$. Similarly, since $\abs{uv} = 8$, then $\gen{uv} \cong Z_8$. To see that $\gen{u, v^2} \cong Z_2 \times Z_4$, we verify the relations. Note that $u^2 = (v^2)^4 = 1$, and
     \[v^2u = vuv^5 = uv^{10} = uv^2\]
-    so that $u$ and $v^2$ commute, hence it is abelian. We may then list out the elements of $\gen{u, v^2}$:
+    so that $u$ and $v^2$ commute, hence it is Abelian. We may then list out the elements of $\gen{u, v^2}$:
     \[\gen{u, v^2} = \set{1, v^2, v^4, v^6, u, uv^2, uv^4, uv^6}\]
     Then the mapping $\phi : Z_2 \times Z_4 \to \gen{u, v^2}$ defined by
     \[\phi(a) = u, \quad \phi(b) = v^2\]
@@ -1756,17 +1697,16 @@
             \draw (y2) -- (x y2);
         \end{tikzpicture}
     \end{center}
-    Finally, $M$ is not isomorphic to $Z_2 \times Z_8$ since $M$ is not abelian. If it were, then $vu = uv$, but $vu = uv^5 = uv$ would imply that $v^4 = 1$, contradicting that $\abs v = 8$.
+    Finally, $M$ is not isomorphic to $Z_2 \times Z_8$ since $M$ is not Abelian. If it were, then $vu = uv$, but $vu = uv^5 = uv$ would imply that $v^4 = 1$, contradicting that $\abs v = 8$.
 \end{sol}
 
-\newpage
 
 \begin{exercise}\label{ex2.5.15}
     Describe the isomorphism type of each of the three subgroups of $D_{16}$ of order 8.
 \end{exercise}
 
 \begin{sol}
-    Since $\abs r = 8$, then $\gen r \cong Z_8$. For the remaining subgroups, note that the lattice for $D_{16}$ shows a striking similarity to the lattice for $D_8$; in fact, these subgroups \textit{are} isomorphic to $D_8$ as follows:
+    Since $\abs r = 8$, then $\gen r \cong Z_8$. For the remaining subgroups, note that the lattice for $D_{16}$ shows a striking similarity to the lattice for $D_8$; in fact, these subgroups \emph{are} isomorphic to $D_8$ as follows:
     
     For the subgroup $\gen{s, r^2}$, observe that $(r^2)4 = s^2 = 1$, and $sr^2 = r^6s = (r^2)\inv s$. Then the mapping $\phi : D_8 \to \gen{s, r^2}$ given by
     \[\phi(r) = r^2, \quad \phi(s) = s\]
@@ -1790,7 +1730,7 @@
 \end{exercise}
 
 \begin{sol}
-    Using the lattice in Exercise 14, we see that we have 3 candidates to be isomorphic to $V_4$, namely $\gen{v^2}, \gen{uv^2},$ and $\gen{u, v^4}$. The first and second subgroups are cyclic, while $\gen{u, v^4} = \set{1, u, v^4, uv^4}$. Since it is not generated by one element, each of these elements are of order 2, and $v^4u = v^3uv^5 = \cdots = uv^{20} = uv^4$ so that it is abelian, then $\gen{u, v^4} \cong V_4$.
+    Using the lattice in Exercise 14, we see that we have 3 candidates to be isomorphic to $V_4$, namely $\gen{v^2}, \gen{uv^2},$ and $\gen{u, v^4}$. The first and second subgroups are cyclic, while $\gen{u, v^4} = \set{1, u, v^4, uv^4}$. Since it is not generated by one element, each of these elements are of order 2, and $v^4u = v^3uv^5 = \cdots = uv^{20} = uv^4$ so that it is Abelian, then $\gen{u, v^4} \cong V_4$.
 \end{sol}
 
 \begin{exercise}\label{ex2.5.18}

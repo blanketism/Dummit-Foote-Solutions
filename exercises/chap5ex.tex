@@ -103,7 +103,7 @@
 \begin{exercise}\label{ex5.1.8}
     Let $G_1 = G_2 = \cdots = G_n$ and let $G = G_1 \times \cdots \times G_n$. Under the notation of the preceding exercise show that $\phi_\pi \in \text{Aut}(G)$. Show also that the map $\pi \mapsto \phi_\pi$ is an injective homomorphism of $S_n$ into $\text{Aut}(G)$. (In particular, $\phi_{\pi_1} \circ \phi_{\pi_2} = \phi_{\pi_1 \pi_2}$. It is at this point that the $\pi^{-1}$'s in the definition of $\phi_\pi$ are needed. The underlying reason for this is because if $e_i$ is the $n$-tuple with 1 in position $i$ and zeros elsewhere, $1 \leq i \leq n$, then $S_n$ acts on $\{e_1, \ldots, e_n\}$ by $\pi \cdot e_i = e_{\pi(i)}$; this is a left group action. If the $n$-tuple $(g_1, \ldots, g_n)$ is represented by $g_1 e_1 + \cdots + g_n e_n$, then this left group action on $\{e_1, \ldots, e_n\}$ extends to a left group action on sums by
     \[\pi \cdot (g_1 e_1 + g_2 e_2 + \cdots + g_n e_n) = g_1 e_{\pi(1)} + g_2 e_{\pi(2)} + \cdots + g_n e_{\pi(n)}.\]
-    The coefficient of $e_{\pi(i)}$ on the right hand side is $g_i$, so the coefficient of $e_i$ is $g_{\pi^{-1}(i)}$. Thus the right hand side may be rewritten as $g_{\pi^{-1}(1)} e_1 + g_{\pi^{-1}(2)} e_2 + \cdots + g_{\pi^{-1}(n)} e_n$, which is precisely the sum attached to the $n$-tuple $(g_{\pi^{-1}(1)}, g_{\pi^{-1}(2)}, \ldots, g_{\pi^{-1}(n)})$. In other words, any permutation of the ``position vectors'' $e_1, \ldots, e_n$ (which fixes their coefficients) is the same as the inverse permutation on the coefficients (fixing the $e_i$'s). If one uses $\pi$'s in place of $\pi^{-1}$'s in the definition of $\phi_\pi$ then the map $\pi \mapsto \phi_\pi$ is not necessarily a homomorphism --- it corresponds to a \textit{right} group action.)
+    The coefficient of $e_{\pi(i)}$ on the right hand side is $g_i$, so the coefficient of $e_i$ is $g_{\pi^{-1}(i)}$. Thus the right hand side may be rewritten as $g_{\pi^{-1}(1)} e_1 + g_{\pi^{-1}(2)} e_2 + \cdots + g_{\pi^{-1}(n)} e_n$, which is precisely the sum attached to the $n$-tuple $(g_{\pi^{-1}(1)}, g_{\pi^{-1}(2)}, \ldots, g_{\pi^{-1}(n)})$. In other words, any permutation of the ``position vectors'' $e_1, \ldots, e_n$ (which fixes their coefficients) is the same as the inverse permutation on the coefficients (fixing the $e_i$'s). If one uses $\pi$'s in place of $\pi^{-1}$'s in the definition of $\phi_\pi$ then the map $\pi \mapsto \phi_\pi$ is not necessarily a homomorphism --- it corresponds to a \emph{right} group action.)
 \end{exercise}
 
 \begin{sol}
@@ -118,7 +118,7 @@
 \end{sol}
 
 \begin{exercise}\label{ex5.1.9}
-    Let $G_i$ be a field $F$ for all $i$ and use the preceding exercise to show that the set of $n \times n$ matrices with one 1 in each row and each column is a subgroup of $\gl_n(F)$ isomorphic to $S_n$ (these matrices are the \textit{permutation matrices} since they simply permute the standard basis $e_1, \ldots, e_n$ (as above) of the $n$-dimensional vector space $F \times F \times \cdots \times F$).
+    Let $G_i$ be a field $F$ for all $i$ and use the preceding exercise to show that the set of $n \times n$ matrices with one 1 in each row and each column is a subgroup of $\gl_n(F)$ isomorphic to $S_n$ (these matrices are the \emph{permutation matrices} since they simply permute the standard basis $e_1, \ldots, e_n$ (as above) of the $n$-dimensional vector space $F \times F \times \cdots \times F$).
 \end{exercise}
 
 \begin{sol}
@@ -145,7 +145,7 @@
 \end{sol}
 
 \begin{specialexercise}\label{ex5.1.12}
-    Let $A$ and $B$ be groups. Assume $Z(A)$ contains a subgroup $Z_1$ and $Z(B)$ contains a subgroup $Z_2$ with $Z_1 \cong Z_2$. Let this isomorphism be given by the map $x_i \mapsto y_i$ for all $x_i \in Z_1$. A \textbf{\textit{central product}} of $A$ and $B$ is a quotient
+    Let $A$ and $B$ be groups. Assume $Z(A)$ contains a subgroup $Z_1$ and $Z(B)$ contains a subgroup $Z_2$ with $Z_1 \cong Z_2$. Let this isomorphism be given by the map $x_i \mapsto y_i$ for all $x_i \in Z_1$. A \textbf{\emph{central product}} of $A$ and $B$ is a quotient
     \[(A \times B)/Z \quad \text{where} \quad Z = \{(x_i, y_i^{-1}) \mid x_i \in Z_1\}\]
     and is denoted by $A * B$ --- it is not unique since it depends on $Z_1$, $Z_2$ and the isomorphism between them. (Think of $A * B$ as the direct product of $A$ and $B$ ``collapsed'' by identifying each element $x_i \in Z_1$ with its corresponding element $y_i \in Z_2$.)
     \begin{subproblems}
@@ -191,7 +191,7 @@
 \end{sol}
 
 \begin{exercise}\label{ex5.1.15}
-    Let $I$ be any nonempty index set and let $(G_i, \star_i)$ be a group for each $i \in I$. The \textit{direct product} of the groups $G_i$, $i \in I$ is the set $G = \prod_{i \in I} G_i$ (the Cartesian product of the $G_i$'s) with a binary operation defined as follows: if $\prod a_i$ and $\prod b_i$ are elements of $G$, then their product in $G$ is given by
+    Let $I$ be any nonempty index set and let $(G_i, \star_i)$ be a group for each $i \in I$. The \emph{direct product} of the groups $G_i$, $i \in I$ is the set $G = \prod_{i \in I} G_i$ (the Cartesian product of the $G_i$'s) with a binary operation defined as follows: if $\prod a_i$ and $\prod b_i$ are elements of $G$, then their product in $G$ is given by
     \[\left(\prod_{i \in I} a_i\right)\left(\prod_{i \in I} b_i\right) = \prod_{i \in I} (a_i \star_i b_i)\]
     (i.e., the group operation in the direct product is defined componentwise).
     \begin{subproblems}
@@ -258,7 +258,7 @@
 \end{sol}
 
 \begin{exercise}\label{ex5.1.17}
-    Let $I$ be any nonempty index set and let $G_i$ be a group for each $i \in I$. The \textit{restricted direct product} or \textit{direct sum} of the groups $G_i$ is the set of elements of the direct product which are the identity in all but finitely many components, that is, the set of all elements $\prod a_i \in \prod_{i \in I} G_i$ such that $a_i = 1_i$ for all but a finite number of $i \in I$.
+    Let $I$ be any nonempty index set and let $G_i$ be a group for each $i \in I$. The \emph{restricted direct product} or \emph{direct sum} of the groups $G_i$ is the set of elements of the direct product which are the identity in all but finitely many components, that is, the set of all elements $\prod a_i \in \prod_{i \in I} G_i$ such that $a_i = 1_i$ for all but a finite number of $i \in I$.
     \begin{subproblems}
         \item Prove that the restricted direct product is a subgroup of the direct product.
         \item Prove that the restricted direct product is normal in the direct product.
@@ -375,10 +375,10 @@
 
 \begin{sol}
     \leavevmode
-    \begin{ifandonlyif}
+    \begin{itemize}
         \item[\rightimp] Let $g = (g_1, g_2, \ldots, g_t) \in G$ have order $m$. Then $m = \lcm(|g_1|, |g_2|, \ldots, |g_t|)$, so $|g_i| \mid m$ for all $i$. Since $G$ is of type $(n_1, n_2, \ldots, n_t)$, we have $|g_i| \mid n_i$ for all $i$, so $m$ divides $\lcm(n_1, n_2, \ldots, n_t) = n_1$.
         \item[\leftimp] If $m \mid n_1$, then there exists an element of order $m$ in the cyclic subgroup of order $n_1$.
-    \end{ifandonlyif}
+    \end{itemize}
     Since $G$ contains an element of order $n_1$, the exponent of $G$ is at least $n_1$. On the other hand, if $g \in G$, then $|g| \mid n_1$, so the exponent of $G$ divides $n_1$. Thus, the exponent of $G$ is exactly $n_1$.
 \end{sol}
 
@@ -395,7 +395,7 @@
 \end{sol}
 
 \begin{exercise}\label{ex5.2.7}
-    Let $p$ be a prime and let $A = \langle x_1 \rangle \times \langle x_2 \rangle \times \cdots \times \langle x_n \rangle$ be an abelian $p$-group, where $|x_i| = p^{\alpha_i} > 1$ for all $i$. Define the $p^{\text{th}}$-\textit{power map}
+    Let $p$ be a prime and let $A = \langle x_1 \rangle \times \langle x_2 \rangle \times \cdots \times \langle x_n \rangle$ be an abelian $p$-group, where $|x_i| = p^{\alpha_i} > 1$ for all $i$. Define the $p^{\text{th}}$-\emph{power map}
     \[\phi : A \to A \quad \text{by} \quad \phi : x \mapsto x^p.\]
     \begin{subproblems}
         \item Prove that $\phi$ is a homomorphism.
@@ -524,7 +524,7 @@
 \end{sol}
 
 \begin{specialexercise}\label{ex5.2.14}
-    For any group $G$ define the \textit{dual group} of $G$ (denoted $\wh{G}$) to be the set of all homomorphisms from $G$ into the multiplicative group of roots of unity in $\mathbb{C}$. Define a group operation in $\wh{G}$ by pointwise multiplication of functions: if $\chi, \psi$ are homomorphisms from $G$ into the group of roots of unity then $\chi\psi$ is the homomorphism given by $(\chi\psi)(g) = \chi(g)\psi(g)$ for all $g \in G$, where the latter multiplication takes place in $\mathbb{C}$.
+    For any group $G$ define the \emph{dual group} of $G$ (denoted $\wh{G}$) to be the set of all homomorphisms from $G$ into the multiplicative group of roots of unity in $\mathbb{C}$. Define a group operation in $\wh{G}$ by pointwise multiplication of functions: if $\chi, \psi$ are homomorphisms from $G$ into the group of roots of unity then $\chi\psi$ is the homomorphism given by $(\chi\psi)(g) = \chi(g)\psi(g)$ for all $g \in G$, where the latter multiplication takes place in $\mathbb{C}$.
     \begin{subproblems}
         \item Show that this operation on $\wh{G}$ makes $\wh{G}$ into an abelian group. [Show that the identity is the map $g \mapsto 1$ for all $g \in G$ and the inverse of $\chi \in \wh{G}$ is the map $g \mapsto \chi(g)^{-1}$.]
         \item If $G$ is a finite abelian group, prove that $\wh{G} \cong G$. [Write $G$ as $\langle x_1 \rangle \times \cdots \times \langle x_r \rangle$ and if $n_i = |x_i|$ define $\chi_i$ to be the homomorphism which sends $x_i$ to $e^{2\pi i/n_i}$ and sends $x_j$ to $1$, for all $j \neq i$. Prove $\chi_i$ has order $n_i$ in $\wh{G}$ and $\wh{G} = \langle \chi_1 \rangle \times \cdots \times \langle \chi_r \rangle$.]
@@ -647,7 +647,7 @@
 Let $G$ be a group.
 
 \begin{exercise}\label{ex5.4.1}
-    Prove that if $x, y \in G$, then $[y, x] = [x, y]\inv$. Deduce that for any subsets $A$ and $B$ of $G$, $[A, B] = [B, A]$ (recall that $[A, B]$ is the \textit{subgroup} of $G$ generated by the commutators $[a, b]$).
+    Prove that if $x, y \in G$, then $[y, x] = [x, y]\inv$. Deduce that for any subsets $A$ and $B$ of $G$, $[A, B] = [B, A]$ (recall that $[A, B]$ is the \emph{subgroup} of $G$ generated by the commutators $[a, b]$).
 \end{exercise}
 
 \begin{sol}
@@ -862,7 +862,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}\label{ex5.4.19}
-    A group $H$ is called \textit{perfect} if $H' = H$ (i.e., $H$ equals its own commutator subgroup).
+    A group $H$ is called \emph{perfect} if $H' = H$ (i.e., $H$ equals its own commutator subgroup).
     \begin{subproblems}
         \item Prove that every non-abelian simple group is perfect.
         \item Prove that if $H$ and $K$ are perfect subgroups of a group $G$, then $\gen{H, K}$ is also perfect. Extend this to show that the subgroup of $G$ generated by any collection of perfect subgroups is perfect.
@@ -989,7 +989,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 \end{sol}
 
 \begin{exercise}\label{ex5.5.4}
-    Let $p = 2$ and check that the construction of the two non-abelian groups of order $p^3$ is valid in this case. Prove that \textit{both} resulting groups are isomorphic to $D_8$.
+    Let $p = 2$ and check that the construction of the two non-abelian groups of order $p^3$ is valid in this case. Prove that \emph{both} resulting groups are isomorphic to $D_8$.
 \end{exercise}
 
 \begin{sol}

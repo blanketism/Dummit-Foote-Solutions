@@ -193,12 +193,12 @@ Let $G$ be a group and let $A$ be a nonempty set.
 \end{solalph}
 
 \begin{specialexercise}
-	Let $G$ be a transitive permutation group on the finite set $A$. A \textit{block} is a nonempty subset $B$ of $A$ such that for all $\sigma \in G$ either $\sigma(B) = B$ or $\sigma(B) \cap B = \varnothing$ (here $\sigma(B) = \{\sigma(b) \mid b \in B\}$). 
+	Let $G$ be a transitive permutation group on the finite set $A$. A \emph{block} is a nonempty subset $B$ of $A$ such that for all $\sigma \in G$ either $\sigma(B) = B$ or $\sigma(B) \cap B = \varnothing$ (here $\sigma(B) = \{\sigma(b) \mid b \in B\}$). 
 	\begin{subproblems}
 		\item Prove that if $B$ is a block containing the element $a$ of $A$, then the set $G_B$ defined by $G_B = \{\sigma \in G \mid \sigma(B) = B\}$ is a subgroup of $G$ containing $G_a$.
 		\item Show that if $B$ is a block and $\sigma_1(B), \sigma_2(B), \ldots, \sigma_n(B)$ are all the distinct images of $B$ under the elements of $G$, then these form a partition of $A$.
-		\item A (transitive) group $G$ on a set $A$ is said to be \textit{primitive} if the only blocks in $A$ are the trivial ones: the sets of size $1$ and $A$ itself. Show that $S_4$ is primitive on $A = \{1,2,3,4\}$. Show that $D_8$ is not primitive as a permutation group on the four vertices of a square.
-		\item Prove that the transitive group $G$ is primitive on $A$ if and only if for each $a \in A$, the only subgroups of $G$ containing $G_a$ are $G_a$ and $G$ (i.e., $G_a$ is a \textit{maximal} subgroup of $G$, cf. \hyperref[ex2.4.16]{Exercise 2.4.16}). [Use part (a).]
+		\item A (transitive) group $G$ on a set $A$ is said to be \emph{primitive} if the only blocks in $A$ are the trivial ones: the sets of size $1$ and $A$ itself. Show that $S_4$ is primitive on $A = \{1,2,3,4\}$. Show that $D_8$ is not primitive as a permutation group on the four vertices of a square.
+		\item Prove that the transitive group $G$ is primitive on $A$ if and only if for each $a \in A$, the only subgroups of $G$ containing $G_a$ are $G_a$ and $G$ (i.e., $G_a$ is a \emph{maximal} subgroup of $G$, cf. \hyperref[ex2.4.16]{Exercise 2.4.16}). [Use part (a).]
 	\end{subproblems}
 \end{specialexercise}
 
@@ -218,7 +218,7 @@ Let $G$ be a group and let $A$ be a nonempty set.
 \end{solalph}
 
 \begin{exercise}
-	A transitive permutation group $G$ on a set $A$ is called \textit{doubly transitive} if for any (hence all) $a \in A$ the subgroup $G_a$ is transitive on the set $A - \{a\}$.
+	A transitive permutation group $G$ on a set $A$ is called \emph{doubly transitive} if for any (hence all) $a \in A$ the subgroup $G_a$ is transitive on the set $A - \{a\}$.
 	\begin{subproblems}
 		\item Prove that $S_n$ is doubly transitive on $\{1,2,\ldots,n\}$ for all $n \ge 2$.
 		\item Prove that a doubly transitive group is primitive. Deduce that $D_8$ is not doubly transitive in its action on the 4 vertices of a square.
@@ -261,7 +261,7 @@ Let $G$ be a group and let $A$ be a nonempty set.
 \newpage
 
 \begin{specialexercise}
-	Let $H$ and $K$ be subgroups of the group $G$. For each $x \in G$ define the $HK$ \textit{double coset} of $x$ in $G$ to be the set $HxK = \{hxk \mid h \in H, k \in K\}$.
+	Let $H$ and $K$ be subgroups of the group $G$. For each $x \in G$ define the $HK$ \emph{double coset} of $x$ in $G$ to be the set $HxK = \{hxk \mid h \in H, k \in K\}$.
 	\begin{subproblems}
 		\item Prove that $HxK$ is the union of the left cosets $x_1K, \ldots, x_nK$ where $\{x_1K, \ldots, x_nK\}$ is the orbit containing $xK$ of $H$ acting by left multiplication on the set of left cosets of $K$.
 		\item Prove that $HxK$ is a union of right cosets of $H$.
@@ -753,8 +753,8 @@ Let $G$ be a group.
 
 \begin{specialexercise}\label{ex4.3.17}
 	Let $A$ be a nonempty set and let $X$ be any subset of $S_A$. Let
-	\[F(X) = \set{a \in A \mid \sigma(a) = a \text{ for all } \sigma \in X} \qquad \text{---the \textit{fixed set} of $X$}\]
-	Let $M(X) = A - F(X)$ be the elements which are \textit{moved} by some element of $X$. Let $D = \set{\sigma \in S_A \mid |M(\sigma)| < \infty}$. Prove that $D$ is a normal subgroup of $S_A$.
+	\[F(X) = \set{a \in A \mid \sigma(a) = a \text{ for all } \sigma \in X} \qquad \text{---the \emph{fixed set} of $X$}\]
+	Let $M(X) = A - F(X)$ be the elements which are \emph{moved} by some element of $X$. Let $D = \set{\sigma \in S_A \mid |M(\sigma)| < \infty}$. Prove that $D$ is a normal subgroup of $S_A$.
 \end{specialexercise}
 
 \begin{sol}
@@ -802,7 +802,7 @@ Let $G$ be a group.
 \newpage
 
 \begin{specialexercise}
-	Let $\kk$ be a conjugacy class in $S_n$ and assume that $\kk \subseteq A_n$. Show $\sigma \in S_n$ does \textit{not} commute with any odd permutation if and only if the cycle type of $\sigma$ consists of distinct odd integers. Deduce that $\kk$ consists of two conjugacy clases in $A_n$ if and only if the cycle type of an element of $\kk$ consists of distinct odd integers. [Assume first that $\sigma \in \kk$ does not commute with any odd permutation. Observe that $\sigma$ commutes with each individual cycle in its cycle decomposition---use this to show that all its cycles must be of odd length. If two cycles have the same odd length, $k$, find a product of $k$ transpositions which interchanges them and commutes with $\sigma$. Conversely, if the cycle type of $\sigma$ consists of distinct integers, prove that $\sigma$ commutes \textit{only} with the group generated by the cycles in its cycle decomposition.]
+	Let $\kk$ be a conjugacy class in $S_n$ and assume that $\kk \subseteq A_n$. Show $\sigma \in S_n$ does \emph{not} commute with any odd permutation if and only if the cycle type of $\sigma$ consists of distinct odd integers. Deduce that $\kk$ consists of two conjugacy clases in $A_n$ if and only if the cycle type of an element of $\kk$ consists of distinct odd integers. [Assume first that $\sigma \in \kk$ does not commute with any odd permutation. Observe that $\sigma$ commutes with each individual cycle in its cycle decomposition---use this to show that all its cycles must be of odd length. If two cycles have the same odd length, $k$, find a product of $k$ transpositions which interchanges them and commutes with $\sigma$. Conversely, if the cycle type of $\sigma$ consists of distinct integers, prove that $\sigma$ commutes \emph{only} with the group generated by the cycles in its cycle decomposition.]
 \end{specialexercise}
 
 \begin{sol}
@@ -820,7 +820,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}\label{ex4.3.23}
-	Recall (cf. \hyperref[ex2.4.16]{Exercise 2.4.16}) that a proper subgroup $M$ of $G$ is called \textit{maximal} if whenever $M \leq H \leq G$, either $H = M$ or $H = G$. Prove that if $M$ is a maximal subgroup of $G$ then either $N_G(M) = M$ or $N_G(M) = G$. Deduce that if $M$ is a maximal subgroup of $G$ that is not normal in $G$, then the number of nonidentity elements of $G$ that are contained in conjugates of $M$ is at most $(|M| - 1)|G : M|$.
+	Recall (cf. \hyperref[ex2.4.16]{Exercise 2.4.16}) that a proper subgroup $M$ of $G$ is called \emph{maximal} if whenever $M \leq H \leq G$, either $H = M$ or $H = G$. Prove that if $M$ is a maximal subgroup of $G$ then either $N_G(M) = M$ or $N_G(M) = G$. Deduce that if $M$ is a maximal subgroup of $G$ that is not normal in $G$, then the number of nonidentity elements of $G$ that are contained in conjugates of $M$ is at most $(|M| - 1)|G : M|$.
 \end{exercise}
 
 \begin{sol}
@@ -876,7 +876,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}
-	Let $G$ be a transitive permutation group on the finite set $A$ with $\abs A > 1$. Show that there is some $\sigma \in G$ such that $\sigma(a) \neq a$ for all $a \in A$ (such an element $\sigma$ is called \textit{fixed point free}).
+	Let $G$ be a transitive permutation group on the finite set $A$ with $\abs A > 1$. Show that there is some $\sigma \in G$ such that $\sigma(a) \neq a$ for all $a \in A$ (such an element $\sigma$ is called \emph{fixed point free}).
 \end{exercise}
 
 \begin{sol}
@@ -954,7 +954,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{specialexercise} \label{ex4.3.33}
-	This exercise gives a formula for the size of each conjugacy class in $S_n$. Let $\sigma$ be a permutation in $S_n$ and let $m_1, m_2, \ldots, m_s$ be the \textit{distinct} integers which appear in the cycle type of $\sigma$ (including 1-cycles). For each $i \in \set{1, 2, \ldots, s}$ assume $\sigma$ has $k_i$ cycles of length $m_i$ (so that $\sum_1^s k_im_i = n$). Prove that the number of conjugates of $\sigma$ is
+	This exercise gives a formula for the size of each conjugacy class in $S_n$. Let $\sigma$ be a permutation in $S_n$ and let $m_1, m_2, \ldots, m_s$ be the \emph{distinct} integers which appear in the cycle type of $\sigma$ (including 1-cycles). For each $i \in \set{1, 2, \ldots, s}$ assume $\sigma$ has $k_i$ cycles of length $m_i$ (so that $\sum_1^s k_im_i = n$). Prove that the number of conjugates of $\sigma$ is
 	\[\frac{n!}{(k_1!m_1^{k_1})(k_2!m_2^{k_2}) \cdots (k_s!m_s^{k_s})}\]
 	[See \hyperref[ex1.3.6]{Exercise 1.3.6} and \hyperref[ex1.3.7]{Exercise 1.3.7} where this formula was given in some special cases.]
 \end{specialexercise}
@@ -985,7 +985,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{specialexercise}
-	Let $\pi : G \to S_G$ be the left regular representation afforded by the action of $G$ on itself by left multiplication. For each $g \in G$ denote the permutation $\pi(g)$ by $\sigma_g$ so that $\sigma_g(x) = gx$ for all $x \in G$. Let $\lambda : G \to S_G$ be the permutation representation afforded by the corresponding right action of $G$ on itself, and for each $h \in G$ denote the permutation $\lambda(h)$ by $\tau_h$. Thus $\tau_h(x) = xh\inv$ for all $x \in G$ ($\lambda$ is called the \textit{right regular representation} of $G$).
+	Let $\pi : G \to S_G$ be the left regular representation afforded by the action of $G$ on itself by left multiplication. For each $g \in G$ denote the permutation $\pi(g)$ by $\sigma_g$ so that $\sigma_g(x) = gx$ for all $x \in G$. Let $\lambda : G \to S_G$ be the permutation representation afforded by the corresponding right action of $G$ on itself, and for each $h \in G$ denote the permutation $\lambda(h)$ by $\tau_h$. Thus $\tau_h(x) = xh\inv$ for all $x \in G$ ($\lambda$ is called the \emph{right regular representation} of $G$).
 	\begin{subproblems}
 		\item Prove that $\sigma_g$ and $\tau_h$ commute for all $g, h \in G$. (Thus the centralizer in $S_G$ of $\pi(G)$ contains the subgroup $\lambda(G)$ which is isomorphic to $G$).
 		\item Prove that $\sigma_g = \tau_g$ if and only if $g$ is an element of order 1 or 2 in the center of $G$.
@@ -2001,14 +2001,14 @@ Let $G$ be a finite group and let $p$ be a prime.
 
 \begin{sol}
 	\leavevmode
-	\begin{ifandonlyif}
+	\begin{itemize}
 		\item[\rightimp] Suppose $U$ is conjugate to $W$ in $G$. Then there exists $g \in G$ such that $gUg\inv = W$, or $g\inv Wg = U$. Taking some $p \in P$ and some $gpg\inv \in gPg\inv$, then
 		\[gpg\inv W gp\inv g\inv = gpUp\inv g\inv = gUg\inv = W\]
 		where $pUp\inv = U$ since $U \nsub P$.
 
 		Since $gPg\inv$ is a $p$-group, and $W \nsub P$, then $P \leq N_G(W)$. Hence, $P \in \syl_p(N_G(W))$. By the conjugacy part of Sylow's Theorem, there exists some $n \in N_G(W)$ such that $nPn\inv = gPg\inv$. Then $n\inv g \in N_G(P)$ since $n\inv gPg\inv gn\inv = P$, so that $n\inv gUg\inv n = n\inv Wn = W$. Therefore, $U$ is conjugate to $W$ in $N_G(P)$.
 		\item[\leftimp] If $U$ is conjugate to $W$ in $N_G(P)$, then there exists some $n \in N_G(P)$ such that $nUn\inv = W$. Since $N_G(P) \leq G$, then $U$ is conjugate to $W$ in $G$ as well because $n \in G$.
-	\end{ifandonlyif}
+	\end{itemize}
 \end{sol}
 
 \newpage

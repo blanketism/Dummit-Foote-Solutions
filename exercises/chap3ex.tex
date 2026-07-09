@@ -563,10 +563,10 @@ Let $G$ and $H$ be groups.
 
 \begin{solalph}
     \item
-    \begin{ifandonlyif}
+    \begin{itemize}
         \item[\rightimp] If $N \nsub G$, then $gNg\inv \subseteq N$ holds true for all $g \in G$.
         \item[\leftimp] Suppose $gNg\inv \subseteq N$ for every $g \in G$, and let $n \in N$. For some $g \in G$, we have $g\inv Ng \subseteq N$ so that $g\inv ng \in N$. Then $n = g(g\inv ng)g\inv \in gNg\inv$. Hence, $N \subseteq gNg\inv$, and $N = gNg\inv$. Therefore, $N \nsub G$.
-    \end{ifandonlyif}
+    \end{itemize}
     \item Let
     \[n = 
     \begin{pmatrix}
@@ -618,23 +618,23 @@ Let $G$ and $H$ be groups.
     \[gng\inv = (gs_1g\inv)(gs_2g\inv) \cdots (gs_kg\inv)\]
     for every $g \in G$, and $gSg\inv \subseteq N$, then the right hand side is also in $N$, hence $gNg\inv \subseteq N$ so that $N \nsub G$.
     \item
-    \begin{ifandonlyif}
+    \begin{itemize}
         \item[\rightimp] Immediate from the definition of a normal subgroup.
         \item[\leftimp] Let $S = \gen x$, and use part (c).
-    \end{ifandonlyif}
+    \end{itemize}
     \item Let $S = \set{g \in G \mid |g| = n}$. Let $N = \gen S$. If $S$ is empty, then $N$ is again trivial, hence is normal. Suppose $S$ is nonempty. By part (a), then $\abs{gsg\inv} = \abs s = n$ for any $g \in G$ and $s \in S$, so that $gsg\inv \in S \subseteq N$. Then $gSg\inv \subseteq N$, hence $N \nsub G$ by part (c).
 \end{solalph}
 
 \begin{exercise}\label{ex3.1.27}
-    Let $N$ be a \textit{finite} subgroup of a group $G$. Show that $gNg^{-1} \subseteq N$ if and only if $gNg^{-1} = N$. Deduce that $N_G(N) = \{ g \in G \mid gNg^{-1} \subseteq N \}$.
+    Let $N$ be a \emph{finite} subgroup of a group $G$. Show that $gNg^{-1} \subseteq N$ if and only if $gNg^{-1} = N$. Deduce that $N_G(N) = \{ g \in G \mid gNg^{-1} \subseteq N \}$.
 \end{exercise}
 
 \begin{sol}
     \leavevmode
-    \begin{ifandonlyif}
+    \begin{itemize}
         \item[\rightimp] Suppose $gNg\inv \subseteq N$. Let $\phi : N \to gNg\inv$ be the conjugation map. By \hyperref[ex1.7.17]{Exercise 1.7.17}, we know that this map is defined to be an isomorphism, hence $|gNg\inv| = |N|$. Since $gNg\inv \subseteq N$ and both sets are finite with the same cardinality, it follows that $gNg\inv = N$.
         \item[\leftimp] Immediate.
-    \end{ifandonlyif}
+    \end{itemize}
 
     By the previous part, we have that $g \in N_G(N)$ if and only if $gNg\inv = N$, which holds if and only if $gNg\inv \subseteq N$. Then $N_G(N) = \{ g \in G \mid gNg^{-1} \subseteq N \}$.
 \end{sol}
@@ -642,7 +642,7 @@ Let $G$ and $H$ be groups.
 \newpage
 
 \begin{exercise}\label{ex3.1.28}
-    Let $N$ be a \textit{finite} subgroup of a group $G$ and assume $N = \langle S \rangle$ for some subset $S$ of $G$. Prove that an element $g \in G$ normalizes $N$ if and only if $gSg^{-1} \subseteq N$.
+    Let $N$ be a \emph{finite} subgroup of a group $G$ and assume $N = \langle S \rangle$ for some subset $S$ of $G$. Prove that an element $g \in G$ normalizes $N$ if and only if $gSg^{-1} \subseteq N$.
 \end{exercise}
 
 \begin{solitem}
@@ -656,7 +656,7 @@ Let $G$ and $H$ be groups.
 \end{solitem}
 
 \begin{exercise}\label{ex3.1.29}
-    Let $N$ be a \textit{finite} subgroup of $G$ and suppose $G = \langle T \rangle$ and $N = \langle S \rangle$ for some subsets $S$ and $T$ of $G$. Prove that $N$ is normal in $G$ if and only if $tSt^{-1} \subseteq N$ for all $t \in T$.
+    Let $N$ be a \emph{finite} subgroup of $G$ and suppose $G = \langle T \rangle$ and $N = \langle S \rangle$ for some subsets $S$ and $T$ of $G$. Prove that $N$ is normal in $G$ if and only if $tSt^{-1} \subseteq N$ for all $t \in T$.
 \end{exercise}
 
 \begin{solitem}
@@ -816,7 +816,7 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{specialexercise}\label{ex3.1.40}
-    Let $G$ be a group, let $N$ be a normal subgroup of $G$ and let $\bar{G} = G/N$. Prove that $\bar{x}$ and $\bar{y}$ commute in $\bar{G}$ if and only if $x^{-1}y^{-1}xy \in N$. (The element $x^{-1}y^{-1}xy$ is called the \textit{commutator} of $x$ and $y$ and is denoted by $[x,y]$.)
+    Let $G$ be a group, let $N$ be a normal subgroup of $G$ and let $\bar{G} = G/N$. Prove that $\bar{x}$ and $\bar{y}$ commute in $\bar{G}$ if and only if $x^{-1}y^{-1}xy \in N$. (The element $x^{-1}y^{-1}xy$ is called the \emph{commutator} of $x$ and $y$ and is denoted by $[x,y]$.)
 \end{specialexercise}
 
 \begin{sol}
@@ -826,7 +826,7 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{specialexercise}\label{ex3.1.41}
-    Let $G$ be a group. Prove that $N = \langle x^{-1}y^{-1}xy \mid x,y \in G \rangle$ is a normal subgroup of $G$ and $G/N$ is abelian ($N$ is called the \textit{commutator} subgroup of $G$).
+    Let $G$ be a group. Prove that $N = \langle x^{-1}y^{-1}xy \mid x,y \in G \rangle$ is a normal subgroup of $G$ and $G/N$ is abelian ($N$ is called the \emph{commutator} subgroup of $G$).
 \end{specialexercise}
 
 \begin{sol}
@@ -973,7 +973,7 @@ Let $G$ be a group.
         \item Show that a cyclic permutation of an element of $\ss$ is again an element of $\ss$.
         \item Prove that $\sim$ is an equivalence relation on $\ss$.
         \item Prove that an equivalence class contains a single element if and only if it is of the form $(x, x, \dots, x)$ with $x^p = 1$.
-        \item Prove that every equivalence class has order 1 or $p$ (this uses the fact that $p$ is \textit{prime}). Deduce that $|G|^{p-1} = k + pd$, where $k$ is the number of classes of size 1 and $d$ is the number of classes of size $p$.
+        \item Prove that every equivalence class has order 1 or $p$ (this uses the fact that $p$ is \emph{prime}). Deduce that $|G|^{p-1} = k + pd$, where $k$ is the number of classes of size 1 and $d$ is the number of classes of size $p$.
         \item Since $\{(1, 1, \dots, 1)\}$ is an equivalence class of size 1, conclude from (e) that there must be a nonidentity element $x \in G$ with $x^p = 1$, i.e., $G$ contains an element of order $p$. [Show $p \mid k$ and so $k > 1$.]
     \end{subproblems}
 \end{specialexercise}
@@ -991,10 +991,10 @@ Let $G$ be a group.
         \item Symmetric: If $\alpha \sim \beta$, then $\beta$ is a shift of $\alpha$ by some $k$. Then shifting $\beta$ by $p - k$ returns $\alpha$, hence $\beta \sim \alpha$.
         \item Transitive: If $\alpha \sim \beta$ and $\beta \sim \gamma$, then $\beta$ is a shift of $\alpha$ by some $k_1$, and $\gamma$ is a shift of $\beta$ by some $k_2$. Then shifting $\alpha$ by $(k_1 + k_2) \bmod p$ returns $\gamma$, hence $\alpha \sim \gamma$.
     \end{itemize}
-    \begin{ifandonlyif}
+    \begin{itemize}
         \item[\rightimp] Let $[\alpha]$ denote the equivalence class of $\sim$ that contains $\alpha$, and let $\alpha = (x_1, x_2, \dots, x_p)$. If $[\alpha]$ contains a single element, then every cyclic permutation of $\alpha$ is equal to $\alpha$. In particular, the cyclic permutation that shifts each coordinate by 1 must be equal to $\alpha$, hence $x_2 = x_1, x_3 = x_2, \dots, x_p = x_{p-1}, x_1 = x_p$. It follows that $\alpha = (x, x, \dots, x)$ for some $x \in G$. Since $\alpha \in \ss$, then $x^p = 1$.
         \item[\leftimp] Suppose $\alpha = (x, x, \dots, x)$ for some $x \in G$ such that $x^p = 1$. Then any cyclic permutation of $\alpha$ is equal to $\alpha$, hence $[\alpha]$ contains a single element.
-    \end{ifandonlyif}
+    \end{itemize}
     \item Let $\alpha = (x_1, x_2, \dots, x_p) \in \ss$ where the $x_i$ need not be distinct, and let $[\alpha]$ be the equivalence class containing $\alpha$. Let $[\alpha]$ have $n$ elements. Note that for any two coordinates $x_i$ and $x_j$, if there exists some $k \in \z$ such that $i + kn \equiv j \bmod p$, then $x_i = x_j$ since shifting $\alpha$ by $kn$ returns $\alpha$ as there are only $n$ distinct cyclic permutations in $[\alpha]$.
     
     There are two cases to discuss, either $n = p$ or $1 \leq n < p$. If $n = p$, then all cyclic permutations of $\alpha$ are distinct, and we are done. Suppose $1 \leq n < p$. Since $p$ is prime, then $(n, p) = 1$, hence there exists some $k \in \z$ such that $kn \equiv 1 \bmod p$. In particular, $i + kn \equiv i + 1 \equiv j \bmod p$ implies $x_{i + 1} = x_j$. It follows that $x_i = x_j$ for all $1 \leq i, j \leq p$, hence $\alpha = (x, x, \dots, x)$ for some $x \in G$. By part (c), $[\alpha]$ contains a single element.
@@ -1062,7 +1062,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}\label{ex3.2.16}
-    Use Lagrange's Theorem in the multiplicative group $(\mathbb{Z}/p\mathbb{Z})^\times$ to prove \textit{Fermat's Little Theorem}: if $p$ is a prime then $a^p \equiv a \bmod p$ for all $a \in \z$.
+    Use Lagrange's Theorem in the multiplicative group $(\mathbb{Z}/p\mathbb{Z})^\times$ to prove \emph{Fermat's Little Theorem}: if $p$ is a prime then $a^p \equiv a \bmod p$ for all $a \in \z$.
 \end{exercise}
 
 \begin{sol}
@@ -1116,7 +1116,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}\label{ex3.2.22}
-    Use Lagrange's Theorem in the multiplicative group $(\mathbb{Z}/n\mathbb{Z})^\times$ to prove \textit{Euler's Theorem}: $a^{\varphi(n)} \equiv 1 \bmod n$ for every integer $a$ relatively prime to $n$, where $\varphi$ denotes Euler's $\varphi$-function.
+    Use Lagrange's Theorem in the multiplicative group $(\mathbb{Z}/n\mathbb{Z})^\times$ to prove \emph{Euler's Theorem}: $a^{\varphi(n)} \equiv 1 \bmod n$ for every integer $a$ relatively prime to $n$, where $\varphi$ denotes Euler's $\varphi$-function.
 \end{exercise}
 
 \begin{sol}
@@ -1163,10 +1163,10 @@ Let $G$ be a group.
     so that $\phi$ is surjective. To show that $\phi$ is injective, suppose $\phi(A) = \phi(B)$ for some $A, B \in \ac$. Then $\bar A = \bar B$ implies that for some $a \in A$, there is some $b \in B$ such that $\bar a = \bar b$, hence $aN = bN$ so that $b\inv a \in N \subseteq B$. It follows that $a = b(b\inv a) \in B$, hence $A \subseteq B$. A similar argument shows that $B \subseteq A$, hence $A = B$ so that $\phi$ is injective. Therefore, $\phi$ is a bijection.
     \begin{enumerate}
         \item 
-        \begin{ifandonlyif}
+        \begin{itemize}
             \item[\rightimp] Suppose $A \leq B$ for $A, B \in \ac$. Let $\bar a \in \bar A$ for some $a \in A$. Since $A \leq B$, then $a \in B$ so that $\bar a \in \bar B$, hence $\bar A \leq \bar B$.
             \item[\leftimp] Suppose $\bar A \leq \bar B$ for $A, B \in \ac$. Let $a \in A$ for some $a \in A$. Then $\bar a \in \bar A$ so that $\bar a \in \bar B$, hence there is some $b \in B$ such that $\bar a = \bar b$. It follows that $aN = bN$ so that $b\inv a \in N \subseteq B$, hence $a = b(b\inv a) \in B$. Therefore, $A \leq B$.
-        \end{ifandonlyif}
+        \end{itemize}
         \item Define the map
         \[\psi : B/A \to \bar B / \bar A \quad \text{by} \quad \psi(bA) = \bar b \bar A\]
         for $b \in B$. To show $\psi$ is well-defined, suppose $b_1A = b_2A$ for some $b_1, b_2 \in B$. Then $b_2\inv b_1 \in A$, hence $\bar{b_2\inv b_1} \in \bar A$. Then $\bar{b_1} bar A = \bar{b_2} \bar A$, hence $\psi(b_1A) = \psi(b_2A)$.
@@ -1183,12 +1183,12 @@ Let $G$ be a group.
         
         Conversely, let $\bar x \in \bar A \cap \bar B$. Then $\bar x \in \bar A$ and $\bar x \in \bar B$, so that $x \in A$ and $x \in B$, hence $x \in A \cap B$ so that $\bar x \in \bar{A \cap B}$. Therefore, $\bar{A \cap B} = \bar A \cap \bar B$.
         \item 
-        \begin{ifandonlyif}
+        \begin{itemize}
             \item[\rightimp] Suppose $A \nsub G$ for some $A \in \ac$. Let $\bar g \in \bar G$ and $\bar a \in \bar A$ for some $g \in G$ and $a \in A$. Note that
             \[(\bar g)(\bar a)(\bar g)\inv = \bar{gag\inv}\]
             Since $A \nsub G$, then $gag\inv \in A$, hence $\bar{gag\inv} \in \bar A$. It follows that $(\bar g)(\bar a)(\bar g)\inv \in \bar A$, hence $\bar A \nsub \bar G$.
             \item[\leftimp] Suppose $\bar A \nsub \bar G$ for some $A \in \ac$. Let $g \in G$ and $a \in A$. Since $\bar{gag\inv} = (\bar g)(\bar a)(\bar g)\inv \in \bar A$, then $gag\inv N \in A/N$, hence $gag\inv \in A$. It follows that $A \nsub G$. \qh
-        \end{ifandonlyif}
+        \end{itemize}
     \end{enumerate}
 \end{sol}
 
@@ -1330,7 +1330,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{specialexercise}\label{ex3.3.9}
-    Let $p$ be a prime and let $G$ be a group of order $p^am$, where $p$ does not divide $m$. Assume $P$ is a subgroup of $G$ of order $p^a$ and $N$ is a normal subgroup of $G$ of order $p^b n$, where $p$ does not divide $n$. Prove that $|P \cap N| = p^b$ and $|PN/N| = p^{a - b}$. (The subgroup $P$ of $G$ is called a \textit{Sylow $p$-subgroup} of $G$. This exercise shows that the intersection of any Sylow $p$-subgroup with a normal subgroup $N$ is a Sylow $p$-subgroup of $N$.)
+    Let $p$ be a prime and let $G$ be a group of order $p^am$, where $p$ does not divide $m$. Assume $P$ is a subgroup of $G$ of order $p^a$ and $N$ is a normal subgroup of $G$ of order $p^b n$, where $p$ does not divide $n$. Prove that $|P \cap N| = p^b$ and $|PN/N| = p^{a - b}$. (The subgroup $P$ of $G$ is called a \emph{Sylow $p$-subgroup} of $G$. This exercise shows that the intersection of any Sylow $p$-subgroup with a normal subgroup $N$ is a Sylow $p$-subgroup of $N$.)
 \end{specialexercise}
 
 \begin{sol}
@@ -1340,7 +1340,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}\label{ex3.3.10}
-    Generalize the preceding exercise as follows. A subgroup $H$ of a finite group $G$ is called a \textit{Hall subgroup} of $G$ if its index in $G$ is relatively prime to its order: $(|G : H|, |H|) = 1$. Prove that if $H$ is a Hall subgroup of $G$ and $N \nsub G$, then $H \cap N$ is a Hall subgroup of $N$ and $HN/N$ is a Hall subgroup of $G/N$.
+    Generalize the preceding exercise as follows. A subgroup $H$ of a finite group $G$ is called a \emph{Hall subgroup} of $G$ if its index in $G$ is relatively prime to its order: $(|G : H|, |H|) = 1$. Prove that if $H$ is a Hall subgroup of $G$ and $N \nsub G$, then $H \cap N$ is a Hall subgroup of $N$ and $HN/N$ is a Hall subgroup of $G/N$.
 \end{exercise}
 
 \begin{sol}
@@ -1474,7 +1474,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}\label{ex3.4.8}
-    Let $G$ be a \textit{finite} group. Prove that the following are equivalent:
+    Let $G$ be a \emph{finite} group. Prove that the following are equivalent:
     \begin{enumerate}
         \item[(i)] $G$ is solvable.
         \item[(ii)] $G$ has a chain of subgroups
