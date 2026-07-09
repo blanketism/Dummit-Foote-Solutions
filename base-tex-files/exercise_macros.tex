@@ -1,8 +1,8 @@
 % LTeX: enabled=false
 
-\newcommand{\hint}[1]{\textcolor{WildStrawberry}{\textsc{Hint.}} \textit{#1}}
-\newcommand{\remark}[1]{\textcolor{Brown}{\textsc{Remark.}} \textit{#1}}
-\newcommand{\authornote}[1]{\textcolor{CarnationPink}{\textsc{A/N.}} \textit{#1}}
+\newcommand{\hint}[1]{\textcolor{WildStrawberry}{\textsc{Hint.}} \emph{#1}}
+\newcommand{\remark}[1]{\textcolor{Brown}{\textsc{Remark.}} \emph{#1}}
+\newcommand{\authornote}[1]{\textcolor{CarnationPink}{\textsc{A/N.}} \emph{#1}}
 
 \definecolor{pagecolor}{HTML}{faecca}
 
@@ -10,20 +10,6 @@
 
 \newcounter{exercount}[subsection]
 \counterwithin{exercount}{subsection}
-
-\newcounter{definition}[section]
-\counterwithin{definition}{section}
-\newcounter{proposition}[section]
-\counterwithin{proposition}{section}
-\newcounter{theorem}[section]
-\counterwithin{theorem}{section}
-\newcounter{corollary}[section]
-\counterwithin{corollary}{section}
-
-\def\definitionautorefname{Definition}
-\def\propositionautorefname{Proposition}
-\def\theoremautorefname{Theorem}
-\def\corollaryautorefname{Corollary}
 
 \renewcommand{\subsectionautorefname}{Section}
 
