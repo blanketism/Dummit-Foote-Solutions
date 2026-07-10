@@ -1,0 +1,282 @@
+\subsection{Symmetric Groups}
+
+\begin{exercise} [1.3.1]
+    Let $\sigma$ be the permutation
+    \[1 \mapsto 3 \quad 2 \mapsto 4 \quad 3 \mapsto 5 \quad 4 \mapsto 2 \quad 5 \mapsto 1\]
+    and let $\tau$ be the permutation
+    \[1 \mapsto 5 \quad 2 \mapsto 3 \quad 3 \mapsto 2 \quad 4 \mapsto 4 \quad 5 \mapsto 1\]
+    Find the cycle decompositions of each of the following permutations:
+    $\sigma, \tau, \sigma^2, \sigma\tau, \tau\sigma,$ and $\tau^2\sigma.$
+\end{exercise}
+
+\begin{sol}
+    We have $\sigma = (1\ 3\ 5)(2\ 4)$ and $\tau = (1\ 5)(2\ 3)$. The rest is straightforward.
+\end{sol}
+
+\begin{exercise} [1.3.2] 
+    Let $\sigma$ be the permutation
+    \begin{align*}
+        1 &\mapsto 13 & 2 &\mapsto 2 & 3 & \mapsto 15 & 4 & \mapsto 14 & 5 & \mapsto 10  \\
+        6 &\mapsto 6 & 7 &\mapsto 12 & 8 & \mapsto 3 & 9 & \mapsto 4 & 10 & \mapsto 1 \\
+        11 &\mapsto 7 & 12 &\mapsto 9 & 13 & \mapsto 5 & 14 & \mapsto 11 & 15 & \mapsto 8
+    \end{align*}
+    and let $\tau$ be the permutation
+    \begin{align*}
+        1 &\mapsto 14 & 2 &\mapsto 9 & 3 &\mapsto 10 & 4 &\mapsto 2 & 5 &\mapsto 12 \\
+        6 &\mapsto 6 & 7 &\mapsto 5 & 8 &\mapsto 11 & 9 &\mapsto 15 & 10 &\mapsto 3 \\
+        11 &\mapsto 8 & 12 &\mapsto 7 & 13 &\mapsto 4 & 14 &\mapsto 1 & 15 &\mapsto 13
+    \end{align*}
+    Find the cycle decompositions of the following permutations: $\sigma, \tau, \sigma^2, \sigma\tau, \tau\sigma$, and $\tau^2\sigma.$
+\end{exercise}
+
+\begin{sol}
+    $\sigma = (1\ 13\ 5\ 10)(3\ 15\ 8)(4\ 14\ 11\ 7\ 12\ 9)$ and $\tau = (1\ 14)(2\ 9\ 15\ 13\ 4)(3\ 10)(5\ 12\ 7)(8\ 11)$. Again, the rest is straightforward.
+\end{sol}
+
+\begin{exercise}[1.3.3]
+    For each of the permutations whose cycle decompositions were computed in the preceding two exercises, compute its order.
+\end{exercise}
+
+\begin{sol}
+    \begin{align*}
+        \abs\sigma & = 6, 12 & \abs\tau & = 2, 30 \\
+        \abs{\sigma^2} & = 3, 6 & \abs{\sigma\tau} & = 4, 6 \\
+        \abs{\tau\sigma} & = 4, 6 & \abs{\tau^2\sigma} & = 6, 13 \qh
+    \end{align*}
+\end{sol}
+
+\begin{exercise} [1.3.4]
+    Compute the order of each of the elements in the following groups:
+    \begin{subexercises}
+        \item $S_3$ \quad (b) $S_4$
+    \end{subexercises}
+\end{exercise}
+
+\begin{solenum}
+    \item
+    $$\begin{array}{c|c}
+        \text{Permutation} & \text{Order} \\
+        \hline
+        1 & 1 \\
+        (12) & 2 \\
+        (13) & 2 \\
+        (23) & 2 \\
+        (123) & 3 \\
+        (132) & 3
+    \end{array}$$
+    \item 
+    $$\begin{array}{c|c}
+            \text{Permutation} & \text{Order} \\
+            \hline
+            1 & 1 \\
+            (12) & 2 \\
+            (13) & 2 \\
+            (14) & 2 \\
+            (23) & 2 \\
+            (24) & 2
+    \end{array}\enspace
+    \begin{array}{c|c}
+        \text{Permutation} & \text{Order} \\
+        \hline
+        (34) & 2 \\
+        (123) & 3 \\
+        (124) & 3 \\
+        (132) & 3 \\
+        (134) & 3 \\
+        (142) & 3
+    \end{array}\enspace
+    \begin{array}{c|c}
+        \text{Permutation} & \text{Order} \\
+        \hline
+        (143) & 3 \\
+        (234) & 3 \\
+        (243) & 3 \\
+        (1234) & 4 \\
+        (1243) & 4 \\
+        (1324) & 4
+    \end{array}\enspace
+    \begin{array}{c|c}
+        \text{Permutation} & \text{Order} \\
+        \hline
+        (1342) & 4 \\
+        (1423) & 4 \\
+        (1432) & 4 \\
+        (12)(34) & 2 \\
+        (13)(24) & 2 \\
+        (14)(23) & 2
+    \end{array}$$
+\end{solenum}
+
+\begin{exercise}[1.3.5]
+    Find the order of $(1\ 12\ 8\ 10\ 4)(2\ 13)(5\ 11\ 7)(6\ 9)$.
+\end{exercise}
+
+\begin{sol}
+    There are cycles of lengths 5, 2, 3, and 2. Then the order is $\lcm(5, 2, 3, 2) = 30$.
+\end{sol}
+
+\begin{exercise}[1.3.6]
+    Write out the cycle decomposition of each element of order 4 in $S_4$.
+\end{exercise}
+
+\begin{sol}
+    See \exref{1.3.4}.
+\end{sol}
+
+\begin{exercise}[1.3.7]
+    Write out the cycle decomposition of each element of order 2 in $S_4$.
+\end{exercise}
+
+\begin{sol}
+    See \exref{1.3.4}.
+\end{sol}
+
+\begin{exercise}[1.3.8]
+     Prove that if $\Omega$ is a finite set, then $S_\Omega$ is a finite group.
+    Prove that if $\Omega = \{1,2,3,\dots\}$, then $S_\Omega$ is an infinite group (do not say $\infty! = \infty$).
+\end{exercise}
+
+\begin{sol}
+    For each $n \in \zp$, consider the permutation $\sigma_n = (1\ n)$. Then $\sigma_n \in S_\Omega$ and $\sigma_n \neq \sigma_m$ for $n \neq m$, since they move different elements. Hence, $S_{\Omega}$ contains an infinite collection of distinct elements, so $S_\Omega$ is infinite.
+\end{sol}
+
+\begin{exercise}[1.3.9]
+     Let $\sigma$ be an $m$-cycle. For which positive integers $i$ is $\sigma^i$ also an $m$-cycle?
+    \begin{subexercises}
+        \item Let $\sigma$ be the 12-cycle $(1\ 2\ 3\ 4\ 5\ 6\ 7\ 8\ 9\ 10\ 11\ 12)$. For which positive integers $i$ is $\sigma^i$ also a 12-cycle?
+        \item Let $\tau$ be the 8-cycle $(1\ 2\ 3\ 4\ 5\ 6\ 7\ 8)$. For which positive integers $i$ is $\tau^i$ also an 8-cycle?
+        \item Let $\omega$ be the 14-cycle $(1\ 2\ 3\ 4\ 5\ 6\ 7\ 8\ 9\ 10\ 11\ 12\ 13\ 14)$. For which positive integers $i$ is $\omega^i$ also a 14-cycle?
+    \end{subexercises}
+    \authornote{The reader should notice a pattern: integers $i$ such that $(m, i) = 1$ produce an $m$-cycle, while integers $i$ such that $(m, i) = k$ produce $k$ disjoint $m/k$-cycles.}
+\end{exercise}
+
+\begin{solenum}
+    \item Computing the cycle for each integer 0 to 12:
+    \begin{align*}
+        \sigma^1 & = \sigma & \sigma^7 & = (1\ 8\ 3\ 10\ 5\ 12\ 7\ 2\ 9\ 4\ 11\ 6) \\
+        \sigma^2 & = (1\ 3\ 5\ 7\ 9\ 11)(2\ 4\ 6\ 8\ 10\ 12) & \sigma^8 & = (1\ 9\ 5)(2\ 10\ 6)(3\ 11\ 7)(4\ 12\ 8) \\
+        \sigma^3 & = (1\ 4\ 7\ 10)(2\ 5\ 8\ 11)(3\ 6\ 9\ 12) & \sigma^9 & = (1\ 10\ 7\ 4)(2\ 11\ 8\ 5)(3\ 12\ 9\ 6) \\
+        \sigma^4 & = (1\ 5\ 9)(2\ 6\ 10)(3\ 7\ 11)(4\ 8\ 12) & \sigma^{10} & = (1\ 11\ 9\ 7\ 5\ 3)(2\ 12\ 10\ 8\ 6\ 4) \\
+        \sigma^5 & = (1\ 6\ 11\ 4\ 9\ 2\ 7\ 12\ 5\ 10\ 3\ 8) & \sigma^{11} & = (1\ 12\ 11\ 10\ 9\ 8\ 7\ 6\ 5\ 4\ 3\ 2) \\
+        \sigma^6 & = (1\ 7)(2\ 8)(3\ 9)(4\ 10)(5\ 11)(6\ 12) & \sigma^{12} & = \id
+    \end{align*}
+    Hence, the set of integers that produce a 12-cycle is the set $\{i + 12k \mid i \in \{1, 5, 7, 11\}, k \in \z\}$.
+    \item $\{i + 8k \mid i \in \{1, 3, 5, 7\}, k \in \z\}$.
+    \item $\{i + 14k \mid i \in \{1, 3, 5, 9, 11, 13\}, k \in \z\}$. \qh
+\end{solenum}
+
+\begin{exercise} [1.3.10]
+    Prove that if $\sigma$ is the $m$-cycle $(a_1\ a_2\ \dots\ a_m)$, then for all $i \in \{1,2,\dots,m\}$, $\sigma^i(a_k) = a_{k+i}$, where $k+i$ is replaced by its least residue mod $m$ when $k+i > m$. Deduce that $|\sigma| = m$.
+\end{exercise}
+
+\begin{sol}
+    Assume all subscripts of $a$ are taken mod $m$. Inducting on $i = 1$, the base case is clear. If $\sigma^i(a_k) = a_{k + i}$ for $1 \leq i \leq m - 1$, then
+    \[\sigma^{i + 1}(a_k) = \sigma(\sigma^i(a_k)) = \sigma(a_{k + i}) = a_{k + i + 1}.\]
+    The result follows by induction.
+    
+    To see that $|\sigma| = m$, note that $\sigma^m(a_k) = a_{k+m} = a_k$ for all $k \in \{1,2,\dots,m\}$, so that $\sigma^m = \id$. If $|\sigma| = i < m$, then $\sigma^i(a_1) = a_{1+i} = a_1$, which implies that $i \equiv 0 \bmod m$. Hence, $|\sigma| = m$.
+\end{sol}
+
+\begin{specialexercise}[1.3.11]
+    Let $\sigma$ be the $m$-cycle $(1\ 2\ \dots\ m)$. Show that $\sigma^i$ is also an $m$-cycle if and only if $i$ is relatively prime to $m$.
+\end{specialexercise}
+
+\begin{solitem}
+    \item [\rightimp] Suppose $(m, i) = k > 1$. If $i > m$, replace $i$ with $i \bmod m$ since $\sigma^i = \sigma^{i \bmod m}$. Then $i = k\ell$ for $\ell \in \zp$. It is clear that $(\sigma^i)^{m/k} = \sigma^{\ell m} = \id$, so that $|\sigma^i| \leq m/k < m$. Hence, $\sigma^i$ is not an $m$-cycle.
+    \item [\leftimp] Suppose that $(m, i) = 1$. Denote $x_m \equiv x \bmod m$. We claim that the integers
+    \[1_m, (1 + i)_m, (1 + 2i)_m, \ldots, (1 + (m - 1)i)_m\]
+    are all distinct. Suppose $(1 + xi)_m = (1 + yi)_m$ for some $0 \leq x, y \leq m - 1$ with $x \neq y$. Then $i(x - y) \equiv 0 \bmod m$. Since $(m, i) = 1$, then $m \mid (x - y)$. However, since $1 - m \leq x - y \leq m - 1$, then the only choice for $x - y$ is 0, or that $x = y$. Then we have exactly $m$ distinct integers so that
+    \[\sigma^i = (1\ (1 + i)_m\ (1 + 2i)_m\ \ldots\ (1 + (m - 1)i)_m).\]
+    Thus, $\sigma^i$ is an $m$-cycle.
+\end{solitem}
+
+\begin{exercise} [1.3.12]
+    \begin{subexercises}
+        \item If $\tau = (1\ 2)(3\ 4)(5\ 6)(7\ 8)(9\ 10)$, determine whether there is an $n$-cycle ($n \ge 10$) with $\tau = \sigma^k$ for some integer $k$.
+        \item If $\tau = (1\ 2)(3\ 4\ 5)$, determine whether there is an $n$-cycle ($n \ge 5$) with $\tau = \sigma^k$ for some integer $k$.
+    \end{subexercises}
+\end{exercise}
+
+\begin{solenum}
+    \item We first observe that for any $n$-cycle $\sigma$, then $\sigma^k$ sends any element $a_i$ to $a_{i + k}$, where $i + k$ is replaced by its least residue mod $n$ when $i + k > n$. In this specific problem, $\tau$ consists of 2-cycles, which means that $\sigma^k$ must send each element to itself after two applications. Then $2k \equiv 0 \bmod n$, but $k \not\equiv 0 \bmod n$ since $\sigma^k \neq 1$. It follows that $n \mid 2k$ but $n \nmid k$, so it must be that $n = 2k$. We see that $\sigma^k$ will be a product of $k$ 2-cycles. However, $\tau$ is a product of 5 2-cycles, so $k = 5$ and $n = 10$. Thus, there exists an $n$-cycle $\sigma$ such that $\sigma^5 = \tau$ when $n = 10$, and $\sigma = (1\ 6\ 2\ 7\ 3\ 8\ 4\ 9\ 5\ 10)$.
+    \item We first prove that $(ac, bc) = c(a, b)$ for $a, b, c \in \z$.
+    \begin{lemma}
+        Let $d = (a, b)$ and $d' = (ac, bc)$. Then there exist $s, t \in \z$ such that $d = as + bt$. Consider $cd = acs + bct$. Then $d' = (ac, bc)$ implies that $d' \mid cd$. Since $d \mid a$ and $d \mid b$, then $cd \mid ac$ and $cd \mid bc$, so that $cd \mid (ac, bc) = d'$. Then $d' = cd$ or $d' = c(a, b)$.
+    \end{lemma}
+    
+    Assume for contradiction that there exists an $n$-cycle $\sigma$ and $k$ such that $\sigma^k = \tau$. Then $\tau^2(1) = 1$, hence $\sigma^{2k}(1) = 1$, or $2k \equiv 0 \bmod n$. Moreover, $\tau^3(3) = 3$, hence $\sigma^{3k}(3) = 3$, or $3k \equiv 0 \bmod n$. Then $n \mid 2k$ and $n \mid 3k$, so that $n \mid (2k, 3k)$. By the lemma, $(2k, 3k) = k(2, 3) = k$, so that $n \mid k$. However, $\sigma^k \neq 1$, so $n \nmid k$. This is a contradiction, so there does not exist an $n$-cycle $\sigma$ such that $\sigma^k = \tau$.
+\end{solenum}
+
+\begin{exercise}[1.3.13]
+    Show that an element has order 2 in $S_n$ if and only if its cycle decomposition is a product of commuting 2-cycles.
+\end{exercise}
+
+\begin{solitem}
+    \item [\rightimp] Let $\sigma \in S_n$ with $\abs\sigma = 2$. Let $(a_1\ a_2\ \ldots\ a_m)$ be one of the cycles in its cycle decomposition. Since $\sigma \neq \id$ and $\sigma^2 = 1$, then $\sigma(a_1) = a_2$ and $\sigma(a_2) = a_1$. Then $m = 2$, and the cycle is a 2-cycle.
+    \item [\leftimp] Suppose $\sigma$'s cycle decomposition is a product of commuting 2-cycles $(a_1\ b_1)(a_2\ b_2) \ldots (a_k\ b_k)$. Since each 2-cycle has order 2, and the 2-cycles commute, then $\sigma^2 = \id$. Because $\sigma \neq \id$, then $\abs\sigma = 2$.
+\end{solitem}
+
+\begin{exercise}[1.3.14]
+    Let $p$ be a prime. Show that an element has order $p$ in $S_n$ if and only if its cycle decomposition is a product of commuting $p$-cycles. Show by an explicit example that this need not be the case if $p$ is not prime.
+\end{exercise}
+
+\begin{sol}
+    \leavevmode
+    \begin{itemize}
+        \item [\rightimp] Let $\sigma \in S_n$ with $\abs\sigma = p$. Let $(a_1\ a_2\ \ldots\ a_m)$ be one of the cycles in its cycle decomposition. By \exref{1.3.10}, we know $\sigma^i(a_i) = a_{1 + i}$ where $1 + i$ is taken mod $m$ when $1 + i > m$. Then $\sigma^p(a_1) = a_{1 + p} = a_1$, so that $m \mid p$. Since $p$ is prime, then $m = p$, hence any cycle in the cycle decomposition of $\sigma$ is a $p$-cycle.
+        \item [\leftimp] Let $\sigma = \tau_1\tau_2 \ldots \tau_k$ be the cycle decomposition of $\sigma$, where each $\tau_i$ is a $p$-cycle. Since the cycles are disjoint, they commute. Moreover, $\tau_i^t$ is a non-trivial $p$-cycle for $t < p$ by \exref{1.3.11}. Then $\sigma^t = \tau_1^t\tau_2^t \ldots \tau_k^t$ is a product of non-trivial $p$-cycles for $t < p$, so that $\sigma^t \neq 1$. However, $\sigma^p = \tau_1^p\tau_2^p \ldots \tau_k^p = 1$, so that $\abs\sigma = p$.
+    \end{itemize}
+    For a counterexample when $p$ is not prime, consider $\sigma = (1\ 2\ 3)(4\ 5)$ in $S_5$. Then $\abs\sigma = 6$, but the cycle decomposition consists of a 3-cycle and a 2-cycle.
+\end{sol}
+
+\begin{exercise}[1.3.15]
+    Prove that the order of an element in $S_n$ equals the least common multiple of the lengths of the cycles in its cycle decomposition.
+\end{exercise}
+
+\begin{sol}
+    Let $\sigma \in S_n$ have cycle decomposition $\tau_1\tau_2 \ldots \tau_k$, where each $\tau_i$ is a cycle of length $m_i$. Then $\abs{\tau_i} = m_i$ by \exref{1.3.10}. Since the cycles are disjoint, they commute, so that $\sigma^t = \tau_1^t\tau_2^t \ldots \tau_k^t$. Then $\sigma^t = 1$ if and only if $\tau_i^t = 1$ for all $i$, which occurs if and only if $m_i \mid t$ for all $i$. Hence, the order of $\sigma$ is the least common multiple of the lengths of the cycles in its cycle decomposition.
+\end{sol}
+
+\begin{specialexercise}[1.3.16]
+    Show that if $n \ge m$ then the number of $m$-cycles in $S_n$ is given by
+    \[\frac{n(n-1)(n-2)\dots(n-m+1)}{m}.\]
+    \hint{Count the number of ways of forming an $m$-cycle and divide by the number of representations of a particular $m$-cycle.}
+\end{specialexercise}
+
+\begin{sol}
+    Note that in an $m$-cycle, there are $m$ integers to write. The first integer has $n$ choices, the second $n - 1$ choices. Continuing on, then the $m$-th integer has $n - m + 1$ choices. However, each choice of $m$ integers has $m$ equivalent representations (such as $(1\ 2\ 3\ 4)$ being equivalent to $(2\ 3\ 4\ 1)$ by shifting each integer to the left one place). Then take the product $n(n - 1)(n - 2) \ldots (n - m + 1)$ and divide by $m$.
+\end{sol}
+
+\begin{exercise}[1.3.17]
+    Show that if $n \geq 4$ then the number of permutations in $S_n$ which are the product of two disjoint 2-cycles is
+    \[\frac{n(n - 1)(n - 2)(n - 3)}{8}.\]
+\end{exercise}
+
+\begin{sol}
+    The first 2-cycle has $n(n - 1)/2$ choices, and the second 2-cycle has $(n - 2)(n - 3)/2$ choices. Moreover, there are 2 representations for the same set of 2-cycles, so multiply the given quantities and divide by 2.
+\end{sol}
+
+\begin{exercise}[1.3.18]
+     Prove that if $n \geq 2m$ then the number of permutations in $S_n$ which are the product of $m$ disjoint 2-cycles is given by
+    Find all numbers $n$ such that $S_5$ contains an element of order $n$.
+\end{exercise}
+
+\begin{sol}
+    $S_5$ contains elements of order 1 through 5. Moreover, we can have a 2 and 3-cycle together whose LCM is 6. Then $n = 1, 2, 3, 4, 5, 6$.
+\end{sol}
+
+\begin{exercise}[1.3.19]
+    Find all numbers $n$ such that $S_7$ contains a number an element of order $n$.
+\end{exercise}
+
+\begin{sol}
+    We have $n$ from 1 to 7. We can have 2 and 5-cycles and 3 and 4-cycles. Then $n = 10$ and 12.
+\end{sol}
+
+\begin{exercise} [1.3.20]
+    Find a set of generators and relations for $S_3$.
+\end{exercise}
+
+\begin{sol}
+    Recall that $S_3 = \{1, (1\ 2), (1\ 3), (2\ 3), (1\ 2\ 3), (1\ 3\ 2)\}$. Moreover, no element in $S_3$ has order 6 so that no element generates $S_3$. It must be that there are at least 2 generators. Put $\alpha = (1\ 2)$ and $\beta = (1\ 3)$. Then $\alpha^2 = \beta^2 = 1$. Then $|\alpha| = |\beta| = 2$, and $\alpha\beta = (1\ 3\ 2), \beta\alpha = (1\ 2\ 3)$, and $\alpha\beta\alpha = (2\ 3)$. Since $\alpha^2 = \beta^2 = 1$ is not enough to determine the order of $\alpha\beta$ (because $\alpha\beta \neq \beta\alpha$), then we must add $(\alpha\beta)^2 = 1$. Then we have the presentation $S_3 = \gen{\alpha, \beta \mid \alpha^2 = \beta^2 = (\alpha\beta)^3 = 1}$.
+\end{sol}

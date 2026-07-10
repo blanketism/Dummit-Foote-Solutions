@@ -1,0 +1,500 @@
+\section{Introduction to Groups}
+
+\subsection{Basic Axioms and Examples}
+
+Let $G$ be a group.
+
+\begin{exercise}[1.1.1]
+    Determine which of the following binary operations are associative.
+    \begin{subexercises}
+        \item The operation $\star$ on $\z$ defined by $a \star b = a - b$.
+        \item The operation $\star$ on $\r$ defined by $a \star b = a + b + ab$.
+        \item The operation $\star$ on $\q$ defined by
+        \[a \star b = \dfrac{a + b}{5}.\]
+        \item The operation $\star$ on $\z \times \z$ defined by $(a,b) \star (c,d) = (ad + bc, \, bd)$.
+        \item The operation $\star$ on $\q - \{0\}$ defined by
+        \[a \star b = \dfrac{a}{b}.\]
+    \end{subexercises}
+\end{exercise}
+
+\begin{solenum}
+    \item Not associative: $(1 \star 0) \star 1 = 0 \neq 2 = 1 \star (0 \star 1)$.
+    \item Associative.
+    \item Not associative: $(1 \star 0) \star 2 = 11/25 \neq 7/25 = 1 \star (0 \star 2)$.
+    \item Associative.
+    \item Not associative: $(1 \star 2) \star 3 = 1/6 \neq 3/2 = 1 \star (2 \star 3)$.
+\end{solenum}
+
+\begin{exercise}[1.1.2]
+    Decide which of the binary operations in the preceding exercise are commutative.
+    \begin{subexercises}
+        \item The operation $\star$ on $\z$ defined by $a \star b = a - b$.
+        \item The operation $\star$ on $\r$ defined by $a \star b = a + b + ab$.
+        \item The operation $\star$ on $\q$ defined by
+        \[a \star b = \dfrac{a + b}{5}.\]
+        \item The operation $\star$ on $\z \times \z$ defined by $(a,b) \star (c,d) = (ad + bc, \, bd)$.
+        \item The operation $\star$ on $\q - \{0\}$ defined by
+        \[a \star b = \dfrac{a}{b}.\]
+    \end{subexercises}
+\end{exercise}
+
+\begin{solenum}
+    \item Not commutative: $1 - 0 \neq 0 - 1$.
+    \item Commutative.
+    \item Commutative.
+    \item Commutative.
+    \item Not commutative: $1/2 \neq 2/1$.
+\end{solenum}
+
+\begin{exercise}[1.1.3]
+    Prove that addition of residue classes in $\intmod$ is associative (you may assume it is well-defined).
+\end{exercise}
+
+\begin{sol}
+    Let $\bar a, \bar b, \bar c \in \intmod$. By associativity of addition in $\z$, we have:
+    \[(\bar a + \bar b) + \bar c = \bar{(a + b) + c} = \bar{a + (b + c)} = \bar a + (\bar b + \bar c).\qh\]
+\end{sol}
+
+\begin{exercise}[1.1.4]
+    Prove that multiplication of residue classes in $\intmod$ is associative (you may assume it is well-defined).
+\end{exercise}
+
+\begin{sol}
+    Use the same argument as in the previous exercise, replacing $+$ with $\cdot$.
+\end{sol}
+
+\begin{exercise}[1.1.5]
+    Prove for all $n > 1$ that $\intmod$ is not a group under multiplication of residue classes.
+\end{exercise}
+
+\begin{sol}
+    Since $0 \cdot a = 0$ for all $a \in \z$, so $\bar a \cdot \bar 0 = \bar 0$.
+\end{sol}
+
+\begin{exercise}[1.1.6]
+    Determine which of the following sets are groups under addition:
+\begin{subexercises}
+    \item the set of rational numbers (including $0 = 0/1$) in lowest terms whose denominators are odd
+    \item the set of rational numbers (including $0 = 0/1$) in lowest terms whose denominators are even
+    \item the set of rational numbers of absolute value $< 1$
+    \item the set of rational numbers of absolute value $\ge 1$ together with $0$
+    \item the set of rational numbers with denominators equal to $1$ or $2$
+    \item the set of rational numbers with denominators equal to $1$, $2$, or $3$
+\end{subexercises}
+\end{exercise}
+
+\begin{sol}
+    Let $S$ denote the set in each part.
+    \begin{subexercises}
+        \item $S$ has identity element 0, inverse element $-a/b$ for $a/b \in S$, and inherits associativity from $\q$. Moreover, if $a/b, c/d \in S$ such that $(a, b) = (c, d) = 1$, then
+        \[\frac ab + \frac cd = \frac{ad + bc}{bd},\]
+        where $bd$ is odd. Since an odd number cannot have a factor of 2, the denominator remains odd when reduced to lowest terms. Hence, $S$ is closed under addition, and it is a group.
+        \item No: $1/2 \in S$, but $1/2 + 1/2 = 2/2 = 1/1 \not\in S$.
+        \item Same as (b).
+        \item No: $3/2, 1 \in S$, but $3/2 - 1 = 1/2 \not\in S$.
+        \item Identity, inverses, and associativity are satisfied. Let $a, b \in \z$. Then
+        \[\frac a1 + \frac b1 = \frac{a + b}1, \quad \frac a2 + \frac b2 = \frac{a + b}2, \quad \frac a1 + \frac b2 = \frac{2a + b}2,\]
+        where the last case is chosen without loss of generality. Hence, $S$ is closed.
+        \item No: $1/3, 1/2 \in S$, but $1/3 + 1/2 = 5/6 \not\in S$. \qh
+    \end{subexercises}
+\end{sol}
+
+\begin{exercise}[1.1.7]
+    Let $G = \{ x \in \r \mid 0 \le x < 1 \}$ and for $x, y \in G$ let $x \star y$ be the fractional part of $x + y$ (i.e., $x \star y = x + y - [x + y]$ where $[a]$ is the greatest integer less than or equal to $a$). Prove that $\star$ is a well-defined binary operation on $G$ and that $G$ is an Abelian group under $\star$.
+\end{exercise}
+
+\begin{sol}
+    Let $x, y, z \in G$.
+    \begin{itemize}
+        \item Note that $0 \leq x + y < 2$. If $x + y < 1$, then $[x + y] = 0$, and $x \star y = x + y \in G$. If $1 \leq x + y < 2$, then $[x + y] = 1$, and $x \star y = x + y - 1 \in G$. Hence, $x \star y \in G$, and $\star$ is well-defined.
+        \item $x \star 0 = x - [x] = x$. Then $0$ is the identity element of $G$ under $\star$.
+        \item $x \star (1 - x) = x + (1 - x) - [x + (1 - x)] = 0$. Hence, $1 - x$ is the inverse of $x$ under $\star$.
+        \item $x \star y = x + y - [x + y] = y + x - [y + x] = y \star x$. Hence, $G$ is Abelian under $\star$.
+        \item Note that $[\alpha + \beta] = [\alpha] + \beta$ for $\beta \in \z$. Then
+        \begin{align*}
+            (x \star y) \star z & = (x + y - [x + y]) \star z \\
+            & = (x + y + z - [x + y]) - [x + y + z - [x + y]] \\
+            & = x + y + z - [x + y] - [x + y + z - [x + y]] \\
+            & = x + y + z - [x + y] - ([x + y + z] - [x + y]) \\
+            & = x + y + z - [x + y + z] \\
+            & = x \star (y + z - [y + z]) = x \star (y \star z). \qh
+        \end{align*}
+    \end{itemize}
+\end{sol}
+
+\begin{exercise}[1.1.8]
+    Let $G = \{z \in \c \mid z^n = 1 \text{ for some } n \in \zp \}$.
+    \begin{subexercises}
+        \item Prove that $G$ is a group under multiplication (called the \textbf{group of roots of unity in} $\c$).
+        \item Prove that $G$ is not a group under addition.
+    \end{subexercises}
+\end{exercise}
+
+\begin{solenum}
+    \item Since $1^1 = 1$, then $1 \in G$. If $z \in G$ for some $n$, then $(z\inv)^n = (z^n)\inv = 1\inv = 1$, so that $z\inv \in G$. Associativity from $\c$ is inherited by $G$. Finally, let $z, w \in G$ such that $z^n = w^m = 1$ for $n, m \in \zp$. Then
+    \[(zw)^{nm} = z^{nm} w^{nm} = (z^n)^m (w^m)^n = 1 \cdot 1 = 1,\]
+    so that $zw \in G$. Hence, $G$ is a group under multiplication.
+    \item No; note $1, -1 \in G$, but $1 + (-1) = 0 \not\in G$ since $0^n = 0 \neq 1$ for any $n \in \zp$.
+\end{solenum}
+
+\begin{exercise}[1.1.9]
+    Let $G = \{ a + b\sqrt{2} \in \r \mid a, b \in \q \}$.
+    \begin{subexercises}
+        \item Prove that $G$ is a group under addition.
+        \item Prove that the nonzero elements of $G$ are a group under multiplication.
+        
+        \hint{``Rationalize the denominators'' to find multiplicative inverses.}
+    \end{subexercises}
+\end{exercise}
+
+\begin{solenum}
+    \item Note that addition of two elements in $G$ is given by
+    \[(a + b\sqrt 2) + (c + d\sqrt 2) = (a + c) + (b + d)\sqrt 2 \in G.\]
+    From this, we see that $G$ is closed under addition. The identity is $0 + 0\sqrt 2 = 0$, and the inverse of $a + b\sqrt 2$ is $-a - b\sqrt 2$. Associativity is inherited from $\r$. Hence, $G$ is a group under addition.
+    \item Note that multiplication of two elements in $G$ is given by
+    \[(a + b\sqrt 2)(c + d\sqrt 2) = (ac + 2bd) + (ad + bc)\sqrt 2 \in G.\]
+    From this, we see that $G$ is closed under multiplication. The identity is $1 + 0\sqrt 2 = 1$, and the inverse of a nonzero element $a + b\sqrt 2$ is
+    \[(a + b\sqrt 2)\inv = \frac{1}{a + b\sqrt 2} = \frac{1}{a + b\sqrt 2} \cdot \frac{a - b\sqrt 2}{a - b\sqrt 2} = \frac{a - b\sqrt 2}{a^2 - 2b^2} = \frac a{a^2 - 2b^2} - \frac b{a^2 - 2b^2}\sqrt 2.\]
+    Observe that $a - b\sqrt 2 \neq 0$, since that would imply $a = b\sqrt 2$, contradicting that $a \in \q$. Moreover, $a + b\sqrt 2 \neq 0$ implies $a^2 - 2b^2 \neq 0$. Hence, the inverse is well-defined and in $G$. Associativity is inherited from $\r$. Hence, the nonzero elements of $G$ are a group under multiplication.
+\end{solenum}
+
+\begin{exercise}[1.1.10]
+    Prove that a finite group is Abelian if and only if its group table is a symmetric matrix.
+\end{exercise}
+
+\begin{sol}
+    Let $G = \set{g_1, g_2, \ldots, g_n}$ be a finite group.
+    \begin{itemize}
+        \item [\rightimp] If $G$ is Abelian, then $g_i g_j = g_j g_i$ for all $i, j$. Hence, the $(i, j)$-th entry of the group table is equal to the $(j, i)$-th entry for all $i, j$, so that the group table is symmetric.
+        \item [\leftimp] If the group table is symmetric, then $g_i g_j = g_j g_i$ for all $i, j$. Hence, $G$ is Abelian. \qh
+    \end{itemize}
+\end{sol}
+
+\begin{exercise}[1.1.11]
+    Find the orders of each element of the additive group $\intmod[12]$.
+\end{exercise}
+
+\begin{sol}
+    For each $\bar x \in \intmod[12]$, add it to itself until we arrive at $\bar 0$. $|\bar 0| = 1$, and $\bar 1 = 12$ since $12 \cdot \bar 1 = \bar{12} = \bar 0$. In particular, we have:
+    \[\begin{array}{c|c|c|c|c|c|c|c|c|c|c|c|c}
+        \bar x & \bar 0 & \bar 1 & \bar 2 & \bar 3 & \bar 4 & \bar 5 & \bar 6 & \bar 7 & \bar 8 & \bar 9 & \bar{10} & \bar{11} \\
+        \hline
+        |\bar x| & 1 & 12 & 6 & 4 & 3 & 12 & 2 & 12 & 3 & 4 & 6 & 12
+    \end{array}\,. \qh\]
+\end{sol}
+
+\begin{exercise}[1.1.12]
+    Find the orders of the following elements of the multiplicative group $(\z/12\z)^{\times}$: $\bar{1}, \bar{-1}, \bar{5}, \bar{7}, \bar{-7}, \bar{13}$.
+\end{exercise}
+
+\begin{sol}
+    \[\begin{array}{c|c|c|c|c|c|c}
+        \bar x & \bar{1} & \bar{-1} & \bar{5} & \bar{7} & \bar{-7} & \bar{13} \\
+        \hline
+        |\bar x| & 1 & 2 & 2 & 2 & 2 & 1
+    \end{array}\,. \qh\]
+\end{sol}
+
+\begin{exercise}[1.1.13]
+    Find the orders of the following elements of the additive group $\z/36\z$: $\bar{1}, \bar{2}, \bar{6}, \bar{9}, \bar{10}, \bar{12}, \bar{-1}, \bar{-10},\\ \bar{-18}$.
+\end{exercise}
+
+\begin{sol}
+    \[\begin{array}{c|c|c|c|c|c|c|c|c|c}
+            \bar x & \bar 1 & \bar 2 & \bar 6 & \bar 9 & \bar{10} & \bar{12} & \bar{-1} & \bar{-10} & \bar{-18} \\
+            \hline
+            |\bar x| & 36 & 18 & 6 & 4 & 18 & 3 & 36 & 18 & 2
+    \end{array}\,. \qh\]
+\end{sol}
+
+\begin{exercise}[1.1.14]
+    Find the orders of the following elements of the multiplicative group $(\z/36\z)^{\times}$: $\bar{1}, \bar{-1}, \bar{5}, \bar{13}, \bar{-13},\\ \bar{17}$.
+\end{exercise}
+
+\begin{sol}
+    \[\begin{array}{c|c|c|c|c|c|c}
+        \bar x & \bar 1 & \bar{-1} & \bar 5 & \bar{13} & \bar{-13} & \bar{17} \\
+        \hline
+        |\bar x| & 1 & 2 & 6 & 3 & 6 & 2
+    \end{array}\,. \qh\]
+\end{sol}
+
+\begin{exercise}[1.1.15]
+    Prove that $(a_1 a_2 \ldots a_n)^{-1} = a_n^{-1} a_{n-1}^{-1} \ldots a_1^{-1}$ for all $a_1, a_2, \ldots, a_n \in G$.
+\end{exercise}
+
+\begin{sol}
+    We proceed by induction. This holds for $n = 2$ by Proposition 1.1 (iv). Suppose it holds for some $n \in \zp$. Then for $n + 1$, we have
+    \[(a_1 a_2 \ldots a_n a_{n+1})^{-1} = a_{n+1}^{-1} (a_1 a_2 \ldots a_n)^{-1} = a_{n+1}^{-1} a_n^{-1} a_{n-1}^{-1} \ldots a_1^{-1}. \qh\]
+\end{sol}
+
+\begin{exercise}[1.1.16]
+    Let $x$ be an element of $G$. Prove that $x^2 = 1$ if and only if $|x|$ is either $1$ or $2$.
+\end{exercise}
+
+\begin{solitem}
+    \item[\rightimp] Suppose $x^2 = 1$. Then $|x| \leq 2$. Since $|x| \in \zp$, then $|x|$ is either $1$ or $2$.
+    \item[\leftimp] If $|x| = 1$, then $x = 1$ and $x^2 = 1$. If $|x| = 2$, then $x^2 = 1$ by definition. \qh
+\end{solitem}
+
+\begin{exercise}[1.1.17]
+    Let $x$ be an element of $G$. Prove that if $|x| = n$ for some positive integer $n$, then $x^{-1} = x^{n-1}$.
+\end{exercise}
+
+\begin{sol}
+    Note that $x^n = x^{n - 1}x = 1$. Then $x^{n - 1} = x\inv$.
+\end{sol}
+
+\begin{exercise}[1.1.18]
+    Let $x, y$ be elements of $G$. Prove that the following are equivalent:
+
+    (i) $xy = yx$; \quad (ii) $y\inv xy = x$; \quad (iii) $x\inv y\inv xy = 1$.
+\end{exercise}
+
+\begin{sol}
+    $xy = yx \iff y\inv xy = y\inv yx = x \iff x\inv y\inv xy = x\inv x = 1$.
+\end{sol}
+
+\begin{specialexercise}[1.1.19]
+    Let $x \in G$ and let $a, b \in \zp$.
+    \begin{subexercises}
+        \item Prove that $x^{a+b} = x^a x^b$ and $(x^a)^b = x^{ab}$.
+        \item Prove that $(x^a)^{-1} = x^{-a}$.
+        \item Establish part (a) for arbitrary integers $a$ and $b$.
+    \end{subexercises}
+\end{specialexercise}
+
+\begin{solenum}
+    \item There are $a$ instances of $x$ in $x^a$ and $b$ instances of $x$ in $x^b$. Hence, there are $a + b$ instances of $x$ in $x^a x^b$, so that $x^{a+b} = x^a x^b$. There are $a$ instances of $x$ in $x^a$, and there are $b$ instances of $x^a$ in $(x^a)^b$. Hence, there are $ab$ instances of $x$ in $(x^a)^b$, so that $(x^a)^b = x^{ab}$.
+    \item By \exref{1.1.15}, then $(x^a)\inv$ consists of $a$ instances of $x\inv$, so that $(x^a)\inv = x^{-a}$.
+    \item We consider the following cases:
+    \begin{itemize}
+        \item If $a, b \in \zp$, then the result follows from part (a).
+        \item If $a \in \zp$ and $b < 0$ (the case of $a < 0$ and $b \in \zp$ is analogous), suppose $a + b \geq 0$. Then
+        \[x^a = x^{a + b - b} = x^{a + b}x^{-b},\]
+        so that $x^{a + b} = x^a x^b$. If $a + b < 0$, then
+        \[(x^{a + b})\inv = x^{-a - b} = x^{-b} x^{-a} = (x^a x^b)\inv,\]
+        implying that $x^{a + b} = x^a x^b$, since inverses are unique. Moreover,
+        \[(x^a)^b = (x^a)^{-(-b)} = ((x^a)^{-b})\inv = (x^{-ab})\inv = x^{ab}.\]
+        \item If $a < 0$ and $b < 0$, then $a + b < 0$ and
+        \[x^{a + b} = x^{b + a} = (x^{-b - a})\inv = (x^{-b} x^{-a})\inv = (x^{-a})\inv (x^{-b})\inv = x^a x^b.\]
+        Moreover,
+        \[(x^a)^b = ((x^{-a})\inv)^b = ((x^{-a})^b)\inv = (x^{(-a)b})\inv = x^{ab}. \qh\]
+    \end{itemize}
+\end{solenum}
+
+\begin{exercise}[1.1.20]
+    For $x$ an element in $G$, show that $x$ and $x^{-1}$ have the same order.
+\end{exercise}
+
+\begin{sol}
+    Suppose $|x| = n \in \zp$. Then
+    \[(x\inv)^n = (x^n)\inv = 1\inv = 1\]
+    so that $|x\inv| \leq n$ and has finite order. Similarly, suppose $|x\inv| = m \in \zp$. Then
+    \[x^m = ((x\inv)^m)\inv = 1\inv = 1\]
+    so that $|x| \leq m$ and has finite order. Then $n = m$, and $|x| = |x\inv|$. Specifically, $x$ has finite order if and only if $x\inv$ has finite order, hence $x$ has infinite order if and only if $x\inv$ has infinite order.
+\end{sol}
+
+\begin{exercise}[1.1.21]
+    Let $G$ be a finite group and let $x$ be an element of order $n$. Prove that if $n$ is odd, then $x = (x^2)^k$ for some $k \geq 1$.
+\end{exercise}
+
+\begin{sol}
+    Put $n = 2k - 1$ for $k \in \zp$. Then $x^n = x^{2k - 1} = 1$, so that $x^{2k} = x$. Hence, $x = (x^2)^k$.
+\end{sol}
+
+\begin{specialexercise}[1.1.22]
+    If $x$ and $g$ are elements of the group $G$, prove that $|x| = |g^{-1} x g|$. Deduce that $|ab| = |ba|$ for all $a, b \in G$.
+\end{specialexercise}
+
+\begin{sol}
+    We first prove the following lemma.
+    \begin{lemma}{$(g\inv xg)^n = g\inv x^n g$ for all $n \in \zp$.}
+        We proceed by induction, where $n = 1$ is clear. If it holds for $n \in \zp$, then for $n + 1$, we have
+        \[(g\inv xg)^{n + 1} = (g\inv xg)^n (g\inv xg) = (g\inv x^n g)(g\inv xg) = g\inv x^{n + 1} g.\]
+        Hence, the result follows by induction for all $n \in \zp$.
+    \end{lemma}
+    Let $|x| = m \in \zp$. Then
+    \[(g\inv xg)^m = g\inv x^m g = g\inv 1 g = 1,\]
+    so that $|g\inv xg| \leq m$. Similarly, let $|g\inv xg| = n \in \zp$. Then
+    \[x^n = (gg\inv) x^n (gg\inv) = g(g\inv xg)^n g\inv = g 1 g\inv = 1,\]
+    so that $|x| \leq n$. Hence, $m = n$, and $|x| = |g\inv x g|$.
+
+    Let $a, b \in G$. Then $|ab| = |b\inv (ab) b| = |ba|$ by the above result.
+\end{sol}
+
+\begin{exercise}[1.1.23]
+    Suppose $x \in G$ and $|x| = n < \infty$. If $n = st$ for some positive integers $s$ and $t$, prove that $|x^s| = t$.
+\end{exercise}
+
+\begin{sol}
+    Let $|x^s| = r \in \zp$. Then
+    \[(x^s)^t = x^{st} = x^n = 1,\]
+    so that $r \leq t$. Moreover,
+    \[x^{sr} = (x^s)^r = 1\]
+    implies that $|x| = st \leq sr$, hence $t \leq r$. Thus, $|x^s| = r = t$.
+\end{sol}
+
+\begin{exercise}[1.1.24]
+    If $a$ and $b$ are commuting elements of $G$, prove that $(ab)^n = a^n b^n$ for all $n \in \z$. 
+    
+    \hint{Do this by induction for positive $n$ first.}
+\end{exercise}
+
+\begin{sol}
+    The case for $n = 0$ and $n = 1$ is clear. If it holds for some $n \in \zp$, then for $n + 1$, we have
+    \[(ab)^{n + 1} = (ab)^n (ab) = (a^n b^n)(ab) = a^n (b^n a) b = a^n (ab^n) b = a^{n + 1} b^{n + 1}.\]
+    For $n < 0$, then $(ab)^n = ((ab)^{-n})\inv = (b^{-n} a^{-n})\inv = a^n b^n$.
+\end{sol}
+
+\begin{exercise}[1.1.25]
+    Prove that if $x^2 = 1$ for all $x \in G$, then $G$ is Abelian.
+\end{exercise}
+
+\begin{sol}
+    Since $x^2 = 1$, then $x = x\inv$ for all $x \in G$. Let $a, b \in G$. Then
+    \[ab = (ab)\inv = b\inv a\inv = ba. \qh\]
+\end{sol}
+
+\begin{specialexercise}[1.1.26]
+    \label{def:subgroup}
+    Assume $H$ is a nonempty subset of $(G, \star)$ which is closed under the binary operation on $G$ and is closed under inverses, i.e., for all $h, k \in H$, $hk, \, h^{-1} \in H$. Prove that $H$ is a group under the operation $\star$ restricted to $H$ (such a subset $H$ is called a \textbf{subgroup} of $G$).
+\end{specialexercise}
+
+\begin{sol}
+    Let $H \subseteq (G, \star)$ be nonempty and closed under the binary operation on $G$ and inverses. Let $h \in H$. Then $h\inv \in H$, so that $hh\inv = 1 \in H$. Hence, $H$ has an identity. Associativity is inherited from $G$. Hence, $(H, \star|_H)$ is a group.
+\end{sol}
+
+\begin{specialexercise}[1.1.27]
+    \label{def:cyclic subgroup}
+    Prove that if $x$ is an element of the group $G$, then $\{x^n \mid n \in \z \}$ is a \defref{subgroup} of $G$ (called the \textbf{cyclic subgroup} of $G$ generated by $x$).
+\end{specialexercise}
+
+\begin{sol}
+    Let $H$ be the set in question. Then $1 = x^0 \in H$, so that $H$ is nonempty. Let $x^m, x^n \in H$. Then $x^m x^n = x^{m + n} \in H$ and $(x^m)\inv = x^{-m} \in H$. Hence, $H$ is closed under the binary operation on $G$ and inverses. By \exref{1.1.26}, then $H$ is a subgroup of $G$.
+\end{sol}
+
+\begin{exercise}[1.1.28]
+    Let $(A, \star)$ and $(B, \diamond)$ be groups and let $A \times B$ be their direct product (as defined in Example 6). Verify all the group axioms for $A \times B$:
+    \begin{subexercises}
+        \item[(a)] Prove that the associative law holds:
+        $$\text{for all } (a_1, b_1), (a_2, b_2), (a_3, b_3) \in A \times B,
+        [(a_1, b_1)(a_2, b_2)](a_3, b_3) = (a_1, b_1)[(a_2, b_2)(a_3, b_3)]$$
+        \item Prove that $(1, 1)$ is the identity of $A \times B$, and
+        \item Prove that the inverse of $(a, b)$ is $(a^{-1}, b^{-1})$.
+    \end{subexercises}
+\end{exercise}
+
+\begin{solenum}
+    \item Let $(a_1, b_1), (a_2, b_2), (a_3, b_3) \in A \times B$. Then
+    \begin{align*}
+        [(a_1, b_1)(a_2, b_2)](a_3, b_3) & = (a_1a_2, b_1b_2)(a_3, b_3) \\
+        & = ((a_1a_2)a_3, (b_1b_2)b_3) \\
+        & = (a_1(a_2a_3), b_1(b_2b_3)) \\
+        & = (a_1,b_1)(a_2a_3, b_2b_3) \\
+        & = (a_1, b_1)[(a_2, b_2)(a_3, b_3)]
+    \end{align*}
+    \item For $a \in A, b \in B$, we have $(a, b)(1, 1) = (a \star 1, b \diamond 1) = (a, b)$.
+    \item $(a, b)(a\inv, b\inv) = (a \star a\inv, b \diamond b\inv) = (1, 1)$.
+\end{solenum}
+
+\begin{exercise}[1.1.29]
+    Prove that $A \times B$ is an Abelian group if and only if both $A$ and $B$ are Abelian.
+\end{exercise}
+
+\begin{sol}
+    Let $a, a' \in A$ and $b, b' \in B$. Suppose $A \times B$ is Abelian. Then
+    \[(aa', bb') = (a, b)(a', b') = (a', b')(a, b) = (a'a, b'b)\]
+    so that $A$ and $B$ are Abelian. If $A$ and $B$ are both Abelian, then
+    \[(a, b)(a', b) = (aa', bb') = (a'a, b'b) = (a', b')(a, b)\]
+    hence $A \times B$ is Abelian.
+\end{sol}
+
+\begin{exercise}[1.1.30]
+    Prove that the elements $(a, 1)$ and $(1, b)$ of $A \times B$ commute and deduce that the order of $(a, b)$ is the least common multiple of $|a|$ and $|b|$.
+\end{exercise}
+
+\begin{sol}
+    Let $a \in A$ and $b \in B$. Then
+    \[(a, 1)(1, b) = (a \cdot 1, 1 \cdot b) = (a, b) = (1 \cdot a, b \cdot 1) = (1, b)(a, 1)\]
+    so that $(a, 1)$ and $(1, b)$ commute. Let $\ell = \lcm(|a|, |b|)$. Then
+    \[(a, b)^{\ell} = (a^{\ell}, b^{\ell}) = (1, 1)\]
+    so that $|(a, b)| \leq \ell$. Moreover, if $(a, b)^k = (1, 1)$ for some $k \in \zp$, then $a^k = 1$ and $b^k = 1$ so that both $|a|$ and $|b|$ divide $k$. Hence, $\ell$ divides $k$ so that $\ell \leq k$. Thus, $|(a, b)| = \ell$.
+\end{sol}
+
+\begin{exercise}[1.1.31]
+    Prove that any finite group $G$ of even order contains an element of order 2. 
+    
+    \hint{Let $t(G)$ be the set $\{g \in G \mid g \neq g^{-1}\}$. Show that $t(G)$ has an even number of elements and every non-identity element of $G - t(G)$ has order 2.}
+\end{exercise}
+
+\begin{sol}
+    Let $g \in G$ with $g \neq g\inv$, so $g \in t(G)$. Since $(g\inv)\inv = g$, then $g\inv \in t(G)$. Then elements of $t(G)$ come in pairs, so that $t(G)$ has even order. Since $G$ has even order, then $G - t(G)$ has even order. Moreover, $1 \not\in t(G)$ since $1\inv = 1$, hence $G$ contains a non-identity element $h$. Then $h = h\inv$, so that $h^2 = 1$ and $|h| = 2$.
+\end{sol}
+
+\begin{exercise}[1.1.32]
+    If $x$ is an element of finite order $n$ in $G$, prove that the elements $1, x, x^2, \dots, x^{n-1}$ are all distinct. Deduce that $|x| \leq |G|$.
+\end{exercise}
+
+\begin{sol}
+    Let $a, b \in \zp$ be such that $0 \leq a < b < n$. Suppose $x^a = x^b$. Then
+    \[1 = x^b x^{-a} = x^{b - a}\]
+    so that $|x| \leq b - a < n$, which is a contradiction. Hence, the elements $1, x, x^2, \dots, x^{n-1}$ are all distinct. Since these elements are all in $G$, then $|x| = n \leq |G|$.
+\end{sol}
+
+\begin{exercise}[1.1.33]
+    Let $x$ be an element of finite order $n$ in $G$.
+    \begin{subexercises}
+        \item Prove that if $n$ is odd then $x^i \neq x^{-i}$ for all $i = 1, 2, \dots, n-1$.
+        \item Prove that if $n = 2k$ and $1 \leq i < n$ then $x^i = x^{-i}$ if and only if $i = k$.
+    \end{subexercises}
+\end{exercise}
+
+\begin{solenum}
+    \item Note that $x^{n - i} = x^{-i}$. If $i \neq n - i$, then $x^i \neq x^{n - i}$ by \exref{1.1.32}, so $x^i \neq x^{-i}$. If $i = n - i$, then $2i = n$, which is impossible since $n$ is odd. Hence, $x^i \neq x^{-i}$ for all $i = 1, 2, \dots, n-1$.
+    \item Part (a) shows that $x^i \neq x^{-i}$ for $i \neq k$. If $i = k$, the result follows. 
+\end{solenum}
+
+\begin{exercise}[1.1.34]
+    If $x$ is an element of infinite order in $G$, prove that the elements $x^n, n \in \z$ are all distinct.
+\end{exercise}
+
+\begin{sol}
+    If $x^a = x^b$ for $a, b \in \z$ such that $a < b$, then $x^{b - a} = 1$, contradicting that $x$ has infinite order. Hence, the elements $x^n, n \in \z$ are all distinct.
+\end{sol}
+
+\begin{exercise}[1.1.35]
+    If $x$ is an element of finite order $n$ in $G$, use the Division Algorithm to show that any integral power of $x$ equals one of the elements in the set $\{1, x, x^2, \dots, x^{n-1}\}$.
+    
+    \remark{These are the distinct elements of the cyclic subgroup of $G$ generated by $x$.}
+\end{exercise}
+
+\begin{sol}
+    Let $\abs x = n \in \zp$ and let $m \in \z$. By the Division Algorithm, there exist unique integers $q$ and $r$ such that
+    \[m = qn + r\]
+    where $0 \leq r < n$. Then
+    \[x^m = x^{qn + r} = x^{qn} x^r = (x^n)^q x^r = 1^q x^r = x^r\]
+    so that any integral power of $x$ equals one of the elements in the set $\{1, x, x^2, \dots, x^{n-1}\}$.
+\end{sol}
+
+\begin{specialexercise}[1.1.36]
+    Assume $G = \{1, a, b, c\}$ is a group of order 4 with identity 1. Assume also that $G$ has no elements of order 4 (so by \exref{1.1.32}, every element has order $\leq 3$). Use the cancellation laws to show that there is a unique group table for $G$. Deduce that $G$ is Abelian.
+\end{specialexercise}
+
+\begin{sol}
+    Since $G$ has even order, it has an element of order 2 by \exref{1.1.31}. Without loss of generality, let $a$ be that element so that $a^2 = 1$. Since there are no elements of order 4, then the remaining elements $b$ and $c$ may have order 2 or 3.
+
+    We now observe that $ab \neq 1$ since that would imply that $b = a\inv = a$ contradicting that $a$ and $b$ are distinct elements. Similarly, $ab \neq a$ since that would imply that $b = 1$, and $ab \neq b$ since that would imply that $a = 1$. Thus, $ab = ba = c$. Similarly, $ac \neq 1, a, c$ so that $ac = ca = b$, hence $b^2 = (ca)(ac) = c^2$.
+
+    We now consider the possible orders of $b$ and $c$. If $b^2 \neq 1$, then $\abs b = 3$. But then $b^3 = b b^2 = b c = a$, contradicting that $\abs b = 3$. Thus, $b^2 = 1$. Similarly, $c^2 = 1$. The group table for $G$ is therefore as follows:
+    \[
+    \begin{array}{c|cccc}
+        \star & 1 & a & b & c \\
+        \hline 
+        1 & 1 & a & b & c \\
+        a & a & 1 & c & b \\
+        b & b & c & 1 & a \\
+        c & c & b & a & 1
+    \end{array}\]
+    from which we may deduce that $G$ is Abelian.
+\end{sol}
