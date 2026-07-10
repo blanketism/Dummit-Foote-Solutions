@@ -5,6 +5,7 @@
 \definecolor{exerciseref}{HTML}{0DA327}
 
 \newcommand{\exref}[1]{\hypersetup{linkcolor=exerciseref}\autoref{ex:#1}}
+\newcommand{\defref}[1]{\hypersetup{linkcolor=red}\hyperref[def:#1]{#1}}
 
 \newcommand{\hint}[1]{\textcolor{WildStrawberry}{\textsc{Hint.}} \emph{#1}}
 \newcommand{\remark}[1]{\textcolor{Brown}{\textsc{Remark.}} \emph{#1}}
@@ -46,7 +47,19 @@
     drop fuzzy shadow = blue!20,%
     colback=RoyalBlue!8, colframe=CadetBlue!60,%
     colbacktitle=BlueViolet!15, coltitle=MidnightBlue,%
-    boxed title style ={colframe=NavyBlue!70}]{}{#1}}{\end{exer}}
+    boxed title style ={colframe=NavyBlue!70}]{}{#1}}
+{\end{exer}}
+
+\newtcolorbox{lemma}[1]{
+    coltitle=black!50,
+    title={\textbf{\emph{Lemma:}}~{#1}},
+    blanker,
+    borderline west={1.5pt}{0pt}{black!50},
+    left=8pt, right=4pt, top=0pt, bottom=0pt,
+    before skip=10pt, after skip=10pt,
+    before upper={\emph{Proof.}\squad\allowbreak},
+    after upper={\hfill\textcolor{black!50}{\qedsymbol}}
+}
 
 \setlist{topsep = 0pt, itemsep = 0pt, parsep = 0pt, partopsep = 0pt, itemindent = 0pt, listparindent = \parindent}
 
@@ -66,7 +79,3 @@
 \begin{proof}[{\textbf{Solution}}]%
 \leavevmode\begin{itemize}%
 }{\qedhere\end{itemize}\end{proof}}
-
-\newenvironment{lemma}{%
-\begin{proof}[Lemma Proof]\renewcommand{\qedsymbol}{$\square$}%
-}{\end{proof}}
