@@ -9,7 +9,7 @@
 
 \newcommand{\hint}[1]{\textcolor{WildStrawberry}{\textsc{Hint.}} \emph{#1}}
 \newcommand{\remark}[1]{\textcolor{Brown}{\textsc{Remark.}} \emph{#1}}
-\newcommand{\authornote}[1]{\textcolor{CarnationPink}{\textsc{Author's Note.}} \emph{#1}}
+\newcommand{\authornote}[1]{\textcolor{CarnationPink}{\textsc{Manual Note.}} \emph{#1}}
 
 \counterwithin{equation}{section}
 
@@ -26,17 +26,19 @@
     attach boxed title to top left = {yshift=-3mm, xshift=5mm},%
     fonttitle=\bfseries,%
     top = 10pt, bottom = 8pt,%
+    before skip=0pt, after skip=0pt,%
     boxrule=1pt,%
     arc=3mm,%
-    colback=Green!7!White, colframe=ForestGreen!40,%
+    colback=Green!7!White, colframe=ForestGreen!30,%
     colbacktitle=OliveGreen!14, coltitle=exercisetitle,%
     drop fuzzy shadow = ForestGreen!70,%
     boxed title style={%
         size=small,%
+        boxrule=1.2pt,%
         left=0.3ex, right=0.3ex, top=0.1ex, bottom=0.2ex,%
-        colframe=ForestGreen!60,%
+        colframe=ForestGreen!50,%
         arc = 1.5mm%
-    },%
+    }%
 }
 {ex}
 
@@ -50,15 +52,23 @@
     boxed title style ={colframe=NavyBlue!70}]{}{#1}}
 {\end{exer}}
 
-\newtcolorbox{lemma}[1]{
-    coltitle=black!50,
-    title={\textbf{\emph{Lemma:}}~{#1}},
-    blanker,
-    borderline west={1.5pt}{0pt}{black!50},
-    left=8pt, right=4pt, top=0pt, bottom=0pt,
-    before skip=10pt, after skip=10pt,
-    before upper={\emph{Proof.}\squad\allowbreak},
-    after upper={\hfill\textcolor{black!50}{\qedsymbol}}
+\newtcolorbox{lemmabox}{%
+    enhanced, sharp corners,%
+    boxrule=0pt, frame hidden,%
+    colback = pagecolor!72,%
+    borderline west={1.5pt}{0pt}{black!62},%
+    left=7.5pt, right=5.5pt, top=4pt, bottom=4pt,%
+    before skip=10pt, after skip=10pt%
+}
+
+\newenvironment{lemma}[1]{%
+    \begin{lemmabox}{\textcolor{black!62}{\textbf{\emph{Lemma.}}~{#1}}}%
+        \renewcommand{\qedsymbol}{\textcolor{black!62}{$\blacksquare$}}%
+        \vspace{-1ex}
+        \begin{proof}%
+}{%
+    \end{proof}%
+\end{lemmabox}%
 }
 
 \setlist{topsep = 0pt, itemsep = 0pt, parsep = 0pt, partopsep = 0pt, itemindent = 0pt, listparindent = \parindent}
