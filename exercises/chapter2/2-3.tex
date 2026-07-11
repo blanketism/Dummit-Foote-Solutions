@@ -1,0 +1,336 @@
+\subsection{Cyclic Groups and Cyclic Subgroups}
+
+\begin{exercise} [2.3.1]
+    Find all subgroups of $Z_{45} = \gen x$, giving a generator for each. Describe the containments between these subgroups.
+\end{exercise}
+
+\begin{sol}
+    Recall that the containment relation is the following: $\gen{x^a} \leq \gen{x^b} \iff (b, 45) \mid (a, 45)$.
+    \begin{align*}
+        Z_{45} = \gen x & > \gen{x^3}, \gen{x^5}, \gen {x^9}, \gen{x^{15}}, 1 \\
+        \gen{x^3} & > \gen{x^9}, \gen{x^{15}} \\
+        \gen{x^5} & > \gen{x^{15}} \\
+        \gen{x^9} & > 1 \\
+        \gen{x^{15}} & > 1 \\
+        1 = \gen{x^0} & \qh
+    \end{align*}
+\end{sol}
+
+\begin{exercise} [2.3.2]
+    If $x$ is an element of the finite group $G$ and $\abs x = \abs G$, prove that $G = \gen x$. Give an explicit example to show that this result need not be true if $G$ is an infinite group.
+\end{exercise}
+
+\begin{sol}
+    For some $x \in G$ where $\abs x = \abs G = n$, then Proposition 2.2 says that $1, x, x^2, \ldots, x^{n - 1}$ are all distinct elements of $G$. Since $G$ has $n$ elements only, it follows that these are the elements of $G$, hence $G = \gen x$. Moreover, this is not true if $G$ is infinite, since $\abs{\z} = \abs 2 = \infty$, but $\gen 2$ generates only the even integers.
+\end{sol}
+
+\begin{exercise}[2.3.3]
+    Find all generators for $\intmod[48]$.
+\end{exercise}
+
+\begin{sol}
+    Using Proposition 2.5 and $\abs{\intmod[48]} = 48$, then $\gen{\bar a}$ generates $\intmod[48]$ when $(a, 48) = 1$. We have the integers
+    \[a \in \set{1, 5, 7, 11, 13, 17, 19, 23, 25, 29, 31, 35, 37, 41, 43, 47} \qh\]
+\end{sol}
+
+\begin{exercise}[2.3.4]
+    Find all generators for $\intmod[202]$.
+\end{exercise}
+
+\begin{sol}
+    Note that $202 = 2 \cdot 101$, which are both prime numbers. Then its generators is every number between 1 and 202, except 101 and even numbers.
+\end{sol}
+
+\begin{exercise}[2.3.5]
+    Find the number of generators for $\intmod[49000]$.
+\end{exercise}
+
+\begin{sol}
+    Let $\phi$ denote the Euler-$\phi$ function. Then
+    \begin{align*}
+        \phi(49000) & = \phi(2^3)\phi(5^3)\phi(7^2) \\
+        & = 2^2(2 - 1)5^2(5 - 1)7(7 - 1) \\
+        & = 16800 \qh
+    \end{align*}
+\end{sol}
+
+\begin{exercise}[2.3.6]
+    In $\intmod[48]$ write out all elements of $\gen{\bar a}$ for every $\bar a$. Find all inclusions between subgroups in $\intmod[48]$.
+\end{exercise}
+
+\begin{sol}
+    We know $\gen{\bar 1} = \intmod[48] = \set{\bar 0, \bar 1, \bar 2, \ldots, \bar{46}, \bar{47}}$. The proper subgroups are:
+    \begin{align*}
+        \bar 2 & = \set{\bar 0, \bar 2, \ldots, \bar{44}, \bar{46}} & \bar 6 & = \set{\bar 0, \bar 6, \ldots, \bar{36}, \bar{42}} & \bar{16} & = \set{\bar 0, \bar{16}, \bar{32}} \\
+        \bar 3 & = \set{\bar 0, \bar 3, \ldots, \bar{42}, \bar{45}} & \bar 8 & = \set{\bar 0, \bar 8, \bar{16}, \bar{24}, \bar{32}, \bar{40}} & \bar{24} & = \set{\bar 0, \bar{24}} \\
+        \bar 4 & = \set{\bar 0, \bar 4, \ldots, \bar{40}, \bar{44}} & \bar{12} & = \set{\bar 0, \bar{12}, \bar{24}, \bar{36}} & \bar{0} & = \set{\bar 0}
+    \end{align*}
+    Moreover, the subgroup inclusions are clear from applying the fact that $\gen{\bar a} \leq \gen{\bar b}$ if and only if $b \mid a$.
+\end{sol}
+
+\begin{exercise}[2.3.7]
+    Let $Z_{48} = \gen x$ and use the isomorphism $\intmod[48] \cong Z_{48}$ given by $\bar 1 \mapsto x$ to list all subgroups of $Z_{48}$ as computed in the preceding exercise.
+\end{exercise}
+
+\begin{sol}
+    The subgroups of $Z_{48}$ are $\gen x, \gen{x^2}, \gen {x^3}, \gen{x^4}, \gen{x^6}, \gen{x^8}, \gen{x^{12}}, \gen{x^{16}}, \gen{x^{24}}$, and 1.
+\end{sol}
+
+\begin{exercise}[2.3.8]
+    Let $Z_{48} = \gen x$. For which integers $a$ does the map $\phi_a$ defined by $\phi_a : \bar 1 \mapsto x^a$ extend to an isomorphism from $\intmod[48]$ to $Z_{48}$?
+\end{exercise}
+
+\begin{sol}
+    We know that $\bar 1$ generates $\intmod[48]$. By Theorem 2.4, $\phi_a$ extends to an isomorphism if and only if $x^a$ generates $Z_{48}$. By Proposition 2.5, this occurs if and only if $(a, 48) = 1$. Hence, the integers $a$ such that $\phi_a$ extends to an isomorphism are the $a$ from \exref{2.3.3}.
+\end{sol}
+
+
+\begin{exercise}[2.3.9]
+    Let $Z_{36} = \gen x$. For which integers $a$ does the map $\psi_a$ defined by $\psi_a : \bar 1 \mapsto x^a$ extend to a \emph{well-defined homomorphism} from $\intmod[48]$ into $Z_{36}$. Can $\psi_a$ ever be a surjective homomorphism?
+\end{exercise}
+
+\begin{sol}
+    Suppose $\bar r, \bar s \in \intmod[48]$ such that $\bar r = \bar s$. Then $r \equiv s \bmod 48$. If $\psi_a$ is well-defined, then
+    \[\psi_a(\bar r) = \psi_a(r \cdot \bar 1) = x^{a r} = x^{a s} = \psi_a(s \cdot \bar 1) = \psi_a(\bar s)\]
+    so that $x^{a (r - s)} = 1$. By $\abs x = 36, $ we know $36 \mid a(r - s)$. Since $48 \mid (r -s)$, then there exists $k$ such that $36 \mid 48ak$, or $4 \mid 3ak$. Since $k$ is arbitrary, this must hold for all integers $k$. Hence, $3 \mid a$.
+
+    $\psi_a$ can never be surjective, since that would imply $(a, 36) = 1$.
+\end{sol}
+
+\begin{exercise}[2.3.10]
+    What is the order of $\bar{30}$ in $\intmod[54]$? Write out all the elements and their orders in $\gen{\bar{30}}$.
+\end{exercise}
+
+\begin{sol}
+    By Proposition 2.5, we have $\abs{\bar 1} = 54$. Since $(54, 30) = 6$, then $|\bar{30}| = 9$. Then $\bar{30} = \bar 6$, hence
+    \[\gen{\bar{30}} = \set{\bar 0, \bar 6, \bar{12}, \bar{18}, \bar{24}, \bar{30}, \bar{36}, \bar{42}, \bar{48}}.\]
+    Moreover, the orders of each $\bar x \in \bar{30}$ is just $54/(54, x)$.
+\end{sol}
+
+\begin{exercise}[2.3.11]
+    Find all cyclic subgroups of $D_8$. Find a proper subgroup of $D_8$ which is not cyclic.
+\end{exercise}
+
+\begin{sol}
+    The cyclic subgroups of $D_8$ are
+    \begin{align*}
+        \gen 1 & = \set 1 \\
+        \gen r = \gen{r^3} & = \set{1, r, r^2, r^3} \\
+        \gen{r^2} & = \set{1, r^2} \\
+        \gen{sr^k} & = \set{1, sr^k}
+    \end{align*}
+    Moreover, a proper subgroup that is not cyclic is $\gen{r^2, s} = \{1, r^2, s, sr^2\}$.
+\end{sol}
+
+
+\begin{exercise}[2.3.12]
+    Prove that the following groups are \emph{not} cyclic:
+    \begin{subexercises}
+        \item $Z_2 \times Z_2$ \quad (b) $Z_2 \times \z$ \quad (c) $\z \times \z$
+    \end{subexercises}
+\end{exercise}
+
+\begin{solenum}
+    \item Put $Z_2 = \gen x$. Then $Z_2 \times Z_2 = \set{(1, 1), (1, x), (x, 1), (x, x)}$.
+    No element generates all four elements, hence $Z_2 \times Z_2$ is not cyclic.
+    \item If $(a, b)$ generates $Z_2 \times \z$, then it must be one of the forms $(1, \pm 1)$ or $(x, \pm 1)$, since $\gen{\pm 1} = \z$. But $(1, \pm 1)$ generates elements whose first component is only 1. If we consider $(x, \pm 1)$, then this also doesn't generate $Z_2 \times \z$ since $(1, 1) \not\in \gen{(x, \pm 1)}$.
+    \item The only candidates for generators of $\z \times \z$ is $(\pm 1, \pm 1)$. But any subgroup generated by $(\pm 1, \pm 1)$ contain elements that differ only in sign as $(x, y) \not\in \gen{(\pm 1, \pm 1)}$ when $\abs x \neq \abs y$.
+\end{solenum}
+
+\begin{exercise}[2.3.13]
+    Prove that the following pairs of groups are \emph{not} isomorphic:
+    \begin{subexercises}
+        \item $\z \times Z_2$ and $\z$ \quad (b) $\q \times Z_2$ and $\q$.
+    \end{subexercises}
+\end{exercise}
+
+\begin{solenum}
+    \item $(0, x) \in \z \times Z_2$ has order 2, but no element in $\z$ has order 2.
+    \item Same reason as above. 
+\end{solenum}
+
+\begin{exercise}[2.3.14]
+    Let $\sigma = (1\ 2\ 3\ 4\ 5\ 6\ 7\ 8\ 9\ 10\ 11\ 12)$. For each of the following integers $a$ compute $\sigma^a$: 
+    \\ $a = 13, 65, 626, 1195, -6, -81, -570,$ and $-1211$.
+\end{exercise}
+
+\begin{sol}
+    Refer to \exref{1.3.9} to see the distinct powers of $\sigma$. We may use the division algorithm to see that each $a = 12q + r$ for integers $q$ and $r$ such that $0 \leq r < 12$. Then $\sigma^a = \sigma^r$.
+    \begin{align*}
+        \sigma^{13} & = \sigma^{12 + 1} & \sigma^{-6} = \sigma^{-1(12) + 6} \\
+        \sigma^{65} & = \sigma^{5(12) + 5} & \sigma^{-81} = \sigma^{-7(12) + 3} \\
+        \sigma^{626} & = \sigma^{52(12) + 2} & \sigma^{-570} = \sigma^{-48(12) + 6} \\
+        \sigma^{1195} & = \sigma^{99(12) + 7} & \sigma^{-1211} = \sigma^{-101(12) + 1} \qh
+    \end{align*}
+\end{sol}
+
+
+\begin{exercise}[2.3.15]
+    Prove that $\q \times \q$ is not cyclic.
+\end{exercise}
+
+\begin{sol}
+    If it were cyclic, then all subgroups are also cyclic, by Theorem 2.7. But $\z \times \z$ is not cyclic.
+\end{sol}
+
+\begin{exercise}[2.3.16]
+    Assume $\abs x = n$ and $\abs y = m$. Suppose that $x$ and $y$ \emph{commute}: $xy = yx$. Prove that $\abs{xy}$ divides the least common multiple of $m$ and $n$. Need this be true of $x$ and $y$ do \emph{not} commute? Give an example of commuting elements $x$ and $y$ such that the order of $xy$ is not equal to the least common multiple of $\abs x$ and $\abs y$.
+\end{exercise}
+
+\begin{sol}
+    Let $\ell$ be the least common multiple of $m$ and $n$. Then there exist $a, b \in \z$ such that $\ell = am = bn$. Then
+    \[(xy)^\ell = x^\ell y^\ell = x^{bn}y^{am} = 1 \cdot 1 = 1\]
+    so that by Proposition 2.3, then $|xy|$ divides $\ell$. Moreover, this is not true if $x$ and $y$ do not commute. If we consider $r, s \in D_8$, then $\abs r = 4$ and $\abs s = 2$, but $\abs{rs} = 2$ which 4 does not divide. Moreover, consider $r^2, s \in D_8$. Then $\abs{r^2} = 2$ and $\abs s = 2$, but $\abs{r^2s} = 4 \neq \lcm(2, 2)$.
+\end{sol}
+
+\begin{exercise}[2.3.17]
+    Find a presentation for $Z_n$ with one generator.
+\end{exercise}
+
+\begin{sol}
+    $Z_n = \gen{x \mid x^n = 1}$.
+\end{sol}
+
+\begin{exercise}[2.3.18]
+    Show that if $H$ is any group and $h$ is an element of $H$ with $h^n = 1$, then there is a unique homomorphism from $Z_n = \gen x \to H$ such that $x \mapsto h$.
+\end{exercise}
+
+\begin{sol}
+    Define the map $\phi : x^k \mapsto h^k$ so that $\phi(x) = h$. Suppose $x^a = x^b$ for some $a, b \in \z$. Then $n \mid (a - b)$, or $a - b = nk$ for some $k \in \z$. It follows that
+    \[\phi(x^a) = h^a = h^{b + nk} = h^b (h^n)^k = h^b \cdot 1 = h^b = \phi(x^b)\]
+    so that $\phi$ is well-defined. Moreover,
+    \[\phi(x^{a + b}) = h^{a + b} = h^a h^b = \phi(x^a) \phi(x^b)\]
+    so that $\phi$ is a homomorphism. Lastly, if $\psi : Z_n \to H$ is another homomorphism such that $\psi(x) = h$, it must satisfy $\psi(x^k) = \psi(x)^k = h^k$. This shows that $\psi = \phi$.
+\end{sol}
+
+\begin{exercise}[2.3.19]
+    Show that if $H$ is any group and $h$ is an element of $H$, then there is a unique homomorphism from $\z$ to $H$ such that $1 \mapsto h$.
+\end{exercise}
+
+\begin{sol}
+    Define the map $\phi : n \mapsto h^n$ so that $\phi(1) = h$. The homomorphism and uniqueness follow similarly to \exref{2.3.18}.
+\end{sol}
+
+\begin{exercise}[2.3.20]
+    Let $p$ be a prime and let $n$ be a positive integer. Show that if $x$ is an element of the group $G$ such that $x^{p^n} = 1$, then $\abs x = p^m$ for some $m \leq n$.
+\end{exercise}
+
+\begin{sol}
+    If $x^{p^n} = 1$, then Proposition 2.3 says that $|x|$ divides $p^n$. Since $p$ is prime, then $|x|$ must also be a power of $p$ that is at most $n$.
+\end{sol}
+
+\begin{specialexercise}[2.3.21]
+    Let $p$ be an odd prime and let $n$ be a positive integer. Use the Binomial Theorem to show that $(1 + p)^{p^{n - 1}} \equiv 1 \bmod p^n$ but $(1 + p)^{p^{n - 2}} \not\equiv 1 \bmod p^n$. Deduce that $1 + p$ is an element of order $p^{n - 1}$ in the multiplicative group $\units[p^n]$.
+\end{specialexercise}
+
+\begin{sol}
+    By the Binomial Theorem, then
+    \[(1 + p)^{p^{n - 1}} = \sum_{k = 0}^{p^{n - 1}} \binom{p^{n - 1}}k p^k = 1 + p^n + \sum_{k = 2}^{p^{n - 1} - 2} \binom{p^{n - 1}}k p^k.\]
+    Observe that for $k \geq 2$, the binomial coefficient is
+    \[\binom{p^{n - 1}}{k} = \frac{p^{n - 1}(p^{n - 1} - 1) \cdots (p^{n - 1} - k + 1)}{k!}\]
+    \begin{lemma}{$k!$ contains at most $p^{k - 1}$ as a factor.}
+        Using the formula from \exref{0.2.8}, we obtain
+        \[\sum_{i = 1}^{\infty} \floor*{\frac{k}{p^i}} \leq \sum_{i = 1}^\infty \frac{k}{p^i} = k \cdot \frac{1/p}{1 - 1/p} = \frac{k}{p - 1} \leq \frac k2 \leq k - 1. \qh\]
+    \end{lemma}
+    Then the numerator contains at least $p^{n - 1}$ as a factor, so that the entire term contains at least $p^{n - 1 - (k - 1)} = p^{n - k}$ as a factor. Since this is multiplied by $p^k$ in the summation, then each term for $k \geq 2$ contains at least $p^n$ as a factor, so that $(1 + p)^{p^{n - 1}} \equiv 1 \bmod p^n$.
+
+    Now consider $(1 + p)^{p^{n - 2}}$. Using the binomial theorem, this expands to $1 + p^{n - 1} +$ terms that are divisible by $p^n$. This is clearly not 1 mod $p^n$, so the order of $1 + p$ in $\units[p^n]$ is $p^{n - 1}$.
+\end{sol}
+
+\begin{specialexercise}[2.3.22]
+    Let $n$ be an integer $\geq 3$. Use the Binomial Theorem to show that $(1 + 2^2)^{2^{n - 2}} \equiv 1 \bmod 2^n$ but $(1 + 2^2)^{2^{n - 3}} \not\equiv 1 \bmod 2^n$. Deduce that 5 is an element of order $2^{n - 2}$ in the multiplicative group $\units[2^n]$.
+\end{specialexercise}
+
+\begin{sol}
+    The process is similar to the previous exercise, where we use the Binomial Theorem to expand $(1 + 2^2)^{2^{n - 2}}$ and see that $k = 0$ and $k = 1$ terms are $1$ and $2^n$ respectively. For $k \geq 2$, we have the summand as
+    \[\binom{2^{n - 2}}k 2^{2k} = \frac{2^{n - 2}(2^{n - 2} - 1) \cdots (2^{n - 2} - k + 1)}{k!} 2^{2k}\]
+    Using a similar formulation as above, we know that
+    \[\sum_{i = 1}^n \floor*{\frac{k}{2^i}} < \sum_{i = 1}^\infty \floor*{\frac{k}{2^i}} \leq \sum_{i = 1}^\infty \frac{k}{2^i} = k\]
+    Since infinity is never achieved, then we may take this as strict, hence the greatest power of 2 is at most $k - 1$. With $2^{2k}$, the entire term contains at least $2^{n - 1 - (k - 1) + 2k} = 2^{n + k}$ as a factor. Since $k \geq 2$, then $n + k \geq n + 2 > n$, so that each term for $k \geq 2$ contains at least $2^n$ as a factor. Hence, $(1 + 2^2)^{2^{n - 2}} \equiv 1 \bmod 2^n$ as desired. Moreover, considering $(1 + 2^2)^{2^{n - 3}}$, the $k = 1$ term is $2^{n - 1}$ which is not divisible by $2^n$. Hence, $(1 + 2^2)^{2^{n - 3}} \not\equiv 1 \bmod 2^n$. Since the only integers that divide $2^n$ are $1, 2, 2^2, \ldots, 2^n$, and the first power that results in $1 \bmod 2^n$ is $2^{n - 2}$, it follows that the order of $5$ in $\units[2^n]$ is $2^{n - 2}$.
+\end{sol}
+
+\begin{exercise}[2.3.23]
+    Show that $\units[2^n]$ is not cyclic for any $n \ge 3$.
+    
+    \hint{Find two distinct subgroups of order 2.}
+\end{exercise}
+
+\begin{sol}
+    By Theorem 2.7, we must have one subgroup of order 2 in $\units[2^n]$ if it were cyclic. However,
+    \[(2^n - 1)^2 = (-1)^2 \equiv 1 \bmod 2^n, \quad \text{and} \quad (2^{n - 1} + 1)^2 = 2^{2n - 2} + 2^n + 1 \equiv 1 \bmod 2^n.\]
+    Since $n \geq 3$, then $2^n - 1 \neq 2^{n - 1} + 1$ but both have order 2 in $\units[2^n]$. Hence, it cannot be cyclic.
+\end{sol}
+
+\begin{exercise}[2.3.24]
+    Let $G$ be a finite group and let $x \in G$.
+    \begin{subexercises}
+        \item Prove that if $g \in N_G(\gen x)$ then $gxg\inv = x^a$ for some $a \in \z$.
+        \item Prove conversely that if $gxg\inv = x^a$ for some $a \in \z$ then $g \in N_G(\gen x)$.
+        
+        \hint{Show first that $gx^kg\inv = (gxg\inv)^k = x^{ak}$ for any integer $k$ so that $g\gen xg\inv \leq \gen x$. If $x$ has order $n$, show that the elements $gx^ig\inv, i = 0, 1, \ldots, n - 1$ are distinct, so that $\abs{g \gen xg\inv} = \abs{\gen x} = n$ and conclude that $g\gen xg\inv = \gen x$.}
+    \end{subexercises}
+    \remark{Note that this cuts down some work in commuting normalizers of cyclic subgroups since one does not have to check $ghg\inv \in \gen x$ for every $h \in \gen x$.}
+\end{exercise}
+
+\begin{solenum}
+    \item If $g \in N_G(\gen x)$, then $g \gen x g\inv = \gen x$. In particular, $gxg\inv \in \gen x$, so there exists some $a \in \z$ such that $gxg\inv = x^a$.
+    \item Suppose $gxg\inv = x^a$ for some $a \in \z$. We first show that $gx^kg\inv = (gxg\inv)^k$ by induction. For $k = 1$, the result is trivial. Suppose it holds for some $k \geq 1$. Then
+    \[gx^{k + 1}g\inv = gx^kg\inv gxg\inv = (gxg\inv)^k (gxg\inv) = (gxg\inv)^{k + 1}\]
+    so that the result holds for all positive integers $k$. For negative integers, observe that $(gxg\inv)\inv = gx\inv g\inv$. Using the above result for all positive integers, we may extend it to negative integers as well.
+
+    Now, for any integer $k$, we have
+    \[gx^kg\inv = (gxg\inv)^k = (x^a)^k = x^{ak}\]
+    so that $g \gen x g\inv \leq \gen x$. Since conjugation is an isomorphism, it is trivial to see that $\abs x = \abs{gxg\inv}$. If $\abs x = n$, then the elements $gx^ig\inv$ for $i = 0, 1, \ldots, n - 1$ are distinct since if $gx^ig\inv = gx^jg\inv$ for some $0 \leq i < j \leq n - 1$, then $x^i = x^j$ which contradicts the order of $x$. Hence, $\abs{g \gen x g\inv} = \abs{\gen x} = n$, so that $g \gen x g\inv = \gen x$. Therefore, $g \in N_G(\gen x)$.
+\end{solenum}
+
+\begin{exercise}[2.3.25]
+    Let $G$ be a cyclic group of order $n$ and let $k$ be an integer relatively prime to $n$. Prove that the map $x \mapsto x^k$ is surjective. Use Lagrange's Theorem to prove that the same is true for any finite group of order $n$. (For such $k$ each element has a $k$th root in $G$. It follows from Cauchy's Theorem in Section 3.2 that if $k$ is not relatively prime to the order of $G$ then the map $x \mapsto x^k$ is not surjective.)
+\end{exercise}
+
+\begin{sol}
+    Fix $k \in \zp$ such that $(k, n) = 1$. Let $\phi : x \mapsto x^k$. Since $G$ is cyclic, then $G = \gen x$ for some $x \in G$. For any $y \in G$, there exists some integer $m$ such that $y = x^m$. Since $(k, n) = 1$, there exist integers $s, t$ such that $ks + nt = 1$. Then
+    \[\phi(x^{ms}) = x^{kms} = x^{m(1 - nt)} = x^m (x^n)^{-mt} = x^m \cdot 1 = y\]
+    so that $\phi$ is surjective.
+
+    Now let $G$ be any finite group of order $n$. For any $y \in G$, consider the subgroup $\gen y$. If $\abs{\gen y} = m$, then by Lagrange's Theorem, $m \mid n$. Since $(k, n) = 1$, then $(k, m) = 1$ as well. By the previous result, there exists some $z \in \gen y$ such that $z^k = y$. Hence, the map $x \mapsto x^k$ is surjective.
+\end{sol}
+
+\begin{specialexercise}[2.3.26]
+    Let $Z_n$ be a cyclic group of order $n$ and for each integer $a$ let
+    \[\sigma_a : Z_n \to Z_n \quad \text{by} \quad \sigma_a(x) = x^a \text{ for all } x \in Z_n\]
+    \begin{subexercises}
+        \item Prove that $\sigma_a$ is an automorphism of $Z_n$ if and only if $a$ and $n$ are relatively prime.
+        \item Prove that $\sigma_a = \sigma_b$ if and only if $a \equiv b \bmod n$.
+        \item Prove that \emph{every} automorphism of $Z_n$ is equal to $\sigma_a$ for some integer $a$.
+        \item Prove that $\sigma_a \circ \sigma_b = \sigma_{ab}$. Deduce that the map $\bar a \mapsto \sigma_a$ is an isomorphism of $\units$ onto the automorphism group of $Z_n$ (so $\aut(Z_n)$ is an Abelian group of order $\phi(n)$).
+    \end{subexercises}
+\end{specialexercise}
+
+\begin{solenum}
+    \item 
+    \begin{itemize}
+        \item [\rightimp] Suppose $\sigma_a \in \aut(Z_n)$, and let $d = (n, a)$. Assume, by way of contradiction, that $d \neq 1$. Then there are $s, t \in \z$ such that $n = ds$ and $a = dt$. Let $Z_n = \gen x$. Then
+        \[\sigma_a(x^s) = x^{as} = x^{dts} = x^{ns} = 1\]
+        If $x^s \neq 1$, then $\ker\sigma_a$ would be non-trivial, contradicting that $\sigma_a$ is an automorphism. Hence, $x^s = 1$, and since $\abs x = n$ and $n \mid s$, then $s = n$ so that $d = 1$.
+        \item [\leftimp] Suppose that $(a, n) = 1$. By the previous exercise, then $\sigma_a$ is a surjective map. Since $Z_n$ is finite, then $\sigma_a$ is also bijective. Moreover,
+        \[\sigma_a(xy) = (xy)^a = x^ay^a = \sigma_a(x)\sigma_a(y)\]
+        for some $x, y \in Z_n$. Then $\sigma_a$ is also a homomorphism, hence $\sigma_a \in \aut(Z_n)$.
+    \end{itemize}
+    \item
+    \begin{itemize}
+        \item [\rightimp] Suppose $\sigma_a = \sigma_b$. Let $Z_n = \gen x$. Then
+        \[x^a = \sigma_a(x) = \sigma_b(x) = x^b\]
+        so that $n \mid (a - b)$, or $a \equiv b \bmod n$.
+        \item [\leftimp] Suppose $a \equiv b \bmod n$. Then there exists some integer $k$ such that $a - b = nk$. Let $Z_n = \gen x$. For any $x^m \in Z_n$, we have
+        \[\sigma_a(x^m) = x^{am} = x^{(b + nk)m} = x^{bm} (x^n)^{km} = x^{bm} \cdot 1 = \sigma_b(x^m)\]
+        so that $\sigma_a = \sigma_b$.
+    \end{itemize}
+    \item Let $Z_n = \gen x$ and let $\phi \in \aut(Z_n)$. Since $Z_n$ is cyclic, there exists some integer $a$ such that $\phi(x) = x^a$. For any $x^m \in Z_n$, we have
+    \[\phi(x^m) = \phi(x)^m = (x^a)^m = x^{am} = \sigma_a(x^m)\]
+    so that $\phi = \sigma_a$.
+    \item Let $Z_n = \gen x$. For any $x^m \in Z_n$, we have
+    \[\sigma_a \circ \sigma_b (x^m) = \sigma_a(x^{bm}) = x^{abm} = \sigma_{ab}(x^m)\]
+    so that $\sigma_a \circ \sigma_b = \sigma_{ab}$. Consider the map
+    \[\phi : \units \to \aut(Z_n) \quad \text{by} \quad \phi(\bar a) = \sigma_a\]
+    By part (b), $\phi$ is well-defined. Part (a) shows that $\phi$ is injective, while part (c) shows that $\phi$ is surjective. The first part of (d) shows that $\phi$ is a homomorphism. Hence, $\phi$ is an isomorphism of $\units$ onto $\aut(Z_n)$.
+\end{solenum}
