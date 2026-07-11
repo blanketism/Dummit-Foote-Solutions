@@ -106,8 +106,8 @@
 \end{exercise}
 
 \begin{sol}
-    Note that there exists $k_1 \in \zp$ such that $n \geq k_1p$. Then the integers $p, 2p, \ldots, k_1p$ contribute $k_1$ factors of $p$ in $n!$. Next, there exists $k_2 \in \zp$ such that $n \geq k_2p^2$. Then the integers $p^2, 2p^2, \ldots, k_2p^2$ contribute $k_2$ additional factors of $p$ in $n!$. We continue this process until some $k_m \in \zp$ such that $n \geq k_m p^m$ but $n < k_{m+1} p^{m+1}$. The largest power of $p$ which divides $n!$ is then given by
-    \[\sum_{i=1}^m k_i = \sum_{i=1}^m \floor*{\frac{n}{p^i}}. \qh\]
+    Let $k_1 \in \zp$ such that $n \geq k_1p$. Then there are exactly $k_1$ factors of $p$, namely $p, 2p, \ldots, k_1p$. Let $k_2 \in \zp$ such that $n \geq k_2p^2$, so that $p^2, 2p^2, \ldots, k_2p^2$ contribute exactly $k_2$ factors of $p^2$, and hence $k_2$ factors of $p$. Note that there exists some $m$ such that $n \geq k_m p^m$, but $n < k_{m + 1} p^{m + 1}$. Then the largest power of $p$ which divides $n!$ is given by
+    \[\sum_{i = 1}^m k_i = \sum_{i = 1}^{\infty} \floor*{\frac{n}{p^i}}. \qh\]
 \end{sol}
 
 \begin{exercise}[0.2.9]
