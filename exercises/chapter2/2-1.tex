@@ -116,9 +116,30 @@
     \[(gh\inv)^{mn} = g^{mn}(h\inv)^{mn} = (g^m)^n((h^n)\inv)^m = 1^n(1\inv)^m = 1,\]
     where the first equality follows from $G$ being Abelian. Then $|gh\inv| \leq mn$, hence $gh\inv \in \tor(G)$, and $\tor(G) \leq G$.
 
-    Consider $G = \aut(\r)$ where $f(x) = -x$ and $g(x) = 1 - x$. Then $|f| = |g| = 2$, but
-    \[(fg)(x) = f(g(x)) = f(1 - x) = x - 1\]
-    By induction, $(fg)^n(x) = x - n$ for all $n \in \zp$, so $|fg| = \infty$. Hence, $fg \not\in \tor(G)$.
+    Consider $G = \gl_2(\r)$ where
+    \[A = 
+    \begin{pmatrix}
+        -1 & 0 \\
+        0 & 1
+    \end{pmatrix}, \quad
+    B = 
+    \begin{pmatrix}
+        -1 & 1 \\
+        0 & 1
+    \end{pmatrix}.\]
+    Note that $|A| = |B| = 2$ so that $A, B \in \tor(G)$. However,
+    \[AB = 
+    \begin{pmatrix}
+        1 & -1 \\
+        0 & 1
+    \end{pmatrix}.\]
+    By induction, we may show that
+    \[(AB)^n = 
+    \begin{pmatrix}
+        1 & -n \\
+        0 & 1
+    \end{pmatrix}\]
+    for all $n \in \zp$. Hence, $|AB| = \infty$, so $AB \not\in \tor(G)$.
 \end{sol}
 
 \begin{exercise} [2.1.7]

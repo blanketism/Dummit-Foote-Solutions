@@ -108,7 +108,7 @@ Let $G$ be a group.
     \begin{itemize}
         \item Note that $0 \leq x + y < 2$. If $x + y < 1$, then $[x + y] = 0$, and $x \star y = x + y \in G$. If $1 \leq x + y < 2$, then $[x + y] = 1$, and $x \star y = x + y - 1 \in G$. Hence, $x \star y \in G$, and $\star$ is well-defined.
         \item $x \star 0 = x - [x] = x$. Then $0$ is the identity element of $G$ under $\star$.
-        \item $x \star (1 - x) = x + (1 - x) - [x + (1 - x)] = 0$. Hence, $1 - x$ is the inverse of $x$ under $\star$.
+        \item $x \star (1 - x) = x + (1 - x) - [x + (1 - x)] = 0$. Hence, $1 - x$ is the inverse of $x$ under $\star$. For $x = 0$, the inverse is itself, since $0 \star 0 = 0$.
         \item $x \star y = x + y - [x + y] = y + x - [y + x] = y \star x$. Hence, $G$ is Abelian under $\star$.
         \item Note that $[\alpha + \beta] = [\alpha] + \beta$ for $\beta \in \z$. Then
         \begin{align*}
@@ -451,7 +451,7 @@ Let $G$ be a group.
 
 \begin{solenum}
     \item Note that $x^{n - i} = x^{-i}$. If $i \neq n - i$, then $x^i \neq x^{n - i}$ by \exref{1.1.32}, so $x^i \neq x^{-i}$. If $i = n - i$, then $2i = n$, which is impossible since $n$ is odd. Hence, $x^i \neq x^{-i}$ for all $i = 1, 2, \dots, n-1$.
-    \item Part (a) shows that $x^i \neq x^{-i}$ for $i \neq k$. If $i = k$, the result follows. 
+    \item By the same method in part (a), we may show $x^i \neq x^{-i}$ for $i \neq k$. If $i = k$, the result follows.
 \end{solenum}
 
 \begin{exercise}[1.1.34]

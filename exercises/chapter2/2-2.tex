@@ -64,7 +64,7 @@
     \[(1\ 2)A(1\ 2) = \set{(1\ 2)(1)(1\ 2), (1\ 2)(1\ 2\ 3)(1\ 2), (1\ 2)(1\ 3\ 2)(1\ 2)} = \set{1, (1\ 3\ 2), (1\ 2\ 3)} = A\]
     so that $(1\ 2) \in N_G(A)$. Hence, $|N_G(A)| = 6$ and $N_G(A) = G$.
     \item Since $|A| = 4$, then 4 divides $|C_G(A)|$ and $|C_G(A)|$ divides 8 by Lagrange's Theorem. Observe that $r \not\in C_G(A)$ since $rs = sr^3 \neq sr$. Then $|C_G(A)| \neq 8$, hence $|C_G(A)| = 4$ and $C_G(A) = A$. Then 4 divides $|N_G(A)|$ and $|N_G(A)|$ divides 8 by Lagrange's Theorem. Consider $r \in D_8$. Then
-    \[rA r\inv = \set{r(1)r\inv, r(s)r\inv, r(r^2)r\inv, r(sr^2)r\inv} = \set{1, sr^3, r^2, sr} = A\]
+    \[rA r\inv = \set{r(1)r\inv, r(s)r\inv, r(r^2)r\inv, r(sr^2)r\inv} = \set{1, sr^2, r^2, s} = A\]
     so that $r \in N_G(A)$. Then $|N_G(A)| = 8$ and $N_G(A) = G$.
     \item Note 5 divides $|C_G(A)|$ and $|C_G(A)|$ divides 10 by Lagrange's Theorem. Since $s \not\in C_G(A)$ because $sr \neq rs$, then $C_G(A) = A$. Then 5 divides $|N_G(A)|$ which divides 10 by Lagrange's. A similar computation shows $sAs\inv = \set{1, r^4, r^3, r^2, r} = A$, hence $N_G(A) = G$.
 \end{solenum}
@@ -100,11 +100,11 @@
 
 \begin{sol}
     We claim that $Z(D_{2n})$ contains no reflections and contains $r^i$ if and only if $n \mid 2i$. To see the first part, suppose $sr^j \in Z(D_{2n})$ for some $0 \leq j < n$. Since it must commute with $r$, then
-    \[sr^j r = r sr^j \implies sr^{j + 1} = r^{n - 1} s r^j \implies sr^{j + 1} = sr^{j - 1} \implies r^{j + 1} = r^{j - 1} \implies r^2 = 1\]
+    \[sr^j r = r sr^j \implies sr^{j + 1} = sr^{j - 1} \implies r^2 = 1.\]
     which is a contradiction since $n \geq 3$. Hence, no reflections are in $Z(D_{2n})$.
 
     Now consider $r^i \in Z(D_{2n})$ for some $0 \leq i < n$. Since it must commute with $s$, then
-    \[r^i s = s r^i \implies r^i s = s r^{n - i} \implies r^i = r^{n - i} \implies r^{2i} = 1\]
+    \[r^i s = s r^i \implies r^is = r^{-i} s \implies r^{2i} = 1,\]
     so that $n \mid 2i$.
     \begin{subexercises}
         \item If $n$ is odd, then $n \mid 2i$ implies that $n \mid i$. Since $0 \leq i < n$, then $i = 0$ and $Z(D_{2n}) = \set 1$.

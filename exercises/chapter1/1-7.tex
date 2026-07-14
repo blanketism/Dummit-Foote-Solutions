@@ -183,7 +183,9 @@
 
     We now consider the elements of the kernel. If $r^k \cdot P_i = P_i$ for some given $P_i = \set{i, i + n/2}$, then $r^k$ must map $i$ to either $i$ or $i + n/2$. Similarly, it must map $i + n/2$ to either $i$ or $i + n/2$. This is only possible if $k = 0$ or $k = n/2$, corresponding to the identity rotation and the rotation by $180^\circ$, respectively.
 
-    If $s \cdot P_i = P_i$, then $s$ must map the vertices in $P_i$ to themselves or to each other. However, a reflection in $D_{2n}$ will only fix a pair of opposite vertices if the axis of reflection passes through that pair. Since there are multiple pairs of opposite vertices, no single reflection can fix all pairs simultaneously. Therefore, no reflection can be in the kernel of this action.
+    If $s \cdot P_i = P_i$, then $s$ must map the vertices in $P_i$ to themselves or to each other. Consider a reflection $s$ that passes through points $j$ and $j + n/2$. Then $s \cdot P_j = P_j$. Moreover, vertices adjacent to that axis are swapped, i.e., $s(j + 1) = j - 1$ and $s(j + 1 + n/2) = j - 1 + n/2$. In particular, taking indices mod $n/2$, we have that $P_{j - 1} = P_{j + 1}$. Then $j - 1 \equiv j + 1 \bmod n/2$, or when $n/2 \mid 2$. This is possible for $n = 2$ and $n = 4$. The $n = 2$ case is degenerate with kernel $D_4$, and for $n = 4$, the kernel is $\set{1, r^2, s, sr^2}$. However, for $n \geq 6$, the discussion above does not hold for any reflection, hence the kernel is just $\set{1, r^2}$.
+
+    Lastly, we consider reflections that are in the middle of any two points $j$ and $j + 1$. But this would require $s \cdot P_j = P_{j + 1}$, or that $j \equiv j + 1 \bmod n/2$. Then $n/2 \mid 1$, which is impossible for $n \geq 6$. Hence, no such reflections are in the kernel for $n \geq 4$.
 \end{sol}
 
 \begin{exercise}[1.7.13]

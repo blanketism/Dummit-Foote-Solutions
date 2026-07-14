@@ -281,9 +281,11 @@
 \begin{solenum}
     \item If $H$ is maximal, we are done. If not, there exists $H_1 < G$ such that $H < H_1$. If $H_1$ is maximal, then we are done. Otherwise, construct subgroups $H_i$ such that $H_i < H_{i + 1} < G$. Since $G$ is finite, this process must terminate at some $H_k$ which is maximal. Then $H_k$ is a maximal subgroup with $H < H_k$.
     \item Since $s \notin \gen r$, then $\gen r < D_{2n}$. If $\gen r$ is not maximal, there exists $H < G$ such that $sr^k \in H$ for $1 \leq k < n$. Since $r^{n - k} \in H$, then $sr^kr^{n - k} = s \in H$, which implies $H = D_{2n}$, contradicting that $H$ is a proper subgroup. It follows that $\gen r$ is maximal.
-    \item Suppose $H$ is maximal, and put $H = \gen{x^k}$ and $d = (n, k)$. Note that $d > 1$ for the subgroup to be proper. Let $p$ be a prime that divides $n$. If $k = p$, then we are done. If $k \neq p$, consider $\gen{x^p}$. Then $H < \gen{x^p}$ since $p \mid d$. Since $H$ is maximal, then $\gen{x^p} = G$. Then $(p, n) = 1$, but this contradicts that $p \mid n$. Then $k = p$.
-    
-    Suppose that $H = \gen{x^p}$ for prime $p \mid n$. If $H$ is not maximal, there exists $\gen{x^d}$ such that $d \mid p$. Since $p$ is prime, then either $d = 1$ or $p$. If $d = 1$, then $\gen{x^d} = G$ which shows that $\gen{x^d}$ is not a proper subgroup of $G$. If $d = p$, then $\gen{x^d} = \gen{x^p}$ so that $H$ is not a proper subgroup of $\gen{x^d}$. It follows that $H$ is maximal.
+    \item
+    \begin{itemize}
+        \item [\rightimp] Suppose $H$ is maximal, and put $H = \gen{x^k}$ and $d = (n, k)$. Note that $d > 1$ for the subgroup to be proper. Since $d \mid k$, then $H \leq \gen{x^d}$. By maximality of $H$, we must have either $H = \gen{x^d}$ or $\gen{x^d} = G$. In the first case, $d = k$ so that $k \mid n$. In the second case, $\gen{x^d} = G$, so that $d = 1$. However, this would imply that $k = n/d = n/1 = n$, which contradicts that $H$ is a proper subgroup. Hence, $k$ must be a prime dividing $n$. If $k$ is composite, say $k = ab$ for $1 < a, b < k$, then $H < \gen{x^a} < G$, contradicting maximality. Then $k$ must be prime.
+        \item [\leftimp] Suppose that $H = \gen{x^p}$ for prime $p \mid n$. If $H$ is not maximal, there exists $\gen{x^d}$ such that $d \mid p$. Since $p$ is prime, then either $d = 1$ or $p$. If $d = 1$, then $\gen{x^d} = G$ which shows that $\gen{x^d}$ is not a proper subgroup of $G$. If $d = p$, then $\gen{x^d} = \gen{x^p}$ so that $H$ is not a proper subgroup of $\gen{x^d}$. It follows that $H$ is maximal. \qh
+    \end{itemize}
 \end{solenum}
 
 \begin{specialexercise}[2.4.17]
