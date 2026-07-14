@@ -1,2 +1,0 @@
-{"rule":"SENTENCE_WHITESPACE","sentence":"^\\QZ/nZ: The Integers Modulo n.\\E$"}
-{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QZ/nZ: The Integers Modulo n.\\E$"}

@@ -1,7 +1,0 @@
-surjective
-surjectivity
-Surjectivity
-injectivity
-bijectivity
-Bijectivity
-sublattice
