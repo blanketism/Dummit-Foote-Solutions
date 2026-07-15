@@ -29,8 +29,10 @@
 \pagecolor{pagecolor!50}
 
 \pagestyle{fancy}
-\fancyhead{}
+\fancyhf{}
 \fancyhead[R]{\rightmark}
+\fancyfoot[R]{\hypersetup{linkcolor=gray}\hyperlink{clickabletoc}{Table of Contents}}
+\fancyfoot[C]{\thepage}
 \setlength{\headheight}{14pt}
 \addtolength{\topmargin}{-0.5pt}
 
@@ -42,11 +44,14 @@
 \setlength{\jot}{2pt}
 \setlength{\parindent}{0.75cm}
 
-\includeonly{exercises/chapter1/1-7.tex}
+% \includeonly{exercises/chapter0/0-1.tex}
 
 \begin{document}
 
 \maketitle
+
+\phantomsection
+\hypertarget{clickabletoc}{}
 
 \tableofcontents
 
@@ -70,5 +75,24 @@
 \include{exercises/chapter2/2-3.tex}
 \include{exercises/chapter2/2-4.tex}
 \include{exercises/chapter2/2-5.tex}
+
+\include{exercises/chapter3/3-1.tex}
+\include{exercises/chapter3/3-2.tex}
+\include{exercises/chapter3/3-3.tex}
+\include{exercises/chapter3/3-4.tex}
+\include{exercises/chapter3/3-5.tex}
+
+\include{exercises/chapter4/4-1.tex}
+\include{exercises/chapter4/4-2.tex}
+\include{exercises/chapter4/4-3.tex}
+\include{exercises/chapter4/4-4.tex}
+\include{exercises/chapter4/4-5.tex}
+\include{exercises/chapter4/4-6.tex}
+
+\include{exercises/chapter5/5-1.tex}
+\include{exercises/chapter5/5-2.tex}
+\include{exercises/chapter5/5-3.tex}
+\include{exercises/chapter5/5-4.tex}
+\include{exercises/chapter5/5-5.tex}
 
 \end{document}
