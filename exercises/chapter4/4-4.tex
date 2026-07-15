@@ -1,0 +1,287 @@
+\subsection{Automorphisms}
+
+\begin{specialexercise}
+	Let $G$ be a group. If $\sigma \in \aut(G)$ and $\varphi_g$ is conjugation by $g$, prove that $\sigma \varphi_g \sigma^{-1} = \varphi_{\sigma(g)}$. Deduce that $\inn(G) \trianglelefteq \aut(G)$. (The group $\aut(G)/\inn(G)$ is called the \emph{outer automorphism group} of $G$.)
+\end{specialexercise}
+
+\begin{sol}
+	For any $x \in G$, then
+	\[(\sigma\phi_g\sigma\inv)(x) = \sigma(\phi_g(\sigma\inv(x))) = \sigma(g\sigma\inv(x)g\inv) = \sigma(g)\sigma(\sigma\inv(x))\sigma(g)\inv = \sigma(g)x\sigma(g)\inv = \phi_{\sigma(g)}(x).\]
+	Then $\sigma\phi_g\sigma\inv = \phi_{\sigma(g)}$. Therefore, for any $\phi_g \in \inn(G)$ and any $\sigma \in \aut(G)$, we have $\sigma\phi_g\sigma\inv \in \inn(G)$, so that $\inn(G) \trianglelefteq \aut(G)$.
+\end{sol}
+
+\begin{specialexercise}
+	Prove that if $G$ is an abelian group of order $pq$, where $p$ and $q$ are distinct primes, then $G$ is cyclic. (Use Cauchy's Theorem to produce elements of order $p$ and $q$ and consider the order of their product.)
+\end{specialexercise}
+
+\begin{sol}
+	By Cauchy's Theorem, there are elements $g, h \in G$ such that $\abs g = p$ and $\abs h = q$. Since $G$ is abelian, we have $\abs{gh} = \lcm(\abs g, \abs h) = \lcm(p, q) = pq$. Therefore, $G = \gen{gh}$ is cyclic.
+\end{sol}
+
+\begin{exercise}
+	[4.4.3] Prove that under any automorphism of $D_8$, $r$ has at most $2$ possible images and $s$ has at most $4$ possible images (where $r$ and $s$ are the usual generators). Deduce that $|\aut(D_8)| \le 8$.
+\end{exercise}
+
+\begin{sol}
+	Since $\abs r = 4$, any automorphism $\sigma$ of $D_8$ must send $r$ to an element of order 4. The only elements of order 4 in $D_8$ are $r$ and $r^3$, so $r$ has at most 2 possible images under $\sigma$. Moreover, $\abs s = 2$, so $\sigma(s)$ must be an element of order 2. The elements of order 2 in $D_8$ are $s, sr, sr^2,$ and $sr^3$, so $s$ has at most 4 possible images under $\sigma$. Therefore, there are at most $2 \cdot 4 = 8$ possible automorphisms of $D_8$, so that $|\aut(D_8)| \leq 8$.
+\end{sol}
+
+\begin{exercise}
+	Use arguments similar to those in the preceding exercise to show that $|\aut(Q_8)| \le 24$.
+\end{exercise}
+
+\begin{sol}
+	Note that $\abs i = \abs j = \abs k = 4$, so any automorphism $\sigma$ of $Q_8$ must send $i$ to an element of order 4. The only elements of order 4 in $Q_8$ are $i, j, k, i^{-1}, j^{-1}, k^{-1}$, so $i$ has at most 6 possible images under $\sigma$. Moreover, since $ij = k$, we have $\sigma(i)\sigma(j) = \sigma(k)$. Therefore, once we choose the image of $i$, there are 4 possible choices for the image of $j$ (since it cannot be the inverse of the image of $i$). Hence, there are at most $6 \cdot 4 = 24$ possible automorphisms of $Q_8$, so that $|\aut(Q_8)| \leq 24$.
+\end{sol}
+
+\begin{exercise}
+	Use the fact that $D_8 \trianglelefteq D_{16}$ to prove that $\aut(D_8) \cong D_8$.
+\end{exercise}
+
+\begin{sol}
+	Consider the subgroup $H = \gen{r^2, s}$ of $D_{16}$. Note that $(r^2)^4 = s^2 = 1$, so this satisfies the same relations as $D_8$, hence $H \cong D_8$. Moreover, $H$ is normal in $D_{16}$ as it has index 2. Then $N_{D_{16}}(H) = D_{16}$. Moreover, $C_{D_{16}}(H)$ can be computed by considering the centralizers of the generators of $H$. Note that $C_{D_{16}}(r^2) = \gen r$ since only rotations commute with each other. Consider now the centralizer of $s$. For any rotation $r^k$, we have $sr^k = r^ks$ if and only if $r^{-k} = r^k$, which holds if and only if $k = 0$ or $k = 4$. For any reflection $sr^k$, we obtain the same conclusion so that $C_{D_{16}}(s) = \set{1, r^4, s, sr^4}$. Intersecting these, it is easy to see that $C_{D_{16}}(H) = Z(D_{16})$.
+
+	We now have that $N_{D_{16}}(H)/C_{D_{16}}(H) \cong D_{16}/Z(D_{16}) \cong D_8$. Now recall that $D_{16}/Z(D_{16})$ is still isomorphic to a subgroup of $\aut(H)$ when acted on by conjugation. By \exref{4.4.3}, we know that $|\aut(D_8)| \leq 8$, so that $\aut(H) \cong D_8$. Therefore, $\aut(D_8) \cong D_8$.
+\end{sol}
+
+\begin{exercise}
+	Prove that characteristic subgroups are normal. Give an example of a normal subgroup that is not characteristic.
+\end{exercise}
+
+\begin{sol}
+	If $H \cha G$, then $\phi(H) = H$ for every $\phi \in \aut(G)$. In particular, this holds for every $\phi_g \in \inn(G)$ so that $\phi_g(H) = gHg\inv = H$ for every $g \in G$. Therefore, $H \nsub G$.
+
+	Consider the abelian group $G = \intmod[2] \times \intmod[2]$. Then every subgroup of $G$ is normal since $G$ is abelian. However, the subgroup $H = \set{(0,0), (1,0)}$ is not characteristic in $G$ since the automorphism $\sigma : G \to G$ defined by $\sigma((a,b)) = (b,a)$ sends $H$ to the distinct subgroup $\set{(0,0), (0,1)}$. Therefore, $H$ is a normal subgroup of $G$ that is not characteristic.
+\end{sol}
+
+\begin{exercise}
+	[4.4.7] If $H$ is the unique subgroup of a given order in a group $G$, prove that $H$ is characteristic in $G$.
+\end{exercise}
+
+\begin{sol}
+	For any $\sigma \in \aut(G)$, the subgroup $\sigma(H)$ has the same order as $H$. Since $H$ is the unique subgroup of that order in $G$, we must have $\sigma(H) = H$. Therefore, $H$ is characteristic in $G$.
+\end{sol}
+
+\begin{specialexercise}
+	[4.4.8] Let $G$ be a group with subgroups $H$ and $K$ with $H \le K$.
+	\begin{subexercises}
+	\item Prove that if $H$ is characteristic in $K$ and $K$ is normal in $G$, then $H$ is normal in $G$.
+	\item Prove that if $H$ is characteristic in $K$ and $K$ is characteristic in $G$, then $H$ is characteristic in $G$. Use this to prove that the Klein $4$-group $V_4$ is characteristic in $S_4$.
+	\item Give an example to show that if $H$ is normal in $K$ and $K$ is characteristic in $G$, then $H$ need not be normal in $G$.
+	\end{subexercises}
+\end{specialexercise}
+
+\begin{solenum}
+	\item For any $g \in G$, consider the inner automorphism $\phi_g \in \inn(G)$. Since $K \nsub G$, we have $\phi_g(K) = K$. Moreover, since $H \cha K$, we have $\phi_g(H) = H$. Therefore, $gHg\inv = H$ for all $g \in G$, so that $H \nsub G$.
+	\item For any $\sigma \in \aut(G)$, since $K \cha G$, we have $\sigma(K) = K$. Moreover, since $H \cha K$, we have $\sigma(H) = H$. Therefore, $H \cha G$. 
+	
+	Consider $V_4$. By \exref{3.5.8}, $V_4$ is the unique subgroup of order 4 in $A_4$ so that $V_4 \cha A_4$ by \exref{4.4.7}. Moreover, $A_4$ is the unique subgroup of order 12 in $S_4$, for otherwise if $H \leq S_4$ such that $\abs H = 12$, then it would contain only odd permutations, which is impossible since the product of two odd permutations is an even permutation. Therefore, $A_4 \cha S_4$ by \exref{4.4.7}. By the above result, $V_4 \cha S_4$.
+	\item Consider $A_4$. Then $V_4 \cha A_4$ as shown previously. Consider $H = \gen{(1\ 2)(3\ 4)} \leq V_4$. Since $V_4$ is abelian, then $H \nsub V_4$. However, taking $(1\ 2\ 3) \in A_4$, we have
+	\[(1\ 2\ 3)(1\ 2)(3\ 4)(3\ 2\ 1) = (1\ 4)(2\ 3) \not\in H\]
+	so that $H$ is not normal in $A_4$.
+\end{solenum}
+
+\begin{exercise}
+	If $r,s$ are the usual generators for the dihedral group $D_{2n}$, use the preceding two exercises to deduce that every subgroup of $\langle r\rangle$ is normal in $D_{2n}$.
+\end{exercise}
+
+\begin{sol}
+	By \exref{3.1.34}, we know $\gen r$ is normal in $D_{2n}$. Moreover, every subgroup of a cyclic group is characteristic, so every subgroup of $\gen r$ is characteristic in $\gen r$. Since $\gen r \nsub D_{2n}$, then by \exref{4.4.8}, every subgroup of $\gen r$ is normal in $D_{2n}$.
+\end{sol}
+
+\begin{exercise}
+	Let $G$ be a group, let $A$ be an abelian normal subgroup of $G$, and write $\overline{G}=G/A$. Show that $\overline{G}$ acts (on the left) by conjugation on $A$ by $\bar g \cdot a = gag^{-1}$, where $g$ is any representative of the coset $\bar g$ (in particular, show that this action is well defined). Give an explicit example to show that this action is not well defined if $A$ is non-abelian.
+\end{exercise}
+
+\begin{sol}
+	Let $\bar g$ and $\bar h$ be the same coset in $\bar G$. Then there exists some $a_0 \in A$ such that $h = ga_0$. Then for any $a \in A$, we have
+	\[\bar g \cdot a = gag\inv = ga a_0a_0\inv g\inv = ga_0a(ga_0)\inv = hah\inv = \bar h \cdot a\]
+	since $A$ is abelian. Therefore, the action is well defined.
+
+	Consider $G = S_3$ and $A = S_3$ itself. Then $\bar 1 = \bar{(1\ 2)}$ in $\bar G$. However, for $a = (1\ 3)$, we have $\bar 1 \cdot a = a = (1\ 3)$ but, but $\bar{(1\ 2)} \cdot a = (1\ 2)(1\ 3)(1\ 2) = (2\ 3) \neq a$. Therefore, the action is not well defined if $A$ is non-abelian.
+\end{sol}
+
+\begin{exercise}
+	If $p$ is a prime and $P$ is a subgroup of $S_p$ of order $p$, prove that $N_{S_p}(P)/C_{S_p}(P) \cong \aut(P)$. (Use \exref{4.3.34}).
+\end{exercise}
+
+\begin{sol}
+	By \exref{4.3.34}, we know that $|N_{S_p}(P)| = p(p - 1)$. Moreover, since $P$ is cyclic of order $p$, we have $\aut(P) \cong (\mathbb Z/p\mathbb Z)^\times$ by Proposition 4.16, so that $|\aut(P)| = p - 1$. Let $N_{S_p}$ act on $P$ by conjugation. Then we have the map
+	\[\phi : N_{S_p}(P) \to \aut(P), \quad \phi(g)(x) = gxg\inv\]
+	for all $g \in N_{S_p}(P)$ and $x \in P$. Recall that $\ker\phi = C_{S_p}(P)$ by Proposition 4.13. Therefore, by the First Isomorphism Theorem, we have
+	\[N_{S_p}(P)/C_{S_p}(P) \cong \im\phi \leq \aut(P).\]
+	Since $P$ is cyclic, then the only permutations that centralize $P$ are the elements of $P$ itself, so that $C_{S_p}(P) = P$. Therefore,
+	\[|N_{S_p}(P)/C_{S_p}(P)| = \frac{|N_{S_p}(P)|}{|C_{S_p}(P)|} = \frac{p(p - 1)}{p} = p - 1 = |\aut(P)|.\]
+	Hence, $\im\phi = \aut(P)$ so that $N_{S_p}(P)/C_{S_p}(P) \cong \aut(P)$.
+\end{sol}
+
+\begin{exercise}
+	Let $G$ be a group of order $3825$. Prove that if $H$ is a normal subgroup of order $17$ in $G$ then $H \le Z(G)$.
+\end{exercise}
+
+\begin{sol}
+	Observe that $3825 = 15^2 \cdot 17$. Since $\abs H = 17$ a prime, then $H$ is cyclic. Moreover, we have $\aut(H) \cong (\mathbb Z/17\mathbb Z)^\times$ by Proposition 4.16, so that $|\aut(H)| = 16$. Now consider the action of $G$ on $H$ by conjugation. This gives the map
+	\[\phi : G \to \aut(H), \quad \phi(g)(x) = gxg\inv\]
+	for all $g \in G$ and $x \in H$. Recall that $\ker\phi = C_G(H)$ by Proposition 4.13. Therefore, by the First Isomorphism Theorem, we have
+	\[G/C_G(H) \cong \im\phi \leq \aut(H).\]
+	Hence, $|G/C_G(H)|$ divides $|\aut(H)| = 16$. However, $|G| = 3825$ is relatively prime to 16, so that $|G/C_G(H)| = 1$. Therefore, $G = C_G(H)$, so that $H \leq Z(G)$.
+\end{sol}
+
+\newpage
+
+\begin{exercise}
+	Let $G$ be a group of order $203$. Prove that if $H$ is a normal subgroup of order $7$ in $G$ then $H \le Z(G)$. Deduce that $G$ is abelian in this case.
+\end{exercise}
+
+\begin{sol}
+	Note that $203 = 7 \cdot 29$. The proof of showing that $H \leq Z(G)$ is similar to the previous exercise. To see that $G$ is abelian, consider the quotient group $G/H$. Since $|G/H| = 29$ is prime, then $G/H$ is cyclic. By \exref{3.1.36}, we have that $G$ is abelian.
+\end{sol}
+
+\begin{exercise}
+	Let $G$ be a group of order $1575$. Prove that if $H$ is a normal subgroup of order $9$ in $G$ then $H \le Z(G)$.
+\end{exercise}
+
+\begin{sol}
+	This exercise is similar to the previous two. Following the proofs, we will find that $|G/C_G(H)|$ divides $|\aut(H)| = 6$ or 48. However, $1575 = 3^2 \cdot 5^2 \cdot 7$ results in $(|G|, |\aut(H)|) = 1$ or 3. If the latter is true, then $|C_G(H)| = 525$. However, this is impossible since $H \leq C_G(H)$ and $|H| = 9$ does not divide $525$. Therefore, we must have $|G/C_G(H)| = 1$, so that $G = C_G(H)$ and hence $H \leq Z(G)$.
+\end{sol}
+
+\begin{exercise}
+	Prove that each of the following (multiplicative) groups is cyclic: $(\mathbb Z/5\mathbb Z)^\times$, $(\mathbb Z/9\mathbb Z)^\times$, and $(\mathbb Z/18\mathbb Z)^\times$.
+\end{exercise}
+
+\begin{sol}
+	Since $|\units[5]| = 4$, then $\units[5]$ is isomorphic to either $Z_4$ or $V_4$. However, $\bar 2 \in \units[5]$ has order 4, so that $\units[5] \cong Z_4$ is cyclic.
+
+	Observe that $|\units[9]| = |\units[18]| = 6$. By \exref{4.2.10}, groups of order 6 are isomorphic to either $Z_6$ or $S_3$. However, both groups are abelian, so that $\units[9]$ and $\units[18]$ must be isomorphic to $Z_6$. Therefore, both groups are cyclic.
+\end{sol}
+
+\begin{specialexercise}
+	Prove that $(\mathbb Z/24\mathbb Z)^\times$ is an elementary abelian group of order $8$. (We shall see later that $(\mathbb Z/n\mathbb Z)^\times$ is an elementary abelian group if and only if $n \mid 24$.)
+\end{specialexercise}
+
+\begin{sol}
+	We first prove the lemma: let $a, b, m, n \in \z$ such that $(m, n) = 1$. If $a \equiv b \bmod m$ and $a \equiv b \bmod n$, then $a \equiv b \bmod{mn}$. Indeed, we have that
+	\[a - b = xm \quad \text{and} \quad a - b = yn\]
+	for some $x, y \in \z$. Therefore, $xm = yn$, so that $m \mid yn$. Since $(m, n) = 1$, then $m \mid y$. Letting $y = km$ for some $k \in \z$, we have
+	\[a - b = yn = kmn,\]
+	so that $a \equiv b \bmod{mn}$.
+
+	Let $x \in \units[24]$. Note that $x$ is always odd. Then $\gcd(x, 24) = 1$, hence $(x, 3) = (x, 8) = 1$. Since $(x, 3) = 1$, then $x \equiv 1$ or $2 \bmod 3$. Then $x^2 \equiv 1 \bmod 3$. Since $(x, 8) = 1$, let $x = 2k + 1$ for some $k \in \z$. Then
+	\[x^2 = (2k + 1)^2 = 4k^2 + 4k + 1 = 4k(k + 1) + 1.\]
+	Since one of $k$ or $k + 1$ is even, then $4k(k + 1)$ is divisible by 8, so that $x^2 \equiv 1 \bmod 8$. By the lemma above, we have $x^2 \equiv 1 \bmod 24$. Therefore, every element of $\units[24]$ has order dividing 2, so that $\units[24]$ is an elementary abelian group.
+\end{sol}
+
+\newpage
+
+\begin{exercise}
+	Let $G=\langle x\rangle$ be a cyclic group of order $n$. For $n=2,3,4,5,6$ write out the elements of $\aut(G)$ explicitly (by Proposition 16 above we know $\aut(G)\cong(\mathbb Z/n\mathbb Z)^\times$, so for each element $a\in(\mathbb Z/n\mathbb Z)^\times$, write out explicitly what the automorphism $\psi_a$ does to the elements $\{1,x,x^2,\ldots,x^{n-1}\}$ of $G$).
+\end{exercise}
+
+\begin{sol} \leavevmode
+	\begin{itemize}
+		\item $n = 2$: $\units[2] = \{\bar 1\}$. Then $\psi_1 : x^k \mapsto x^{1 \cdot k} = x^k$ for $k = 0, 1$. Therefore, $\aut(G) = \{\id\}$.
+		\item $n = 3$: $\units[3] = \{\bar 1, \bar 2\}$. Then
+		\[\psi_1 : x^k \mapsto x^{1 \cdot k} = x^k, \quad \psi_2 : x^k \mapsto x^{2 \cdot k}\]
+		for $k = 0, 1, 2$. Therefore, $\aut(G) = \{\psi_1, \psi_2\}$.
+		\item $n = 4$: $\units[4] = \{\bar 1, \bar 3\}$. Then
+		\[\psi_1 : x^k \mapsto x^{1 \cdot k} = x^k, \quad \psi_3 : x^k \mapsto x^{3 \cdot k}\]
+		for $k = 0, 1, 2, 3$. Therefore, $\aut(G) = \{\psi_1, \psi_3\}$.
+		\item $n = 5$: $\units[5] = \{\bar 1, \bar 2, \bar 3, \bar 4\}$. Then
+		\[\psi_1 : x^k \mapsto x^{1 \cdot k}, \quad \psi_2 : x^k \mapsto x^{2 \cdot k}, \quad \psi_3 : x^k \mapsto x^{3 \cdot k}, \quad \psi_4 : x^k \mapsto x^{4 \cdot k}\]
+		for $k = 0, 1, 2, 3, 4$. Therefore, $\aut(G) = \{\psi_1, \psi_2, \psi_3, \psi_4\}$.
+		\item $n = 6$: $\units[6] = \{\bar 1, \bar 5\}$. Then
+		\[\psi_1 : x^k \mapsto x^{1 \cdot k} = x^k, \quad \psi_5 : x^k \mapsto x^{5 \cdot k}\]
+		for $k = 0, 1, 2, 3, 4, 5$. Therefore, $\aut(G) = \{\psi_1, \psi_5\}$. \qh
+	\end{itemize}
+\end{sol}
+
+\begin{specialexercise}
+	This exercise shows that for $n\neq 6$ every automorphism of $S_n$ is inner. Fix an integer $n\ge 2$ with $n\neq 6$.
+	\begin{subexercises}
+		\item Prove that the automorphism group of a group $G$ permutes the conjugacy classes of $G$, i.e.\ for each $\sigma\in\aut(G)$ and each conjugacy class $\mathcal K$ of $G$, the set $\sigma(\mathcal K)$ is also a conjugacy class of $G$.
+		\item Let $\mathcal K$ be the conjugacy class of transpositions in $S_n$ and let $\mathcal K'$ be the conjugacy class of any element of order $2$ in $S_n$ that is not a transposition. Prove that $|\mathcal K|\neq|\mathcal K'|$. Deduce that any automorphism of $S_n$ sends transpositions to transpositions. (See \exref{4.3.33}.)
+		\item Prove that for each $\sigma\in\aut(S_n)$,
+		\[
+		\sigma:(1\,2)\mapsto(a\,b_2),\qquad \sigma:(1\,3)\mapsto(a\,b_3),\qquad \ldots,\qquad \sigma:(1\,n)\mapsto(a\,b_n),
+		\]
+		for some distinct integers $a,b_2,b_3,\ldots,b_n\in\{1,2,\ldots,n\}$.
+		\item Show that $(1\,2),(1\,3),\ldots,(1\,n)$ generate $S_n$ and deduce that any automorphism of $S_n$ is uniquely determined by its action on these elements. Use (c) to show that $S_n$ has at most $n!$ automorphisms and conclude that $\aut(S_n)=\inn(S_n)$ for $n\neq 6$.
+	\end{subexercises}
+\end{specialexercise}
+
+\begin{solenum}
+	\item Let $\mathcal K$ be a conjugacy class of $G$ and let $\sigma \in \aut(G)$. For any $x \in \mathcal K$, we have $\sigma(x) \in G$. Consider the conjugacy class $\mathcal K'$ of $\sigma(x)$ in $G$. For any $y \in \mathcal K$, there exists some $g \in G$ such that $y = gxg\inv$. Then
+	\[\sigma(y) = \sigma(gxg\inv) = \sigma(g)\sigma(x)\sigma(g)\inv \in \mathcal K'.\]
+	Therefore, $\sigma(\mathcal K) \subseteq \mathcal K'$.
+
+	Now let $z \in \mathcal K'$. Then there exists some $h \in G$ such that $z = h\sigma(x)h\inv$. Since $\sigma$ is an automorphism, there exists some $g \in G$ such that $\sigma(g) = h$. Then
+	\[z = h\sigma(x)h\inv = \sigma(g)\sigma(x)\sigma(g)\inv = \sigma(gxg\inv) \in \sigma(\mathcal K).\]
+	Therefore, $\mathcal K' \subseteq \sigma(\mathcal K)$. Hence, $\sigma(\mathcal K) = \mathcal K'$, so that $\aut(G)$ permutes the conjugacy classes of $G$.
+	\item By \exref{4.3.33}, the formulas for each conjugacy class is given by
+	\[|\mathcal K| = \binom n2 = \frac{n(n - 1)}{2}, \quad \text{and} \quad |\mathcal K'| = \frac{n!}{2^k k! (n - 2k)!}\]
+	for some $k \geq 2$. Assume, by way of contradiction, that $|\mathcal K| = |\mathcal K'|$. Equating the two expressions and cancellation, we obtain
+	\[(n - 2)(n - 3) \cdots (n - 2k + 1) = 2^k k!.\]
+	Observe that the left-hand side contains $2k - 2$ consecutive integers, which has at most $k - 1$ powers of 2. The right-hand side has at least $k$ powers of 2, so that the two sides cannot be equal. Therefore, $|\mathcal K| \neq |\mathcal K'|$. Hence, by (a), any automorphism of $S_n$ sends transpositions to transpositions.
+	\item Let $\sigma \in \aut(S_n)$. By (b), we know that $\sigma$ sends transpositions to transpositions. In particular,
+	\[\sigma((1\ 2)) = (a\ b_2), \quad \sigma((1\ 3)) = (c\ d_3)\]
+	for distinct integers. Note that if $\{a, b_2\} \cap \{c, d_3\} = \varnothing$, then
+	\[\sigma((1\ 2)(1\ 3)) = \sigma((1\ 2))\sigma((1\ 3)) = (a\ b_2)(c\ d_3)\]
+	is a product of two disjoint transpositions. However, $(1\ 2)(1\ 3) = (1\ 3\ 2)$ is a 3-cycle, so this is impossible. Therefore, $\{a, b_2\} \cap \{c, d_3\} \neq \varnothing$. Without loss of generality, assume that $a = c$ since we may interchange the order within the transposition. Repeating this argument for all transpositions $(1\ k)$ for $k = 4, \ldots, n$, we obtain the desired result. Moreover, these integers must be distinct since $\sigma$ is injective.
+	\item Note that $(1\ 2), (1\ 3), \ldots, (1\ n)$ generate $S_n$ since any transposition $(i\ j)$ can be written as
+	\[(i\ j) = (1\ i)(1\ j)(1\ i).\]
+	Therefore, any automorphism of $S_n$ is uniquely determined by its action on these elements. By (c), there are at most $n!$ ways to assign images to these transpositions since there are $n$ choices for the image of $(1\ 2)$, $n - 1$ choices for the image of $(1\ 3)$, and so on. Therefore, $|\aut(S_n)| \leq n!$. However, $|\inn(S_n)| = |S_n/Z(S_n)| = n!$ since $Z(S_n)$ is trivial for $n \geq 3$. Since $\inn(S_n) \leq \aut(S_n)$, we must have $\aut(S_n) = \inn(S_n)$ for $n \neq 6$.
+\end{solenum}
+
+\begin{specialexercise}
+	This exercise shows that $|\aut(S_6):\inn(S_6)|\le 2$ (Exercise 10 in Section 6.3 shows that equality holds by exhibiting an automorphism of $S_6$ that is not inner).
+	\begin{subexercises}
+		\item Let $\mathcal K$ be the conjugacy class of transpositions in $S_6$ and let $\mathcal K'$ be the conjugacy class of any element of order $2$ in $S_6$ that is not a transposition. Prove that $|\mathcal K|\neq|\mathcal K'|$ unless $\mathcal K'$ is the conjugacy class of products of three disjoint transpositions. Deduce that $\aut(S_6)$ has a subgroup of index at most $2$ which sends transpositions to transpositions.
+		\item Prove that $|\aut(S_6):\inn(S_6)|\le 2$. (Follow the same steps as in (c) and (d) of the preceding exercise to show that any automorphism that sends transpositions to transpositions is inner.)
+	\end{subexercises}
+\end{specialexercise}
+
+\begin{solenum}
+	\item This is similar to (b) in the previous exercise. By \exref{4.3.33}, the formulas for each conjugacy class is given by
+	\[|\mathcal K| = \binom 62 = 15, \quad \text{and} \quad |\mathcal K'| = \frac{6!}{2^k k! (6 - 2k)!}\]
+	for some $k \geq 2$. Since we are working in $S_6$, we only need to check $k = 2$ and $k = 3$. For $k = 2$, we have
+	\[|\mathcal K'| = \frac{6!}{2^2 \cdot 2! \cdot 2!} = 45 \neq 15 = |\mathcal K|.\]
+	For $k = 3$, we have
+	\[|\mathcal K'| = \frac{6!}{2^3 \cdot 3! \cdot 0!} = 15 = |\mathcal K|.\]
+	Therefore, $|\mathcal K| \neq |\mathcal K'|$ unless $\mathcal K'$ is the conjugacy class of products of three disjoint transpositions. Hence, by (a) in the previous exercise, $\aut(S_6)$ has a subgroup of index at most 2 which sends transpositions to transpositions.
+	\item Following the same steps as in (c) and (d) of the previous exercise, we can show that any automorphism that sends transpositions to transpositions is inner. Therefore, by (a), we have $|\aut(S_6) : \inn(S_6)| \leq 2$.
+\end{solenum}
+
+\begin{specialexercise}
+	For any finite group $P$ let $d(P)$ be the minimum number of generators of $P$ (so, for example, $d(P)=1$ if and only if $P$ is a nontrivial cyclic group and $d(Q_8)=2$). Let $m(P)$ be the maximum of the integers $d(A)$ as $A$ runs over all abelian subgroups of $P$ (so, for example, $m(Q_8)=1$ and $m(D_8)=2$). Define
+	\[J(P)=\langle A \mid A \text{ is an abelian subgroup of } P \text{ with } d(A)=m(P)\rangle.\]
+	($J(P)$ is called the \emph{Thompson subgroup} of $P$.)
+	\begin{subexercises}
+		\item Prove that $J(P)$ is a characteristic subgroup of $P$.
+		\item For each of the following groups $P$, list all abelian subgroups $A$ of $P$ that satisfy $d(A)=m(P)$: $Q_8$, $D_8$, $D_{16}$, and $QD_{16}$ (where $QD_{16}$ is the quasidihedral group of order $16$ defined in \exref{2.5.11}). (Use the lattices of subgroups for these groups in Section 2.5.)
+		\item Show that $J(Q_8)=Q_8$, $J(D_8)=D_8$, $J(D_{16})=D_{16}$, and $J(QD_{16})$ is a dihedral subgroup of order $8$ in $QD_{16}$.
+		\item Prove that if $Q\le P$ and $J(P)$ is a subgroup of $Q$, then $J(P)=J(Q)$. Deduce that if $P$ is a subgroup (not necessarily normal) of the finite group $G$ and $J(P)$ is contained in some subgroup $Q$ of $P$ such that $Q \nsub G$, then $J(P) \nsub G$.
+	\end{subexercises}
+\end{specialexercise}
+
+\begin{solenum}
+	\item Let $\sigma \in \aut(P)$. Let $A$ be an abelian subgroup of $P$ such that $d(A) = m(P)$. Then $\sigma(A)$ is also an abelian subgroup of $P$. Moreover, it is clear that $d(\sigma(A)) = d(A) = m(P)$. Therefore, $\sigma(J(P)) = J(P)$, so that $J(P)$ is characteristic in $P$.
+	\item 
+	\begin{itemize}
+		\item $Q_8$: From the lattice, we see that every abelian subgroup is cyclic so that $m(Q_8) = 1$. The abelian subgroups $A$ with $d(A) = 1$ are $\gen{i}$, $\gen{j}$, and $\gen{k}$.
+		\item $D_8$: From the lattice, we see that the abelian subgroups with maximum number of generators are those isomorphic to $V_4$, hence $m(D_8) = 2$. The abelian subgroups $A$ with $d(A) = 2$ are $\gen{r^2, s}$ and $\gen{r^2, rs}$.
+		\item $D_{16}$: From the lattice, we see that the abelian subgroups with maximum number of generators are those isomorphic to $V_4$, hence $m(D_{16}) = 2$. The abelian subgroups $A$ with $d(A) = 2$ are $\gen{r^4, s}$, $\gen{r^4, r^5s}$, $\gen{r^4, r^2s}$, and $\gen{r^4, r^3s}$.
+		\item $QD_{16}$: From the lattice, we see that the abelian subgroups with maximum number of generators are those isomorphic to $V_4$, hence $m(QD_{16}) = 2$. The abelian subgroups $A$ with $d(A) = 2$ are $\gen{\tau\sigma^2, \sigma^4}$ and $\gen{\tau, \sigma^4}$.
+	\end{itemize}
+	\item 
+	\begin{itemize}
+		\item Any pair of the abelian subgroups in (b) generate $Q_8$, so that $J(Q_8) = Q_8$.
+		\item Note that $r, s \in \gen{r^2, s} \cup \gen{r^2, rs}$, so that $J(D_8) = D_8$.
+		\item Note that $r^3 = r^3s \cdot s$ and $r = r^4 \cdot r^{-3}$ so that the join of all abelian subgroups in (b) generates $D_{16}$. Therefore, $J(D_{16}) = D_{16}$.
+		\item Observe that
+		\[\gen{\tau\sigma^2, \sigma^4} = \{1, \sigma^4, \tau\sigma^2, \tau\sigma^6\} \quad \text{and} \quad \gen{\tau, \sigma^4} = \{1, \sigma^4, \tau, \tau\sigma^4\}.\]
+		The join of these two subgroups is the subgroup $\gen{\sigma^2, \tau}$, which has order 8. Since $\tau^2 = (\sigma^2)^4 = 1$, and $\sigma^2\tau = \tau\sigma^6$, then the mapping $\phi : D_8 \to \gen{\sigma^2, \tau}$ defined by $\phi(r) = \sigma^2$ and $\phi(s) = \tau$ is an isomorphism. Therefore, $J(QD_{16})$ is a dihedral subgroup of order 8 in $QD_{16}$.
+	\end{itemize}
+	\item Note that any abelian subgroup of $Q$ is also an abelian subgroup of $P$. Therefore, $m(Q) \leq m(P)$. Since $J(P) \leq Q$, then every abelian subgroup $A$ of $P$ with $d(A) = m(P)$ is also an abelian subgroup of $Q$. Therefore, $m(P) \leq m(Q)$. Hence, $m(P) = m(Q)$. Moreover, any abelian subgroup $B$ of $Q$ with $d(B) = m(Q) = m(P)$ is also an abelian subgroup of $P$. Therefore, $J(P) = J(Q)$.
+	
+	Using that $J(P) = J(Q)$, then part (a) implies that $J(P) \cha Q$. Since $Q \nsub G$, then $J(P) \nsub G$.
+\end{solenum}
