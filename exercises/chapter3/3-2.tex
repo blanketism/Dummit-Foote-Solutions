@@ -1,0 +1,261 @@
+\subsection{More on Cosets and Lagrange's Theorem}
+
+Let $G$ be a group.
+
+\begin{exercise}[3.2.1]
+    Which of the following are permissible orders for subgroups of a group of order 120: 1, 2, 5, 7, 9, 15, 60, 240? For each permissible order give the corresponding index.
+\end{exercise}
+
+\begin{sol}
+    Only 1, 2, 5, 15, and 60 are permissible orders for subgroups of a group of order 120. The corresponding indices are 120, 60, 24, 8, and 2, respectively.
+\end{sol}
+
+\begin{exercise}[3.2.2]
+    Prove that the lattice of subgroups of $S_3$ in Section 2.5 is correct (i.e., prove that it contains all subgroups of $S_3$ and that their pairwise joins and intersections are correctly drawn).
+\end{exercise}
+\begin{sol}
+    Recall that $|S_3| = 6$. By Lagrange's Theorem, the possible orders of nontrivial subgroups are 2 and 3. Any subgroup of order 2 must be cyclic, and these are the subgroups $\gen{(1\ 2)}, \gen{(1\ 3)}$, and $\gen{(2\ 3)}$. Similarly, any subgroup of order 3 must be cyclic. Since $\gen{(1\ 2\ 3)}$ contains both elements of order 3 in $S_3$, it is the only subgroup of order 3. Since no subgroup of order 2 can be contained in the subgroup of order 3, and the subgroup of order 3 is maximal as there are no other divisors to consider except 6 (which is $S_3$ itself), then the lattice contains all subgroups of $S_3$.
+
+    We now consider the joins of the subgroups. By \exref{2.4.5}, the join of any two elements of order 2 is $S_3$. The join of the subgroup of order 3 with any subgroup of order 2 is also $S_3$: for example, $(1\ 2\ 3)(1\ 2) = (1\ 3) \in \gen{(1\ 2\ 3), (1\ 2)}$. Then $(1\ 3)$ and $(1\ 2)$ generate $S_3$. We may similarly argue for the other two elements of order 2.
+
+    Lastly, observe that any two distinct subgroups of order 2 intersect trivially, and the intersection of any subgroup of order 2 with the subgroup of order 3 is also trivial since none of the elements of order 2 are contained in the subgroup of order 3. Hence, the lattice is correct.
+\end{sol}
+
+\begin{exercise}[3.2.3]
+    Prove that the lattice of subgroups of $Q_8$ in Section 2.5 is correct.
+\end{exercise}
+
+\begin{sol}
+    Recall that $|Q_8| = 8$. By Lagrange's Theorem, the possible orders of nontrivial subgroups are 2 and 4. Any subgroup of order 2 must be cyclic, and the only element of order 2 in $Q_8$ is $-1$, hence $\gen{-1}$ is the only subgroup of order 2. There are 6 elements of order 4 in $Q_8$, and each of them is contained in one of the three subgroups of order 4: $\gen i, \gen j$, and $\gen k$. Moreover, the subgroups of order 4 are maximal since no other divisor exists between 4 and 8.
+
+    We consider the joins of the subgroups. By the presentation for $Q_8$, we have the join of any 2 subgroups of order 4 is $Q_8$. The join of the subgroup of order 2 with any subgroup of order 4 is the subgroup of order 4 itself since $\gen{-1}$ is contained in each subgroup of order 4.
+
+    The intersection of any two distinct subgroups of order 4 is $\gen{-1}$. The intersection of the subgroup of order 2 with any subgroup of order 4 is also $\gen{-1}$. Hence, the lattice is correct.
+\end{sol}
+
+\begin{exercise}[3.2.4]
+    Show that if $|G| = pq$ for some primes $p$ and $q$ (not necessarily distinct) then either $G$ is abelian or $Z(G) = 1$. [See \exref{3.1.36}.]
+\end{exercise}
+
+\begin{sol}
+    If $G$ is abelian, then we are done. Suppose $G$ is not abelian, so that $Z(G)$ is a proper subgroup of $G$. Assume, by way of contradicition, that $Z(G) \neq 1$. By Lagrange's Theorem, the possible orders of $Z(G)$ are $p$ or $q$. Without loss of generality, assume $|Z(G)| = p$. Then $|G/Z(G)| = |G|/|Z(G)| = pq/p = q$, which is prime. By Corollary 3.10, $G/Z(G) \cong Z_q$, which is cyclic. By \exref{3.1.36}, then $G$ is abelian, a contradiction. Hence, $Z(G) = 1$.
+\end{sol}
+
+\begin{specialexercise}[3.2.5]
+    Let $H$ be a subgroup of $G$ and fix some element $g \in G$. 
+    \begin{subexercises}
+        \item Prove that $gH g^{-1}$ is a subgroup of $G$ of the same order as $H$.
+        \item Deduce that if $n \in \mathbb{Z}^+$ and $H$ is the unique subgroup of $G$ of order $n$ then $H \nsub G$.
+    \end{subexercises}
+\end{specialexercise}
+
+\begin{solenum}
+    \item We first show that $gHg\inv \leq G$. Note that $1 \in H$, hence $g1g\inv = 1 \in gHg\inv$ so that $gHg\inv$ is nonempty. Suppose $gh_1g\inv, gh_2g\inv \in gHg\inv$ for some $h_1, h_2 \in H$. Then
+    \[(gh_1g\inv)(gh_2g\inv)\inv = (gh_1g\inv)(gh_2\inv g\inv) = g(h_1h_2\inv)g\inv \in gHg\inv\]
+    since $h_1h_2\inv \in H$. Then $gHg\inv \leq G$.
+
+    To show that $gHg\inv$ has the same order as $H$, consider the mapping $\phi : H \to gHg\inv$ given by $\phi(h) = ghg\inv$. For $h_1, h_2 \in H$ such that $\phi(h_1) = \phi(h_2)$, then $gh_1g\inv = gh_2g\inv$, or $h_1 = h_2$, hence $\phi$ is injective. Moreover, for any $ghg\inv \in gHg\inv$, then $\phi(h) = ghg\inv$, so that $\phi$ is surjective. Hence, $\phi$ is a bijection, and $|gHg\inv| = |H|$.
+    \item Let $H$ be the unique subgroup of $G$ of order $n$. For any $g \in G$, consider the subgroup $gHg\inv$. By part (a), $gHg\inv$ is a subgroup of $G$ of order $n$. Since $H$ is the unique subgroup of order $n$, then $gHg\inv = H$ for every $g \in G$, hence $H \nsub G$.
+\end{solenum}
+
+\begin{exercise}[3.2.6]
+    Let $H \leq G$ and let $g \in G$. Prove that if the right coset $Hg$ equals some left coset of $H$ in $G$ then it equals the left coset $gH$ and $g$ must be in $N_G(H)$.
+\end{exercise}
+
+\begin{sol}
+    Suppose $Hg = g'H$ for some $g' \in G$. Note that $g \in Hg$ so that $g \in g'H$. Then $Hg = g'H = gH$, hence $Hg = gH$, and $g \in N_G(H)$.
+\end{sol}
+
+\begin{specialexercise}[3.2.7]
+    Let $H \leq G$ and define a relation $\sim$ on $G$ by $a \sim b$ if and only if $b^{-1}a \in H$. Prove that $\sim$ is an equivalence relation and describe the equivalence class of each $a \in G$. Use this to prove Proposition 4.
+\end{specialexercise}
+
+\begin{sol}
+    Let $a, b, c \in G$. To show that $\sim$ is an equivalence relation, we check the three properties:
+    \begin{itemize}
+        \item Reflexive: $a \sim a$ since $a\inv a = 1 \in H$.
+        \item Symmetric: If $a \sim b$, then $b\inv a \in H$. Then $(b\inv a)\inv = a\inv b \in H$, hence $b \sim a$.
+        \item Transitive: If $a \sim b$ and $b \sim c$, then $b\inv a, c\inv b \in H$. Then $(c\inv b)(b\inv a) = c\inv a \in H$, hence $a \sim c$.
+    \end{itemize}
+
+    The equivalence class of some $a \in G$ is given by $\set{b \in G \mid b\inv a \in H}$. Note that $b$ is in the equivalence class of $a$ when $b\inv a = h$ for some $h \in H$, hence $b = ah\inv$. The set becomes $\set{ah\inv \mid h \in H}$, which is the left coset of $H$ containing $a$. By Proposition 0.2, the equivalence classes partition $G$. Since the equivalence classes are precisely the left cosets of $H$ in $G$, then the left cosets of $H$ partition $G$.
+\end{sol}
+
+\begin{exercise}[3.2.8]
+    Prove that if $H$ and $K$ are finite subgroups of $G$ whose orders are relatively prime then $|H \cap K| = 1$.
+\end{exercise}
+
+\begin{sol}
+    Let $\abs H = m$ and $\abs K = n$ such that $(m, n) = 1$. Let $\ell = \abs{H \cap K}$. Since $H \cap K \leq H$ and $H \cap K \leq K$, then by Lagrange's Theorem, $\ell \mid m$ and $\ell \mid n$. It follows that $\ell \mid (m, n) = 1$, hence $\ell = 1$.
+\end{sol}
+
+\begin{specialexercise}[3.2.9]
+    Let $G$ be a finite group and let $p$ be a prime dividing $|G|$. Let $\ss$ denote the set of $p$-tuples of elements of $G$ the product of whose coordinates is 1:
+    \[\ss = \{(x_1, x_2, \ldots, x_p) \mid x_i \in G \text{ and } x_1x_2 \cdots x_p = 1\}\]
+    \begin{subexercises}
+        \item Show that $\ss$ has $|G|^{p-1}$ elements, hence has order divisible by $p$.
+    \end{subexercises}
+    Define the relation $\sim$ on $S$ by letting $\alpha \sim \beta$ if $\beta$ is a cyclic permutation of $\alpha$.
+    \begin{subexercises}[resume]
+        \item Show that a cyclic permutation of an element of $\ss$ is again an element of $\ss$.
+        \item Prove that $\sim$ is an equivalence relation on $\ss$.
+        \item Prove that an equivalence class contains a single element if and only if it is of the form $(x, x, \dots, x)$ with $x^p = 1$.
+        \item Prove that every equivalence class has order 1 or $p$ (this uses the fact that $p$ is \emph{prime}). Deduce that $|G|^{p-1} = k + pd$, where $k$ is the number of classes of size 1 and $d$ is the number of classes of size $p$.
+        \item Since $\{(1, 1, \dots, 1)\}$ is an equivalence class of size 1, conclude from (e) that there must be a nonidentity element $x \in G$ with $x^p = 1$, i.e., $G$ contains an element of order $p$. [Show $p \mid k$ and so $k > 1$.]
+    \end{subexercises}
+\end{specialexercise}
+
+\begin{solenum}
+    \item Let $\ss'$ denote the set of $(p - 1)$-tuples of elements of $G$. Observe that $|\ss'| = |G|^{p-1}$. Define the mapping
+    \[\phi : \ss' \to \ss \quad \text{by} \quad \phi(x_1, x_2, \dots, x_{p-1}) = (x_1, x_2, \dots, x_{p-1}, (x_1x_2 \cdots x_{p-1})\inv)\]
+    To show that $\phi$ is injective, suppose $\phi(x_1, \dots, x_{p-1}) = \phi(y_1, \dots, y_{p-1})$. Then $x_i = y_i$ for all $1 \leq i \leq p - 1$, and the last inverse term must imply $x_1x_2 \cdots x_{p - 1} = y_1y_2 \cdots y_{p - 1}$ since inverses are unique in a group. Hence $\phi$ is injective. Moreover, this mapping is clearly surjective. It follows that $\abs\ss = \abs{\ss'} = |G|^{p-1}$.
+    \item Let $\alpha = (x_1, x_2, \dots, x_p) \in \ss$. A cyclic permutation of $\alpha$ shifts the $i$-th coordinate of $\alpha$ to the $(i + k)$-th coordinate of $\beta$ for some fixed $k$, where the indices are taken modulo $p$ when $i + k > p$. Explicitly, $\beta = (x_k, x_{k+1}, \dots, x_p, x_1, x_2, \dots, x_{k-1})$ for some $1 \leq k \leq p$. Observe that these consist of the same elements as $\alpha$, just in a different order. Moreover, observe that if $x_1x_2 \cdots x_p = 1$, then $x_1x_2 \cdots x_{k - 1} = (x_k x_{k + 1} \cdots x_p)\inv$. It follows that
+    \[x_k x_{k+1} \cdots x_p x_1 x_2 \cdots x_{k-1} = x_k x_{k + 1} \cdots x_p (x_k x_{k + 1} \cdots x_p)\inv = 1\]
+    so that $\beta \in \ss$.
+    \item Let $\alpha, \beta, \gamma \in \ss$. We check the three properties of an equivalence relation:
+    \begin{itemize}
+        \item Reflexive: Since $\alpha$ shifted by 0 is itself, then $\alpha \sim \alpha$.
+        \item Symmetric: If $\alpha \sim \beta$, then $\beta$ is a shift of $\alpha$ by some $k$. Then shifting $\beta$ by $p - k$ returns $\alpha$, hence $\beta \sim \alpha$.
+        \item Transitive: If $\alpha \sim \beta$ and $\beta \sim \gamma$, then $\beta$ is a shift of $\alpha$ by some $k_1$, and $\gamma$ is a shift of $\beta$ by some $k_2$. Then shifting $\alpha$ by $(k_1 + k_2) \bmod p$ returns $\gamma$, hence $\alpha \sim \gamma$.
+    \end{itemize}
+    \begin{itemize}
+        \item[\rightimp] Let $[\alpha]$ denote the equivalence class of $\sim$ that contains $\alpha$, and let $\alpha = (x_1, x_2, \dots, x_p)$. If $[\alpha]$ contains a single element, then every cyclic permutation of $\alpha$ is equal to $\alpha$. In particular, the cyclic permutation that shifts each coordinate by 1 must be equal to $\alpha$, hence $x_2 = x_1, x_3 = x_2, \dots, x_p = x_{p-1}, x_1 = x_p$. It follows that $\alpha = (x, x, \dots, x)$ for some $x \in G$. Since $\alpha \in \ss$, then $x^p = 1$.
+        \item[\leftimp] Suppose $\alpha = (x, x, \dots, x)$ for some $x \in G$ such that $x^p = 1$. Then any cyclic permutation of $\alpha$ is equal to $\alpha$, hence $[\alpha]$ contains a single element.
+    \end{itemize}
+    \item Let $\alpha = (x_1, x_2, \dots, x_p) \in \ss$ where the $x_i$ need not be distinct, and let $[\alpha]$ be the equivalence class containing $\alpha$. Let $[\alpha]$ have $n$ elements. Note that for any two coordinates $x_i$ and $x_j$, if there exists some $k \in \z$ such that $i + kn \equiv j \bmod p$, then $x_i = x_j$ since shifting $\alpha$ by $kn$ returns $\alpha$ as there are only $n$ distinct cyclic permutations in $[\alpha]$.
+    
+    There are two cases to discuss, either $n = p$ or $1 \leq n < p$. If $n = p$, then all cyclic permutations of $\alpha$ are distinct, and we are done. Suppose $1 \leq n < p$. Since $p$ is prime, then $(n, p) = 1$, hence there exists some $k \in \z$ such that $kn \equiv 1 \bmod p$. In particular, $i + kn \equiv i + 1 \equiv j \bmod p$ implies $x_{i + 1} = x_j$. It follows that $x_i = x_j$ for all $1 \leq i, j \leq p$, hence $\alpha = (x, x, \dots, x)$ for some $x \in G$. By part (c), $[\alpha]$ contains a single element.
+
+    Since the equivalence classes partition $\ss$, let $k$ be the number of classes of size 1 and $d$ be the number of classes of size $p$. Then $\abs\ss = k + pd$, as desired.
+    \item Note that $\{(1, 1, \dots, 1)\}$ is an equivalence class of size 1, hence $k \geq 1$. From part (d), we have $\abs\ss = |G|^{p-1} = k + pd$. Since $p$ divides $|G|$, then it divides $|G|^{p-1}$, hence it divides $k + pd$. It follows that $p$ divides $k$. Since $k \geq 1$, then $k \geq p > 1$. In particular, there exists some equivalence class of size 1 that is not $\{(1, 1, \dots, 1)\}$, hence by part (c), there exists some $x \in G$ with $x^p = 1$ and $x \neq 1$. Thus, $G$ contains an element of order $p$.
+\end{solenum}
+
+\begin{specialexercise}[3.2.10]
+    Suppose $H$ and $K$ are subgroups of finite index in the (possibly infinite) group $G$ with $|G : H| = m$ and $|G : K| = n$. Prove that $\lcm(m, n) \leq |G : H \cap K| \leq mn$. Deduce that if $m$ and $n$ are relatively prime then $|G : H \cap K| = |G : H| \cdot |G : K|$.
+\end{specialexercise}
+
+\begin{sol} 
+    Let $|G : H \cap K| = \ell$. Consider the cosets $gH, gK$, and $g(H \cap K)$ for some $g \in G$. We wish to identify $g(H \cap K)$ in terms of $gH$ and $gK$. Note that $x \in g(H \cap K)$ implies that $g\inv x \in H \cap K$, hence $g\inv x \in H$ and $g\inv x \in K$, so that $x \in gH$ and $x \in gK$. It follows that $g(H \cap K) \subseteq gH \cap gK$. Now suppose $x \in gH \cap gK$. Then $x \in gH$ and $x \in gK$, hence $g\inv x \in H$ and $g\inv x \in K$, so that $g\inv x \in H \cap K$. It follows that $x \in g(H \cap K)$, hence $gH \cap gK \subseteq g(H \cap K)$. We conclude that $g(H \cap K) = gH \cap gK$.
+
+    Note that the set of cosets of $H \cap K$ in $G$ partitions $G$ into $\ell$ parts, and each coset is the intersection of a coset of $H$ with a coset of $K$. Since there are $m$ cosets of $H$ and $n$ cosets of $K$, then there are at most $mn$ distinct intersections, hence $\ell \leq mn$. 
+
+    We now show that $\ell$ is a multiple of $m$ (a similar argument can be done to show that it is a multiple of $n$). Let $x \in G$. Since the cosets of $H$ in $G$ partition $G$, then there exists a unique $g \in G$ such that $x \in gH$. Moreover, because $H \cap K \leq H$, then the cosets of $H \cap K$ in $H$ partition $H$ so that there exists a unique $h \in H$ such that $x \in gh(H \cap K)$. Pick another coset $h' \neq h$ of $H \cap K$ in $H$. Then $gh(H \cap K) \neq gh'(H \cap K)$ since if they were equal, then $(gh)\inv(gh') = h\inv h' \in H \cap K$, contradicting that $h$ and $h'$ are distinct cosets. It follows that for each coset of $H$ in $G$, there are $\abs{H : H \cap K}$ distinct cosets of $H \cap K$ in $G$. Since there are $m$ cosets of $H$ in $G$, then $\ell = m \abs{H : H \cap K}$, hence $m \mid \ell$. Similarly, $n \mid \ell$. Since $\ell$ is a multiple of both $m$ and $n$, then $\lcm(m, n) \mid \ell$, hence $\lcm(m, n) \leq \ell$, and we have the desired inequality $\lcm(m, n) \leq \ell \leq mn$.
+
+    Lastly, if $(m, n) = 1$, then $\lcm(m, n) = mn$ so that $\ell = mn$.
+\end{sol}
+
+\begin{specialexercise}[3.2.11]
+    Let $H \leq K \leq G$. Prove that $|G : H| = |G : K| \cdot |K : H|$. 
+\end{specialexercise}
+
+\begin{sol}
+    Note that cosets of $H$ are contained in cosets of $K$. If $H$ has infinite index in $K$ or if $K$ has infinite index in $G$, then $H$ has infinite index in $G$. The finite case follows in the proof of \exref{3.2.10}, where we showed that each coset of $K$ contains $\abs{K : H}$ distinct cosets of $H$. Since there are $\abs{G : K}$ distinct cosets of $K$ in $G$, then there are $\abs{G : K} \cdot \abs{K : H}$ distinct cosets of $H$ in $G$, hence $\abs{G : H} = \abs{G : K} \cdot \abs{K : H}$.
+\end{sol}
+
+\begin{exercise}[3.2.12]
+    Let $H \leq G$. Prove that the map $x \mapsto x^{-1}$ sends each left coset of $H$ in $G$ onto a right coset of $H$ and gives a bijection between the set of left cosets and the set of right cosets of $H$ in $G$ (hence the number of left cosets of $H$ in $G$ equals the number of right cosets).
+\end{exercise}
+
+\begin{sol}
+    Let $L$ be the set of left cosets of $H$ in $G$ and $R$ be the set of right cosets of $H$ in $G$. Define the map $\phi : L \to R$ be given by $\phi(xH) = Hx\inv$. Firstly, this map is well-defined: suppose $xH = yH$. Then $yx\inv \in H$, hence $(yx\inv)\inv = xy\inv \in H$, so that $Hx\inv = Hy\inv$. Note that the map $\psi : R \to L$ given by $\psi(Hx) = x\inv H$ is well-defined by a similar argument. It is clear that $\phi \circ \psi = 1$ and $\psi \circ \phi = 1$, hence $\psi = \phi\inv$ so that $\phi$ is a bijection. It follows that $\abs L = \abs R$.
+\end{sol}
+
+\begin{exercise}[3.2.13]
+    Fix any labelling of the vertices of a square and use this to identify $D_8$ as a subgroup of $S_4$. Prove that the elements of $D_8$ and $\gen{(123)}$ do not commute in $S_4$.
+\end{exercise}
+
+\begin{sol}
+    Let 
+    \[D_8 = \{1, (1\ 2\ 3\ 4), (1\ 3)(2\ 4), (1\ 4\ 3\ 2), (2\ 4), (1\ 2)(3\ 4), (1\ 3), (1\ 4)(2\ 3)\}\]
+    be the subgroup of $S_4$, where a square is labelled clockwise from 1 to 4. Note that $D_8$ is generated by $r = (1\ 2\ 3\ 4)$ and $s = (2\ 4)$. Then $(1\ 2\ 3)(1\ 2\ 3\ 4) = (1\ 3\ 4\ 2) \neq (1\ 3\ 2\ 4) = (1\ 2\ 3\ 4)(1\ 2\ 3)$. Since $(1\ 2\ 3\ 4) \in D_8$ and $(1\ 2\ 3) \in \gen{(1\ 2\ 3)}$, it follows that there exists elements of $D_8$ and $\gen{(1\ 2\ 3)}$ that do not commute in $S_4$.
+\end{sol}
+
+\begin{exercise}[3.2.14]
+    Prove that $S_4$ does not have a normal subgroup of order 8 or a normal subgroup of order 3.
+\end{exercise}
+
+\begin{sol}
+    Suppose $S_4$ has a normal subgroup $N$ of order 8. By Lagrange's then $N$ cannot contain any 3-cycle. Then elements of $N$ are comprised of at least the identity, 2-cycles, a product of 2 disjoint 2-cycles, or 4-cycles. Observe that $N$ cannot contain all 6 2-cycles of $S_4$ for otherwise $(1\ 2)(1\ 3) = (1\ 3\ 2) \in N$, a contradiction. It must be that there is some 2-cycle $\sigma \in S_4$ that is not in $N$. Since $N \nsub S_4$, then $N \gen\sigma \leq S_4$. Since $\sigma \not\in S_4$, then $N \cap \gen\sigma = 1$, hence $|N \gen\sigma| = 16$. This contradicts Lagrange's Theorem, hence $N$ cannot exist.
+
+    If $S_4$ has a normal subgroup $M$ of order 3, then $M \cong Z_3$ which is cyclic. Since $S_4$ contains 4 distinct 3-cycles, we may pick another $\tau \in S_4$ such that $\tau \not\in M$, hence $M \cap \gen\tau = 1$. Because $M \nsub S_4$, we have $|M \gen\tau| = 9$, contradicting Lagrange's Theorem, hence $M$ cannot exist.
+\end{sol}
+
+\begin{exercise}[3.2.15]
+    Let $G = S_n$ and for fixed $i \in \{1, 2, \dots, n\}$ let $G_i$ be the stabilizer of $i$. Prove that $G_i \cong S_{n-1}$.
+\end{exercise}
+
+\begin{sol}
+    Observe that the elements of $G_i$ consists of permutations on the $\{1, 2, \ldots, n\} - \set i$ which has $n - 1$ elements. Then $G_i \cong S_{n - 1}$.
+\end{sol}
+
+\begin{exercise}[3.2.16]
+    Use Lagrange's Theorem in the multiplicative group $(\mathbb{Z}/p\mathbb{Z})^\times$ to prove \emph{Fermat's Little Theorem}: if $p$ is a prime then $a^p \equiv a \bmod p$ for all $a \in \z$.
+\end{exercise}
+
+\begin{sol}
+    Let $p$ be a prime. Note that $\units[p] = \{\bar 1, \bar 2, \ldots, \bar{p - 1}\}$. For any $a \in \z$, then we either have $a \mid p$ or $a \nmid p$. If $a \mid p$, then $a \equiv 0 \bmod p$, hence $a^p \equiv 0 \equiv a \bmod p$. If $a \nmid p$, then $\bar a \in \units[p]$. By Lagrange's Theorem and Corollary 3.9, $\abs{\bar a}$ divides $\abs{\units[p]} = p - 1$, hence $\bar a^{p - 1} = \bar 1$. Then $a^{p - 1} \equiv 1 \bmod p$, or $a^p \equiv a \bmod p$.
+\end{sol}
+
+\begin{exercise}[3.2.17]
+    Let $p$ be a prime and let $n$ be a positive integer. Find the order of $\bar p$ in $(\mathbb{Z}/(p^n - 1)\mathbb{Z})^\times$ and deduce that $n \mid \phi(p^n - 1)$ (here $\phi$ is Euler's function).
+\end{exercise}
+
+\begin{sol}
+    Since $p^n \equiv 1 \bmod (p^n - 1)$, then $\abs{\bar p} \leq n$. Suppose $d < n$ such that $p^d \equiv 1 \bmod (p^n - 1)$. Then $p^n - 1 \mid p^d - 1$ so that $p^n - 1 \leq p^d - 1$, a contradiction. It follows that $\abs{\bar p} = n$. By Lagrange's Theorem, $\abs{\bar p} = n$ divides $\abs{\units[(p^n - 1)]} = \phi(p^n - 1)$.
+\end{sol}
+
+\newpage
+
+\begin{exercise}[3.2.18]
+    Let $G$ be a finite group, let $H$ be a subgroup of $G$ and let $N \nsub G$. Prove that if $\abs H$ and $|G : N|$ are relatively prime then $H \leq N$.
+\end{exercise}
+
+\begin{sol}
+    Since $N \nsub G$, then $HN \leq G$. Moreover, $H \cap N \leq H$ so that $|H \cap N|$ divides $\abs H$. Then we have that $|G| = m|HN|$ and $|H| = n|H \cap N|$ for some $m, n \in \z$. By Corollary 13, we have that
+    \[|HN| = \frac{\abs H \abs N}{|H \cap N|} \implies m|HN| = m\frac{n|H \cap N||N|}{|H \cap N|} \implies \frac{|G|}{|N|} = |G : N| = mn\]
+    Since $(\abs H, |G : N|) = 1$, then $n = 1$ so that $\abs H = |H \cap N|$. It follows that $H = H \cap N$, hence $H \leq N$.
+\end{sol}
+
+\begin{exercise}[3.2.19]
+    Prove that if $N$ is a normal subgroup of the finite group $G$ and $(|N|, |G : N|) = 1$ then $N$ is the unique subgroup of $G$ of order $|N|$.
+\end{exercise}
+
+\begin{sol}
+    Let $M$ be a subgroup of $G$ with order $\abs N$. By the previous exercise, we have $M \leq N$, and since they have the same order, then $M = N$.
+\end{sol}
+
+\begin{specialexercise}[3.2.20]
+    If $A$ is an abelian group with $A \nsub G$ and $B$ is any subgroup of $G$ prove that $A \cap B \nsub AB$.
+\end{specialexercise}
+
+\begin{sol}
+    Let $x \in A \cap B$ and $ab \in AB$ where $a \in A$ and $b \in B$. Note that
+    \[(ab)(x)(ab)\inv = a(bxb\inv)a\inv\]
+    Since $A \nsub G$, then $bxb\inv \in A$. Moreover, since $A$ is abelian, then $a(bxb\inv)a\inv = bxb\inv \in A$. Also, since $x, b \in B$ and $B \leq G$, then $bxb\inv \in B$. It follows that $(ab)x(ab)\inv \in A \cap B$, hence $A \cap B \nsub AB$.
+\end{sol}
+
+\begin{exercise}[3.2.21]
+    Prove that $\mathbb{Q}$ has no proper subgroups of finite index. Deduce that $\mathbb{Q}/\mathbb{Z}$ has no proper subgroups of finite index. [Recall \exref{1.6.21} and \exref{3.1.15}.]
+\end{exercise}
+
+\begin{sol}
+    Suppose $\q$ has a proper subgroup $H$ such that $|\q : H|$ is some finite $n$. Recalling that $\q$ is divisible by \exref{2.4.19}, then $\q/H$ is also divisible by \exref{3.1.15}. However, $\q/H$ is a finite group of order $n$, hence it cannot be divisible unless it is trivial. It follows that $H = \q$, a contradiction. Therefore, $\q$ has no proper subgroups of finite index. Moreover, $\q/\z$ has no proper subgroup of finite index for the same reasoning.
+\end{sol}
+
+\begin{exercise}[3.2.22]
+    Use Lagrange's Theorem in the multiplicative group $(\mathbb{Z}/n\mathbb{Z})^\times$ to prove \emph{Euler's Theorem}: $a^{\varphi(n)} \equiv 1 \bmod n$ for every integer $a$ relatively prime to $n$, where $\varphi$ denotes Euler's $\varphi$-function.
+\end{exercise}
+
+\begin{sol}
+    Recall $\abs{\units} = \phi(n)$. Since $\bar a \in \units$, then $\abs{\bar a}$ divides $\phi(n)$, hence $a^{\phi(n)} \equiv 1 \bmod n$.
+\end{sol}
+
+\begin{exercise}[3.2.23]
+    Determine the last two digits of $3^{3^{100}}$. [Determine $3^{100} \bmod \phi(100)$ and use the previous exercise.]
+\end{exercise}
+
+\begin{sol}
+    Note that $100 = 2^2 \cdot 5^2$, then $\phi(100) = 2^1(2 - 1)5^1(5 - 1) = 40$. Since $3^4 \bmod 40 = 81 \bmod 40 \equiv 1 \bmod 40$, then $3^{100} \bmod 40 \equiv 1 \bmod 40$. It follows that $3^{100} = 1 + 40k = 1 + \phi(100)k$ for some $k \in \z$, hence
+    \[3^{3^{100}} = 3^{1 + \phi(100)k} = 3 \cdot 3^{{\phi(100)}^k} \equiv 3 \cdot 1^k \bmod 100 = 3 \bmod 100\]
+    so that the last two digits of $3^{3^{100}}$ are 03.
+\end{sol}
