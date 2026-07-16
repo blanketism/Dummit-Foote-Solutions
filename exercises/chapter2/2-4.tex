@@ -218,7 +218,7 @@
     Let $\ut_3(\f_2)$ denote the upper triangular matrices in $\gl_3(\f_2)$. Note each matrix has 1's on the diagonal, and the 3 entries above the diagonal can each be either 0 or 1. Therefore, there are $2^3 = 8$ such matrices, so $\abs{\ut_3(\f_2)} = 8$. Using the notation from \exref{1.4.11}, we must find $X, Y \in \ut_3(\f_2)$ such that $X^4 = Y^2 = I_3$ and $XY = YX^3$.
 
     From \exref{1.4.11} (d), pick out elements of order 4 and 2, namely $X = (1, 0, 1)$ and $Y = (1, 0, 0)$. The first set of relations are easily verified, while the relation $XY = YX^3$ can be checked by direct computation:
-    \[XY = (1, 0, 1)(1, 0, 0) = (0, 1, 1) = (1, 0, 0)(1, 1, 1) = YX^3.\]
+    \[XY = (1, 0, 1)(1, 0, 0) = (0, 0, 1) = (1, 0, 0)(1, 1, 1) = YX^3.\]
     Moreover, $Y \notin \gen X$, so $\gen{X, Y}$ has more than 4 elements. Since $\ut_3(\f_2)$ has 8 elements, it follows that $\gen{X, Y} = \ut_3(\f_2)$, and thus $\ut_3(\f_2) \cong D_8$.
 \end{sol}
 
