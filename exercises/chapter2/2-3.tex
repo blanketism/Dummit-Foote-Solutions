@@ -92,7 +92,7 @@
 \begin{sol}
     Suppose $\bar r, \bar s \in \intmod[48]$ such that $\bar r = \bar s$. Then $r \equiv s \bmod 48$. If $\psi_a$ is well-defined, then
     \[\psi_a(\bar r) = \psi_a(r \cdot \bar 1) = x^{a r} = x^{a s} = \psi_a(s \cdot \bar 1) = \psi_a(\bar s)\]
-    so that $x^{a (r - s)} = 1$. By $\abs x = 36, $ we know $36 \mid a(r - s)$. Since $48 \mid (r -s)$, then there exists $k$ such that $36 \mid 48ak$, or $4 \mid 3ak$. Since $k$ is arbitrary, this must hold for all integers $k$. Hence, $3 \mid a$.
+    so that $x^{a (r - s)} = 1$. By $\abs x = 36, $ we know $36 \mid a(r - s)$. Since $48 \mid (r -s)$, then there exists $k$ such that $36 \mid 48ak$, or $3 \mid 4ak$. Since $k$ is arbitrary, this must hold for all integers $k$. Hence, $3 \mid a$.
 
     $\psi_a$ can never be surjective, since that would imply $(a, 36) = 1$.
 \end{sol}
@@ -180,7 +180,7 @@
 \begin{sol}
     Let $\ell$ be the least common multiple of $m$ and $n$. Then there exist $a, b \in \z$ such that $\ell = am = bn$. Then
     \[(xy)^\ell = x^\ell y^\ell = x^{bn}y^{am} = 1 \cdot 1 = 1\]
-    so that by Proposition 2.3, then $|xy|$ divides $\ell$. Moreover, this is not true if $x$ and $y$ do not commute. If we consider $r, s \in D_8$, then $\abs r = 4$ and $\abs s = 2$, but $\abs{rs} = 2$ which 4 does not divide. Moreover, consider $r^2, s \in D_8$. Then $\abs{r^2} = 2$ and $\abs s = 2$, but $\abs{r^2s} = 4 \neq \lcm(2, 2)$.
+    so that by Proposition 2.3, then $|xy|$ divides $\ell$. Moreover, this is not true if $x$ and $y$ do not commute. If we consider $r, s \in D_8$, then $\abs r = 4$ and $\abs s = 2$, but $\abs{rs} = 2$ which 4 does not divide. Moreover, consider $rs, s \in D_8$. Then $\abs{rs} = 2$ and $\abs s = 2$, but $\abs{rss} = \abs r = 4 \neq \lcm(2, 2)$.
 \end{sol}
 
 \begin{exercise}[2.3.17]
