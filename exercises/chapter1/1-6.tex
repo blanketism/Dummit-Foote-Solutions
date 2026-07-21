@@ -19,9 +19,9 @@
     \[\phi(x^n) = \phi((x\inv)^{-n}) = \phi(x\inv)^{-n} = \phi(x)^{-n} = \phi(x)^n. \qh\]
 \end{solenum}
 
-\begin{specialexercise}[1.6.2]
+\begin{spex}[1.6.2]
     If $\phi : G \to H$ is an isomorphism, prove that $|\phi(x)| = |x|$ for all $x \in G$. Deduce that any two isomorphic groups have the same number of elements of order $n$ for each $n \in \z^+$. Is the result true if $\phi$ is only assumed to be a homomorphism?
-\end{specialexercise}
+\end{spex}
 
 \begin{sol}
     Let $x \in G$. Let $\abs x = m$ and $\abs{\phi(x)} = n$. Then
@@ -51,7 +51,7 @@
 \end{sol}
 
 \begin{exercise}[1.6.4]
-    Prove that the multiplicative groups $\r - \{0\}$ and $\mathbb{C} - \{0\}$ are not isomorphic.
+    Prove that the multiplicative groups $\r - \set{0}$ and $\c - \set{0}$ are not isomorphic.
 \end{exercise}
 
 \begin{sol}
@@ -109,7 +109,7 @@
         \item Prove that $\phi$ is a bijection from $S_\Delta$ onto $S_\Omega$ by finding a two-sided inverse for $\phi$.
         \item Prove that $\phi$ is a homomorphism, that is, $\phi(\sigma \circ \tau) = \phi(\sigma) \circ \phi(\tau)$.
     \end{subexercises}
-    \remark{Note the similarity to the change of basis or similarity transformations for matrices (we shall see the connections between these later in the text)}.
+    \note{Note the similarity to the change of basis or similarity transformations for matrices (we shall see the connections between these later in the text)}.
 \end{exercise}
 
 \begin{solenum}
@@ -148,9 +148,9 @@
     for all $a \in A$, $b \in B$, and $c \in C$. The proof is similar to the previous exercise, hence we omit the details to conclude that $\phi$ is an isomorphism and $G \times C \cong A \times H$.
 \end{sol}
 
-\begin{specialexercise}[1.6.13]
+\begin{spex}[1.6.13]
     Let $G$ and $H$ be groups and let $\phi : G \to H$ be a homomorphism. Prove that the image of $\phi$, $\phi(G)$, is a \defref{subgroup} of $H$. Prove that if $\phi$ is injective then $G \cong \phi(G)$.
-\end{specialexercise}
+\end{spex}
 
 \begin{sol}
     Observe that $1_H \in \phi(G)$ since $\phi(1_G) = 1_H$, so that $\phi(G)$ is nonempty. To show closure, let $h_1, h_2 \in \phi(G)$. Then there exist $g_1, g_2 \in G$ such that $\phi(g_1) = h_1$ and $\phi(g_2) = h_2$. Then
@@ -166,10 +166,10 @@
     so that $\psi$ is a homomorphism. Moreover, if $\psi(g_1) = \psi(g_2)$, then $\phi(g_1) = \phi(g_2)$, and since $\phi$ is injective, $g_1 = g_2$. Hence, $\psi$ is injective. For any $h \in \phi(G)$, there exists $g \in G$ such that $\phi(g) = h$, and hence $\psi(g) = h$. Therefore, $\psi$ is surjective, hence $\psi$ is an isomorphism and $G \cong \phi(G)$.
 \end{sol}
 
-\begin{specialexercise}[1.6.14]
+\begin{spex}[1.6.14]
     \label{def:kernel}
-    Let $G$ and $H$ be groups and let $\phi : G \to H$ be a homomorphism. Define the \textbf{kernel} of $\phi$ to be $\{ g \in G \mid \phi(g) = 1_H \}$ (so the kernel is the set of elements in $G$ which map to the identity of $H$, i.e., is the fiber over the identity of $H$). Prove that the kernel of $\phi$ is a subgroup of $G$. Prove that $\phi$ is injective if and only if the kernel of $\phi$ is the identity subgroup of $G$.
-\end{specialexercise}
+    Let $G$ and $H$ be groups and let $\phi : G \to H$ be a homomorphism. Define the \textbf{kernel} of $\phi$ to be $\set{ g \in G \mid \phi(g) = 1_H }$ (so the kernel is the set of elements in $G$ which map to the identity of $H$, i.e., is the fiber over the identity of $H$). Prove that the kernel of $\phi$ is a subgroup of $G$. Prove that $\phi$ is injective if and only if the kernel of $\phi$ is the identity subgroup of $G$.
+\end{spex}
 
 \begin{sol}
     Denote the kernel of $\phi$ by $\ker\phi$. Since $\phi(1_G) = 1_H$, then $1_G \in \ker\phi$, so that $\ker\phi$ is nonempty. To show closure, let $g_1, g_2 \in \ker\phi$. Then
@@ -178,8 +178,8 @@
     \[\phi(g_1\inv) = \phi(g_1)\inv = 1_H\inv = 1_H\]
     so that $g_1\inv \in \ker\phi$. Therefore, $\ker\phi$ is a subgroup of $G$.
     \begin{itemize}
-        \item [\rightimp] If $\phi$ is injective, then for $g \in \ker\phi$, we have $\phi(g) = 1_H = \phi(1_G)$. Then $g = 1_G$, so that $\ker\phi = \{1_G\}$.
-        \item [\leftimp] If $\ker\phi = \{1_G\}$, then for $g_1, g_2 \in G$, if $\phi(g_1) = \phi(g_2)$, we have $\phi(g_1)\phi(g_2)\inv = 1_H$, so $g_1g_2\inv \in \ker\phi$. Hence, $g_1g_2\inv = 1_G$, and thus $g_1 = g_2$. Therefore, $\phi$ is injective. \qh
+        \item [\rightimp] If $\phi$ is injective, then for $g \in \ker\phi$, we have $\phi(g) = 1_H = \phi(1_G)$. Then $g = 1_G$, so that $\ker\phi = \set{1_G}$.
+        \item [\leftimp] If $\ker\phi = \set{1_G}$, then for $g_1, g_2 \in G$, if $\phi(g_1) = \phi(g_2)$, we have $\phi(g_1)\phi(g_2)\inv = 1_H$, so $g_1g_2\inv \in \ker\phi$. Hence, $g_1g_2\inv = 1_G$, and thus $g_1 = g_2$. Therefore, $\phi$ is injective. \qh
     \end{itemize}
 \end{sol}
 
@@ -191,7 +191,7 @@
     Let $(x_1, y_1), (x_2, y_2) \in \r^2$. Then
     \[\pi((x_1, y_1) + (x_2, y_2)) = \pi((x_1 + x_2, y_1 + y_2)) = x_1 + x_2 = \pi((x_1, y_1)) + \pi((x_2, y_2))\]
     so that $\pi$ is a homomorphism. Moreover, if $(x, y) \in \ker(\pi)$, then $\pi((x, y)) = x = 0$. Hence,
-    \[\ker(\pi) = \{(0, y) \mid y \in \r\} \qh\]
+    \[\ker(\pi) = \set{(0, y) \mid y \in \r} \qh\]
 \end{sol}
 
 \begin{exercise}[1.6.16]
@@ -200,7 +200,7 @@
 
 \begin{sol}
     The proof is similar to the previous exercise, hence we omit the details to conclude that $\pi_1$ and $\pi_2$ are homomorphisms. Moreover, if $(a, b) \in \ker(\pi_1)$, then $\pi_1((a, b)) = a = 1_A$. If $(a, b) \in \ker(\pi_2)$, then $\pi_2((a, b)) = b = 1_B$. Hence,
-    \[\ker(\pi_1) = \{(1_A, b) \mid b \in B\}, \quad \text{and} \quad \ker(\pi_2) = \{(a, 1_B) \mid a \in A\} \qh\]
+    \[\ker(\pi_1) = \set{(1_A, b) \mid b \in B}, \quad \text{and} \quad \ker(\pi_2) = \set{(a, 1_B) \mid a \in A} \qh\]
 \end{sol}
 
 \begin{exercise} [1.6.17]
@@ -225,7 +225,7 @@
 \end{sol}
 
 \begin{exercise}[1.6.19]
-    Let $G = \{ z \in \mathbb{C} \mid z^n = 1 \text{ for some } n \in \z^+ \}$. Prove that for any fixed integer $k > 1$ the map from $G$ to itself defined by $z \mapsto z^k$ is a surjective homomorphism but is not an isomorphism.
+    Let $G = \set{ z \in \c \mid z^n = 1 \text{ for some } n \in \z^+ }$. Prove that for any fixed integer $k > 1$ the map from $G$ to itself defined by $z \mapsto z^k$ is a surjective homomorphism but is not an isomorphism.
 \end{exercise}
 
 \begin{sol}
@@ -236,10 +236,10 @@
     so that $\phi$ is surjective. Finally, any $z = e^{2\pi i/k} \in G$ is such that $\phi(z) = z^k = 1$ with $z \neq 1$ since $k > 1$. Hence, $\phi$ is not injective and thus not an isomorphism.
 \end{sol}
 
-\begin{specialexercise}[1.6.20]
+\begin{spex}[1.6.20]
     \label{def:automorphism group}
     Let $G$ be a group and let $\aut(G)$ be the set of all isomorphisms from $G$ onto $G$. Prove that $\aut(G)$ is a group under function composition (called the \textbf{automorphism group} of $G$ and the elements of $\aut(G)$ are called \textbf{automorphisms} of $G$).
-\end{specialexercise}
+\end{spex}
 
 \begin{sol}
     Observe that $\aut(G)$ is associative under function composition and has identity through the identity map $\id : G \to G$ given by $\id(g) = g$. Moreover, $\phi \circ \psi$ for $\phi, \psi \in \aut(G)$ is a bijection. Then for any $g, h \in G$, we have
@@ -269,11 +269,11 @@
     so that $\phi$ is a homomorphism. For $k = -1$, see \exref{1.6.17} to conclude that $\phi \in \aut(A)$.
 \end{sol}
 
-\begin{specialexercise}[1.6.23]
+\begin{spex}[1.6.23]
     Let $G$ be a finite group which possesses an automorphism $\sigma$ such that $\sigma(g) = g$ if and only if $g = 1$. If $\sigma^2$ is the identity map from $G$ to $G$, prove that $G$ is Abelian (such an automorphism $\sigma$ is called \textbf{fixed point free} of order 2).
 
     \hint{Show that every element of $G$ can be written in the form $x^{-1}\sigma(x)$ and apply $\sigma$ to such an expression.}
-\end{specialexercise}
+\end{spex}
 
 \begin{sol}
     Define the map
@@ -294,7 +294,7 @@
 \begin{sol}
     To show that $G$ is isomorphic to $D_{2n}$, we first need to produce an element $t \in G$ of order $n$ along with an element $x \in G$ of order 2 such that $xt = t\inv x$. The clear choice is to let $t = xy$ and keep $x$ as is. Note that $|t| = |xy| = n$ by assumption, and $|x| = 2$ by assumption. Moreover,
     \[xt = x(xy) = (xx)y = y = (xy)\inv x = t\inv x\]
-    so that the elements $x, t \in G$ satisfy the relations of $D_{2n}$. Additionally, observe that $y = xt$ so that $t$ and $x$ generate $G$. Following this, it is easy to see that every element of $G$ can be written in the form $x^i t^j$ for $i \in \{0, 1\}$ and $0 \leq j < n$. For $x = 0$, we have the elements in the cyclic subgroup generated by $t$, and for $x = 1$, we have the elements $\set{x, xt, xt^2, \ldots, xt^{n-1}}$. Since $|t| = n$, then these are all distinct elements of $G$. Hence, $|G| = 2n$.
+    so that the elements $x, t \in G$ satisfy the relations of $D_{2n}$. Additionally, observe that $y = xt$ so that $t$ and $x$ generate $G$. Following this, it is easy to see that every element of $G$ can be written in the form $x^i t^j$ for $i \in \set{0, 1}$ and $0 \leq j < n$. For $x = 0$, we have the elements in the cyclic subgroup generated by $t$, and for $x = 1$, we have the elements $\set{x, xt, xt^2, \ldots, xt^{n-1}}$. Since $|t| = n$, then these are all distinct elements of $G$. Hence, $|G| = 2n$.
 
     Since the relations of $D_{2n}$ are satisfied by $x, t \in G$, $G$ is generated by $x$ and $t$, and $|G| = |D_{2n}| = 2n$, it follows that the map
     \[\phi : D_{2n} \to G \quad \text{by} \quad r \mapsto t, s \mapsto x\]
@@ -344,7 +344,7 @@
         \cos \theta
     \end{pmatrix}.
     \]
-    Then the matrix of $T$ with respect to the standard basis $\{\b e_1, \b e_2\}$ is exactly the desired matrix.
+    Then the matrix of $T$ with respect to the standard basis $\set{\b e_1, \b e_2}$ is exactly the desired matrix.
     \item It is easy to show by induction that for any positive $k$, then $\phi(r)^k$ is given by the following matrix:
     \[\phi(r)^k = \begin{pmatrix}
         \cos (k\theta) & -\sin (k\theta) \\
@@ -382,7 +382,7 @@
 \end{solenum}
 
 \begin{exercise}[1.6.26]
-    Let $i$ and $j$ be the generators of $Q_8$ described in Section 5. Prove that the map $\phi$ from $Q_8$ to $\gl_2(\mathbb{C})$ defined on generators by
+    Let $i$ and $j$ be the generators of $Q_8$ described in Section 5. Prove that the map $\phi$ from $Q_8$ to $\gl_2(\c)$ defined on generators by
     \[\phi(i) = 
     \begin{pmatrix}
         \sqrt{-1} & 0 \\
@@ -399,5 +399,5 @@
 \end{exercise}
 
 \begin{sol}
-    Matrix multiplication shows that the relations described in \exref{1.5.3} are satisfied, so that $\phi$ extends to a homomorphism from $Q_8$ to $\gl_2(\mathbb{C})$. Moreover, $\phi$ is injective since the only element that maps to the identity matrix is $1 \in Q_8$. Therefore, $\phi$ is an injective homomorphism.
+    Matrix multiplication shows that the relations described in \exref{1.5.3} are satisfied, so that $\phi$ extends to a homomorphism from $Q_8$ to $\gl_2(\c)$. Moreover, $\phi$ is injective since the only element that maps to the identity matrix is $1 \in Q_8$. Therefore, $\phi$ is an injective homomorphism.
 \end{sol}

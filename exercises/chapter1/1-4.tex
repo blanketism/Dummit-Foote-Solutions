@@ -99,7 +99,7 @@ Let $F$ be a field and let $n \in \zp$.
 \end{exercise}
 
 \begin{sol}
-    Since $n$ is not prime, it must be composite. Then there exist $a, b \in \zp$ such that $1 < a, b < n$ and $n = ab$. Moreover, $(a, n) \neq 1$ since $a \mid n$. Then $a$ has no multiplicative inverse in $\intmod$, so $\intmod$ is not a field.
+    If $n = 1$, then $\intmod[1] = \set{\bar 0}$ is not a field, since $\units[1] = \varnothing$, contradicting that $\units[1]$ should be a group. Otherwise, suppose $n \geq 2$ and is composite. Then there exist $a, b \in \zp$ such that $1 < a, b < n$ and $n = ab$. Moreover, $(a, n) \neq 1$ since $a \mid n$. By \exref{0.3.12}, there does not exist $c \in \z$ such that $ac \equiv 1 \bmod n$. Hence, $\intmod$ is not a field.
 \end{sol}
 
 \begin{exercise}[1.4.5]
@@ -107,7 +107,7 @@ Let $F$ be a field and let $n \in \zp$.
 \end{exercise}
 
 \begin{solitem}
-    \item [\rightimp] If $\gl_n(F)$ is finite, the subset $\set{\alpha I \mid \alpha\in F}$ must also be finite, which implies that $F$ has a finite number of elements.
+    \item [\rightimp] If $\gl_n(F)$ is finite, the subset $\set{\alpha I \mid \alpha\in F\unt}$ must also be finite, which implies that $F$ has a finite number of elements.
     \item [\leftimp] Suppose $|F| = q$. Then an $n \times n$ matrix over $F$ has $q^{n^2}$ possible entries. Since $\gl_n(F)$ is a subset of the set of all $n \times n$ matrices over $F$, it follows that $\gl_n(F)$ is finite.
 \end{solitem}
 
@@ -122,7 +122,7 @@ Let $F$ be a field and let $n \in \zp$.
 \begin{exercise}[1.4.7]
     Let $p$ be a prime. Prove that the order of $\gl_2(\f_p)$ is $p^4 - p^3 - p^2 + p$.
     
-    \remark{Do not just quote the order formula in this section.}
+    \note{Do not just quote the order formula in this section.}
 
     \hint{Subtract the number of $2 \times 2$ matrices which are \emph{not} invertible from the total number of $2 \times 2$ matrices over $\f_p$. You may use the fact that a $2 \times 2$ matrix is not invertible if and only if one row is a multiple of the other.}
 \end{exercise}
@@ -226,7 +226,7 @@ Let $F$ be a field and let $n \in \zp$.
         0 & 1/c
     \end{pmatrix}\]
     \item Since $G$ is closed under inverses and matrix multiplication, the result follows.
-    \item Let $H = \{A \in G \mid a = c\}$. Then
+    \item Let $H = \set{A \in G \mid a = c}$. Then
     \[
     \begin{pmatrix}
         a_1 & b_1 \\
@@ -288,7 +288,7 @@ Let $F$ be a field and let $n \in \zp$.
         \item Find the order of each element of the finite group $H(\intmod[2])$.
         \item Prove that every non-identity of the group $H(\r)$ has infinite order.
     \end{subexercises}
-    \authornote{The choice of rewriting the matrix as a tuple is simply a time saver/ease of notation for the sake of computation. However, it does allow one to encode $H(F)$ in the multiplication law of the field.}
+    \mnote{The choice of rewriting the matrix as a tuple is simply a time saver/ease of notation for the sake of computation. However, it does allow one to encode $H(F)$ in the multiplication law of the field.}
 \end{exercise}
 
 \begin{solenum}
@@ -299,10 +299,42 @@ Let $F$ be a field and let $n \in \zp$.
         0 & 1 & f + c \\
         0 & 0 & 1
     \end{pmatrix} \in H(F)\]
-    It is trivial to exhibit non-commutative matrices, hence $H(F)$ is non-Abelian.
+    Consider the matrices
+    \[X =
+    \begin{pmatrix}
+        1 & 1 & 1 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1
+    \end{pmatrix}, \quad
+    Y =
+    \begin{pmatrix}
+        1 & 0 & 0 \\
+        0 & 1 & 1 \\
+        0 & 0 & 1
+    \end{pmatrix} \in H(F).\]
+    Then
+    \[XY =
+    \begin{pmatrix}
+        1 & 1 & 1 \\
+        0 & 1 & 1 \\
+        0 & 0 & 1
+    \end{pmatrix} \neq
+    \begin{pmatrix}
+        1 & 1 & 0 \\
+        0 & 1 & 1 \\
+        0 & 0 & 1
+    \end{pmatrix} = YX,\]
+    so that $H(F)$ is non-Abelian.
     \item From part (a), we know $G$ is closed under matrix multiplication. For ease of notation, represent a matrix as a tuple: $X = (a, b, c)$ and $Y = (d, e, f)$. Then we may represent matrix multiplication in $H(F)$ as
     \[(a, b, c)(d, e, f) = (a + d, af + b + e, c + f)\]
-    Now we want to find $(x, y, z)$ such that $(a, b, c)(x, y, z) = (0, 0, 0)$. Then $(a + x, az + b + y, c + z) = (0, 0, 0)$ implies $x = -a$, $y = -b + ac$, and $z = -c$. It follows that $X\inv = (-a, -b + ac, -c)$.
+    Now we want to find $(x, y, z)$ such that $(a, b, c)(x, y, z) = (0, 0, 0)$. Then $(a + x, az + b + y, c + z) = (0, 0, 0)$ implies $x = -a$, $y = -b + ac$, and $z = -c$. It follows that
+    \[X\inv = 
+    \begin{pmatrix}
+        1 & -a & -b + ac \\
+        0 & 1 & -c \\
+        0 & 0 & 1
+    \end{pmatrix} = (-a, -b + ac, -c)\]
+    so that $H(F)$ is closed under inverses.
     \item For some $(a, b, c) \in H(F)$, we know that there are $|F|$ choices for each of $a, b, c$. Then $|H(F)| = |F|^3$. Now let $(a, b, c), (d, e, f), (g, h, i) \in H(F)$. Then we have
     \begin{align*}
         ((a, b, c)(d, e, f))(g, h, i) & = (a + d, af + b + e, c + f)(g, h, i) \\

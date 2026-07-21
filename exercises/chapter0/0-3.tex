@@ -36,7 +36,7 @@
 
     \hint{Use the fact that $10 \equiv 1 \bmod 9$.}
 
-    \remark{Note that this is the usual arithmetic rule that the remainder after division by 9 is the same as the sum of the decimal digits mod 9—in particular an integer is divisible by 9 if and only if the sum of its digits is divisible by 9.}
+    \note{Note that this is the usual arithmetic rule that the remainder after division by 9 is the same as the sum of the decimal digits mod 9—in particular an integer is divisible by 9 if and only if the sum of its digits is divisible by 9.}
 \end{exercise}
 
 \begin{sol} 
@@ -53,15 +53,29 @@
 \end{exercise}
 
 \begin{sol}
-    Modding $37^{100}$ by 29 results in 23.
+    Consider the following calculations mod 29, where we note that $37 \equiv 8 \bmod 29$:
+    \begin{align*}
+        8^2 \bmod 29 & \equiv 6 & 8^{16} \bmod 29 & \equiv 23 \\
+        8^4 \bmod 29 & \equiv 7 & 8^{32} \bmod 29 & \equiv 7 \\
+        8^8 \bmod 29 & \equiv 20 & 8^{64} \bmod 29 & \equiv 20
+    \end{align*}
+    Then $8^{100} \equiv 8^{64} \cdot 8^{32} \cdot 8^4 \equiv 20 \cdot 7 \cdot 7 \equiv 23 \bmod 29$.
 \end{sol}
 
 \begin{exercise}[0.3.5]
     Compute the last two digits of $9^{1500}$.
+
+    \note{One may also do this by considering the binomial expansion of $(10 - 1)^{1500}$, but we will maintain the approach of using modular arithmetic.}
 \end{exercise}
 
 \begin{sol}
-    Modding $9^{1500}$ by 100 results in 1.
+    Doing repeated squaring, we have
+    \begin{align*}
+        9^2 \bmod 100 & \equiv 81 & 9^{16} \bmod 100 & \equiv 61 \\
+        9^4 \bmod 100 & \equiv 61 & 9^{32} \bmod 100 & \equiv 21 \\
+        9^8 \bmod 100 & \equiv 21 & 9^{64} \bmod 100 & \equiv 41
+    \end{align*}
+    Observe that $9^{64} \equiv 9^4 \equiv 61 \bmod 100$. Then $9^{60} \equiv 1 \bmod 100$, so that $9^{1500} \equiv 9^{25 \cdot 60} \equiv 1^{25} \equiv 1 \bmod 100$. Thus, the last two digits of $9^{1500}$ are $01$.
 \end{sol}
 
 \begin{exercise} [0.3.6]
@@ -116,9 +130,9 @@
     Put $a = 2k + 1$ for $k \in \z$. Then $a^2 = 4k(k + 1) + 1 \equiv 1 \bmod 8$ since $k(k + 1)$ is always even.
 \end{sol}
 
-\begin{specialexercise}[0.3.10]
+\begin{spex}[0.3.10]
     Prove that the number of elements of $\units$ is $\phi(n)$, where $\phi$ denotes the Euler $\phi$-function.
-\end{specialexercise}
+\end{spex}
 
 \begin{sol}
     It suffices to show that $\bar a \in \units$ if and only if $(a, n) = 1$.
@@ -143,7 +157,7 @@
 \end{exercise}
 
 \begin{sol}
-    Let $(a, n) = d > 1$. Then $a/d, n/d \in \z$ and $1 \leq a/d < n/d$. Put $b = n/d$, so that $1 \leq b < n$ and
+    Let $(a, n) = d > 1$. Then $a/d, n/d \in \z$. Put $b = n/d$, so that $1 \leq b < n$ and
     \[ab = a(n/d) = (a/d)n \equiv 0 \bmod n.\]
     If there existed some $c \in \z$ such that $ac \equiv 1 \bmod n$, then $(ac)b \equiv b \bmod n$. However, $ab \equiv 0 \bmod n$, so that $0 \equiv b \bmod n$, which is impossible since $1 \leq b < n$.
 \end{sol}
@@ -163,7 +177,7 @@
 \end{exercise}
 
 \begin{sol}
-    The previous two exercises show that $a$ and $n$ are relatively prime if and only if there exists $b$ such that $ab \equiv 1 \bmod n$, which is exactly the proposition. For $n = 12$, the elements $1, 5, 7, 11$ are relatively prime to $12$, so that $\units[12] = \{\bar 1, \bar 5, \bar 7, \bar{11}\} $ whose inverses are $\bar 1, \bar 7, \bar 5, \bar{11}$ respectively. 
+    The previous two exercises show that $a$ and $n$ are relatively prime if and only if there exists $b$ such that $ab \equiv 1 \bmod n$, which is exactly the proposition. For $n = 12$, the elements $1, 5, 7, 11$ are relatively prime to $12$, so that $\units[12] = \set{\bar 1, \bar 5, \bar 7, \bar{11}} $ whose inverses are $\bar 1, \bar 5, \bar 7, \bar{11}$ respectively. 
 \end{sol}
 
 \begin{exercise}[0.3.15]
@@ -189,7 +203,7 @@
 \begin{exercise}[0.3.16]
     Write a computer program to add and multiply mod $n$, for any $n$ given as input. The output of these operations should be the least residues of the sums and products of two integers. Also include the feature that if $(a, n) = 1$, an integer $c$ between $1$ and $n - 1$ such that $\bar a \cdot \bar c = \bar 1$ may be printed on request. 
     
-    \remark{Your program should not, of course, simply quote ``mod'' functions already built into many systems.}
+    \note{Your program should not, of course, simply quote ``mod'' functions already built into many systems.}
 \end{exercise}
 
 \begin{sol}

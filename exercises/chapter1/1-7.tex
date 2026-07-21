@@ -11,7 +11,7 @@
 \end{sol}
 
 \begin{exercise}[1.7.2]
-    Show that the additive group $\mathbb{Z}$ acts on itself by $z\cdot a = z + a$ for all $z,a\in\mathbb{Z}$.
+    Show that the additive group $\z$ acts on itself by $z\cdot a = z + a$ for all $z,a\in\z$.
 \end{exercise}
 
 \begin{sol}
@@ -21,7 +21,7 @@
 \end{sol}
 
 \begin{exercise}[1.7.3]
-    Show that the additive group $\mathbb{R}$ acts on the $x,y$ plane $\mathbb{R}\times\mathbb{R}$ by $r\cdot (x,y) = (x + r, y)$.
+    Show that the additive group $\r$ acts on the $x,y$ plane $\r\times\r$ by $r\cdot (x,y) = (x + r, y)$.
 \end{exercise}
 
 \begin{sol}
@@ -30,13 +30,13 @@
     Moreover, $0 \cdot (x, y) = (x + 0, y) = (x, y)$. Then $\r$ acts on $\r^2$.
 \end{sol}
 
-\begin{specialexercise}[1.7.4]
+\begin{spex}[1.7.4]
     Let $G$ be a group acting on a set $A$ and fix some $a\in A$. Show that the following sets are {\hypersetup{linkcolor=red}\hyperref[def:subgroup]{subgroups}} of $G$:
     \begin{subexercises}
         \item the kernel of the action,
-        \item $\{g\in G \mid g a = a\}$--this subgroup is called the \textbf{stabilizer} of $a$ in $G$.
+        \item $\set{g\in G \mid g a = a}$--this subgroup is called the \textbf{stabilizer} of $a$ in $G$.
     \end{subexercises}
-\end{specialexercise}
+\end{spex}
 
 \begin{solenum}
     \item Let $K$ denote the kernel of the action. If $g, h \in K$, then for any $a \in A$, we have
@@ -64,7 +64,7 @@
 \end{exercise}
 
 \begin{solitem}
-    \item [\rightimp] Suppose $G$ acts faithfully on $A$ with kernel $K$. Certainly, $1 \cdot a = a$ for all $a \in A$, hence $1 \in K$. If $g \in K$, then $g \cdot a = a$. Faithfulness of the action implies that $g = 1$, so that $K = \{1\}$.
+    \item [\rightimp] Suppose $G$ acts faithfully on $A$ with kernel $K$. Certainly, $1 \cdot a = a$ for all $a \in A$, hence $1 \in K$. If $g \in K$, then $g \cdot a = a$. Faithfulness of the action implies that $g = 1$, so that $K = \set{1}$.
     \item [\leftimp] Suppose the kernel of the action is the set consisting only of the identity. Let $g, h \in G$ be such that $g \cdot a = h \cdot a$ for every $a \in A$. Then
     \[h\inv g \cdot a = h\inv \cdot (g \cdot a) = h\inv \cdot (h \cdot a) = (h\inv h) \cdot a = 1 \cdot a = a\]
     so that $h\inv g$ is in the kernel of the action. By assumption, then $h\inv g$ is the identity element of $G$, and $g = h$. Therefore, the action is faithful.
@@ -80,32 +80,32 @@
 
 \begin{exercise}[1.7.8]
     Let $A$ be a nonempty set and let $k$ be a positive integer with $k\le |A|$. The symmetric group $S_A$ acts on the set $B$ consisting of all subsets of $A$ of cardinality $k$ by
-    \[\sigma(\{a_1, \dots, a_k\}) = \{\sigma(a_1), \dots, \sigma(a_k)\}.\]
+    \[\sigma(\set{a_1, \dots, a_k}) = \set{\sigma(a_1), \dots, \sigma(a_k)}.\]
     \begin{subexercises}
         \item Prove that this is a group action.
-        \item Describe explicitly how the elements $(1\ 2)$ and $(1\ 2\ 3)$ act on the six $2$-element subsets of $\{1,2,3,4\}$.
+        \item Describe explicitly how the elements $(1\ 2)$ and $(1\ 2\ 3)$ act on the six $2$-element subsets of $\set{1,2,3,4}$.
     \end{subexercises}
 \end{exercise}
 
 \begin{solenum}
-    \item Let $\sigma, \tau \in S_A$. Then for any cardinality $k$ subset $\{x_1, \ldots, x_k\}$ of $A$, we have
+    \item Let $\sigma, \tau \in S_A$. Then for any cardinality $k$ subset $\set{x_1, \ldots, x_k}$ of $A$, we have
     \begin{align*}
-        \sigma \cdot (\tau \cdot \{x_1, \ldots, x_k\}) & = \sigma \cdot \{\tau(x_1), \ldots, \tau(x_k)\} \\
-        & = \{\sigma(\tau(x_1)), \ldots, \sigma(\tau(x_k))\} \\
-        & = (\sigma \circ \tau) \cdot \{x_1, \ldots, x_k\}
+        \sigma \cdot (\tau \cdot \set{x_1, \ldots, x_k}) & = \sigma \cdot \set{\tau(x_1), \ldots, \tau(x_k)} \\
+        & = \set{\sigma(\tau(x_1)), \ldots, \sigma(\tau(x_k))} \\
+        & = (\sigma \circ \tau) \cdot \set{x_1, \ldots, x_k}
     \end{align*}
-    Moreover, $1 \cdot \{x_1, \ldots, x_k\} = \{1(x_1), \ldots, 1(x_k)\} = \{x_1, \ldots, x_k\}$. Then it is a group action.
+    Moreover, $1 \cdot \set{x_1, \ldots, x_k} = \set{1(x_1), \ldots, 1(x_k)} = \set{x_1, \ldots, x_k}$. Then it is a group action.
     \item
     \[
     \begin{array}{c|c|c}
         A & (1\ 2) \cdot A & (1\ 2\ 3) \cdot A \\
         \hline
-        \{1, 2\} & \{2, 1\} & \{2, 3\} \\
-        \{1, 3\} & \{2, 3\} & \{2, 1\} \\
-        \{1, 4\} & \{2, 4\} & \{2, 4\} \\
-        \{2, 3\} & \{1, 3\} & \{3, 1\} \\
-        \{2, 4\} & \{1, 4\} & \{3, 4\} \\
-        \{3, 4\} & \{3, 4\} & \{1, 4\}
+        \set{1, 2} & \set{2, 1} & \set{2, 3} \\
+        \set{1, 3} & \set{2, 3} & \set{2, 1} \\
+        \set{1, 4} & \set{2, 4} & \set{2, 4} \\
+        \set{2, 3} & \set{1, 3} & \set{3, 1} \\
+        \set{2, 4} & \set{1, 4} & \set{3, 4} \\
+        \set{3, 4} & \set{3, 4} & \set{1, 4}
     \end{array} \qh
     \]
 \end{solenum}
@@ -113,7 +113,7 @@
 \begin{exercise}[1.7.9]
     Do both parts of the preceding exercise with ``ordered $k$-tuples'' in place of ``$k$-element subsets,'' where the action on $k$-tuples is defined as above but with set braces replaced by parentheses.
     
-    \remark{Note that, for example, the $2$-tuples $(1,2)$ and $(2,1)$ are different even though the sets $\{1,2\}$ and $\{2,1\}$ are the same, so the sets being acted upon are different.}
+    \note{Note that, for example, the $2$-tuples $(1,2)$ and $(2,1)$ are different even though the sets $\set{1,2}$ and $\set{2,1}$ are the same, so the sets being acted upon are different.}
 \end{exercise}
 
 \begin{solenum}
@@ -161,7 +161,7 @@
 \end{exercise}
 
 \begin{sol}
-    Let $\phi : D_8 \to S_4$ be the permutation representation of the action of $D_8$ on the vertices of a square $\{1, 2, 3, 4\}$, where the vertices are labeled in order around the square starting in the top left corner, then going clockwise. Then the cycle decompositions are as follows:
+    Let $\phi : D_8 \to S_4$ be the permutation representation of the action of $D_8$ on the vertices of a square $\set{1, 2, 3, 4}$, where the vertices are labeled in order around the square starting in the top left corner, then going clockwise. Then the cycle decompositions are as follows:
     \begin{align*}
         \phi(1) & = 1 & \phi(r) & = (1\ 2\ 3\ 4) \\
         \phi(r^2) & = (1\ 3)(2\ 4) & \phi(r^3) & = (1\ 4\ 3\ 2) \\
@@ -220,12 +220,12 @@
     Moreover, $1 \cdot a = a1\inv = a1 = a$. Then the maps define a left group action.
 \end{sol}
 
-\begin{specialexercise}[1.7.16]
+\begin{spex}[1.7.16]
     \label{def:conjugation}
     Let $G$ be any group and let $A = G$. Show that the maps defined by  
     \[ g \cdot a = gag^{-1} \quad \text{for all } g,a\in G \]
     do satisfy the axioms of a (left) group action. This action is called \textbf{conjugation}.
-\end{specialexercise}
+\end{spex}
 
 \begin{sol}
     Let $g, h \in G$. Then for any $a \in A$, we have
@@ -236,7 +236,7 @@
 \begin{exercise} [1.7.17]
     Let $G$ be a group and let $G$ act on itself by left conjugation, so each $g\in G$ maps $G$ to $G$ by
     \[ x \mapsto gxg^{-1}. \]
-    For fixed $g\in G$, prove that conjugation by $g$ is an isomorphism from $G$ onto itself. Deduce that $x$ and $gxg^{-1}$ have the same order for all $x\in G$ and that for any subset $A$ of $G$, $|A| = |gAg^{-1}|$ (here $gAg^{-1} = \{gag^{-1} \mid a\in A\}$).
+    For fixed $g\in G$, prove that conjugation by $g$ is an isomorphism from $G$ onto itself. Deduce that $x$ and $gxg^{-1}$ have the same order for all $x\in G$ and that for any subset $A$ of $G$, $|A| = |gAg^{-1}|$ (here $gAg^{-1} = \set{gag^{-1} \mid a\in A}$).
 \end{exercise}
 
 \begin{sol}
@@ -259,13 +259,13 @@
     \item Let $a, b, c \in A$ such that $a \sim b$ and $b \sim c$. Then $a = bh_1$ and $b = ch_2$ for some $h_1, h_2 \in H$. Then $a = (ch_2)h_1 = c(h_2h_1)$, hence $a \sim c$.
 \end{solitem}
 
-\begin{specialexercise}[1.7.19]
+\begin{spex}[1.7.19]
     \label{def:Lagrange's theorem}
     Let $H$ be a subgroup of the finite group $G$ and let $H$ act on $G$ (here $A = G$) by left multiplication. Let $x\in G$ and let $\mathcal{O}$ be the orbit of $x$ under this action of $H$. Prove that the map  
     \[H \to \mathcal{O}, \qquad h \mapsto hx\]
     is a bijection (hence all orbits have cardinality $|H|$). From this and the preceding exercise deduce \textbf{Lagrange's Theorem}:  
     \[\emph{If $G$ is a finite group and $H$ is a subgroup of $G$ then $|H|$ divides $|G|$}.\]
-\end{specialexercise}
+\end{spex}
 
 \begin{sol}
     Let $\phi : H \to \oo$ be the map defined by $\phi(h) = hx$ for all $h \in H$. We show that $\phi$ is a bijection. To show injectivity, suppose $\phi(h_1) = \phi(h_2)$ for some $h_1, h_2 \in H$. Then
@@ -280,7 +280,7 @@
 \end{exercise}
 
 \begin{sol}
-    Let $G$ be the group of rigid motions of a tetrahedron with vertices labeled $1, 2, 3, 4$. Then each $\alpha \in G$ sends some vertex to another vertex so that $G$ acts on the set of vertices $A = \{1, 2, 3, 4\}$.
+    Let $G$ be the group of rigid motions of a tetrahedron with vertices labeled $1, 2, 3, 4$. Then each $\alpha \in G$ sends some vertex to another vertex so that $G$ acts on the set of vertices $A = \set{1, 2, 3, 4}$.
 
     Since $G$ acts on $A$, this gives rise to a homomorphism 
     \[\phi : G \to S_4 \quad \text{where} \quad \phi(\alpha)(i) = \alpha(i) \quad \text{for all} \quad i \in A.\]

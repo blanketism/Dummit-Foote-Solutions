@@ -5,7 +5,7 @@
 \begin{exercise}[5.1.1]
     Show that the center of a direct product is the direct product of the centers:
     \[Z(G_1 \times G_2 \times \cdots \times G_n) = Z(G_1) \times Z(G_2) \times \cdots \times Z(G_n)\]
-    Deduce that the direct product of two groups is abelian if and only if each of the factors is abelian.
+    Deduce that the direct product of two groups is Abelian if and only if each of the factors is Abelian.
 \end{exercise}
 
 \begin{sol}
@@ -33,8 +33,6 @@
     \item Any element of $G_I \times G_J$ can be written as the product of an element of $G_I$ and an element of $G_J$ by taking the first and second coordinates, respectively. Thus, the map $\phi : G_I \times G_J \to G$ defined by $\phi((g_i)_{i \in I}, (g_j)_{j \in J}) = (g_1, g_2, \ldots, g_n)$ is a bijection. Injectivity is clear, since $\ker\phi$ is trivial. It is also a homomorphism since the group operation in $G$ is defined coordinate-wise. Thus, $\phi$ is an isomorphism from $G_I \times G_J$ to $G$, and we are done.
 \end{solenum}
 
-\newpage
-
 \begin{exercise}[5.1.3]
     Under the notation of the preceding exercise, let $I$ and $K$ be any disjoint nonempty subsets of $\set{1, 2, \ldots, n}$, and let $G_I$ and $G_K$ be the subgroups of $G$ defined above. Prove that $xy = yx$ for all $x \in G_I$ and $y \in G_K$.
 \end{exercise}
@@ -60,7 +58,7 @@
 \end{exercise}
 
 \begin{sol}
-    Note that $Q_8$ is non-abelian, so we may use the idea of a diagonal subgroup from \exref{3.1.38}. In particular, let $H = \gen{(i, 1)} = \set{(1, 0), (i, 1), (-1, 2), (-i, 3)}$. Then $H$ is a subgroup of $Q_8 \times Z_4$ that is isomorphic to $\gen{i}$. However,
+    Note that $Q_8$ is non-Abelian, so we may use the idea of a diagonal subgroup from \exref{3.1.38}. In particular, let $H = \gen{(i, 1)} = \set{(1, 0), (i, 1), (-1, 2), (-i, 3)}$. Then $H$ is a subgroup of $Q_8 \times Z_4$ that is isomorphic to $\gen{i}$. However,
     \[(j, 0)(i, 1)(j, 0)\inv = (ji(-j), 0 + 1 + 0) = (-i, 1)\]
     is not in $H$, so $H$ is not normal in $Q_8 \times Z_4$.
 \end{sol}
@@ -72,7 +70,7 @@
 \begin{sol}
     Let $H \leq Q_8 \times E_{2^n}$. Suppose $(a, b) \in H$ and $(x, y) \in Q_8 \times E_{2^n}$. Note that $(a\inv, b) \in H$, since every $b \in E_{2^n}$ is its own inverse. Then
     \[(x, y)(a, b)(x, y)\inv = (xax\inv, yby\inv) = (xax\inv, b)\]
-    since $E_{2^n}$ is abelian. If $a \in Z(Q_8)$, then $xax\inv = a$, so $(x, y)(a, b)(x, y)\inv = (a, b) \in H$. If $a \notin Z(Q_8)$, then $a$ is one of $i, j, k$ or their inverses. In all cases, we have $xax\inv$ is one of $i, j, k$ or their inverses, so $xax\inv \in H$. Thus, $(x, y)(a, b)(x, y)\inv \in H$ for all $(a, b) \in H$ and $(x, y) \in Q_8 \times E_{2^n}$, so $H$ is normal in $Q_8 \times E_{2^n}$.
+    since $E_{2^n}$ is Abelian. If $a \in Z(Q_8)$, then $xax\inv = a$, so $(x, y)(a, b)(x, y)\inv = (a, b) \in H$. If $a \notin Z(Q_8)$, then $a$ is one of $i, j, k$ or their inverses. In all cases, we have $xax\inv$ is one of $i, j, k$ or their inverses, so $xax\inv \in H$. Thus, $(x, y)(a, b)(x, y)\inv \in H$ for all $(a, b) \in H$ and $(x, y) \in Q_8 \times E_{2^n}$, so $H$ is normal in $Q_8 \times E_{2^n}$.
 \end{sol}
 
 \begin{exercise}[5.1.7]
@@ -101,7 +99,7 @@
 \end{sol}
 
 \begin{exercise}[5.1.8]
-    Let $G_1 = G_2 = \cdots = G_n$ and let $G = G_1 \times \cdots \times G_n$. Under the notation of the preceding exercise show that $\phi_\pi \in \text{Aut}(G)$. Show also that the map $\pi \mapsto \phi_\pi$ is an injective homomorphism of $S_n$ into $\text{Aut}(G)$. (In particular, $\phi_{\pi_1} \circ \phi_{\pi_2} = \phi_{\pi_1 \pi_2}$. It is at this point that the $\pi^{-1}$'s in the definition of $\phi_\pi$ are needed. The underlying reason for this is because if $e_i$ is the $n$-tuple with 1 in position $i$ and zeros elsewhere, $1 \leq i \leq n$, then $S_n$ acts on $\{e_1, \ldots, e_n\}$ by $\pi \cdot e_i = e_{\pi(i)}$; this is a left group action. If the $n$-tuple $(g_1, \ldots, g_n)$ is represented by $g_1 e_1 + \cdots + g_n e_n$, then this left group action on $\{e_1, \ldots, e_n\}$ extends to a left group action on sums by
+    Let $G_1 = G_2 = \cdots = G_n$ and let $G = G_1 \times \cdots \times G_n$. Under the notation of the preceding exercise show that $\phi_\pi \in \text{Aut}(G)$. Show also that the map $\pi \mapsto \phi_\pi$ is an injective homomorphism of $S_n$ into $\text{Aut}(G)$. (In particular, $\phi_{\pi_1} \circ \phi_{\pi_2} = \phi_{\pi_1 \pi_2}$. It is at this point that the $\pi^{-1}$'s in the definition of $\phi_\pi$ are needed. The underlying reason for this is because if $e_i$ is the $n$-tuple with 1 in position $i$ and zeros elsewhere, $1 \leq i \leq n$, then $S_n$ acts on $\set{e_1, \ldots, e_n}$ by $\pi \cdot e_i = e_{\pi(i)}$; this is a left group action. If the $n$-tuple $(g_1, \ldots, g_n)$ is represented by $g_1 e_1 + \cdots + g_n e_n$, then this left group action on $\set{e_1, \ldots, e_n}$ extends to a left group action on sums by
     \[\pi \cdot (g_1 e_1 + g_2 e_2 + \cdots + g_n e_n) = g_1 e_{\pi(1)} + g_2 e_{\pi(2)} + \cdots + g_n e_{\pi(n)}.\]
     The coefficient of $e_{\pi(i)}$ on the right hand side is $g_i$, so the coefficient of $e_i$ is $g_{\pi^{-1}(i)}$. Thus the right hand side may be rewritten as $g_{\pi^{-1}(1)} e_1 + g_{\pi^{-1}(2)} e_2 + \cdots + g_{\pi^{-1}(n)} e_n$, which is precisely the sum attached to the $n$-tuple $(g_{\pi^{-1}(1)}, g_{\pi^{-1}(2)}, \ldots, g_{\pi^{-1}(n)})$. In other words, any permutation of the ``position vectors'' $e_1, \ldots, e_n$ (which fixes their coefficients) is the same as the inverse permutation on the coefficients (fixing the $e_i$'s). If one uses $\pi$'s in place of $\pi^{-1}$'s in the definition of $\phi_\pi$ then the map $\pi \mapsto \phi_\pi$ is not necessarily a homomorphism --- it corresponds to a \emph{right} group action.)
 \end{exercise}
@@ -126,7 +124,7 @@
 \end{sol}
 
 \begin{exercise}[5.1.10]
-    Let $p$ be a prime. Let $A$ and $B$ be two cyclic groups of order $p$ with generators $x$ and $y$ respectively. Set $E = A \times B$ so that $E$ is the elementary abelian group of order $p^2$: $E_{p^2}$ Prove that the distinct subgroups of $E$ of order $p$ are
+    Let $p$ be a prime. Let $A$ and $B$ be two cyclic groups of order $p$ with generators $x$ and $y$ respectively. Set $E = A \times B$ so that $E$ is the elementary Abelian group of order $p^2$: $E_{p^2}$ Prove that the distinct subgroups of $E$ of order $p$ are
     \[\langle x \rangle, \quad \langle xy \rangle, \quad \langle xy^2 \rangle, \quad \ldots, \quad \langle xy^{p-1} \rangle, \quad \langle y \rangle\] (note that there are $p + 1$ of them).
 \end{exercise}
 
@@ -135,7 +133,7 @@
 \end{sol}
 
 \begin{exercise}[5.1.11]
-    Let $p$ be a prime, and let $n \in \zp$. Find a formula for the number of subgroups of order $p$ in the elementary abelian group $E_{p^n}$.
+    Let $p$ be a prime, and let $n \in \zp$. Find a formula for the number of subgroups of order $p$ in the elementary Abelian group $E_{p^n}$.
 \end{exercise}
 
 \begin{sol}
@@ -144,18 +142,18 @@
     as desired.
 \end{sol}
 
-\begin{specialexercise}[5.1.12]
+\begin{spex}[5.1.12]
     Let $A$ and $B$ be groups. Assume $Z(A)$ contains a subgroup $Z_1$ and $Z(B)$ contains a subgroup $Z_2$ with $Z_1 \cong Z_2$. Let this isomorphism be given by the map $x_i \mapsto y_i$ for all $x_i \in Z_1$. A \textbf{\emph{central product}} of $A$ and $B$ is a quotient
-    \[(A \times B)/Z \quad \text{where} \quad Z = \{(x_i, y_i^{-1}) \mid x_i \in Z_1\}\]
+    \[(A \times B)/Z \quad \text{where} \quad Z = \set{(x_i, y_i^{-1}) \mid x_i \in Z_1}\]
     and is denoted by $A * B$ --- it is not unique since it depends on $Z_1$, $Z_2$ and the isomorphism between them. (Think of $A * B$ as the direct product of $A$ and $B$ ``collapsed'' by identifying each element $x_i \in Z_1$ with its corresponding element $y_i \in Z_2$.)
     \begin{subexercises}
         \item Prove that the images of $A$ and $B$ in the quotient group $A * B$ are isomorphic to $A$ and $B$, respectively, and that these images intersect in a central subgroup isomorphic to $Z_1$. Find $|A * B|$.
         \item Let $Z_4 = \langle x \rangle$. Let $D_8 = \langle r, s \rangle$ and $Q_8 = \langle i, j \rangle$ be given by their usual generators and relations. Let $Z_4 * D_8$ be the central product of $Z_4$ and $D_8$ which identifies $x^2$ and $r^2$ (i.e., $Z_1 = \langle x^2 \rangle$, $Z_2 = \langle r^2 \rangle$ and the isomorphism is $x^2 \mapsto r^2$) and let $Z_4 * Q_8$ be the central product of $Z_4$ and $Q_8$ which identifies $x^2$ and $-1$. Prove that $Z_4 * D_8 \cong Z_4 * Q_8$.
     \end{subexercises}
-\end{specialexercise}
+\end{spex}
 
 \begin{solenum}
-    \item Consider the maps $\pi_A : A \to A * B$ and $\pi_B : B \to A * B$ defined by $\pi_A(a) = (a, 1)Z$ and $\pi_B(b) = (1, b)Z$. It is clear that $\pi_A$ and $\pi_B$ are homomorphisms. Moreover, $\ker\pi_A$ consists of the elements $a \in A$ such that $(a, 1) \in Z$. Then $y_i = 1$, and since $x_i \mapsto y_i$ is an isomorphism, we have $x_i = 1$, so $a = 1$. Thus, $\ker\pi_A$ is trivial, and $\pi_A$ is injective. Similarly, $\ker\pi_B$ is trivial, and $\pi_B$ is injective. Therefore, the images of $A$ and $B$ in $A * B$ are isomorphic to $A$ and $B$, respectively. Moreover, the images of $A$ and $B$ in $A * B$ intersect in the subgroup $\{(x_i, 1)Z \mid x_i \in Z_1\}$, which is isomorphic to $Z_1$. Finally, since $Z$ has $|Z_1|$ elements, we have
+    \item Consider the maps $\pi_A : A \to A * B$ and $\pi_B : B \to A * B$ defined by $\pi_A(a) = (a, 1)Z$ and $\pi_B(b) = (1, b)Z$. It is clear that $\pi_A$ and $\pi_B$ are homomorphisms. Moreover, $\ker\pi_A$ consists of the elements $a \in A$ such that $(a, 1) \in Z$. Then $y_i = 1$, and since $x_i \mapsto y_i$ is an isomorphism, we have $x_i = 1$, so $a = 1$. Thus, $\ker\pi_A$ is trivial, and $\pi_A$ is injective. Similarly, $\ker\pi_B$ is trivial, and $\pi_B$ is injective. Therefore, the images of $A$ and $B$ in $A * B$ are isomorphic to $A$ and $B$, respectively. Moreover, the images of $A$ and $B$ in $A * B$ intersect in the subgroup $\set{(x_i, 1)Z \mid x_i \in Z_1}$, which is isomorphic to $Z_1$. Finally, since $Z$ has $|Z_1|$ elements, we have
     \[|A * B| = \frac{|A||B|}{|Z_1|}.\]
     \item Let $Z_D$ denote the $Z$ in the quotient for $Z_4 * D_8$ and let $Z_Q$ denote the $Z$ in the quotient for $Z_4 * Q_8$. Let $x$ generate $Z_4$ in $Z_4 * D_8$ and $y$ generate $Z_4$ in $Z_4 * Q_8$. Let $r$ and $s$ be the generators of $D_8$ in $Z_4 * D_8$ and let $i$ and $j$ be the generators of $Q_8$ in $Z_4 * Q_8$. Let $\b x$ denote the coset $(x, 1)Z_D$ in $Z_4 * D_8$, and use similar notation for the elements $r, s, y, i, j$. Let $\b z = \b j\b y\inv$. Consider the map $\phi : Z_4 * D_8 \to Z_4 * Q_8$ defined by 
     \[\phi(\b x^\alpha\b r^\beta\b s^\gamma) = \b y^\alpha\b i^\beta\b z^\gamma.\]
@@ -195,7 +193,7 @@
     \[\left(\prod_{i \in I} a_i\right)\left(\prod_{i \in I} b_i\right) = \prod_{i \in I} (a_i \star_i b_i)\]
     (i.e., the group operation in the direct product is defined componentwise).
     \begin{subexercises}
-        \item Show that this binary operation is well defined and associative.
+        \item Show that this binary operation is well-defined and associative.
         \item Show that the element $\prod 1_i$ satisfies the axiom for the identity of $G$, where $1_i$ is the identity of $G_i$ for all $i$.
         \item Show that the element $\prod a_i^{-1}$ is the inverse of $\prod a_i$, where the inverse of each component element $a_i$ is taken in the group $G_i$.
     \end{subexercises}
@@ -262,14 +260,14 @@
     \begin{subexercises}
         \item Prove that the restricted direct product is a subgroup of the direct product.
         \item Prove that the restricted direct product is normal in the direct product.
-        \item Let $I = \mathbb{Z}^+$ and let $p_i$ be the $i$th integer prime. Show that if $G_i = \mathbb{Z}/p_i\mathbb{Z}$ for all $i \in \mathbb{Z}^+$, then every element of the restricted direct product of the $G_i$'s has finite order but $\prod_{i \in \mathbb{Z}^+} G_i$ has elements of infinite order. Show that in this example the restricted direct product is the torsion subgroup of the direct product (cf. \exref{2.1.16}).
+        \item Let $I = \z^+$ and let $p_i$ be the $i$th integer prime. Show that if $G_i = \z/p_i\z$ for all $i \in \z^+$, then every element of the restricted direct product of the $G_i$'s has finite order but $\prod_{i \in \z^+} G_i$ has elements of infinite order. Show that in this example the restricted direct product is the torsion subgroup of the direct product (cf. \exref{2.1.16}).
     \end{subexercises}
 \end{exercise}
 
 \begin{solenum}
     \item Let $G = \prod_{i \in I} G_i$ and let $H$ be the restricted direct product of the $G_i$'s. It is clear that $H$ is a subset of $G$. Moreover, if $\prod a_i$ and $\prod b_i$ are elements of $H$, then there are only finitely many $i$ such that $a_i \neq 1_i$ and only finitely many $i$ such that $b_i \neq 1_i$. Thus, there are only finitely many $i$ such that $a_i b_i \neq 1_i$, so $\prod a_i \prod b_i = \prod (a_i b_i)$ is an element of $H$. Finally, if $\prod a_i$ is an element of $H$, then there are only finitely many $i$ such that $a_i \neq 1_i$, so there are only finitely many $i$ such that $a_i^{-1} \neq 1_i$, so $\prod a_i^{-1}$ is an element of $H$. Thus, $H \leq G$.
     \item Let $G = \prod_{i \in I} G_i$ and let $H$ be the restricted direct product of the $G_i$'s. Let $\prod a_i$ be an element of $G$ and let $\prod b_i$ be an element of $H$. Then there are only finitely many $i$ such that $b_i \neq 1_i$, so there are only finitely many $i$ such that $a_i b_i a_i^{-1} \neq 1_i$, so $\prod a_i \prod b_i \prod a_i^{-1}$ is an element of $H$. Thus, $H \nsub G$.
-    \item Let $G = \prod_{i \in \mathbb{Z}^+} G_i$ where $G_i = \mathbb{Z}/p_i\mathbb{Z}$ for all $i$. Let $H$ be the restricted direct product of the $G_i$'s. If $\prod a_i$ is an element of $H$, then there are only finitely many $i$ such that $a_i \neq 1_i$, so there are only finitely many $i$ such that $a_i$ has order greater than 1, so $\prod a_i$ has finite order. On the other hand, if $\prod a_i$ is an element of $G$ such that $a_i$ is a generator of $G_i$ for all $i$, then $\prod a_i$ has infinite order since for any positive integer $n$, we have $(\prod a_i)^n = \prod a_i^n$, and there are infinitely many $i$ such that $a_i^n \neq 1_i$.
+    \item Let $G = \prod_{i \in \z^+} G_i$ where $G_i = \z/p_i\z$ for all $i$. Let $H$ be the restricted direct product of the $G_i$'s. If $\prod a_i$ is an element of $H$, then there are only finitely many $i$ such that $a_i \neq 1_i$, so there are only finitely many $i$ such that $a_i$ has order greater than 1, so $\prod a_i$ has finite order. On the other hand, if $\prod a_i$ is an element of $G$ such that $a_i$ is a generator of $G_i$ for all $i$, then $\prod a_i$ has infinite order since for any positive integer $n$, we have $(\prod a_i)^n = \prod a_i^n$, and there are infinitely many $i$ such that $a_i^n \neq 1_i$.
     
     To show $H = \tor(G)$, we note that $H \subseteq \tor(G)$ since every element of $H$ has finite order. Conversely, if $\prod a_i$ is an element of $\tor(G)$, then there is some positive integer $n$ such that $(\prod a_i)^n = \prod a_i^n = \prod 1_i$, so $a_i^n = 1_i$ for all $i$. Since $G_i$ is cyclic of prime order, this implies that $a_i$ is either the identity or a generator of $G_i$. If there are infinitely many $i$ such that $a_i$ is a generator of $G_i$, then $\prod a_i$ has infinite order, which is a contradiction. Thus, there are only finitely many $i$ such that $a_i$ is a generator of $G_i$, so there are only finitely many $i$ such that $a_i \neq 1_i$, so $\prod a_i$ is an element of $H$. Therefore, $\tor(G) \subseteq H$, and we conclude that $\tor(G) = H$.
 \end{solenum}
@@ -288,7 +286,7 @@
 \begin{solenum}
     \item Consider the infinite direct product $\intmod[2] \times \intmod[2] \times \cdots$. Every element of this group is a tuple of 0's and 1's, and the order of each element is either 1 (if the tuple is the identity) or 2 (if the tuple has at least one 1).
     \item Let $G = \intmod[2] \times \intmod[3] \times \intmod[4] \times \cdots$. Every element of $G$ has finite order since it is a tuple of elements from finite cyclic groups. Moreover, for each positive integer $n$, the element that is the identity in all components except the $n$-th component, which is a generator of $\intmod[n]$, has order $n$.
-    \item Consider the group $\intmod[2] \times \mathbb{Z}$. The element $(1, 0)$ has order 2, and the element $(0, 1)$ has infinite order.
+    \item Consider the group $\intmod[2] \times \z$. The element $(1, 0)$ has order 2, and the element $(0, 1)$ has infinite order.
     \item By Cayley's Theorem, every finite group is isomorphic to a subgroup of some symmetric group $S_n$. We may then consider the group $G = S_1 \times S_2 \times S_3 \times \cdots$. For any finite group $H$, there is some $n$ such that $H$ is isomorphic to a subgroup of $S_n$, so $H$ is isomorphic to a subgroup of $G$.
     \item Let $G = \z \times \z \times \cdots$. Consider the map $\phi : G \to G \times G$ defined by
     \[\phi((a_1, a_2, a_3, \ldots)) = ((a_1, a_3, a_5, \ldots), (a_2, a_4, a_6, \ldots)).\]

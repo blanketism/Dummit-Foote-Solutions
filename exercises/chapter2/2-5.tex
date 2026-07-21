@@ -128,7 +128,7 @@
 \end{exercise}
 
 \begin{solenum}
-    \item From the subgroup lattice of $S_3$, each nontrivial subgroup is cyclic and maximal. Then $N_{S_3}(\gen\alpha) = \gen\alpha$ or $S_3$. For any 2-cycle $\alpha$, note that $\alpha\beta \neq \beta\alpha$ for any other 2-cycle $\beta$, hence $N_{S_3}(\gen\alpha) = \gen\alpha$. For the 3-cycle $\alpha = (1\ 2\ 3)$, any 2-cycle $\beta$ satisfies $\beta\alpha\beta\inv \in \gen\alpha$, so $N_{S_3}(\gen\alpha) = S_3$.
+    \item From the subgroup lattice of $S_3$, each non-trivial subgroup is cyclic and maximal. Then $N_{S_3}(\gen\alpha) = \gen\alpha$ or $S_3$. For any 2-cycle $\alpha$, note that $\alpha\beta \neq \beta\alpha$ for any other 2-cycle $\beta$, hence $N_{S_3}(\gen\alpha) = \gen\alpha$. For the 3-cycle $\alpha = (1\ 2\ 3)$, any 2-cycle $\beta$ satisfies $\beta\alpha\beta\inv \in \gen\alpha$, so $N_{S_3}(\gen\alpha) = S_3$.
     \item Since $Z(Q_8) = \gen{-1}$, then $N_{Q_8}(\gen{-1}) = Q_8$. Similarly, $N_{Q_8}(\set 1) = Q_8$. For the subgroups of order 4, note that $ji(-j) = -i$ and $j(-i)(-j) = i$, so that $j \in N_{Q_8}(\gen i)$. Then $N_{Q_8}(\gen i) = Q_8$. By symmetry, the same holds for $\gen j$ and $\gen k$.
 \end{solenum}
 
@@ -186,16 +186,16 @@
     \end{center}\vspace{-3ex}
 \end{sol}
 
-\begin{specialexercise}[2.5.10]
+\begin{spex}[2.5.10]
     Classify groups of order 4 by proving that if $\abs G = 4$, then $G \cong Z_4$ or $G \cong V_4$.
 
     \hint{cf. \exref{1.1.36}.}
-\end{specialexercise}
+\end{spex}
 
 \begin{sol}
     Let $G = \set{1, a, b, c}$.  If $G$ has an element of order 4, then $G \cong Z_4$ by Theorem 2.4.
 
-    Suppose $G$ is not cyclic. Then every nonidentity element has order 2 by Lagrange's Theorem. In particular, $a^2 = b^2 = c^2 = 1$. Note that $ab \neq 1$, since otherwise $b = a\inv = a$. Similarly, $ab \neq a$ and $ab \neq b$, so that $ab = c$. By similar reasoning, we have $bc = a$ and $ca = b$. This is precisely the definition of $V_4$, so that $G \cong V_4$.
+    Suppose $G$ is not cyclic. Then every non-identity element has order 2 by Lagrange's Theorem. In particular, $a^2 = b^2 = c^2 = 1$. Note that $ab \neq 1$, since otherwise $b = a\inv = a$. Similarly, $ab \neq a$ and $ab \neq b$, so that $ab = c$. By similar reasoning, we have $bc = a$ and $ca = b$. This is precisely the definition of $V_4$, so that $G \cong V_4$.
 \end{sol}
 
 
@@ -358,11 +358,11 @@
     \end{center}\vspace{-3ex}
 \end{sol}
 
-\begin{specialexercise}[2.5.14] 
+\begin{spex}[2.5.14] 
     Let $M$ be the \textbf{modular group} of order 16 with the following presentation:
     \[\gen{u, v \mid u^2 = v^8 = 1, vu = uv^5}.\]
     It has three subgroups of order 8: $\gen{u, v^2}, \gen v$, and $\gen{uv}$, and every proper subgroup is contained in one of those three. Prove that $\gen{u, v^2} \cong Z_2 \times Z_4, \gen v \cong Z_8$, and $\gen{uv} \cong Z_8$. Show that the lattice of subgroups of $M$ is the same as the lattice of subgroups of $Z_2 \times Z_8$ (cf. \exref{2.5.13}) but that these two groups are not isomorphic.
-\end{specialexercise}
+\end{spex}
 
 \begin{sol}
     Since $\abs v = \abs{uv} = 8$, then $\gen v \cong \gen{uv} \cong Z_8$. One can apply the second relation to obtain $v^2u = uv^2$, hence we deduce that $\gen{u, v^2}$ is Abelian. We may write
@@ -451,9 +451,9 @@
 \end{exercise}
 
 \begin{sol}
-    Based on the placement of $\gen{s, r^4}$, its normalizer may be itself, $\gen{s, r^2}$, or $D_{16}$. Note that $\gen{s, r^4} = \{1, s, r^4, sr^4\}$, and taking $r^2$ and $(r^2)\inv = r^6$, we have
+    Based on the placement of $\gen{s, r^4}$, its normalizer may be itself, $\gen{s, r^2}$, or $D_{16}$. Note that $\gen{s, r^4} = \set{1, s, r^4, sr^4}$, and taking $r^2$ and $(r^2)\inv = r^6$, we have
     \[r^2\gen{s, r^4}r^6 = \set{1, sr^4, r^4, s} = \gen{s, r^4}\]
-    so that $r^2 \in N_{D_{16}}(\gen{s, r^4})$, and $\gen{s, r^2} \leq N_{D_{16}}(\gen{s, r^4})$. Since $rsr\inv = r^2s \neq r$, then $r \not\in N_{D_{16}}(\gen{s, r^4})$ so that $N_{D_{16}}(\gen{s, r^4}) = \gen{s, r^2}$.
+    so that $r^2 \in N_{D_{16}}(\gen{s, r^4})$, and $\gen{s, r^2} \leq N_{D_{16}}(\gen{s, r^4})$. Since $rsr\inv = r^2s \neq r$, then $r \notin N_{D_{16}}(\gen{s, r^4})$ so that $N_{D_{16}}(\gen{s, r^4}) = \gen{s, r^2}$.
 \end{sol}
 
 \begin{exercise}[2.5.20]
@@ -465,9 +465,9 @@
 
 \begin{solenum}
     \item Note that $\gen{\tau\sigma} = \set{1, \tau\sigma, \sigma^4, \tau\sigma^5}$. Moreover, $(\sigma^2)\inv = \sigma^6$ so that
-    \[\sigma^2\gen{\tau\sigma}\sigma^6 = \{1, \tau\sigma^4, \sigma^4, \tau\sigma\} = \gen{\tau\sigma}\]
-    and $\sigma(\tau\sigma)\sigma^7 = \tau\sigma^3 \neq \tau\sigma$ so that $\sigma \not\in N_{QD_{16}}(\gen{\tau\sigma})$. Then $N_{QD_{16}}(\gen{\tau\sigma}) = \gen{\sigma^2, \tau\sigma}$.
-    \item $\gen{\tau, \sigma^4} = \{1, \tau, \sigma^4, \tau\sigma^4\}$, and 
-    \[\sigma^2\gen{\tau, \sigma^4}\sigma^6 = \{1, \tau\sigma^4, \sigma^4, \tau\}\]
-    while $\sigma\tau\sigma^7 = \tau\sigma^2 \neq \tau$ so that $\sigma \not\in N_{QD_{16}}(\gen{\tau, \sigma^4})$. Then $N_{QD_{16}}(\gen{\tau, \sigma^4}) = \gen{\sigma^2, \tau}$.
+    \[\sigma^2\gen{\tau\sigma}\sigma^6 = \set{1, \tau\sigma^4, \sigma^4, \tau\sigma} = \gen{\tau\sigma}\]
+    and $\sigma(\tau\sigma)\sigma^7 = \tau\sigma^3 \neq \tau\sigma$ so that $\sigma \notin N_{QD_{16}}(\gen{\tau\sigma})$. Then $N_{QD_{16}}(\gen{\tau\sigma}) = \gen{\sigma^2, \tau\sigma}$.
+    \item $\gen{\tau, \sigma^4} = \set{1, \tau, \sigma^4, \tau\sigma^4}$, and 
+    \[\sigma^2\gen{\tau, \sigma^4}\sigma^6 = \set{1, \tau\sigma^4, \sigma^4, \tau}\]
+    while $\sigma\tau\sigma^7 = \tau\sigma^2 \neq \tau$ so that $\sigma \notin N_{QD_{16}}(\gen{\tau, \sigma^4})$. Then $N_{QD_{16}}(\gen{\tau, \sigma^4}) = \gen{\sigma^2, \tau}$.
 \end{solenum}

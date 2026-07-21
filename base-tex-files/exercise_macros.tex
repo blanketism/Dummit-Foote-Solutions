@@ -1,5 +1,6 @@
 % LTeX: enabled=false
 
+\newcommand{\equp}{\vspace{-\baselineskip}}
 \definecolor{pagecolor}{HTML}{faecca}
 \definecolor{exercisetitle}{HTML}{2D963B}
 \definecolor{exerciseref}{HTML}{0DA327}
@@ -7,9 +8,9 @@
 \newcommand{\exref}[1]{\hypersetup{linkcolor=exerciseref}\autoref{ex:#1}}
 \newcommand{\defref}[1]{\hypersetup{linkcolor=red}\hyperref[def:#1]{#1}}
 
-\newcommand{\hint}[1]{\textcolor{WildStrawberry}{\textsc{Hint.}} \emph{#1}}
-\newcommand{\remark}[1]{\textcolor{Brown}{\textsc{Remark.}} \emph{#1}}
-\newcommand{\authornote}[1]{\textcolor{CarnationPink}{\textsc{Manual Note.}} \emph{#1}}
+\newcommand{\hint}[1]{\textcolor{WildStrawberry}{\textsc{D\&F Hint.}}~\emph{#1}}
+\newcommand{\note}[1]{\textcolor{Brown}{\textsc{D\&F Note.}}~\emph{#1}}
+\newcommand{\mnote}[1]{\textcolor{RoyalBlue}{\textsc{Manual Note.}}~\emph{#1}}
 
 \counterwithin{equation}{section}
 
@@ -43,7 +44,7 @@
 
 \newenvironment{exercise}[1][]{\begin{exer}{}{#1}}{\end{exer}}
 
-\newenvironment{specialexercise}[1][]{\begin{exer}%
+\newenvironment{spex}[1][]{\begin{exer}%
     [title = Exercise~\theexercount,%
     drop fuzzy shadow = blue!20,%
     colback=RoyalBlue!8, colframe=CadetBlue!60,%
@@ -76,15 +77,16 @@
 \setlist[subexercises, 1]{label = (\alph*), labelsep = 4pt}
 
 \newenvironment{sol}{%
-\begin{proof}[{\textbf{Solution}}]%
+    \begin{proof}[{\textbf{Solution}}]%
+        \leavevmode%
 }{\end{proof}}
 
 \newenvironment{solenum}{%
-\begin{proof}[{\textbf{Solution}}]%
-\leavevmode\begin{subexercises}%
-}{\qedhere\end{subexercises}\end{proof}}
+    \begin{sol}%
+        \begin{subexercises}%
+}{\qh\end{subexercises}\end{sol}}
 
 \newenvironment{solitem}{%
-\begin{proof}[{\textbf{Solution}}]%
-\leavevmode\begin{itemize}%
-}{\qedhere\end{itemize}\end{proof}}
+    \begin{sol}%
+        \begin{itemize}%
+}{\qh\end{itemize}\end{sol}}

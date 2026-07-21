@@ -39,8 +39,8 @@ Let $G$ be a group and let $\Omega$ be an infinite set.
 \begin{sol}
 	Let $S$ be the set of all 3-cycles in $A_n$. Observe that $\gen S \leq A_n$ since $S \subseteq A_n$. To show the other direction, let $\sigma \in A_n$. We show that two transpositions in $\sigma$ can be replaced by 3-cycles. There are two cases to discuss: Let $(a\ b), (c\ d)$ be two transpositions in $\sigma$.
 	\begin{itemize}
-		\item If $\{a, b\} \cap \{c, d\} = \emptyset$, then we can replace $(a\ b)(c\ d)$ by the product of 3-cycles $(a\ c\ d)(a\ d\ c)$.
-		\item If $\{a, b\} \cap \{c, d\} = \{x\}$ for some $x$, then we can replace $(a\ b)(c\ d)$ by the 3-cycle $(a\ c\ d)$ if $x = a$ or $x = c$, and by the 3-cycle $(b\ c\ d)$ if $x = b$ or $x = d$.
+		\item If $\set{a, b} \cap \set{c, d} = \emptyset$, then we can replace $(a\ b)(c\ d)$ by the product of 3-cycles $(a\ c\ d)(a\ d\ c)$.
+		\item If $\set{a, b} \cap \set{c, d} = \set{x}$ for some $x$, then we can replace $(a\ b)(c\ d)$ by the 3-cycle $(a\ c\ d)$ if $x = a$ or $x = c$, and by the 3-cycle $(b\ c\ d)$ if $x = b$ or $x = d$.
 	\end{itemize}
 \end{sol}
 
@@ -71,13 +71,13 @@ Let $G$ be a group and let $\Omega$ be an infinite set.
 \end{sol}
 
 \begin{exercise}[4.6.7]
-	Under the notation of the preceding exercise, prove that if $H \nsub S_\Omega$ and $H \neq 1$, then $A \leq H$, i.e., $A$ is the unique (nontrivial) minimal normal subgroup of $S_\Omega$.
+	Under the notation of the preceding exercise, prove that if $H \nsub S_\Omega$ and $H \neq 1$, then $A \leq H$, i.e., $A$ is the unique (non-trivial) minimal normal subgroup of $S_\Omega$.
 \end{exercise}
 
 \begin{sol}
-	Let $\sigma \in H$. Since $\sigma$ moves only a finite number of elements of $\Omega$, there exists some $\Gamma \subseteq \Omega$ with $|\Gamma| \geq 5$ such that $\sigma(\omega) = \omega$ for all $\omega \in \Omega - \Gamma$. If $\sigma$ is an odd permutation, let $x, y \in \Omega - \Gamma$ be distinct (which exist since $\Omega$ is infinite) and replace $\sigma$ with $\sigma(x\ y) \in H$ and $\Gamma$ with $\Gamma \cup \{x, y\}$. Thus we may assume without loss of generality that $\sigma$ is an even permutation fixing every point outside $\Gamma$. 
+	Let $\sigma \in H$. Since $\sigma$ moves only a finite number of elements of $\Omega$, there exists some $\Gamma \subseteq \Omega$ with $|\Gamma| \geq 5$ such that $\sigma(\omega) = \omega$ for all $\omega \in \Omega - \Gamma$. If $\sigma$ is an odd permutation, let $x, y \in \Omega - \Gamma$ be distinct (which exist since $\Omega$ is infinite) and replace $\sigma$ with $\sigma(x\ y) \in H$ and $\Gamma$ with $\Gamma \cup \set{x, y}$. Thus we may assume without loss of generality that $\sigma$ is an even permutation fixing every point outside $\Gamma$. 
 
-	Let $B$ be the set of elements of $A$ which fix every point outside $\Gamma$. Since $B \cong A_{|\Gamma|}$ and $|\Gamma| \geq 5$, $B$ is simple. Since $H \cap B \trianglelefteq B$ is nontrivial (it contains $\sigma$), simplicity of $B$ gives $B \leq H$. In particular, $H$ contains a 3-cycle $(\alpha\ \beta\ \gamma)$. Now let $(a\ b\ c)$ be any 3-cycle in $S_\Omega$. Since there exists $\tau \in S_\Omega$ with $\tau(\alpha) = a$, $\tau(\beta) = b$, $\tau(\gamma) = c$, and $H \trianglelefteq S_\Omega$, we have $\tau(\alpha\ \beta\ \gamma)\tau^{-1} = (a\ b\ c) \in H$. Since every element of $A$ is a product of 3-cycles and $H$ is a subgroup, we conclude $A \leq H$.
+	Let $B$ be the set of elements of $A$ which fix every point outside $\Gamma$. Since $B \cong A_{|\Gamma|}$ and $|\Gamma| \geq 5$, $B$ is simple. Since $H \cap B \trianglelefteq B$ is non-trivial (it contains $\sigma$), simplicity of $B$ gives $B \leq H$. In particular, $H$ contains a 3-cycle $(\alpha\ \beta\ \gamma)$. Now let $(a\ b\ c)$ be any 3-cycle in $S_\Omega$. Since there exists $\tau \in S_\Omega$ with $\tau(\alpha) = a$, $\tau(\beta) = b$, $\tau(\gamma) = c$, and $H \trianglelefteq S_\Omega$, we have $\tau(\alpha\ \beta\ \gamma)\tau^{-1} = (a\ b\ c) \in H$. Since every element of $A$ is a product of 3-cycles and $H$ is a subgroup, we conclude $A \leq H$.
 \end{sol}
 
 \begin{exercise}[4.6.8]
@@ -91,7 +91,7 @@ Let $G$ be a group and let $\Omega$ be an infinite set.
 	\[D = \bigcup_{n=1}^\infty D_n\]
 	where $D_n$ is the set of products of at most $n$ transpositions, and a countable union of sets of cardinality $|\Omega|$ has cardinality $|\Omega|$, we get $|D| \leq |\Omega|$. Since the map $\omega \mapsto (\omega\ \alpha)$ for a fixed $\alpha \in \Omega$ is an injection $\Omega \to D$, we conclude $|D| = |\Omega|$.
 
-    We now show that $|A| = |\Omega|$. Since $A \leq D$, we have $|A| \leq |D| = |\Omega|$. Conversely, fix distinct $x, y \in \Omega$. Then the map $\omega \mapsto (\omega\ x\ y)$ for $\omega \in \Omega - \{x, y\}$ is an injection $\Omega - \{x, y\} \to A$, so $|\Omega| \leq |A|$. Therefore $|A| = |\Omega|$.
+    We now show that $|A| = |\Omega|$. Since $A \leq D$, we have $|A| \leq |D| = |\Omega|$. Conversely, fix distinct $x, y \in \Omega$. Then the map $\omega \mapsto (\omega\ x\ y)$ for $\omega \in \Omega - \set{x, y}$ is an injection $\Omega - \set{x, y} \to A$, so $|\Omega| \leq |A|$. Therefore $|A| = |\Omega|$.
 
     Finally, suppose $S_\Omega \cong S_\Delta$ via some isomorphism $\phi$. By the preceding exercise, $A$ is the unique minimal normal subgroup of $S_\Omega$, and similarly $A'$ is the unique minimal normal subgroup of $S_\Delta$. Since $\phi$ maps normal subgroups to normal subgroups, $\phi(A) = A'$, so $|A| = |A'|$, and therefore $|\Omega| = |\Delta|$.
 \end{sol}

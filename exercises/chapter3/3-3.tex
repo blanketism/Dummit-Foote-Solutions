@@ -10,9 +10,9 @@ Let $G$ be a group.
     In \exref{3.1.35}, we showed that $\speclin_n(F) \nsub \gl_n(F)$ and that $\gl_n(F)/\speclin_n(F) \cong F\unt$. Since $F$ is a finite field of order $q$, then $\abs{F\unt} = q - 1$. We then have that $|\gl_n(F) : \speclin_n(F)| = \abs{F\unt} = q - 1$.
 \end{sol}
 
-\begin{specialexercise}[3.3.2]
+\begin{spex}[3.3.2]
     Prove all parts of the Lattice Isomorphism Theorem.
-\end{specialexercise}
+\end{spex}
 
 \begin{sol}
     Let $\ac = \set{A \leq G \mid N \subseteq A}$ be the set of subgroups of $G$ containing $N$. Let $\bar{\ac} = \set{\bar A \leq \bar G}$ be the set of subgroups of $\bar G = G/N$. Define the map
@@ -153,8 +153,6 @@ Let $G$ be a group.
     Moreover, $\bar{v^4} = \bar{u^2} = \bar 1$ and $\bar{vu} = \bar{uv^5} = \bar{uv}$ so that the generators of $M/\gen{v^4}$ satisfy the relations as $a$ and $b$ do in $Z_2 \times Z_4$, whose presentation is given in \exref{2.5.12}. Then $M/\gen{v^4} \cong Z_2 \times Z_4$.
 \end{sol}
 
-\newpage
-
 \begin{exercise}[3.3.7]
     Let $M$ and $N$ be normal subgroups of $G$ such that $G = MN$. Prove that $G/(M \cap N) \cong (G/M) \times (G/N)$. [Draw the lattice.]
 \end{exercise}
@@ -189,12 +187,12 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-    Let $\phi(z) = z^p$ be the map. For any $z, w \in G$, then $\phi(zw) = (zw)^p = z^p w^p = \phi(z)\phi(w)$, hence $\phi$ is a homomorphism. Moreover, for any $y \in G$, there is some $n \in \zp$ such that $y^{p^n} = 1$. Then let $z = y^{p^{n - 1}}$, so that $z^p = y^{p^n} = 1$, hence $z \in G$ and $\phi(z) = y$. It follows that $\phi$ is surjective. By the First Isomorphism Theorem, we have $G/\ker\phi \cong G$. Since $\ker\phi$ contains all $p$-power roots of unity of order dividing $p$, then $\ker\phi$ is nontrivial, hence $G$ is isomorphic to a proper quotient of itself.
+    Let $\phi(z) = z^p$ be the map. For any $z, w \in G$, then $\phi(zw) = (zw)^p = z^p w^p = \phi(z)\phi(w)$, hence $\phi$ is a homomorphism. Moreover, for any $y \in G$, there is some $n \in \zp$ such that $y^{p^n} = 1$. Then let $z = y^{p^{n - 1}}$, so that $z^p = y^{p^n} = 1$, hence $z \in G$ and $\phi(z) = y$. It follows that $\phi$ is surjective. By the First Isomorphism Theorem, we have $G/\ker\phi \cong G$. Since $\ker\phi$ contains all $p$-power roots of unity of order dividing $p$, then $\ker\phi$ is non-trivial, hence $G$ is isomorphic to a proper quotient of itself.
 \end{sol}
 
-\begin{specialexercise}[3.3.9]
+\begin{spex}[3.3.9]
     Let $p$ be a prime and let $G$ be a group of order $p^am$, where $p$ does not divide $m$. Assume $P$ is a subgroup of $G$ of order $p^a$ and $N$ is a normal subgroup of $G$ of order $p^b n$, where $p$ does not divide $n$. Prove that $|P \cap N| = p^b$ and $|PN/N| = p^{a - b}$. (The subgroup $P$ of $G$ is called a \emph{Sylow $p$-subgroup} of $G$. This exercise shows that the intersection of any Sylow $p$-subgroup with a normal subgroup $N$ is a Sylow $p$-subgroup of $N$.)
-\end{specialexercise}
+\end{spex}
 
 \begin{sol}
     Since $P \cap N \leq P$, then $|P \cap N|$ divides $|P| = p^a$. Similarly, since $P \cap N \leq N$, then $|P \cap N|$ divides $|N| = p^b n$. It follows that $|P \cap N|$ divides $\gcd(p^a, p^b n) = p^b$, hence $|P \cap N| = p^c$ for some $c \leq b$. By the Second Isomorphism Theorem, we have

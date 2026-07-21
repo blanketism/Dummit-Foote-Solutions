@@ -5,10 +5,10 @@
 \begin{exercise}[2.1.1]
     In each of (a) -- (e) prove that the specified subset is a subgroup of the given group.
     \begin{subexercises}
-        \item The set of complex numbers of the form $a + ai$, $a \in \mathbb{R}$ (under addition).
+        \item The set of complex numbers of the form $a + ai$, $a \in \r$ (under addition).
         \item The set of complex numbers of absolute value $1$, i.e., the unit circle in the complex plane (under multiplication).
-        \item For fixed $n \in \mathbb{Z}^+$, the set of rational numbers whose denominators divide $n$ (under addition).
-        \item For fixed $n \in \mathbb{Z}^+$, the set of rational numbers whose denominators are relatively prime to $n$ (under addition).
+        \item For fixed $n \in \z^+$, the set of rational numbers whose denominators divide $n$ (under addition).
+        \item For fixed $n \in \z^+$, the set of rational numbers whose denominators are relatively prime to $n$ (under addition).
         \item The set of nonzero real numbers whose square is a rational number (under multiplication).
     \end{subexercises}
 \end{exercise}
@@ -19,16 +19,16 @@
         \item Since $0 + 0i \in H$, then $H$ is nonempty. For $a + ai, b + bi \in H$,
         \[(a + ai) - (b + bi) = (a - b) + (a - b)i \in H\]
         so that $H \leq G$.
-        \item Since $\abs 1 = 1$, then $1 \in H$ so that it is nonempty. For $z, w \in H$, we first note that $|w\inv| = |\bar w|/|w|^2 = 1/1 = 1$, where $\bar w$ is the complex conjugate of $w$. Then
+        \item Since $\abs 1 = 1$, then $1 \in H$ so that it is nonempty. For $z, w \in H$, we first note that $|w\inv| = 1/|w| = 1/1 = 1$. Then
         \[|zw\inv| = |z||w\inv| = 1 \cdot 1 = 1\]
         so that $zw\inv \in H$, hence $H \leq G$.
-        \item Fix $n \in \zp$. Since $0 = 0/k$ for some $k$ such that $k \mid n$, then $0 \in H$ so that $H$ is nonempty. Let $a/b, c/d \in H$ such that $b \mid n$ and $d \mid n$. Then there exists $x, y \in \zp$ such that $bx = n$ and $dy = n$. Then
+        \item Fix $n \in \zp$. Since $0 = 0/k$ for some $k$ such that $k \mid n$, then $0 \in H$ so that $H$ is nonempty. Let $a/b, c/d \in H$ such that $b \mid n$ and $d \mid n$. Then there exist $x, y \in \zp$ such that $bx = n$ and $dy = n$. Then
         \[\frac ab - \frac cd = \frac{ax - cy}{n}.\]
         Reducing this fraction still yields a denominator that divides $n$. Then $H \leq G$.
         \item Fix $n \in \zp$. Since $0 = 0/k$ for some $k$ such that $(k, n) = 1$, then $0 \in H$ so that $H$ is nonempty. Let $a/b, c/d \in H$ such that $(a, c) = 1$, $(b, n) = 1$, and $(d, n) = 1$. Then
         \[\frac ab - \frac cd = \frac{ad - bc}{bd}\]
-        If $(bd, n) \neq 1$, this would imply some $p \mid bd$ and $p \mid n$. Then $p \mid b$ or $p \mid d$, contradicting our assumption. Hence, $(bd, n) = 1$, so that $H \leq G$.
-        \item Since $1 = 1^1 = 1/1$, then $1 \in H$ so that $H$ is nonempty. For $x, y \in H$, then $x^2, y^2 \in \q$. Then
+        If $(bd, n) \neq 1$, then there exists some prime $p$ such that $p \mid bd$ and $p \mid n$. Then $p \mid b$ or $p \mid d$, contradicting our assumption. Hence, $(bd, n) = 1$, so that $H \leq G$.
+        \item Since $1 = 1^2 = 1/1$, then $1 \in H$ so that $H$ is nonempty. For $x, y \in H$, then $x^2, y^2 \in \q$. Then
         \[\left(\frac xy\right)^2 = \frac{x^2}{y^2} \in \q\]
         so that $x/y \in H$, hence $H \leq G$. \qh
     \end{subexercises}
@@ -39,8 +39,8 @@
     \begin{subexercises}
         \item The set of $2$-cycles in $S_n$ for $n \ge 3$.
         \item The set of reflections in $D_{2n}$ for $n \ge 3$.
-        \item For $n$ a composite integer $>1$ and $G$ a group containing an element of order $n$, the set $\{x \in G \mid |x| = n\} \cup \{1\}$.
-        \item The set of (positive and negative) odd integers in $\mathbb{Z}$ together with $0$.
+        \item For $n$ a composite integer $>1$ and $G$ a group containing an element of order $n$, the set $\set{x \in G \mid |x| = n} \cup \set{1}$.
+        \item The set of (positive and negative) odd integers in $\z$ together with $0$.
         \item The set of real numbers whose square is a rational number (under addition).
     \end{subexercises}
 \end{exercise}
@@ -48,10 +48,10 @@
 \begin{sol}
     Let $G$ be the group and $H$ be the subset in question.
     \begin{subexercises}
-        \item For $n = 3$, then $(1\ 2), (1\ 3) \in H$, but $(1\ 2)(1\ 3) = (1\ 3\ 2) \not\in H$.
-        \item For $n = 3$, then $s, sr \in H$, but $s(sr) = r \not\in H$.
-        \item Let $n = ab$ for some $a, b \in \zp$ with $1 < a, b < n$. Let $x \in G$ with $\abs x = n$. Then $x \in H$ so that $x^a \in H$, but $(x^a)^b = x^n = 1$ implies that $|x^a| \leq b$ so that $x^a \not\in H$.
-        \item Observe that $1 \in H$, but $1 + 1 = 2 \not\in H$.
+        \item For $n = 3$, then $(1\ 2), (1\ 3) \in H$, but $(1\ 2)(1\ 3) = (1\ 3\ 2) \notin H$.
+        \item For $n = 3$, then $s, sr \in H$, but $s(sr) = r \notin H$.
+        \item Let $n = ab$ for some $a, b \in \zp$ with $1 < a, b < n$. Let $x \in G$ with $\abs x = n$. Then $x \in H$ so that $x^a \in H$, but $(x^a)^b = x^n = 1$ implies that $|x^a| \leq b$.
+        \item Observe that $1 \in H$, but $1 + 1 = 2 \notin H$.
         \item Observe that $\sqrt 2, \sqrt 3 \in H$, but $(\sqrt 2 + \sqrt 3)^2 \notin \q$. \qh
     \end{subexercises}
 \end{sol}
@@ -59,8 +59,8 @@
 \begin{exercise}[2.1.3]
     Show that the following subsets of the dihedral group $D_8$ are actually subgroups:
     \begin{subexercises}
-        \item $\{1, r^2, s, sr^2\}$
-        \item $\{1, r^2, sr, sr^3\}$
+        \item $\set{1, r^2, s, sr^2}$
+        \item $\set{1, r^2, sr, sr^3}$
     \end{subexercises}
 \end{exercise}
 
@@ -95,7 +95,7 @@
 \end{exercise}
 
 \begin{sol}
-    Let $G = \z$ and $H = \zp$. Then for any $m, n \in \zp$, we have $m + n \in \zp$ but $m - n \not\in \zp$ when $m < n$. Hence, $H$ is not a subgroup of $G$.
+    Let $G = \z$ and $H = \zp$. Then for any $m, n \in \zp$, we have $m + n \in \zp$ but $m - n \notin \zp$ when $m < n$. Hence, $H$ is not a subgroup of $G$.
 \end{sol}
 
 \begin{exercise}[2.1.5]
@@ -103,13 +103,13 @@
 \end{exercise}
 
 \begin{sol}
-   If $H \leq G$ with $|H| = n - 1$, then there exists $k \in \zp$ such that $k(n - 1) = n$ by Lagrange's Theorem. This implies $kn - k = n$, or equivalently $n = k/(k - 1)$. Since $k = 2$ implies $n = 2$ and $k \geq 3$ implies $n \not\in \zp$, then there is no such subgroup $H$.
+   If $H \leq G$ with $|H| = n - 1$, then there exists $k \in \zp$ such that $k(n - 1) = n$ by Lagrange's Theorem. This implies $kn - k = n$, or equivalently $n = k/(k - 1)$. Since $k = 2$ implies $n = 2$ and $k \geq 3$ implies $n \notin \zp$, then there is no such subgroup $H$.
 \end{sol}
 
-\begin{specialexercise}[2.1.6]
+\begin{spex}[2.1.6]
     \label{def:torsion subgroup}
-    Let $G$ be an Abelian group. Prove that $\{ g \in G \mid |g| < \infty \}$ is a subgroup of $G$ (called the \textbf{torsion subgroup} of $G$). Give an explicit example where this set is not a subgroup when $G$ is non-Abelian.
-\end{specialexercise}
+    Let $G$ be an Abelian group. Prove that $\set{ g \in G \mid |g| < \infty }$ is a subgroup of $G$ (called the \textbf{torsion subgroup} of $G$). Give an explicit example where this set is not a subgroup when $G$ is non-Abelian.
+\end{spex}
 
 \begin{sol}
     Let the torsion subgroup be denoted as $\tor(G)$. Since $|1| = 1$, then $1 \in \tor(G)$. If $g, h \in \tor(G)$ such that $|g| = m$ and $|h| = n$, we have
@@ -139,17 +139,17 @@
         1 & -n \\
         0 & 1
     \end{pmatrix}\]
-    for all $n \in \zp$. Hence, $|AB| = \infty$, so $AB \not\in \tor(G)$.
+    for all $n \in \zp$. Hence, $|AB| = \infty$, so $AB \notin \tor(G)$.
 \end{sol}
 
 \begin{exercise} [2.1.7]
-    Fix some $n \in \mathbb{Z}$ with $n>1$. Find the \defref{torsion subgroup} of $\mathbb{Z} \times (\mathbb{Z}/n\mathbb{Z})$. Show that the set of elements of infinite order together with the identity is \emph{not} a subgroup of this direct product.
+    Fix some $n \in \z$ with $n>1$. Find the \defref{torsion subgroup} of $\z \times (\z/n\z)$. Show that the set of elements of infinite order together with the identity is \emph{not} a subgroup of this direct product.
 \end{exercise}
 
 \begin{sol}
     The only finite order element in $\z$ is 0, while $\intmod$ is finite. Then
     \[\tor(\z \times \intmod) = \set{(0, \bar x) \mid \bar x \in \intmod}.\]
-    Consider $H = \set{(x, \bar y) \in \z \times \intmod \mid x \neq 0} \cup \{(0, \bar 0)\}$. Then $H$ contains the identity and all elements of infinite order. However, $(1, \bar 1), (-1, \bar 0) \in H$, but $(0, \bar 1) = (1, \bar 1) + (-1, \bar 0) \not\in H$, since it has finite order. Hence, $H$ is not a subgroup of $\z \times \intmod$.
+    Consider $H = \set{(x, \bar y) \in \z \times \intmod \mid x \neq 0} \cup \set{(0, \bar 0)}$. Then $H$ contains the identity and all elements of infinite order. However, $(1, \bar 1), (-1, \bar 0) \in H$, but $(0, \bar 1) = (1, \bar 1) + (-1, \bar 0) \notin H$, since it has finite order. Hence, $H$ is not a subgroup of $\z \times \intmod$.
 \end{sol}
 
 \begin{exercise} [2.1.8]
@@ -157,17 +157,17 @@
 \end{exercise}
 
 \begin{solitem}
-    \item[\rightimp] Suppose $H \cup K$ is a subgroup. If $H \subseteq K$, then we are done. Suppose that $H \nsubseteq K$. Then there exists some $h \in H$ such that $h \not\in K$. Since $H \cup K$ is a subgroup, then for any $k \in K$, we have $hk \in H \cup K$.
+    \item[\rightimp] Suppose $H \cup K$ is a subgroup. If $H \subseteq K$, then we are done. Suppose that $H \nsubseteq K$. Then there exists some $h \in H$ such that $h \notin K$. Since $H \cup K$ is a subgroup, then for any $k \in K$, we have $hk \in H \cup K$.
     
     Observe that $k\inv \in K$ since $K \leq G$. If $hk \in K$, then $h = (hk)k\inv \in K$, contradicting our assumption. It must be that $hk \in H$. Since $h \in H$, then $h\inv \in H$ as $H \leq G$. Then $h\inv(hk) = k \in H$, hence $K \subseteq H$.
     \item[\leftimp] If $H \subseteq K$, then $H \cup K = K \leq G$. Similarly, if $K \subseteq H$, then $H \cup K = H \leq G$.
 \end{solitem}
 
-\begin{specialexercise}[2.1.9]
+\begin{spex}[2.1.9]
     Let $G = \gl_n(F)$, where $F$ is any field. Define
-    \[\speclin_n(F) = \{ A \in \gl_n(F) \mid \det(A) = 1 \}\]
+    \[\speclin_n(F) = \set{ A \in \gl_n(F) \mid \det(A) = 1 }\]
     (called the \textbf{special linear group}). Prove that $\speclin_n(F) \le \gl_n(F)$.
-\end{specialexercise}
+\end{spex}
 
 \begin{sol}
     Since $\det(I_n) = 1$, then $I_n \in \speclin_n(F)$. Suppose $A, B \in \speclin_n(F)$. Then
@@ -183,7 +183,7 @@
 \end{exercise}
 
 \begin{sol}
-    We prove (b) and note that (a) is a special case with $I = \set{1, 2}$ and $H_1 = H$, $H_2 = K$. Let $I$ be an indexing set, and consider the collection of subgroups $\{ H_i \}_{i \in I}$ of $G$. Let
+    We prove (b) and note that (a) is a special case with $I = \set{1, 2}$ and $H_1 = H$, $H_2 = K$. Let $I$ be an indexing set, and consider the collection of subgroups $\set{ H_i }_{i \in I}$ of $G$. Let
     \[H = \bigcap_{i \in I} H_i\]
     Since $1 \in H_i$ for all $i \in I$, then $1 \in H$. Suppose $a, b \in H$. Then $a, b \in H_i$ for all $i \in I$. Since each $H_i$ is a subgroup of $G$, then $ab\inv \in H_i$ for all $i \in I$. Hence, $ab\inv \in H$, and $H \leq G$.
 \end{sol}
@@ -191,9 +191,9 @@
 \begin{exercise} [2.1.11]
     Let $A$ and $B$ be groups. Prove that the following sets are subgroups of the direct product $A \times B$:
     \begin{subexercises}
-        \item $\{ (a, 1) \mid a \in A \}$
-        \item $\{ (1, b) \mid b \in B \}$
-        \item $\{ (a, a) \mid a \in A \}$, where we assume $B = A$ (called the diagonal subgroup)
+        \item $\set{ (a, 1) \mid a \in A }$
+        \item $\set{ (1, b) \mid b \in B }$
+        \item $\set{ (a, a) \mid a \in A }$, where we assume $B = A$ (called the diagonal subgroup)
     \end{subexercises}
 \end{exercise}
 
@@ -213,10 +213,10 @@
 \end{sol}
 
 \begin{exercise} [2.1.12]
-    Let $A$ be an Abelian group and fix some $n \in \mathbb{Z}$. Prove that the following sets are subgroups of $A$.
+    Let $A$ be an Abelian group and fix some $n \in \z$. Prove that the following sets are subgroups of $A$.
     \begin{subexercises}
-        \item $\{ a^n \mid a \in A \}$.
-        \item $\{ a \in A \mid a^n = 1 \}$.
+        \item $\set{ a^n \mid a \in A }$.
+        \item $\set{ a \in A \mid a^n = 1 }$.
     \end{subexercises}
 \end{exercise}
 
@@ -233,7 +233,7 @@
 \end{sol}
 
 \begin{exercise} [2.1.13]
-    Let $H$ be a subgroup of the additive group of rational numbers with the property that $1/x \in H$ for every nonzero element $x$ of $H$. Prove that $H = 0$ or $\mathbb{Q}$.
+    Let $H$ be a subgroup of the additive group of rational numbers with the property that $1/x \in H$ for every nonzero element $x$ of $H$. Prove that $H = 0$ or $\q$.
 \end{exercise}
 
 \begin{sol}
@@ -243,11 +243,11 @@
 \end{sol}
 
 \begin{exercise} [2.1.14]
-    Show that $\{ x \in D_{2n} \mid x^2 = 1 \}$ is \emph{not} a subgroup of $D_{2n}$ (here $n \ge 3$).
+    Show that $\set{ x \in D_{2n} \mid x^2 = 1 }$ is \emph{not} a subgroup of $D_{2n}$ (here $n \ge 3$).
 \end{exercise}
 
 \begin{sol}
-    Let $H$ be the set in question. All reflections are in $H$. In particular, $s$ and $sr$ are in $H$, but $r = s(sr) \not\in H$ since $\abs r = n > 2$
+    Let $H$ be the set in question. All reflections are in $H$. In particular, $s$ and $sr$ are in $H$, but $r = s(sr) \notin H$ since $\abs r = n > 2$.
 \end{sol}
 
 \begin{exercise} [2.1.15]
@@ -262,7 +262,7 @@
 
 
 \begin{exercise} [2.1.16]
-    Let $n \in \mathbb{Z}^+$ and let $F$ be a field. Prove that the set $\{ (a_{ij}) \in \gl_n(F) \mid a_{ij} = 0 \text{ for all } i > j \}$ is a subgroup of $\gl_n(F)$ (called the group of upper triangular matrices).
+    Let $n \in \z^+$ and let $F$ be a field. Prove that the set $\set{ (a_{ij}) \in \gl_n(F) \mid a_{ij} = 0 \text{ for all } i > j }$ is a subgroup of $\gl_n(F)$ (called the group of upper triangular matrices).
 \end{exercise}
 
 \begin{sol}
@@ -279,7 +279,7 @@
 \end{sol}
 
 \begin{exercise} [2.1.17]
-    Let $n \in \mathbb{Z}^+$ and let $F$ be a field. Prove that the set $\{ (a_{ij}) \in \gl_n(F) \mid a_{ij} = 0 \text{ for all } i > j,\ \text{and } a_{ii} = 1 \text{ for all } i \}$ is a subgroup of $\gl_n(F)$.
+    Let $n \in \z^+$ and let $F$ be a field. Prove that the set $\set{ (a_{ij}) \in \gl_n(F) \mid a_{ij} = 0 \text{ for all } i > j,\ \text{and } a_{ii} = 1 \text{ for all } i }$ is a subgroup of $\gl_n(F)$.
 \end{exercise}
 
 \begin{sol}

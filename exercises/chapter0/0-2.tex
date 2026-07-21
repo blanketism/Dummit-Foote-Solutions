@@ -51,7 +51,9 @@
     \[x = x_0 + \frac bdt \quad \text{and} \quad y = y_0 - \frac adt\]
     are also solutions to $ax + by = N$.
 
-    \remark{This is, in fact, the general solution.}
+    \note{This is, in fact, the general solution.}
+
+    \mnote{Such equations are called \emph{Diophantine equations} and are an object of study in elementary number theory.}
 \end{exercise}
 
 \begin{sol}
@@ -76,7 +78,7 @@
         n & 16 & 17 & 18 & 19 & 20 & 21 & 22 & 23 & 24 & 25 & 26 & 27 & 28 & 29 & 30 \\
         \hline
         \phi(n) & 8 & 16 & 6 & 18 & 8 & 12 & 10 & 22 & 8 & 20 & 12 & 18 & 12 & 28 & 8 \\
-    \end{array}\]
+    \end{array} \qh\]
 \end{sol}
 
 \begin{exercise}[0.2.6]
@@ -99,15 +101,16 @@
     hence $b^2 = pk^2$. But then $p \mid b$, contradicting that $(a, b) = 1$.
 \end{sol}
 
-\begin{exercise}[0.2.8]
+\begin{spex}[0.2.8]
     Let $p$ be a prime, $n \in \zp$. Find a formula for the largest power of $p$ which divides $n! = n(n - 1)(n - 2) \ldots 2 \cdot 1$.
 
     \hint{It involves the greatest integer function.}
-\end{exercise}
+\end{spex}
 
 \begin{sol}
-    Let $k_1 \in \zp$ such that $n \geq k_1p$. Then there are exactly $k_1$ factors of $p$, namely $p, 2p, \ldots, k_1p$. Let $k_2 \in \zp$ such that $n \geq k_2p^2$, so that $p^2, 2p^2, \ldots, k_2p^2$ contribute exactly $k_2$ factors of $p^2$, and hence $k_2$ factors of $p$. Note that there exists some $m$ such that $n \geq k_m p^m$, but $n < k_{m + 1} p^{m + 1}$. Then the largest power of $p$ which divides $n!$ is given by
-    \[\sum_{i = 1}^m k_i = \sum_{i = 1}^{\infty} \floor*{\frac{n}{p^i}}. \qh\]
+    In the product $n!$, a factor of $p$ appears in each of the integers $p, 2p, \ldots, \floor{n/p}p$. Hence, there are $\floor{n/p}$ factors of $p$ in $n!$. Similarly, a factor of $p^2$ appears in each of the integers $p^2, 2p^2, \ldots, \floor{n/p^2}p^2$, so there are $\floor{n/p^2}$ factors of $p^2$ in $n!$. This contributes an additional factor of $p$ that was counted only once in the previous step. Continuing this process, we find that the largest power of $p$ which divides $n!$ is
+    \[\floor*{\frac np} + \floor*{\frac{n}{p^2}} + \cdots + \floor*{\frac{n}{p^m}} = \sum_{i=1}^{m} \floor*{\frac{n}{p^i}},\]
+    where $m = \floor{\log_p n}$ is the largest integer such that $p^m \leq n$.
 \end{sol}
 
 \begin{exercise}[0.2.9]
@@ -124,10 +127,10 @@
 
 \begin{sol}
     Fix $N \in \zp$, and consider $n \in \zp$ such that $\phi(n) = N$. Let $n = p_1^{\alpha_1} p_2^{\alpha_2} \cdots p_k^{\alpha_k}$ be the prime factorization of $n$. Then
-    \[\phi(n) = \phi(p_1^{\alpha_1}) \phi(p_2^{\alpha_2}) \cdots \phi(p_k^{\alpha_k}) = \prod_{i=1}^k p_i^{\alpha_i - 1}(p_i - 1).\]
-    Since $\phi(n) = N$, there are only finitely many possibilities for the primes $p_i$ and their exponents $\alpha_i$ that satisfy this equation. Hence, there are only finitely many integers $n$ such that $\phi(n) = N$.
+    \[\phi(n) = \prod_{i=1}^k p_i^{\alpha_i - 1}(p_i - 1) = N.\]
+    Since each factor $p_i^{\alpha_i - 1}(p_i - 1)$ divides $N$, we have $p_i - 1 \leq N$, so $p_i \leq N + 1$, bounding the number of possible primes. For the exponents, $p_i^{\alpha_i - 1} \leq N$ gives $\alpha_i \leq 1 + \log_2 N$ since $p_i \geq 2$. With finitely many choices for each $p_i$ and $\alpha_i$, there are only finitely many $n$ with $\phi(n) = N$.
 
-    If $\phi$ was finite as $n$ tends to infinity, then there would exist some $M \in \zp$ such that $\phi(n) \leq M$ for infinitely many $n$. However, this contradicts the fact that for each fixed $N \in \zp$, there are only finitely many $n$ such that $\phi(n) = N$. Hence, $\phi$ must tend to infinity as $n$ tends to infinity.
+    If $\phi$ did not tend to infinity, there would exist some $M \in \zp$ such that $\phi(n) \leq M$ for infinitely many $n$. But then some value $N \leq M$ would satisfy $\phi(n) = N$ for infinitely many $n$, contradicting the above. Hence $\phi(n) \to \infty$ as $n \to \infty$.
 \end{sol}
 
 \begin{exercise}[0.2.11]

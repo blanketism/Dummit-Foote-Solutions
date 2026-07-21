@@ -21,7 +21,7 @@
 \end{exercise}
 
 \begin{sol}
-    For some $x \in G$ where $\abs x = \abs G = n$, then Proposition 2.2 says that $1, x, x^2, \ldots, x^{n - 1}$ are all distinct elements of $G$. Since $G$ has $n$ elements only, it follows that these are the elements of $G$, hence $G = \gen x$. Moreover, this is not true if $G$ is infinite, since $\abs{\z} = \abs 2 = \infty$, but $\gen 2$ generates only the even integers.
+    For some $x \in G$ where $\abs x = \abs G = n$, then Proposition 2.2 says that $1, x, x^2, \ldots, x^{n - 1}$ are all distinct elements of $G$. Since $G$ has $n$ elements only, it follows that these are the elements of $G$, hence $G = \gen x$. Moreover, this is not true if $G$ is infinite, since $\abs{\z} = \abs 2 = \infty$, but $\gen 2$ is a proper subgroup of $\z$.
 \end{sol}
 
 \begin{exercise}[2.3.3]
@@ -38,7 +38,7 @@
 \end{exercise}
 
 \begin{sol}
-    Note that $202 = 2 \cdot 101$, which are both prime numbers. Then its generators is every number between 1 and 202, except 101 and even numbers.
+    Note that $202 = 2 \cdot 101$, which are both prime numbers. Then every number between 1 and 202 except 101 and even numbers is a generator of $\intmod[202]$.
 \end{sol}
 
 \begin{exercise}[2.3.5]
@@ -61,9 +61,9 @@
 \begin{sol}
     We know $\gen{\bar 1} = \intmod[48] = \set{\bar 0, \bar 1, \bar 2, \ldots, \bar{46}, \bar{47}}$. The proper subgroups are:
     \begin{align*}
-        \bar 2 & = \set{\bar 0, \bar 2, \ldots, \bar{44}, \bar{46}} & \bar 6 & = \set{\bar 0, \bar 6, \ldots, \bar{36}, \bar{42}} & \bar{16} & = \set{\bar 0, \bar{16}, \bar{32}} \\
-        \bar 3 & = \set{\bar 0, \bar 3, \ldots, \bar{42}, \bar{45}} & \bar 8 & = \set{\bar 0, \bar 8, \bar{16}, \bar{24}, \bar{32}, \bar{40}} & \bar{24} & = \set{\bar 0, \bar{24}} \\
-        \bar 4 & = \set{\bar 0, \bar 4, \ldots, \bar{40}, \bar{44}} & \bar{12} & = \set{\bar 0, \bar{12}, \bar{24}, \bar{36}} & \bar{0} & = \set{\bar 0}
+        \gen{\bar 2} & = \set{\bar 0, \bar 2, \ldots, \bar{44}, \bar{46}} & \gen{\bar 6} & = \set{\bar 0, \bar 6, \ldots, \bar{36}, \bar{42}} & \gen{\bar{16}} & = \set{\bar 0, \bar{16}, \bar{32}} \\
+        \gen{\bar 3} & = \set{\bar 0, \bar 3, \ldots, \bar{42}, \bar{45}} & \gen{\bar 8} & = \set{\bar 0, \bar 8, \bar{16}, \bar{24}, \bar{32}, \bar{40}} & \gen{\bar{24}} & = \set{\bar 0, \bar{24}} \\
+        \gen{\bar 4} & = \set{\bar 0, \bar 4, \ldots, \bar{40}, \bar{44}} & \gen{\bar{12}} & = \set{\bar 0, \bar{12}, \bar{24}, \bar{36}} & \gen{\bar{0}} & = \set{\bar 0}
     \end{align*}
     Moreover, the subgroup inclusions are clear from applying the fact that $\gen{\bar a} \leq \gen{\bar b}$ if and only if $b \mid a$.
 \end{sol}
@@ -92,9 +92,9 @@
 \begin{sol}
     Suppose $\bar r, \bar s \in \intmod[48]$ such that $\bar r = \bar s$. Then $r \equiv s \bmod 48$. If $\psi_a$ is well-defined, then
     \[\psi_a(\bar r) = \psi_a(r \cdot \bar 1) = x^{a r} = x^{a s} = \psi_a(s \cdot \bar 1) = \psi_a(\bar s)\]
-    so that $x^{a (r - s)} = 1$. By $\abs x = 36, $ we know $36 \mid a(r - s)$. Since $48 \mid (r -s)$, then there exists $k$ such that $36 \mid 48ak$, or $3 \mid 4ak$. Since $k$ is arbitrary, this must hold for all integers $k$. Hence, $3 \mid a$.
+    so that $x^{a (r - s)} = 1$ whenever $48 \mid (r - s)$. This occurs if and only if $36 \mid a(r - s)$ whenever $48 \mid (r - s)$. Since $(36, 48) = 12$, then $36/12 = 3 \mid a$. Hence, $\psi_a$ is well-defined if and only if $3 \mid a$.
 
-    $\psi_a$ can never be surjective, since that would imply $(a, 36) = 1$.
+    Surjectivity requires that $x^a$ generates $Z_{36}$. By Proposition 2.5, this occurs if and only if $(a, 36) = 1$. But if $3 \mid a$, then $(a, 36) \geq 3$, so that $\psi_a$ is never surjective.
 \end{sol}
 
 \begin{exercise}[2.3.10]
@@ -104,7 +104,7 @@
 \begin{sol}
     By Proposition 2.5, we have $\abs{\bar 1} = 54$. Since $(54, 30) = 6$, then $|\bar{30}| = 9$. Then $\bar{30} = \bar 6$, hence
     \[\gen{\bar{30}} = \set{\bar 0, \bar 6, \bar{12}, \bar{18}, \bar{24}, \bar{30}, \bar{36}, \bar{42}, \bar{48}}.\]
-    Moreover, the orders of each $\bar x \in \bar{30}$ is just $54/(54, x)$.
+    Moreover, the orders of each $\bar x \in \gen{\bar{30}}$ is just $54/(54, x)$.
 \end{sol}
 
 \begin{exercise}[2.3.11]
@@ -119,7 +119,7 @@
         \gen{r^2} & = \set{1, r^2} \\
         \gen{sr^k} & = \set{1, sr^k}
     \end{align*}
-    Moreover, a proper subgroup that is not cyclic is $\gen{r^2, s} = \{1, r^2, s, sr^2\}$.
+    Moreover, a proper subgroup that is not cyclic is $\gen{r^2, s} = \set{1, r^2, s, sr^2}$.
 \end{sol}
 
 
@@ -133,8 +133,8 @@
 \begin{solenum}
     \item Put $Z_2 = \gen x$. Then $Z_2 \times Z_2 = \set{(1, 1), (1, x), (x, 1), (x, x)}$.
     No element generates all four elements, hence $Z_2 \times Z_2$ is not cyclic.
-    \item If $(a, b)$ generates $Z_2 \times \z$, then it must be one of the forms $(1, \pm 1)$ or $(x, \pm 1)$, since $\gen{\pm 1} = \z$. But $(1, \pm 1)$ generates elements whose first component is only 1. If we consider $(x, \pm 1)$, then this also doesn't generate $Z_2 \times \z$ since $(1, 1) \not\in \gen{(x, \pm 1)}$.
-    \item The only candidates for generators of $\z \times \z$ is $(\pm 1, \pm 1)$. But any subgroup generated by $(\pm 1, \pm 1)$ contain elements that differ only in sign as $(x, y) \not\in \gen{(\pm 1, \pm 1)}$ when $\abs x \neq \abs y$.
+    \item If $(a, b)$ generates $Z_2 \times \z$, then it must be one of the forms $(1, \pm 1)$ or $(x, \pm 1)$, since $\gen{\pm 1} = \z$. But $(1, \pm 1)$ generates elements whose first component is only 1. If we consider $(x, \pm 1)$, then this also doesn't generate $Z_2 \times \z$ since $(1, 1) \notin \gen{(x, \pm 1)}$.
+    \item The only candidates for generators of $\z \times \z$ is $(\pm 1, \pm 1)$. But any subgroup generated by $(\pm 1, \pm 1)$ contain elements that differ only in sign as $(x, y) \notin \gen{(\pm 1, \pm 1)}$ when $\abs x \neq \abs y$.
 \end{solenum}
 
 \begin{exercise}[2.3.13]
@@ -180,7 +180,7 @@
 \begin{sol}
     Let $\ell$ be the least common multiple of $m$ and $n$. Then there exist $a, b \in \z$ such that $\ell = am = bn$. Then
     \[(xy)^\ell = x^\ell y^\ell = x^{bn}y^{am} = 1 \cdot 1 = 1\]
-    so that by Proposition 2.3, then $|xy|$ divides $\ell$. Moreover, this is not true if $x$ and $y$ do not commute. If we consider $r, s \in D_8$, then $\abs r = 4$ and $\abs s = 2$, but $\abs{rs} = 2$ which 4 does not divide. Moreover, consider $rs, s \in D_8$. Then $\abs{rs} = 2$ and $\abs s = 2$, but $\abs{rss} = \abs r = 4 \neq \lcm(2, 2)$.
+    so that by Proposition 2.3, then $|xy|$ divides $\ell$. Moreover, this is not true if $x$ and $y$ do not commute. If we consider $x = rs$ and $y = s$ in $D_8$, then $|xy| = |rss| = 4$, but $\lcm(|x|, |y|) = \lcm(2, 2)$. Moreover, consider $x = y = r^2 \in D_8$. Then $\abs x = \abs y = 2$, but $\abs{xy} = \abs{r^4} = 1 \neq \lcm(2, 2) = 2$.
 \end{sol}
 
 \begin{exercise}[2.3.17]
@@ -219,13 +219,13 @@
     If $x^{p^n} = 1$, then Proposition 2.3 says that $|x|$ divides $p^n$. Since $p$ is prime, then $|x|$ must also be a power of $p$ that is at most $n$.
 \end{sol}
 
-\begin{specialexercise}[2.3.21]
+\begin{spex}[2.3.21]
     Let $p$ be an odd prime and let $n$ be a positive integer. Use the Binomial Theorem to show that $(1 + p)^{p^{n - 1}} \equiv 1 \bmod p^n$ but $(1 + p)^{p^{n - 2}} \not\equiv 1 \bmod p^n$. Deduce that $1 + p$ is an element of order $p^{n - 1}$ in the multiplicative group $\units[p^n]$.
-\end{specialexercise}
+\end{spex}
 
 \begin{sol}
-    By the Binomial Theorem, then
-    \[(1 + p)^{p^{n - 1}} = \sum_{k = 0}^{p^{n - 1}} \binom{p^{n - 1}}k p^k = 1 + p^n + \sum_{k = 2}^{p^{n - 1} - 2} \binom{p^{n - 1}}k p^k.\]
+    By the binomial theorem,
+    \[(1 + p)^{p^{n - 1}} = \sum_{k = 0}^{p^{n - 1}} \binom{p^{n - 1}}k p^k = 1 + p^n + \sum_{k = 2}^{p^{n - 1}} \binom{p^{n - 1}}k p^k.\]
     Observe that for $k \geq 2$, the binomial coefficient is
     \[\binom{p^{n - 1}}{k} = \frac{p^{n - 1}(p^{n - 1} - 1) \cdots (p^{n - 1} - k + 1)}{k!}\]
     \begin{lemma}{$k!$ contains at most $p^{k - 1}$ as a factor.}
@@ -237,9 +237,9 @@
     Now consider $(1 + p)^{p^{n - 2}}$. Using the binomial theorem, this expands to $1 + p^{n - 1} +$ terms that are divisible by $p^n$. This is clearly not 1 mod $p^n$, so the order of $1 + p$ in $\units[p^n]$ is $p^{n - 1}$.
 \end{sol}
 
-\begin{specialexercise}[2.3.22]
+\begin{spex}[2.3.22]
     Let $n$ be an integer $\geq 3$. Use the Binomial Theorem to show that $(1 + 2^2)^{2^{n - 2}} \equiv 1 \bmod 2^n$ but $(1 + 2^2)^{2^{n - 3}} \not\equiv 1 \bmod 2^n$. Deduce that 5 is an element of order $2^{n - 2}$ in the multiplicative group $\units[2^n]$.
-\end{specialexercise}
+\end{spex}
 
 \begin{sol}
     The process is similar to the previous exercise, where we use the Binomial Theorem to expand $(1 + 2^2)^{2^{n - 2}}$ and see that $k = 0$ and $k = 1$ terms are $1$ and $2^n$ respectively. For $k \geq 2$, we have the summand as
@@ -269,7 +269,7 @@
         
         \hint{Show first that $gx^kg\inv = (gxg\inv)^k = x^{ak}$ for any integer $k$ so that $g\gen xg\inv \leq \gen x$. If $x$ has order $n$, show that the elements $gx^ig\inv, i = 0, 1, \ldots, n - 1$ are distinct, so that $\abs{g \gen xg\inv} = \abs{\gen x} = n$ and conclude that $g\gen xg\inv = \gen x$.}
     \end{subexercises}
-    \remark{Note that this cuts down some work in commuting normalizers of cyclic subgroups since one does not have to check $ghg\inv \in \gen x$ for every $h \in \gen x$.}
+    \note{Note that this cuts down some work in commuting normalizers of cyclic subgroups since one does not have to check $ghg\inv \in \gen x$ for every $h \in \gen x$.}
 \end{exercise}
 
 \begin{solenum}
@@ -295,7 +295,7 @@
     Now let $G$ be any finite group of order $n$. For any $y \in G$, consider the subgroup $\gen y$. If $\abs{\gen y} = m$, then by Lagrange's Theorem, $m \mid n$. Since $(k, n) = 1$, then $(k, m) = 1$ as well. By the previous result, there exists some $z \in \gen y$ such that $z^k = y$. Hence, the map $x \mapsto x^k$ is surjective.
 \end{sol}
 
-\begin{specialexercise}[2.3.26]
+\begin{spex}[2.3.26]
     Let $Z_n$ be a cyclic group of order $n$ and for each integer $a$ let
     \[\sigma_a : Z_n \to Z_n \quad \text{by} \quad \sigma_a(x) = x^a \text{ for all } x \in Z_n\]
     \begin{subexercises}
@@ -304,13 +304,13 @@
         \item Prove that \emph{every} automorphism of $Z_n$ is equal to $\sigma_a$ for some integer $a$.
         \item Prove that $\sigma_a \circ \sigma_b = \sigma_{ab}$. Deduce that the map $\bar a \mapsto \sigma_a$ is an isomorphism of $\units$ onto the automorphism group of $Z_n$ (so $\aut(Z_n)$ is an Abelian group of order $\phi(n)$).
     \end{subexercises}
-\end{specialexercise}
+\end{spex}
 
 \begin{solenum}
     \item 
     \begin{itemize}
-        \item [\rightimp] Suppose $\sigma_a \in \aut(Z_n)$, and let $d = (n, a)$. Assume, by way of contradiction, that $d \neq 1$. Then there are $s, t \in \z$ such that $n = ds$ and $a = dt$. Let $Z_n = \gen x$. Then
-        \[\sigma_a(x^s) = x^{as} = x^{dts} = x^{ns} = 1\]
+        \item [\rightimp] Suppose $\sigma_a \in \aut(Z_n)$, and let $d = (n, a)$. Assume, by way of contradiction, that $d \neq 1$. Then there are $s, t \in \z$ such that $n = ds$ and $a = dt$, so that $as = dts = nt$. Let $Z_n = \gen x$. Then
+        \[\sigma_a(x^s) = x^{as} = x^{nt} = (x^n)^t = 1\]
         If $x^s \neq 1$, then $\ker\sigma_a$ would be non-trivial, contradicting that $\sigma_a$ is an automorphism. Hence, $x^s = 1$, and since $\abs x = n$ and $n \mid s$, then $s = n$ so that $d = 1$.
         \item [\leftimp] Suppose that $(a, n) = 1$. By the previous exercise, then $\sigma_a$ is a surjective map. Since $Z_n$ is finite, then $\sigma_a$ is also bijective. Moreover,
         \[\sigma_a(xy) = (xy)^a = x^ay^a = \sigma_a(x)\sigma_a(y)\]

@@ -11,7 +11,7 @@ M =
     0 & 1
 \end{pmatrix}
 \]
-and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times 2$ matrices with real entries.
+and $\bb = \set{X \in \ac \mid MX = XM}$, where $\ac$ denotes the set of $2 \times 2$ matrices with real entries.
 
 \begin{exercise}[0.1.1]
     Determine which of the following elements of $\ac$ lie in $\bb$:
@@ -44,11 +44,11 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
 \end{exercise}
 
 \begin{sol}
-    Let $M_i$ denote the $i$-th matrix in the list. $M_1, M_3, M_5, M_6$ is $M$, the zero matrix, $I_2$, and the exchange matrix respectively. Among these, $M_1, M_3, M_5$ belong to $\bb$, while $M_6 \not\in \bb$. Direct calculation shows $M_2$ and $M_4$ are not in $\bb$.
+    Let $M_i$ denote the $i$-th matrix in the list. Then $M_1, M_3, M_5, M_6$ are $M$, the zero matrix, $I_2$, and the exchange matrix respectively. Among these, $M_1, M_3, M_5$ belong to $\bb$, while $M_6 \notin \bb$. Direct calculation shows $M_2$ and $M_4$ are not in $\bb$.
 \end{sol}
 
 \begin{exercise}[0.1.2]
-    Prove that if $P, Q \in \bb$, then $P + Q \in \bb$ where $+$ denotes the usual sum of two matrices.
+    Prove that if $P, Q \in \bb$, then $P + Q \in \bb$, where $+$ denotes the usual sum of two matrices.
 \end{exercise}
 
 \begin{sol}
@@ -56,7 +56,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
 \end{sol}
 
 \begin{exercise}[0.1.3]
-    Prove that if $P, Q \in \bb$, then $P\cdot Q \in \bb$ where $\cdot$ denotes the usual product of two matrices.
+    Prove that if $P, Q \in \bb$, then $P\cdot Q \in \bb$, where $\cdot$ denotes the usual product of two matrices.
 \end{exercise}
 
 \begin{sol}
@@ -110,7 +110,7 @@ and $\bb = \{X \in \ac \mid MX = XM\}$, where $\ac$ denotes the set of $2 \times
 \end{exercise}
 
 \begin{sol}
-    No. Note that $1=1.000\ldots = 0.999\ldots$, but $f(1.000\ldots) = 1$ and $f(0.999\ldots) = 9$.
+    No. Note that $1=1.000\ldots = 0.999\ldots$, but $f(1.000\ldots) = 0$ and $f(0.999\ldots) = 9$.
 \end{sol}
 
 \begin{exercise}[0.1.7]

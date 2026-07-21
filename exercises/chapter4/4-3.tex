@@ -2,13 +2,13 @@
 
 Let $G$ be a group.
 
-\begin{specialexercise}
+\begin{spex}
 	Suppose $G$ has a left action on a set $A$, denoted by $g \cdot a$ for all $g \in G$ and $a \in A$. Denote the corresponding right action on $A$ by $a \cdot g$. Prove that the (equivalence) relations $\sim$ and $\sim'$ defined by
 	\[ a \sim b \quad \text{if and only if} \quad a = g \cdot b \quad \text{ for some } g \in G \]
 	and
 	\[ a \sim' b \quad \text{if and only if} \quad a = b \cdot g \quad \text{ for some } g \in G \]
 	are the same relation (i.e., $a \sim b$ if and only if $a \sim' b$).
-\end{specialexercise}
+\end{spex}
 
 \begin{sol}
 	If $a \sim b$, there exists $g \in G$ such that $a = g \cdot b$. Let $h = g\inv$. Then $b = h \cdot a$, so $a = b \cdot g$. Thus, $a \sim' b$. Conversely, if $a \sim' b$, there exists $g \in G$ such that $a = b \cdot g$. Let $h = g\inv$. Then $b = h \cdot a$, so $a = g \cdot b$. Thus, $a \sim b$. Therefore, the relations $\sim$ and $\sim'$ are the same.
@@ -22,16 +22,14 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{solenum}
-	\item Discussed in the text, the conjugacy classes of $D_8$ are $\{1\}$, $\{r^2\}$, $\{r, r^3\}$, $\{s, sr^2\}$, and $\{sr, sr^3\}$ with sizes 1, 1, 2, 2, and 2 respectively.
-	\item Again discussed in the text, the conjugacy classes of $Q_8$ are $\{1\}$, $\{-1\}$, $\{i, -i\}$, $\{j, -j\}$, and $\{k, -k\}$ with sizes 1, 1, 2, 2, and 2 respectively.
+	\item Discussed in the text, the conjugacy classes of $D_8$ are $\set{1}$, $\set{r^2}$, $\set{r, r^3}$, $\set{s, sr^2}$, and $\set{sr, sr^3}$ with sizes 1, 1, 2, 2, and 2 respectively.
+	\item Again discussed in the text, the conjugacy classes of $Q_8$ are $\set{1}$, $\set{-1}$, $\set{i, -i}$, $\set{j, -j}$, and $\set{k, -k}$ with sizes 1, 1, 2, 2, and 2 respectively.
 	\item We proceed similarly as the text. The possible cycle types are $1, (1\ 2\ 3)$, and $(1\ 2)(3\ 4)$.
 	
 	For $(1\ 2\ 3)$, we have $C_{A_4}((1\ 2\ 3)) = \gen{(1\ 2\ 3)}$ since the only permutation that fixes 1, 2, and 3 is the identity. Therefore, the conjugacy class of $(1\ 2\ 3)$ has size $12/3 = 4$. However, there are 8 3-cycles in $A_4$, so there exists a 3-cycle $\sigma \in A_4$ not in the conjugacy class of $(1\ 2\ 3)$. By similar reasoning, the conjugacy class of $\sigma$ also has size 4. There are then 2 conjugacy classes of size 4 corresponding to the 3-cycles.
 
 	For $(1\ 2)(3\ 4)$, it is trivial to calculate that the remaining double transpositions are in its conjugacy class. Therefore, the conjugacy class of $(1\ 2)(3\ 4)$ has size 3.
 \end{solenum}
-
-\newpage
 
 \begin{exercise}
 	Find all conjugacy classes and their sizes in the following groups:
@@ -69,16 +67,14 @@ Let $G$ be a group.
 	Let $\kk_g$ be the conjugacy class of some $g \in G$. By Proposition 4.6, we have $|\kk_g| = |G : C_G(g)|$. Since $Z(G) \leq C_G(g)$ for all $g \in G$, Lagrange's Theorem shows that $|Z(G)|$ divides $|C_G(g)|$. Therefore, $|G : C_G(g)|$ divides $|G : Z(G)| = n$. Hence, $|\kk_g| \leq n$.
 \end{sol}
 
-\newpage
-
-\begin{specialexercise}
-	Assume $G$ is a non-abelian group of order $15$. Prove that $Z(G)=1$. Use the fact that $\langle g \rangle \le C_G(g)$ for all $g \in G$ to show that there is at most one possible class equation for $G$. [Use \exref{3.1.36}.]
-\end{specialexercise}
+\begin{spex}
+	Assume $G$ is a non-Abelian group of order $15$. Prove that $Z(G)=1$. Use the fact that $\langle g \rangle \le C_G(g)$ for all $g \in G$ to show that there is at most one possible class equation for $G$. [Use \exref{3.1.36}.]
+\end{spex}
 
 \begin{sol}
-	Recall that $Z(G) \leq G$. Since $G$ is non-abelian, then $Z(G) \neq G$. Assume $1 < Z(G) < 15$. By Lagrange's Theorem, $Z(G)$ has order 3 or 5. If $|Z(G)| = 3$, then $|G/Z(G)| = 5$ and $G/Z(G) \cong Z_5$. If $|Z(G)| = 5$, then $|G/Z(G)| = 3$ and $G/Z(G) \cong Z_3$. In either case, $G/Z(G)$ is cyclic by Corollary 3.10, and \exref{3.1.36} implies that $G$ is abelian, a contradiction. Therefore, $Z(G) = 1$.
+	Recall that $Z(G) \leq G$. Since $G$ is non-Abelian, then $Z(G) \neq G$. Assume $1 < Z(G) < 15$. By Lagrange's Theorem, $Z(G)$ has order 3 or 5. If $|Z(G)| = 3$, then $|G/Z(G)| = 5$ and $G/Z(G) \cong Z_5$. If $|Z(G)| = 5$, then $|G/Z(G)| = 3$ and $G/Z(G) \cong Z_3$. In either case, $G/Z(G)$ is cyclic by Corollary 3.10, and \exref{3.1.36} implies that $G$ is Abelian, a contradiction. Therefore, $Z(G) = 1$.
 
-	Now suppose $g \in G$ is nonidentity. Since $\langle g \rangle \leq C_G(g)$, then $|C_G(g)|$ is 3, 5, or 15 by Lagrange's Theorem. If $|C_G(g)| = 15$, then $C_G(g) = G$, so $g \in Z(G)$, a contradiction. Therefore, $|C_G(g)|$ is 3 or 5 for all nonidentity $g \in G$. By Proposition 4.6, we have $|\kk_g| = |G : C_G(g)|$, so that $|\kk_g|$ is 5 or 3 respectively. The identity element forms a conjugacy class of size 1, and the class equation must involve a summation of sizes 3 and 5 that adds to 14. The only such combination is three classes of size 3 and one class of size 5. Therefore, the class equation of $G$ is $15 = 1 + 3 + 3 + 3 + 5$.
+	Now suppose $g \in G$ is non-identity. Since $\langle g \rangle \leq C_G(g)$, then $|C_G(g)|$ is 3, 5, or 15 by Lagrange's Theorem. If $|C_G(g)| = 15$, then $C_G(g) = G$, so $g \in Z(G)$, a contradiction. Therefore, $|C_G(g)|$ is 3 or 5 for all non-identity $g \in G$. By Proposition 4.6, we have $|\kk_g| = |G : C_G(g)|$, so that $|\kk_g|$ is 5 or 3 respectively. The identity element forms a conjugacy class of size 1, and the class equation must involve a summation of sizes 3 and 5 that adds to 14. The only such combination is three classes of size 3 and one class of size 5. Therefore, the class equation of $G$ is $15 = 1 + 3 + 3 + 3 + 5$.
 \end{sol}
 
 \begin{exercise}
@@ -147,7 +143,7 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-	Suppose $\sigma \in Z(S_n)$ for some $n \geq 3$. Then $\sigma$ commutes with every element of $S_n$. In particular, $\sigma$ commutes with all transpositions (the set of which generate $S_n$). Let $(a\ b)$ be any transposition in $S_n$. Then we have $\sigma(a\ b)\sigma\inv = (a\ b)$. This implies that $(\sigma(a)\ \sigma(b)) = (a\ b)$, so $\sigma(a) = a$ and $\sigma(b) = b$. Since $a$ and $b$ were arbitrary, $\sigma$ fixes every element of $\{1, 2, \ldots, n\}$. Therefore, $\sigma$ is the identity permutation. Hence, $Z(S_n) = \{1\}$ for all $n \geq 3$.
+	Suppose $\sigma \in Z(S_n)$ for some $n \geq 3$. Then $\sigma$ commutes with every element of $S_n$. In particular, $\sigma$ commutes with all transpositions (the set of which generate $S_n$). Let $(a\ b)$ be any transposition in $S_n$. Then we have $\sigma(a\ b)\sigma\inv = (a\ b)$. This implies that $(\sigma(a)\ \sigma(b)) = (a\ b)$, so $\sigma(a) = a$ and $\sigma(b) = b$. Since $a$ and $b$ were arbitrary, $\sigma$ fixes every element of $\set{1, 2, \ldots, n}$. Therefore, $\sigma$ is the identity permutation. Hence, $Z(S_n) = \set{1}$ for all $n \geq 3$.
 \end{sol}
 
 \begin{exercise}
@@ -155,8 +151,8 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-	The $(n - 4)!$ factor arises from the fact that permutations on the $n - 4$ integers not involved in the cycle $(1\ 2)(3\ 4)$ commute with it. Therefore, we need only consider the permutations of $\{1, 2, 3, 4\}$ that commute with $(1\ 2)(3\ 4)$. Computing $C_{S_4}((1\ 2)(3\ 4))$ directly, the permutations that fall in this set need to leave $(1\ 2)(3\ 4)$ unchanged, or swap the two transpositions. The permutations that leave $(1\ 2)(3\ 4)$ unchanged are $1$, $(1\ 2)$, $(3\ 4)$, and $(1\ 2)(3\ 4)$. The permutations that swap the two transpositions are $(1\ 3)(2\ 4)$, $(1\ 4)(2\ 3)$, $(1\ 3\ 2\ 4)$, and $(1\ 4\ 2\ 3)$. Therefore, 
-	\[C_{S_4}((1\ 2)(3\ 4)) = \{1, (1\ 2), (3\ 4), (1\ 2)(3\ 4), (1\ 3)(2\ 4), (1\ 4)(2\ 3), (1\ 3\ 2\ 4), (1\ 4\ 2\ 3)\},\]
+	The $(n - 4)!$ factor arises from the fact that permutations on the $n - 4$ integers not involved in the cycle $(1\ 2)(3\ 4)$ commute with it. Therefore, we need only consider the permutations of $\set{1, 2, 3, 4}$ that commute with $(1\ 2)(3\ 4)$. Computing $C_{S_4}((1\ 2)(3\ 4))$ directly, the permutations that fall in this set need to leave $(1\ 2)(3\ 4)$ unchanged, or swap the two transpositions. The permutations that leave $(1\ 2)(3\ 4)$ unchanged are $1$, $(1\ 2)$, $(3\ 4)$, and $(1\ 2)(3\ 4)$. The permutations that swap the two transpositions are $(1\ 3)(2\ 4)$, $(1\ 4)(2\ 3)$, $(1\ 3\ 2\ 4)$, and $(1\ 4\ 2\ 3)$. Therefore, 
+	\[C_{S_4}((1\ 2)(3\ 4)) = \set{1, (1\ 2), (3\ 4), (1\ 2)(3\ 4), (1\ 3)(2\ 4), (1\ 4)(2\ 3), (1\ 3\ 2\ 4), (1\ 4\ 2\ 3)},\]
 	which has size 8. Combining this with the $(n - 4)!$ factor, we have $|C_{S_n}((1\ 2)(3\ 4))| = 8(n - 4)!$ for all $n \geq 4$.
 \end{sol}
 
@@ -222,12 +218,12 @@ Let $G$ be a group.
 	\end{array} \qh\]
 \end{sol}
 
-\begin{specialexercise}
+\begin{spex}
 	Find all finite groups which have exactly two conjugacy classes.
-\end{specialexercise}
+\end{spex}
 
 \begin{sol}
-	Let $G$ be a finite group with exactly two conjugacy classes. One of these classes must be $\{1\}$, the identity element. Let $\kk$ be the other conjugacy class, and let $g \in \kk$. By Proposition 4.6, we have $|\kk| = |G : C_G(g)|$. Since there are only two conjugacy classes, then $|\kk| = |G| - 1$. Therefore, $|G : C_G(g)| = |G| - 1$, which implies that $|C_G(g)| = |G|/(|G| - 1)$. Since $|C_G(g)|$ is an integer, then $|G| - 1$ divides $|G|$. This is only possible if $|G| - 1 = 1$, so that $|G| = 2$. Therefore, the only finite group with exactly two conjugacy classes is the group of order 2, which is isomorphic to $Z_2$.
+	Let $G$ be a finite group with exactly two conjugacy classes. One of these classes must be $\set{1}$, the identity element. Let $\kk$ be the other conjugacy class, and let $g \in \kk$. By Proposition 4.6, we have $|\kk| = |G : C_G(g)|$. Since there are only two conjugacy classes, then $|\kk| = |G| - 1$. Therefore, $|G : C_G(g)| = |G| - 1$, which implies that $|C_G(g)| = |G|/(|G| - 1)$. Since $|C_G(g)|$ is an integer, then $|G| - 1$ divides $|G|$. This is only possible if $|G| - 1 = 1$, so that $|G| = 2$. Therefore, the only finite group with exactly two conjugacy classes is the group of order 2, which is isomorphic to $Z_2$.
 \end{sol}
 
 \begin{exercise}
@@ -254,11 +250,11 @@ Let $G$ be a group.
 	We proceed similarly to the preceding exercise. The generators of the first subgroup are $(1\ 2\ 3\ 4)$ and $(2\ 4)$, while the generators of the second subgrgoup are $(1\ 3\ 2\ 4)$ and $(3\ 4)$. We obtain $\tau = (2\ 3)$.
 \end{sol}
 
-\begin{specialexercise}[4.3.17]
+\begin{spex}[4.3.17]
 	Let $A$ be a nonempty set and let $X$ be any subset of $S_A$. Let
 	\[F(X) = \set{a \in A \mid \sigma(a) = a \text{ for all } \sigma \in X} \qquad \text{---the \emph{fixed set} of $X$}\]
 	Let $M(X) = A - F(X)$ be the elements which are \emph{moved} by some element of $X$. Let $D = \set{\sigma \in S_A \mid |M(\sigma)| < \infty}$. Prove that $D$ is a normal subgroup of $S_A$.
-\end{specialexercise}
+\end{spex}
 
 \begin{sol}
 	Note that $1 \in D$, since $M(1) = \varnothing$ as it fixes all elements of $A$. Let $\sigma, \tau \in D$. Then $|M(\sigma)| < \infty$ and $|M(\tau)| < \infty$. Suppose $a \in F(\sigma) \cap F(\tau)$. Clearly, $a \in F(\sigma\tau)$. By contrapositive, then $a \in M(\sigma\tau)$ implies $a \in M(\sigma) \cup M(\tau)$, which are both finite, hence $M(\sigma\tau)$ is finite. Therefore, $\sigma\tau \in D$.
@@ -302,11 +298,9 @@ Let $G$ be a group.
 	\leftimp Suppose $\sigma$ commutes with an odd permutation $\tau \in S_n$. Then $\tau \in C_{S_n}(\sigma)$, so that $A_nC_{S_n}(\sigma)$ contains odd permutations. Therefore, $|S_n : A_nC_{S_n}(\sigma)| = 1$, so that the conjugacy class of $\sigma$ in $S_n$ is a single conjugacy class in $A_n$. Hence, all elements in the conjugacy class of $\sigma$ in $S_n$ are conjugate in $A_n$.
 \end{sol}
 
-\newpage
-
-\begin{specialexercise}
+\begin{spex}
 	Let $\kk$ be a conjugacy class in $S_n$ and assume that $\kk \subseteq A_n$. Show $\sigma \in S_n$ does \emph{not} commute with any odd permutation if and only if the cycle type of $\sigma$ consists of distinct odd integers. Deduce that $\kk$ consists of two conjugacy clases in $A_n$ if and only if the cycle type of an element of $\kk$ consists of distinct odd integers. [Assume first that $\sigma \in \kk$ does not commute with any odd permutation. Observe that $\sigma$ commutes with each individual cycle in its cycle decomposition---use this to show that all its cycles must be of odd length. If two cycles have the same odd length, $k$, find a product of $k$ transpositions which interchanges them and commutes with $\sigma$. Conversely, if the cycle type of $\sigma$ consists of distinct integers, prove that $\sigma$ commutes \emph{only} with the group generated by the cycles in its cycle decomposition.]
-\end{specialexercise}
+\end{spex}
 
 \begin{sol}
 	\rightimp Suppose $\sigma \in S_n$ does not commute with any odd permutation. Let the cycle decomposition of $\sigma$ be $\sigma = \tau_1\tau_2\cdots\tau_k$, where each $\tau_i$ is a disjoint cycle. Since $\sigma$ commutes with each $\tau_i$, then each $\tau_i$ must be of odd length; otherwise, $\tau_i$ would be an odd permutation commuting with $\sigma$. Now suppose two cycles $\tau_i$ and $\tau_j$ have the same odd length $m$. Then the product of $m$ transpositions which interchanges the elements of $\tau_i$ and $\tau_j$ is an odd permutation which commutes with $\sigma$, contradicting our assumption. Therefore, all cycles in the cycle decomposition of $\sigma$ must have distinct odd lengths.
@@ -323,16 +317,14 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}[4.3.23]
-	Recall (cf. \exref{2.4.16}) that a proper subgroup $M$ of $G$ is called \emph{maximal} if whenever $M \leq H \leq G$, either $H = M$ or $H = G$. Prove that if $M$ is a maximal subgroup of $G$ then either $N_G(M) = M$ or $N_G(M) = G$. Deduce that if $M$ is a maximal subgroup of $G$ that is not normal in $G$, then the number of nonidentity elements of $G$ that are contained in conjugates of $M$ is at most $(|M| - 1)|G : M|$.
+	Recall (cf. \exref{2.4.16}) that a proper subgroup $M$ of $G$ is called \emph{maximal} if whenever $M \leq H \leq G$, either $H = M$ or $H = G$. Prove that if $M$ is a maximal subgroup of $G$ then either $N_G(M) = M$ or $N_G(M) = G$. Deduce that if $M$ is a maximal subgroup of $G$ that is not normal in $G$, then the number of non-identity elements of $G$ that are contained in conjugates of $M$ is at most $(|M| - 1)|G : M|$.
 \end{exercise}
 
 \begin{sol}
 	Suppose $M$ is a maximal subgroup of $G$. By definition, $N_G(M)$ is a subgroup of $G$ containing $M$. Therefore, by maximality of $M$, either $N_G(M) = M$ or $N_G(M) = G$.
 
-	Now suppose $M$ is a maximal subgroup of $G$ that is not normal in $G$. Then by the previous result, we have $N_G(M) = M$. By Proposition 4.6, the size of the conjugacy class of $M$ in $G$ is $|G : N_G(M)| = |G : M|$. Each conjugate of $M$ contains $|M| - 1$ nonidentity elements. Therefore, the total number of nonidentity elements of $G$ contained in conjugates of $M$ is at most $(|M| - 1)|G : M|$.
+	Now suppose $M$ is a maximal subgroup of $G$ that is not normal in $G$. Then by the previous result, we have $N_G(M) = M$. By Proposition 4.6, the size of the conjugacy class of $M$ in $G$ is $|G : N_G(M)| = |G : M|$. Each conjugate of $M$ contains $|M| - 1$ non-identity elements. Therefore, the total number of non-identity elements of $G$ contained in conjugates of $M$ is at most $(|M| - 1)|G : M|$.
 \end{sol}
-
-\newpage
 
 \begin{exercise}[4.3.24]
 	Assume $H$ is a proper subgroup of the finite group $G$. Prove
@@ -347,7 +339,7 @@ Let $G$ be a group.
 	\[G \neq \bigcup_{g \in G} gHg\inv.\]
 	
 	
-	Now suppose $M$ is not normal in $G$. Then by the previous exercise, the number of nonidentity elements of $G$ contained in conjugates of $M$ is at most $(|M| - 1)|G : M|$. Moreover, $H \leq M$ implies that any conjugate of $H$ is contained in a conjugate of $M$. Therefore, the number of nonidentity elements of $G$ contained in conjugates of $H$ is also at most $(|M| - 1)|G : M|$. Since $M$ is a proper subgroup of $G$, then $|G : M| \geq 2$, so that $(|M| - 1)|G : M| < |G| - 1$. Therefore, there exists at least one nonidentity element of $G$ that is not contained in any conjugate of $H$, hence
+	Now suppose $M$ is not normal in $G$. Then by the previous exercise, the number of non-identity elements of $G$ contained in conjugates of $M$ is at most $(|M| - 1)|G : M|$. Moreover, $H \leq M$ implies that any conjugate of $H$ is contained in a conjugate of $M$. Therefore, the number of non-identity elements of $G$ contained in conjugates of $H$ is also at most $(|M| - 1)|G : M|$. Since $M$ is a proper subgroup of $G$, then $|G : M| \geq 2$, so that $(|M| - 1)|G : M| < |G| - 1$. Therefore, there exists at least one non-identity element of $G$ that is not contained in any conjugate of $H$, hence
 	\[G \neq \bigcup_{g \in G} gHg\inv. \qh\]
 \end{sol}
 
@@ -389,21 +381,21 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}
-	Let $g_1, g_2, \ldots, g_r$ be representatives of the conjugacy classes of the finite group $G$ and assume these elements pairwise commute. Prove that $G$ is abelian.
+	Let $g_1, g_2, \ldots, g_r$ be representatives of the conjugacy classes of the finite group $G$ and assume these elements pairwise commute. Prove that $G$ is Abelian.
 \end{exercise}
 
 \begin{sol}
 	It is clear that $g_i \in C_G(g_j)$ for any two representatives $g_i$ and $g_j$. Let $S$ be the set of class representatives, so that we may write $S \subseteq C_G(g_i)$. Then $|C_G(g_i)| \geq |S| = r$ for all $i$. From the class equation, we get that
 	\[|G| = \sum_{i = 1}^r |G : C_G(g_i)| \leq \sum_{i = 1}^r \frac{|G|}{r} = |G|\]
-	Each term in the sum must be equal to $|G|/r$ so that $|C_G(g_i)| = r$ for all $i$. Therefore, $C_G(g_i) = S$ for all $i$. Recall that one of the $g_i$ must be 1, so that $C_G(1) = G$. Therefore, $G = S$, so that $G$ is abelian.
+	Each term in the sum must be equal to $|G|/r$ so that $|C_G(g_i)| = r$ for all $i$. Therefore, $C_G(g_i) = S$ for all $i$. Recall that one of the $g_i$ must be 1, so that $C_G(1) = G$. Therefore, $G = S$, so that $G$ is Abelian.
 \end{sol}
 
 \begin{exercise}
-	Let $p$ and $q$ be primes with $p < q$. Prove that a non-abelian group $G$ of order $pq$ has a nonnormal subgroup of index $q$ so that there exists an injective homomorphism into $S_q$. Deduce that $G$ is isomorphic to a subgroup of the normalizer in $S_q$ of the cyclic group generated by the $q$-cycle $(1\ 2\ \cdots\ q)$.
+	Let $p$ and $q$ be primes with $p < q$. Prove that a non-Abelian group $G$ of order $pq$ has a nonnormal subgroup of index $q$ so that there exists an injective homomorphism into $S_q$. Deduce that $G$ is isomorphic to a subgroup of the normalizer in $S_q$ of the cyclic group generated by the $q$-cycle $(1\ 2\ \cdots\ q)$.
 \end{exercise}
 
 \begin{sol}
-	By Cauchy's Theorem, there exists $g \in G$ such that $\abs g = q$, hence $\gen g$ has order $q$ and is of index $p$. Moreover, $\gen g$ is not normal in $G$, for otherwise $G/\gen g$ would be cyclic and isomorphic to $Z_p$, contradicting that $G$ is non-abelian. Similarly, $G$ also contains a subgroup $P$ of order $p$ and index $q$ and is similarly not normal in $G$.
+	By Cauchy's Theorem, there exists $g \in G$ such that $\abs g = q$, hence $\gen g$ has order $q$ and is of index $p$. Moreover, $\gen g$ is not normal in $G$, for otherwise $G/\gen g$ would be cyclic and isomorphic to $Z_p$, contradicting that $G$ is non-Abelian. Similarly, $G$ also contains a subgroup $P$ of order $p$ and index $q$ and is similarly not normal in $G$.
 
 	Let $G$ act on the left cosets of $P$ in $G$ by left multiplication. Then there is the associated permutation representation $\pi : G \to S_q$. In particular, $\pi$ is injective: If $\pi(x) = 1$ for some $x \in G$, then $xgP = gP$ for every $g \in G$, or $g\inv xg \in P$ for every $g \in G$. But $\ker\pi \nsub G$ and is contained in $P$ so that $\ker\pi$ has order 1 or $p$. If $|\ker\pi| = p$, then $\ker\pi = P$ is normal in $G$, a contradiction. Therefore, $\ker\pi = 1$ and $\pi$ is injective.
 
@@ -417,11 +409,11 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-	We proceed by induction on $\alpha$. If $\alpha = 0$, then $G$ is the trivial group, which has a subgroup of order $p^0 = 1$. Now suppose the result holds for all groups of order $p^k$ for some $k \geq 0$. Let $G$ be a group of order $p^{k + 1}$. By Theorem 8, $Z(G)$ is nontrivial, so there exists some $x \in Z(G)$ such that $\abs x = p$. Then $\gen x$ is a normal subgroup of $G$ of order $p$. Consider the quotient group $G/\gen x$, which has order $p^k$. By the induction hypothesis, for every $\beta$ with $0 \leq \beta \leq k$, there exists a subgroup $H/\gen x$ of $G/\gen x$ such that $\abs{H/\gen x} = p^\beta$. By the Lattice Isomorphism Theorem, there exists a subgroup $H$ of $G$ such that $\gen x \leq H$ and $\abs{H} = p^{\beta + 1}$. Therefore, for every $\beta$ with $1 \leq \beta \leq k + 1$, there exists a subgroup of $G$ of order $p^\beta$. Since the trivial subgroup has order $p^0 = 1$, the result holds for all $\beta$ with $0 \leq \beta \leq k + 1$. By induction, the result holds for all $\alpha \geq 0$.
+	We proceed by induction on $\alpha$. If $\alpha = 0$, then $G$ is the trivial group, which has a subgroup of order $p^0 = 1$. Now suppose the result holds for all groups of order $p^k$ for some $k \geq 0$. Let $G$ be a group of order $p^{k + 1}$. By Theorem 8, $Z(G)$ is non-trivial, so there exists some $x \in Z(G)$ such that $\abs x = p$. Then $\gen x$ is a normal subgroup of $G$ of order $p$. Consider the quotient group $G/\gen x$, which has order $p^k$. By the induction hypothesis, for every $\beta$ with $0 \leq \beta \leq k$, there exists a subgroup $H/\gen x$ of $G/\gen x$ such that $\abs{H/\gen x} = p^\beta$. By the Lattice Isomorphism Theorem, there exists a subgroup $H$ of $G$ such that $\gen x \leq H$ and $\abs{H} = p^{\beta + 1}$. Therefore, for every $\beta$ with $1 \leq \beta \leq k + 1$, there exists a subgroup of $G$ of order $p^\beta$. Since the trivial subgroup has order $p^0 = 1$, the result holds for all $\beta$ with $0 \leq \beta \leq k + 1$. By induction, the result holds for all $\alpha \geq 0$.
 \end{sol}
 
 \begin{exercise}
-	If $G$ is a group of odd order, prove for any nonidentity element $x \in G$ that $x$ and $x^{-1}$ are not conjugate in $G$.
+	If $G$ is a group of odd order, prove for any non-identity element $x \in G$ that $x$ and $x^{-1}$ are not conjugate in $G$.
 \end{exercise}
 
 \begin{sol}
@@ -456,11 +448,11 @@ Let $G$ be a group.
 	\[|D_{2n}| = 1 + 2k + n.\qedhere\]
 \end{sol}
 
-\begin{specialexercise} [4.3.33]
+\begin{spex} [4.3.33]
 	This exercise gives a formula for the size of each conjugacy class in $S_n$. Let $\sigma$ be a permutation in $S_n$ and let $m_1, m_2, \ldots, m_s$ be the \emph{distinct} integers which appear in the cycle type of $\sigma$ (including 1-cycles). For each $i \in \set{1, 2, \ldots, s}$ assume $\sigma$ has $k_i$ cycles of length $m_i$ (so that $\sum_1^s k_im_i = n$). Prove that the number of conjugates of $\sigma$ is
 	\[\frac{n!}{(k_1!m_1^{k_1})(k_2!m_2^{k_2}) \cdots (k_s!m_s^{k_s})}\]
 	[See \exref{1.3.6} and \exref{1.3.7} where this formula was given in some special cases.]
-\end{specialexercise}
+\end{spex}
 
 \begin{sol}
 	We start with $n$ integers. We see that there are $n!$ ways to arrange these integers. Now consider the $k_1$ cycles of length $m_1$ in the cycle decomposition of $\sigma$. Clearly, we must use $k_1m_1$ of the $n$ integers to form these cycles. However, there are $m_1^{k_1}$ ways to arrange the integers within each of these $k_1$ cycles, and there are $k_1!$ ways to arrange the $k_1$ cycles among themselves. Therefore, we must divide $n!$ by $(k_1!m_1^{k_1})$ to account for these arrangements. Continuing in this manner for each $i$ from 1 to $s$, we see that the total number of distinct arrangements of the $n$ integers that correspond to the same cycle type as $\sigma$ is given by
@@ -473,7 +465,7 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-	Note that $P$ is cyclic of order $p$, so $P = \gen\sigma$ for some $p$-cycle $\sigma \in S_p$. Moreover, every nonidentity element of $P$ is a $p$-cycle, so $P$ contains exactly $p - 1$ $p$-cycles. Now for some $\tau \in S_p$, the conjugate $\tau P\tau\inv = \gen{\tau\sigma\tau\inv}$ also has order $p$ and contains exactly $p - 1$ $p$-cycles. Therefore, each conjugate of $P$ contains exactly $p - 1$ $p$-cycles. Note that the number of distinct $p$-cycles in $S_p$ is given by $p!/p = (p - 1)!$.
+	Note that $P$ is cyclic of order $p$, so $P = \gen\sigma$ for some $p$-cycle $\sigma \in S_p$. Moreover, every non-identity element of $P$ is a $p$-cycle, so $P$ contains exactly $p - 1$ $p$-cycles. Now for some $\tau \in S_p$, the conjugate $\tau P\tau\inv = \gen{\tau\sigma\tau\inv}$ also has order $p$ and contains exactly $p - 1$ $p$-cycles. Therefore, each conjugate of $P$ contains exactly $p - 1$ $p$-cycles. Note that the number of distinct $p$-cycles in $S_p$ is given by $p!/p = (p - 1)!$.
 
 	Recall by Proposition 4.6 that the size of the conjugacy class of $P$ in $S_p$ is given by $|S_p : N_{S_p}(P)|$. Let this index be $k$. Since each conjugate of $P$ contains exactly $p - 1$ $p$-cycles, the total number of distinct $p$-cycles contained in all conjugates of $P$ is $k(p - 1)$. However, since every $p$-cycle in $S_p$ is contained in some conjugate of $P$, we have $k(p - 1) = (p - 1)!$. Therefore, $k = (p - 2)!$, so that
 	\[|N_{S_p}(P)| = \frac{|S_p|}{k} = \frac{p!}{(p - 2)!} = p(p - 1).\qedhere\]
@@ -487,14 +479,14 @@ Let $G$ be a group.
 	Note that elements of order $p$ in $S_n$ are products of disjoint $p$-cycles. Moreover, each $p$-cycle is conjugate to any other $p$-cycle in $S_n$. Therefore, the conjugacy class of an element of order $p$ in $S_n$ is determined by the number of disjoint $p$-cycles in its cycle decomposition. Let $k$ be the number of disjoint $p$-cycles in the cycle decomposition of such an element. Then we have $1 \leq k \leq \floor{n/p}$, hence the number of conjugacy classes of elements of order $p$ in $S_n$ is given by $\floor{n/p}$.
 \end{sol}
 
-\begin{specialexercise}
+\begin{spex}
 	Let $\pi : G \to S_G$ be the left regular representation afforded by the action of $G$ on itself by left multiplication. For each $g \in G$ denote the permutation $\pi(g)$ by $\sigma_g$ so that $\sigma_g(x) = gx$ for all $x \in G$. Let $\lambda : G \to S_G$ be the permutation representation afforded by the corresponding right action of $G$ on itself, and for each $h \in G$ denote the permutation $\lambda(h)$ by $\tau_h$. Thus $\tau_h(x) = xh\inv$ for all $x \in G$ ($\lambda$ is called the \emph{right regular representation} of $G$).
 	\begin{subexercises}
 		\item Prove that $\sigma_g$ and $\tau_h$ commute for all $g, h \in G$. (Thus the centralizer in $S_G$ of $\pi(G)$ contains the subgroup $\lambda(G)$ which is isomorphic to $G$).
 		\item Prove that $\sigma_g = \tau_g$ if and only if $g$ is an element of order 1 or 2 in the center of $G$.
 		\item Prove that $\sigma_g = \tau_h$ if and only if $g$ and $h$ lie in the center of $G$. Deduce that $\pi(G) \cap \lambda(G) = \pi(Z(G)) = \lambda(Z(G))$.
 	\end{subexercises}
-\end{specialexercise}
+\end{spex}
 
 \begin{solenum}
 	\item For any $x \in G$, we have

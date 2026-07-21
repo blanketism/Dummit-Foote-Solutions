@@ -1,15 +1,15 @@
 \subsection{Composition Series and the H\"older Program}
 
 \begin{exercise}[3.4.1]
-    Prove that if $G$ is an abelian simple group then $G \cong \mathbb{Z}_p$ for some prime $p$ (do not assume $G$ is a finite group).
+    Prove that if $G$ is an Abelian simple group then $G \cong \z_p$ for some prime $p$ (do not assume $G$ is a finite group).
 \end{exercise}
 
 \begin{sol}
-    Since $G$ is abelian, every subgroup of $G$ is normal. Moreover, simplicity of $G$ implies that its only subgroups are 1 and $G$. If $G$ is the trivial group, then $G \cong Z_1$. Suppose $G$ is nontrivial, and let $g \in G$ be nonidentity. Then $\gen g \leq G$. Since $g \neq 1$ and $G$ is simple, then $\gen g = G$, hence $G$ is cyclic.
+    Since $G$ is Abelian, every subgroup of $G$ is normal. Moreover, simplicity of $G$ implies that its only subgroups are 1 and $G$. If $G$ is the trivial group, then $G \cong Z_1$. Suppose $G$ is non-trivial, and let $g \in G$ be non-identity. Then $\gen g \leq G$. Since $g \neq 1$ and $G$ is simple, then $\gen g = G$, hence $G$ is cyclic.
 
     Assume, by way of contradiction, that $\abs G$ is not prime. We have two cases:
     \begin{itemize}
-        \item Suppose $\abs G$ is infinite. Then $G \cong \z$ has infinitely many proper nontrivial subgroups, contradicting the simplicity of $G$.
+        \item Suppose $\abs G$ is infinite. Then $G \cong \z$ has infinitely many proper non-trivial subgroups, contradicting the simplicity of $G$.
         \item Suppose $\abs G$ is finite and composite. Then there exists some divisor $d$ of $\abs G$ such that $1 < d < \abs G$. Since $G$ is cyclic, then there exists a unique subgroup of $G$ of order $d$, contradicting the simplicity of $G$.
     \end{itemize}
     Therefore, $\abs G$ is prime, and $G \cong Z_p$ for some prime $p$.
@@ -46,35 +46,33 @@
 \end{exercise}
 
 \begin{sol}
-    A clear composition series is $1 \nsub \gen{\sigma^4} \nsub \gen{\sigma^2} \nsub \gen{\sigma} \nsub QD_{16}$, with each composition factor isomorphic to $Z_2$. Since all composition factors are abelian, then $QD_{16}$ is solvable.
+    A clear composition series is $1 \nsub \gen{\sigma^4} \nsub \gen{\sigma^2} \nsub \gen{\sigma} \nsub QD_{16}$, with each composition factor isomorphic to $Z_2$. Since all composition factors are Abelian, then $QD_{16}$ is solvable.
 \end{sol}
 
-\newpage
-
 \begin{exercise}[3.4.4]
-    Use Cauchy's Theorem and induction to show that a finite abelian group has a subgroup of order $n$ for each positive divisor $n$ of its order.
+    Use Cauchy's Theorem and induction to show that a finite Abelian group has a subgroup of order $n$ for each positive divisor $n$ of its order.
 \end{exercise}
 
 \begin{sol}
     Let $\abs G = m$. If $m = 1$, the result is trivial. We now proceed by induction on $m$.
 
-    Suppose that every finite abelian group of order strictly less than $m$ has a subgroup of order $n$ for each positive divisor $n$ of its order. Let $n \in \zp$ where $n \mid m$. If $n$ is prime, then there exists $g \in G$ where $\abs g = n$ by Cauchy's Theorem. Then $\abs g \leq G$ is a subgroup of order $n$, and the result is true. 
+    Suppose that every finite Abelian group of order strictly less than $m$ has a subgroup of order $n$ for each positive divisor $n$ of its order. Let $n \in \zp$ where $n \mid m$. If $n$ is prime, then there exists $g \in G$ where $\abs g = n$ by Cauchy's Theorem. Then $\abs g \leq G$ is a subgroup of order $n$, and the result is true. 
     
-    If $n$ is not prime, then $n = kp$ for some prime divisor $p$ of $n$. Since $p \mid m$, there exists an element $h \in G$ where $\abs h = p$ by Cauchy's Theorem. Then $\gen h$ has order $p$, and $G/\gen h$ is a finite abelian group of order $m/p < m$. Since $n$ divides $m$, then $k$ divides $m/p$. By the inductive hypothesis, there exists a subgroup $\bar H$ of $G/\gen h$ such that $\abs{\bar H} = k$. By the Lattice Isomorphism Theorem, there exists a subgroup $H$ of $G$ containing $\gen h$ such that $H/\gen h = \bar H$. Then $\abs H = \abs{\bar H} \abs{\gen h} = kp = n$, hence $H$ is a subgroup of $G$ of order $n$. By induction, the result holds for all finite abelian groups.
+    If $n$ is not prime, then $n = kp$ for some prime divisor $p$ of $n$. Since $p \mid m$, there exists an element $h \in G$ where $\abs h = p$ by Cauchy's Theorem. Then $\gen h$ has order $p$, and $G/\gen h$ is a finite Abelian group of order $m/p < m$. Since $n$ divides $m$, then $k$ divides $m/p$. By the inductive hypothesis, there exists a subgroup $\bar H$ of $G/\gen h$ such that $\abs{\bar H} = k$. By the Lattice Isomorphism Theorem, there exists a subgroup $H$ of $G$ containing $\gen h$ such that $H/\gen h = \bar H$. Then $\abs H = \abs{\bar H} \abs{\gen h} = kp = n$, hence $H$ is a subgroup of $G$ of order $n$. By induction, the result holds for all finite Abelian groups.
 \end{sol}
 
-\begin{specialexercise}[3.4.5]
+\begin{spex}[3.4.5]
     Prove that subgroups and quotient groups of a solvable group are solvable.
-\end{specialexercise}
+\end{spex}
 
 \begin{sol}
-    Let $G$ be a solveable group, and let $H \leq G$. Then there exists a chain of subgroups
+    Let $G$ be a solvable group, and let $H \leq G$. Then there exists a chain of subgroups
     \[1 = G_0 \nsub G_1 \nsub \cdots \nsub G_n = G\]
-    such that $G_{i + 1}/G_i$ is abelian. Define the subgroups
+    such that $G_{i + 1}/G_i$ is Abelian. Define the subgroups
     \[H_i = H \cap G_i \quad \text{for each $0 \leq i \leq n$}\]
     Then $H_0 = H \cap G_0 = 1$ and $H_n = H \cap G_n = H$. It is clear that $H_i \leq H_{i + 1}$ for each $0 \leq i \leq n - 1$. To show that $H_i \nsub H_{i + 1}$, let $g \in H_{i + 1}$ and $x \in H_i$. Then $g \in G_{i + 1}$ and $x \in G_i$. Since $G_i \nsub G_{i + 1}$, then $gxg\inv \in G_i$. Since $g, x \in H$, then $gxg\inv \in H$, hence $gxg\inv \in H_i$. It follows that $H_i \nsub H_{i + 1}$. By the Second Isomorphism Theorem, we have
     \[H_{i + 1}/H_i \cong H_{i + 1}G_i/G_i \leq G_{i + 1}/G_i\]
-    Since $G_{i + 1}/G_i$ is abelian, then so is $H_{i + 1}/H_i$. Therefore, $H$ is solvable with the chain
+    Since $G_{i + 1}/G_i$ is Abelian, then so is $H_{i + 1}/H_i$. Therefore, $H$ is solvable with the chain
     \[1 = H_0 \nsub H_1 \nsub \cdots \nsub H_n = H\]
     Now let $N \nsub G$. Consider the subgroups
     \[N_i = G_iN \quad \text{for each $0 \leq i \leq n$}\]
@@ -84,18 +82,16 @@
 
     Lastly, by the Lattice Isomorphism Theorem, then $N_i/N \nsub N_{i + 1}/N$, and the Third Isomorphism Theorem concludes that
     \[(N_{i + 1}/N)/(N_i/N) \cong N_{i + 1}/N_i \cong G_{i + 1}/(G_iN \cap G_{i + 1}) = G_{i + 1}/G_i\]
-    Since $G_{i + 1}/G_i$ is abelian, then so is $(N_{i + 1}/N)/(N_i/N)$. Therefore, $G/N$ is solvable with the chain
+    Since $G_{i + 1}/G_i$ is Abelian, then so is $(N_{i + 1}/N)/(N_i/N)$. Therefore, $G/N$ is solvable with the chain
     \[1 = N_0/N \nsub N_1/N \nsub \cdots \nsub N_n/N = G/N. \qh\]
 \end{sol}
-
-\newpage
 
 \begin{exercise}[3.4.6]
     Prove part (1) of the Jordan--H\"older Theorem by induction on $|G|$.
 \end{exercise}
 
 \begin{sol}
-    Let $G$ be a finite group. If $G = 1$, then the result is trivial. Suppose now $G$ is nontrivial and that the result holds for all groups of order less than $\abs G$. If $G$ is simple, then the composition series is $1 \nsub G$. Suppose now $G$ is not simple, and let $N$ be a maximal, normal subgroup of $G$. Since $\abs N < \abs G$, we may conclude by the inductive hypothesis that there exists a composition series
+    Let $G$ be a finite group. If $G = 1$, then the result is trivial. Suppose now $G$ is non-trivial and that the result holds for all groups of order less than $\abs G$. If $G$ is simple, then the composition series is $1 \nsub G$. Suppose now $G$ is not simple, and let $N$ be a maximal, normal subgroup of $G$. Since $\abs N < \abs G$, we may conclude by the inductive hypothesis that there exists a composition series
     \[1 = N_0 \nsub N_1 \nsub \cdots \nsub N_k = N\]
     for some $k \in \zp$. Since $N \nsub G$ and $G/N$ is simple, then the chain
     \[1 = N_0 \nsub N_1 \nsub \cdots \nsub N_k = N \nsub G\]
@@ -128,35 +124,35 @@
         \item[(iii)] All composition factors of $G$ are of prime order.
         \item[(iv)] $G$ has a chain of subgroups
         \[1 = N_0 \trianglelefteq N_1 \trianglelefteq N_2 \trianglelefteq \cdots \trianglelefteq N_t = G\]
-        such that each $N_i$ is a normal subgroup of $G$ and $N_{i+1}/N_i$ is abelian, $0 \le i \le t-1$.
+        such that each $N_i$ is a normal subgroup of $G$ and $N_{i+1}/N_i$ is Abelian, $0 \le i \le t-1$.
     \end{enumerate}
-    \noindent [For (iv), prove that a minimal nontrivial normal subgroup $M$ of $G$ is necessarily abelian and then use induction. To see that $M$ is abelian, let $N \trianglelefteq M$ be of prime index (by (iii)) and show that $x^{-1}y^{-1}xy \in N$ for all $x,y \in M$ (cf. \exref{3.1.40}). Apply the same argument to $gNg^{-1}$ to show that $x^{-1}y^{-1}xy$ lies in the intersection of all $G$-conjugates of $N$, and use the minimality of $M$ to conclude that $x^{-1}y^{-1}xy = 1$.]
+    \noindent [For (iv), prove that a minimal non-trivial normal subgroup $M$ of $G$ is necessarily Abelian and then use induction. To see that $M$ is Abelian, let $N \trianglelefteq M$ be of prime index (by (iii)) and show that $x^{-1}y^{-1}xy \in N$ for all $x,y \in M$ (cf. \exref{3.1.40}). Apply the same argument to $gNg^{-1}$ to show that $x^{-1}y^{-1}xy$ lies in the intersection of all $G$-conjugates of $N$, and use the minimality of $M$ to conclude that $x^{-1}y^{-1}xy = 1$.]
 \end{exercise}
 
 \begin{sol}
     \textbf{(i) \rightimp (ii)}: Suppose $G$ is solvable, and consider the chain of subgroups
     \[1 = G_0 \nsub G_1 \nsub \cdots \nsub G_n = G\]
-    where $G_{i + 1}/G_i$ is abelian. We prove the following lemma: if $A$ is a finite abelian group, then there exists a chain of subgroups
+    where $G_{i + 1}/G_i$ is Abelian. We prove the following lemma: if $A$ is a finite Abelian group, then there exists a chain of subgroups
     \[1 = A_0 \nsub A_1 \nsub \cdots \nsub A_k = A\]
-    such that $A_{j + 1}/A_j$ is cyclic. We prove this lemma by induction on $\abs A$. If $\abs A = 1$, the result is trivial. Suppose $\abs A > 1$ and that the result holds for all abelian groups of order less than $\abs A$. Since $A$ is finite abelian, there exists some nonidentity $a \in A$ such that $\gen a \nsub A$. Then $\abs{\gen a} < \abs A$, hence by the inductive hypothesis, there exists a chain of subgroups
+    such that $A_{j + 1}/A_j$ is cyclic. We prove this lemma by induction on $\abs A$. If $\abs A = 1$, the result is trivial. Suppose $\abs A > 1$ and that the result holds for all Abelian groups of order less than $\abs A$. Since $A$ is finite Abelian, there exists some non-identity $a \in A$ such that $\gen a \nsub A$. Then $\abs{\gen a} < \abs A$, hence by the inductive hypothesis, there exists a chain of subgroups
     \[1 = B_0 \nsub B_1 \nsub \cdots \nsub B_m = \gen a\]
     such that $B_{j + 1}/B_j$ is cyclic. Now consider the quotient group $A/\gen a$. Since $\abs{A/\gen a} < \abs A$, then by the inductive hypothesis, there exists a chain of subgroups
     \[1 = C_0/\gen a \nsub C_1/\gen a \nsub \cdots \nsub C_\ell/\gen a = A/\gen a\]
     for some $\ell \in \zp$. By the Lattice Isomorphism Theorem, we have $\gen a = C_0 \nsub C_1 \nsub \cdots \nsub C_\ell = A$. Since each $C_{i + 1}/C_i \cong (C_{i + 1}/\gen a)/(C_i/\gen a)$ is cyclic, then the chain
     \[1 = B_0 \nsub B_1 \nsub \cdots \nsub B_m = \gen a = C_0 \nsub C_1 \nsub \cdots \nsub C_\ell = A\]
-    satisfies the lemma. By induction, the lemma holds for all finite abelian groups. 
+    satisfies the lemma. By induction, the lemma holds for all finite Abelian groups. 
 
-    Applying this lemma to each abelian quotient $G_{i + 1}/G_i$ in the original chain, we obtain a chain of subgroups
+    Applying this lemma to each Abelian quotient $G_{i + 1}/G_i$ in the original chain, we obtain a chain of subgroups
     \[1 = H_0 \nsub H_1 \nsub H_2 \nsub \cdots \nsub H_s = G\]
     such that $H_{i + 1}/H_i$ is cyclic, hence (ii) holds.
 
     \textbf{(ii) \rightimp (iii)}: Suppose $G$ has a chain of subgroups
     \[1 = H_0 \nsub H_1 \nsub H_2 \nsub \cdots \nsub H_s = G\]
-    such that $H_{i + 1}/H_i$ is cyclic. We prove that each composition factor of $G$ is of prime order. We prove this by induction on $\abs G$. If $\abs G = 1$, the result is trivial. Suppose $\abs G > 1$ and that the result holds for all groups of order less than $\abs G$. Since $H_{s - 1} \nsub G$ and $G/H_{s - 1}$ is cyclic, then $G/H_{s - 1} \cong Z_n$ for some $n \in \zp$. If $n$ is prime, then the composition factors of $G/H_{s - 1}$ are of prime order. Since $\abs{H_{s - 1}} < \abs G$, then by the inductive hypothesis, the composition factors of $H_{s - 1}$ are also of prime order, hence all composition factors of $G$ are of prime order. Suppose now $n$ is not prime, so that $n = km$ for some $k, m \in \zp$ where $1 < k, m < n$. Then $Z_n$ has a proper, nontrivial subgroup $\gen{a^m}$ of order $k$. Let $\pi : G \to G/H_{s - 1}$ be the natural projection, and let $K = \pi\inv(\gen{a^m})$. Then $H_{s - 1} \nsub K \nsub G$ so that by the Lattice Isomorphism Theorem, $K/H_{s - 1} \cong \gen{a^m}$ is a proper, nontrivial subgroup of $G/H_{s - 1}$, contradicting that $H_{s - 1}$ is maximal normal in $G$. It follows that $n$ must be prime, hence all composition factors of $G$ are of prime order. By induction, the result holds for all finite groups.
+    such that $H_{i + 1}/H_i$ is cyclic. We prove that each composition factor of $G$ is of prime order. We prove this by induction on $\abs G$. If $\abs G = 1$, the result is trivial. Suppose $\abs G > 1$ and that the result holds for all groups of order less than $\abs G$. Since $H_{s - 1} \nsub G$ and $G/H_{s - 1}$ is cyclic, then $G/H_{s - 1} \cong Z_n$ for some $n \in \zp$. If $n$ is prime, then the composition factors of $G/H_{s - 1}$ are of prime order. Since $\abs{H_{s - 1}} < \abs G$, then by the inductive hypothesis, the composition factors of $H_{s - 1}$ are also of prime order, hence all composition factors of $G$ are of prime order. Suppose now $n$ is not prime, so that $n = km$ for some $k, m \in \zp$ where $1 < k, m < n$. Then $Z_n$ has a proper, non-trivial subgroup $\gen{a^m}$ of order $k$. Let $\pi : G \to G/H_{s - 1}$ be the natural projection, and let $K = \pi\inv(\gen{a^m})$. Then $H_{s - 1} \nsub K \nsub G$ so that by the Lattice Isomorphism Theorem, $K/H_{s - 1} \cong \gen{a^m}$ is a proper, non-trivial subgroup of $G/H_{s - 1}$, contradicting that $H_{s - 1}$ is maximal normal in $G$. It follows that $n$ must be prime, hence all composition factors of $G$ are of prime order. By induction, the result holds for all finite groups.
 
     \textbf{(iii) \rightimp (iv)}: Suppose all composition factors of $G$ are of prime order. We prove that $G$ has a chain of subgroups
     \[1 = N_0 \nsub N_1 \nsub N_2 \nsub \cdots \nsub N_t = G\]
-    such that each $N_i$ is a normal subgroup of $G$ and $N_{i + 1}/N_i$ is abelian. Let $M$ be a minimal, nontrivial normal subgroup of $G$, and suppose $N \nsub M$ have prime index. Then for any $x, y \in M$, we have $x^{-1}y^{-1}xy \in N$ since $M/N$ is abelian. Now for any $g \in G$, consider $gNg\inv \nsub gMg\inv = M$. By the same argument, we have $x^{-1}y^{-1}xy \in gNg\inv$ for all $x, y \in M$. It follows that $x^{-1}y^{-1}xy$ lies in the intersection of all $G$-conjugates of $N$. Since $M$ is minimal normal in $G$, then this intersection is either 1 or $M$. If it were $M$, then $M$ would be abelian, contradicting that $M/N$ is nontrivial. Hence, $x^{-1}y^{-1}xy = 1$ for all $x, y \in M$, so that $M$ is abelian.
+    such that each $N_i$ is a normal subgroup of $G$ and $N_{i + 1}/N_i$ is Abelian. Let $M$ be a minimal, non-trivial normal subgroup of $G$, and suppose $N \nsub M$ have prime index. Then for any $x, y \in M$, we have $x^{-1}y^{-1}xy \in N$ since $M/N$ is Abelian. Now for any $g \in G$, consider $gNg\inv \nsub gMg\inv = M$. By the same argument, we have $x^{-1}y^{-1}xy \in gNg\inv$ for all $x, y \in M$. It follows that $x^{-1}y^{-1}xy$ lies in the intersection of all $G$-conjugates of $N$. Since $M$ is minimal normal in $G$, then this intersection is either 1 or $M$. If it were $M$, then $M$ would be Abelian, contradicting that $M/N$ is non-trivial. Hence, $x^{-1}y^{-1}xy = 1$ for all $x, y \in M$, so that $M$ is Abelian.
 
     \textbf{(iv) \rightimp (i)}: This implication is immediate from the definition of solvable groups.
 \end{sol}
@@ -176,7 +172,7 @@
 \end{sol}
 
 \begin{exercise}[3.4.10]
-    Prove part (2) of the Jordan--H\"older Theorem by induction on $\min\{r,s\}$. [Apply the inductive hypothesis to $H = N_{r-1} \cap M_{s-1}$ and use the preceding exercises.]
+    Prove part (2) of the Jordan--H\"older Theorem by induction on $\min\set{r,s}$. [Apply the inductive hypothesis to $H = N_{r-1} \cap M_{s-1}$ and use the preceding exercises.]
 \end{exercise}
 
 \begin{sol}
@@ -192,7 +188,7 @@
         \tag{$\spadesuit$}
         1 = M_0 \nsub M_1 \nsub \cdots \nsub M_s = G.
     \end{equation}
-    We induct on $\min\set{r,s}$. By the previous exercise, we may assume that $\min\set{r, s} > 2$. Suppose the statement is true for $\min\set{r, s} < k$ for some $k > 2$, and let $\min\set{r, s} = k$. Let $H = N_{r - 1} \cap M_{s - 1}$. If $N_{r - 1} \leq M_{s - 1}$ is proper, then by simplicity of $M_{s - 1}$, it must be that $N_{r - 1} = 1$, contradicting that $N_{r - 1}$ is nontrivial. Hence, $N_{r - 1} \nsub M_{s - 1}$. By a similar argument, we have $M_{s - 1} \nsub N_{r - 1}$. If we have $M_{s - 1} = N_{r - 1}$, then by the previous exercise, the composition factors of both series are the same, so we now suppose $M_{s - 1} \neq N_{r - 1}$ and they are not contained 
+    We induct on $\min\set{r,s}$. By the previous exercise, we may assume that $\min\set{r, s} > 2$. Suppose the statement is true for $\min\set{r, s} < k$ for some $k > 2$, and let $\min\set{r, s} = k$. Let $H = N_{r - 1} \cap M_{s - 1}$. If $N_{r - 1} \leq M_{s - 1}$ is proper, then by simplicity of $M_{s - 1}$, it must be that $N_{r - 1} = 1$, contradicting that $N_{r - 1}$ is non-trivial. Hence, $N_{r - 1} \nsub M_{s - 1}$. By a similar argument, we have $M_{s - 1} \nsub N_{r - 1}$. If we have $M_{s - 1} = N_{r - 1}$, then by the previous exercise, the composition factors of both series are the same, so we now suppose $M_{s - 1} \neq N_{r - 1}$ and they are not contained 
     in one another. They are then proper normal subgroups of $M_{s - 1}N_{r - 1}$. If $M_{s - 1}N_{r - 1} \neq G$, then $M_{s - 1}N_{r - 1} \nsub G$ is proper, so by simplicity of $G/N_{r - 1}$, it must be that $M_{s - 1}N_{r - 1} = N_{r - 1}$, contradicting that $M_{s - 1} \nsub N_{r - 1}$. Hence, $M_{s - 1}N_{r - 1} = G$. We may use the Second Isomorphism Theorem to conclude that
     \begin{equation}
         \label{eqheartsuit}
@@ -215,15 +211,15 @@
 \end{sol}
 
 \begin{exercise}[3.4.11]
-    Prove that if $H$ is a nontrivial normal subgroup of the solvable group $G$ then there is a nontrivial subgroup $A$ of $H$ with $A \trianglelefteq G$ and $A$ abelian.
+    Prove that if $H$ is a non-trivial normal subgroup of the solvable group $G$ then there is a non-trivial subgroup $A$ of $H$ with $A \trianglelefteq G$ and $A$ Abelian.
 \end{exercise}
 
 \begin{sol}
     Since $G$ is solvable, we have the sequence
     \[1 = G_0 \nsub G_1 \nsub \cdots \nsub G_n = G\]
-    where $G_{i + 1}/G_i$ is abelian. Let $H_i = H \cap G_i$ for each $0 \leq i \leq n$. Since $H$ is nontrivial, consider the set of indices $I = \set{i \in \zp \mid G_i \cap H \neq 1}$. Since $H_n = H$, then $I$ is nonempty. By the Well Ordering Property, there exist some minimal index $k$ such that $H_k = G_k \cap H \neq 1$ but $H_{k - 1} = G_{k - 1} \cap H = 1$. Note that $H_k \nsub G$ since $H \nsub G$ and $G_k \nsub G$. Moreover, by the Second Isomorphism Theorem, we have
+    where $G_{i + 1}/G_i$ is Abelian. Let $H_i = H \cap G_i$ for each $0 \leq i \leq n$. Since $H$ is non-trivial, consider the set of indices $I = \set{i \in \zp \mid G_i \cap H \neq 1}$. Since $H_n = H$, then $I$ is nonempty. By the Well Ordering Property, there exist some minimal index $k$ such that $H_k = G_k \cap H \neq 1$ but $H_{k - 1} = G_{k - 1} \cap H = 1$. Note that $H_k \nsub G$ since $H \nsub G$ and $G_k \nsub G$. Moreover, by the Second Isomorphism Theorem, we have
     \[H_k \cong H_k/1 = H_k/(H_k \cap G_{k - 1}) \cong H_k G_{k - 1}/G_{k - 1} \leq G_k/G_{k - 1}\]
-    Since $G_k/G_{k - 1}$ is abelian, then so is $H_k$. Therefore, $A = H_k$ is a nontrivial, abelian normal subgroup of $G$ contained in $H$.
+    Since $G_k/G_{k - 1}$ is Abelian, then so is $H_k$. Therefore, $A = H_k$ is a non-trivial, Abelian normal subgroup of $G$ contained in $H$.
 \end{sol}
 
 \begin{exercise}[3.4.12]
@@ -239,5 +235,5 @@
 
     \noindent \textbf{(ii) \rightimp (i)} Suppose the only simple groups of odd order are those of prime order. Let $G$ be a group of odd order. We want to show that $G$ is solvable. Consider a composition series of $G$:
     \[1 = G_0 \nsub G_1 \nsub \cdots \nsub G_n = G.\]
-    Each composition factor $G_{i+1}/G_i$ is simple and of odd order, so by assumption, each is of prime order and hence abelian. Therefore, $G$ is solvable.
+    Each composition factor $G_{i+1}/G_i$ is simple and of odd order, so by assumption, each is of prime order and hence Abelian. Therefore, $G$ is solvable.
 \end{sol}

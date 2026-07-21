@@ -5,19 +5,21 @@
 Let $G$ and $H$ be groups.
 
 \begin{exercise}[3.1.1]
-    Let $\phi : G \to H$ be a homomorphism and let $E$ be a subgroup of $H$. Prove that $\phi\inv(E) \leq G$ (i.e., the preimage or pullback of a subgroup under a homomorphism is a subgroup). If $E \nsub H$ prove that $\phi\inv(E) \nsub G$. Deduce that $\ker(\phi) \nsub G$.
+    Let $\phi : G \to H$ be a homomorphism and let $E$ be a subgroup of $H$. Prove that $\phi\inv(E) \leq G$. If $E \nsub H$ prove that $\phi\inv(E) \nsub G$. Deduce that $\ker(\phi) \nsub G$.
 \end{exercise}
 
 \begin{sol}
-    Observe that $1_H \in E$. Since $\phi(1_G) = 1_H$, then $1_G \in \phi\inv(E)$ so that $\phi\inv(E)$ is nonempty. Let $x, y \in \phi\inv(E)$. Then $\phi(x), \phi(y) \in E$, so that $\phi(xy\inv) = \phi(x)\phi(y)\inv \in E$ since $E$ is a subgroup. Hence, $xy\inv \in \phi\inv(E)$ and $\phi\inv(E) \leq G$.
+    Observe that $1_G \in \phi\inv(E)$ since $\phi(1_G) = 1_H \in E$. Let $x, y \in \phi\inv(E)$ so that $\phi(x), \phi(y) \in E$. Since $E \leq H$, then $\phi(xy\inv) = \phi(x)\phi(y)\inv \in E$, hence $xy\inv \in \phi\inv(E)$. Therefore, $\phi\inv(E) \leq G$.
 
-    Suppose $E \nsub H$. For any $h \in H$ and $e \in E$, then $heh\inv \in E$. Let $x \in \phi\inv(E)$ and $g \in G$. Then $\phi(x) \in E$ and $\phi(g) \in H$, so that
-    \[\phi(gxg\inv) = \phi(g)\phi(x)\phi(g)\inv \in E\]
-    and $gxg\inv \in \phi\inv(E)$. Hence, $\phi\inv(E) \nsub G$. Since $\ker\phi = \phi\inv(1_G)$, then $\ker\phi \nsub G$.
+    Suppose $E \nsub H$. Then $heh\inv \in E$ for all $h \in H$ and $e \in H$. Let $x \in \phi\inv(E)$ and $g \in G$. Then
+    \[\phi(gxg\inv) = \phi(g)\phi(x)\phi(g)\inv \in E,\]
+    so that $gxg\inv \in \phi\inv(E)$. Therefore, $\phi\inv(E) \nsub G$. Then $\ker \phi = \phi\inv(1_H) \nsub G$ since $\set{1_H} \nsub H$.
 \end{sol}
 
 \begin{exercise}[3.1.2]
-    Let $\varphi : G \to H$ be a homomorphism of groups with kernel $K$ and let $a,b \in \varphi(G)$. Let $X \in G/K$ be the fiber above $a$ and let $Y$ be the fiber above $b$, i.e., $X = \varphi^{-1}(a)$, $Y = \varphi^{-1}(b)$. Fix an element $u \in X$ (so $\varphi(u)=a$). Prove that if $XY = Z$ in the quotient group $G/K$ and $w$ is any member of $Z$, then there is some $v \in Y$ such that $uv = w$. [Show $u^{-1}w \in Y$.]
+    Let $\phi : G \to H$ be a homomorphism of groups with kernel $K$ and let $a,b \in \phi(G)$. Let $X \in G/K$ be the fiber above $a$ and let $Y$ be the fiber above $b$, i.e., $X = \phi\inv (a)$, $Y = \phi\inv (b)$. Fix an element $u \in X$ (so $\phi(u)=a$). Prove that if $XY = Z$ in the quotient group $G/K$ and $w$ is any member of $Z$, then there is some $v \in Y$ such that $uv = w$.
+    
+    \hint{Show $u\inv w \in Y$.}
 \end{exercise}
 
 \begin{sol}
@@ -27,25 +29,25 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{exercise}[3.1.3]
-    Let $A$ be an abelian group and let $B$ be a subgroup of $A$. Prove that $A/B$ is abelian. Give an example of a non-abelian group $G$ containing a proper normal subgroup $N$ such that $G/N$ is abelian.
+    Let $A$ be an Abelian group and let $B$ be a subgroup of $A$. Prove that $A/B$ is Abelian. Give an example of a non-Abelian group $G$ containing a proper normal subgroup $N$ such that $G/N$ is Abelian.
 \end{exercise}
 
 \begin{sol}
     Let $aB, a'B \in A/B$. Then
     \[(aB)(a'B) = (aa')B = (a'a)B = (a'B)(aB)\]
-    so that $A/B$ is abelian.
+    so that $A/B$ is Abelian.
 
-    To produce an abelian quotient group from a non-abelian group, a good thought is to consider the centers of non-abelian groups. In this case, we may choose $G = D_8$ with $Z(D_8) = \gen{r^2} \nsub D_8$. Since $D_8/\gen{r^2} \cong V_4$, then the quotient group is abelian.
+    To obtain Abelian quotient groups, consider non-Abelian groups and their centers. Put $G = D_8$ and $N = Z(D_8) = \gen{r^2}$. Then $G/N \cong V_4$ is Abelian.
 \end{sol}
 
 \begin{exercise}[3.1.4]
-    Prove that in the quotient group $G/N$, $(gN)^{\alpha} = g^{\alpha}N$ for all $\alpha \in \mathbb{Z}$.
+    Prove that in the quotient group $G/N$, $(gN)^{\alpha} = g^{\alpha}N$ for all $\alpha \in \z$.
 \end{exercise}
 
 \begin{sol}
-    We proceed by induction on $\alpha$. For the $\alpha = 0$ and $\alpha = -1$, observe that $(gN)^0 = 1N = g^0N$ by definition, and $(gN)\inv = g\inv N$ by Proposition 3.5. The base case of $\alpha = 1$ is trivial. Suppose that the relationship holds for some $\alpha \geq 1$. Then
-    \[(gN)^{\alpha + 1} = (gN)^{\alpha}(gN) = (g^{\alpha}N)(gN) = g^{\alpha + 1}N\]
-    so that the result is true by induction for all positive integers. For negative integers, use the result for positive integers along with the $\alpha = -1$ case.
+    Inducting on $\alpha$, the base case $\alpha = 0$ is clear since $(gN)^0 = N = g^0N$. Suppose the statement holds for some $\alpha \in \z$. Then
+    \[(gN)^{\alpha + 1} = (gN)^{\alpha}(gN) = g^{\alpha}N gN = g^{\alpha + 1}N.\]
+    Hence, the statement holds for all $\alpha \in \zp \cup \set 0$. The case of $\alpha = -1$ is handled by Proposition 3.5. For all negative $\alpha$, utilize $\alpha = -1$ and the positive case to obtain the result.
 \end{sol}
 
 \begin{exercise}[3.1.5]
@@ -53,51 +55,42 @@ Let $G$ and $H$ be groups.
 \end{exercise}
 
 \begin{sol}
-    Let $gN \in G/N$. If there exists some positive integer $n$ such that $g^n \in N$, then by the previous exercise, $(gN)^n = g^n N = N$ so that $|gN| \leq n$. If $|gN| = m$, then $g^mN = (gN)^m = N$, and $g^m \in N$. By the minimality of $n$, then $n \leq m$ so that $|gN| = n$.
+    Let $gN \in G/N$. If there exists some $n \in \zp$ such that $g^n \in N$, then \exref{3.1.4} shows that $(gN)^n = g^nN = N$, so that the order of $gN$ is at most $n$. If there exists some $m < n$ such that $(gN)^m = N$, then \exref{3.1.4} shows that $g^m \in N$, contradicting the minimality of $n$. Hence, the order of $gN$ is exactly $n$. If no such positive integer exists, then $(gN)^m \neq N$ for all $m \in \zp$. If $|gN|$ were finite, then there would exist some $m \in \zp$ such that $(gN)^m = N$, contradicting the assumption. Hence, $|gN|$ is infinite.
 
-    If there is no such $n$, then for every $m \in \zp$, we have that $g^m \not\in N$. Assume, by way of contradiction, that $|gN| = k$ for some $k \in \zp$. Then $g^kN = (gN)^k = N$, so that $g^k \in N$, a contradiction. Hence, $gN$ has infinite order.
-
-    For an example, let $Z_4 = \gen x$. Then $|x| = 4$. Let $N = \gen{x^2}$. Then $N \nsub Z_4$ since $Z_4$ is abelian. However, $|xN| = 2$ since $(xN)^2 = x^2N = N$.
+    Put $G = Z_4 = \gen x$ and $N = \gen{x^2}$. Then $|x| = 4$, but $|xN| = 2$ since $(xN)^2 = x^2N = N$.
 \end{sol}
 
 \begin{exercise}[3.1.6]
-    Define $\varphi : \mathbb{R}^{\times} \to \{\pm 1\}$ by letting $\varphi(x)$ be $x$ divided by the absolute value of $x$. Describe the fibers of $\varphi$ and prove that $\varphi$ is a homomorphism.
+    Define $\phi : \r^{\times} \to \set{\pm 1}$ by letting $\phi(x)$ be $x$ divided by the absolute value of $x$. Describe the fibers of $\phi$ and prove that $\phi$ is a homomorphism.
 \end{exercise}
 
 \begin{sol}
-    The fibers of $\phi$ are as follows: the positive reals map to 1, and the negative reals map to $-1$. Moreover, for any $x, y \in \r\unt$, then
+    $\phi\inv(+1)$ consists of positive reals and $\phi\inv(-1)$ negative reals. Let $x, y \in \r\unt$. Then
     \[\phi(xy) = \frac{xy}{\abs{xy}} = \frac{x}{\abs x} \cdot \frac{y}{\abs y} = \phi(x)\phi(y) \qh\]
 \end{sol}
 
 \begin{exercise}[3.1.7]
-    Define $\pi : \mathbb{R}^2 \to \mathbb{R}$ by $\pi((x,y)) = x + y$. Prove that $\pi$ is a surjective homomorphism and describe the kernel and fibers of $\pi$ geometrically.
+    Define $\pi : \r^2 \to \r$ by $\pi((x,y)) = x + y$. Prove that $\pi$ is a surjective homomorphism and describe the kernel and fibers of $\pi$ geometrically.
 \end{exercise}
 
 \begin{sol}
     Let $(x_1, y_1), (x_2, y_2) \in \r^2$. Then
-    \begin{align*}
-        \pi((x_1, y_1) + (x_2, y_2)) & = \pi((x_1 + x_2, y_1 + y_2)) \\
-        & = (x_1 + x_2) + (y_1 + y_2) \\
-        & = (x_1 + y_1) + (x_2 + y_2) \\
-        & = \pi((x_1, y_1)) + \pi((x_2, y_2))
-    \end{align*}
-    so that $\pi$ is a homomorphism. Moreover, $\pi((a, 0)) = a$ for any $a \in \r$, so $\pi$ is surjective. $\ker\pi$ is the line $y = -x$ in the plane, and the fiber $\pi\inv(a)$ for any $a \in \r$ is the line $y = a - x$, or the vertical translation of $\ker\pi$ by $a$ units.
+    \[\pi((x_1, y_1) + (x_2, y_2)) = (x_1 + x_2) + (y_1 + y_2) = (x_1 + y_1) + (x_2 + y_2) = \pi((x_1, y_1)) + \pi((x_2, y_2)),\]
+    hence $\pi$ is a homomorphism. Moreover, $\pi$ is surjective since $\pi((a, 0)) = a$ for all $a \in \r$. We have $\ker\pi$ as the line $y = -x$, and $\pi\inv(a)$ as $y = a - x$, which is $\ker\pi$ translated up by $a$.
 \end{sol}
 
 \begin{exercise}[3.1.8]
-    Let $\varphi : \mathbb{R}^{\times} \to \mathbb{R}^{\times}$ be the map sending $x$ to the absolute value of $x$. Prove that $\varphi$ is a homomorphism and find the image of $\varphi$. Describe the kernel and the fibers of $\varphi$.
+    Let $\phi : \r^{\times} \to \r^{\times}$ be the map sending $x$ to the absolute value of $x$. Prove that $\phi$ is a homomorphism and find the image of $\phi$. Describe the kernel and the fibers of $\phi$.
 \end{exercise}
 
 \begin{sol}
     Let $x, y \in \r\unt$. Then
     \[\phi(xy) = \abs{xy} = \abs x \abs y = \phi(x)\phi(y)\]
-    so that $\phi$ is a homomorphism. Note that $\abs x > 0$ for any $x \in \r\unt$, so $\im(\phi) = \r^+$. $\ker(\phi) = \{-1, 1\}$, and the fiber of $\phi$ over some $a \in \r^+$ is simply $\{-a, a\}$.
+    so that $\phi$ is a homomorphism. Note that $\abs x > 0$ for any $x \in \r\unt$, so $\im(\phi) = \r^+$. $\ker(\phi) = \set{-1, 1}$, and the fiber of $\phi$ over some $a \in \r^+$ is simply $\set{-a, a}$.
 \end{sol}
 
-\newpage
-
 \begin{exercise}[3.1.9]
-    Define $\varphi : \mathbb{C}^{\times} \to \mathbb{R}^{\times}$ by $\varphi(a+bi) = a^2 + b^2$. Prove that $\varphi$ is a homomorphism and find the image of $\varphi$. Describe the kernel and the fibers of $\varphi$ geometrically (as subsets of the plane).
+    Define $\phi : \c^{\times} \to \r^{\times}$ by $\phi(a+bi) = a^2 + b^2$. Prove that $\phi$ is a homomorphism and find the image of $\phi$. Describe the kernel and the fibers of $\phi$ geometrically (as subsets of the plane).
 \end{exercise}
 
 \begin{sol}
@@ -106,7 +99,6 @@ Let $G$ and $H$ be groups.
         \phi((a + bi)(c + di)) & = \phi((ac - bd) + (ad + bc)i) \\
         & = (ac - bd)^2 + (ad + bc)^2 \\
         & = a^2c^2 - 2abcd + b^2d^2 + a^2d^2 + 2abcd + b^2c^2 \\
-        & = c^2(a^2 + b^2) + d^2(a^2 + b^2) \\
         & = (a^2 + b^2)(c^2 + d^2) \\
         & = \phi(a + bi)\phi(c + di)
     \end{align*}
@@ -114,7 +106,7 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{exercise}[3.1.10]
-    Let $\phi : \intmod[8] \to \intmod[4]$ by $\phi(\bar  a) = \bar  a$. Show that this is a well defined, surjective homomorphism and describe its fibers and kernel explicitly (showing that $\phi$ is well defined involves the fact that $\bar  a$ has a different meaning in the domain and range of $\phi$).
+    Let $\phi : \intmod[8] \to \intmod[4]$ by $\phi(\bar  a) = \bar  a$. Show that this is a well-defined, surjective homomorphism and describe its fibers and kernel explicitly (showing that $\phi$ is well-defined involves the fact that $\bar  a$ has a different meaning in the domain and range of $\phi$).
 \end{exercise}
 
 \begin{sol}
@@ -122,12 +114,12 @@ Let $G$ and $H$ be groups.
     \[\phi(\bar a + \bar b) = \phi(\overline{a + b}) = \overline{a + b} = \bar a + \bar b = \phi(\bar a) + \phi(\bar b)\]
     so that $\phi$ is a homomorphism. Note that for any $\bar c \in \intmod[4]$, then $\phi(\bar c) = \bar c$, so $\phi$ is surjective. The fibers of $\phi$:
     \begin{align*}
-        \phi\inv(\bar 0) & = \{\bar 0, \bar 4\} \\
-        \phi\inv(\bar 1) & = \{\bar 1, \bar 5\} \\
-        \phi\inv(\bar 2) & = \{\bar 2, \bar 6\} \\
-        \phi\inv(\bar 3) & = \{\bar 3, \bar 7\}
+        \phi\inv(\bar 0) & = \set{\bar 0, \bar 4} \\
+        \phi\inv(\bar 1) & = \set{\bar 1, \bar 5} \\
+        \phi\inv(\bar 2) & = \set{\bar 2, \bar 6} \\
+        \phi\inv(\bar 3) & = \set{\bar 3, \bar 7}
     \end{align*}
-    with $\ker\phi = \phi\inv(\bar 0) = \{\bar 0, \bar 4\}$.
+    with $\ker\phi = \phi\inv(\bar 0) = \set{\bar 0, \bar 4}$.
 \end{sol}
 
 \begin{exercise}[3.1.11]
@@ -251,7 +243,7 @@ Let $G$ and $H$ be groups.
 \end{solenum}
 
 \begin{exercise}[3.1.12]
-    Let $G$ be the additive group of real numbers, let $H$ be the multiplicative group of complex numbers of absolute value $1$ (the unit circle $S^1$ in the complex plane) and let $\varphi : G \to H$ be the homomorphism $\varphi : r \mapsto e^{2\pi i r}$. Draw the points on a real line which lie in the kernel of $\varphi$. Describe similarly the elements in the fibers of $\varphi$ above the points $-1$, $i$, and $e^{4\pi i/3}$ of $H$.
+    Let $G$ be the additive group of real numbers, let $H$ be the multiplicative group of complex numbers of absolute value $1$ (the unit circle $S^1$ in the complex plane) and let $\phi : G \to H$ be the homomorphism $\phi : r \mapsto e^{2\pi i r}$. Draw the points on a real line which lie in the kernel of $\phi$. Describe similarly the elements in the fibers of $\phi$ above the points $-1$, $i$, and $e^{4\pi i/3}$ of $H$.
 \end{exercise}
 
 \begin{sol}
@@ -276,7 +268,7 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{exercise}[3.1.13]
-    Repeat the preceding exercise with the map $\varphi$ replaced by the map $\varphi : r \mapsto e^{4\pi i r}$.
+    Repeat the preceding exercise with the map $\phi$ replaced by the map $\phi : r \mapsto e^{4\pi i r}$.
 \end{exercise}
 
 \begin{sol}
@@ -300,17 +292,15 @@ Let $G$ and $H$ be groups.
     \end{align*}
 \end{sol}
 
-\newpage
-
-\begin{specialexercise}[3.1.14]
-    Consider the additive quotient group $\mathbb{Q}/\mathbb{Z}$.
+\begin{spex}[3.1.14]
+    Consider the additive quotient group $\q/\z$.
     \begin{subexercises}
-        \item Show that every coset of $\mathbb{Z}$ in $\mathbb{Q}$ contains exactly one representative $q \in \mathbb{Q}$ in the range $0 \le q < 1$.
-        \item Show that every element of $\mathbb{Q}/\mathbb{Z}$ has finite order but that there are elements of arbitrarily large order.
-        \item Show that $\mathbb{Q}/\mathbb{Z}$ is the torsion subgroup of $\mathbb{R}/\mathbb{Z}$ (cf. \exref{2.1.6}).
-        \item Prove that $\mathbb{Q}/\mathbb{Z}$ is isomorphic to the multiplicative group of roots of unity in $\mathbb{C}^\times$.
+        \item Show that every coset of $\z$ in $\q$ contains exactly one representative $q \in \q$ in the range $0 \le q < 1$.
+        \item Show that every element of $\q/\z$ has finite order but that there are elements of arbitrarily large order.
+        \item Show that $\q/\z$ is the torsion subgroup of $\r/\z$ (cf. \exref{2.1.6}).
+        \item Prove that $\q/\z$ is isomorphic to the multiplicative group of roots of unity in $\c^\times$.
     \end{subexercises}
-\end{specialexercise}
+\end{spex}
 
 \begin{solenum}
     \item Suppose $a/b \in \q$ with $(a, b) = 1$. By the Division Algorithm, there exist unique integers $q, r$ such that $a = bq + r$ for $0 \leq r < b$, or equivalently, $a/b = q + r/b$. Then $a/b + \z = r/b + \z$. If there exists some other representative $s/t$ in $0 \leq s/t < 1$ such that $a/b + \z = s/t + \z$, then $r/b + \z = s/t + \z$, or that $r/b - s/t \in \z$. Then there exists some integer $k$ such that $rt - sb = kbt$. Since $0 \leq r < b$ and $0 \leq s < t$, then $0 \leq rt < bt$ and $0 \leq sb < bt$. Combining these two inequalities, we get $-bt < rt - sb < bt$, so that $-1 < k < 1$. Since $k$ is an integer, then $k = 0$, and $rt - sb = 0$, or $r/b = s/t$. Hence, the representative in $0 \leq q < 1$ is unique.
@@ -320,36 +310,36 @@ Let $G$ and $H$ be groups.
 \end{solenum}
 
 \begin{exercise}[3.1.15]
-    Prove that a quotient of a divisible abelian group by any proper subgroup is also divisible. Deduce that $\mathbb{Q}/\mathbb{Z}$ is divisible (cf. \exref{2.4.19}).
+    Prove that a quotient of a divisible Abelian group by any proper subgroup is also divisible. Deduce that $\q/\z$ is divisible (cf. \exref{2.4.19}).
 \end{exercise}
 
 \begin{sol}
-    Since $A$ is abelian, any proper subgroup $B$ of $A$ is normal. To that end, let $aB \in A/B$, and let $n \in \zp$. Since $A$ is divisible, there exists some $x \in A$ such that $x^n = a$. Then
+    Since $A$ is Abelian, any proper subgroup $B$ of $A$ is normal. To that end, let $aB \in A/B$, and let $n \in \zp$. Since $A$ is divisible, there exists some $x \in A$ such that $x^n = a$. Then
     \[(xB)^n = x^n B = aB\]
     so that $A/B$ is divisible. Observe that $\q$ is divisible, since for any $q \in \q$ and $n \in \zp$, there exists $p \in \q$ such that $np = q$, namely $p = q/n$. Moreover, $\z$ is a proper subgroup of $\q$, so by the first part, $\q/\z$ is divisible.
 \end{sol}
 
-\begin{specialexercise}[3.1.16]
+\begin{spex}[3.1.16]
     Let $G$ be a group, let $N$ be a normal subgroup of $G$, and let $\bar{G} = G/N$. Prove that if $G = \langle x, y \rangle$ then $\bar{G} = \langle \bar{x}, \bar{y} \rangle$. Prove more generally that if $G = \langle S \rangle$ for any subset $S$ of $G$, then $\bar{G} = \langle \bar{S} \rangle$.
-\end{specialexercise}
+\end{spex}
 
 \begin{sol}
     We prove the general case. Since $G = \gen S$, then for any $g \in G$, we have
     \[g = s_1^{\alpha_1} s_2^{\alpha_2} \cdots s_k^{\alpha_k}, \quad s_i \in S, \alpha_i \in \z\]
-    Observe that $\bar S = \{\bar s \mid s \in S\}$. Then for any $\bar g \in \bar G$, we have
+    Observe that $\bar S = \set{\bar s \mid s \in S}$. Then for any $\bar g \in \bar G$, we have
     \[\bar g = \bar{s_1^{\alpha_1} s_2^{\alpha_2} \cdots s_k^{\alpha_k}} = \bar s_1^{\alpha_1} \bar s_2^{\alpha_2} \cdots \bar s_k^{\alpha_k}\]
     so that $\bar g \in \gen{\bar S}$. Hence, $\bar G \subseteq \gen{\bar S}$. Since $\bar s \in \bar G$ for any $s \in S$, then $\gen{\bar S} \subseteq \bar G$. Therefore, $\bar G = \gen{\bar S}$.
 
-    The case of $G = \gen{x, y}$ is a special case where $S = \{x, y\}$.
+    The case of $G = \gen{x, y}$ is a special case where $S = \set{x, y}$.
 \end{sol}
 
 \begin{exercise}[3.1.17]
-    Let $G$ be the dihedral group of order $16$ (whose lattice appears in Section 2.5): $G = \langle r,s \mid r^8 = s^2 = 1,\ rs = sr^{-1} \rangle$, and let $\bar{G} = G/\langle r^4 \rangle$ be the quotient of $G$ by the subgroup generated by $r^4$ (this subgroup is the center of $G$, hence is normal).
+    Let $G$ be the dihedral group of order $16$ (whose lattice appears in Section 2.5): $G = \langle r,s \mid r^8 = s^2 = 1,\ rs = sr\inv  \rangle$, and let $\bar{G} = G/\langle r^4 \rangle$ be the quotient of $G$ by the subgroup generated by $r^4$ (this subgroup is the center of $G$, hence is normal).
     \begin{subexercises}
         \item Show that the order of $\bar{G}$ is $8$.
         \item Exhibit each element of $\bar{G}$ in the form $\bar{s}^a \bar{r}^b$, for some integers $a$ and $b$.
         \item Find the order of each of the elements of $\bar{G}$ exhibited in (b).
-        \item Write each of the following elements of $\bar{G}$ in the form $\bar{s}^a \bar{r}^b$, for some integers $a$ and $b$ as in (b): $\bar{rs}$, $\bar{sr^{-2}s}$, $\bar{s^{-1}r^{-1}sr}$.
+        \item Write each of the following elements of $\bar{G}$ in the form $\bar{s}^a \bar{r}^b$, for some integers $a$ and $b$ as in (b): $\bar{rs}$, $\bar{sr^{-2}s}$, $\bar{s\inv r\inv sr}$.
         \item Prove that $\bar{H} = \langle \bar{s}, \bar{r}^2 \rangle$ is a normal subgroup of $\bar{G}$ and $\bar{H}$ is isomorphic to the Klein $4$-group. Describe the isomorphism type of the complete preimage of $\bar{H}$ in $G$.
         \item Find the center of $\bar G$ and describe the isomorphism type of $\bar G/Z(\bar G)$.
     \end{subexercises}
@@ -359,10 +349,10 @@ Let $G$ and $H$ be groups.
     \item Since $\gen{r^4} = \set{1, r^4}$, each coset in $\bar G$ has 2 elements and partitions $G$ into 8 sets. Hence, $\abs{\bar G} = 8$.
     \item The elements of $\bar G$ are
     \begin{align*}
-        \bar 1 & = \{1, r^4\}, & \bar{s} & = \{s, sr^4\} \\
-        \bar r & = \{r, r^5\}, & \bar{sr} & = \{sr, sr^5\} \\
-        \bar r^2 & = \{r^2, r^6\}, & \bar{sr^2} & = \{sr^2, sr^6\} \\
-        \bar r^3 & = \{r^3, r^7\}, & \bar{sr^3} & = \{sr^3, sr^7\}
+        \bar 1 & = \set{1, r^4}, & \bar{s} & = \set{s, sr^4} \\
+        \bar r & = \set{r, r^5}, & \bar{sr} & = \set{sr, sr^5} \\
+        \bar r^2 & = \set{r^2, r^6}, & \bar{sr^2} & = \set{sr^2, sr^6} \\
+        \bar r^3 & = \set{r^3, r^7}, & \bar{sr^3} & = \set{sr^3, sr^7}
     \end{align*}
     \item The orders of the elements of $\bar G$ are
     \[
@@ -373,7 +363,7 @@ Let $G$ and $H$ be groups.
     \end{array}
     \]
     \item $\bar{rs} = \bar{sr^3}, \bar{sr^{-2}s} = \bar r^2, \bar{s\inv r\inv sr} = \bar r^2$.
-    \item We first note that $\bar H = \{1, \bar r^2, \bar s, \bar{sr^2}\}$. To show that $\bar H \nsub \bar G$, we simplify the process by noting that elements of $\bar G$ are of the form $\bar r^k$ or $\bar{sr^k}$. If an element is of the former, we have
+    \item We first note that $\bar H = \set{1, \bar r^2, \bar s, \bar{sr^2}}$. To show that $\bar H \nsub \bar G$, we simplify the process by noting that elements of $\bar G$ are of the form $\bar r^k$ or $\bar{sr^k}$. If an element is of the former, we have
     \begin{align*}
         \bar{r^kr^2r^{-k}} = \bar r^2 \in \bar H \\
         \bar{r^ksr^{-k}} = \bar{s(r^2)^{-k}} \in \bar H
@@ -386,14 +376,14 @@ Let $G$ and $H$ be groups.
     where $\bar{sr^k}\inv = \bar{r^{-k}s}$. The above calculations show that for every $\bar g \in \bar G$, then $\bar{gr^2g\inv}, \bar{gsg\inv} \in H$ so that $\bar{gHg\inv} = \bar H$, hence $\bar H \nsub \bar G$. Moreover, it is easy to see that every element of $\bar H$ is of order 2 so that $\bar H \cong V_4$.
 
     Let $\pi : G \to \bar G$ be the natural projection of $G$ onto $\bar G$. Then $\pi\inv(\bar H)$ is the complete preimage of $\bar H$, or the set of elements that map to a coset in $\bar H$. Using part (b), we see that
-    \[\pi\inv(\bar H) = \{1, r^2, r^4, r^6, s, sr^2, sr^4, sr^6\}\]
+    \[\pi\inv(\bar H) = \set{1, r^2, r^4, r^6, s, sr^2, sr^4, sr^6}\]
     Note that $|\pi\inv(\bar H)| = 8$, and the elements of $\bar H$ satisfy the relations $(r^2)^4 = s^2 = 1$. Then the mapping $\phi : D_8 \to \pi\inv(\bar H)$ given by $\phi(r) = r^2$ and $\phi(s) = s$ extends to a homomorphism that is clearly surjective. Then $\phi$ is an isomorphism, and $\pi\inv(\bar H) \cong D_8$.
-    \item From the previous exercise, we have that $\bar G = \gen{\bar r, \bar s}$. Since $\bar r^2$ commutes with both $\bar r$ and $\bar s$, then $\bar r^2 \in Z(\bar G)$. However, $\bar{rs} \neq \bar{sr}$ and $\bar{r^3s} \neq \bar{sr^3}$. Additionally, none of $\bar{sr}, \bar{sr^2}$, nor $\bar{sr^3}$ commute with $\bar r$ so that $Z(\bar G) = \{\bar 1, \bar r^2\}$. The elements of $\widehat G = \bar G/Z(\bar G)$ are as follows:
+    \item From the previous exercise, we have that $\bar G = \gen{\bar r, \bar s}$. Since $\bar r^2$ commutes with both $\bar r$ and $\bar s$, then $\bar r^2 \in Z(\bar G)$. However, $\bar{rs} \neq \bar{sr}$ and $\bar{r^3s} \neq \bar{sr^3}$. Additionally, none of $\bar{sr}, \bar{sr^2}$, nor $\bar{sr^3}$ commute with $\bar r$ so that $Z(\bar G) = \set{\bar 1, \bar r^2}$. The elements of $\widehat G = \bar G/Z(\bar G)$ are as follows:
     \begin{align*}
-        \wh 1 & = \{\bar 1, \bar r^2\} & \wh s & = \{\bar s, \bar{sr^2}\} \\
-        \wh r & = \{\bar r, \bar r^3\} & \widehat{sr} & = \{\bar{sr}, \bar{sr^3}\}
+        \wh 1 & = \set{\bar 1, \bar r^2} & \wh s & = \set{\bar s, \bar{sr^2}} \\
+        \wh r & = \set{\bar r, \bar r^3} & \widehat{sr} & = \set{\bar{sr}, \bar{sr^3}}
     \end{align*}
-    One can see that each nonidentity element of $\widehat G$ has order 2 so that $\widehat G \cong V_4$.
+    One can see that each non-identity element of $\widehat G$ has order 2 so that $\widehat G \cong V_4$.
 \end{solenum}
 
 \begin{exercise}[3.1.18]
@@ -402,7 +392,7 @@ Let $G$ and $H$ be groups.
         \item Show that the order of $\bar{G}$ is $8$.
         \item Exhibit each element of $\bar{G}$ in the form $\bar{\tau}^a \bar{\sigma}^b$, for some integers $a$ and $b$.
         \item Find the order of each of the elements of $\bar{G}$ exhibited in (b).
-        \item Write each of the following elements of $\bar{G}$ in the form $\bar{\tau}^a \bar{\sigma}^b$, for some integers $a$ and $b$ as in (b): $\bar{\sigma\tau}$, $\bar{\tau\sigma^{-2}\tau}$, $\bar{\tau^{-1}\sigma^{-1}\tau\sigma}$.
+        \item Write each of the following elements of $\bar{G}$ in the form $\bar{\tau}^a \bar{\sigma}^b$, for some integers $a$ and $b$ as in (b): $\bar{\sigma\tau}$, $\bar{\tau\sigma^{-2}\tau}$, $\bar{\tau\inv \sigma\inv \tau\sigma}$.
         \item Prove that $\bar{G} \cong D_8$.
     \end{subexercises}
 \end{exercise}
@@ -411,10 +401,10 @@ Let $G$ and $H$ be groups.
     \item $\gen{\sigma^4}$ has 2 elements, so each coset has 2 elements which subsequently split $G$ into 8 cosets. Hence, $\abs{\bar G} = 8$.
     \item The elements are
     \begin{align*}
-        \bar 1 & = \{1, \sigma^4\} & \bar\tau & = \{\tau, \tau\sigma^4\} \\
-        \bar\sigma & = \{\sigma, \sigma^5\} & \bar{\tau\sigma} & = \{\tau\sigma, \tau\sigma^5\} \\
-        \bar\sigma^2 & = \{\sigma^2, \sigma^6\} & \bar{\tau\sigma^2} & = \{\tau\sigma^2, \tau\sigma^6\} \\
-        \bar\sigma^3 & = \{\sigma^3, \sigma^7\} & \bar{\tau\sigma^3} & = \{\tau\sigma^3, \tau\sigma^7\}
+        \bar 1 & = \set{1, \sigma^4} & \bar\tau & = \set{\tau, \tau\sigma^4} \\
+        \bar\sigma & = \set{\sigma, \sigma^5} & \bar{\tau\sigma} & = \set{\tau\sigma, \tau\sigma^5} \\
+        \bar\sigma^2 & = \set{\sigma^2, \sigma^6} & \bar{\tau\sigma^2} & = \set{\tau\sigma^2, \tau\sigma^6} \\
+        \bar\sigma^3 & = \set{\sigma^3, \sigma^7} & \bar{\tau\sigma^3} & = \set{\tau\sigma^3, \tau\sigma^7}
     \end{align*}
     \item The orders are
     \[
@@ -428,16 +418,14 @@ Let $G$ and $H$ be groups.
     \item Note that $\bar\sigma^4 = \bar\tau^2 = \bar 1$, and $\bar{\sigma\tau} = \bar{\tau\sigma^3} = \bar{\tau\sigma^7} = \bar{\tau\sigma}$ so that $\bar G$ satisfies the same relations in $D_8$. Then the mapping $\phi : \bar G \to D_8$ given by $\phi(\bar\sigma) = r$ and $\phi(\bar\tau) = s$ extends to a surjective homomorphism, hence $\bar G \cong D_8$.
 \end{solenum}
 
-\newpage
-
 \begin{exercise}[3.1.19]
     Let $G$ be the modular group of order $16$ (whose lattice was computed in \exref{2.5.14}): $G = \langle u,v \mid u^2 = v^8 = 1,\ vu = uv^5 \rangle$, and let $\bar{G} = G/\langle v^4 \rangle$ be the quotient of $G$ by the subgroup generated by $v^4$ (this subgroup is contained in the center of $G$, hence is normal).
     \begin{subexercises}
         \item Show that the order of $\bar{G}$ is $8$.
         \item Exhibit each element of $\bar{G}$ in the form $\bar{u}^a \bar{v}^b$, for some integers $a$ and $b$.
         \item Find the order of each of the elements of $\bar{G}$ exhibited in (b).
-        \item Write each of the following elements of $\bar{G}$ in the form $\bar{u}^a \bar{v}^b$, for some integers $a$ and $b$ as in (b): $\bar{vu}$, $\bar{uv^{-2}u}$, $\bar{u^{-1}v^{-1}uv}$.
-        \item Prove that $\bar{G}$ is abelian and is isomorphic to $Z_2 \times Z_4$.
+        \item Write each of the following elements of $\bar{G}$ in the form $\bar{u}^a \bar{v}^b$, for some integers $a$ and $b$ as in (b): $\bar{vu}$, $\bar{uv^{-2}u}$, $\bar{u\inv v\inv uv}$.
+        \item Prove that $\bar{G}$ is Abelian and is isomorphic to $Z_2 \times Z_4$.
     \end{subexercises}
 \end{exercise}
 
@@ -445,7 +433,7 @@ Let $G$ and $H$ be groups.
     \item $\gen{v^4}$ has 2 elements, so each coset has 2 elements. Then $G$ is split into 8 cosets, hence $\abs{\bar G} = 8$.
     \item The elements are
     \begin{align*}
-        \bar 1 & = \{1, v^4\} & \bar u & = \{u, uv^4\} \\
+        \bar 1 & = \set{1, v^4} & \bar u & = \set{u, uv^4} \\
         \bar v & = \set{v, v^5} & \bar{uv} & = \set{uv, uv^5} \\
         \bar v^2 & = \set{v^2, v^6} & \bar{uv^2} & = \set{uv^2, uv^6} \\
         \bar v^3 & = \set{v^3, v^7} & \bar{uv^3} & = \set{uv^3, uv^7}
@@ -459,20 +447,20 @@ Let $G$ and $H$ be groups.
     \end{array}
     \]
     \item $\bar{vu} = \bar{uv^5}, \bar{uv^{-2}u} = \bar u^2, \bar{u\inv v\inv uv} = \bar 1$.
-    \item Since $\bar{vu} = \bar{uv^5} = \bar{uv}$, $\bar G$ is abelian. Moreover, using the presentation of $Z_2 \times Z_4$ in \exref{2.5.12}, we see that $\bar u^2 = \bar v^4 = 1$ so that $\bar G$ satisfies the same relations. Then $\phi : \bar G \to Z_2 \times Z_4$ given by $\phi(\bar u) = a$ and $\phi(\bar v) = b$ is a surjective homomorphism, hence $\bar G \cong Z_2 \times Z_4$.
+    \item Since $\bar{vu} = \bar{uv^5} = \bar{uv}$, $\bar G$ is Abelian. Moreover, using the presentation of $Z_2 \times Z_4$ in \exref{2.5.12}, we see that $\bar u^2 = \bar v^4 = 1$ so that $\bar G$ satisfies the same relations. Then $\phi : \bar G \to Z_2 \times Z_4$ given by $\phi(\bar u) = a$ and $\phi(\bar v) = b$ is a surjective homomorphism, hence $\bar G \cong Z_2 \times Z_4$.
 \end{solenum}
 
-\begin{specialexercise}[3.1.20]
-    Let $G = \mathbb{Z}/24\mathbb{Z}$ and let $\wt{G} = G/\langle \bar{12} \rangle$, where for each integer $a$ we simplify notation by writing $\wt{\bar a}$ as $\wt{a}$.
+\begin{spex}[3.1.20]
+    Let $G = \z/24\z$ and let $\wt{G} = G/\langle \bar{12} \rangle$, where for each integer $a$ we simplify notation by writing $\wt{\bar a}$ as $\wt{a}$.
     \begin{subexercises}
-        \item Show that $\wt{G} = \{ \wt{0}, \wt{1}, \ldots, \wt{11} \}$.
+        \item Show that $\wt{G} = \set{ \wt{0}, \wt{1}, \ldots, \wt{11} }$.
         \item Find the order of each element of $\wt{G}$.
-        \item Prove that $\wt{G} \cong \mathbb{Z}/12\mathbb{Z}$ (thus $(\mathbb{Z}/24\mathbb{Z})/(12\mathbb{Z}/24\mathbb{Z}) \cong \mathbb{Z}/12\mathbb{Z}$, just as if we inverted and canceled the $24\mathbb{Z}$'s).
+        \item Prove that $\wt{G} \cong \z/12\z$ (thus $(\z/24\z)/(12\z/24\z) \cong \z/12\z$, just as if we inverted and canceled the $24\z$'s).
     \end{subexercises}
-\end{specialexercise}
+\end{spex}
 
 \begin{solenum}
-    \item Note that for some $\wt x \in \wt G$, we have $\wt x = \bar x\gen{12} = \{\bar x, \bar{x + 12}\}$. It follows that $x = 0, 1, 2, \dots, 11$ produces distinct cosets.
+    \item Note that for some $\wt x \in \wt G$, we have $\wt x = \bar x\gen{12} = \set{\bar x, \bar{x + 12}}$. It follows that $x = 0, 1, 2, \dots, 11$ produces distinct cosets.
     \item The orders are
     \[
     \begin{array}{c|c|c|c|c|c|c|c|c|c|c|c|c}
@@ -489,7 +477,7 @@ Let $G$ and $H$ be groups.
 \begin{exercise}[3.1.21]
     Let $G = Z_4 \times Z_4$ be given in terms of the following generators and relations:
     \[G = \gen{x, y \mid x^4 = y^4 = 1, xy = yx}\]
-    Let $\bar G = G/\gen{x^2y^2}$ (note that every subgroup of the abelian group $G$ is normal).
+    Let $\bar G = G/\gen{x^2y^2}$ (note that every subgroup of the Abelian group $G$ is normal).
     \begin{subexercises}
         \item Show that the order of $\bar G$ is 8.
         \item Exhibit each element of $\bar G$ in the form $\bar x^a \bar y^b$ for some integers $a$ and $b$.
@@ -499,13 +487,13 @@ Let $G$ and $H$ be groups.
 \end{exercise}
 
 \begin{solenum}
-    \item Note that $(x^2y^2)^2 = x^4y^4 = 1$ so that $\gen{x^2y^2} = \{1, x^2y^2\}$. Then each coset of $\bar G$ has 2 elements, hence its order is 8.
+    \item Note that $(x^2y^2)^2 = x^4y^4 = 1$ so that $\gen{x^2y^2} = \set{1, x^2y^2}$. Then each coset of $\bar G$ has 2 elements, hence its order is 8.
     \item Noting that $\bar x^2 \bar y^2 = \bar 1$ in $\bar G$, we have $\bar x^2 = \bar y^2$. Then we have the elements
     \begin{align*}
-        \bar 1 & = \{1, x^2y^2\} & \bar y & = \{y, x^2y^3\} \\
-        \bar x & = \{x, x^3y^2\} & \bar{xy} & = \{xy, x^3y^3\} \\
-        \bar x^2 & = \{x^2, y^2\} & \bar{x^2y} & = \{x^2y, y^3\} \\
-        \bar x^3 & = \{x^3, xy^2\} & \bar{x^3y} & = \{x^3y, xy^3\}
+        \bar 1 & = \set{1, x^2y^2} & \bar y & = \set{y, x^2y^3} \\
+        \bar x & = \set{x, x^3y^2} & \bar{xy} & = \set{xy, x^3y^3} \\
+        \bar x^2 & = \set{x^2, y^2} & \bar{x^2y} & = \set{x^2y, y^3} \\
+        \bar x^3 & = \set{x^3, xy^2} & \bar{x^3y} & = \set{x^3y, xy^3}
     \end{align*}
     \item The orders are
     \[
@@ -529,7 +517,7 @@ Let $G$ and $H$ be groups.
 
 \begin{solenum}
     \item Observe that $H \cap K \leq G$ since $H \leq G$ and $K \leq G$. Let $g \in G$ and $x \in H \cap K$. Since $H \nsub G$ and $K \nsub G$, then $gxg\inv \in H$ and $gxg\inv \in K$, hence $gxg\inv \in H \cap K$. Then $g(H \cap K)g\inv \subseteq H \cap K$. By Theorem 3.6, then $H \cap K \nsub G$.
-    \item Let $G$ be a group and $I$ be a nonempty set of indices, possibly not countable. Consider the collection of subgroups $\{N_i \mid i \in I\}$ of $G$, where $N_i \nsub G$ for every $i \in I$. Consider their intersection
+    \item Let $G$ be a group and $I$ be a nonempty set of indices, possibly not countable. Consider the collection of subgroups $\set{N_i \mid i \in I}$ of $G$, where $N_i \nsub G$ for every $i \in I$. Consider their intersection
     \[N = \bigcap_{i \in I} N_i\]
     Since $N \leq G$, what remains to be shown is that $gNg\inv \subseteq N$ for some $g \in G$. To that end, let $n \in N$. Then $gng\inv \in N_i$ for each $i \in I$ because $N_i \nsub G$. It follows that $gng\inv \in N$ so that $gNg\inv \subseteq N$.
 \end{solenum}
@@ -539,7 +527,7 @@ Let $G$ and $H$ be groups.
 \end{exercise}
 
 \begin{sol}
-    Let $G$ be a group and $I$ be a nonempty set of indices. Let $\{N_i \mid i \in I\}$ be a collection of normal subgroups of $G$, and let $N = \gen{N_i \mid i \in I}$ be the join of the collection. Let $g \in G$ and $n \in N$. Then
+    Let $G$ be a group and $I$ be a nonempty set of indices. Let $\set{N_i \mid i \in I}$ be a collection of normal subgroups of $G$, and let $N = \gen{N_i \mid i \in I}$ be the join of the collection. Let $g \in G$ and $n \in N$. Then
     \[n = n_1n_2 \dots n_k \quad \text{where $n_i \in N_i$ for some $i \in I$}\]
     Since $N_i \nsub G$, then $gn_ig\inv \in N_i$ for each $1 \leq i \leq k$. Then
     \[gng\inv = g(n_1n_2 \ldots n_k)g\inv = (gn_1g\inv)(gn_2g\inv) \cdots (gn_kg\inv)\]
@@ -556,8 +544,8 @@ Let $G$ and $H$ be groups.
 
 \begin{exercise}[3.1.25]
     \begin{subexercises}
-        \item Prove that a subgroup $N$ of $G$ is normal if and only if $gNg^{-1} \subseteq N$ for all $g \in G$.
-        \item Let $G = \gl_2(\mathbb{Q})$, let $N$ be the subgroup of upper triangular matrices with integer entries and $1$'s on the diagonal, and let $g$ be the diagonal matrix with entries $2,1$. Show that $gNg^{-1} \subseteq N$ but $g$ does not normalize $N$.
+        \item Prove that a subgroup $N$ of $G$ is normal if and only if $gNg\inv  \subseteq N$ for all $g \in G$.
+        \item Let $G = \gl_2(\q)$, let $N$ be the subgroup of upper triangular matrices with integer entries and $1$'s on the diagonal, and let $g$ be the diagonal matrix with entries $2,1$. Show that $gNg\inv  \subseteq N$ but $g$ does not normalize $N$.
     \end{subexercises}
 \end{exercise}
 
@@ -594,15 +582,13 @@ Let $G$ and $H$ be groups.
     since $2x \in \z$. Notice that the upper right entry of $gng\inv$ for any $n \in N$ will be even, so any matrix with an odd integer in the upper right entry will have no such $n \in N$ such that $gng\inv$ is that matrix.
 \end{solenum}
 
-\newpage
-
 \begin{exercise}[3.1.26] 
     Let $a,b \in G$.
     \begin{subexercises}
         \item Prove that the conjugate of the product of $a$ and $b$ is the product of the conjugate of $a$ and the conjugate of $b$. Prove that the order of $a$ and the order of any conjugate of $a$ are the same.
-        \item Prove that the conjugate of $a^{-1}$ is the inverse of the conjugate of $a$.
-        \item Let $N = \langle S \rangle$ for some subset $S$ of $G$. Prove that $N \nsub G$ if $gSg^{-1} \subseteq N$ for all $g \in G$.
-        \item Deduce that if $N$ is the cyclic group $\langle x \rangle$, then $N$ is normal in $G$ if and only if for each $g \in G$, $gxg^{-1} = x^k$ for some $k \in \mathbb{Z}$.
+        \item Prove that the conjugate of $a\inv $ is the inverse of the conjugate of $a$.
+        \item Let $N = \langle S \rangle$ for some subset $S$ of $G$. Prove that $N \nsub G$ if $gSg\inv  \subseteq N$ for all $g \in G$.
+        \item Deduce that if $N$ is the cyclic group $\langle x \rangle$, then $N$ is normal in $G$ if and only if for each $g \in G$, $gxg\inv  = x^k$ for some $k \in \z$.
         \item Let $n$ be a positive integer. Prove that the subgroup $N$ of $G$ generated by all the elements of $G$ of order $n$ is a normal subgroup of $G$.
     \end{subexercises}
 \end{exercise}
@@ -626,7 +612,7 @@ Let $G$ and $H$ be groups.
 \end{solenum}
 
 \begin{exercise}[3.1.27]
-    Let $N$ be a \emph{finite} subgroup of a group $G$. Show that $gNg^{-1} \subseteq N$ if and only if $gNg^{-1} = N$. Deduce that $N_G(N) = \{ g \in G \mid gNg^{-1} \subseteq N \}$.
+    Let $N$ be a \emph{finite} subgroup of a group $G$. Show that $gNg\inv \subseteq N$ if and only if $gNg\inv  = N$. Deduce that $N_G(N) = \set{g \in G \mid gNg\inv  \subseteq N}$.
 \end{exercise}
 
 \begin{sol}
@@ -636,13 +622,11 @@ Let $G$ and $H$ be groups.
         \item[\leftimp] Immediate.
     \end{itemize}
 
-    By the previous part, we have that $g \in N_G(N)$ if and only if $gNg\inv = N$, which holds if and only if $gNg\inv \subseteq N$. Then $N_G(N) = \{ g \in G \mid gNg^{-1} \subseteq N \}$.
+    By the previous part, we have that $g \in N_G(N)$ if and only if $gNg\inv = N$, which holds if and only if $gNg\inv \subseteq N$. Then $N_G(N) = \set{ g \in G \mid gNg\inv  \subseteq N }$.
 \end{sol}
 
-\newpage
-
 \begin{exercise}[3.1.28]
-    Let $N$ be a \emph{finite} subgroup of a group $G$ and assume $N = \langle S \rangle$ for some subset $S$ of $G$. Prove that an element $g \in G$ normalizes $N$ if and only if $gSg^{-1} \subseteq N$.
+    Let $N$ be a \emph{finite} subgroup of a group $G$ and assume $N = \langle S \rangle$ for some subset $S$ of $G$. Prove that an element $g \in G$ normalizes $N$ if and only if $gSg\inv  \subseteq N$.
 \end{exercise}
 
 \begin{solitem}
@@ -656,7 +640,7 @@ Let $G$ and $H$ be groups.
 \end{solitem}
 
 \begin{exercise}[3.1.29]
-    Let $N$ be a \emph{finite} subgroup of $G$ and suppose $G = \langle T \rangle$ and $N = \langle S \rangle$ for some subsets $S$ and $T$ of $G$. Prove that $N$ is normal in $G$ if and only if $tSt^{-1} \subseteq N$ for all $t \in T$.
+    Let $N$ be a \emph{finite} subgroup of $G$ and suppose $G = \langle T \rangle$ and $N = \langle S \rangle$ for some subsets $S$ and $T$ of $G$. Prove that $N$ is normal in $G$ if and only if $tSt\inv  \subseteq N$ for all $t \in T$.
 \end{exercise}
 
 \begin{solitem}
@@ -708,28 +692,26 @@ Let $G$ and $H$ be groups.
 \begin{sol}
     Again, $D_8/1 \cong D_8$ and $D_8/D_8 \cong 1$. Examining the three maximal subgroups $\gen{s, r^2}, \gen r$, and $\gen{rs, r^2}$. observe the following:
     \begin{align*}
-        r\gen{s, r^2}r\inv & = \{1, sr^2. r^2, s\} = \gen{s, r^2} \\
-        s\gen r s\inv & = \{1, r^3, r^2, r\} = \gen r \\
-        r\gen{rs, r^2}r\inv & = \{1, sr, r^2, sr^3\} = \gen{rs, r^2}
+        r\gen{s, r^2}r\inv & = \set{1, sr^2. r^2, s} = \gen{s, r^2} \\
+        s\gen r s\inv & = \set{1, r^3, r^2, r} = \gen r \\
+        r\gen{rs, r^2}r\inv & = \set{1, sr, r^2, sr^3} = \gen{rs, r^2}
     \end{align*}
     then the normalizers of each subgroup contain $r$ and $s$, hence $N_{D_8}(\gen{s, r^2}) = N_{D_8}(\gen r) = N_{D_8}(\gen{rs, r^2}) = Q_8$. Moreover, each of these maximal subgroups are of order 4, which means their corresponding quotient groups will have order 2, hence $Q_8/\gen{s, r^2} \cong Q_8/\gen r \cong Q_8/\gen{rs, r^2} \cong Z_2$.
 
-    Now we examine $\gen{r^2} = Z(D_8)$ so it is clearly normal. Then $D_8/\gen{r^2} = \{\bar 1, \bar r, \bar s, \bar{sr}\}$. Note that the nonidentity elements have order 2, and so $D_8/\gen{r^2} \cong V_4$.
+    Now we examine $\gen{r^2} = Z(D_8)$ so it is clearly normal. Then $D_8/\gen{r^2} = \set{\bar 1, \bar r, \bar s, \bar{sr}}$. Note that the non-identity elements have order 2, and so $D_8/\gen{r^2} \cong V_4$.
 
     For the remaining subgroups of order 2, observe that
     \begin{align*}
-        r\gen{s}r\inv & = \{1, sr^2\} \neq \gen s \\
-        r\gen{sr}r\inv & = \{1, rs\} \neq \gen{sr} \\
-        r\gen{sr^2}r\inv & = \{1, s\} \neq \gen{sr^2} \\
-        r\gen{sr^3}r\inv & = \{1, sr\} \neq \gen{sr^3}
+        r\gen{s}r\inv & = \set{1, sr^2} \neq \gen s \\
+        r\gen{sr}r\inv & = \set{1, rs} \neq \gen{sr} \\
+        r\gen{sr^2}r\inv & = \set{1, s} \neq \gen{sr^2} \\
+        r\gen{sr^3}r\inv & = \set{1, sr} \neq \gen{sr^3}
     \end{align*}
     so that none of the subgroups of order 2 contain $r$, hence none of them are normal.
 \end{sol}
 
-\newpage
-
 \begin{exercise}[3.1.34] 
-    Let $D_{2n} = \langle r,s \mid r^n = s^2 = 1,\ rs = sr^{-1} \rangle$ be the usual presentation of the dihedral group of order $2n$ and let $k$ be a positive integer dividing $n$.
+    Let $D_{2n} = \langle r,s \mid r^n = s^2 = 1,\ rs = sr\inv  \rangle$ be the usual presentation of the dihedral group of order $2n$ and let $k$ be a positive integer dividing $n$.
     \begin{subexercises}
         \item Prove that $\langle r^k \rangle$ is a normal subgroup of $D_{2n}$.
         \item Prove that $D_{2n}/\langle r^k \rangle \cong D_{2k}$.
@@ -737,15 +719,15 @@ Let $G$ and $H$ be groups.
 \end{exercise}
 
 \begin{solenum}
-    \item Observe that $\gen{r^k} = \{1, r^k, r^{2k}, \ldots, r^{n - k}\}$. It is clear that $r\gen{r^k}r\inv = \gen{r^k}$, and observe that $sr^ks\inv = r^{-k} = r^{n - k}$ so that $s\gen{r^k}s\inv = \gen{r^k}$. Since $r, s \in N_{D_{2n}}(\gen{r^k})$, then $\gen{r^k} \nsub D_{2n}$.
+    \item Observe that $\gen{r^k} = \set{1, r^k, r^{2k}, \ldots, r^{n - k}}$. It is clear that $r\gen{r^k}r\inv = \gen{r^k}$, and observe that $sr^ks\inv = r^{-k} = r^{n - k}$ so that $s\gen{r^k}s\inv = \gen{r^k}$. Since $r, s \in N_{D_{2n}}(\gen{r^k})$, then $\gen{r^k} \nsub D_{2n}$.
     \item Consider $D_{2n}/\gen{r^k}$. Since $k \mid n$, then the order of $\gen{r^k}$ is $n/k$, and the number of cosets in the quotient group is $2n/(n/k) = 2k$. Now consider the cosets $\bar r$ and $\bar s$:
-    \[\bar r = \{r, r^{k + 1}, r^{2k + 1}, \ldots, r^{n - k + 1}\} \quad \text{and} \quad \bar s = \{s, sr^k, sr^{2k}, \ldots, sr^{n - k}\}\]
+    \[\bar r = \set{r, r^{k + 1}, r^{2k + 1}, \ldots, r^{n - k + 1}} \quad \text{and} \quad \bar s = \set{s, sr^k, sr^{2k}, \ldots, sr^{n - k}}\]
     It is clear that $\bar s \neq \bar 1$, and $\bar s^2 = \bar 1$ so that $\abs{\bar s} = 2$. Moreover, $\bar r^k = \bar 1$, hence $\abs{\bar r} \leq k$. However, note that $\bar r^i = \bar 1$ when $i \mid k$ so that $\abs{\bar r} = k$. This clearly satisfies the relations for $D_{2k}$, hence $D_{2n}/\gen{r^k} \cong D_{2k}$. 
 \end{solenum}
 
-\begin{specialexercise}[3.1.35] 
+\begin{spex}[3.1.35] 
     Prove that $\speclin_n(F) \nsub \gl_n(F)$ and describe the isomorphism type of the quotient group (cf. \exref{2.1.9}).
-\end{specialexercise}
+\end{spex}
 
 \begin{sol}
     Since $\speclin_n(F) \leq \gl_n(F)$ by \exref{2.1.9}, it remains to be shown that $\speclin_n(F)$ is normal in $\gl_n(F)$. Let $S \in \speclin_n(F)$ and $X \in \gl_n(F)$. Then
@@ -756,7 +738,7 @@ Let $G$ and $H$ be groups.
 
     We now show that $\phi$ is well-defined. Suppose $\bar A = \bar B$ for some $\bar A, \bar B \in \gl_n(F)/\speclin_n(F)$. Then for some $AS \in \bar A$ for $S \in \speclin_n(F)$. there exists $S' \in \speclin_n(F)$ such that $AS = BS'$. Then
     \[\phi(\bar A) = \det(A) = \det(AS) = \det(BS') = \det(B) = \phi(\bar B)\]
-    so that $\phi$ is well defined.
+    so that $\phi$ is well-defined.
 
     Suppose $\phi(\bar A) = \phi(\bar B)$ for $\bar A, \bar B \in \gl_n(F)/\speclin_n(F)$. Then $\det(A) = \det(B)$. Let $AS \in \bar A$ for some $S \in \speclin_n(F)$. Note that $B\inv$ exists since $B \in \gl_n(F)$. Then
     \[\det(B\inv AS) = \det(B\inv)\det(A)\det(S) = \det(A)\inv\det(A)\det(S) = 1\]
@@ -765,10 +747,8 @@ Let $G$ and $H$ be groups.
     so that $\phi$ is a homomorphism. Then $\phi$ is a bijective homomorphism, and $\gl_n(F)/\speclin_n(F) \cong F\unt$.
 \end{sol}
 
-\newpage
-
 \begin{exercise}[3.1.36] 
-    Prove that if $G/Z(G)$ is cyclic then $G$ is abelian. [If $G/Z(G)$ is cyclic with generator $xZ(G)$, show that every element of $G$ can be written in the form $x^a z$ for some integer $a \in \mathbb{Z}$ and some element $z \in Z(G)$.]
+    Prove that if $G/Z(G)$ is cyclic then $G$ is Abelian. [If $G/Z(G)$ is cyclic with generator $xZ(G)$, show that every element of $G$ can be written in the form $x^a z$ for some integer $a \in \z$ and some element $z \in Z(G)$.]
 \end{exercise}
 
 \begin{sol}
@@ -776,11 +756,11 @@ Let $G$ and $H$ be groups.
     \[g = x^a z_1 \quad \text{and} h = x^b z_2\]
     Then
     \[gh = (x^a z_1)(x^b z_2) = (x^b z_2)(x^a z_1) = hg\]
-    since $z_1, z_2 \in Z(G)$. Hence, $G$ is abelian.
+    since $z_1, z_2 \in Z(G)$. Hence, $G$ is Abelian.
 \end{sol}
 
 \begin{exercise}[3.1.37]
-    Let $A$ and $B$ be groups. Show that $\{(a,1) \mid a \in A\}$ is a normal subgroup of $A \times B$ and the quotient of $A \times B$ by this subgroup is isomorphic to $B$.
+    Let $A$ and $B$ be groups. Show that $\set{(a,1) \mid a \in A}$ is a normal subgroup of $A \times B$ and the quotient of $A \times B$ by this subgroup is isomorphic to $B$.
 \end{exercise}
 
 \begin{sol}
@@ -796,11 +776,11 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{exercise}[3.1.38]
-    Let $A$ be an abelian group and let $D$ be the (diagonal) subgroup $\{(a,a) \mid a \in A\}$ of $A \times A$. Prove that $D$ is a normal subgroup of $A \times A$ and $(A \times A)/D \cong A$.
+    Let $A$ be an Abelian group and let $D$ be the (diagonal) subgroup $\set{(a,a) \mid a \in A}$ of $A \times A$. Prove that $D$ is a normal subgroup of $A \times A$ and $(A \times A)/D \cong A$.
 \end{exercise}
 
 \begin{sol}
-    By \exref{1.1.29}, $A \times A$ is abelian since $A$ is abelian, hence every subgroup of $A \times A$ is normal, including $D$.
+    By \exref{1.1.29}, $A \times A$ is Abelian since $A$ is Abelian, hence every subgroup of $A \times A$ is normal, including $D$.
 
     Let $\phi : (A \times A)/D \to A$ be given by $\phi((a, b)D) = ab\inv$. To show that this is well-defined, suppose $(a_1, b_1)D = (a_2, b_2)D$. Then $D = (a_1\inv, b_1\inv)(a_2, b_2)D$, or that $(a_1\inv a_2, b_1\inv b_2) \in D$. Then $a_1\inv a_2 = b_1\inv b_2$, or $a_2b_2\inv = a_1b_1\inv$ so that $\phi$ is well-defined. We may follow this argument backwards to show that $\phi$ is injective. Moreover, $\phi((a, 1)D) = a$ so that $\phi$ is surjective. Lastly, for $(a_1, b_1)D, (a_2, b_2)D \in (A \times A)/D$, then
     \[\phi((a_1, b_1)D (a_2, b_2)D) = \phi((a_1a_2, b_1b_2)D) = a_1a_2(b_1b_2)\inv = (a_1b_1\inv)(a_2b_2\inv) = \phi((a_1, b_1)D)\phi((a_2, b_2)D)\]
@@ -808,16 +788,16 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{exercise}[3.1.39]
-    Suppose $A$ is the non-abelian group $S_3$ and $D$ is the diagonal subgroup $\{(a,a) \mid a \in A\}$ of $A \times A$. Prove that $D$ is not normal in $A \times A$.
+    Suppose $A$ is the non-Abelian group $S_3$ and $D$ is the diagonal subgroup $\set{(a,a) \mid a \in A}$ of $A \times A$. Prove that $D$ is not normal in $A \times A$.
 \end{exercise}
 
 \begin{sol}
     Let $\alpha, \beta \in S_3$, where $\alpha = 1$ and $\beta = (1\ 2\ 3)$ so that $\alpha\inv = \alpha$ and $\beta\inv \neq \beta$. For $\gamma = (1\ 2) \in S_3$, consider $\alpha\gamma\alpha\inv$ and $\beta\gamma\beta\inv$. Observe that $\alpha\gamma\alpha\inv = \gamma$, while $\beta\gamma\beta\inv = (1\ 2\ 3)(1\ 2)(3\ 2\ 1) = (2\ 3) \neq (1\ 2) = \gamma$. Then $(\alpha, \beta)(\gamma, \gamma)(\alpha\inv, \beta\inv) = (\gamma, (2\ 3))$, hence $D$ is not a normal subgroup of $S_3 \times S_3$.
 \end{sol}
 
-\begin{specialexercise}[3.1.40]
-    Let $G$ be a group, let $N$ be a normal subgroup of $G$ and let $\bar{G} = G/N$. Prove that $\bar{x}$ and $\bar{y}$ commute in $\bar{G}$ if and only if $x^{-1}y^{-1}xy \in N$. (The element $x^{-1}y^{-1}xy$ is called the \emph{commutator} of $x$ and $y$ and is denoted by $[x,y]$.)
-\end{specialexercise}
+\begin{spex}[3.1.40]
+    Let $G$ be a group, let $N$ be a normal subgroup of $G$ and let $\bar{G} = G/N$. Prove that $\bar{x}$ and $\bar{y}$ commute in $\bar{G}$ if and only if $x\inv y\inv xy \in N$. (The element $x\inv y\inv xy$ is called the \emph{commutator} of $x$ and $y$ and is denoted by $[x,y]$.)
+\end{spex}
 
 \begin{sol}
     \rightimp Suppose $\bar{xy} = \bar{yx}$. Then $xyN = yxN$. Then there exists $n, n' \in N$ such that $xyn = yxn'$, or $x\inv y\inv xy = n'n\inv$ so that $x\inv y\inv xy \in N$.
@@ -825,31 +805,29 @@ Let $G$ and $H$ be groups.
     \noindent \leftimp Suppose $x\inv y\inv xy\in N$. Then there is $n \in N$ such that $x\inv y\inv xy = n$, or $xy = yxn$. Then $a \in xyN$ if and only if $a = xyn'$ for some $n' \in N$ if and only if $a = yxnn'$ if and only if $a \in yxN$. Hence, $\bar{xy} = \bar{yx}$.
 \end{sol}
 
-\begin{specialexercise}[3.1.41]
-    Let $G$ be a group. Prove that $N = \langle x^{-1}y^{-1}xy \mid x,y \in G \rangle$ is a normal subgroup of $G$ and $G/N$ is abelian ($N$ is called the \emph{commutator} subgroup of $G$).
-\end{specialexercise}
+\begin{spex}[3.1.41]
+    Let $G$ be a group. Prove that $N = \langle x\inv y\inv xy \mid x,y \in G \rangle$ is a normal subgroup of $G$ and $G/N$ is Abelian ($N$ is called the \emph{commutator} subgroup of $G$).
+\end{spex}
 
 \begin{sol}
     Let $g \in G$ and $x\inv y\inv xy \in N$. Then 
     \[g(x\inv y\inv xy)g\inv = (gx\inv g\inv)(g y\inv g\inv)(gxg\inv)(gyg\inv) = (gxg\inv)\inv(gyg\inv)\inv(gxg\inv)(gyg\inv) \in N\]
     so that $g[x, y]g\inv = [gxg\inv, gyg\inv] \in N$. Then $gNg\inv \subseteq N$, hence $N \nsub G$.
     
-    $G/N$ is abelian, since the previous exercise shows that $\bar x$ and $\bar y$ in $G/N$ commute when $[x, y] \in N$.
+    $G/N$ is Abelian, since the previous exercise shows that $\bar x$ and $\bar y$ in $G/N$ commute when $[x, y] \in N$.
 \end{sol}
 
 \begin{exercise}[3.1.42]
-    Assume both $H$ and $K$ are normal subgroups of $G$ with $H \cap K = 1$. Prove that $xy = yx$ for all $x \in H$ and $y \in K$. [Show $x^{-1}y^{-1}xy \in H \cap K$.]
+    Assume both $H$ and $K$ are normal subgroups of $G$ with $H \cap K = 1$. Prove that $xy = yx$ for all $x \in H$ and $y \in K$. [Show $x\inv y\inv xy \in H \cap K$.]
 \end{exercise}
 
 \begin{sol}
     Let $x \in H$ and $y \in K$. Since $H \nsub G$, then $y\inv xy \in H$, hence $[x, y] \in H$. Since $K \nsub G$, then $x\inv y\inv x\in K$, hence $[x, y] \in K$. Then $[x, y] \in H \cap K = 1$ so that $[x, y] = 1$. It follows that $x\inv y\inv xy = 1$, or $xy = yx$.
 \end{sol}
 
-\newpage
-
-\begin{specialexercise}[3.1.43]
-    Assume $\mathcal{P} = \{A_i \mid i \in I\}$ is any partition of $G$ with the property that $\mathcal{P}$ is a group under the ``quotient operation'' defined as follows: to compute the product of $A_i$ with $A_j$ take any element $a_i$ of $A_i$ and any element $a_j$ of $A_j$ and let $A_iA_j$ be the element of $\mathcal{P}$ containing $a_ia_j$ (this operation is assumed to be well defined). Prove that the element of $\mathcal{P}$ that contains the identity of $G$ is a normal subgroup of $G$ and the elements of $\mathcal{P}$ are the cosets of this subgroup (so $\mathcal{P}$ is just a quotient group of $G$ in the usual sense).
-\end{specialexercise}
+\begin{spex}[3.1.43]
+    Assume $\mathcal{P} = \set{A_i \mid i \in I}$ is any partition of $G$ with the property that $\mathcal{P}$ is a group under the ``quotient operation'' defined as follows: to compute the product of $A_i$ with $A_j$ take any element $a_i$ of $A_i$ and any element $a_j$ of $A_j$ and let $A_iA_j$ be the element of $\mathcal{P}$ containing $a_ia_j$ (this operation is assumed to be well-defined). Prove that the element of $\mathcal{P}$ that contains the identity of $G$ is a normal subgroup of $G$ and the elements of $\mathcal{P}$ are the cosets of this subgroup (so $\mathcal{P}$ is just a quotient group of $G$ in the usual sense).
+\end{spex}
 
 \begin{sol}
     For any $g \in G$, let $\wt g \in \pp$ denote the element such that $g \in \wt g$. We now show that $\wt 1 \leq G$. Since $1 \in \wt 1$, then $\wt 1$ is nonempty. Suppose $g, h \in \wt 1$. Then

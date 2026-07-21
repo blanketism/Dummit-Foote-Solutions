@@ -132,8 +132,9 @@
 \end{sol}
 
 \begin{exercise}[1.3.8]
-     Prove that if $\Omega$ is a finite set, then $S_\Omega$ is a finite group.
-    Prove that if $\Omega = \{1,2,3,\dots\}$, then $S_\Omega$ is an infinite group (do not say $\infty! = \infty$).
+    Prove that if $\Omega = \set{1,2,3,\dots}$, then $S_\Omega$ is an infinite group.
+
+    \note{Do not say $\infty! = \infty$.}
 \end{exercise}
 
 \begin{sol}
@@ -147,7 +148,7 @@
         \item Let $\tau$ be the 8-cycle $(1\ 2\ 3\ 4\ 5\ 6\ 7\ 8)$. For which positive integers $i$ is $\tau^i$ also an 8-cycle?
         \item Let $\omega$ be the 14-cycle $(1\ 2\ 3\ 4\ 5\ 6\ 7\ 8\ 9\ 10\ 11\ 12\ 13\ 14)$. For which positive integers $i$ is $\omega^i$ also a 14-cycle?
     \end{subexercises}
-    \authornote{The reader should notice a pattern: integers $i$ such that $(m, i) = 1$ produce an $m$-cycle, while integers $i$ such that $(m, i) = k$ produce $k$ disjoint $m/k$-cycles.}
+    \mnote{The reader should notice a pattern: integers $i$ such that $(m, i) = 1$ produce an $m$-cycle, while integers $i$ such that $(m, i) = k$ produce $k$ disjoint $m/k$-cycles.}
 \end{exercise}
 
 \begin{solenum}
@@ -160,13 +161,13 @@
         \sigma^5 & = (1\ 6\ 11\ 4\ 9\ 2\ 7\ 12\ 5\ 10\ 3\ 8) & \sigma^{11} & = (1\ 12\ 11\ 10\ 9\ 8\ 7\ 6\ 5\ 4\ 3\ 2) \\
         \sigma^6 & = (1\ 7)(2\ 8)(3\ 9)(4\ 10)(5\ 11)(6\ 12) & \sigma^{12} & = \id
     \end{align*}
-    Hence, the set of integers that produce a 12-cycle is the set $\{i + 12k \mid i \in \{1, 5, 7, 11\}, k \in \z\}$.
-    \item $\{i + 8k \mid i \in \{1, 3, 5, 7\}, k \in \z\}$.
-    \item $\{i + 14k \mid i \in \{1, 3, 5, 9, 11, 13\}, k \in \z\}$. \qh
+    Hence, the set of integers that produce a 12-cycle is the set $\set{i + 12k \mid i \in \{1, 5, 7, 11}, k \in \z\}$.
+    \item $\set{i + 8k \mid i \in \{1, 3, 5, 7}, k \in \z\}$.
+    \item $\set{i + 14k \mid i \in \{1, 3, 5, 9, 11, 13}, k \in \z\}$. \qh
 \end{solenum}
 
 \begin{exercise} [1.3.10]
-    Prove that if $\sigma$ is the $m$-cycle $(a_1\ a_2\ \dots\ a_m)$, then for all $i \in \{1,2,\dots,m\}$, $\sigma^i(a_k) = a_{k+i}$, where $k+i$ is replaced by its least residue mod $m$ when $k+i > m$. Deduce that $|\sigma| = m$.
+    Prove that if $\sigma$ is the $m$-cycle $(a_1\ a_2\ \dots\ a_m)$, then for all $i \in \set{1,2,\dots,m}$, $\sigma^i(a_k) = a_{k+i}$, where $k+i$ is replaced by its least residue mod $m$ when $k+i > m$. Deduce that $|\sigma| = m$.
 \end{exercise}
 
 \begin{sol}
@@ -174,12 +175,12 @@
     \[\sigma^{i + 1}(a_k) = \sigma(\sigma^i(a_k)) = \sigma(a_{k + i}) = a_{k + i + 1}.\]
     The result follows by induction.
     
-    To see that $|\sigma| = m$, note that $\sigma^m(a_k) = a_{k+m} = a_k$ for all $k \in \{1,2,\dots,m\}$, so that $\sigma^m = \id$. If $|\sigma| = i < m$, then $\sigma^i(a_1) = a_{1+i} = a_1$, which implies that $i \equiv 0 \bmod m$. Hence, $|\sigma| = m$.
+    To see that $|\sigma| = m$, note that $\sigma^m(a_k) = a_{k+m} = a_k$ for all $k \in \set{1,2,\dots,m}$, so that $\sigma^m = \id$. If $|\sigma| = i < m$, then $\sigma^i(a_1) = a_{1+i} = a_1$, which implies that $i \equiv 0 \bmod m$. Hence, $|\sigma| = m$.
 \end{sol}
 
-\begin{specialexercise}[1.3.11]
+\begin{spex}[1.3.11]
     Let $\sigma$ be the $m$-cycle $(1\ 2\ \dots\ m)$. Show that $\sigma^i$ is also an $m$-cycle if and only if $i$ is relatively prime to $m$.
-\end{specialexercise}
+\end{spex}
 
 \begin{solitem}
     \item [\rightimp] Suppose $(m, i) = k > 1$. If $i > m$, replace $i$ with $i \bmod m$ since $\sigma^i = \sigma^{i \bmod m}$. Then $i = k\ell$ for $\ell \in \zp$. It is clear that $(\sigma^i)^{m/k} = \sigma^{\ell m} = \id$, so that $|\sigma^i| \leq m/k < m$. Hence, $\sigma^i$ is not an $m$-cycle.
@@ -195,12 +196,13 @@
         \item If $\tau = (1\ 2)(3\ 4)(5\ 6)(7\ 8)(9\ 10)$, determine whether there is an $n$-cycle ($n \ge 10$) with $\tau = \sigma^k$ for some integer $k$.
         \item If $\tau = (1\ 2)(3\ 4\ 5)$, determine whether there is an $n$-cycle ($n \ge 5$) with $\tau = \sigma^k$ for some integer $k$.
     \end{subexercises}
+    \note{Part (a) can be done systematically once we have access to Lagrange's Theorem.}
 \end{exercise}
 
 \begin{solenum}
-    \item We first observe that for any $n$-cycle $\sigma$, then $\sigma^k$ sends any element $a_i$ to $a_{i + k}$, where $i + k$ is replaced by its least residue mod $n$ when $i + k > n$. In this specific problem, $\tau$ consists of 2-cycles, which means that $\sigma^k$ must send each element to itself after two applications. Then $2k \equiv 0 \bmod n$, but $k \not\equiv 0 \bmod n$ since $\sigma^k \neq 1$. It follows that $n \mid 2k$ but $n \nmid k$, so it must be that $n = 2k$. We see that $\sigma^k$ will be a product of $k$ 2-cycles. However, $\tau$ is a product of 5 2-cycles, so $k = 5$ and $n = 10$. Thus, there exists an $n$-cycle $\sigma$ such that $\sigma^5 = \tau$ when $n = 10$, and $\sigma = (1\ 6\ 2\ 7\ 3\ 8\ 4\ 9\ 5\ 10)$.
-    \item We first prove that $(ac, bc) = c(a, b)$ for $a, b, c \in \z$.
-    \begin{lemma}
+    \item Put $\sigma = (1\ 3\ 5\ 7\ 9\ 2\ 4\ 6\ 8\ 10)$. Then $\sigma^2 = \tau$, so there exists a 10-cycle $\sigma$ such that $\tau = \sigma^k$ for $k = 2$.
+    \item We first prove the following lemma:
+    \begin{lemma}{$(ac, bc) = c(a, b)$ for $a, b, c \in \z$.}
         Let $d = (a, b)$ and $d' = (ac, bc)$. Then there exist $s, t \in \z$ such that $d = as + bt$. Consider $cd = acs + bct$. Then $d' = (ac, bc)$ implies that $d' \mid cd$. Since $d \mid a$ and $d \mid b$, then $cd \mid ac$ and $cd \mid bc$, so that $cd \mid (ac, bc) = d'$. Then $d' = cd$ or $d' = c(a, b)$.
     \end{lemma}
     
@@ -237,11 +239,11 @@
     Let $\sigma \in S_n$ have cycle decomposition $\tau_1\tau_2 \ldots \tau_k$, where each $\tau_i$ is a cycle of length $m_i$. Then $\abs{\tau_i} = m_i$ by \exref{1.3.10}. Since the cycles are disjoint, they commute, so that $\sigma^t = \tau_1^t\tau_2^t \ldots \tau_k^t$. Then $\sigma^t = 1$ if and only if $\tau_i^t = 1$ for all $i$, which occurs if and only if $m_i \mid t$ for all $i$. Hence, the order of $\sigma$ is the least common multiple of the lengths of the cycles in its cycle decomposition.
 \end{sol}
 
-\begin{specialexercise}[1.3.16]
+\begin{spex}[1.3.16]
     Show that if $n \ge m$ then the number of $m$-cycles in $S_n$ is given by
     \[\frac{n(n-1)(n-2)\dots(n-m+1)}{m}.\]
     \hint{Count the number of ways of forming an $m$-cycle and divide by the number of representations of a particular $m$-cycle.}
-\end{specialexercise}
+\end{spex}
 
 \begin{sol}
     Note that in an $m$-cycle, there are $m$ integers to write. The first integer has $n$ choices, the second $n - 1$ choices. Continuing on, then the $m$-th integer has $n - m + 1$ choices. However, each choice of $m$ integers has $m$ equivalent representations (such as $(1\ 2\ 3\ 4)$ being equivalent to $(2\ 3\ 4\ 1)$ by shifting each integer to the left one place). Then take the product $n(n - 1)(n - 2) \ldots (n - m + 1)$ and divide by $m$.
@@ -265,7 +267,7 @@
 \end{sol}
 
 \begin{exercise}[1.3.19]
-    Find all numbers $n$ such that $S_7$ contains a number an element of order $n$.
+    Find all numbers $n$ such that $S_7$ contains an element of order $n$.
 \end{exercise}
 
 \begin{sol}
@@ -277,5 +279,11 @@
 \end{exercise}
 
 \begin{sol}
-    Recall that $S_3 = \{1, (1\ 2), (1\ 3), (2\ 3), (1\ 2\ 3), (1\ 3\ 2)\}$. Moreover, no element in $S_3$ has order 6 so that no element generates $S_3$. It must be that there are at least 2 generators. Put $\alpha = (1\ 2)$ and $\beta = (1\ 3)$. Then $\alpha^2 = \beta^2 = 1$. Then $|\alpha| = |\beta| = 2$, and $\alpha\beta = (1\ 3\ 2), \beta\alpha = (1\ 2\ 3)$, and $\alpha\beta\alpha = (2\ 3)$. Since $\alpha^2 = \beta^2 = 1$ is not enough to determine the order of $\alpha\beta$ (because $\alpha\beta \neq \beta\alpha$), then we must add $(\alpha\beta)^2 = 1$. Then we have the presentation $S_3 = \gen{\alpha, \beta \mid \alpha^2 = \beta^2 = (\alpha\beta)^3 = 1}$.
+    Recall that $S_3 = \set{1, (1\ 2), (1\ 3), (2\ 3), (1\ 2\ 3), (1\ 3\ 2)}$. Observe that $S_3$ contains no element of order 6, so it cannot be generated by a single element. We may deduce that $S_3$ must be generated by at least two elements. Put $\alpha = (1\ 2)$ and $\beta = (1\ 3)$. Then $\alpha^2 = \beta^2 = 1$ so that $|\alpha| = |\beta| = 2$. By direct calculation, we have $\alpha\beta = (1\ 3\ 2), \beta\alpha = (1\ 2\ 3)$, and $(\alpha\beta\alpha) = (2\ 3)$.
+
+    Let $S = \gen{\alpha, \beta \mid \alpha^2 = \beta^2 = (\alpha\beta)^3 = 1}$. We claim that $S = S_3$. In the previous exercise, we saw that $|S| \geq 6$ since we produced 6 distinct elements. To see that there are no more, observe by the relations that elements of $S$ cannot contain consecutive powers of $\alpha$ or $\beta$ greater than 1. Then elements of $S$ are of the form $1, \alpha, \beta$, or a string of $\alpha\beta$'s. From $(\alpha\beta)^3 = 1$, we have
+    \[(\alpha\beta\alpha)(\beta\alpha\beta) = 1 \implies \alpha\beta\alpha = (\beta\alpha\beta)\inv = \beta\inv\alpha\inv\beta\inv = \beta\alpha\beta,\]
+    where $\beta\inv = \beta$ and $\alpha\inv = \alpha$ since $|\alpha| = |\beta| = 2$. Since $\alpha\beta$ is already a distinct element, then we check
+    \[(\alpha\beta\alpha)\beta = (\beta\alpha\beta)\beta = \beta\alpha,\]
+    which is an element already produced. The last case considers strings that begin with $\beta$, which is $\beta\alpha\beta = \alpha\beta\alpha$, which is also already produced. Hence, $|S| = 6$, so that $S = S_3$.
 \end{sol}
