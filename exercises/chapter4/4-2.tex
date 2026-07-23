@@ -1,7 +1,7 @@
 \subsection{Groups Acting on Themselves by Left Multiplication---Cayley's Theorem}
 
-\begin{exercise}
-	[4.2.1] Let $G$ be $\set{1,a,b,c}$, the Klein 4-group whose group table is written out in Section 2.5.
+\begin{exercise}[4.2.1]
+	Let $G$ be $\set{1,a,b,c}$, the Klein 4-group whose group table is written out in Section 2.5.
 	\begin{subexercises}
 		\item Label $1,a,b,c$ with the integers $1,2,4,3$, respectively, and prove that under the left regular representation of $G$ into $S_4$ the non-identity elements are mapped as follows:
 		\[
@@ -16,7 +16,7 @@
 	\item Again, we have $a \cdot 1 = a$ so that $\sigma_a(1) = 4$. Similarly, $\sigma_a(4) = 1$. We also have $a \cdot b = c$ so that $\sigma_a(2) = 3$, and $\sigma_a(3) = 2$, and we have $a \mapsto (1\ 4)(2\ 3)$. For $b$, we have $b \mapsto (1\ 2)(3\ 4)$, and for $c$, we have $c \mapsto (1\ 3)(2\ 4)$. The image of $G$ in $S_4$ under this labelling is $\set{1, (1\ 4)(2\ 3), (1\ 2)(3\ 4), (1\ 3)(2\ 4)}$, which is the same subgroup as in part (a).
 \end{solenum}
 
-\begin{exercise}
+\begin{exercise}[4.2.2]
 	List the elements of $S_3$ as $1, (1\ 2), (2\ 3), (1\ 3), (1\ 2\ 3), (1\ 3\ 2)$ and label these with the integers $1,2,3,4,5,6$ respectively. Exhibit the image of each element of $S_3$ under the left regular representation of $S_3$ into $S_6$.
 \end{exercise}
 
@@ -45,8 +45,8 @@
 	\end{align*}
 \end{sol}
 
-\begin{exercise}
-	[4.2.3] Let $r$ and $s$ be the usual generators for the dihedral group of order 8.
+\begin{exercise}[4.2.3]
+	Let $r$ and $s$ be the usual generators for the dihedral group of order 8.
 	\begin{subexercises}
 		\item List the elements of $D_8$ as $1, r, r^2, r^3, s, sr, sr^2, sr^3$ and label these with the integers $1,2,\dots,8$ respectively. Exhibit the image of each element of $D_8$ under the left regular representation of $D_8$ into $S_8$.
 		\item Relabel this same list of elements of $D_8$ with the integers $1,3,5,7,2,4,6,8$ respectively and recompute the image of each element of $D_8$ under the left regular representation with respect to this new labelling. Show that the two subgroups of $S_8$ obtained in parts (a) and (b) are different.
@@ -71,8 +71,8 @@
 	Clearly, the two subgroups of $S_8$ obtained in parts (a) and (b) are different since, for example, the image of $r$ in part (a) is a product of two 4-cycles while the image of $r$ in part (b) is a product of two 4-cycles but with different elements.
 \end{solenum}
 
-\begin{exercise}
-	[4.2.4] Use the left regular representation of $Q_8$ to produce two elements of $S_8$ which generate a subgroup of $S_8$ isomorphic to the quaternion group $Q_8$.
+\begin{exercise}[4.2.4]
+	Use the left regular representation of $Q_8$ to produce two elements of $S_8$ which generate a subgroup of $S_8$ isomorphic to the quaternion group $Q_8$.
 \end{exercise}
 
 \begin{sol}
@@ -84,7 +84,7 @@
 	Hence $Q_8 \cong \gen{\sigma_i, \sigma_j} \leq S_8$.
 \end{sol}
 
-\begin{exercise} [4.2.5]
+\begin{exercise}[4.2.5]
 	Let $r$ and $s$ be the usual generators for the dihedral group of order 8 and let $H = \langle s \rangle$. List the left cosets of $H$ in $D_8$ as $1H, rH, r^2H$ and $r^3H$.
 	\begin{subexercises}
 		\item Label these cosets with the integers $1,2,3,4$, respectively. Exhibit the image of each element of $D_8$ under the representation $\pi_H$ of $D_8$ into $S_4$ obtained from the action of $D_8$ by left multiplication on the set of 4 left cosets of $H$ in $D_8$. Deduce that this representation is faithful (i.e., the elements of $S_4$ obtained form a subgroup isomorphic to $D_8$).
@@ -117,7 +117,7 @@
 	so that both subgroups contain the other generator of the other subgroup. Therefore, $\wh H = \wh K$.
 \end{solenum}
 
-\begin{exercise}
+\begin{exercise}[4.2.6]
 	Let $r$ and $s$ be the usual generators for the dihedral group of order 8 and let $N = \langle r^2 \rangle$. List the left cosets of $N$ in $D_8$ as $1N, rN, sN$ and $srN$. Label these cosets with the integers $1,2,3,4$ respectively. Exhibit the image of each element of $D_8$ under the representation $\pi_N$ of $D_8$ into $S_4$ obtained from the action of $D_8$ by left multiplication on the set of 4 left cosets of $N$ in $D_8$. Deduce that this representation is not faithful and prove that $\pi_N(D_8)$ is isomorphic to the Klein 4-group.
 \end{exercise}
 
@@ -132,7 +132,7 @@
 	Since $\ker(\pi_N)$ contains the non-trivial element $r^2$, then the representation is not faithful. Moreover, we have $\pi_N(D_8) = \set{1, (1\ 2)(3\ 4), (1\ 3)(2\ 4), (1\ 4)(2\ 3)}$, which is isomorphic to the Klein 4-group.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}[4.2.7]
 	Let $Q_8$ be the quaternion group of order 8.
 	\begin{subexercises}
 		\item Prove that $Q_8$ is isomorphic to a subgroup of $S_8$.
@@ -145,7 +145,7 @@
 	\item Let $Q_8$ act on a set $A$ of order $n \leq 7$. For any $a \in A$, consider the orbit $\oo_a$ of $a$ under this action. By Proposition 4.2, we have $|\oo_a| = |Q_8 : (Q_8)_a|$, where $(Q_8)_a$ is the stabilizer of $a$ in $Q_8$. Since $|\oo_a|$ divides $|A| \leq 7$, then $|\oo_a|$ must be 1, 2, 4, or 7. However, since $Q_8$ has no subgroup of index 7, then $|\oo_a|$ cannot be 7. If $|\oo_a| = 4$, then $(Q_8)_a$ has order 2, but the only subgroup of order 2 in $Q_8$ is $\langle -1 \rangle$. If $|\oo_a| = 2$, then $(Q_8)_a$ has order 4, and the only subgroups of order 4 in $Q_8$ are $\langle i \rangle$, $\langle j \rangle$, and $\langle k \rangle$, all of which contain $\langle -1 \rangle$. If $|\oo_a| = 1$, then $(Q_8)_a = Q_8$, which also contains $\langle -1 \rangle$. Therefore, in all cases, the stabilizer $(Q_8)_a$ contains $\langle -1 \rangle$. Since this holds for all $a \in A$, then $\langle -1 \rangle$ is contained in the kernel of the action. The action is not faithful, hence $Q_8$ cannot be isomorphic to a subgroup of $S_n$ for any $n \leq 7$.
 \end{solenum}
 
-\begin{exercise}
+\begin{exercise}[4.2.8]
 	Prove that if $H$ has finite index $n$ then there is a normal subgroup $K$ of $G$ with $K \le H$ and $|G : K| \le n!$.
 \end{exercise}
 
@@ -153,7 +153,7 @@
 	Let $G$ act by left multiplication on the set of left cosets of $H$ in $G$. Then we have the homomorphism $\phi : G \to S_n$, which is the permutation representation of $G$ on $G/H$. Let $K = \ker(\phi) \subseteq H$, since $g \in K$ if and only if $gH = H$. By the First Isomorphism Theorem, we have $G/K \cong \phi(G) \leq S_n$, so that $|G : K| = |G/K| = |\phi(G)|$ divides $n!$. Therefore, $|G : K| \leq n!$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}[4.2.9]
 	Prove that if $p$ is a prime and $G$ is a group of order $p^\alpha$ for some $\alpha \in \z^+$, then every subgroup of index $p$ is normal in $G$. Deduce that every group of order $p^2$ has a normal subgroup of order $p$.
 \end{exercise}
 
@@ -163,7 +163,7 @@
 	To deduce that every group of order $p^2$ has a normal subgroup of order $p$, let $G$ be a group of order $p^2$. By Cauchy's Theorem, there exists an element of order $p$ in $G$, which generates a subgroup $H$ of order $p$. Since the index of $H$ in $G$ is $p$, by the previous result, $H$ is normal in $G$.
 \end{sol}
 
-\begin{exercise} [4.2.10]
+\begin{exercise}[4.2.10]
 	Prove that every non-Abelian group of order 6 has a nonnormal subgroup of order 2. Use this to classify groups of order 6. [Produce an injective homomorphism into $S_3$.]
 \end{exercise}
 
@@ -173,8 +173,8 @@
 	To classify groups of order 6, let $G$ be a group of order 6. If $G$ is Abelian, then $G \cong \z_6 \cong \z_2 \times \z_3$. If $G$ is non-Abelian, then by the above result, $G$ has a nonnormal subgroup $H$ of order 2. Let $K$ be the subgroup of order 3. Then $G = HK$. Let $G$ act by left multiplication on the left cosets of $K$ in $G$. This action gives a homomorphism $\phi : G \to S_3$. Since $H$ is not normal in $G$, then the action is non-trivial, so $\phi$ is injective. Therefore, $G \cong \phi(G) \leq S_3$. Since $|G| = 6 = |S_3|$, then $\phi(G) = S_3$, and hence $G \cong S_3$.
 \end{sol}
 
-\begin{exercise}
-	[4.2.11] Let $G$ be a finite group and let $\pi : G \to S_G$ be the left regular representation. Prove that if $x$ is an element of $G$ of order $n$ and $|G| = mn$, then $\pi(x)$ is a product of $m$ $n$-cycles. Deduce that $\pi(x)$ is an odd permutation if and only if $|x|$ is even and $\abs G/\abs x$ is odd.
+\begin{exercise}[4.2.11]
+	Let $G$ be a finite group and let $\pi : G \to S_G$ be the left regular representation. Prove that if $x$ is an element of $G$ of order $n$ and $|G| = mn$, then $\pi(x)$ is a product of $m$ $n$-cycles. Deduce that $\pi(x)$ is an odd permutation if and only if $|x|$ is even and $\abs G/\abs x$ is odd.
 \end{exercise}
 
 \begin{sol}
@@ -183,15 +183,15 @@
 	To determine when $\pi(x)$ is an odd permutation, we note that an $n$-cycle is an odd permutation if and only if $n$ is even. Since $\pi(x)$ is a product of $m$ $n$-cycles, the parity of $\pi(x)$ is determined by the parity of $m$ and $n$. Specifically, $\pi(x)$ is odd if and only if $n$ is even and $m$ is odd. Thus, $\pi(x)$ is an odd permutation if and only if $|x|$ is even and $|G|/|x|$ is odd.
 \end{sol}
 
-\begin{exercise}
-	[4.2.12] Let $G$ and $\pi$ be as in the preceding exercise. Prove that if $\pi(G)$ contains an odd permutation then $G$ has a subgroup of index 2. [Use \exref{3.3.3}.]
+\begin{exercise}[4.2.12]
+	Let $G$ and $\pi$ be as in the preceding exercise. Prove that if $\pi(G)$ contains an odd permutation then $G$ has a subgroup of index 2. [Use \exref{3.3.3}.]
 \end{exercise}
 
 \begin{sol}
 	Recall the $\ep$ homomorphism from Proposition 3.23. Moreover, $\pi$ is a homomorphism from $G$ to $S_G$. Consider the composition $\ep \circ \pi : G \to \set{\pm 1}$. Since $\pi(G)$ contains an odd permutation, then $\ep \circ \pi$ is surjective. By the First Isomorphism Theorem, we have $G/\ker(\ep \circ \pi) \cong \set{\pm 1}$, so that $|\ker(\ep \circ \pi)| = |G|/2$. Therefore, $\ker(\ep \circ \pi)$ is a subgroup of $G$ of index 2.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}[4.2.13]
 	Prove that if $|G| = 2k$ where $k$ is odd then $G$ has a subgroup of index 2. [Use Cauchy's Theorem to produce an element of order 2 and then use the preceding two exercises.]
 \end{exercise}
 
@@ -199,7 +199,7 @@
 	By Cauchy's Theorem, there exists $x \in G$ such that $\abs x = 2$. Then $\pi(x)$ is of order 2 and is hence a product of disjoint transpositions. Since $|G| = 2k$ with $k$ odd, then use $m = k$ and $n = 2$ in \exref{4.2.11} along with even $\abs x$ to conclude that $\pi(x)$ is an odd permutation. By the \exref{4.2.12}, $G$ has a subgroup of index 2.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}[4.2.14]
 	Let $G$ be a finite group of composite order $n$ with the property that $G$ has a subgroup of order $k$ for each positive integer $k$ dividing $n$. Prove that $G$ is not simple.
 \end{exercise}
 

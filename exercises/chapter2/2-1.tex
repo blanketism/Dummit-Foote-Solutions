@@ -160,7 +160,7 @@
     for all $n \in \zp$. Hence, $|AB| = \infty$, so $AB \notin \tor(G)$.
 \end{sol}
 
-\begin{exercise} [2.1.7]
+\begin{exercise}[2.1.7]
     Fix some $n \in \z$ with $n>1$. Find the \defref{torsion subgroup} of $\z \times (\z/n\z)$. Show that the set of elements of infinite order together with the identity is \emph{not} a subgroup of this direct product.
 \end{exercise}
 
@@ -172,7 +172,7 @@
     Consider $H = \set{(x, \bar y) \in \z \times \intmod \mid x \neq 0} \cup \set{(0, \bar 0)}$. Then $H$ contains the identity and all elements of infinite order. However, $(1, \bar 1), (-1, \bar 0) \in H$, but $(0, \bar 1) = (1, \bar 1) + (-1, \bar 0) \notin H$, since it has finite order. Hence, $H$ is not a subgroup of $\z \times \intmod$.
 \end{sol}
 
-\begin{exercise} [2.1.8]
+\begin{exercise}[2.1.8]
     Let $H$ and $K$ be subgroups of $G$. Prove that $H \cup K$ is a subgroup if and only if either $H \subseteq K$ or $K \subseteq H$.
 \end{exercise}
 
@@ -199,7 +199,7 @@
     so that $AB\inv \in \speclin_n(F)$. It follows that $\speclin_n(F) \leq \gl_n(F)$.
 \end{sol}
 
-\begin{exercise} [2.1.10]
+\begin{exercise}[2.1.10]
     \begin{subexercises}
         \item Prove that if $H$ and $K$ are subgroups of $G$ then so is their intersection $H \cap K$.
         \item Prove that the intersection of an arbitrary nonempty collection of subgroups of $G$ is again a subgroup of $G$ (do not assume the collection is countable).
@@ -214,7 +214,7 @@
     Since $1 \in H_i$ for all $i \in I$, then $1 \in H$. Suppose $a, b \in H$. Then $a, b \in H_i$ for all $i \in I$. Since each $H_i$ is a subgroup of $G$, then $ab\inv \in H_i$ for all $i \in I$. Hence, $ab\inv \in H$, and $H \leq G$.
 \end{sol}
 
-\begin{exercise} [2.1.11]
+\begin{exercise}[2.1.11]
     Let $A$ and $B$ be groups. Prove that the following sets are subgroups of the direct product $A \times B$:
     \begin{subexercises}
         \item $\set{ (a, 1) \mid a \in A }$
@@ -244,7 +244,7 @@
     \end{subexercises}
 \end{sol}
 
-\begin{exercise} [2.1.12]
+\begin{exercise}[2.1.12]
     Let $A$ be an Abelian group and fix some $n \in \z$. Prove that the following sets are subgroups of $A$.
     \begin{subexercises}
         \item $\set{ a^n \mid a \in A }$.
@@ -268,7 +268,7 @@
     \end{subexercises}
 \end{sol}
 
-\begin{exercise} [2.1.13]
+\begin{exercise}[2.1.13]
     Let $H$ be a subgroup of the additive group of rational numbers with the property that $1/x \in H$ for every nonzero element $x$ of $H$. Prove that $H = 0$ or $\q$.
 \end{exercise}
 
@@ -278,7 +278,7 @@
     Since $a/b \in H$, then $b(a/b) = a \in H$ so that $1/a \in H$. Then $a(1/a) = 1 \in H$. From this, we can see that $\z \subseteq H$. Now let $c/d \in \q$ for some $c, d \in \z$ with $d \neq 0$. Since $1 \in H$, then $d(1) = d \in H$ so that $1/d \in H$. Then $c(1/d) = c/d \in H$. Since $c/d$ was arbitrary, then $\q \subseteq H$. Hence, $H = \q$.
 \end{sol}
 
-\begin{exercise} [2.1.14]
+\begin{exercise}[2.1.14]
     Show that $\set{ x \in D_{2n} \mid x^2 = 1 }$ is \emph{not} a subgroup of $D_{2n}$ (here $n \ge 3$).
 \end{exercise}
 
@@ -286,7 +286,7 @@
     Let $H$ be the set in question. All reflections are in $H$. In particular, $s$ and $sr$ are in $H$, but $r = s(sr) \notin H$ since $\abs r = n > 2$.
 \end{sol}
 
-\begin{exercise} [2.1.15]
+\begin{exercise}[2.1.15]
     Let $H_1 \subseteq H_2 \subseteq \cdots$ be an ascending chain of subgroups of $G$. Prove that
     \[
     	\bigcup_{i = 1}^\infty H_i
@@ -298,8 +298,7 @@
     Let $H$ be the union in question. From $H_i \leq G$ for each $i \in \zp$, then $1 \in H_i$ so that $1 \in H$. Let $a, b \in H$ so that there exists $m, n \in \zp$ where $a \in H_m$ and $b \in H_n$. Put $k = \max(m, n)$. It follows that $H_m \subseteq H_k$ and $H_n \subseteq H_k$, so that $a, b \in H_k$. Since $H_k \leq G$, then $ab\inv \in H_k$, hence $ab\inv \in H$. Therefore, $H \leq G$.
 \end{sol}
 
-
-\begin{exercise} [2.1.16]
+\begin{exercise}[2.1.16]
     Let $n \in \z^+$ and let $F$ be a field. Prove that the set $\set{ (a_{ij}) \in \gl_n(F) \mid a_{ij} = 0 \text{ for all } i > j }$ is a subgroup of $\gl_n(F)$ (called the group of upper triangular matrices).
 \end{exercise}
 
@@ -318,7 +317,7 @@
     Let $A \in \ut_n(F)$. Since $A \in \gl_n(F)$, we know that the entries on the main diagonal are all non-zero, for otherwise $A$ is not invertible. By back-substitution, we may solve the matrix equation $AX = I_n$ for $X$, and the solution will also be upper triangular. Hence, $A\inv \in \ut_n(F)$.
 \end{sol}
 
-\begin{exercise} [2.1.17]
+\begin{exercise}[2.1.17]
     Let $n \in \z^+$ and let $F$ be a field. Prove that the set $\set{ (a_{ij}) \in \gl_n(F) \mid a_{ij} = 0 \text{ for all } i > j,\ \text{and } a_{ii} = 1 \text{ for all } i }$ is a subgroup of $\gl_n(F)$.
 \end{exercise}
 

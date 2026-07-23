@@ -1,6 +1,6 @@
 \subsection{Automorphisms}
 
-\begin{spex}
+\begin{spex}[4.4.1]
 	Let $G$ be a group. If $\sigma \in \aut(G)$ and $\varphi_g$ is conjugation by $g$, prove that $\sigma \varphi_g \sigma^{-1} = \varphi_{\sigma(g)}$. Deduce that $\inn(G) \trianglelefteq \aut(G)$. (The group $\aut(G)/\inn(G)$ is called the \emph{outer automorphism group} of $G$.)
 \end{spex}
 
@@ -12,7 +12,7 @@
 	Then $\sigma\phi_g\sigma\inv = \phi_{\sigma(g)}$. Therefore, for any $\phi_g \in \inn(G)$ and any $\sigma \in \aut(G)$, we have $\sigma\phi_g\sigma\inv \in \inn(G)$, so that $\inn(G) \trianglelefteq \aut(G)$.
 \end{sol}
 
-\begin{spex}
+\begin{spex}[4.4.2]
 	Prove that if $G$ is an Abelian group of order $pq$, where $p$ and $q$ are distinct primes, then $G$ is cyclic. (Use Cauchy's Theorem to produce elements of order $p$ and $q$ and consider the order of their product.)
 \end{spex}
 
@@ -20,15 +20,15 @@
 	By Cauchy's Theorem, there are elements $g, h \in G$ such that $\abs g = p$ and $\abs h = q$. Since $G$ is Abelian, we have $\abs{gh} = \lcm(\abs g, \abs h) = \lcm(p, q) = pq$. Therefore, $G = \gen{gh}$ is cyclic.
 \end{sol}
 
-\begin{exercise}
-	[4.4.3] Prove that under any automorphism of $D_8$, $r$ has at most $2$ possible images and $s$ has at most $4$ possible images (where $r$ and $s$ are the usual generators). Deduce that $|\aut(D_8)| \le 8$.
+\begin{exercise}[4.4.3]
+	Prove that under any automorphism of $D_8$, $r$ has at most $2$ possible images and $s$ has at most $4$ possible images (where $r$ and $s$ are the usual generators). Deduce that $|\aut(D_8)| \le 8$.
 \end{exercise}
 
 \begin{sol}
 	Since $\abs r = 4$, any automorphism $\sigma$ of $D_8$ must send $r$ to an element of order 4. The only elements of order 4 in $D_8$ are $r$ and $r^3$, so $r$ has at most 2 possible images under $\sigma$. Moreover, $\abs s = 2$, so $\sigma(s)$ must be an element of order 2. The elements of order 2 in $D_8$ are $s, sr, sr^2,$ and $sr^3$, so $s$ has at most 4 possible images under $\sigma$. Therefore, there are at most $2 \cdot 4 = 8$ possible automorphisms of $D_8$, so that $|\aut(D_8)| \leq 8$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}[4.4.4]
 	Use arguments similar to those in the preceding exercise to show that $|\aut(Q_8)| \le 24$.
 \end{exercise}
 
@@ -36,7 +36,7 @@
 	Note that $\abs i = \abs j = \abs k = 4$, so any automorphism $\sigma$ of $Q_8$ must send $i$ to an element of order 4. The only elements of order 4 in $Q_8$ are $i, j, k, i^{-1}, j^{-1}, k^{-1}$, so $i$ has at most 6 possible images under $\sigma$. Moreover, since $ij = k$, we have $\sigma(i)\sigma(j) = \sigma(k)$. Therefore, once we choose the image of $i$, there are 4 possible choices for the image of $j$ (since it cannot be the inverse of the image of $i$). Hence, there are at most $6 \cdot 4 = 24$ possible automorphisms of $Q_8$, so that $|\aut(Q_8)| \leq 24$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}[4.4.5]
 	Use the fact that $D_8 \trianglelefteq D_{16}$ to prove that $\aut(D_8) \cong D_8$.
 \end{exercise}
 
@@ -46,7 +46,7 @@
 	We now have that $N_{D_{16}}(H)/C_{D_{16}}(H) \cong D_{16}/Z(D_{16}) \cong D_8$. Now recall that $D_{16}/Z(D_{16})$ is still isomorphic to a subgroup of $\aut(H)$ when acted on by conjugation. By \exref{4.4.3}, we know that $|\aut(D_8)| \leq 8$, so that $\aut(H) \cong D_8$. Therefore, $\aut(D_8) \cong D_8$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}[4.4.6]
 	Prove that characteristic subgroups are normal. Give an example of a normal subgroup that is not characteristic.
 \end{exercise}
 
@@ -56,20 +56,20 @@
 	Consider the Abelian group $G = \intmod[2] \times \intmod[2]$. Then every subgroup of $G$ is normal since $G$ is Abelian. However, the subgroup $H = \set{(0,0), (1,0)}$ is not characteristic in $G$ since the automorphism $\sigma : G \to G$ defined by $\sigma((a,b)) = (b,a)$ sends $H$ to the distinct subgroup $\set{(0,0), (0,1)}$. Therefore, $H$ is a normal subgroup of $G$ that is not characteristic.
 \end{sol}
 
-\begin{exercise}
-	[4.4.7] If $H$ is the unique subgroup of a given order in a group $G$, prove that $H$ is characteristic in $G$.
+\begin{exercise}[4.4.7] 
+	If $H$ is the unique subgroup of a given order in a group $G$, prove that $H$ is characteristic in $G$.
 \end{exercise}
 
 \begin{sol}
 	For any $\sigma \in \aut(G)$, the subgroup $\sigma(H)$ has the same order as $H$. Since $H$ is the unique subgroup of that order in $G$, we must have $\sigma(H) = H$. Therefore, $H$ is characteristic in $G$.
 \end{sol}
 
-\begin{spex}
-	[4.4.8] Let $G$ be a group with subgroups $H$ and $K$ with $H \le K$.
+\begin{spex}[4.4.8]
+	Let $G$ be a group with subgroups $H$ and $K$ with $H \le K$.
 	\begin{subexercises}
-	\item Prove that if $H$ is characteristic in $K$ and $K$ is normal in $G$, then $H$ is normal in $G$.
-	\item Prove that if $H$ is characteristic in $K$ and $K$ is characteristic in $G$, then $H$ is characteristic in $G$. Use this to prove that the Klein $4$-group $V_4$ is characteristic in $S_4$.
-	\item Give an example to show that if $H$ is normal in $K$ and $K$ is characteristic in $G$, then $H$ need not be normal in $G$.
+		\item Prove that if $H$ is characteristic in $K$ and $K$ is normal in $G$, then $H$ is normal in $G$.
+		\item Prove that if $H$ is characteristic in $K$ and $K$ is characteristic in $G$, then $H$ is characteristic in $G$. Use this to prove that the Klein $4$-group $V_4$ is characteristic in $S_4$.
+		\item Give an example to show that if $H$ is normal in $K$ and $K$ is characteristic in $G$, then $H$ need not be normal in $G$.
 	\end{subexercises}
 \end{spex}
 
@@ -85,7 +85,7 @@
 	so that $H$ is not normal in $A_4$.
 \end{solenum}
 
-\begin{exercise}
+\begin{exercise}[4.4.9]
 	If $r,s$ are the usual generators for the dihedral group $D_{2n}$, use the preceding two exercises to deduce that every subgroup of $\langle r\rangle$ is normal in $D_{2n}$.
 \end{exercise}
 
@@ -93,7 +93,7 @@
 	By \exref{3.1.34}, we know $\gen r$ is normal in $D_{2n}$. Moreover, every subgroup of a cyclic group is characteristic, so every subgroup of $\gen r$ is characteristic in $\gen r$. Since $\gen r \nsub D_{2n}$, then by \exref{4.4.8}, every subgroup of $\gen r$ is normal in $D_{2n}$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}[4.4.10]
 	Let $G$ be a group, let $A$ be an Abelian normal subgroup of $G$, and write $\overline{G}=G/A$. Show that $\overline{G}$ acts (on the left) by conjugation on $A$ by $\bar g \cdot a = gag^{-1}$, where $g$ is any representative of the coset $\bar g$ (in particular, show that this action is well-defined). Give an explicit example to show that this action is not well-defined if $A$ is non-Abelian.
 \end{exercise}
 
@@ -107,7 +107,7 @@
 	Consider $G = S_3$ and $A = S_3$ itself. Then $\bar 1 = \bar{(1\ 2)}$ in $\bar G$. However, for $a = (1\ 3)$, we have $\bar 1 \cdot a = a = (1\ 3)$ but, but $\bar{(1\ 2)} \cdot a = (1\ 2)(1\ 3)(1\ 2) = (2\ 3) \neq a$. Therefore, the action is not well-defined if $A$ is non-Abelian.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}[4.4.11]
 	If $p$ is a prime and $P$ is a subgroup of $S_p$ of order $p$, prove that $N_{S_p}(P)/C_{S_p}(P) \cong \aut(P)$. (Use \exref{4.3.34}).
 \end{exercise}
 
@@ -127,7 +127,7 @@
 	Hence, $\im\phi = \aut(P)$ so that $N_{S_p}(P)/C_{S_p}(P) \cong \aut(P)$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}[4.4.12]
 	Let $G$ be a group of order $3825$. Prove that if $H$ is a normal subgroup of order $17$ in $G$ then $H \le Z(G)$.
 \end{exercise}
 
@@ -143,7 +143,7 @@
 	Hence, $|G/C_G(H)|$ divides $|\aut(H)| = 16$. However, $|G| = 3825$ is relatively prime to 16, so that $|G/C_G(H)| = 1$. Therefore, $G = C_G(H)$, so that $H \leq Z(G)$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}[4.4.13]
 	Let $G$ be a group of order $203$. Prove that if $H$ is a normal subgroup of order $7$ in $G$ then $H \le Z(G)$. Deduce that $G$ is Abelian in this case.
 \end{exercise}
 
@@ -151,7 +151,7 @@
 	Note that $203 = 7 \cdot 29$. The proof of showing that $H \leq Z(G)$ is similar to the previous exercise. To see that $G$ is Abelian, consider the quotient group $G/H$. Since $|G/H| = 29$ is prime, then $G/H$ is cyclic. By \exref{3.1.36}, we have that $G$ is Abelian.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}[4.4.14]
 	Let $G$ be a group of order $1575$. Prove that if $H$ is a normal subgroup of order $9$ in $G$ then $H \le Z(G)$.
 \end{exercise}
 
@@ -159,7 +159,7 @@
 	This exercise is similar to the previous two. Following the proofs, we will find that $|G/C_G(H)|$ divides $|\aut(H)| = 6$ or 48. However, $1575 = 3^2 \cdot 5^2 \cdot 7$ results in $(|G|, |\aut(H)|) = 1$ or 3. If the latter is true, then $|C_G(H)| = 525$. However, this is impossible since $H \leq C_G(H)$ and $|H| = 9$ does not divide $525$. Therefore, we must have $|G/C_G(H)| = 1$, so that $G = C_G(H)$ and hence $H \leq Z(G)$.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}[4.4.15]
 	Prove that each of the following (multiplicative) groups is cyclic: $(\mathbb Z/5\mathbb Z)^\times$, $(\mathbb Z/9\mathbb Z)^\times$, and $(\mathbb Z/18\mathbb Z)^\times$.
 \end{exercise}
 
@@ -169,7 +169,7 @@
 	Observe that $|\units[9]| = |\units[18]| = 6$. By \exref{4.2.10}, groups of order 6 are isomorphic to either $Z_6$ or $S_3$. However, both groups are Abelian, so that $\units[9]$ and $\units[18]$ must be isomorphic to $Z_6$. Therefore, both groups are cyclic.
 \end{sol}
 
-\begin{spex}
+\begin{spex}[4.4.16]
 	Prove that $(\mathbb Z/24\mathbb Z)^\times$ is an elementary Abelian group of order $8$. (We shall see later that $(\mathbb Z/n\mathbb Z)^\times$ is an elementary Abelian group if and only if $n \mid 24$.)
 \end{spex}
 
@@ -191,37 +191,35 @@
 	Since one of $k$ or $k + 1$ is even, then $4k(k + 1)$ is divisible by 8, so that $x^2 \equiv 1 \bmod 8$. By the lemma above, we have $x^2 \equiv 1 \bmod 24$. Therefore, every element of $\units[24]$ has order dividing 2, so that $\units[24]$ is an elementary Abelian group.
 \end{sol}
 
-\begin{exercise}
+\begin{exercise}[4.4.17]
 	Let $G=\langle x\rangle$ be a cyclic group of order $n$. For $n=2,3,4,5,6$ write out the elements of $\aut(G)$ explicitly (by Proposition 16 above we know $\aut(G)\cong(\mathbb Z/n\mathbb Z)^\times$, so for each element $a\in(\mathbb Z/n\mathbb Z)^\times$, write out explicitly what the automorphism $\psi_a$ does to the elements $\set{1,x,x^2,\ldots,x^{n-1}}$ of $G$).
 \end{exercise}
 
-\begin{sol} \leavevmode
-	\begin{itemize}
-		\item $n = 2$: $\units[2] = \set{\bar 1}$. Then $\psi_1 : x^k \mapsto x^{1 \cdot k} = x^k$ for $k = 0, 1$. Therefore, $\aut(G) = \set{\id}$.
-		\item $n = 3$: $\units[3] = \set{\bar 1, \bar 2}$. Then
-		\[
-			\psi_1 : x^k \mapsto x^{1 \cdot k} = x^k, \quad \psi_2 : x^k \mapsto x^{2 \cdot k}
-		\]
-		for $k = 0, 1, 2$. Therefore, $\aut(G) = \set{\psi_1, \psi_2}$.
-		\item $n = 4$: $\units[4] = \set{\bar 1, \bar 3}$. Then
-		\[
-			\psi_1 : x^k \mapsto x^{1 \cdot k} = x^k, \quad \psi_3 : x^k \mapsto x^{3 \cdot k}
-		\]
-		for $k = 0, 1, 2, 3$. Therefore, $\aut(G) = \set{\psi_1, \psi_3}$.
-		\item $n = 5$: $\units[5] = \set{\bar 1, \bar 2, \bar 3, \bar 4}$. Then
-		\[
-			\psi_1 : x^k \mapsto x^{1 \cdot k}, \quad \psi_2 : x^k \mapsto x^{2 \cdot k}, \quad \psi_3 : x^k \mapsto x^{3 \cdot k}, \quad \psi_4 : x^k \mapsto x^{4 \cdot k}
-		\]
-		for $k = 0, 1, 2, 3, 4$. Therefore, $\aut(G) = \set{\psi_1, \psi_2, \psi_3, \psi_4}$.
-		\item $n = 6$: $\units[6] = \set{\bar 1, \bar 5}$. Then
-		\[
-			\psi_1 : x^k \mapsto x^{1 \cdot k} = x^k, \quad \psi_5 : x^k \mapsto x^{5 \cdot k}
-		\]
-		for $k = 0, 1, 2, 3, 4, 5$. Therefore, $\aut(G) = \set{\psi_1, \psi_5}$. \qh
-	\end{itemize}
-\end{sol}
+\begin{solitem}
+	\item $n = 2$: $\units[2] = \set{\bar 1}$. Then $\psi_1 : x^k \mapsto x^{1 \cdot k} = x^k$ for $k = 0, 1$. Therefore, $\aut(G) = \set{\id}$.
+	\item $n = 3$: $\units[3] = \set{\bar 1, \bar 2}$. Then
+	\[
+		\psi_1 : x^k \mapsto x^{1 \cdot k} = x^k, \quad \psi_2 : x^k \mapsto x^{2 \cdot k}
+	\]
+	for $k = 0, 1, 2$. Therefore, $\aut(G) = \set{\psi_1, \psi_2}$.
+	\item $n = 4$: $\units[4] = \set{\bar 1, \bar 3}$. Then
+	\[
+		\psi_1 : x^k \mapsto x^{1 \cdot k} = x^k, \quad \psi_3 : x^k \mapsto x^{3 \cdot k}
+	\]
+	for $k = 0, 1, 2, 3$. Therefore, $\aut(G) = \set{\psi_1, \psi_3}$.
+	\item $n = 5$: $\units[5] = \set{\bar 1, \bar 2, \bar 3, \bar 4}$. Then
+	\[
+		\psi_1 : x^k \mapsto x^{1 \cdot k}, \quad \psi_2 : x^k \mapsto x^{2 \cdot k}, \quad \psi_3 : x^k \mapsto x^{3 \cdot k}, \quad \psi_4 : x^k \mapsto x^{4 \cdot k}
+	\]
+	for $k = 0, 1, 2, 3, 4$. Therefore, $\aut(G) = \set{\psi_1, \psi_2, \psi_3, \psi_4}$.
+	\item $n = 6$: $\units[6] = \set{\bar 1, \bar 5}$. Then
+	\[
+		\psi_1 : x^k \mapsto x^{1 \cdot k} = x^k, \quad \psi_5 : x^k \mapsto x^{5 \cdot k}
+	\]
+	for $k = 0, 1, 2, 3, 4, 5$. Therefore, $\aut(G) = \set{\psi_1, \psi_5}$.
+\end{solitem}
 
-\begin{spex}
+\begin{spex}[4.4.18]
 	This exercise shows that for $n\neq 6$ every automorphism of $S_n$ is inner. Fix an integer $n\ge 2$ with $n\neq 6$.
 	\begin{subexercises}
 		\item Prove that the automorphism group of a group $G$ permutes the conjugacy classes of $G$, i.e.\ for each $\sigma\in\aut(G)$ and each conjugacy class $\mathcal K$ of $G$, the set $\sigma(\mathcal K)$ is also a conjugacy class of $G$.
@@ -272,7 +270,7 @@
 	Therefore, any automorphism of $S_n$ is uniquely determined by its action on these elements. By (c), there are at most $n!$ ways to assign images to these transpositions since there are $n$ choices for the image of $(1\ 2)$, $n - 1$ choices for the image of $(1\ 3)$, and so on. Therefore, $|\aut(S_n)| \leq n!$. However, $|\inn(S_n)| = |S_n/Z(S_n)| = n!$ since $Z(S_n)$ is trivial for $n \geq 3$. Since $\inn(S_n) \leq \aut(S_n)$, we must have $\aut(S_n) = \inn(S_n)$ for $n \neq 6$.
 \end{solenum}
 
-\begin{spex}
+\begin{spex}[4.4.19]
 	This exercise shows that $|\aut(S_6):\inn(S_6)|\le 2$ (Exercise 10 in Section 6.3 shows that equality holds by exhibiting an automorphism of $S_6$ that is not inner).
 	\begin{subexercises}
 		\item Let $\mathcal K$ be the conjugacy class of transpositions in $S_6$ and let $\mathcal K'$ be the conjugacy class of any element of order $2$ in $S_6$ that is not a transposition. Prove that $|\mathcal K|\neq|\mathcal K'|$ unless $\mathcal K'$ is the conjugacy class of products of three disjoint transpositions. Deduce that $\aut(S_6)$ has a subgroup of index at most $2$ which sends transpositions to transpositions.
@@ -297,7 +295,7 @@
 	\item Following the same steps as in (c) and (d) of the previous exercise, we can show that any automorphism that sends transpositions to transpositions is inner. Therefore, by (a), we have $|\aut(S_6) : \inn(S_6)| \leq 2$.
 \end{solenum}
 
-\begin{spex}
+\begin{spex}[4.4.20]
 	For any finite group $P$ let $d(P)$ be the minimum number of generators of $P$ (so, for example, $d(P)=1$ if and only if $P$ is a non-trivial cyclic group and $d(Q_8)=2$). Let $m(P)$ be the maximum of the integers $d(A)$ as $A$ runs over all Abelian subgroups of $P$ (so, for example, $m(Q_8)=1$ and $m(D_8)=2$). Define
 	\[
 		J(P)=\langle A \mid A \text{ is an Abelian subgroup of } P \text{ with } d(A)=m(P)\rangle.

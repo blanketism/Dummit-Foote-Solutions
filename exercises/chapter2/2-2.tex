@@ -1,6 +1,6 @@
 \subsection{Centralizers and Normalizers, Stabilizers and Kernels}
 
-\begin{exercise} [2.2.1]
+\begin{exercise}[2.2.1]
     Prove that $C_G(A)=\set{g\in G\mid g^{-1}ag=a\text{ for all }a\in A}.$
 \end{exercise}
 
@@ -8,7 +8,7 @@
     $g \in C_G(A) \iff ga = ag$ for all $a \in A \iff g^{-1}ga = g^{-1}ag \iff a = g^{-1}ag$ for all $a \in A$.
 \end{sol}
 
-\begin{exercise} [2.2.2]
+\begin{exercise}[2.2.2]
     Prove that $C_G(Z(G))=G$ and deduce that $N_G(Z(G))=G.$
 \end{exercise}
 
@@ -16,7 +16,7 @@
     By definition, $C_G(Z(G)) \subseteq G$. Now let $g \in G$ and $z \in Z(G)$. Then $gz = zg$, or $gzg\inv = z$. Then $g \in C_G(Z(G))$, hence $G \subseteq C_G(Z(G))$. It follows that $C_G(Z(G)) = G$. Since $C_G(Z(G)) \leq N_G(Z(G)) \leq G$, then $N_G(Z(G)) = G$.
 \end{sol}
 
-\begin{exercise} [2.2.3]
+\begin{exercise}[2.2.3]
     Prove that if $A$ and $B$ are subsets of $G$ with $A \subseteq B$ then $C_G(B)$ is a subgroup of $C_G(A)$.
 \end{exercise}
 
@@ -54,7 +54,7 @@
     Lagrange's theorem simplifies the work by allowing us to determine the possible sizes of the centralizers, which assists in narrowing down candidacy for the centralizers.
 \end{sol}
 
-\begin{exercise} [2.2.5]
+\begin{exercise}[2.2.5]
     In each of parts (a) to (c) show that for the specified group $G$ and subgroup $A$ of $G$, $C_G(A)=A$ and $N_G(A)=G.$
     \begin{subexercises}
         \item $G=S_3$ and $A=\set{1,(1\ 2\ 3),(1\ 3\ 2)}.$
@@ -77,7 +77,7 @@
     \item Note 5 divides $|C_G(A)|$ and $|C_G(A)|$ divides 10 by Lagrange's Theorem. Since $s \notin C_G(A)$ because $sr \neq rs$, then $C_G(A) = A$. Then 5 divides $|N_G(A)|$ which divides 10 by Lagrange's. A similar computation shows $sAs\inv = \set{1, r^4, r^3, r^2, r} = A$, hence $N_G(A) = G$.
 \end{solenum}
 
-\begin{exercise} [2.2.6]
+\begin{exercise}[2.2.6]
     Let $H$ be a subgroup of the group $G.$
     \begin{subexercises}
         \item Show that $H\le N_G(H).$ Give an example to show that this is not necessarily true if $H$ is not a subgroup.
@@ -100,7 +100,7 @@
     \end{itemize}
 \end{solenum}
 
-\begin{exercise} [2.2.7] 
+\begin{exercise}[2.2.7] 
     Let $n\in\z$ with $n\ge 3.$ Prove the following:
     \begin{subexercises}
         \item $Z(D_{2n})=\set{1}$ if $n$ is odd.
@@ -126,7 +126,7 @@
     \end{subexercises}
 \end{sol}
 
-\begin{exercise} [2.2.8]
+\begin{exercise}[2.2.8]
     Let $G=S_n$, fix an $i \in \set{1, 2, \dots, n}$ and let $G_i=\set{\sigma\in G\mid\sigma(i)=i}$ (the stabilizer of $i$ in $G$). Use group actions to prove that $G_i$ is a subgroup of $G$. Find $|G_i|$.
 \end{exercise}
 
@@ -136,7 +136,7 @@
     To find $|G_i|$, observe that any $\sigma \in G_i$ is completely determined by its action on the set $\set{1, 2, \ldots, n} \setminus \set{i}$, which has $n - 1$ elements. Since $\sigma$ is a permutation, then there are $(n - 1)!$ ways to permute these $n - 1$ elements. It follows that $|G_i| = (n - 1)!$.
 \end{sol}
 
-\begin{exercise} [2.2.9]
+\begin{exercise}[2.2.9]
     For any subgroup $H$ of $G$ and any nonempty subset $A$ of $G$ define $N_H(A)$ to be the set $\set{h \in H \mid hAh^{-1} = A}$. Show that $N_H(A) = N_G(A) \cap H$ and deduce that $N_H(A)$ is a subgroup of $H$ (note that $A$ need not be a subset of $H$).
 \end{exercise}
 
@@ -146,8 +146,7 @@
     Now suppose $h \in N_G(A) \cap H$. Then $hAh\inv = A$ and $h \in H$. By definition, then $h \in N_H(A)$. It follows that $N_G(A) \cap H \subseteq N_H(A)$. Hence, $N_H(A) = N_G(A) \cap H$. Since $N_G(A) \leq G$ and $H \leq G$, and $N_H(A)$ is the intersection of these two subgroups, then $N_H(A) \leq H$ by \exref{2.1.10}.
 \end{sol}
 
-
-\begin{exercise} [2.2.10]
+\begin{exercise}[2.2.10]
     Let $H$ be a subgroup of order $2$ in $G$. Show that $N_G(H) = C_G(H)$. Deduce that if $N_G(H) = G$ then $H \le Z(G)$.
 \end{exercise}
 
@@ -161,7 +160,7 @@
     Now suppose $N_G(H) = G$. Then $C_G(H) = G$, so that for any $g \in G$, we have $g h g\inv = h$. It follows that $h g = g h$ for all $g \in G$, hence $H \leq Z(G)$.
 \end{sol}
 
-\begin{exercise} [2.2.11]
+\begin{exercise}[2.2.11]
     Prove that $Z(G)\le N_G(A)$ for any subset $A$ of $G$.
 \end{exercise}
 
@@ -169,7 +168,7 @@
     Let $z \in Z(G)$. For any $zaz\inv \in zAz\inv$, then $z \in Z(G)$ implies $zaz\inv = a \in A$. Hence $zAz\inv \subseteq A$. Conversely, for any $a \in A$, we have $a = zaz\inv$ for some $a \in A$ since $z \in Z(G)$. Hence $A \subseteq zAz\inv$. It follows that $zAz\inv = A$, so that $z \in N_G(A)$. Since $z$ was arbitrary, then $Z(G) \leq N_G(A)$.
 \end{sol}
 
-\begin{exercise} [2.2.12]
+\begin{exercise}[2.2.12]
     Let $R$ be the set of all polynomials with integer coefficients in the independent variables $x_1, x_2, x_3, x_4$ i.e., the members of $R$ are finite sums of elements of the form $ax_1^{r_1}x_2^{r_2}x_3^{r_3}x_4^{r_4}$ where $a$ is any integer and $r_1, \ldots, r_4$ are nonnegative integers. For example,
     \begin{equation}
         \label{ex2.2.11eq}
@@ -231,7 +230,7 @@
     \item The permutations that stabilize $(x_1 + x_2)(x_3 + x_4)$ must either swap 1 and 2 or fix them, and either swap 3 and 4 or fix them. Additionally, it may swap the pairs $(1\ 2)$ and $(3\ 4)$. These are exactly the same permutations found in part (e). \qh
 \end{solenum}
 
-\begin{exercise} [2.2.13]
+\begin{exercise}[2.2.13]
     Let $n$ be a positive integer and let $R$ be the set of all polynomials with integer coefficients in the independent variables $x_1, x_2, \ldots, x_n$, i.e., the members of $R$ are finite sums of elements of the form $ax_1^{r_1}x_2^{r_2} \cdots x_n^{r_n}$ where $a$ is any integer and $r_1, \ldots, r_n$ are nonnegative integers. For each $\sigma \in S_n$ define a map
     \[
     	\sigma : R \to R \quad \text{by} \quad \sigma \cdot p(x_1, x_2, \ldots, x_n) = p(x_{\sigma(1)}, x_{\sigma(2)}, \ldots, x_{\sigma(n)})
@@ -249,7 +248,7 @@
     Hence, this defines a (left) group action of $S_n$ on $R$.
 \end{sol}
 
-\begin{exercise} [2.2.14]
+\begin{exercise}[2.2.14]
     Let $H(F)$ be the Heisenberg group over the field $F$ introduced in \exref{1.4.11}. Determine which matrices lie in the center of $H(F)$ and prove that $Z(H(F))$ is isomorphic to the additive group $F$.
 \end{exercise}
 
