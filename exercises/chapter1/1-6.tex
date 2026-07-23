@@ -4,7 +4,7 @@
     Let $\phi : G \to H$ be a homomorphism.
     \begin{subexercises}
         \item Prove that $\phi(x^n) = \phi(x)^n$ for all $n \in \zp$.
-        \item Do part (a) for $n = - 1$ and deduce that $\phi(x^n) = \phi(x)^n$ for all $n \in \z$.
+        \item Do part (a) for $n = - 1$ and deduce that $\phi(x^n) = \phi(x)^n$ for all $n \in \zbb$.
     \end{subexercises}
 \end{exercise}
 
@@ -33,7 +33,7 @@
 
 \begin{spex}[1.6.2]
     If $\phi : G \to H$ is an isomorphism, prove that $|\phi(x)| = |x|$ for all $x \in G$.
-	Deduce that any two isomorphic groups have the same number of elements of order $n$ for each $n \in \z^+$.
+	Deduce that any two isomorphic groups have the same number of elements of order $n$ for each $n \in \zbb^+$.
 	Is the result true if $\phi$ is only assumed to be a homomorphism?
 \end{spex}
 
@@ -54,7 +54,7 @@
 	In particular, this shows that both $x$ and $\phi(x)$ both have either finite or infinite order.
 	In particular, if either $|x|$ or $|\phi(x)|$ had infinite order and the other finite, then this would contradict both having finite order.
 	Moreover, since $\phi$ is bijective, it must be bijective between the elements of order $n$ in $G$ and the elements of order $n$ in $H$.
-	Hence, any two isomorphic groups have the same number of elements of order $n$ for each $n \in \z^+$.
+	Hence, any two isomorphic groups have the same number of elements of order $n$ for each $n \in \zbb^+$.
 
     The result is not true if $\phi$ is only assumed to be a homomorphism: the map $\phi : G \to 1$ is a homomorphism for any group $G$, but $G$ may have elements of various orders while $1$ has only the identity element of order 1.
 \end{sol}
@@ -86,29 +86,29 @@
 \end{sol}
 
 \begin{exercise}[1.6.4]
-    Prove that the multiplicative groups $\r - \set{0}$ and $\c - \set{0}$ are not isomorphic.
+    Prove that the multiplicative groups $\rbb - \set{0}$ and $\cbb- \set{0}$ are not isomorphic.
 \end{exercise}
 
 \begin{sol}
-    Note that $i \in \c \nz$ has order 4, but there is no element in $\r \nz$ that has order 4.
+    Note that $i \in \cbb\nz$ has order 4, but there is no element in $\rbb \nz$ that has order 4.
 \end{sol}
 
 \begin{exercise}[1.6.5]
-    Prove that the additive groups $\r$ and $\q$ are not isomorphic.
+    Prove that the additive groups $\rbb$ and $\qbb$ are not isomorphic.
 \end{exercise}
 
 \begin{sol}
-    $\r$ is uncountable, while $\q$ is countable.
+    $\rbb$ is uncountable, while $\qbb$ is countable.
 	But bijections preserve cardinality.
 \end{sol}
 
 \begin{exercise}[1.6.6]
-    Prove that the additive groups $\z$ and $\q$ are not isomorphic.
+    Prove that the additive groups $\zbb$ and $\qbb$ are not isomorphic.
 \end{exercise}
 
 \begin{sol}
-    Every nonzero element of $\z$ has infinite order.
-	However, $1/k \in \q$ has order $k$.
+    Every nonzero element of $\zbb$ has infinite order.
+	However, $1/k \in \qbb$ has order $k$.
 \end{sol}
 
 \begin{exercise}[1.6.7]
@@ -282,12 +282,12 @@
 \end{sol}
 
 \begin{exercise}[1.6.15]
-    Define a map $\pi : \r^2 \to \r$ by $\pi((x,y)) = x$.
+    Define a map $\pi : \rbb^2 \to \rbb$ by $\pi((x,y)) = x$.
 	Prove that $\pi$ is a homomorphism and find the kernel of $\pi$.
 \end{exercise}
 
 \begin{sol}
-    Let $(x_1, y_1), (x_2, y_2) \in \r^2$.
+    Let $(x_1, y_1), (x_2, y_2) \in \rbb^2$.
 	Then
     \[
     	\pi((x_1, y_1) + (x_2, y_2)) = \pi((x_1 + x_2, y_1 + y_2)) = x_1 + x_2 = \pi((x_1, y_1)) + \pi((x_2, y_2))
@@ -296,7 +296,7 @@
 	Moreover, if $(x, y) \in \ker(\pi)$, then $\pi((x, y)) = x = 0$.
 	Hence,
     \[
-    	\ker(\pi) = \set{(0, y) \mid y \in \r} \qh
+    	\ker(\pi) = \set{(0, y) \mid y \in \rbb} \qh
     \]
 \end{sol}
 
@@ -345,12 +345,12 @@
 \end{sol}
 
 \begin{exercise}[1.6.19]
-    Let $G = \set{ z \in \c \mid z^n = 1 \text{ for some } n \in \z^+ }$.
+    Let $G = \set{ z \in \cbb\mid z^n = 1 \text{ for some } n \in \zbb^+ }$.
 	Prove that for any fixed integer $k > 1$ the map from $G$ to itself defined by $z \mapsto z^k$ is a surjective homomorphism but is not an isomorphism.
 \end{exercise}
 
 \begin{sol}
-    Since $G \subseteq \c$, then $G$ is Abelian.
+    Since $G \subseteq \cbb$, then $G$ is Abelian.
 	Let $\phi : z \to z^k$.
 	Hence, for any $z, w \in G$, we have
     \[
@@ -393,21 +393,21 @@
 \end{sol}
 
 \begin{exercise}[1.6.21]
-    Prove that for each fixed nonzero $k \in \q$ the map from $\q$ to itself defined by $q \mapsto kq$ is an automorphism of $\q$.
+    Prove that for each fixed nonzero $k \in \qbb$ the map from $\qbb$ to itself defined by $q \mapsto kq$ is an automorphism of $\qbb$.
 \end{exercise}
 
 \begin{sol}
-    Let $\phi : \q \to \q$ be defined by $\phi(q) = kq$ for all $q \in \q$.
-	For any $p, q \in \q$, we have
+    Let $\phi : \qbb \to \qbb$ be defined by $\phi(q) = kq$ for all $q \in \qbb$.
+	For any $p, q \in \qbb$, we have
     \[
     	\phi(p + q) = k(p + q) = kp + kq = \phi(p) + \phi(q),
     \]
     so that $\phi$ is a homomorphism.
-	Bijectivity is clear, hence $\phi \in \aut(\q)$.
+	Bijectivity is clear, hence $\phi \in \aut(\qbb)$.
 \end{sol}
 
 \begin{exercise}[1.6.22]
-    Let $A$ be an Abelian group and fix some $k \in \z$.
+    Let $A$ be an Abelian group and fix some $k \in \zbb$.
 	Prove that the map $a \mapsto a^k$ is a homomorphism from $A$ to itself.
 	If $k = -1$ prove that this homomorphism is an isomorphism (i.e., is an automorphism of $A$).
 \end{exercise}
@@ -482,7 +482,7 @@
 \end{sol}
 
 \begin{exercise}[1.6.25]
-    Let $n \in \z^+$, let $r$ and $s$ be the usual generators of $D_{2n}$ and let $\theta = 2\pi / n$.
+    Let $n \in \zbb^+$, let $r$ and $s$ be the usual generators of $D_{2n}$ and let $\theta = 2\pi / n$.
     \begin{subexercises}
         \item Prove that the matrix 
         \[
@@ -492,7 +492,7 @@
             \end{pmatrix}
         \]
         is the matrix of the linear transformation which rotates the $x,y$-plane about the origin in a counterclockwise direction by $\theta$ radians.
-        \item Prove that the map $\phi : D_{2n} \to \gl_2(\r)$ defined on generators by
+        \item Prove that the map $\phi : D_{2n} \to \gl_2(\rbb)$ defined on generators by
         \[
             \phi(r) = 
             \begin{pmatrix}
@@ -506,13 +506,13 @@
                 1 & 0
             \end{pmatrix}
         \]
-        extends to a homomorphism of $D_{2n}$ into $\gl_2(\r)$.
+        extends to a homomorphism of $D_{2n}$ into $\gl_2(\rbb)$.
         \item Prove that the homomorphism $\phi$ defined above is injective.
     \end{subexercises}
 \end{exercise}
 
 \begin{solenum}
-    \item Let $\r^2$ be generated by the standard basis vectors $\b e_1 = (1 \quad 0)^T$ and $\b e_2 = (0 \quad 1)^T$.
+    \item Let $\rbb^2$ be generated by the standard basis vectors $\b e_1 = (1 \quad 0)^T$ and $\b e_2 = (0 \quad 1)^T$.
 	Let $T$ denote the linear transformation which rotates the $x,y$-plane about the origin in a counterclockwise direction by $\theta$ radians.
 	Then
     \[
@@ -563,7 +563,7 @@
         \end{pmatrix} = \phi(r)\inv \phi(s)
     \]
     so that $\phi(s)\phi(r) = \phi(r)\inv \phi(s)$.
-	Since these relations match those of $D_{2n}$, then $\phi$ extends to a homomorphism from $D_{2n}$ to $\gl_2(\r)$.
+	Since these relations match those of $D_{2n}$, then $\phi$ extends to a homomorphism from $D_{2n}$ to $\gl_2(\rbb)$.
     \item To show that $\phi$ is injective, we show that $\ker\phi$ is trivial.
 	Let $g \in \ker\phi$.
     \begin{itemize}
@@ -577,7 +577,7 @@
 
 \begin{exercise}[1.6.26]
     Let $i$ and $j$ be the generators of $Q_8$ described in Section 5.
-	Prove that the map $\phi$ from $Q_8$ to $\gl_2(\c)$ defined on generators by
+	Prove that the map $\phi$ from $Q_8$ to $\gl_2(\cbb)$ defined on generators by
     \[
         \phi(i) = 
         \begin{pmatrix}
@@ -596,7 +596,7 @@
 \end{exercise}
 
 \begin{sol}
-    Matrix multiplication shows that the relations described in \exref{1.5.3} are satisfied, so that $\phi$ extends to a homomorphism from $Q_8$ to $\gl_2(\c)$.
+    Matrix multiplication shows that the relations described in \exref{1.5.3} are satisfied, so that $\phi$ extends to a homomorphism from $Q_8$ to $\gl_2(\cbb)$.
 	Moreover, $\phi$ is injective since the only element that maps to the identity matrix is $1 \in Q_8$.
 	Therefore, $\phi$ is an injective homomorphism.
 \end{sol}

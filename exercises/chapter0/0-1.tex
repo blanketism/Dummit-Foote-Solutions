@@ -11,10 +11,10 @@ For \exref{0.1.1} through \exref{0.1.4}, let
         0 & 1
     \end{pmatrix}
 \]
-and $\bb = \set{X \in \ac \mid MX = XM}$, where $\ac$ denotes the set of $2 \times 2$ matrices with real entries.
+and $\bcal = \set{X \in \acal \mid MX = XM}$, where $\acal$ denotes the set of $2 \times 2$ matrices with real entries.
 
 \begin{exercise}[0.1.1]
-    Determine which of the following elements of $\ac$ lie in $\bb$:
+    Determine which of the following elements of $\acal$ lie in $\bcal$:
     \[
         \begin{pmatrix}
             1 & 1 \\
@@ -46,24 +46,24 @@ and $\bb = \set{X \in \ac \mid MX = XM}$, where $\ac$ denotes the set of $2 \tim
 \begin{sol}
     Let $M_i$ denote the $i$-th matrix in the list.
 	Then $M_1, M_3, M_5, M_6$ are $M$, the zero matrix, $I_2$, and the exchange matrix respectively.
-	Among these, $M_1, M_3, M_5$ belong to $\bb$, while $M_6 \notin \bb$.
-	Direct calculation shows $M_2$ and $M_4$ are not in $\bb$.
+	Among these, $M_1, M_3, M_5$ belong to $\bcal$, while $M_6 \notin \bcal$.
+	Direct calculation shows $M_2$ and $M_4$ are not in $\bcal$.
 \end{sol}
 
 \begin{exercise}[0.1.2]
-    Prove that if $P, Q \in \bb$, then $P + Q \in \bb$, where $+$ denotes the usual sum of two matrices.
+    Prove that if $P, Q \in \bcal$, then $P + Q \in \bcal$, where $+$ denotes the usual sum of two matrices.
 \end{exercise}
 
 \begin{sol}
-    If $P, Q \in \bb$, then $M(P + Q) = MP + MQ = PM + QM = (P + Q)M$, so $P + Q \in \bb$.
+    If $P, Q \in \bcal$, then $M(P + Q) = MP + MQ = PM + QM = (P + Q)M$, so $P + Q \in \bcal$.
 \end{sol}
 
 \begin{exercise}[0.1.3]
-    Prove that if $P, Q \in \bb$, then $P\cdot Q \in \bb$, where $\cdot$ denotes the usual product of two matrices.
+    Prove that if $P, Q \in \bcal$, then $P\cdot Q \in \bcal$, where $\cdot$ denotes the usual product of two matrices.
 \end{exercise}
 
 \begin{sol}
-    If $P, Q \in \bb$, then $M(PQ) = (MP)Q = (PM)Q = P(MQ) = P(QM) = (PQ)M$, so $PQ \in \bb$.
+    If $P, Q \in \bcal$, then $M(PQ) = (MP)Q = (PM)Q = P(MQ) = P(QM) = (PQ)M$, so $PQ \in \bcal$.
 \end{sol}
 
 \begin{exercise}[0.1.4]
@@ -72,7 +72,7 @@ and $\bb = \set{X \in \ac \mid MX = XM}$, where $\ac$ denotes the set of $2 \tim
         \begin{pmatrix}
             p & q \\
             r & s
-        \end{pmatrix} \in \bb.
+        \end{pmatrix} \in \bcal.
     \]
 \end{exercise}
 
@@ -90,19 +90,19 @@ and $\bb = \set{X \in \ac \mid MX = XM}$, where $\ac$ denotes the set of $2 \tim
     Simplifying results in $r = 0$ and $p = s$.
 	Then
     \[
-        \bb = 
+        \bcal = 
         \set*{\begin{pmatrix}
             p & q \\
             0 & p
-        \end{pmatrix}~\middle|~p, q \in \r}. \qh
+        \end{pmatrix}~\middle|~p, q \in \rbb}. \qh
     \]
 \end{sol}
 
 \begin{exercise}[0.1.5]
     Determine whether the following functions $f$ are well-defined:
     \begin{subexercises}
-        \item $f : \q \to \z$ defined by $f(a/b) = a$.
-        \item $f : \q \to \q$ defined by $f(a/b) = a^2/b^2$.
+        \item $f : \qbb \to \zbb$ defined by $f(a/b) = a$.
+        \item $f : \qbb \to \qbb$ defined by $f(a/b) = a^2/b^2$.
     \end{subexercises}
 \end{exercise}
 
@@ -112,7 +112,7 @@ and $\bb = \set{X \in \ac \mid MX = XM}$, where $\ac$ denotes the set of $2 \tim
 \end{solenum}
 
 \begin{exercise}[0.1.6]
-    Determine whether the function $f: \r^+ \to \z$ defined by mapping a real number $r$ to the first digit to the right of the decimal point in a decimal expansion of $r$ is well-defined.
+    Determine whether the function $f: \rbb^+ \to \zbb$ defined by mapping a real number $r$ to the first digit to the right of the decimal point in a decimal expansion of $r$ is well-defined.
 \end{exercise}
 
 \begin{sol}

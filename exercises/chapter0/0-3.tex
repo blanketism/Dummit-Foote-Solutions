@@ -5,7 +5,7 @@
 \end{exercise}
 
 \begin{sol}
-    Note that $\bar x = \set{x + 18k \mid k \in \z}$.
+    Note that $\bar x = \set{x + 18k \mid k \in \zbb}$.
 	Explicitly, we have:
     \begin{align*}
         \bar 0 & = \set{0, 18, -18, 36, -36, \ldots} & \bar 1 & = \set{1, 19, -17, 37, -35, \ldots} & \bar 2 & = \set{2, 20, -16, 38, -34, \ldots} \\
@@ -24,8 +24,8 @@
 \end{exercise}
 
 \begin{sol}
-    Let $m \in \z$.
-	By the Division Algorithm, there exists unique $q, r \in \z$ such that
+    Let $m \in \zbb$.
+	By the Division Algorithm, there exists unique $q, r \in \zbb$ such that
     \[
     	m = nq + r, \quad 0 \leq r < n.
     \]
@@ -141,7 +141,7 @@
 	Observe that if $a$ and $b$ were both odd, then $a^2 + b^2 \equiv 2 \mod 4$.
 	If one of $a$ or $b$ were odd and the other even, then $a^2 + b^2 \equiv 1 \mod 4$.
 	Thus, both $a$ and $b$ must be even.
-	Put $a = 2\alpha$, $b = 2\beta$, and $c = 2\gamma$ for nonzero $\alpha, \beta, \gamma \in \z$.
+	Put $a = 2\alpha$, $b = 2\beta$, and $c = 2\gamma$ for nonzero $\alpha, \beta, \gamma \in \zbb$.
 	Substituting into the original equation gives
     \[
     	 (2\alpha)^2 + (2\beta)^2 = 3(2\gamma)^2.
@@ -156,7 +156,7 @@
 \end{exercise}
 
 \begin{sol}
-    Put $a = 2k + 1$ for $k \in \z$.
+    Put $a = 2k + 1$ for $k \in \zbb$.
 	Then $a^2 = 4k(k + 1) + 1 \equiv 1 \bmod 8$ since $k(k + 1)$ is always even.
 \end{sol}
 
@@ -168,9 +168,9 @@
     It suffices to show that $\bar a \in \units$ if and only if $(a, n) = 1$.
     \begin{itemize}
         \item[\rightimp] If $\bar a \in \units$, then there exists $\bar b \in \intmod$ such that $\bar a \cdot \bar b = \bar 1$.
-	Then $ab \equiv 1 \bmod n$ implies the existence of $k \in \z$ such that $ab - 1 = kn$, or $ab - kn = 1$.
+	Then $ab \equiv 1 \bmod n$ implies the existence of $k \in \zbb$ such that $ab - 1 = kn$, or $ab - kn = 1$.
 	Thus, $(a, n) = 1$.
-        \item[\leftimp] By $(a, n) = 1$, there exists $x, y \in \z$ such that $ax + ny = 1$, or $ax = 1 - ny$.
+        \item[\leftimp] By $(a, n) = 1$, there exists $x, y \in \zbb$ such that $ax + ny = 1$, or $ax = 1 - ny$.
 	We then have $ax \equiv 1 \bmod n$, so that $\bar a \cdot \bar x = \bar 1$.
 	Thus, $\bar a \in \units$. \qh
     \end{itemize}
@@ -190,30 +190,30 @@
 \end{sol}
 
 \begin{exercise}[0.3.12]
-    Let $n \in \z, n > 1$ and let $a \in \z$ with $1 \leq a \leq n$.
+    Let $n \in \zbb, n > 1$ and let $a \in \zbb$ with $1 \leq a \leq n$.
 	Prove if $a$ and $n$ are not relatively prime, there exists an integer $b$ with $1 \leq b < n$ such that $ab \equiv 0 \bmod n$ and deduce that there cannot be an integer $c$ such that $ac \equiv 1 \bmod n$.
 \end{exercise}
 
 \begin{sol}
     Let $(a, n) = d > 1$.
-	Then $a/d, n/d \in \z$.
+	Then $a/d, n/d \in \zbb$.
 	Put $b = n/d$, so that $1 \leq b < n$ and
     \[
     	ab = a(n/d) = (a/d)n \equiv 0 \bmod n.
     \]
-    If there existed some $c \in \z$ such that $ac \equiv 1 \bmod n$, then $(ac)b \equiv b \bmod n$.
+    If there existed some $c \in \zbb$ such that $ac \equiv 1 \bmod n$, then $(ac)b \equiv b \bmod n$.
 	However, $ab \equiv 0 \bmod n$, so that $0 \equiv b \bmod n$, which is impossible since $1 \leq b < n$.
 \end{sol}
 
 \begin{exercise}[0.3.13]
-    Let $n \in \z, n > 1$ and let $a \in \z$ with $1 \leq a \leq n$.
+    Let $n \in \zbb, n > 1$ and let $a \in \zbb$ with $1 \leq a \leq n$.
 	Prove that if $a$ and $n$ are relatively prime then there is an integer $c$ such that $ac \equiv 1 \bmod n$.
 
-    \hint{Use the fact that the GCD of two integers is a $\z$-linear combination of the integers.}
+    \hint{Use the fact that the GCD of two integers is a $\zbb$-linear combination of the integers.}
 \end{exercise}
 
 \begin{sol}
-    Since $(a, n) = 1$, there exists $c, x \in \z$ such that $ac + nx = 1$.
+    Since $(a, n) = 1$, there exists $c, x \in \zbb$ such that $ac + nx = 1$.
 	Then $ac \equiv 1 \bmod n$.
 \end{sol}
 
@@ -238,7 +238,7 @@
 \end{exercise}
 
 \begin{sol}
-    Use the Euclidean Algorithm to find $x, y \in \z$ such that $ax + ny = 1$ for each pair $(a, n)$.
+    Use the Euclidean Algorithm to find $x, y \in \zbb$ such that $ax + ny = 1$ for each pair $(a, n)$.
 	Then $ax \equiv 1 \bmod n$, and $x$ is the multiplicative inverse of $\bar a$ in $\intmod$.
     \begin{subexercises}
         \item 17.

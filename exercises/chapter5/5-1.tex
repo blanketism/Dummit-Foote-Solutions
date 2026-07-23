@@ -472,8 +472,8 @@
     \begin{subexercises}
         \item Prove that the restricted direct product is a subgroup of the direct product.
         \item Prove that the restricted direct product is normal in the direct product.
-        \item Let $I = \z^+$ and let $p_i$ be the $i$th integer prime.
-	    Show that if $G_i = \z/p_i\z$ for all $i \in \z^+$, then every element of the restricted direct product of the $G_i$'s has finite order but $\prod_{i \in \z^+} G_i$ has elements of infinite order.
+        \item Let $I = \zbb^+$ and let $p_i$ be the $i$th integer prime.
+	    Show that if $G_i = \zbb/p_i\zbb$ for all $i \in \zbb^+$, then every element of the restricted direct product of the $G_i$'s has finite order but $\prod_{i \in \zbb^+} G_i$ has elements of infinite order.
 	    Show that in this example the restricted direct product is the torsion subgroup of the direct product (cf. \exref{2.1.16}).
     \end{subexercises}
 \end{exercise}
@@ -489,7 +489,7 @@
 	Let $\prod a_i$ be an element of $G$ and let $\prod b_i$ be an element of $H$.
 	Then there are only finitely many $i$ such that $b_i \neq 1_i$, so there are only finitely many $i$ such that $a_i b_i a_i^{-1} \neq 1_i$, so $\prod a_i \prod b_i \prod a_i^{-1}$ is an element of $H$.
 	Thus, $H \nsub G$.
-    \item Let $G = \prod_{i \in \z^+} G_i$ where $G_i = \z/p_i\z$ for all $i$.
+    \item Let $G = \prod_{i \in \zbb^+} G_i$ where $G_i = \zbb/p_i\zbb$ for all $i$.
 	Let $H$ be the restricted direct product of the $G_i$'s.
 	If $\prod a_i$ is an element of $H$, then there are only finitely many $i$ such that $a_i \neq 1_i$, so there are only finitely many $i$ such that $a_i$ has order greater than 1, so $\prod a_i$ has finite order.
 	On the other hand, if $\prod a_i$ is an element of $G$ such that $a_i$ is a generator of $G_i$ for all $i$, then $\prod a_i$ has infinite order since for any positive integer $n$, we have $(\prod a_i)^n = \prod a_i^n$, and there are infinitely many $i$ such that $a_i^n \neq 1_i$.
@@ -519,12 +519,12 @@
     \item Let $G = \intmod[2] \times \intmod[3] \times \intmod[4] \times \cdots$.
 	Every element of $G$ has finite order since it is a tuple of elements from finite cyclic groups.
 	Moreover, for each positive integer $n$, the element that is the identity in all components except the $n$-th component, which is a generator of $\intmod[n]$, has order $n$.
-    \item Consider the group $\intmod[2] \times \z$.
+    \item Consider the group $\intmod[2] \times \zbb$.
 	The element $(1, 0)$ has order 2, and the element $(0, 1)$ has infinite order.
     \item By Cayley's Theorem, every finite group is isomorphic to a subgroup of some symmetric group $S_n$.
 	We may then consider the group $G = S_1 \times S_2 \times S_3 \times \cdots$.
 	For any finite group $H$, there is some $n$ such that $H$ is isomorphic to a subgroup of $S_n$, so $H$ is isomorphic to a subgroup of $G$.
-    \item Let $G = \z \times \z \times \cdots$.
+    \item Let $G = \zbb \times \zbb \times \cdots$.
 	Consider the map $\phi : G \to G \times G$ defined by
     \[
     	\phi((a_1, a_2, a_3, \ldots)) = ((a_1, a_3, a_5, \ldots), (a_2, a_4, a_6, \ldots)).

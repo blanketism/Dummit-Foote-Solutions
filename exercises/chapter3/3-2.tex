@@ -73,7 +73,7 @@ Let $G$ be a group.
     Let $H$ be a subgroup of $G$ and fix some element $g \in G$. 
     \begin{subexercises}
         \item Prove that $gH g^{-1}$ is a subgroup of $G$ of the same order as $H$.
-        \item Deduce that if $n \in \z^+$ and $H$ is the unique subgroup of $G$ of order $n$ then $H \nsub G$.
+        \item Deduce that if $n \in \zbb^+$ and $H$ is the unique subgroup of $G$ of order $n$ then $H \nsub G$.
     \end{subexercises}
 \end{spex}
 
@@ -146,17 +146,17 @@ Let $G$ be a group.
 
 \begin{spex}[3.2.9]
     Let $G$ be a finite group and let $p$ be a prime dividing $|G|$.
-	Let $\ss$ denote the set of $p$-tuples of elements of $G$ the product of whose coordinates is 1:
+	Let $\scal$ denote the set of $p$-tuples of elements of $G$ the product of whose coordinates is 1:
     \[
-    	\ss = \set{(x_1, x_2, \ldots, x_p) \mid x_i \in G \text{ and } x_1x_2 \cdots x_p = 1}
+    	\scal = \set{(x_1, x_2, \ldots, x_p) \mid x_i \in G \text{ and } x_1x_2 \cdots x_p = 1}
     \]
     \begin{subexercises}
-        \item Show that $\ss$ has $|G|^{p-1}$ elements, hence has order divisible by $p$.
+        \item Show that $\scal$ has $|G|^{p-1}$ elements, hence has order divisible by $p$.
     \end{subexercises}
     Define the relation $\sim$ on $S$ by letting $\alpha \sim \beta$ if $\beta$ is a cyclic permutation of $\alpha$.
     \begin{subexercises}[resume]
-        \item Show that a cyclic permutation of an element of $\ss$ is again an element of $\ss$.
-        \item Prove that $\sim$ is an equivalence relation on $\ss$.
+        \item Show that a cyclic permutation of an element of $\scal$ is again an element of $\scal$.
+        \item Prove that $\sim$ is an equivalence relation on $\scal$.
         \item Prove that an equivalence class contains a single element if and only if it is of the form $(x, x, \dots, x)$ with $x^p = 1$.
         \item Prove that every equivalence class has order 1 or $p$ (this uses the fact that $p$ is \emph{prime}).
 		Deduce that $|G|^{p-1} = k + pd$, where $k$ is the number of classes of size 1 and $d$ is the number of classes of size $p$.
@@ -165,18 +165,18 @@ Let $G$ be a group.
 \end{spex}
 
 \begin{solenum}
-    \item Let $\ss'$ denote the set of $(p - 1)$-tuples of elements of $G$.
-	Observe that $|\ss'| = |G|^{p-1}$.
+    \item Let $\scal'$ denote the set of $(p - 1)$-tuples of elements of $G$.
+	Observe that $|\scal'| = |G|^{p-1}$.
 	Define the mapping
     \[
-    	\phi : \ss' \to \ss \quad \text{by} \quad \phi(x_1, x_2, \dots, x_{p-1}) = (x_1, x_2, \dots, x_{p-1}, (x_1x_2 \cdots x_{p-1})\inv)
+    	\phi : \scal' \to \scal \quad \text{by} \quad \phi(x_1, x_2, \dots, x_{p-1}) = (x_1, x_2, \dots, x_{p-1}, (x_1x_2 \cdots x_{p-1})\inv)
     \]
     To show that $\phi$ is injective, suppose $\phi(x_1, \dots, x_{p-1}) = \phi(y_1, \dots, y_{p-1})$.
 	Then $x_i = y_i$ for all $1 \leq i \leq p - 1$, and the last inverse term must imply $x_1x_2 \cdots x_{p - 1} = y_1y_2 \cdots y_{p - 1}$ since inverses are unique in a group.
 	Hence $\phi$ is injective.
 	Moreover, this mapping is clearly surjective.
-	It follows that $\abs\ss = \abs{\ss'} = |G|^{p-1}$.
-    \item Let $\alpha = (x_1, x_2, \dots, x_p) \in \ss$.
+	It follows that $\abs\scal = \abs{\scal'} = |G|^{p-1}$.
+    \item Let $\alpha = (x_1, x_2, \dots, x_p) \in \scal$.
 	A cyclic permutation of $\alpha$ shifts the $i$-th coordinate of $\alpha$ to the $(i + k)$-th coordinate of $\beta$ for some fixed $k$, where the indices are taken modulo $p$ when $i + k > p$.
 	Explicitly, $\beta = (x_k, x_{k+1}, \dots, x_p, x_1, x_2, \dots, x_{k-1})$ for some $1 \leq k \leq p$.
 	Observe that these consist of the same elements as $\alpha$, just in a different order.
@@ -185,8 +185,8 @@ Let $G$ be a group.
     \[
     	x_k x_{k+1} \cdots x_p x_1 x_2 \cdots x_{k-1} = x_k x_{k + 1} \cdots x_p (x_k x_{k + 1} \cdots x_p)\inv = 1
     \]
-    so that $\beta \in \ss$.
-    \item Let $\alpha, \beta, \gamma \in \ss$.
+    so that $\beta \in \scal$.
+    \item Let $\alpha, \beta, \gamma \in \scal$.
 	We check the three properties of an equivalence relation:
     \begin{itemize}
         \item Reflexive: Since $\alpha$ shifted by 0 is itself, then $\alpha \sim \alpha$.
@@ -200,26 +200,26 @@ Let $G$ be a group.
 	If $[\alpha]$ contains a single element, then every cyclic permutation of $\alpha$ is equal to $\alpha$.
 	In particular, the cyclic permutation that shifts each coordinate by 1 must be equal to $\alpha$, hence $x_2 = x_1, x_3 = x_2, \dots, x_p = x_{p-1}, x_1 = x_p$.
 	It follows that $\alpha = (x, x, \dots, x)$ for some $x \in G$.
-	Since $\alpha \in \ss$, then $x^p = 1$.
+	Since $\alpha \in \scal$, then $x^p = 1$.
         \item[\leftimp] Suppose $\alpha = (x, x, \dots, x)$ for some $x \in G$ such that $x^p = 1$.
 	Then any cyclic permutation of $\alpha$ is equal to $\alpha$, hence $[\alpha]$ contains a single element.
     \end{itemize}
-    \item Let $\alpha = (x_1, x_2, \dots, x_p) \in \ss$ where the $x_i$ need not be distinct, and let $[\alpha]$ be the equivalence class containing $\alpha$.
+    \item Let $\alpha = (x_1, x_2, \dots, x_p) \in \scal$ where the $x_i$ need not be distinct, and let $[\alpha]$ be the equivalence class containing $\alpha$.
 	Let $[\alpha]$ have $n$ elements.
-	Note that for any two coordinates $x_i$ and $x_j$, if there exists some $k \in \z$ such that $i + kn \equiv j \bmod p$, then $x_i = x_j$ since shifting $\alpha$ by $kn$ returns $\alpha$ as there are only $n$ distinct cyclic permutations in $[\alpha]$.
+	Note that for any two coordinates $x_i$ and $x_j$, if there exists some $k \in \zbb$ such that $i + kn \equiv j \bmod p$, then $x_i = x_j$ since shifting $\alpha$ by $kn$ returns $\alpha$ as there are only $n$ distinct cyclic permutations in $[\alpha]$.
     
     There are two cases to discuss, either $n = p$ or $1 \leq n < p$.
 	If $n = p$, then all cyclic permutations of $\alpha$ are distinct, and we are done.
 	Suppose $1 \leq n < p$.
-	Since $p$ is prime, then $(n, p) = 1$, hence there exists some $k \in \z$ such that $kn \equiv 1 \bmod p$.
+	Since $p$ is prime, then $(n, p) = 1$, hence there exists some $k \in \zbb$ such that $kn \equiv 1 \bmod p$.
 	In particular, $i + kn \equiv i + 1 \equiv j \bmod p$ implies $x_{i + 1} = x_j$.
 	It follows that $x_i = x_j$ for all $1 \leq i, j \leq p$, hence $\alpha = (x, x, \dots, x)$ for some $x \in G$.
 	By part (c), $[\alpha]$ contains a single element.
 
-    Since the equivalence classes partition $\ss$, let $k$ be the number of classes of size 1 and $d$ be the number of classes of size $p$.
-	Then $\abs\ss = k + pd$, as desired.
+    Since the equivalence classes partition $\scal$, let $k$ be the number of classes of size 1 and $d$ be the number of classes of size $p$.
+	Then $\abs\scal = k + pd$, as desired.
     \item Note that $\set{(1, 1, \dots, 1)}$ is an equivalence class of size 1, hence $k \geq 1$.
-	From part (d), we have $\abs\ss = |G|^{p-1} = k + pd$.
+	From part (d), we have $\abs\scal = |G|^{p-1} = k + pd$.
 	Since $p$ divides $|G|$, then it divides $|G|^{p-1}$, hence it divides $k + pd$.
 	It follows that $p$ divides $k$.
 	Since $k \geq 1$, then $k \geq p > 1$.
@@ -334,13 +334,13 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}[3.2.16]
-    Use Lagrange's Theorem in the multiplicative group $(\z/p\z)^\times$ to prove \emph{Fermat's Little Theorem}: if $p$ is a prime then $a^p \equiv a \bmod p$ for all $a \in \z$.
+    Use Lagrange's Theorem in the multiplicative group $(\zbb/p\zbb)^\times$ to prove \emph{Fermat's Little Theorem}: if $p$ is a prime then $a^p \equiv a \bmod p$ for all $a \in \zbb$.
 \end{exercise}
 
 \begin{sol}
     Let $p$ be a prime.
 	Note that $\units[p] = \set{\bar 1, \bar 2, \ldots, \bar{p - 1}}$.
-	For any $a \in \z$, then we either have $a \mid p$ or $a \nmid p$.
+	For any $a \in \zbb$, then we either have $a \mid p$ or $a \nmid p$.
 	If $a \mid p$, then $a \equiv 0 \bmod p$, hence $a^p \equiv 0 \equiv a \bmod p$.
 	If $a \nmid p$, then $\bar a \in \units[p]$.
 	By Lagrange's Theorem and Corollary 3.9, $\abs{\bar a}$ divides $\abs{\units[p]} = p - 1$, hence $\bar a^{p - 1} = \bar 1$.
@@ -349,7 +349,7 @@ Let $G$ be a group.
 
 \begin{exercise}[3.2.17]
     Let $p$ be a prime and let $n$ be a positive integer.
-	Find the order of $\bar p$ in $(\z/(p^n - 1)\z)^\times$ and deduce that $n \mid \phi(p^n - 1)$ (here $\phi$ is Euler's function).
+	Find the order of $\bar p$ in $(\zbb/(p^n - 1)\zbb)^\times$ and deduce that $n \mid \phi(p^n - 1)$ (here $\phi$ is Euler's function).
 \end{exercise}
 
 \begin{sol}
@@ -368,7 +368,7 @@ Let $G$ be a group.
 \begin{sol}
     Since $N \nsub G$, then $HN \leq G$.
 	Moreover, $H \cap N \leq H$ so that $|H \cap N|$ divides $\abs H$.
-	Then we have that $|G| = m|HN|$ and $|H| = n|H \cap N|$ for some $m, n \in \z$.
+	Then we have that $|G| = m|HN|$ and $|H| = n|H \cap N|$ for some $m, n \in \zbb$.
 	By Corollary 13, we have that
     \[
     	|HN| = \frac{\abs H \abs N}{|H \cap N|} \implies m|HN| = m\frac{n|H \cap N||N|}{|H \cap N|} \implies \frac{|G|}{|N|} = |G : N| = mn
@@ -403,21 +403,21 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}[3.2.21]
-    Prove that $\q$ has no proper subgroups of finite index.
-	Deduce that $\q/\z$ has no proper subgroups of finite index. [Recall \exref{1.6.21} and \exref{3.1.15}.]
+    Prove that $\qbb$ has no proper subgroups of finite index.
+	Deduce that $\qbb/\zbb$ has no proper subgroups of finite index. [Recall \exref{1.6.21} and \exref{3.1.15}.]
 \end{exercise}
 
 \begin{sol}
-    Suppose $\q$ has a proper subgroup $H$ such that $|\q : H|$ is some finite $n$.
-	Recalling that $\q$ is divisible by \exref{2.4.19}, then $\q/H$ is also divisible by \exref{3.1.15}.
-	However, $\q/H$ is a finite group of order $n$, hence it cannot be divisible unless it is trivial.
-	It follows that $H = \q$, a contradiction.
-	Therefore, $\q$ has no proper subgroups of finite index.
-	Moreover, $\q/\z$ has no proper subgroup of finite index for the same reasoning.
+    Suppose $\qbb$ has a proper subgroup $H$ such that $|\qbb : H|$ is some finite $n$.
+	Recalling that $\qbb$ is divisible by \exref{2.4.19}, then $\qbb/H$ is also divisible by \exref{3.1.15}.
+	However, $\qbb/H$ is a finite group of order $n$, hence it cannot be divisible unless it is trivial.
+	It follows that $H = \qbb$, a contradiction.
+	Therefore, $\qbb$ has no proper subgroups of finite index.
+	Moreover, $\qbb/\zbb$ has no proper subgroup of finite index for the same reasoning.
 \end{sol}
 
 \begin{exercise}[3.2.22]
-    Use Lagrange's Theorem in the multiplicative group $(\z/n\z)^\times$ to prove \emph{Euler's Theorem}: $a^{\varphi(n)} \equiv 1 \bmod n$ for every integer $a$ relatively prime to $n$, where $\varphi$ denotes Euler's $\varphi$-function.
+    Use Lagrange's Theorem in the multiplicative group $(\zbb/n\zbb)^\times$ to prove \emph{Euler's Theorem}: $a^{\varphi(n)} \equiv 1 \bmod n$ for every integer $a$ relatively prime to $n$, where $\varphi$ denotes Euler's $\varphi$-function.
 \end{exercise}
 
 \begin{sol}
@@ -432,7 +432,7 @@ Let $G$ be a group.
 \begin{sol}
     Note that $100 = 2^2 \cdot 5^2$, then $\phi(100) = 2^1(2 - 1)5^1(5 - 1) = 40$.
 	Since $3^4 \bmod 40 = 81 \bmod 40 \equiv 1 \bmod 40$, then $3^{100} \bmod 40 \equiv 1 \bmod 40$.
-	It follows that $3^{100} = 1 + 40k = 1 + \phi(100)k$ for some $k \in \z$, hence
+	It follows that $3^{100} = 1 + 40k = 1 + \phi(100)k$ for some $k \in \zbb$, hence
     \[
     	3^{3^{100}} = 3^{1 + \phi(100)k} = 3 \cdot 3^{{\phi(100)}^k} \equiv 3 \cdot 1^k \bmod 100 = 3 \bmod 100
     \]

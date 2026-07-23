@@ -171,7 +171,7 @@
 
 \begin{sol}
 	By \exref{4.3.34}, we know that $|N_{S_p}(P)| = p(p - 1)$.
-	Moreover, since $P$ is cyclic of order $p$, we have $\aut(P) \cong (\mathbb Z/p\mathbb Z)^\times$ by Proposition 4.16, so that $|\aut(P)| = p - 1$.
+	Moreover, since $P$ is cyclic of order $p$, we have $\aut(P) \cong \units[p]$ by Proposition 4.16, so that $|\aut(P)| = p - 1$.
 	Let $N_{S_p}$ act on $P$ by conjugation.
 	Then we have the map
 	\[
@@ -199,7 +199,7 @@
 \begin{sol}
 	Observe that $3825 = 15^2 \cdot 17$.
 	Since $\abs H = 17$ a prime, then $H$ is cyclic.
-	Moreover, we have $\aut(H) \cong (\mathbb Z/17\mathbb Z)^\times$ by Proposition 4.16, so that $|\aut(H)| = 16$.
+	Moreover, we have $\aut(H) \cong \units[17]$ by Proposition 4.16, so that $|\aut(H)| = 16$.
 	Now consider the action of $G$ on $H$ by conjugation.
 	This gives the map
 	\[
@@ -245,7 +245,7 @@
 \end{sol}
 
 \begin{exercise}[4.4.15]
-	Prove that each of the following (multiplicative) groups is cyclic: $(\mathbb Z/5\mathbb Z)^\times$, $(\mathbb Z/9\mathbb Z)^\times$, and $(\mathbb Z/18\mathbb Z)^\times$.
+	Prove that each of the following (multiplicative) groups is cyclic: $\units[5]$, $\units[9]$, and $\units[18]$.
 \end{exercise}
 
 \begin{sol}
@@ -259,20 +259,20 @@
 \end{sol}
 
 \begin{spex}[4.4.16]
-	Prove that $(\mathbb Z/24\mathbb Z)^\times$ is an elementary Abelian group of order $8$. (We shall see later that $(\mathbb Z/n\mathbb Z)^\times$ is an elementary Abelian group if and only if $n \mid 24$.)
+	Prove that $\units[24]$ is an elementary Abelian group of order $8$. (We shall see later that $\units[n]$ is an elementary Abelian group if and only if $n \mid 24$.)
 \end{spex}
 
 \begin{sol}
-	We first prove the lemma: let $a, b, m, n \in \z$ such that $(m, n) = 1$.
+	We first prove the lemma: let $a, b, m, n \in \zbb$ such that $(m, n) = 1$.
 	If $a \equiv b \bmod m$ and $a \equiv b \bmod n$, then $a \equiv b \bmod{mn}$.
 	Indeed, we have that
 	\[
 		a - b = xm \quad \text{and} \quad a - b = yn
 	\]
-	for some $x, y \in \z$.
+	for some $x, y \in \zbb$.
 	Therefore, $xm = yn$, so that $m \mid yn$.
 	Since $(m, n) = 1$, then $m \mid y$.
-	Letting $y = km$ for some $k \in \z$, we have
+	Letting $y = km$ for some $k \in \zbb$, we have
 	\[
 		a - b = yn = kmn,
 	\]
@@ -283,7 +283,7 @@
 	Then $\gcd(x, 24) = 1$, hence $(x, 3) = (x, 8) = 1$.
 	Since $(x, 3) = 1$, then $x \equiv 1$ or $2 \bmod 3$.
 	Then $x^2 \equiv 1 \bmod 3$.
-	Since $(x, 8) = 1$, let $x = 2k + 1$ for some $k \in \z$.
+	Since $(x, 8) = 1$, let $x = 2k + 1$ for some $k \in \zbb$.
 	Then
 	\[
 		x^2 = (2k + 1)^2 = 4k^2 + 4k + 1 = 4k(k + 1) + 1.
@@ -295,7 +295,7 @@
 
 \begin{exercise}[4.4.17]
 	Let $G=\langle x\rangle$ be a cyclic group of order $n$.
-	For $n=2,3,4,5,6$ write out the elements of $\aut(G)$ explicitly (by Proposition 16 above we know $\aut(G)\cong(\mathbb Z/n\mathbb Z)^\times$, so for each element $a\in(\mathbb Z/n\mathbb Z)^\times$, write out explicitly what the automorphism $\psi_a$ does to the elements $\set{1,x,x^2,\ldots,x^{n-1}}$ of $G$).
+	For $n=2,3,4,5,6$ write out the elements of $\aut(G)$ explicitly (by Proposition 16 above we know $\aut(G)\cong\units[n]$, so for each element $a\in\units[n]$, write out explicitly what the automorphism $\psi_a$ does to the elements $\set{1,x,x^2,\ldots,x^{n-1}}$ of $G$).
 \end{exercise}
 
 \begin{solitem}
@@ -336,9 +336,9 @@
 	This exercise shows that for $n\neq 6$ every automorphism of $S_n$ is inner.
 	Fix an integer $n\ge 2$ with $n\neq 6$.
 	\begin{subexercises}
-		\item Prove that the automorphism group of a group $G$ permutes the conjugacy classes of $G$, i.e.\ for each $\sigma\in\aut(G)$ and each conjugacy class $\mathcal K$ of $G$, the set $\sigma(\mathcal K)$ is also a conjugacy class of $G$.
-		\item Let $\mathcal K$ be the conjugacy class of transpositions in $S_n$ and let $\mathcal K'$ be the conjugacy class of any element of order $2$ in $S_n$ that is not a transposition.
-		Prove that $|\mathcal K|\neq|\mathcal K'|$.
+		\item Prove that the automorphism group of a group $G$ permutes the conjugacy classes of $G$, i.e.\ for each $\sigma\in\aut(G)$ and each conjugacy class $\kcal$ of $G$, the set $\sigma(\kcal)$ is also a conjugacy class of $G$.
+		\item Let $\kcal$ be the conjugacy class of transpositions in $S_n$ and let $\kcal'$ be the conjugacy class of any element of order $2$ in $S_n$ that is not a transposition.
+		Prove that $|\kcal|\neq|\kcal'|$.
 		Deduce that any automorphism of $S_n$ sends transpositions to transpositions. (See \exref{4.3.33}.)
 		\item Prove that for each $\sigma\in\aut(S_n)$,
 		\[
@@ -351,38 +351,38 @@
 \end{spex}
 
 \begin{solenum}
-	\item Let $\mathcal K$ be a conjugacy class of $G$ and let $\sigma \in \aut(G)$.
-	For any $x \in \mathcal K$, we have $\sigma(x) \in G$.
-	Consider the conjugacy class $\mathcal K'$ of $\sigma(x)$ in $G$.
-	For any $y \in \mathcal K$, there exists some $g \in G$ such that $y = gxg\inv$.
+	\item Let $\kcal$ be a conjugacy class of $G$ and let $\sigma \in \aut(G)$.
+	For any $x \in \kcal$, we have $\sigma(x) \in G$.
+	Consider the conjugacy class $\kcal'$ of $\sigma(x)$ in $G$.
+	For any $y \in \kcal$, there exists some $g \in G$ such that $y = gxg\inv$.
 	Then
 	\[
-		\sigma(y) = \sigma(gxg\inv) = \sigma(g)\sigma(x)\sigma(g)\inv \in \mathcal K'.
+		\sigma(y) = \sigma(gxg\inv) = \sigma(g)\sigma(x)\sigma(g)\inv \in \kcal'.
 	\]
-	Therefore, $\sigma(\mathcal K) \subseteq \mathcal K'$.
+	Therefore, $\sigma(\kcal) \subseteq \kcal'$.
 
-	Now let $z \in \mathcal K'$.
+	Now let $z \in \kcal'$.
 	Then there exists some $h \in G$ such that $z = h\sigma(x)h\inv$.
 	Since $\sigma$ is an automorphism, there exists some $g \in G$ such that $\sigma(g) = h$.
 	Then
 	\[
-		z = h\sigma(x)h\inv = \sigma(g)\sigma(x)\sigma(g)\inv = \sigma(gxg\inv) \in \sigma(\mathcal K).
+		z = h\sigma(x)h\inv = \sigma(g)\sigma(x)\sigma(g)\inv = \sigma(gxg\inv) \in \sigma(\kcal).
 	\]
-	Therefore, $\mathcal K' \subseteq \sigma(\mathcal K)$.
-	Hence, $\sigma(\mathcal K) = \mathcal K'$, so that $\aut(G)$ permutes the conjugacy classes of $G$.
+	Therefore, $\kcal' \subseteq \sigma(\kcal)$.
+	Hence, $\sigma(\kcal) = \kcal'$, so that $\aut(G)$ permutes the conjugacy classes of $G$.
 	\item By \exref{4.3.33}, the formulas for each conjugacy class is given by
 	\[
-		|\mathcal K| = \binom n2 = \frac{n(n - 1)}{2}, \quad \text{and} \quad |\mathcal K'| = \frac{n!}{2^k k! (n - 2k)!}
+		|\kcal| = \binom n2 = \frac{n(n - 1)}{2}, \quad \text{and} \quad |\kcal'| = \frac{n!}{2^k k! (n - 2k)!}
 	\]
 	for some $k \geq 2$.
-	Assume, by way of contradiction, that $|\mathcal K| = |\mathcal K'|$.
+	Assume, by way of contradiction, that $|\kcal| = |\kcal'|$.
 	Equating the two expressions and cancellation, we obtain
 	\[
 		(n - 2)(n - 3) \cdots (n - 2k + 1) = 2^k k!.
 	\]
 	Observe that the left-hand side contains $2k - 2$ consecutive integers, which has at most $k - 1$ powers of 2.
 	The right-hand side has at least $k$ powers of 2, so that the two sides cannot be equal.
-	Therefore, $|\mathcal K| \neq |\mathcal K'|$.
+	Therefore, $|\kcal| \neq |\kcal'|$.
 	Hence, by (a), any automorphism of $S_n$ sends transpositions to transpositions.
 	\item Let $\sigma \in \aut(S_n)$.
 	By (b), we know that $\sigma$ sends transpositions to transpositions.
@@ -415,8 +415,8 @@
 \begin{spex}[4.4.19]
 	This exercise shows that $|\aut(S_6):\inn(S_6)|\le 2$ (Exercise 10 in Section 6.3 shows that equality holds by exhibiting an automorphism of $S_6$ that is not inner).
 	\begin{subexercises}
-		\item Let $\mathcal K$ be the conjugacy class of transpositions in $S_6$ and let $\mathcal K'$ be the conjugacy class of any element of order $2$ in $S_6$ that is not a transposition.
-		Prove that $|\mathcal K|\neq|\mathcal K'|$ unless $\mathcal K'$ is the conjugacy class of products of three disjoint transpositions.
+		\item Let $\kcal$ be the conjugacy class of transpositions in $S_6$ and let $\kcal'$ be the conjugacy class of any element of order $2$ in $S_6$ that is not a transposition.
+		Prove that $|\kcal|\neq|\kcal'|$ unless $\kcal'$ is the conjugacy class of products of three disjoint transpositions.
 		Deduce that $\aut(S_6)$ has a subgroup of index at most $2$ which sends transpositions to transpositions.
 		\item Prove that $|\aut(S_6):\inn(S_6)|\le 2$. (Follow the same steps as in (c) and (d) of the preceding exercise to show that any automorphism that sends transpositions to transpositions is inner.)
 	\end{subexercises}
@@ -426,19 +426,19 @@
 	\item This is similar to (b) in the previous exercise.
 	By \exref{4.3.33}, the formulas for each conjugacy class is given by
 	\[
-		|\mathcal K| = \binom 62 = 15, \quad \text{and} \quad |\mathcal K'| = \frac{6!}{2^k k! (6 - 2k)!}
+		|\kcal| = \binom 62 = 15, \quad \text{and} \quad |\kcal'| = \frac{6!}{2^k k! (6 - 2k)!}
 	\]
 	for some $k \geq 2$.
 	Since we are working in $S_6$, we only need to check $k = 2$ and $k = 3$.
 	For $k = 2$, we have
 	\[
-		|\mathcal K'| = \frac{6!}{2^2 \cdot 2! \cdot 2!} = 45 \neq 15 = |\mathcal K|.
+		|\kcal'| = \frac{6!}{2^2 \cdot 2! \cdot 2!} = 45 \neq 15 = |\kcal|.
 	\]
 	For $k = 3$, we have
 	\[
-		|\mathcal K'| = \frac{6!}{2^3 \cdot 3! \cdot 0!} = 15 = |\mathcal K|.
+		|\kcal'| = \frac{6!}{2^3 \cdot 3! \cdot 0!} = 15 = |\kcal|.
 	\]
-	Therefore, $|\mathcal K| \neq |\mathcal K'|$ unless $\mathcal K'$ is the conjugacy class of products of three disjoint transpositions.
+	Therefore, $|\kcal| \neq |\kcal'|$ unless $\kcal'$ is the conjugacy class of products of three disjoint transpositions.
 	Hence, by (a) in the previous exercise, $\aut(S_6)$ has a subgroup of index at most 2 which sends transpositions to transpositions.
 	\item Following the same steps as in (c) and (d) of the previous exercise, we can show that any automorphism that sends transpositions to transpositions is inner.
 	Therefore, by (a), we have $|\aut(S_6) : \inn(S_6)| \leq 2$.

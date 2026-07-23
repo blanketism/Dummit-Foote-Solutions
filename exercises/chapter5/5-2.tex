@@ -228,8 +228,8 @@
 \end{exercise}
 
 \begin{sol}
-    It is easy to see that $kA = k\z \times \cdots \times k\z$.
-	Since $\z$ is Abelian, then $k\z \nsub \z$.
+    It is easy to see that $kA = k\zbb \times \cdots \times k\zbb$.
+	Since $\zbb$ is Abelian, then $k\zbb \nsub \zbb$.
 	By \exref{5.1.14}, we have $A/kA \cong \intmod[k] \times \cdots \times \intmod[k].$
 \end{sol}
 
@@ -316,8 +316,8 @@
 \end{sol}
 
 \begin{spex}[5.2.14]
-    For any group $G$ define the \emph{dual group} of $G$ (denoted $\wh{G}$) to be the set of all homomorphisms from $G$ into the multiplicative group of roots of unity in $\c$.
-	Define a group operation in $\wh{G}$ by pointwise multiplication of functions: if $\chi, \psi$ are homomorphisms from $G$ into the group of roots of unity then $\chi\psi$ is the homomorphism given by $(\chi\psi)(g) = \chi(g)\psi(g)$ for all $g \in G$, where the latter multiplication takes place in $\c$.
+    For any group $G$ define the \emph{dual group} of $G$ (denoted $\wh{G}$) to be the set of all homomorphisms from $G$ into the multiplicative group of roots of unity in $\cbb$.
+	Define a group operation in $\wh{G}$ by pointwise multiplication of functions: if $\chi, \psi$ are homomorphisms from $G$ into the group of roots of unity then $\chi\psi$ is the homomorphism given by $(\chi\psi)(g) = \chi(g)\psi(g)$ for all $g \in G$, where the latter multiplication takes place in $\cbb$.
     \begin{subexercises}
         \item Show that this operation on $\wh{G}$ makes $\wh{G}$ into an Abelian group. [Show that the identity is the map $g \mapsto 1$ for all $g \in G$ and the inverse of $\chi \in \wh{G}$ is the map $g \mapsto \chi(g)^{-1}$.]
         \item If $G$ is a finite Abelian group, prove that $\wh{G} \cong G$. [Write $G$ as $\langle x_1 \rangle \times \cdots \times \langle x_r \rangle$ and if $n_i = |x_i|$ define $\chi_i$ to be the homomorphism which sends $x_i$ to $e^{2\pi i/n_i}$ and sends $x_j$ to $1$, for all $j \neq i$.
@@ -326,11 +326,11 @@
 \end{spex}
 
 \begin{solenum}
-    \item Multiplication in $\c$ is already associative and commutative, so pointwise multiplication of functions is also associative and commutative.
-	The map $\ep : G \to \c$ given by $\ep(g) = 1$ for all $g \in G$ is a homomorphism, since $\ep(gh) = 1 = 1 \cdot 1 = \ep(g)\ep(h)$ for all $g, h \in G$, and 1 is a root of unity.
+    \item Multiplication in $\cbb$ is already associative and commutative, so pointwise multiplication of functions is also associative and commutative.
+	The map $\ep : G \to \cbb$ given by $\ep(g) = 1$ for all $g \in G$ is a homomorphism, since $\ep(gh) = 1 = 1 \cdot 1 = \ep(g)\ep(h)$ for all $g, h \in G$, and 1 is a root of unity.
 	Moreover, for any $\chi \in \wh G$, then $(\chi\ep)(g) = \chi(g)\ep(g) = \chi(g) \cdot 1 = \chi(g)$ for all $g \in G$.
 	Thus, $\ep$ is the identity element of $\wh{G}$.
-	Finally, if $\chi \in \wh{G}$, then the map $\chi^{-1} : G \to \c$ given by $\chi^{-1}(g) = \chi(g)^{-1}$ is a homomorphism, since $\chi^{-1}(gh) = \chi(gh)^{-1} = (\chi(g)\chi(h))^{-1} = \chi(g)^{-1}\chi(h)^{-1} = \chi^{-1}(g)\chi^{-1}(h)$ for all $g, h \in G$, and $\chi(g)^{-1}$ is a root of unity since $\chi(g)$ is a root of unity.
+	Finally, if $\chi \in \wh{G}$, then the map $\chi^{-1} : G \to \cbb$ given by $\chi^{-1}(g) = \chi(g)^{-1}$ is a homomorphism, since $\chi^{-1}(gh) = \chi(gh)^{-1} = (\chi(g)\chi(h))^{-1} = \chi(g)^{-1}\chi(h)^{-1} = \chi^{-1}(g)\chi^{-1}(h)$ for all $g, h \in G$, and $\chi(g)^{-1}$ is a root of unity since $\chi(g)$ is a root of unity.
 	Moreover, $\chi\chi^{-1} = \ep$, so $\chi^{-1}$ is the inverse of $\chi$ in $\wh{G}$.
     \item To see that $\chi_i$ has order $n_i$ in $\wh G$, let $g = x_1^{s_1} \cdots x_r^{s_r} \in G$.
 	Then
@@ -423,10 +423,10 @@
     Let $A$ be a finitely generated Abelian group.
 	By Theorem 5.5, we can write $A$ as a direct product of cyclic groups:
     \[
-    	A \cong \z^r \times Z_{n_1} \times Z_{n_2} \times \cdots \times Z_{n_t},
+    	A \cong \zbb^r \times Z_{n_1} \times Z_{n_2} \times \cdots \times Z_{n_t},
     \]
     where $n_i > 1$ for all $i$ and $r \geq 0$.
-	For $r > 0$, observe that $\z$ is not divisible, since there is no $x \in \z$ such that $2x = 1$.
+	For $r > 0$, observe that $\zbb$ is not divisible, since there is no $x \in \zbb$ such that $2x = 1$.
 	For $r = 0$, observe that $A$ is a finite Abelian group.
 	By \exref{2.4.19}, finite Abelian groups are not divisible.
 	Thus, no finitely generated Abelian group is divisible.

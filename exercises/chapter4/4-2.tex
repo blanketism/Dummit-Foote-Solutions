@@ -179,13 +179,13 @@
 \begin{solenum}
 	\item This is done in \exref{4.2.4}.
 	\item Let $Q_8$ act on a set $A$ of order $n \leq 7$.
-	For any $a \in A$, consider the orbit $\oo_a$ of $a$ under this action.
-	By Proposition 4.2, we have $|\oo_a| = |Q_8 : (Q_8)_a|$, where $(Q_8)_a$ is the stabilizer of $a$ in $Q_8$.
-	Since $|\oo_a|$ divides $|A| \leq 7$, then $|\oo_a|$ must be 1, 2, 4, or 7.
-	However, since $Q_8$ has no subgroup of index 7, then $|\oo_a|$ cannot be 7.
-	If $|\oo_a| = 4$, then $(Q_8)_a$ has order 2, but the only subgroup of order 2 in $Q_8$ is $\langle -1 \rangle$.
-	If $|\oo_a| = 2$, then $(Q_8)_a$ has order 4, and the only subgroups of order 4 in $Q_8$ are $\langle i \rangle$, $\langle j \rangle$, and $\langle k \rangle$, all of which contain $\langle -1 \rangle$.
-	If $|\oo_a| = 1$, then $(Q_8)_a = Q_8$, which also contains $\langle -1 \rangle$.
+	For any $a \in A$, consider the orbit $\ocal_a$ of $a$ under this action.
+	By Proposition 4.2, we have $|\ocal_a| = |Q_8 : (Q_8)_a|$, where $(Q_8)_a$ is the stabilizer of $a$ in $Q_8$.
+	Since $|\ocal_a|$ divides $|A| \leq 7$, then $|\ocal_a|$ must be 1, 2, 4, or 7.
+	However, since $Q_8$ has no subgroup of index 7, then $|\ocal_a|$ cannot be 7.
+	If $|\ocal_a| = 4$, then $(Q_8)_a$ has order 2, but the only subgroup of order 2 in $Q_8$ is $\langle -1 \rangle$.
+	If $|\ocal_a| = 2$, then $(Q_8)_a$ has order 4, and the only subgroups of order 4 in $Q_8$ are $\langle i \rangle$, $\langle j \rangle$, and $\langle k \rangle$, all of which contain $\langle -1 \rangle$.
+	If $|\ocal_a| = 1$, then $(Q_8)_a = Q_8$, which also contains $\langle -1 \rangle$.
 	Therefore, in all cases, the stabilizer $(Q_8)_a$ contains $\langle -1 \rangle$.
 	Since this holds for all $a \in A$, then $\langle -1 \rangle$ is contained in the kernel of the action.
 	The action is not faithful, hence $Q_8$ cannot be isomorphic to a subgroup of $S_n$ for any $n \leq 7$.
@@ -204,7 +204,7 @@
 \end{sol}
 
 \begin{exercise}[4.2.9]
-	Prove that if $p$ is a prime and $G$ is a group of order $p^\alpha$ for some $\alpha \in \z^+$, then every subgroup of index $p$ is normal in $G$.
+	Prove that if $p$ is a prime and $G$ is a group of order $p^\alpha$ for some $\alpha \in \zbb^+$, then every subgroup of index $p$ is normal in $G$.
 	Deduce that every group of order $p^2$ has a normal subgroup of order $p$.
 \end{exercise}
 
@@ -243,7 +243,7 @@
 	Therefore, $H$ is not normal in $G$.
 
 	To classify groups of order 6, let $G$ be a group of order 6.
-	If $G$ is Abelian, then $G \cong \z_6 \cong \z_2 \times \z_3$.
+	If $G$ is Abelian, then $G \cong \zbb_6 \cong \zbb_2 \times \zbb_3$.
 	If $G$ is non-Abelian, then by the above result, $G$ has a nonnormal subgroup $H$ of order 2.
 	Let $K$ be the subgroup of order 3.
 	Then $G = HK$.
@@ -263,10 +263,10 @@
 \begin{sol}
 	Let $x \in G$ with $\abs x = n$.
 	Consider the action of $\langle x \rangle$ on $G$ by left multiplication.
-	The orbit of any $g \in G$ under this action is $\oo_g = \set{x^k g \mid k = 0, 1, \ldots, n-1}$.
-	Since $\abs x = n$, then $|\oo_g| = n$ for all $g \in G$.
-	By Proposition 4.2, we have $|\oo_g| = |\langle x \rangle : (\langle x \rangle)_g|$, where $(\langle x \rangle)_g$ is the stabilizer of $g$ in $\langle x \rangle$.
-	Since $|\oo_g| = n$, then $(\langle x \rangle)_g$ is trivial for all $g \in G$.
+	The orbit of any $g \in G$ under this action is $\ocal_g = \set{x^k g \mid k = 0, 1, \ldots, n-1}$.
+	Since $\abs x = n$, then $|\ocal_g| = n$ for all $g \in G$.
+	By Proposition 4.2, we have $|\ocal_g| = |\langle x \rangle : (\langle x \rangle)_g|$, where $(\langle x \rangle)_g$ is the stabilizer of $g$ in $\langle x \rangle$.
+	Since $|\ocal_g| = n$, then $(\langle x \rangle)_g$ is trivial for all $g \in G$.
 	Therefore, the orbits of this action partition $G$ into subsets of size $n$.
 	Since $|G| = mn$, there are exactly $m$ such orbits.
 	Each orbit corresponds to an $n$-cycle in the permutation $\pi(x)$.

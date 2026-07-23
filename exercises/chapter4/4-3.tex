@@ -60,21 +60,21 @@ Let $G$ be a group.
 
 \begin{sol}
 	We first prove a (somewhat) trivial idea: if $G$ and $H$ are groups, let $g \in G$ and $h \in H$.
-	Let $\kk_g$ and $\kk_h$ be the conjugacy classes of $g$ in $G$ and $h$ in $H$ respectively.
-	Then $\kk_{(g,h)} = \kk_g \times \kk_h$ is the conjugacy class of $(g,h)$ in $G \times H$.
+	Let $\kcal_g$ and $\kcal_h$ be the conjugacy classes of $g$ in $G$ and $h$ in $H$ respectively.
+	Then $\kcal_{(g,h)} = \kcal_g \times \kcal_h$ is the conjugacy class of $(g,h)$ in $G \times H$.
 	To see this, note that for any $(x,y) \in G \times H$, we have
 	\[
-		(x,y)(g,h)(x,y)\inv = (xgx\inv, yhy\inv) \in \kk_g \times \kk_h.
+		(x,y)(g,h)(x,y)\inv = (xgx\inv, yhy\inv) \in \kcal_g \times \kcal_h.
 	\]
-	Conversely, for any $(g', h') \in \kk_g \times \kk_h$, there exist $x \in G$ and $y \in H$ such that $g' = xgx\inv$ and $h' = yhy\inv$.
+	Conversely, for any $(g', h') \in \kcal_g \times \kcal_h$, there exist $x \in G$ and $y \in H$ such that $g' = xgx\inv$ and $h' = yhy\inv$.
 	Therefore, $(g', h') = (x,y)(g,h)(x,y)\inv$, so $(g', h')$ is in the conjugacy class of $(g,h)$ in $G \times H$.
 	This result shows two important things: the conjugacy classes of $G \times H$ are precisely the products of the conjugacy classes of $G$ and $H$, and the size of the conjugacy class of $(g,h)$ in $G \times H$ is the product of the sizes of the conjugacy classes of $g$ in $G$ and $h$ in $H$.
 	We now use this to answer the question.
 	\begin{subexercises}
 		\item Let $Z_2 = \gen x$.
-		The conjugacy classes $\kk_1$ and $\kk_x$ of $Z_2$ have sizes 1 and 1 respectively.
+		The conjugacy classes $\kcal_1$ and $\kcal_x$ of $Z_2$ have sizes 1 and 1 respectively.
 		For $S_3$, the partitions of 3 are 3 1-cycles, 2-cycle and 1-cycle, and a 3-cycle with representatives $1$, $(1\ 2)$, and $(1\ 2\ 3)$ respectively.
-		Since $C_{S_3}((1\ 2)) = \gen{(1\ 2)}$ and $C_{S_3}((1\ 2\ 3)) = \gen{(1\ 2\ 3)}$, then the conjugacy classes $\kk_1$, $\kk_{(1\ 2)}$, and $\kk_{(1\ 2\ 3)}$ of $S_3$ have sizes 1, 3, and 2 respectively.
+		Since $C_{S_3}((1\ 2)) = \gen{(1\ 2)}$ and $C_{S_3}((1\ 2\ 3)) = \gen{(1\ 2\ 3)}$, then the conjugacy classes $\kcal_1$, $\kcal_{(1\ 2)}$, and $\kcal_{(1\ 2\ 3)}$ of $S_3$ have sizes 1, 3, and 2 respectively.
 		Therefore, $Z_2 \times S_3$ has 6 conjugacy classes of size 1, 3, 2, 1, 3, and 2 respectively.
 		\item By the above, $S_3$ has 3 conjugacy classes of sizes 1, 3, and 2 respectively.
 		Then $S_3 \times S_3$ has 9 conjugacy classes with sizes $1, 3, 2, 3, 9, 6, 2, 6,$ and $4$ respectively.
@@ -109,11 +109,11 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-	Let $\kk_g$ be the conjugacy class of some $g \in G$.
-	By Proposition 4.6, we have $|\kk_g| = |G : C_G(g)|$.
+	Let $\kcal_g$ be the conjugacy class of some $g \in G$.
+	By Proposition 4.6, we have $|\kcal_g| = |G : C_G(g)|$.
 	Since $Z(G) \leq C_G(g)$ for all $g \in G$, Lagrange's Theorem shows that $|Z(G)|$ divides $|C_G(g)|$.
 	Therefore, $|G : C_G(g)|$ divides $|G : Z(G)| = n$.
-	Hence, $|\kk_g| \leq n$.
+	Hence, $|\kcal_g| \leq n$.
 \end{sol}
 
 \begin{spex}[4.3.6]
@@ -136,7 +136,7 @@ Let $G$ be a group.
 	Since $\langle g \rangle \leq C_G(g)$, then $|C_G(g)|$ is 3, 5, or 15 by Lagrange's Theorem.
 	If $|C_G(g)| = 15$, then $C_G(g) = G$, so $g \in Z(G)$, a contradiction.
 	Therefore, $|C_G(g)|$ is 3 or 5 for all non-identity $g \in G$.
-	By Proposition 4.6, we have $|\kk_g| = |G : C_G(g)|$, so that $|\kk_g|$ is 5 or 3 respectively.
+	By Proposition 4.6, we have $|\kcal_g| = |G : C_G(g)|$, so that $|\kcal_g|$ is 5 or 3 respectively.
 	The identity element forms a conjugacy class of size 1, and the class equation must involve a summation of sizes 3 and 5 that adds to 14.
 	The only such combination is three classes of size 3 and one class of size 5.
 	Therefore, the class equation of $G$ is $15 = 1 + 3 + 3 + 3 + 5$.
@@ -328,9 +328,9 @@ Let $G$ be a group.
 \begin{sol}
 	Let $G$ be a finite group with exactly two conjugacy classes.
 	One of these classes must be $\set{1}$, the identity element.
-	Let $\kk$ be the other conjugacy class, and let $g \in \kk$.
-	By Proposition 4.6, we have $|\kk| = |G : C_G(g)|$.
-	Since there are only two conjugacy classes, then $|\kk| = |G| - 1$.
+	Let $\kcal$ be the other conjugacy class, and let $g \in \kcal$.
+	By Proposition 4.6, we have $|\kcal| = |G : C_G(g)|$.
+	Since there are only two conjugacy classes, then $|\kcal| = |G| - 1$.
 	Therefore, $|G : C_G(g)| = |G| - 1$, which implies that $|C_G(g)| = |G|/(|G| - 1)$.
 	Since $|C_G(g)|$ is an integer, then $|G| - 1$ divides $|G|$.
 	This is only possible if $|G| - 1 = 1$, so that $|G| = 2$.
@@ -422,45 +422,45 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}[4.3.19]
-	Assume $H$ is a normal subgroup of $G$, $\kk$ is a conjugacy class of $G$ contained in $H$ and $x \in \kk$.
-	Prove that $\kk$ is a union of $k$ conjugacy classes of equal size in $H$, where $k = |G : HC_G(x)|$.
+	Assume $H$ is a normal subgroup of $G$, $\kcal$ is a conjugacy class of $G$ contained in $H$ and $x \in \kcal$.
+	Prove that $\kcal$ is a union of $k$ conjugacy classes of equal size in $H$, where $k = |G : HC_G(x)|$.
 	Deduce that a conjugacy class in $S_n$ which consists of even permutations is either a single conjugacy class under the action of $A_n$ or is a union of two classes of the same size in $A_n$. [Let $A = C_G(x)$ and $B = H$ so $A \cap B = C_H(x)$.
 	Draw the lattice diagram associated to the Second Isomorphism Theorem and interpret the appropriate indices.
 	See also \exref{4.1.9}.]
 \end{exercise}
 
 \begin{sol}
-	Let $G$ act on $\kk$ by conjugation.
-	Since $\kk$ is a conjugacy class of $G$, this action is transitive.
-	Because $H \nsub G$ and $\kk \subseteq H$, then $H$ also acts on $\kk$ by conjugation.
-	Let $\oo$ be one such orbit of this action, and suppose $y \in \oo$.
-	By Proposition 4.6, we have $|\oo| = |H : C_H(y)|$.
+	Let $G$ act on $\kcal$ by conjugation.
+	Since $\kcal$ is a conjugacy class of $G$, this action is transitive.
+	Because $H \nsub G$ and $\kcal \subseteq H$, then $H$ also acts on $\kcal$ by conjugation.
+	Let $\ocal$ be one such orbit of this action, and suppose $y \in \ocal$.
+	By Proposition 4.6, we have $|\ocal| = |H : C_H(y)|$.
 	By normality of $H$ in $G$, we have $C_H(y) = C_G(y) \cap H$.
 	Using the Second Isomorphism Theorem, we have
 	\[
 		HC_G(y)/C_G(y) \cong H/C_H(y)
 	\]
 	so that $|H : C_H(y)| = |HC_G(y) : C_G(y)|$.
-	Therefore, $|\oo| = |HC_G(y) : C_G(y)|$.
-	Using \exref{4.1.9}, we know that each orbit of $H$ on $\kk$ has the same size, so every orbit has size $|HC_G(y) : C_G(y)|$.
+	Therefore, $|\ocal| = |HC_G(y) : C_G(y)|$.
+	Using \exref{4.1.9}, we know that each orbit of $H$ on $\kcal$ has the same size, so every orbit has size $|HC_G(y) : C_G(y)|$.
 	Suppose there are $k$ orbits.
 	Then
 	\[
-		|\kk| = k|HC_G(y) : C_G(y)|.
+		|\kcal| = k|HC_G(y) : C_G(y)|.
 	\]
-	By Proposition 4.6, we also have $|\kk| = |G : C_G(y)|$.
+	By Proposition 4.6, we also have $|\kcal| = |G : C_G(y)|$.
 	Therefore,
 	\[
 		|G : C_G(y)| = k|HC_G(y) : C_G(y)|.
 	\]
 	Dividing both sides by $|HC_G(y) : C_G(y)|$, we obtain $k = |G : HC_G(y)|$.
-	Hence, $\kk$ is a union of $k$ conjugacy classes of equal size in $H$.
+	Hence, $\kcal$ is a union of $k$ conjugacy classes of equal size in $H$.
 
-	Now suppose $\kk \subseteq A_n$ is a conjugacy class of $S_n$ consisting of even permutations.
-	Let $x \in \kk$.
-	Applying the preceding result with $H = A_n$, we have that $\kk$ is a union of $k$ conjugacy classes of equal size in $A_n$, where $k = |S_n : A_nC_{S_n}(x)|$.
+	Now suppose $\kcal \subseteq A_n$ is a conjugacy class of $S_n$ consisting of even permutations.
+	Let $x \in \kcal$.
+	Applying the preceding result with $H = A_n$, we have that $\kcal$ is a union of $k$ conjugacy classes of equal size in $A_n$, where $k = |S_n : A_nC_{S_n}(x)|$.
 	Since $|S_n : A_n| = 2$, then $k$ is either 1 or 2.
-	Therefore, $\kk$ is either a single conjugacy class under the action of $A_n$ or is a union of two classes of the same size in $A_n$.
+	Therefore, $\kcal$ is either a single conjugacy class under the action of $A_n$ or is a union of two classes of the same size in $A_n$.
 \end{sol}
 
 \begin{exercise}[4.3.20]
@@ -482,9 +482,9 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{spex}[4.3.21]
-	Let $\kk$ be a conjugacy class in $S_n$ and assume that $\kk \subseteq A_n$.
+	Let $\kcal$ be a conjugacy class in $S_n$ and assume that $\kcal \subseteq A_n$.
 	Show $\sigma \in S_n$ does \emph{not} commute with any odd permutation if and only if the cycle type of $\sigma$ consists of distinct odd integers.
-	Deduce that $\kk$ consists of two conjugacy clases in $A_n$ if and only if the cycle type of an element of $\kk$ consists of distinct odd integers. [Assume first that $\sigma \in \kk$ does not commute with any odd permutation.
+	Deduce that $\kcal$ consists of two conjugacy clases in $A_n$ if and only if the cycle type of an element of $\kcal$ consists of distinct odd integers. [Assume first that $\sigma \in \kcal$ does not commute with any odd permutation.
 	Observe that $\sigma$ commutes with each individual cycle in its cycle decomposition---use this to show that all its cycles must be of odd length.
 	If two cycles have the same odd length, $k$, find a product of $k$ transpositions which interchanges them and commutes with $\sigma$.
 	Conversely, if the cycle type of $\sigma$ consists of distinct integers, prove that $\sigma$ commutes \emph{only} with the group generated by the cycles in its cycle decomposition.]
@@ -571,16 +571,16 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}[4.3.25]
-	Let $G = \gl_2(\c)$ and let
+	Let $G = \gl_2(\cbb)$ and let
 	\[
 		H = \set*{\left.
 		\begin{pmatrix}
 			a & b \\
 			0 & c
-		\end{pmatrix}~\right| a, b, c \in \c, ac \neq 0
+		\end{pmatrix}~\right| a, b, c \in \cbb, ac \neq 0
 		}.
 	\]
-	Prove that every element of $G$ is conjugate to some element of the subgroup $H$ and deduce that $G$ is the union of conjugates of $H$. [Show that every element of $\gl_2(\c)$ has an eigenvector.]
+	Prove that every element of $G$ is conjugate to some element of the subgroup $H$ and deduce that $G$ is the union of conjugates of $H$. [Show that every element of $\gl_2(\cbb)$ has an eigenvector.]
 \end{exercise}
 
 \begin{sol}
@@ -592,9 +592,9 @@ Let $G$ be a group.
 		\end{pmatrix}
 	\]
 	and consider the characteristic polynomial $\chi_X(t) = \det(X - tI) = t^2 - (a + d)t + (ad - bc)$.
-	Since $\c$ is closed under complex multiplication, $\chi_X(t)$ has at least one root $\lambda \in \c$.
-	Therefore, there exists a nonzero vector $\b v \in \c^2$ such that $X\b v = \lambda \b v$, so that $\b v$ is an eigenvector of $X$ corresponding to the eigenvalue $\lambda$.
-	We may extend $\b v$ to a basis $\set{\b v, \b w}$ of $\c^2$.
+	Since $\cbb$ is closed under complex multiplication, $\chi_X(t)$ has at least one root $\lambda \in \cbb$.
+	Therefore, there exists a nonzero vector $\b v \in \cbb^2$ such that $X\b v = \lambda \b v$, so that $\b v$ is an eigenvector of $X$ corresponding to the eigenvalue $\lambda$.
+	We may extend $\b v$ to a basis $\set{\b v, \b w}$ of $\cbb^2$.
 	Let $P$ be the matrix whose columns are $\b v$ and $\b w$.
 	Then $P$ is invertible, and we have
 	\[
@@ -603,7 +603,7 @@ Let $G$ be a group.
 			0 & \beta
 		\end{pmatrix} \in H.
 	\]
-	for some $\alpha, \beta \in \c$ such that $X\b w = \alpha \b v + \beta \b w$.
+	for some $\alpha, \beta \in \cbb$ such that $X\b w = \alpha \b v + \beta \b w$.
 	Therefore, every element of $G$ is conjugate to some element of the subgroup $H$, hence every element of $G$ is contained in some conjugate of $H$.
 	Thus,
 	\[
@@ -738,7 +738,7 @@ Let $G$ be a group.
 	\[
 		r^jsr^mr^{-j} = sr^{m - 2j}, \quad \text{and} \quad sr^jsr^mr^{-j}s = r^{-(m - 2j)}
 	\]
-	so that the conjugacy class of $sr^m$ is $\set{sr^{m - 2j} \mid j \in \z}$.
+	so that the conjugacy class of $sr^m$ is $\set{sr^{m - 2j} \mid j \in \zbb}$.
 	If $m$ is even, then this conjugacy class is $\set{sr^{2b} \mid b = 1, \ldots, k}$; if $m$ is odd, then this conjugacy class is $\set{sr^{2b - 1} \mid b = 1, \ldots, k}$.
 	Therefore, the conjugacy classes in $D_{2n}$ when $n$ is even are $\set 1, \set{r^k}, \set{r^{\pm 1}}, \set{r^{\pm 2}}, \ldots, \set{r^{\pm(k - 1)}}, \set{sr^{2b} \mid b = 1, \ldots, k}$ and $\set{sr^{2b - 1} \mid b = 1, \ldots, k}$.
 	Lastly, the class equation for $D_{2n}$ is
@@ -766,7 +766,7 @@ Let $G$ be a group.
 	\[
 		r^jsr^mr^{-j} = sr^{m - 2j}, \quad \text{and} \quad sr^jsr^mr^{-j}s = r^{-(m - 2j)}
 	\]
-	so that the conjugacy class of $sr^m$ is $\set{sr^{m - 2j} \mid j \in \z}$.
+	so that the conjugacy class of $sr^m$ is $\set{sr^{m - 2j} \mid j \in \zbb}$.
 	Since $n$ is odd, this conjugacy class is $\set{sr^b \mid b = 1, \ldots, n}$.
 	Therefore, the conjugacy classes in $D_{2n}$ when $n$ is odd are $\set{1}, \set{r^{\pm 1}}, \set{r^{\pm 2}}, \ldots, \set{r^{\pm k}}$, and $\set{sr^b \mid b = 1, \ldots, n}$.
 	Lastly, the class equation for $D_{2n}$ is

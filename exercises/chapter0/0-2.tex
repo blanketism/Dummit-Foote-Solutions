@@ -33,8 +33,8 @@
 \end{exercise}
 
 \begin{sol}
-    Since $k \mid a$ and $k \mid b$, there exist $x, y \in \z$ such that $a = kx$ and $b = ky$.
-	Then for any $s, t \in \z$, we have
+    Since $k \mid a$ and $k \mid b$, there exist $x, y \in \zbb$ such that $a = kx$ and $b = ky$.
+	Then for any $s, t \in \zbb$, we have
     \[
     	as + bt = (kx)s + (ky)t = k(xs + yt),
     \]
@@ -94,7 +94,7 @@
 \end{sol}
 
 \begin{exercise}[0.2.6]
-    Prove the Well Ordering Property of $\z$ by induction, and prove the minimal element is unique.
+    Prove the Well Ordering Property of $\zbb$ by induction, and prove the minimal element is unique.
 \end{exercise}
 
 \begin{sol}
@@ -117,7 +117,7 @@
     Suppose there existed $a, b$ such that $a^2 = pb^2$.
 	If $(a, b) \neq 1$, divide both $a$ and $b$ by $(a, b)$ to get relatively prime integers.
 	Then $p \mid a^2$, which implies $p \mid a$.
-	Put $a = pk$ for $k \in \z$.
+	Put $a = pk$ for $k \in \zbb$.
 	Then
     \[
     	a^2 = (pk)^2 = p^2k^2 = pb^2,
@@ -187,6 +187,6 @@
     where $j \leq k$ and $1 \leq \beta_i \leq \alpha_i$ for all $1 \leq i \leq j$.
 	Then $\phi(d) \mid \phi(n)$, since
     \[
-    	\frac{\phi(n)}{\phi(d)} = \prod_{i = 1}^j \frac{p_i^{\alpha_i - 1}(p_i - 1)}{p_i^{\beta_i - 1}(p_i - 1)} \cdot \prod_{i = j+1}^k p_i^{\alpha_i - 1}(p_i - 1) = \prod_{i = 1}^j p_i^{\alpha_i - \beta_i} \cdot \prod_{i = j+1}^k p_i^{\alpha_i - 1}(p_i - 1) \in \z. \qh
+    	\frac{\phi(n)}{\phi(d)} = \prod_{i = 1}^j \frac{p_i^{\alpha_i - 1}(p_i - 1)}{p_i^{\beta_i - 1}(p_i - 1)} \cdot \prod_{i = j+1}^k p_i^{\alpha_i - 1}(p_i - 1) = \prod_{i = 1}^j p_i^{\alpha_i - \beta_i} \cdot \prod_{i = j+1}^k p_i^{\alpha_i - 1}(p_i - 1) \in \zbb. \qh
     \]
 \end{sol}

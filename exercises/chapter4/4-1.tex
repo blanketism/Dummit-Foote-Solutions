@@ -89,7 +89,7 @@ Let $G$ be a group and let $A$ be a nonempty set.
 	Let \(S_3\) act on the set \(\Omega\) of ordered pairs \(\set{(i,j) \mid 1 \le i,j \le 3}\) by \(\sigma((i,j)) = (\sigma(i), \sigma(j))\).
 	Find the orbits of \(S_3\) on \(\Omega\).
 	For each \(\sigma \in S_3\) find the cycle decomposition of \(\sigma\) under this action (i.e., find its cycle decomposition when \(\sigma\) is considered as an element of \(S_9\)—first fix a labeling of these nine ordered pairs).
-	For each orbit \(\mathcal{O}\) of $S_3$ acting on these nine points, pick some \(a \in \mathcal{O}\) and find the stabilizer of \(a\) in \(S_3\).
+	For each orbit \(\ocal\) of $S_3$ acting on these nine points, pick some \(a \in \ocal\) and find the stabilizer of \(a\) in \(S_3\).
 \end{exercise}
 
 \begin{sol}
@@ -110,10 +110,10 @@ Let $G$ be a group and let $A$ be a nonempty set.
     \end{itemize}
 	We then have the two orbits 
 	\[
-		\oo_1 = \set{(i, i) \mid i \in \set{1, 2, 3}} \quad \text{and} \quad \oo_2 = \set{(i, j) \mid i \neq j}
+		\ocal_1 = \set{(i, i) \mid i \in \set{1, 2, 3}} \quad \text{and} \quad \ocal_2 = \set{(i, j) \mid i \neq j}
 	\]
 	of $S_3$ acting on $\Omega$.
-	Note that $|\oo_1| = 3$ and $|\oo_2| = 6$.
+	Note that $|\ocal_1| = 3$ and $|\ocal_2| = 6$.
 	Now for each $\sigma \in S_3$, we find its cycle decomposition as an element of $S_9$.
 	We describe how to compute one such cycle decomposition, and the rest follow similarly.
 	Consider $\sigma = (1 2 3) \in S_3$.
@@ -133,19 +133,19 @@ Let $G$ be a group and let $A$ be a nonempty set.
         \item $(1 2 3)$: $(1\ 2\ 3)(4\ 8\ 7)(5\ 9\ 6)$
         \item $(1 3 2)$: $(1\ 3\ 2)(4\ 7\ 8)(5\ 6\ 9)$
     \end{itemize}
-	For $\oo_1$, we pick $a = (1, 1)$.
+	For $\ocal_1$, we pick $a = (1, 1)$.
 	The only $\sigma \in S_3$ that fixes $(1, 1)$ is the identity permutation and $(2\ 3)$, so the stabilizer of $(1, 1)$ in $S_3$ is $\gen{(2\ 3)}$.
-	Moreover, we have $|G_a||\oo_1| = 2 \cdot 3 = 6 = |S_3|$ as expected.
-	For $\oo_2$, we pick $a = (1, 2)$.
+	Moreover, we have $|G_a||\ocal_1| = 2 \cdot 3 = 6 = |S_3|$ as expected.
+	For $\ocal_2$, we pick $a = (1, 2)$.
 	The only $\sigma \in S_3$ that fixes $(1, 2)$ is the identity permutation, so the stabilizer of $(1, 2)$ in $S_3$ is 1.
-	Again, $|G_a||\oo_2| = 1 \cdot 6 = 6 = |S_3|$.
+	Again, $|G_a||\ocal_2| = 1 \cdot 6 = 6 = |S_3|$.
 \end{sol}
 
 \begin{exercise}[4.1.5]
 	For each of parts (a) and (b) repeat the preceding exercise but with $S_3$ acting on the specified set:
 	\begin{subexercises}
 		\item the set of 27 triples \(\set{(i,j,k) \mid 1 \le i,j,k \le 3}\)
-		\item the set \(\mathcal{P}(\set{1,2,3}) - \set{\varnothing}\) of all 7 nonempty subsets of \(\set{1,2,3}\)
+		\item the set \(\pcal(\set{1,2,3}) - \set{\varnothing}\) of all 7 nonempty subsets of \(\set{1,2,3}\)
 	\end{subexercises}
 \end{exercise}
 
@@ -193,11 +193,11 @@ Let $G$ be a group and let $A$ be a nonempty set.
     \end{itemize}
 	The classification yields the following orbits of $S_3$ acting on $\Omega$:
 	\begin{itemize}
-		\item $\oo_1 = \set{(i, i, i) \mid i \in \set{1, 2, 3}}$ with order 3.
-		\item $\oo_2 = \set{(i, i, j) \mid i \neq j}$ with order 6.
-		\item $\oo_3 = \set{(i, j, i) \mid i \neq j}$ with order 6.
-		\item $\oo_4 = \set{(j, i, i) \mid i \neq j}$	with order 6.
-		\item $\oo_5 = \set{(i, j, k) \mid i, j, k \text{ distinct}}$ with order 6.
+		\item $\ocal_1 = \set{(i, i, i) \mid i \in \set{1, 2, 3}}$ with order 3.
+		\item $\ocal_2 = \set{(i, i, j) \mid i \neq j}$ with order 6.
+		\item $\ocal_3 = \set{(i, j, i) \mid i \neq j}$ with order 6.
+		\item $\ocal_4 = \set{(j, i, i) \mid i \neq j}$	with order 6.
+		\item $\ocal_5 = \set{(i, j, k) \mid i, j, k \text{ distinct}}$ with order 6.
 	\end{itemize}
 	The cycle decompositions for all elements of $S_3$ acting on $\Omega$ are as follows:
 	\begin{itemize}
@@ -208,17 +208,17 @@ Let $G$ be a group and let $A$ be a nonempty set.
 		\item $(1\ 2\ 3)$: $(1\ 14\ 27)(2\ 15\ 25)(3\ 13\ 26)(4\ 17\ 21)(5\ 18\ 19)(6\ 16\ 20)(7\ 11\ 24)(8\ 12\ 22)(9\ 10\ 23)$
 		\item $(1\ 3\ 2)$: $(1\ 27\ 14)(2\ 25\ 15)(3\ 26\ 13)(4\ 21\ 17)(5\ 19\ 18)(6\ 20\ 16)(7\ 24\ 11)(8\ 22\ 12)(9\ 23\ 10)$
 	\end{itemize}
-	For $\oo_1$, pick $a = (1\ 1\ 1)$.
+	For $\ocal_1$, pick $a = (1\ 1\ 1)$.
 	The elements that stabilize $a$ are the identity permutation and $(2\ 3)$, so the stabilizer of $a$ in $S_3$ is $\gen{(2\ 3)}$.
-	We have $|G_a||\oo_1| = 2 \cdot 3 = 6 = |S_3|$.
+	We have $|G_a||\ocal_1| = 2 \cdot 3 = 6 = |S_3|$.
 	For the other orbits, note that $S_3$ acts transitively on each of them, so the stabilizer of any chosen element in these orbits is trivial.
-	For example, for $\oo_2$, pick $a = (1\ 1\ 2)$.
+	For example, for $\ocal_2$, pick $a = (1\ 1\ 2)$.
 	The only element that stabilizes $a$ is the identity permutation, so the stabilizer of $a$ in $S_3$ is 1.
-	We have $|G_a||\oo_2| = 1 \cdot 6 = 6 = |S_3|$.
-	The same logic applies to $\oo_3$, $\oo_4$, and $\oo_5$.
+	We have $|G_a||\ocal_2| = 1 \cdot 6 = 6 = |S_3|$.
+	The same logic applies to $\ocal_3$, $\ocal_4$, and $\ocal_5$.
 	\item We begin by classifying the nonempty subsets of $\set{1, 2, 3}$.
 	There are three types of subsets: 1-element subsets, 2-element subsets, and the 3-element subset.
-	We now label the elements of $\mathcal{P}(\set{1, 2, 3}) - \set{\varnothing}$ as follows:
+	We now label the elements of $\pcal(\set{1, 2, 3}) - \set{\varnothing}$ as follows:
     \begin{itemize}
         \item $1 = \set{1}$
         \item $2 = \set{2}$
@@ -228,13 +228,13 @@ Let $G$ be a group and let $A$ be a nonempty set.
         \item $6 = \set{2, 3}$
         \item $7 = \set{1, 2, 3}$
     \end{itemize}
-	The classification yields the following orbits of $S_3$ acting on $\mathcal{P}(\set{1, 2, 3}) - \set{\varnothing}$:
+	The classification yields the following orbits of $S_3$ acting on $\pcal(\set{1, 2, 3}) - \set{\varnothing}$:
 	\begin{itemize}
-		\item $\oo_1 = \set{\{1}, \set{2}, \set{3}\}$ with order 3.
-		\item $\oo_2 = \set{\{1, 2}, \set{1, 3}, \set{2, 3}\}$ with order 3.
-		\item $\oo_3 = \set{\{1, 2, 3}\}$ with order 1.
+		\item $\ocal_1 = \set{\{1}, \set{2}, \set{3}\}$ with order 3.
+		\item $\ocal_2 = \set{\{1, 2}, \set{1, 3}, \set{2, 3}\}$ with order 3.
+		\item $\ocal_3 = \set{\{1, 2, 3}\}$ with order 1.
 	\end{itemize}
-	The cycle decompositions for all elements of $S_3$ acting on $\mathcal{P}(\set{1, 2, 3}) - \set{\varnothing}$ are as follows:
+	The cycle decompositions for all elements of $S_3$ acting on $\pcal(\set{1, 2, 3}) - \set{\varnothing}$ are as follows:
 	\begin{itemize}
 		\item $1 \in S_3$ is the same as $1 \in S_7$.
 		\item $(1\ 2)$: $(1\ 2)(5\ 6)$
@@ -243,14 +243,14 @@ Let $G$ be a group and let $A$ be a nonempty set.
 		\item $(1\ 2\ 3)$: $(1\ 2\ 3)(4\ 6\ 5)$
 		\item $(1\ 3\ 2)$: $(1\ 3\ 2)(4\ 5\ 6)$
 	\end{itemize}
-	For $\oo_1$, pick $a = \set{1}$.
+	For $\ocal_1$, pick $a = \set{1}$.
 	The only elements that stabilize $a$ are the identity permutation and $(2\ 3)$, so the stabilizer of $a$ in $S_3$ is $\gen{(2\ 3)}$.
-	We have $|G_a||\oo_1| = 2 \cdot 3 = 6 = |S_3|$.
-	For $\oo_2$, pick $a = \set{1, 2}$.
+	We have $|G_a||\ocal_1| = 2 \cdot 3 = 6 = |S_3|$.
+	For $\ocal_2$, pick $a = \set{1, 2}$.
 	The only elements that stabilize $a$ are the identity permutation and $(1\ 2)$, so the stabilizer of $a$ in $S_3$ is $\gen{(1\ 2)}$.
-	We have $|G_a||\oo_2| = 2 \cdot 3 = 6 = |S_3|$.
-	For $\oo_3$, note that $S_3$ acts trivially on this orbit, so the stabilizer of $\set{1, 2, 3}$ in $S_3$ is all of $S_3$.
-	We have $|G_a||\oo_3| = 6 \cdot 1 = 6 = |S_3|$.
+	We have $|G_a||\ocal_2| = 2 \cdot 3 = 6 = |S_3|$.
+	For $\ocal_3$, note that $S_3$ acts trivially on this orbit, so the stabilizer of $\set{1, 2, 3}$ in $S_3$ is all of $S_3$.
+	We have $|G_a||\ocal_3| = 6 \cdot 1 = 6 = |S_3|$.
 \end{solenum}
 
 \begin{exercise}[4.1.6]
@@ -381,35 +381,35 @@ Let $G$ be a group and let $A$ be a nonempty set.
 
 \begin{spex}[4.1.9]
 	[4.1.9] Assume $G$ acts transitively on the finite set $A$ and let $H$ be a normal subgroup of $G$.
-	Let $\mathcal{O}_1, \mathcal{O}_2, \ldots, \mathcal{O}_r$ be the distinct orbits of $H$ on $A$.
+	Let $\ocal_1, \ocal_2, \ldots, \ocal_r$ be the distinct orbits of $H$ on $A$.
 	\begin{subexercises}
-		\item Prove that $G$ permutes the sets $\mathcal{O}_1, \mathcal{O}_2, \ldots, \mathcal{O}_r$, in the sense that for each $g \in G$ and each $i \in \set{1,\ldots,r}$ there is a $j$ such that $g \mathcal{O}_i = \mathcal{O}_j$, where $g\mathcal{O} = \set{g \cdot a \mid a \in \mathcal{O}}$ (i.e., in the notation of Exercise 7 the sets $\mathcal{O}_1, \ldots, \mathcal{O}_r$ are blocks).
-		Prove that $G$ is transitive on $\set{\mathcal{O}_1, \ldots, \mathcal{O}_r}$.
+		\item Prove that $G$ permutes the sets $\ocal_1, \ocal_2, \ldots, \ocal_r$, in the sense that for each $g \in G$ and each $i \in \set{1,\ldots,r}$ there is a $j$ such that $g \ocal_i = \ocal_j$, where $g\ocal = \set{g \cdot a \mid a \in \ocal}$ (i.e., in the notation of Exercise 7 the sets $\ocal_1, \ldots, \ocal_r$ are blocks).
+		Prove that $G$ is transitive on $\set{\ocal_1, \ldots, \ocal_r}$.
 		Deduce that all orbits of $H$ on $A$ have the same cardinality.
-		\item Prove that if $a \in \mathcal{O}_1$ then $|\mathcal{O}_1| = |H : H \cap G_a|$ and prove that $r = |G : HG_a|$. [Draw the sublattice describing the Second Isomorphism Theorem for the subgroups $H$ and $G_a$ of $G$.
+		\item Prove that if $a \in \ocal_1$ then $|\ocal_1| = |H : H \cap G_a|$ and prove that $r = |G : HG_a|$. [Draw the sublattice describing the Second Isomorphism Theorem for the subgroups $H$ and $G_a$ of $G$.
 		Note that $H \cap G_a = H_a$.]
 	\end{subexercises}
 \end{spex}
 
 \begin{solenum}
-	\item Let $g \in G$ and $\oo_i$ be an orbit of $H$ on $A$.
-	Let $a \in \oo_i$ so that $\oo_i = H \cdot a = \set{h \cdot a \mid h \in H}$.
-	Consider the set $g\oo_i = \set{g \cdot (h \cdot a) \mid h \in H}$.
+	\item Let $g \in G$ and $\ocal_i$ be an orbit of $H$ on $A$.
+	Let $a \in \ocal_i$ so that $\ocal_i = H \cdot a = \set{h \cdot a \mid h \in H}$.
+	Consider the set $g\ocal_i = \set{g \cdot (h \cdot a) \mid h \in H}$.
 	Since $H$ is normal in $G$, then for any $h \in H$, we have $ghg\inv \in H$.
-	Then $g\oo_i = H \cdot (g \cdot a)$, which is the orbit of $H$ containing $g \cdot a$.
-	Therefore, there exists some $j$ such that $g\oo_i = \oo_j$.
+	Then $g\ocal_i = H \cdot (g \cdot a)$, which is the orbit of $H$ containing $g \cdot a$.
+	Therefore, there exists some $j$ such that $g\ocal_i = \ocal_j$.
 	
-	To show that $G$ is transitive on $\set{\oo_1, \ldots, \oo_r}$, let $\oo_i$ and $\oo_j$ be any two orbits of $H$ on $A$.
-	Since $G$ is transitive on $A$, then for some $a \in \oo_i$ and $b \in \oo_j$, there exists some $g \in G$ such that $g \cdot a = b$.
-	Then $g\oo_i$ is the orbit of $H$ containing $b$, hence $g\oo_i = \oo_j$.
-	Therefore, $G$ is transitive on $\set{\oo_1, \ldots, \oo_r}$.
-	Since $G$ is transitive on $\set{\oo_1, \ldots, \oo_r}$, then all orbits of $H$ on $A$ have the same cardinality.
-	\item Suppose $a \in \oo_1$.
-	By Proposition 4.2, we have $|\oo_1| = |H : H_a|$.
-	Since $H_a = H \cap G_a$, then $|\oo_1| = |H : H \cap G_a|$.
-	Moreover, the orbits of $H$ partition $A$ and have the same size by the previous solution, so we have $|A| = r|\oo_1|$.
+	To show that $G$ is transitive on $\set{\ocal_1, \ldots, \ocal_r}$, let $\ocal_i$ and $\ocal_j$ be any two orbits of $H$ on $A$.
+	Since $G$ is transitive on $A$, then for some $a \in \ocal_i$ and $b \in \ocal_j$, there exists some $g \in G$ such that $g \cdot a = b$.
+	Then $g\ocal_i$ is the orbit of $H$ containing $b$, hence $g\ocal_i = \ocal_j$.
+	Therefore, $G$ is transitive on $\set{\ocal_1, \ldots, \ocal_r}$.
+	Since $G$ is transitive on $\set{\ocal_1, \ldots, \ocal_r}$, then all orbits of $H$ on $A$ have the same cardinality.
+	\item Suppose $a \in \ocal_1$.
+	By Proposition 4.2, we have $|\ocal_1| = |H : H_a|$.
+	Since $H_a = H \cap G_a$, then $|\ocal_1| = |H : H \cap G_a|$.
+	Moreover, the orbits of $H$ partition $A$ and have the same size by the previous solution, so we have $|A| = r|\ocal_1|$.
 	By applying Proposition 4.2 again, we have $|A| = |G : G_a|$.
-	Therefore, $|G : G_a| = r|\oo_1| = r|H : H \cap G_a|$.
+	Therefore, $|G : G_a| = r|\ocal_1| = r|H : H \cap G_a|$.
 	By the Second Isomorphism Theorem, we also have that $H/(H \cap G_a) \cong HG_a/G_a$ so that $|H : H \cap G_a| = |HG_a : G_a|$.
 	Now recall by \exref{3.2.11} that $|G : K| = |G : H||H : K|$ for subgroups $K \leq H \leq G$.
 	Applying this to the subgroups $G_a \leq HG_a \leq G$, we have $|G : G_a| = |G : HG_a||HG_a : G_a| = |G : HG_a||H : H \cap G_a|.$ We then have $r|H : H \cap G_a| = |G : HG_a||H : H \cap G_a|$, or $r = |G : HG_a|$.
@@ -443,18 +443,18 @@ Let $G$ be a group and let $A$ be a nonempty set.
 \end{spex}
 
 \begin{solenum}
-	\item Let $\oo$ be the orbit containing $xK$ of $H$ acting by left multiplication on the set of left cosets of $K$.
-	Then $\oo = \set{hxK \mid h \in H}$, and let $\set{x_1K, \ldots, x_nK}$ be the distinct left cosets in $\oo$.
-	Let $\kk$ be the union of these left cosets, i.e., $\kk = \bigcup_1^n x_iK$.
+	\item Let $\ocal$ be the orbit containing $xK$ of $H$ acting by left multiplication on the set of left cosets of $K$.
+	Then $\ocal = \set{hxK \mid h \in H}$, and let $\set{x_1K, \ldots, x_nK}$ be the distinct left cosets in $\ocal$.
+	Let $\kcal$ be the union of these left cosets, i.e., $\kcal = \bigcup_1^n x_iK$.
 	
 	Now pick $y \in HxK$.
 	Then there exist $h \in H$ and $k \in K$ such that $y = hxk$.
-	Note that $hxK \in \oo$, so there exists some $i$ such that $hxK = x_iK$.
-	Therefore, $y = hxk \in x_iK \subseteq \kk$, hence $HxK \subseteq \kk$.
-	If $z \in \kk$, then there exists some $i$ and some $k' \in K$ such that $z = x_ik'$.
-	Since $x_iK \in \oo$, then there exists some $h' \in H$ such that $x_iK = h'xK$, hence $x_i = h'xk''$ for some $k'' \in K$.
-	Therefore, $z = x_ik' = h'xkk'' \in HxK$, so $\kk \subseteq HxK$.
-	We have shown that $HxK = \kk$, i.e., $HxK$ is the union of the left cosets $x_1K, \ldots, x_nK$.
+	Note that $hxK \in \ocal$, so there exists some $i$ such that $hxK = x_iK$.
+	Therefore, $y = hxk \in x_iK \subseteq \kcal$, hence $HxK \subseteq \kcal$.
+	If $z \in \kcal$, then there exists some $i$ and some $k' \in K$ such that $z = x_ik'$.
+	Since $x_iK \in \ocal$, then there exists some $h' \in H$ such that $x_iK = h'xK$, hence $x_i = h'xk''$ for some $k'' \in K$.
+	Therefore, $z = x_ik' = h'xkk'' \in HxK$, so $\kcal \subseteq HxK$.
+	We have shown that $HxK = \kcal$, i.e., $HxK$ is the union of the left cosets $x_1K, \ldots, x_nK$.
 	\item The proof is similar to that of part (a). 
 	\item Let $x, y \in G$.
 	Suppose $HxK \cap HyK \neq \varnothing$.
@@ -464,11 +464,11 @@ Let $G$ be a group and let $A$ be a nonempty set.
 	By symmetry, we also have $HxK \subseteq HyK$, so $HxK = HyK$.
 	We have shown that $HxK$ and $HyK$ are either the same set or are disjoint for all $x, y \in G$.
 	Since every element of $G$ is in some double coset of the form $HxK$, then the set of $HK$ double cosets partitions $G$.
-	\item Recall that the orbit of $xK$ under this action is $\oo = \set{hxK \mid h \in H}$.
-	By Proposition 4.2, we have $|\oo| = |H : H_{xK}|$, where $H_{xK}$ is the stabilizer of $xK$ in $H$.
+	\item Recall that the orbit of $xK$ under this action is $\ocal = \set{hxK \mid h \in H}$.
+	By Proposition 4.2, we have $|\ocal| = |H : H_{xK}|$, where $H_{xK}$ is the stabilizer of $xK$ in $H$.
 	Observe that $H_{xK} = \set{h \in H \mid hxK = xK}$.
 	Then $hxK = xK$ implies that there exists some $k \in K$ such that $hxk = x$, or equivalently, $h = x k x\inv$.
 	Therefore, $H_{xK} = H \cap x K x\inv$.
-	By part (a), we have $|HxK| = |\oo| \cdot |K| = |H : H \cap x K x\inv| \cdot |K|$.
+	By part (a), we have $|HxK| = |\ocal| \cdot |K| = |H : H \cap x K x\inv| \cdot |K|$.
 	\item Similar to part (d).
 \end{solenum}

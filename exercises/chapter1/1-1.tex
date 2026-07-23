@@ -7,14 +7,14 @@ Let $G$ be a group.
 \begin{exercise}[1.1.1]
     Determine which of the following binary operations are associative.
     \begin{subexercises}
-        \item The operation $\star$ on $\z$ defined by $a \star b = a - b$.
-        \item The operation $\star$ on $\r$ defined by $a \star b = a + b + ab$.
-        \item The operation $\star$ on $\q$ defined by
+        \item The operation $\star$ on $\zbb$ defined by $a \star b = a - b$.
+        \item The operation $\star$ on $\rbb$ defined by $a \star b = a + b + ab$.
+        \item The operation $\star$ on $\qbb$ defined by
         \[
         	a \star b = \dfrac{a + b}{5}.
         \]
-        \item The operation $\star$ on $\z \times \z$ defined by $(a,b) \star (c,d) = (ad + bc, \, bd)$.
-        \item The operation $\star$ on $\q - \set{0}$ defined by
+        \item The operation $\star$ on $\zbb \times \zbb$ defined by $(a,b) \star (c,d) = (ad + bc, \, bd)$.
+        \item The operation $\star$ on $\qbb - \set{0}$ defined by
         \[
         	a \star b = \dfrac{a}{b}.
         \]
@@ -32,14 +32,14 @@ Let $G$ be a group.
 \begin{exercise}[1.1.2]
     Decide which of the binary operations in the preceding exercise are commutative.
     \begin{subexercises}
-        \item The operation $\star$ on $\z$ defined by $a \star b = a - b$.
-        \item The operation $\star$ on $\r$ defined by $a \star b = a + b + ab$.
-        \item The operation $\star$ on $\q$ defined by
+        \item The operation $\star$ on $\zbb$ defined by $a \star b = a - b$.
+        \item The operation $\star$ on $\rbb$ defined by $a \star b = a + b + ab$.
+        \item The operation $\star$ on $\qbb$ defined by
         \[
         	a \star b = \dfrac{a + b}{5}.
         \]
-        \item The operation $\star$ on $\z \times \z$ defined by $(a,b) \star (c,d) = (ad + bc, \, bd)$.
-        \item The operation $\star$ on $\q - \set{0}$ defined by
+        \item The operation $\star$ on $\zbb \times \zbb$ defined by $(a,b) \star (c,d) = (ad + bc, \, bd)$.
+        \item The operation $\star$ on $\qbb - \set{0}$ defined by
         \[
         	a \star b = \dfrac{a}{b}.
         \]
@@ -60,7 +60,7 @@ Let $G$ be a group.
 
 \begin{sol}
     Let $\bar a, \bar b, \bar c \in \intmod$.
-	By associativity of addition in $\z$, we have:
+	By associativity of addition in $\zbb$, we have:
     \[
     	(\bar a + \bar b) + \bar c = \bar{(a + b) + c} = \bar{a + (b + c)} = \bar a + (\bar b + \bar c).\qh
     \]
@@ -79,7 +79,7 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-    Since $0 \cdot a = 0$ for all $a \in \z$, $\bar a \cdot \bar 0 = \bar 0$.
+    Since $0 \cdot a = 0$ for all $a \in \zbb$, $\bar a \cdot \bar 0 = \bar 0$.
 	Since $n > 1$, $\bar 0 \neq \bar 1$, so $\bar 0$ does not have a multiplicative inverse in $\intmod$.
 	Hence, $\intmod$ is not a group under multiplication of residue classes.
 \end{sol}
@@ -99,7 +99,7 @@ Let $G$ be a group.
 \begin{sol}
     Let $S$ denote the set in each part.
     \begin{subexercises}
-        \item $S$ has identity element 0, inverse element $-a/b$ for $a/b \in S$, and inherits associativity from $\q$.
+        \item $S$ has identity element 0, inverse element $-a/b$ for $a/b \in S$, and inherits associativity from $\qbb$.
 	Moreover, if $a/b, c/d \in S$ such that $(a, b) = (c, d) = 1$, then
         \[
         	\frac ab + \frac cd = \frac{ad + bc}{bd},
@@ -111,7 +111,7 @@ Let $G$ be a group.
         \item Same as (b).
         \item No: $3/2, 1 \in S$, but $3/2 - 1 = 1/2 \notin S$.
         \item Identity, inverses, and associativity are satisfied.
-	Let $a, b \in \z$.
+	Let $a, b \in \zbb$.
 	Then
         \[
         	\frac a1 + \frac b1 = \frac{a + b}1, \quad \frac a2 + \frac b2 = \frac{a + b}2, \quad \frac a1 + \frac b2 = \frac{2a + b}2,
@@ -123,7 +123,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}[1.1.7]
-    Let $G = \set{ x \in \r \mid 0 \le x < 1 }$ and for $x, y \in G$ let $x \star y$ be the fractional part of $x + y$ (i.e., $x \star y = x + y - [x + y]$ where $[a]$ is the greatest integer less than or equal to $a$).
+    Let $G = \set{ x \in \rbb \mid 0 \le x < 1 }$ and for $x, y \in G$ let $x \star y$ be the fractional part of $x + y$ (i.e., $x \star y = x + y - [x + y]$ where $[a]$ is the greatest integer less than or equal to $a$).
 	Prove that $\star$ is a well-defined binary operation on $G$ and that $G$ is an Abelian group under $\star$.
 \end{exercise}
 
@@ -141,7 +141,7 @@ Let $G$ be a group.
 	For $x = 0$, the inverse is itself, since $0 \star 0 = 0$.
         \item $x \star y = x + y - [x + y] = y + x - [y + x] = y \star x$.
 	Hence, $G$ is Abelian under $\star$.
-        \item Note that $[\alpha + \beta] = [\alpha] + \beta$ for $\beta \in \z$.
+        \item Note that $[\alpha + \beta] = [\alpha] + \beta$ for $\beta \in \zbb$.
 	Then
         \begin{align*}
             (x \star y) \star z & = (x + y - [x + y]) \star z \\
@@ -155,9 +155,9 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}[1.1.8]
-    Let $G = \set{z \in \c \mid z^n = 1 \text{ for some } n \in \zp }$.
+    Let $G = \set{z \in \cbb\mid z^n = 1 \text{ for some } n \in \zp }$.
     \begin{subexercises}
-        \item Prove that $G$ is a group under multiplication (called the \textbf{group of roots of unity in} $\c$).
+        \item Prove that $G$ is a group under multiplication (called the \textbf{group of roots of unity in} $\cbb$).
         \item Prove that $G$ is not a group under addition.
     \end{subexercises}
 \end{exercise}
@@ -165,7 +165,7 @@ Let $G$ be a group.
 \begin{solenum}
     \item Since $1^1 = 1$, then $1 \in G$.
 	If $z \in G$ for some $n$, then $(z\inv)^n = (z^n)\inv = 1\inv = 1$, so that $z\inv \in G$.
-	Associativity from $\c$ is inherited by $G$.
+	Associativity from $\cbb$ is inherited by $G$.
 	Finally, let $z, w \in G$ such that $z^n = w^m = 1$ for $n, m \in \zp$.
 	Then
     \[
@@ -177,7 +177,7 @@ Let $G$ be a group.
 \end{solenum}
 
 \begin{exercise}[1.1.9]
-    Let $G = \set{ a + b\sqrt{2} \in \r \mid a, b \in \q }$.
+    Let $G = \set{ a + b\sqrt{2} \in \rbb \mid a, b \in \qbb }$.
     \begin{subexercises}
         \item Prove that $G$ is a group under addition.
         \item Prove that the nonzero elements of $G$ are a group under multiplication.
@@ -193,7 +193,7 @@ Let $G$ be a group.
     \]
     From this, we see that $G$ is closed under addition.
 	The identity is $0 + 0\sqrt 2 = 0$, and the inverse of $a + b\sqrt 2$ is $-a - b\sqrt 2$.
-	Associativity is inherited from $\r$.
+	Associativity is inherited from $\rbb$.
 	Hence, $G$ is a group under addition.
     \item Note that multiplication of two elements in $G$ is given by
     \[
@@ -204,10 +204,10 @@ Let $G$ be a group.
     \[
     	(a + b\sqrt 2)\inv = \frac{1}{a + b\sqrt 2} = \frac{1}{a + b\sqrt 2} \cdot \frac{a - b\sqrt 2}{a - b\sqrt 2} = \frac{a - b\sqrt 2}{a^2 - 2b^2} = \frac a{a^2 - 2b^2} - \frac b{a^2 - 2b^2}\sqrt 2.
     \]
-    Observe that $a - b\sqrt 2 \neq 0$, since that would imply $a = b\sqrt 2$, contradicting that $a \in \q$.
+    Observe that $a - b\sqrt 2 \neq 0$, since that would imply $a = b\sqrt 2$, contradicting that $a \in \qbb$.
 	Moreover, $a + b\sqrt 2 \neq 0$ implies $a^2 - 2b^2 \neq 0$.
 	Hence, the inverse is well-defined and in $G$.
-	Associativity is inherited from $\r$.
+	Associativity is inherited from $\rbb$.
 	Hence, the nonzero elements of $G$ are a group under multiplication.
 \end{solenum}
 
@@ -242,7 +242,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}[1.1.12]
-    Find the orders of the following elements of the multiplicative group $(\z/12\z)^{\times}$: $\bar{1}, \bar{-1}, \bar{5}, \bar{7}, \bar{-7}, \bar{13}$.
+    Find the orders of the following elements of the multiplicative group $(\zbb/12\zbb)^{\times}$: $\bar{1}, \bar{-1}, \bar{5}, \bar{7}, \bar{-7}, \bar{13}$.
 \end{exercise}
 
 \begin{sol}
@@ -256,7 +256,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}[1.1.13]
-    Find the orders of the following elements of the additive group $\z/36\z$: $\bar{1}, \bar{2}, \bar{6}, \bar{9}, \bar{10}, \bar{12}, \bar{-1}, \bar{-10},\\ \bar{-18}$.
+    Find the orders of the following elements of the additive group $\zbb/36\zbb$: $\bar{1}, \bar{2}, \bar{6}, \bar{9}, \bar{10}, \bar{12}, \bar{-1}, \bar{-10},\\ \bar{-18}$.
 \end{exercise}
 
 \begin{sol}
@@ -270,7 +270,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}[1.1.14]
-    Find the orders of the following elements of the multiplicative group $(\z/36\z)^{\times}$: $\bar{1}, \bar{-1}, \bar{5}, \bar{13}, \bar{-13},\\ \bar{17}$.
+    Find the orders of the following elements of the multiplicative group $(\zbb/36\zbb)^{\times}$: $\bar{1}, \bar{-1}, \bar{5}, \bar{13}, \bar{-13},\\ \bar{17}$.
 \end{exercise}
 
 \begin{sol}
@@ -461,7 +461,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}[1.1.24]
-    If $a$ and $b$ are commuting elements of $G$, prove that $(ab)^n = a^n b^n$ for all $n \in \z$. 
+    If $a$ and $b$ are commuting elements of $G$, prove that $(ab)^n = a^n b^n$ for all $n \in \zbb$. 
     
     \hint{Do this by induction for positive $n$ first.}
 \end{exercise}
@@ -505,7 +505,7 @@ Let $G$ be a group.
 
 \begin{spex}[1.1.27]
     \label{def:cyclic subgroup}
-    Prove that if $x$ is an element of the group $G$, then $\set{x^n \mid n \in \z }$ is a \defref{subgroup} of $G$ (called the \textbf{cyclic subgroup} of $G$ generated by $x$).
+    Prove that if $x$ is an element of the group $G$, then $\set{x^n \mid n \in \zbb }$ is a \defref{subgroup} of $G$ (called the \textbf{cyclic subgroup} of $G$ generated by $x$).
 \end{spex}
 
 \begin{sol}
@@ -636,12 +636,12 @@ Let $G$ be a group.
 \end{solenum}
 
 \begin{exercise}[1.1.34]
-    If $x$ is an element of infinite order in $G$, prove that the elements $x^n, n \in \z$ are all distinct.
+    If $x$ is an element of infinite order in $G$, prove that the elements $x^n, n \in \zbb$ are all distinct.
 \end{exercise}
 
 \begin{sol}
-    If $x^a = x^b$ for $a, b \in \z$ such that $a < b$, then $x^{b - a} = 1$, contradicting that $x$ has infinite order.
-	Hence, the elements $x^n, n \in \z$ are all distinct.
+    If $x^a = x^b$ for $a, b \in \zbb$ such that $a < b$, then $x^{b - a} = 1$, contradicting that $x$ has infinite order.
+	Hence, the elements $x^n, n \in \zbb$ are all distinct.
 \end{sol}
 
 \begin{exercise}[1.1.35]
@@ -651,7 +651,7 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-    Let $\abs x = n \in \zp$ and let $m \in \z$.
+    Let $\abs x = n \in \zp$ and let $m \in \zbb$.
 	By the Division Algorithm, there exist unique integers $q$ and $r$ such that
     \[
     	m = qn + r

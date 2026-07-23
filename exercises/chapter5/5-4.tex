@@ -383,21 +383,21 @@ Let $G$ be a group.
 	Since $H$ is perfect, we have $H' = H$, so $g\inv H' g = g\inv H g$.
 	Moreover, since conjugation is an automorphism of $G$, we have $g\inv H' g = (g\inv H g)'$, so $(g\inv H g)' = g\inv H g$.
 	Hence, $g\inv H g$ is perfect.
-    \item Let $\mathcal{P}$ be the collection of perfect subgroups of $G$.
-	Since $1$ is a perfect subgroup of $G$, we have $\mathcal{P}$ is nonempty.
-	Let $\mathcal{C}$ be a chain in $\mathcal{P}$, and let $H = \bigcup_{K \in \mathcal{C}} K$.
-	To see that $H \leq G$, note that for any $x, y \in H$, then there exists $K_x, K_y \in \mathcal C$ such that $x \in K_x$ and $y \in K_y$.
+    \item Let $\pcal$ be the collection of perfect subgroups of $G$.
+	Since $1$ is a perfect subgroup of $G$, we have $\pcal$ is nonempty.
+	Let $\ccal$ be a chain in $\pcal$, and let $H = \bigcup_{K \in \ccal} K$.
+	To see that $H \leq G$, note that for any $x, y \in H$, then there exists $K_x, K_y \in \ccal$ such that $x \in K_x$ and $y \in K_y$.
 	Without loss of generality, we may assume $K_x \leq K_y$, so $x, y \in K_y$, hence $xy\inv \in K_y \leq H$.
 	Thus, $H$ is a subgroup of $G$.
-	To see that $H \in \pp$, observe that for any $x \in H$, then $x \in K$ for some $K \in \mathcal{C}$, so $x \in K' = K$, hence $x \in H'$.
+	To see that $H \in \pcal$, observe that for any $x \in H$, then $x \in K$ for some $K \in \ccal$, so $x \in K' = K$, hence $x \in H'$.
 	Thus, $H \leq H'$.
-	Since $H' \leq H$ trivially, then $H = H'$, hence $H \in \mathcal P$.
-	By Zorn's Lemma, $\mathcal{P}$ has a maximal element $M$. 
+	Since $H' \leq H$ trivially, then $H = H'$, hence $H \in \pcal$.
+	By Zorn's Lemma, $\pcal$ has a maximal element $M$. 
     
     To see that $M$ is normal in $G$, let $g \in G$ be given.
-	Then $g\inv M g$ is perfect by part (c), so $g\inv M g \in \mathcal{P}$.
-	Since $M$ is perfect, we may use part (b) to get that $\gen{M, g\inv M g}$ is perfect, so $\gen{M, g\inv M g} \in \mathcal{P}$.
-	Since $M \leq \gen{M, g\inv M g}$ and $M$ is maximal in $\mathcal{P}$, we must have $M = \gen{M, g\inv M g}$, so $g\inv M g \leq M$.
+	Then $g\inv M g$ is perfect by part (c), so $g\inv M g \in \pcal$.
+	Since $M$ is perfect, we may use part (b) to get that $\gen{M, g\inv M g}$ is perfect, so $\gen{M, g\inv M g} \in \pcal$.
+	Since $M \leq \gen{M, g\inv M g}$ and $M$ is maximal in $\pcal$, we must have $M = \gen{M, g\inv M g}$, so $g\inv M g \leq M$.
 	By symmetry of the argument, we also have $M \leq g\inv M g$, so $g\inv M g = M$.
 	Hence, $M$ is normal in $G$.
 \end{solenum}

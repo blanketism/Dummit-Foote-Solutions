@@ -17,31 +17,31 @@
 \end{sol}
 
 \begin{exercise}[1.7.2]
-    Show that the additive group $\z$ acts on itself by $z\cdot a = z + a$ for all $z,a\in\z$.
+    Show that the additive group $\zbb$ acts on itself by $z\cdot a = z + a$ for all $z,a\in\zbb$.
 \end{exercise}
 
 \begin{sol}
-    Let $z, w \in \z$ and $a \in \z$.
+    Let $z, w \in \zbb$ and $a \in \zbb$.
 	Then
     \[
     	z \cdot (w \cdot a) = z \cdot (w + a) = z + (w + a) = (z + w) + a = (z + w) \cdot a
     \]
     Moreover, $0 \cdot a = 0 + a = a$.
-	Then $\z$ acts on itself.
+	Then $\zbb$ acts on itself.
 \end{sol}
 
 \begin{exercise}[1.7.3]
-    Show that the additive group $\r$ acts on the $x,y$ plane $\r\times\r$ by $r\cdot (x,y) = (x + r, y)$.
+    Show that the additive group $\rbb$ acts on the $x,y$ plane $\rbb\times\rbb$ by $r\cdot (x,y) = (x + r, y)$.
 \end{exercise}
 
 \begin{sol}
-    Let $r, s \in \r$ and $(x, y) \in \r^2$.
+    Let $r, s \in \rbb$ and $(x, y) \in \rbb^2$.
 	Then
     \[
     	r \cdot (s \cdot (x, y)) = r \cdot (x + s, y) = (x + s + r, y) = (x + (r + s), y) = (r + s) \cdot (x, y)
     \]
     Moreover, $0 \cdot (x, y) = (x + 0, y) = (x, y)$.
-	Then $\r$ acts on $\r^2$.
+	Then $\rbb$ acts on $\rbb^2$.
 \end{sol}
 
 \begin{spex}[1.7.4]
@@ -391,10 +391,10 @@
 \begin{spex}[1.7.19]
     \label{def:Lagrange's theorem}
     Let $H$ be a subgroup of the finite group $G$ and let $H$ act on $G$ (here $A = G$) by left multiplication.
-	Let $x\in G$ and let $\mathcal{O}$ be the orbit of $x$ under this action of $H$.
+	Let $x\in G$ and let $\ocal$ be the orbit of $x$ under this action of $H$.
 	Prove that the map  
     \[
-    	H \to \mathcal{O}, \qquad h \mapsto hx
+    	H \to \ocal, \qquad h \mapsto hx
     \]
     is a bijection (hence all orbits have cardinality $|H|$).
 	From this and the preceding exercise deduce \textbf{Lagrange's Theorem}:  
@@ -404,7 +404,7 @@
 \end{spex}
 
 \begin{sol}
-    Let $\phi : H \to \oo$ be the map defined by $\phi(h) = hx$ for all $h \in H$.
+    Let $\phi : H \to \ocal$ be the map defined by $\phi(h) = hx$ for all $h \in H$.
 	We show that $\phi$ is a bijection.
 	To show injectivity, suppose $\phi(h_1) = \phi(h_2)$ for some $h_1, h_2 \in H$.
 	Then
@@ -412,8 +412,8 @@
     	h_1 x = h_2 x
     \]
     implying that $h_1 = h_2$.
-	Any $y \in \oo$ has some $h \in H$ such that $y = hx$, hence $\phi(h) = y$ and $\phi$ is surjective.
-	Therefore, $\phi$ is a bijection and $\abs \oo = \abs H$.
+	Any $y \in \ocal$ has some $h \in H$ such that $y = hx$, hence $\phi(h) = y$ and $\phi$ is surjective.
+	Therefore, $\phi$ is a bijection and $\abs \ocal = \abs H$.
 
     To deduce Lagrange's Theorem, note by the previous exercise that the orbits of the action of $H$ on $G$ partition $G$.
 	Since each orbit has cardinality $\abs H$, then $\abs G$ is a sum of multiples of $\abs H$.
@@ -481,7 +481,7 @@
 \begin{sol}
     The group of rigid motions of a cube has 24 elements, while permutations of the set of three pairs of opposing faces has 6 elements, so the action cannot be faithful as no homomorphism can be injective between finite groups of different sizes (if there was some injective homomorphism, it would imply bijectivity between the two groups of different cardinality, which is impossible).
     
-    Consider a cube such that its center is at the origin of $\r^3$ space.
+    Consider a cube such that its center is at the origin of $\rbb^3$ space.
 	Then any rotation around the axes fixes a pair of faces, while sends the other two pairs back to themselves (to visualize this explicitly, consider the cube with vertices $(\pm 1, \pm 1, \pm 1)$ and the $z$-axis.
 	A rotation around the $z$-axis would fix the faces $(\pm 1, \pm 1, 1)$ and $(\pm 1, \pm 1, -1)$, while it rotates the pair of faces $(1, \pm 1, \pm 1)$ and $(-1, \pm 1, \pm 1)$ back to each other---these are the faces that vary along the $x$-axis.
 	One can construct the same for the pair of faces that lie along the $y$-axis and deduce the same thing).

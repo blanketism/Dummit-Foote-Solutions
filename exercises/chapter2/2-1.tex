@@ -5,10 +5,10 @@
 \begin{exercise}[2.1.1]
     In each of (a) -- (e) prove that the specified subset is a subgroup of the given group.
     \begin{subexercises}
-        \item The set of complex numbers of the form $a + ai$, $a \in \r$ (under addition).
+        \item The set of complex numbers of the form $a + ai$, $a \in \rbb$ (under addition).
         \item The set of complex numbers of absolute value $1$, i.e., the unit circle in the complex plane (under multiplication).
-        \item For fixed $n \in \z^+$, the set of rational numbers whose denominators divide $n$ (under addition).
-        \item For fixed $n \in \z^+$, the set of rational numbers whose denominators are relatively prime to $n$ (under addition).
+        \item For fixed $n \in \zbb^+$, the set of rational numbers whose denominators divide $n$ (under addition).
+        \item For fixed $n \in \zbb^+$, the set of rational numbers whose denominators are relatively prime to $n$ (under addition).
         \item The set of nonzero real numbers whose square is a rational number (under multiplication).
     \end{subexercises}
 \end{exercise}
@@ -50,10 +50,10 @@
         Then $p \mid b$ or $p \mid d$, contradicting our assumption.
         Hence, $(bd, n) = 1$, so that $H \leq G$.
         \item Since $1 = 1^2 = 1/1$, then $1 \in H$ so that $H$ is nonempty.
-        For $x, y \in H$, then $x^2, y^2 \in \q$.
+        For $x, y \in H$, then $x^2, y^2 \in \qbb$.
         Then
         \[
-        	\left(\frac xy\right)^2 = \frac{x^2}{y^2} \in \q
+        	\left(\frac xy\right)^2 = \frac{x^2}{y^2} \in \qbb
         \]
         so that $x/y \in H$, hence $H \leq G$. \qh
     \end{subexercises}
@@ -65,7 +65,7 @@
         \item The set of $2$-cycles in $S_n$ for $n \ge 3$.
         \item The set of reflections in $D_{2n}$ for $n \ge 3$.
         \item For $n$ a composite integer $>1$ and $G$ a group containing an element of order $n$, the set $\set{x \in G \mid |x| = n} \cup \set{1}$.
-        \item The set of (positive and negative) odd integers in $\z$ together with $0$.
+        \item The set of (positive and negative) odd integers in $\zbb$ together with $0$.
         \item The set of real numbers whose square is a rational number (under addition).
     \end{subexercises}
 \end{exercise}
@@ -79,7 +79,7 @@
 	    Let $x \in G$ with $\abs x = n$.
 	    Then $x \in H$ so that $x^a \in H$, but $(x^a)^b = x^n = 1$ implies that $|x^a| \leq b$.
         \item Observe that $1 \in H$, but $1 + 1 = 2 \notin H$.
-        \item Observe that $\sqrt 2, \sqrt 3 \in H$, but $(\sqrt 2 + \sqrt 3)^2 \notin \q$. \qh
+        \item Observe that $\sqrt 2, \sqrt 3 \in H$, but $(\sqrt 2 + \sqrt 3)^2 \notin \qbb$. \qh
     \end{subexercises}
 \end{sol}
 
@@ -122,7 +122,7 @@
 \end{exercise}
 
 \begin{sol}
-    Let $G = \z$ and $H = \zp$.
+    Let $G = \zbb$ and $H = \zp$.
 	Then for any $m, n \in \zp$, we have $m + n \in \zp$ but $m - n \notin \zp$ when $m < n$.
 	Hence, $H$ is not a subgroup of $G$.
 \end{sol}
@@ -154,7 +154,7 @@
     where the first equality follows from $G$ being Abelian.
 	Then $|gh\inv| \leq mn$, hence $gh\inv \in \tor(G)$, and $\tor(G) \leq G$.
 
-    Consider $G = \gl_2(\r)$ where
+    Consider $G = \gl_2(\rbb)$ where
     \[
     	A = 
         \begin{pmatrix}
@@ -189,21 +189,21 @@
 \end{sol}
 
 \begin{exercise}[2.1.7]
-    Fix some $n \in \z$ with $n>1$.
-	Find the \defref{torsion subgroup} of $\z \times (\z/n\z)$.
+    Fix some $n \in \zbb$ with $n>1$.
+	Find the \defref{torsion subgroup} of $\zbb \times (\zbb/n\zbb)$.
 	Show that the set of elements of infinite order together with the identity is \emph{not} a subgroup of this direct product.
 \end{exercise}
 
 \begin{sol}
-    The only finite order element in $\z$ is 0, while $\intmod$ is finite.
+    The only finite order element in $\zbb$ is 0, while $\intmod$ is finite.
 	Then
     \[
-    	\tor(\z \times \intmod) = \set{(0, \bar x) \mid \bar x \in \intmod}.
+    	\tor(\zbb \times \intmod) = \set{(0, \bar x) \mid \bar x \in \intmod}.
     \]
-    Consider $H = \set{(x, \bar y) \in \z \times \intmod \mid x \neq 0} \cup \set{(0, \bar 0)}$.
+    Consider $H = \set{(x, \bar y) \in \zbb \times \intmod \mid x \neq 0} \cup \set{(0, \bar 0)}$.
 	Then $H$ contains the identity and all elements of infinite order.
 	However, $(1, \bar 1), (-1, \bar 0) \in H$, but $(0, \bar 1) = (1, \bar 1) + (-1, \bar 0) \notin H$, since it has finite order.
-	Hence, $H$ is not a subgroup of $\z \times \intmod$.
+	Hence, $H$ is not a subgroup of $\zbb \times \intmod$.
 \end{sol}
 
 \begin{exercise}[2.1.8]
@@ -231,21 +231,21 @@
     Let $G = \gl_n(F)$, where $F$ is any field.
 	Define
     \[
-    	\speclin_n(F) = \set{ A \in \gl_n(F) \mid \det(A) = 1 }
+    	\splin_n(F) = \set{ A \in \gl_n(F) \mid \det(A) = 1 }
     \]
     (called the \textbf{special linear group}).
-	Prove that $\speclin_n(F) \le \gl_n(F)$.
+	Prove that $\splin_n(F) \le \gl_n(F)$.
 \end{spex}
 
 \begin{sol}
-    Since $\det(I_n) = 1$, then $I_n \in \speclin_n(F)$.
-	Suppose $A, B \in \speclin_n(F)$.
+    Since $\det(I_n) = 1$, then $I_n \in \splin_n(F)$.
+	Suppose $A, B \in \splin_n(F)$.
 	Then
     \[
     	\det(AB\inv) = \det(A)\det(B\inv) = \frac{\det(A)}{\det(B)} = \frac 11 = 1
     \]
-    so that $AB\inv \in \speclin_n(F)$.
-	It follows that $\speclin_n(F) \leq \gl_n(F)$.
+    so that $AB\inv \in \splin_n(F)$.
+	It follows that $\splin_n(F) \leq \gl_n(F)$.
 \end{sol}
 
 \begin{exercise}[2.1.10]
@@ -310,7 +310,7 @@
 \end{sol}
 
 \begin{exercise}[2.1.12]
-    Let $A$ be an Abelian group and fix some $n \in \z$.
+    Let $A$ be an Abelian group and fix some $n \in \zbb$.
 	Prove that the following sets are subgroups of $A$.
     \begin{subexercises}
         \item $\set{ a^n \mid a \in A }$.
@@ -342,25 +342,25 @@
 
 \begin{exercise}[2.1.13]
     Let $H$ be a subgroup of the additive group of rational numbers with the property that $1/x \in H$ for every nonzero element $x$ of $H$.
-	Prove that $H = 0$ or $\q$.
+	Prove that $H = 0$ or $\qbb$.
 \end{exercise}
 
 \begin{sol}
-    Let $H \leq \q$.
+    Let $H \leq \qbb$.
 	Then $0 \in H$.
 	If no other elements are in $H$, then $H = 0$, and we are done.
-	Suppose there exists some nonzero $a/b \in H$ where $a, b \in \z$ and $b \neq 0$.
+	Suppose there exists some nonzero $a/b \in H$ where $a, b \in \zbb$ and $b \neq 0$.
 	Moreover, we may assume without loss of generality that $a/b > 0$, for otherwise we may take $-a/b$ since $H$ contains additive inverses.
-	We now use $a/b$ to generate $\q$.
+	We now use $a/b$ to generate $\qbb$.
 
     Since $a/b \in H$, then $b(a/b) = a \in H$ so that $1/a \in H$.
 	Then $a(1/a) = 1 \in H$.
-	From this, we can see that $\z \subseteq H$.
-	Now let $c/d \in \q$ for some $c, d \in \z$ with $d \neq 0$.
+	From this, we can see that $\zbb \subseteq H$.
+	Now let $c/d \in \qbb$ for some $c, d \in \zbb$ with $d \neq 0$.
 	Since $1 \in H$, then $d(1) = d \in H$ so that $1/d \in H$.
 	Then $c(1/d) = c/d \in H$.
-	Since $c/d$ was arbitrary, then $\q \subseteq H$.
-	Hence, $H = \q$.
+	Since $c/d$ was arbitrary, then $\qbb \subseteq H$.
+	Hence, $H = \qbb$.
 \end{sol}
 
 \begin{exercise}[2.1.14]
@@ -393,7 +393,7 @@
 \end{sol}
 
 \begin{exercise}[2.1.16]
-    Let $n \in \z^+$ and let $F$ be a field.
+    Let $n \in \zbb^+$ and let $F$ be a field.
 	Prove that the set $\set{ (a_{ij}) \in \gl_n(F) \mid a_{ij} = 0 \text{ for all } i > j }$ is a subgroup of $\gl_n(F)$ (called the group of upper triangular matrices).
 \end{exercise}
 
@@ -420,7 +420,7 @@
 \end{sol}
 
 \begin{exercise}[2.1.17]
-    Let $n \in \z^+$ and let $F$ be a field.
+    Let $n \in \zbb^+$ and let $F$ be a field.
 	Prove that the set $\set{ (a_{ij}) \in \gl_n(F) \mid a_{ij} = 0 \text{ for all } i > j,\ \text{and } a_{ii} = 1 \text{ for all } i }$ is a subgroup of $\gl_n(F)$.
 \end{exercise}
 

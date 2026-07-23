@@ -174,9 +174,9 @@
         \sigma^5 & = (1\ 6\ 11\ 4\ 9\ 2\ 7\ 12\ 5\ 10\ 3\ 8) & \sigma^{11} & = (1\ 12\ 11\ 10\ 9\ 8\ 7\ 6\ 5\ 4\ 3\ 2) \\
         \sigma^6 & = (1\ 7)(2\ 8)(3\ 9)(4\ 10)(5\ 11)(6\ 12) & \sigma^{12} & = \id
     \end{align*}
-    Hence, the set of integers that produce a 12-cycle is the set $\set{i + 12k \mid i \in \{1, 5, 7, 11}, k \in \z\}$.
-    \item $\set{i + 8k \mid i \in \{1, 3, 5, 7}, k \in \z\}$.
-    \item $\set{i + 14k \mid i \in \{1, 3, 5, 9, 11, 13}, k \in \z\}$. \qh
+    Hence, the set of integers that produce a 12-cycle is the set $\set{i + 12k \mid i \in \{1, 5, 7, 11}, k \in \zbb\}$.
+    \item $\set{i + 8k \mid i \in \{1, 3, 5, 7}, k \in \zbb\}$.
+    \item $\set{i + 14k \mid i \in \{1, 3, 5, 9, 11, 13}, k \in \zbb\}$. \qh
 \end{solenum}
 
 \begin{exercise}[1.3.10]
@@ -239,9 +239,9 @@
     \item Put $\sigma = (1\ 3\ 5\ 7\ 9\ 2\ 4\ 6\ 8\ 10)$.
 	Then $\sigma^2 = \tau$, so there exists a 10-cycle $\sigma$ such that $\tau = \sigma^k$ for $k = 2$.
     \item We first prove the following lemma:
-    \begin{lemma}{$(ac, bc) = c(a, b)$ for $a, b, c \in \z$.}
+    \begin{lemma}{$(ac, bc) = c(a, b)$ for $a, b, c \in \zbb$.}
         Let $d = (a, b)$ and $d' = (ac, bc)$.
-	Then there exist $s, t \in \z$ such that $d = as + bt$.
+	Then there exist $s, t \in \zbb$ such that $d = as + bt$.
 	Consider $cd = acs + bct$.
 	Then $d' = (ac, bc)$ implies that $d' \mid cd$.
 	Since $d \mid a$ and $d \mid b$, then $cd \mid ac$ and $cd \mid bc$, so that $cd \mid (ac, bc) = d'$.

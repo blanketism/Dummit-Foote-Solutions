@@ -4,13 +4,13 @@ Let $G$ be a group.
 
 \begin{exercise}[3.3.1]
     Let $F$ be a finite field of order $q$ and let $n \in \zp$.
-	Prove that $|\gl_N(F) : \speclin_n(F)| = q - 1$. [See \exref{3.1.35}.]
+	Prove that $|\gl_N(F) : \splin_n(F)| = q - 1$. [See \exref{3.1.35}.]
 \end{exercise}
 
 \begin{sol}
-    In \exref{3.1.35}, we showed that $\speclin_n(F) \nsub \gl_n(F)$ and that $\gl_n(F)/\speclin_n(F) \cong F\unt$.
+    In \exref{3.1.35}, we showed that $\splin_n(F) \nsub \gl_n(F)$ and that $\gl_n(F)/\splin_n(F) \cong F\unt$.
 	Since $F$ is a finite field of order $q$, then $\abs{F\unt} = q - 1$.
-	We then have that $|\gl_n(F) : \speclin_n(F)| = \abs{F\unt} = q - 1$.
+	We then have that $|\gl_n(F) : \splin_n(F)| = \abs{F\unt} = q - 1$.
 \end{sol}
 
 \begin{spex}[3.3.2]
@@ -18,14 +18,14 @@ Let $G$ be a group.
 \end{spex}
 
 \begin{sol}
-    Let $\ac = \set{A \leq G \mid N \subseteq A}$ be the set of subgroups of $G$ containing $N$.
-	Let $\bar{\ac} = \set{\bar A \leq \bar G}$ be the set of subgroups of $\bar G = G/N$.
+    Let $\acal = \set{A \leq G \mid N \subseteq A}$ be the set of subgroups of $G$ containing $N$.
+	Let $\bar{\acal} = \set{\bar A \leq \bar G}$ be the set of subgroups of $\bar G = G/N$.
 	Define the map
     \[
-    	\phi : \ac \to \bar{\ac} \quad \text{by} \quad \phi(A) = \bar A = A/N
+    	\phi : \acal \to \bar{\acal} \quad \text{by} \quad \phi(A) = \bar A = A/N
     \]
     We first show that $\phi(A) \leq \bar G$.
-	Since $1 \in A$ for any $A \in \ac$, then $1N = N \in \bar A$ so that $\bar 1 \in \bar A$, hence $\bar A$ is nonempty.
+	Since $1 \in A$ for any $A \in \acal$, then $1N = N \in \bar A$ so that $\bar 1 \in \bar A$, hence $\bar A$ is nonempty.
 	Let $\bar a, \bar b \in \bar A$, where $a, b \in A$.
 	Since $A \leq G$, then $ab\inv \in A$, hence
     \[
@@ -34,16 +34,16 @@ Let $G$ be a group.
     so that $\bar A \leq \bar G$.
 
     Next, we show that $\phi$ is surjective.
-	Let $\bar A \in \bar{\ac}$, and let $\pi : G \to \bar G$ be the natural projection homomorphism.
+	Let $\bar A \in \bar{\acal}$, and let $\pi : G \to \bar G$ be the natural projection homomorphism.
 	Consider $\pi\inv(\bar A)$.
 	Since $\pi$ is a homomorphism, then $\pi\inv(\bar A) \leq G$.
-	Moreover, since $\bar 1 \in \bar A$, then $N = \pi\inv(\bar 1) \subseteq \pi\inv(\bar A)$ so that $\pi\inv(\bar A) \in \ac$.
+	Moreover, since $\bar 1 \in \bar A$, then $N = \pi\inv(\bar 1) \subseteq \pi\inv(\bar A)$ so that $\pi\inv(\bar A) \in \acal$.
 	Note that
     \[
     	\phi(\pi\inv(\bar A)) = \pi\inv(\bar A)/N = \bar A
     \]
     so that $\phi$ is surjective.
-	To show that $\phi$ is injective, suppose $\phi(A) = \phi(B)$ for some $A, B \in \ac$.
+	To show that $\phi$ is injective, suppose $\phi(A) = \phi(B)$ for some $A, B \in \acal$.
 	Then $\bar A = \bar B$ implies that for some $a \in A$, there is some $b \in B$ such that $\bar a = \bar b$, hence $aN = bN$ so that $b\inv a \in N \subseteq B$.
 	It follows that $a = b(b\inv a) \in B$, hence $A \subseteq B$.
 	A similar argument shows that $B \subseteq A$, hence $A = B$ so that $\phi$ is injective.
@@ -51,10 +51,10 @@ Let $G$ be a group.
     \begin{enumerate}
         \item 
         \begin{itemize}
-            \item[\rightimp] Suppose $A \leq B$ for $A, B \in \ac$.
+            \item[\rightimp] Suppose $A \leq B$ for $A, B \in \acal$.
 	Let $\bar a \in \bar A$ for some $a \in A$.
 	Since $A \leq B$, then $a \in B$ so that $\bar a \in \bar B$, hence $\bar A \leq \bar B$.
-            \item[\leftimp] Suppose $\bar A \leq \bar B$ for $A, B \in \ac$.
+            \item[\leftimp] Suppose $\bar A \leq \bar B$ for $A, B \in \acal$.
 	Let $a \in A$ for some $a \in A$.
 	Then $\bar a \in \bar A$ so that $\bar a \in \bar B$, hence there is some $b \in B$ such that $\bar a = \bar b$.
 	It follows that $aN = bN$ so that $b\inv a \in N \subseteq B$, hence $a = b(b\inv a) \in B$.
@@ -103,7 +103,7 @@ Let $G$ be a group.
 	Therefore, $\bar{A \cap B} = \bar A \cap \bar B$.
         \item 
         \begin{itemize}
-            \item[\rightimp] Suppose $A \nsub G$ for some $A \in \ac$.
+            \item[\rightimp] Suppose $A \nsub G$ for some $A \in \acal$.
 	Let $\bar g \in \bar G$ and $\bar a \in \bar A$ for some $g \in G$ and $a \in A$.
 	Note that
             \[
@@ -111,7 +111,7 @@ Let $G$ be a group.
             \]
             Since $A \nsub G$, then $gag\inv \in A$, hence $\bar{gag\inv} \in \bar A$.
 	It follows that $(\bar g)(\bar a)(\bar g)\inv \in \bar A$, hence $\bar A \nsub \bar G$.
-            \item[\leftimp] Suppose $\bar A \nsub \bar G$ for some $A \in \ac$.
+            \item[\leftimp] Suppose $\bar A \nsub \bar G$ for some $A \in \acal$.
 	Let $g \in G$ and $a \in A$.
 	Since $\bar{gag\inv} = (\bar g)(\bar a)(\bar g)\inv \in \bar A$, then $gag\inv N \in A/N$, hence $gag\inv \in A$.
 	It follows that $A \nsub G$. \qh
@@ -297,7 +297,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}[3.3.8]
-    Let $p$ be a prime and let $G$ be the group of $p$-power roots  of $1$ in $\c$ (cf. \exref{2.4.18}).
+    Let $p$ be a prime and let $G$ be the group of $p$-power roots  of $1$ in $\cbb$ (cf. \exref{2.4.18}).
 	Prove that the map $z \mapsto z^p$ is a surjective homomorphism.
 	Deduce that $G$ is isomorphic to a proper quotient of itself.
 \end{exercise}

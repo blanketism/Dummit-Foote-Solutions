@@ -67,12 +67,12 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{exercise}[3.1.4]
-    Prove that in the quotient group $G/N$, $(gN)^{\alpha} = g^{\alpha}N$ for all $\alpha \in \z$.
+    Prove that in the quotient group $G/N$, $(gN)^{\alpha} = g^{\alpha}N$ for all $\alpha \in \zbb$.
 \end{exercise}
 
 \begin{sol}
     Inducting on $\alpha$, the base case $\alpha = 0$ is clear since $(gN)^0 = N = g^0N$.
-	Suppose the statement holds for some $\alpha \in \z$.
+	Suppose the statement holds for some $\alpha \in \zbb$.
 	Then
     \[
     	(gN)^{\alpha + 1} = (gN)^{\alpha}(gN) = g^{\alpha}N gN = g^{\alpha + 1}N.
@@ -101,13 +101,13 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{exercise}[3.1.6]
-    Define $\phi : \r^{\times} \to \set{\pm 1}$ by letting $\phi(x)$ be $x$ divided by the absolute value of $x$.
+    Define $\phi : \rbb^{\times} \to \set{\pm 1}$ by letting $\phi(x)$ be $x$ divided by the absolute value of $x$.
 	Describe the fibers of $\phi$ and prove that $\phi$ is a homomorphism.
 \end{exercise}
 
 \begin{sol}
     $\phi\inv(+1)$ consists of positive reals and $\phi\inv(-1)$ negative reals.
-	Let $x, y \in \r\unt$.
+	Let $x, y \in \rbb\unt$.
 	Then
     \[
     	\phi(xy) = \frac{xy}{\abs{xy}} = \frac{x}{\abs x} \cdot \frac{y}{\abs y} = \phi(x)\phi(y) \qh
@@ -115,45 +115,45 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{exercise}[3.1.7]
-    Define $\pi : \r^2 \to \r$ by $\pi((x,y)) = x + y$.
+    Define $\pi : \rbb^2 \to \rbb$ by $\pi((x,y)) = x + y$.
 	Prove that $\pi$ is a surjective homomorphism and describe the kernel and fibers of $\pi$ geometrically.
 \end{exercise}
 
 \begin{sol}
-    Let $(x_1, y_1), (x_2, y_2) \in \r^2$.
+    Let $(x_1, y_1), (x_2, y_2) \in \rbb^2$.
 	Then
     \[
     	\pi((x_1, y_1) + (x_2, y_2)) = (x_1 + x_2) + (y_1 + y_2) = (x_1 + y_1) + (x_2 + y_2) = \pi((x_1, y_1)) + \pi((x_2, y_2)),
     \]
     hence $\pi$ is a homomorphism.
-	Moreover, $\pi$ is surjective since $\pi((a, 0)) = a$ for all $a \in \r$.
+	Moreover, $\pi$ is surjective since $\pi((a, 0)) = a$ for all $a \in \rbb$.
 	We have $\ker\pi$ as the line $y = -x$, and $\pi\inv(a)$ as $y = a - x$, which is $\ker\pi$ translated up by $a$.
 \end{sol}
 
 \begin{exercise}[3.1.8]
-    Let $\phi : \r^{\times} \to \r^{\times}$ be the map sending $x$ to the absolute value of $x$.
+    Let $\phi : \rbb^{\times} \to \rbb^{\times}$ be the map sending $x$ to the absolute value of $x$.
 	Prove that $\phi$ is a homomorphism and find the image of $\phi$.
 	Describe the kernel and the fibers of $\phi$.
 \end{exercise}
 
 \begin{sol}
-    Let $x, y \in \r\unt$.
+    Let $x, y \in \rbb\unt$.
 	Then
     \[
     	\phi(xy) = \abs{xy} = \abs x \abs y = \phi(x)\phi(y)
     \]
     so that $\phi$ is a homomorphism.
-	Note that $\abs x > 0$ for any $x \in \r\unt$, so $\im(\phi) = \r^+$. $\ker(\phi) = \set{-1, 1}$, and the fiber of $\phi$ over some $a \in \r^+$ is simply $\set{-a, a}$.
+	Note that $\abs x > 0$ for any $x \in \rbb\unt$, so $\im(\phi) = \rbb^+$. $\ker(\phi) = \set{-1, 1}$, and the fiber of $\phi$ over some $a \in \rbb^+$ is simply $\set{-a, a}$.
 \end{sol}
 
 \begin{exercise}[3.1.9]
-    Define $\phi : \c^{\times} \to \r^{\times}$ by $\phi(a+bi) = a^2 + b^2$.
+    Define $\phi : \cbb^{\times} \to \rbb^{\times}$ by $\phi(a+bi) = a^2 + b^2$.
 	Prove that $\phi$ is a homomorphism and find the image of $\phi$.
 	Describe the kernel and the fibers of $\phi$ geometrically (as subsets of the plane).
 \end{exercise}
 
 \begin{sol}
-    Let $a + bi, c + di \in \c\unt$.
+    Let $a + bi, c + di \in \cbb\unt$.
 	Then
     \begin{align*}
         \phi((a + bi)(c + di)) & = \phi((ac - bd) + (ad + bc)i) \\
@@ -163,7 +163,7 @@ Let $G$ and $H$ be groups.
         & = \phi(a + bi)\phi(c + di)
     \end{align*}
     so that $\phi$ is a homomorphism.
-	Observe that $a^2 + b^2 > 0$ for any $a + bi \in \c\unt$, so that $\im(\phi) = \r^+$. $\ker\phi$ is the unit circle in the complex plane, and the fiber of $\phi$ over some $r \in \r^+$ is the circle of radius $\sqrt r$ centered at the origin.
+	Observe that $a^2 + b^2 > 0$ for any $a + bi \in \cbb\unt$, so that $\im(\phi) = \rbb^+$. $\ker\phi$ is the unit circle in the complex plane, and the fiber of $\phi$ over some $r \in \rbb^+$ is the circle of radius $\sqrt r$ centered at the origin.
 \end{sol}
 
 \begin{exercise}[3.1.10]
@@ -173,7 +173,7 @@ Let $G$ and $H$ be groups.
 
 \begin{sol}
     To show that $\phi$ is well-defined, suppose $\bar a = \bar b$ in $\intmod[8]$.
-	Then $8 \mid (a - b)$, so that $a - b = 8k$ for some $k \in \z$.
+	Then $8 \mid (a - b)$, so that $a - b = 8k$ for some $k \in \zbb$.
 	Then $a - b = 4(2k)$, so that $4 \mid (a - b)$ and $\bar a = \bar b$ in $\intmod[4]$.
 	Hence, $\phi$ is well-defined.
 	Moreover, for any $\bar a, \bar b \in \intmod[8]$, then
@@ -348,7 +348,7 @@ Let $G$ and $H$ be groups.
 \end{exercise}
 
 \begin{sol}
-    Since $e^{2\pi ir} = 1$ if and only if $r$ is an integer, then $\ker(\phi) = \z$.
+    Since $e^{2\pi ir} = 1$ if and only if $r$ is an integer, then $\ker(\phi) = \zbb$.
 	On a number line, this is shown as
     \begin{center}
         \begin{tikzpicture}
@@ -364,9 +364,9 @@ Let $G$ and $H$ be groups.
     Moreover, note that $-1 = e^{-2\pi i/2}$ and $i = e^{2\pi i/4}$.
 	Then the fibers of these elements are just the integral differences of $1/2, 1/4$, and $2/3$ respectively, since $4\pi i/3 = 2/3(2\pi i)$:
     \begin{align*}
-        \phi\inv(-1) & = \frac 12 + \z = \set*{\left.\frac 12 + n~\right|~n \in \z} \\
-        \phi\inv(i) & = \frac 14 + \z = \set*{\left.\frac 14 + n~\right|~n \in \z} \\
-        \phi\inv(e^{4\pi i/3}) & = \frac 23 + \z = \set*{\left.\frac 23 + n~\right|~n \in \z} \qh
+        \phi\inv(-1) & = \frac 12 + \zbb = \set*{\left.\frac 12 + n~\right|~n \in \zbb} \\
+        \phi\inv(i) & = \frac 14 + \zbb = \set*{\left.\frac 14 + n~\right|~n \in \zbb} \\
+        \phi\inv(e^{4\pi i/3}) & = \frac 23 + \zbb = \set*{\left.\frac 23 + n~\right|~n \in \zbb} \qh
     \end{align*}
 \end{sol}
 
@@ -375,7 +375,7 @@ Let $G$ and $H$ be groups.
 \end{exercise}
 
 \begin{sol}
-    The kernel of $\phi$ is $\frac12\z$, or
+    The kernel of $\phi$ is $\frac12\zbb$, or
     \begin{center}
         \begin{tikzpicture}
             \draw[<->] (-4.5, 0) -- (4.5, 0);
@@ -389,50 +389,50 @@ Let $G$ and $H$ be groups.
     \end{center}
     Moreover, the fibers are just all halved, so
     \begin{align*}
-        \phi\inv(-1) & = \frac14 + \frac12 \z = \set*{\left.\frac14 + \frac n2~\right|~n \in \z} \\
-        \phi\inv(-i) & = \frac18 + \frac12 \z = \set*{\left.\frac18 + \frac n2~\right|~n \in \z} \\
-        \phi\inv(e^{4\pi i/3}) & = \frac13 + \frac12 \z = \set*{\left.\frac13 + \frac n2~\right|~n \in \z} \qh
+        \phi\inv(-1) & = \frac14 + \frac12 \zbb = \set*{\left.\frac14 + \frac n2~\right|~n \in \zbb} \\
+        \phi\inv(-i) & = \frac18 + \frac12 \zbb = \set*{\left.\frac18 + \frac n2~\right|~n \in \zbb} \\
+        \phi\inv(e^{4\pi i/3}) & = \frac13 + \frac12 \zbb = \set*{\left.\frac13 + \frac n2~\right|~n \in \zbb} \qh
     \end{align*}
 \end{sol}
 
 \begin{spex}[3.1.14]
-    Consider the additive quotient group $\q/\z$.
+    Consider the additive quotient group $\qbb/\zbb$.
     \begin{subexercises}
-        \item Show that every coset of $\z$ in $\q$ contains exactly one representative $q \in \q$ in the range $0 \le q < 1$.
-        \item Show that every element of $\q/\z$ has finite order but that there are elements of arbitrarily large order.
-        \item Show that $\q/\z$ is the torsion subgroup of $\r/\z$ (cf. \exref{2.1.6}).
-        \item Prove that $\q/\z$ is isomorphic to the multiplicative group of roots of unity in $\c^\times$.
+        \item Show that every coset of $\zbb$ in $\qbb$ contains exactly one representative $q \in \qbb$ in the range $0 \le q < 1$.
+        \item Show that every element of $\qbb/\zbb$ has finite order but that there are elements of arbitrarily large order.
+        \item Show that $\qbb/\zbb$ is the torsion subgroup of $\rbb/\zbb$ (cf. \exref{2.1.6}).
+        \item Prove that $\qbb/\zbb$ is isomorphic to the multiplicative group of roots of unity in $\cbb^\times$.
     \end{subexercises}
 \end{spex}
 
 \begin{solenum}
-    \item Suppose $a/b \in \q$ with $(a, b) = 1$.
+    \item Suppose $a/b \in \qbb$ with $(a, b) = 1$.
 	By the Division Algorithm, there exist unique integers $q, r$ such that $a = bq + r$ for $0 \leq r < b$, or equivalently, $a/b = q + r/b$.
-	Then $a/b + \z = r/b + \z$.
-	If there exists some other representative $s/t$ in $0 \leq s/t < 1$ such that $a/b + \z = s/t + \z$, then $r/b + \z = s/t + \z$, or that $r/b - s/t \in \z$.
+	Then $a/b + \zbb = r/b + \zbb$.
+	If there exists some other representative $s/t$ in $0 \leq s/t < 1$ such that $a/b + \zbb = s/t + \zbb$, then $r/b + \zbb = s/t + \zbb$, or that $r/b - s/t \in \zbb$.
 	Then there exists some integer $k$ such that $rt - sb = kbt$.
 	Since $0 \leq r < b$ and $0 \leq s < t$, then $0 \leq rt < bt$ and $0 \leq sb < bt$.
 	Combining these two inequalities, we get $-bt < rt - sb < bt$, so that $-1 < k < 1$.
 	Since $k$ is an integer, then $k = 0$, and $rt - sb = 0$, or $r/b = s/t$.
 	Hence, the representative in $0 \leq q < 1$ is unique.
-    \item Let $a/b \in \q$.
-	Then $b(a/b + \z) = ab + \z = \z$, so that $a/b + \z$ has finite order.
-	Moreover, $1/k + \z \in \q/\z$ has order $k$, and since $k$ can be made arbitrarily large, then there are elements of arbitrarily large order.
-    \item By the previous exercise, $\q/\z \subseteq \tor(\r/\z)$.
-	Let $x + \z \in \tor(\r/\z)$.
-	Then $|x + \z|$ is finite, so there exists some $n \in \z$ such that $n(x + \z) = nx + \z = \z$.
-	Then $nx \in \z$, so that $x = m/n$ for some $m \in \z$.
-	Hence, $x + \z \in \q/\z$, and $\tor(\r/\z) \subseteq \q/\z$.
-	Therefore, $\tor(\r/\z) = \q/\z$.
-    \item By \exref{3.1.12}, we have $\r/\z \cong S^1$.
-	By definition, $\tor(S^1)$ consists of $z \in \c\unt$ such that $z^n = 1$ for some $n \in \zp$.
+    \item Let $a/b \in \qbb$.
+	Then $b(a/b + \zbb) = ab + \zbb = \zbb$, so that $a/b + \zbb$ has finite order.
+	Moreover, $1/k + \zbb \in \qbb/\zbb$ has order $k$, and since $k$ can be made arbitrarily large, then there are elements of arbitrarily large order.
+    \item By the previous exercise, $\qbb/\zbb \subseteq \tor(\rbb/\zbb)$.
+	Let $x + \zbb \in \tor(\rbb/\zbb)$.
+	Then $|x + \zbb|$ is finite, so there exists some $n \in \zbb$ such that $n(x + \zbb) = nx + \zbb = \zbb$.
+	Then $nx \in \zbb$, so that $x = m/n$ for some $m \in \zbb$.
+	Hence, $x + \zbb \in \qbb/\zbb$, and $\tor(\rbb/\zbb) \subseteq \qbb/\zbb$.
+	Therefore, $\tor(\rbb/\zbb) = \qbb/\zbb$.
+    \item By \exref{3.1.12}, we have $\rbb/\zbb \cong S^1$.
+	By definition, $\tor(S^1)$ consists of $z \in \cbb\unt$ such that $z^n = 1$ for some $n \in \zp$.
 	This is precisely the set of roots of unity.
-	Since $\tor(\r/\z) = \q/\z$, then $\q/\z$ is isomorphic to the set of roots of unity.
+	Since $\tor(\rbb/\zbb) = \qbb/\zbb$, then $\qbb/\zbb$ is isomorphic to the set of roots of unity.
 \end{solenum}
 
 \begin{exercise}[3.1.15]
     Prove that a quotient of a divisible Abelian group by any proper subgroup is also divisible.
-	Deduce that $\q/\z$ is divisible (cf. \exref{2.4.19}).
+	Deduce that $\qbb/\zbb$ is divisible (cf. \exref{2.4.19}).
 \end{exercise}
 
 \begin{sol}
@@ -444,8 +444,8 @@ Let $G$ and $H$ be groups.
     	(xB)^n = x^n B = aB
     \]
     so that $A/B$ is divisible.
-	Observe that $\q$ is divisible, since for any $q \in \q$ and $n \in \zp$, there exists $p \in \q$ such that $np = q$, namely $p = q/n$.
-	Moreover, $\z$ is a proper subgroup of $\q$, so by the first part, $\q/\z$ is divisible.
+	Observe that $\qbb$ is divisible, since for any $q \in \qbb$ and $n \in \zp$, there exists $p \in \qbb$ such that $np = q$, namely $p = q/n$.
+	Moreover, $\zbb$ is a proper subgroup of $\qbb$, so by the first part, $\qbb/\zbb$ is divisible.
 \end{sol}
 
 \begin{spex}[3.1.16]
@@ -458,7 +458,7 @@ Let $G$ and $H$ be groups.
     We prove the general case.
 	Since $G = \gen S$, then for any $g \in G$, we have
     \[
-    	g = s_1^{\alpha_1} s_2^{\alpha_2} \cdots s_k^{\alpha_k}, \quad s_i \in S, \alpha_i \in \z
+    	g = s_1^{\alpha_1} s_2^{\alpha_2} \cdots s_k^{\alpha_k}, \quad s_i \in S, \alpha_i \in \zbb
     \]
     Observe that $\bar S = \set{\bar s \mid s \in S}$.
 	Then for any $\bar g \in \bar G$, we have
@@ -612,11 +612,11 @@ Let $G$ and $H$ be groups.
 \end{solenum}
 
 \begin{spex}[3.1.20]
-    Let $G = \z/24\z$ and let $\wt{G} = G/\langle \bar{12} \rangle$, where for each integer $a$ we simplify notation by writing $\wt{\bar a}$ as $\wt{a}$.
+    Let $G = \zbb/24\zbb$ and let $\wt{G} = G/\langle \bar{12} \rangle$, where for each integer $a$ we simplify notation by writing $\wt{\bar a}$ as $\wt{a}$.
     \begin{subexercises}
         \item Show that $\wt{G} = \set{ \wt{0}, \wt{1}, \ldots, \wt{11} }$.
         \item Find the order of each element of $\wt{G}$.
-        \item Prove that $\wt{G} \cong \z/12\z$ (thus $(\z/24\z)/(12\z/24\z) \cong \z/12\z$, just as if we inverted and canceled the $24\z$'s).
+        \item Prove that $\wt{G} \cong \zbb/12\zbb$ (thus $(\zbb/24\zbb)/(12\zbb/24\zbb) \cong \zbb/12\zbb$, just as if we inverted and canceled the $24\zbb$'s).
     \end{subexercises}
 \end{spex}
 
@@ -748,7 +748,7 @@ Let $G$ and $H$ be groups.
 \begin{exercise}[3.1.25]
     \begin{subexercises}
         \item Prove that a subgroup $N$ of $G$ is normal if and only if $gNg\inv  \subseteq N$ for all $g \in G$.
-        \item Let $G = \gl_2(\q)$, let $N$ be the subgroup of upper triangular matrices with integer entries and $1$'s on the diagonal, and let $g$ be the diagonal matrix with entries $2,1$.
+        \item Let $G = \gl_2(\qbb)$, let $N$ be the subgroup of upper triangular matrices with integer entries and $1$'s on the diagonal, and let $g$ be the diagonal matrix with entries $2,1$.
 	Show that $gNg\inv  \subseteq N$ but $g$ does not normalize $N$.
     \end{subexercises}
 \end{exercise}
@@ -771,7 +771,7 @@ Let $G$ and $H$ be groups.
             0 & 1
         \end{pmatrix} \in N
 	\]
-    where $x \in \z$.
+    where $x \in \zbb$.
 	Then
     \[
     	gng\inv = 
@@ -792,7 +792,7 @@ Let $G$ and $H$ be groups.
             0 & 1
         \end{pmatrix} \in N
 	\]
-    since $2x \in \z$.
+    since $2x \in \zbb$.
 	Notice that the upper right entry of $gng\inv$ for any $n \in N$ will be even, so any matrix with an odd integer in the upper right entry will have no such $n \in N$ such that $gng\inv$ is that matrix.
 \end{solenum}
 
@@ -804,7 +804,7 @@ Let $G$ and $H$ be groups.
         \item Prove that the conjugate of $a\inv $ is the inverse of the conjugate of $a$.
         \item Let $N = \langle S \rangle$ for some subset $S$ of $G$.
 	    Prove that $N \nsub G$ if $gSg\inv  \subseteq N$ for all $g \in G$.
-        \item Deduce that if $N$ is the cyclic group $\langle x \rangle$, then $N$ is normal in $G$ if and only if for each $g \in G$, $gxg\inv  = x^k$ for some $k \in \z$.
+        \item Deduce that if $N$ is the cyclic group $\langle x \rangle$, then $N$ is normal in $G$ if and only if for each $g \in G$, $gxg\inv  = x^k$ for some $k \in \zbb$.
         \item Let $n$ be a positive integer.
 	    Prove that the subgroup $N$ of $G$ generated by all the elements of $G$ of order $n$ is a normal subgroup of $G$.
     \end{subexercises}
@@ -1027,62 +1027,62 @@ Let $G$ and $H$ be groups.
 \end{solenum}
 
 \begin{spex}[3.1.35] 
-    Prove that $\speclin_n(F) \nsub \gl_n(F)$ and describe the isomorphism type of the quotient group (cf. \exref{2.1.9}).
+    Prove that $\splin_n(F) \nsub \gl_n(F)$ and describe the isomorphism type of the quotient group (cf. \exref{2.1.9}).
 \end{spex}
 
 \begin{sol}
-    Since $\speclin_n(F) \leq \gl_n(F)$ by \exref{2.1.9}, it remains to be shown that $\speclin_n(F)$ is normal in $\gl_n(F)$.
-	Let $S \in \speclin_n(F)$ and $X \in \gl_n(F)$.
+    Since $\splin_n(F) \leq \gl_n(F)$ by \exref{2.1.9}, it remains to be shown that $\splin_n(F)$ is normal in $\gl_n(F)$.
+	Let $S \in \splin_n(F)$ and $X \in \gl_n(F)$.
 	Then
     \[
     	\det(XSX\inv) = \det(X)\det(S)\det(X\inv) = 1
     \]
-    so that $XSX\inv \in \speclin_n(F)$.
-	Then $X\speclin_n(F)X\inv \subseteq \speclin_n(F)$ for every $X \in \gl_n(F)$, and since conjugation is an isomorphism, then $X\speclin_n(F)X\inv = \speclin_n(F)$.
-	Hence, $\speclin_n(F) \nsub \gl_n(F)$.
+    so that $XSX\inv \in \splin_n(F)$.
+	Then $X\splin_n(F)X\inv \subseteq \splin_n(F)$ for every $X \in \gl_n(F)$, and since conjugation is an isomorphism, then $X\splin_n(F)X\inv = \splin_n(F)$.
+	Hence, $\splin_n(F) \nsub \gl_n(F)$.
 
     Observe that a normal subgroup corresponds to the kernel of some homomorphism.
-	It is clear that the mapping $\det : \gl_n(F) \to F\unt$ is a homomorphism, and the elements that map to the identity in $F\unt$ are precisely those matrices with determinant 1, i.e. $\speclin_n(F)$.
-	Then we may consider the mapping $\phi : \gl_n(F)/\speclin_n(F) \to F\unt$ given by $\phi(\bar X) = \det(X)$.
+	It is clear that the mapping $\det : \gl_n(F) \to F\unt$ is a homomorphism, and the elements that map to the identity in $F\unt$ are precisely those matrices with determinant 1, i.e. $\splin_n(F)$.
+	Then we may consider the mapping $\phi : \gl_n(F)/\splin_n(F) \to F\unt$ given by $\phi(\bar X) = \det(X)$.
 
     We now show that $\phi$ is well-defined.
-	Suppose $\bar A = \bar B$ for some $\bar A, \bar B \in \gl_n(F)/\speclin_n(F)$.
-	Then for some $AS \in \bar A$ for $S \in \speclin_n(F)$.
-	there exists $S' \in \speclin_n(F)$ such that $AS = BS'$.
+	Suppose $\bar A = \bar B$ for some $\bar A, \bar B \in \gl_n(F)/\splin_n(F)$.
+	Then for some $AS \in \bar A$ for $S \in \splin_n(F)$.
+	there exists $S' \in \splin_n(F)$ such that $AS = BS'$.
 	Then
     \[
     	\phi(\bar A) = \det(A) = \det(AS) = \det(BS') = \det(B) = \phi(\bar B)
     \]
     so that $\phi$ is well-defined.
 
-    Suppose $\phi(\bar A) = \phi(\bar B)$ for $\bar A, \bar B \in \gl_n(F)/\speclin_n(F)$.
+    Suppose $\phi(\bar A) = \phi(\bar B)$ for $\bar A, \bar B \in \gl_n(F)/\splin_n(F)$.
 	Then $\det(A) = \det(B)$.
-	Let $AS \in \bar A$ for some $S \in \speclin_n(F)$.
+	Let $AS \in \bar A$ for some $S \in \splin_n(F)$.
 	Note that $B\inv$ exists since $B \in \gl_n(F)$.
 	Then
     \[
     	\det(B\inv AS) = \det(B\inv)\det(A)\det(S) = \det(A)\inv\det(A)\det(S) = 1
     \]
-    so that $B\inv AS \in \speclin_n(F)$, hence $B\inv AS = S'$ for some $S' \in \speclin_n(F)$.
+    so that $B\inv AS \in \splin_n(F)$, hence $B\inv AS = S'$ for some $S' \in \splin_n(F)$.
 	It follows that $AS = BS'$ so that $AS \in \bar B$, hence $\bar A \subseteq \bar B$.
 	A similar argument shows that $\bar B \subseteq \bar A$, so that $\bar A = \bar B$ and $\phi$ is injective.
 	Moreover, for some $f \in F\unt$, then $\det(fI_n) = f\det(I_n) = f$ so that $\phi$ is surjective.
-	Lastly, for $\bar A, \bar B \in \speclin_n(F)$, then
+	Lastly, for $\bar A, \bar B \in \splin_n(F)$, then
     \[
     	\phi(\bar{AB}) = \det(AB) = \det(A)\det(B) = \phi(\bar A)\phi(\bar B)
     \]
     so that $\phi$ is a homomorphism.
-	Then $\phi$ is a bijective homomorphism, and $\gl_n(F)/\speclin_n(F) \cong F\unt$.
+	Then $\phi$ is a bijective homomorphism, and $\gl_n(F)/\splin_n(F) \cong F\unt$.
 \end{sol}
 
 \begin{exercise}[3.1.36] 
-    Prove that if $G/Z(G)$ is cyclic then $G$ is Abelian. [If $G/Z(G)$ is cyclic with generator $xZ(G)$, show that every element of $G$ can be written in the form $x^a z$ for some integer $a \in \z$ and some element $z \in Z(G)$.]
+    Prove that if $G/Z(G)$ is cyclic then $G$ is Abelian. [If $G/Z(G)$ is cyclic with generator $xZ(G)$, show that every element of $G$ can be written in the form $x^a z$ for some integer $a \in \zbb$ and some element $z \in Z(G)$.]
 \end{exercise}
 
 \begin{sol}
     Suppose $G/Z(G)$ is cyclic with generator $xZ(G)$.
 	Let $g, h \in G$.
-	Then there exist integers $a, b \in \z$ and elements $z_1, z_2 \in Z(G)$ such that
+	Then there exist integers $a, b \in \zbb$ and elements $z_1, z_2 \in Z(G)$ such that
     \[
     	g = x^a z_1 \quad \text{and} h = x^b z_2
     \]
@@ -1206,12 +1206,12 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{spex}[3.1.43]
-    Assume $\mathcal{P} = \set{A_i \mid i \in I}$ is any partition of $G$ with the property that $\mathcal{P}$ is a group under the ``quotient operation'' defined as follows: to compute the product of $A_i$ with $A_j$ take any element $a_i$ of $A_i$ and any element $a_j$ of $A_j$ and let $A_iA_j$ be the element of $\mathcal{P}$ containing $a_ia_j$ (this operation is assumed to be well-defined).
-	Prove that the element of $\mathcal{P}$ that contains the identity of $G$ is a normal subgroup of $G$ and the elements of $\mathcal{P}$ are the cosets of this subgroup (so $\mathcal{P}$ is just a quotient group of $G$ in the usual sense).
+    Assume $\pcal = \set{A_i \mid i \in I}$ is any partition of $G$ with the property that $\pcal$ is a group under the ``quotient operation'' defined as follows: to compute the product of $A_i$ with $A_j$ take any element $a_i$ of $A_i$ and any element $a_j$ of $A_j$ and let $A_iA_j$ be the element of $\pcal$ containing $a_ia_j$ (this operation is assumed to be well-defined).
+	Prove that the element of $\pcal$ that contains the identity of $G$ is a normal subgroup of $G$ and the elements of $\pcal$ are the cosets of this subgroup (so $\pcal$ is just a quotient group of $G$ in the usual sense).
 \end{spex}
 
 \begin{sol}
-    For any $g \in G$, let $\wt g \in \pp$ denote the element such that $g \in \wt g$.
+    For any $g \in G$, let $\wt g \in \pcal$ denote the element such that $g \in \wt g$.
 	We now show that $\wt 1 \leq G$.
 	Since $1 \in \wt 1$, then $\wt 1$ is nonempty.
 	Suppose $g, h \in \wt 1$.
@@ -1234,7 +1234,7 @@ Let $G$ and $H$ be groups.
     \]
     so that $gxg\inv \in \wt 1$, hence $\wt 1 \nsub G$.
 
-    To show that the elements of $\pp$ are the cosets of $\wt 1$, let $g \in G$ with $\bar g \in G/\wt 1$.
+    To show that the elements of $\pcal$ are the cosets of $\wt 1$, let $g \in G$ with $\bar g \in G/\wt 1$.
 	We show that $\bar g = \wt g$.
 	For any $x \in \bar g$, then $x \in g\wt 1$, or $x = gh$ for some $h \in \wt 1$.
 	Then

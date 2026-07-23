@@ -100,7 +100,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 \end{exercise}
 
 \begin{solenum}
-    \item Note that $\aut(H) \cong \gl_2(\f_2) \cong S_3$ as it is a non-Abelian group of order 6, by \exref{4.2.10}.
+    \item Note that $\aut(H) \cong \gl_2(\fbb_2) \cong S_3$ as it is a non-Abelian group of order 6, by \exref{4.2.10}.
 	It follows by definition that $G = H \semidir K$, where $K \cong S_3$.
 	Hence, $|G| = |H||K| = 4 \cdot 6 = 24$.
     \item Let $G$ act on the left cosets of $K$ in $G$.
@@ -134,7 +134,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     \[
     	H \semidir_{\phi_1} K \cong H \semidir_{\phi_2} K
     \]
-    (in particular, if the subgroups $\phi_1(K)$ and $\phi_2(K)$ are equal in $\aut(H)$, then the resulting semidirect products are isomorphic). [Suppose $\sigma\phi_1(K)\sigma\inv = \phi_2(K)$ so that for some $a \in \z$ we have $\sigma\phi_1(k)\sigma\inv = \phi_2(k)^a$ for all $k \in K$.
+    (in particular, if the subgroups $\phi_1(K)$ and $\phi_2(K)$ are equal in $\aut(H)$, then the resulting semidirect products are isomorphic). [Suppose $\sigma\phi_1(K)\sigma\inv = \phi_2(K)$ so that for some $a \in \zbb$ we have $\sigma\phi_1(k)\sigma\inv = \phi_2(k)^a$ for all $k \in K$.
 	Show that the map
     \[
     	\psi : H \semidir_{\phi_1} K \to H \semidir_{\phi_2} K
@@ -145,12 +145,12 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 
 \begin{sol}
     Let $K = \gen k$ and $\sigma \in \aut(H)$ such that $\sigma\phi_1(K)\sigma\inv = \phi_2(K)$.
-	Then there exists some $a \in \z$ such that $\sigma\phi_1(k)\sigma\inv = \phi_2(k)^a$ for all $k \in K$.
+	Then there exists some $a \in \zbb$ such that $\sigma\phi_1(k)\sigma\inv = \phi_2(k)^a$ for all $k \in K$.
 	Define the map
     \[
     	\psi : H \semidir_{\phi_1} K \to H \semidir_{\phi_2} K
     \]
-    by $\psi((h, k^m)) = (\sigma(h), k^{am})$ for all $h \in H$ and $m \in \z$.
+    by $\psi((h, k^m)) = (\sigma(h), k^{am})$ for all $h \in H$ and $m \in \zbb$.
 	Then for any $(h_1, k^s), (h_2, k^t) \in H \semidir_{\phi_1} K$, we have
     \begin{align*}
         \psi((h_1, k^s)(h_2, k^t)) & = \psi((h_1\phi_1(k^s)(h_2), k^{s + t})) \\
@@ -217,7 +217,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
         [For a particular $S$, two groups are not isomorphic if the kernels of the maps from $S$ into $\aut(Z_7)$ are not isomorphic.]
         \item Let $G$ be a group of order 56 with a non-normal Sylow 7-subgroup.
 	Prove that if $S$ is the Sylow 2-subgroup of $G$ then $S \cong Z_2 \times Z_2 \times Z_2$. [Let an element of order 7 act by conjugation on the seven non-identity elements of $S$ and deduce that they all have the same order.]
-        \item Prove that there is a unique group of order 56 with a non-normal Sylow 7-subgroup. [For existence use the fact that $|GL_3(\f_2)| = 168$; for uniqueness use \exref{5.5.6}.]
+        \item Prove that there is a unique group of order 56 with a non-normal Sylow 7-subgroup. [For existence use the fact that $|GL_3(\fbb_2)| = 168$; for uniqueness use \exref{5.5.6}.]
     \end{subexercises}
 \end{spex}
 
@@ -389,15 +389,15 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	Let $p$ act by conjugation on the seven non-identity elements of $S$.
 	Note that the stabilizer of any non-identity element $s \in S$ is a subgroup of $P$, hence $|G_s| = 1$ or 7.
 	If $|G_s| = 7$, then the orbit is trivial, hence $psp\inv = s$, or $p = sps\inv \in P$, which contradicts that $|s|$ is a power of 2.
-	Then $|G_s| = 1$, so the orbit $\oo_s$ of $s$ has size 7.
-	Since $|S - 1| = 7$, then $\oo_s$ contains all non-identity elements of $S$.
+	Then $|G_s| = 1$, so the orbit $\ocal_s$ of $s$ has size 7.
+	Since $|S - 1| = 7$, then $\ocal_s$ contains all non-identity elements of $S$.
 	Hence, all non-identity elements of $S$ have the same order.
     
     If they all had order 8, then $s^2$ would have order 4, but $(s^2)^4 = s^8 = 1$.
 	A similar reasoning eliminates the possibility of order 4.
 	Hence, all non-identity elements of $S$ have order 2, so $S \cong Z_2 \times Z_2 \times Z_2$.
     \item Let $H = Z_2 \times Z_2 \times Z_2$ and $K = \gen k \cong Z_7$.
-	Then $\aut(H) \cong \gl_3(\f_2)$, which has order 168.
+	Then $\aut(H) \cong \gl_3(\fbb_2)$, which has order 168.
 	Let $\phi : K \to \aut(H)$ be a homomorphism.
 	Since $|K| = 7$, then $|\phi(K)| = 1$ or 7.
 	If $|\phi(K)| = 1$, then the resulting semidirect product is Abelian, which is a contradiction.
@@ -441,7 +441,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
         
         If we consider $G \cong Q \semidir P$, then we have a homomorphism $\phi : P \to \aut(Q)$.
 	Since $|\aut(Q)| = 2$, then the only homomorphism $\phi : P \to \aut(Q)$ is the trivial homomorphism, so $G \cong Q \semidir P \cong Q \times P \cong Z_3 \times Z_{25}$.
-        \item Suppose $P \cong Z_5 \times Z_5$ with $\aut(P) \cong \gl_2(\f_5)$, which has order 480.
+        \item Suppose $P \cong Z_5 \times Z_5$ with $\aut(P) \cong \gl_2(\fbb_5)$, which has order 480.
 	Since $|Q| = 3$, then there exists a non-trivial homomorphism $\phi : Q \to \aut(P)$, which is unique since $|\aut(P)| = 480$ and $(480, 3) = 3$.
 	We may use similar reasoning as the previous exercise in that $\phi_1(Q)$ and $\phi_2(Q)$ are conjugate subgroups of $\aut(P)$, and $\phi_1(Q), \phi_2(Q) \in \syl_3(\aut(P))$, so they are conjugate by the Sylow theorems.
 	Hence, by \exref{5.5.6}, we have $P \semidir_{\phi_1} Q \cong P \semidir_{\phi_2} Q$.
@@ -460,9 +460,9 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
             1 & 4
         \end{bmatrix}
     \]
-    is an element of order 5 in $\gl_2(\f_{19})$.
+    is an element of order 5 in $\gl_2(\fbb_{19})$.
 	Use this matrix to construct a non-Abelian group of order 1805, and give a presentation of this group.
-	Classify groups of order 1805 (there are three isomorphism types). [Use \exref{5.5.6} to prove uniqueness of the non-Abelian group.] (A general method for finding elements of prime order in $\gl_n(\f_p)$ is described in the exercises in Section 12.2; this particular matrix of order 5 in $\gl_2(\f_{19})$ appears in \exref{12.2.16} of that section as an illustration of the method.)
+	Classify groups of order 1805 (there are three isomorphism types). [Use \exref{5.5.6} to prove uniqueness of the non-Abelian group.] (A general method for finding elements of prime order in $\gl_n(\fbb_p)$ is described in the exercises in Section 12.2; this particular matrix of order 5 in $\gl_2(\fbb_{19})$ appears in \exref{12.2.16} of that section as an illustration of the method.)
 \end{exercise}
 
 \begin{sol}
@@ -482,7 +482,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	If $P \cong Z_{361}$, then $\aut(P) \cong \units[361]$, which has order 19 * 18 = 342.
 	Since $|Q| = 5$, then the only homomorphism $\phi : Q \to \aut(P)$ is the trivial homomorphism, so $G \cong P \semidir Q \cong P \times Q \cong Z_{361} \times Z_5$.
 
-    If $P \cong Z_{19} \times Z_{19}$, then $\aut(P) \cong \gl_2(\f_{19})$, which has order 123120.
+    If $P \cong Z_{19} \times Z_{19}$, then $\aut(P) \cong \gl_2(\fbb_{19})$, which has order 123120.
 	If we take $\phi$ to be the trivial homomorphism, then $G \cong Z_{19} \times Z_{19} \times Z_5$.
 	Now, since $|Q| = 5$, then there exists a non-trivial homomorphism $\phi : Q \to \aut(P)$, which is unique since $|\aut(P)| = 123120$ and $(123120, 5) = 5$.
 	We may use similar reasoning as the previous exercise in that $\phi_1(Q)$ and $\phi_2(Q)$ are conjugate subgroups of $\aut(P)$, and $\phi_1(Q), \phi_2(Q) \in \syl_5(\aut(P))$, so they are conjugate by the Sylow theorems.
@@ -509,9 +509,9 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
                 0 & 2
             \end{bmatrix}
         \]
-        be elements of $\gl_2(\f_7)$.
-	    Prove $P = \gen{t_1, t_2}$ is a Sylow 3-subgroup of $\gl_2(\f_7)$, and that $P \cong Z_3 \times Z_3$.
-	    Deduce that every subgroup of order 3 is conjugate in $\gl_2(\f_7)$ to a subgroup of $P$.
+        be elements of $\gl_2(\fbb_7)$.
+	    Prove $P = \gen{t_1, t_2}$ is a Sylow 3-subgroup of $\gl_2(\fbb_7)$, and that $P \cong Z_3 \times Z_3$.
+	    Deduce that every subgroup of order 3 is conjugate in $\gl_2(\fbb_7)$ to a subgroup of $P$.
         \item By Example 3 in Section 1, the group $P$ has four subgroups of order 3, and these are: $P_1 = \gen{t_1}, P_2 = \gen{t_2}, P_3 = \gen{t_1t_2}$, and $P_4 = \gen{t_1t_2^2}$.
 	    For $i = 1, 2, 3, 4$, let $G_i = (Z_7 \times Z_7) \semidir_{\phi_i} P_i$, where $\phi_i$ is an isomorphism of $Z_3$ with the subgroup $P_i$ of $\aut(Z_7 \times Z_7)$.
 	    For each $i$, describe $G_i$ in terms of generators and relations.
@@ -535,7 +535,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	Let $\phi_1, \phi_2 : Q \to \aut(P)$ be the two homomorphisms defined by $\phi_1(q) = \alpha$ and $\phi_2(q) = \alpha^2$.
 	Since $\phi_1(Q) = \phi_2(Q) = \gen\alpha$, then by \exref{5.5.6}, we have $P \semidir_{\phi_1} Q \cong P \semidir_{\phi_2} Q$.
 	Hence, there is a unique non-Abelian group of order 147 whose Sylow 7-subgroup is cyclic.
-    \item Recall that $|\gl_2(\f_7)| = (7^2 - 1)(7^2 - 7) = 48 \cdot 42 = 2016 = 2^5 \cdot 3^2 \cdot 7$.
+    \item Recall that $|\gl_2(\fbb_7)| = (7^2 - 1)(7^2 - 7) = 48 \cdot 42 = 2016 = 2^5 \cdot 3^2 \cdot 7$.
 	Observe that
     \[
     	t_1^3 = 
@@ -558,14 +558,14 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	Moreover, $t_1t_2 = t_2t_1$, so $P = \gen{t_1}\gen{t_2}$.
 	To see that this is isomorphic to $\gen{t_1} \times \gen{t_2}$, note that $\gen{t_1} \cap \gen{t_2} = 1$.
 	Moreover, commutativity shows that ${t_1} \nsub P$ and ${t_2} \nsub P$, so $P \cong \gen{t_1} \times \gen{t_2} \cong Z_3 \times Z_3$.
-	Since $|P| = 9$, then $P$ is a Sylow 3-subgroup of $\gl_2(\f_7)$.
+	Since $|P| = 9$, then $P$ is a Sylow 3-subgroup of $\gl_2(\fbb_7)$.
 
-    Let $R$ be a subgroup of order 3 in $\gl_2(\f_7)$.
-	Then $R \leq gPg\inv$ for some $g \in \gl_2(\f_7)$ by the Sylow theorems.
+    Let $R$ be a subgroup of order 3 in $\gl_2(\fbb_7)$.
+	Then $R \leq gPg\inv$ for some $g \in \gl_2(\fbb_7)$ by the Sylow theorems.
 	Then $gRg\inv \leq P$, so $gRg\inv$ is a subgroup of order 3 in $P$.
-	Hence, every subgroup of order 3 is conjugate in $\gl_2(\f_7)$ to a subgroup of $P$.
+	Hence, every subgroup of order 3 is conjugate in $\gl_2(\fbb_7)$ to a subgroup of $P$.
     \item Let $Z_7 \times Z_7 = \gen a \times \gen b$.
-	Then $\aut(Z_7 \times Z_7) \cong \gl_2(\f_7)$, and $P_i$ is a subgroup of $\aut(Z_7 \times Z_7)$ for $i = 1, 2, 3, 4$.
+	Then $\aut(Z_7 \times Z_7) \cong \gl_2(\fbb_7)$, and $P_i$ is a subgroup of $\aut(Z_7 \times Z_7)$ for $i = 1, 2, 3, 4$.
 	Let $\phi_i : Z_3 \to P_i$ be an isomorphism.
 	We check each $i$:
     \begin{itemize}
@@ -628,16 +628,16 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     \item To show that $G_3 \not\cong G_4$, we first observe that $G_3$ and $G_4$ have the same subgroups of order 7, since $Z_7 \times Z_7$ is the unique Sylow 7-subgroup of both groups.
 	Hence, $G_3$ and $G_4$ have the list of subgroups
     \[
-    	\ss = \set{\gen a, \gen b, \gen{ab}, \gen{ab^2}, \gen{ab^3}, \gen{ab^4}, \gen{ab^5}, \gen{ab^6}}.
+    	\scal = \set{\gen a, \gen b, \gen{ab}, \gen{ab^2}, \gen{ab^3}, \gen{ab^4}, \gen{ab^5}, \gen{ab^6}}.
     \]
-    Let $q$ act on $\ss$ by conjugation.
-	In $G_3$, for any $\gen{ab^i} \in \ss$, then
+    Let $q$ act on $\scal$ by conjugation.
+	In $G_3$, for any $\gen{ab^i} \in \scal$, then
     \[
     	q(ab^i)q\inv = (qaq\inv)(qb^iq\inv) = a^2b^{2i}.
     \]
     It is clear that $a^2b^{2i} \in \gen{ab^i}$, so $q$ stabilizes $\gen{ab^i}$.
 	Hence, $q$ stabilizes all subgroups of order 7 in $G_3$, and each subgroup of order 7 is normal in $G_3$.
-	In $G_4$, consider $\gen{ab} \in \ss$.
+	In $G_4$, consider $\gen{ab} \in \scal$.
 	Then
     \[
     	q(ab)q\inv = (qaq\inv)(qbq\inv) = a^2b^4 \notin \gen{ab},
@@ -650,8 +650,8 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	Since $P \cap Q = 1$ because (49, 3) = 1, and $|G| = |P||Q|$, then $G = PQ$, and $G \cong P \semidir Q$.
 	If the homomorphism is trivial, then we have the two Abelian groups from part (a).
 	If the homomorphism is non-trivial and $P$ is cyclic, then we have the unique non-Abelian group from part (c).
-	If the homomorphism is non-trivial and $P$ is not cyclic, then $\phi(Q)$ is a subgroup of order 3 in $\aut(P) \cong \gl_2(\f_7)$.
-	By part (d), every subgroup of order 3 is conjugate in $\gl_2(\f_7)$ to a subgroup of $P$, so by \exref{5.5.6} we have the three non-Abelian groups $G_1, G_3$, and $G_4$ from part (e).
+	If the homomorphism is non-trivial and $P$ is not cyclic, then $\phi(Q)$ is a subgroup of order 3 in $\aut(P) \cong \gl_2(\fbb_7)$.
+	By part (d), every subgroup of order 3 is conjugate in $\gl_2(\fbb_7)$ to a subgroup of $P$, so by \exref{5.5.6} we have the three non-Abelian groups $G_1, G_3$, and $G_4$ from part (e).
 	Hence, the six non-isomorphic groups described above are all the groups of order 147.
 \end{solenum}
 
@@ -1124,7 +1124,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 
 \begin{exercise}[5.5.15]
     Let $p$ be an odd prime.
-	Prove that every element of order 2 in $\gl_2(\f_p)$ is conjugate to a diagonal matrix with $\pm 1$'s on the diagonal.
+	Prove that every element of order 2 in $\gl_2(\fbb_p)$ is conjugate to a diagonal matrix with $\pm 1$'s on the diagonal.
 	Classify the groups of order $2p^2$. [If $A$ is a $2 \times 2$ matrix with $A^2 = I$ and $v_1, v_2$ is a basis for the underlying vector space, look at $A$ acting on the vectors $w_1 = v_1 + v_2$ and $w_2 = v_1 - v_2$.]
 \end{exercise}
 
@@ -1178,7 +1178,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
         	G \cong \gen{x, q \mid x^{p^2} = q^2 = 1, qxq\inv = x\inv} \cong D_{2p^2}.
         \]
         \item The Abelian case is $Z_p \times Z_p \times Z_2$.
-	If $P = \gen x \times \gen y \cong Z_p \times Z_p$, then $\aut(P) \cong \gl_2(\f_p)$.
+	If $P = \gen x \times \gen y \cong Z_p \times Z_p$, then $\aut(P) \cong \gl_2(\fbb_p)$.
 	Then there are three homomorphisms from $Q$ to $\aut(P)$, namely
         \[
         	\phi_1 = 
@@ -1478,6 +1478,6 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 \end{exercise}
 
 \begin{exercise}[5.5.25]
-    Let $H(\f_p)$ be the Heisenberg group over the finite field $\f_p = \z/p\z$ (cf. \exref{5.4.20}).
-	Prove that $H(\f_2) \cong D_8$, and that $H(\f_p)$ has exponent $p$ and is isomorphic to the first non-Abelian group in Example 7.
+    Let $H(\fbb_p)$ be the Heisenberg group over the finite field $\fbb_p = \zbb/p\zbb$ (cf. \exref{5.4.20}).
+	Prove that $H(\fbb_2) \cong D_8$, and that $H(\fbb_p)$ has exponent $p$ and is isomorphic to the first non-Abelian group in Example 7.
 \end{exercise}
