@@ -24,7 +24,9 @@
     Inducting on $n$, note that the base case is trivial. Let $T_n = \gen{(i\ i + 1) \mid 1 \leq i \leq n - 1}$. Suppose that $S_n = T_n$ for some $n \geq 1$, and consider some $\sigma \in S_{n + 1}$. Write $\sigma$ as a product of transpositions, and let $(j\ k)$ be a transposition in $\sigma$.
 
     There are 2 cases to consider. If $1 \leq j < k \leq n$, then $(j\ k) \in S_n = T_n$ by the inductive hypothesis. If $k = n + 1$ and $j = n$, then $(j\ k) \in T_{n + 1}$ by definition. Suppose now that $1 \leq j < k = n + 1$ where $j < n$. Note that
-    \[(j\ n + 1) = (n\ n + 1)(j\ n)(n\ n + 1)\]
+    \[
+    	(j\ n + 1) = (n\ n + 1)(j\ n)(n\ n + 1)
+    \]
     where each transposition on the right-hand side is in $T_{n + 1}$ (in particular, $(j\ n) \in S_n = T_n$ by the inductive hypothesis). It follows that $(j\ k) \in T_{n + 1}$ for all transpositions in $\sigma$, hence $\sigma \in T_{n + 1}$. By induction, the result holds for all $n \geq 1$.
 \end{sol}
 
@@ -88,7 +90,9 @@
 
 \begin{sol}
     Since the subgroup lattice is correct, we know that the subgroup of order 4 is maximal and normal in $A_4$. Moreover, it is Abelian. Therefore, we have the composition series
-    \[1 \nsub \gen{(1\ 2)(3\ 4)} \nsub \gen{(1\ 2)(3\ 4), (1\ 3)(2\ 4)} \nsub A_4\]
+    \[
+    	1 \nsub \gen{(1\ 2)(3\ 4)} \nsub \gen{(1\ 2)(3\ 4), (1\ 3)(2\ 4)} \nsub A_4
+    \]
     where each composition factor is of prime order. By the characterization of solvable groups, $A_4$ is solvable.
 \end{sol}
 
@@ -106,11 +110,13 @@
 
 \begin{sol}
     Recall that $A_n$ contains only even permutations, while $S_{n - 2}$ contain both even and odd permutations. Our homomorphism must then mapp odd permutations of $S_{n - 2}$ to even permutations of $A_n$, while ensuring that the original action of the permutation in $S_{n - 2}$ is preserved. Hence, we ``add'' on a transposition to odd permutations in $S_{n - 2}$ to make them even in $A_n$. We then define the map $\phi: S_{n - 2} \to A_n$ by
-    \[\phi(\sigma) = 
-    \begin{cases}
-        \sigma & \text{if $\sigma$ is even,}\\
-        \sigma \circ (n - 1\ n) & \text{if $\sigma$ is odd.}
-    \end{cases}\]
+    \[
+    	\phi(\sigma) = 
+        \begin{cases}
+            \sigma & \text{if $\sigma$ is even,}\\
+            \sigma \circ (n - 1\ n) & \text{if $\sigma$ is odd.}
+        \end{cases}
+	\]
     Now suppose $\sigma, \tau \in S_{n - 2}$. There are 3 cases to consider:
     \begin{enumerate}
         \item If both $\sigma$ and $\tau$ are even, then $\phi(\sigma\tau) = \sigma\tau = \phi(\sigma)\phi(\tau)$.

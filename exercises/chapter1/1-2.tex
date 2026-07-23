@@ -12,7 +12,9 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 
 \begin{sol}
     For any reflection $sr^k \in D_{2n}$, it is clear that $sr^k \neq 1$. Moreover,
-    \[(sr^k)^2 = s(r^ks)r^k = s(sr^{-k})r^k = r^{-k}r^k = 1\]
+    \[
+    	(sr^k)^2 = s(r^ks)r^k = s(sr^{-k})r^k = r^{-k}r^k = 1
+    \]
     so that every reflection has order 2. We now compute the orders of the rotations in each group.
     \begin{subexercises}
         \item $D_6 = \set{1, r, r^2, s, sr, sr^2}$. Then $|1| = 1$ and $|r| = |r^2| = 3$.
@@ -27,7 +29,9 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 
 \begin{sol}
     If $x$ is not a power of $r$, then $x$ is a reflection, i.e., $x = sr^k$ for some $0 \leq k < n$. Then
-    \[rx = r(sr^k) = (rs)r^k = (sr^{-1})r^k = s(r^{-1}r^k) = s r^{k - 1} = (sr^k) r^{-1} = x r^{-1} \qh\]
+    \[
+    	rx = r(sr^k) = (rs)r^k = (sr^{-1})r^k = s(r^{-1}r^k) = s r^{k - 1} = (sr^k) r^{-1} = x r^{-1} \qh
+    \]
 \end{sol}
 
 \begin{exercise}[1.2.3]
@@ -38,7 +42,9 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
  
 \begin{sol}
     If an element is not a power of $r$, then it is a reflection. See \exref{1.2.1} as to why every reflection has order $2$. Moreover, for any $r^k, sr^k \in D_{2n}$ for $0 \leq k < n$, we may rewrite them as
-    \[r^k = (s(sr))^k \quad \text{and} \quad sr^k = s(s(sr))^k,\]
+    \[
+    	r^k = (s(sr))^k \quad \text{and} \quad sr^k = s(s(sr))^k,
+    \]
     showing that every element of $D_{2n}$ can be expressed in terms of $s$ and $sr$.
 \end{sol}
 
@@ -50,7 +56,9 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
    
 \begin{sol}
     Since $k \neq 1$, then $r^k \neq 1$. Moreover, $(r^k)^2 = r^n = 1$, hence $|r^k| = 2$. Since $r^k$ commutes with other powers of $r$, consider $sr^j \in D_{2n}$ for $0 \leq j < n$. Then
-    \[r^k(sr^j) = (r^ks)r^j = (sr^{-k})r^j = s(r^{-k}r^j) = s r^{j-k} = (sr^j) r^k,\]
+    \[
+    	r^k(sr^j) = (r^ks)r^j = (sr^{-k})r^j = s(r^{-k}r^j) = s r^{j-k} = (sr^j) r^k,
+    \]
     Now let $w \in D_{2n}$ such that $wx = xw$ for all $x \in D_{2n}$. If $w = r^m$ for $0 \leq m < n$, then commuting with $s$ gives $w = w\inv$, which implies $m = k$ by \exref{1.1.33}. If $w = sr^m$ instead, then commuting with $r$ implies $r = r\inv$, which cannot be true since $n \geq 4$.
 \end{sol}
 
@@ -70,7 +78,9 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 
 \begin{sol}
     Since $|x| = |y| = 2$, then $x = x\inv$ and $y = y\inv$. Then
-    \[tx = (xy)x = x(yx) = x(xy)\inv = x t\inv \qh\]
+    \[
+    	tx = (xy)x = x(yx) = x(xy)\inv = x t\inv \qh
+    \]
 \end{sol}
 
 \begin{exercise}[1.2.7]
@@ -81,7 +91,9 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 
 \begin{sol}
     If $a^2 = b^2 = (ab)^n = 1$, put $r = ab$ and $s = a$. Then
-    \[r^n = (ab)^n = 1, \quad s^2 = a^2 = 1, \quad rs = (ab)a = a(ba) = a(b\inv a\inv) = a(ab)\inv = sr\inv.\]
+    \[
+    	r^n = (ab)^n = 1, \quad s^2 = a^2 = 1, \quad rs = (ab)a = a(ba) = a(b\inv a\inv) = a(ab)\inv = sr\inv.
+    \]
     Conversely, put $a = s$ and $b = sr$. The calculations are similar.
 \end{sol}
 
@@ -157,13 +169,17 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 
 \begin{sol}
     Note that $y_1^2 = 1$, then $y_1\inv = y_1$. Then
-    \[(x_1y_1)^2 = 1 \iff x_1y_1x_1y_1 = 1 \iff x_1y_1x_1 = y_1\inv = y_1 \iff x_1y_1 = y_1x_1\inv\]
+    \[
+    	(x_1y_1)^2 = 1 \iff x_1y_1x_1y_1 = 1 \iff x_1y_1x_1 = y_1\inv = y_1 \iff x_1y_1 = y_1x_1\inv
+    \]
     Then the relations of $D_4$ are satisfied by $x_1$ and $y_1$ if we set $r = x_1$ and $s = y_1$.
 \end{sol}
 
 \begin{exercise}[1.2.17]
     Let $X_{2n}$ be the group whose presentation is displayed in (1.2).
-    \[X_{2n} = \gen{x, y \mid x^n = y^2 = 1, xy = yx^2}\]
+    \[
+    	X_{2n} = \gen{x, y \mid x^n = y^2 = 1, xy = yx^2}
+    \]
     \begin{subexercises}
         \item Show that if $n = 3k$, then $X_{2n}$ has order $6$, and it has the same generators and relations as $D_6$ when $x$ is replaced by $r$ and $y$ by $s$.
         \item Show that if $(3, n) = 1$, then $x$ satisfies the additional relation: $x = 1$. In this case deduce that $X_{2n}$ has order $2$.
@@ -174,22 +190,34 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 
 \begin{solenum}
     \item If $n = 3k$, then
-    \[X_{2n} = X_{6k} = \gen{x, y \mid x^{3k} = y^2 = 1, xy = yx^2}\]
+    \[
+    	X_{2n} = X_{6k} = \gen{x, y \mid x^{3k} = y^2 = 1, xy = yx^2}
+    \]
     As shown in the text, $x^3 = 1$. Assume the relations of $X_{6k}$ hold. Set $r = x$ and $s = y$, so that $r^3 = x^3 = 1$, $s^2 = y^2 = 1$, and
-    \[rs = xy = yx^2 = sr^2 = sr\inv.\]
+    \[
+    	rs = xy = yx^2 = sr^2 = sr\inv.
+    \]
     Now suppose the relations of $D_6$ hold. Then
-    \[x^n = r^{3k} = (r^3)^k = 1^k = 1, \quad y^2 = s^2 = 1\]
+    \[
+    	x^n = r^{3k} = (r^3)^k = 1^k = 1, \quad y^2 = s^2 = 1
+    \]
     and
-    \[xy = rs = sr\inv = sr^2 = yx^2\]
+    \[
+    	xy = rs = sr\inv = sr^2 = yx^2
+    \]
     Thus, the two presentations are equivalent, and $|X_{6k}| = |D_6| = 6$.
     \item Since $(3, n) = 1$, there exist integers $a$ and $b$ such that $3a + nb = 1$. From the relations of $X_{2n}$, we have $x^3 = 1$ and $x^n = 1$. Then
-    \[x = x^{3a + nb} = (x^3)^a (x^n)^b = 1^a 1^b = 1\]
+    \[
+    	x = x^{3a + nb} = (x^3)^a (x^n)^b = 1^a 1^b = 1
+    \]
     so that $X_{2n} = {1, y}$ where $y^2 = 1$. It follows that $|X_{2n}| = 2$.
 \end{solenum}
 
 \begin{exercise}[1.2.18]
     Let $Y$ be the group whose presentation is displayed in (1.3).
-    \[Y = \gen{u, v \mid u^4 = v^3 = 1, uv = v^2u^2}.\]
+    \[
+    	Y = \gen{u, v \mid u^4 = v^3 = 1, uv = v^2u^2}.
+    \]
     \begin{subexercises}
         \item Show that $v^2 = v^{-1}$.
         
@@ -212,7 +240,9 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 \begin{solenum}
     \item $v^3 = 1 \implies v^2 = v\inv$.
     \item From $uv = v^2u^2$, we have $vuv = u^2$ so that $vu = u^2v\inv = u^2v^2$. It follows that
-    \[v^2u^3v = (v^2u^2)(uv) = (uv)(uv) = u(vu)v = u(u^2v^2)v = u^3.\]
+    \[
+    	v^2u^3v = (v^2u^2)(uv) = (uv)(uv) = u(vu)v = u(u^2v^2)v = u^3.
+    \]
     \item It follows that $u^9 = (u^4)^2u = u$. Then $uv = (u^3)^3v = v(u^3)^3 = vu$.
     \item $uv = v^2u^2 = u^2v^2$. Then $1 = uv$.
     \item $u^4v^3 = u(uv)^3 = u1^3 = 1$. Then $1v = 1$, and $u = v = 1$, so $Y = 1$.

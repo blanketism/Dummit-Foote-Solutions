@@ -17,19 +17,29 @@
     Let $G$ be the group and $H$ be the subset in question.
     \begin{subexercises}
         \item Since $0 + 0i \in H$, then $H$ is nonempty. For $a + ai, b + bi \in H$,
-        \[(a + ai) - (b + bi) = (a - b) + (a - b)i \in H\]
+        \[
+        	(a + ai) - (b + bi) = (a - b) + (a - b)i \in H
+        \]
         so that $H \leq G$.
         \item Since $\abs 1 = 1$, then $1 \in H$ so that it is nonempty. For $z, w \in H$, we first note that $|w\inv| = 1/|w| = 1/1 = 1$. Then
-        \[|zw\inv| = |z||w\inv| = 1 \cdot 1 = 1\]
+        \[
+        	|zw\inv| = |z||w\inv| = 1 \cdot 1 = 1
+        \]
         so that $zw\inv \in H$, hence $H \leq G$.
         \item Fix $n \in \zp$. Since $0 = 0/k$ for some $k$ such that $k \mid n$, then $0 \in H$ so that $H$ is nonempty. Let $a/b, c/d \in H$ such that $b \mid n$ and $d \mid n$. Then there exist $x, y \in \zp$ such that $bx = n$ and $dy = n$. Then
-        \[\frac ab - \frac cd = \frac{ax - cy}{n}.\]
+        \[
+        	\frac ab - \frac cd = \frac{ax - cy}{n}.
+        \]
         Reducing this fraction still yields a denominator that divides $n$. Then $H \leq G$.
         \item Fix $n \in \zp$. Since $0 = 0/k$ for some $k$ such that $(k, n) = 1$, then $0 \in H$ so that $H$ is nonempty. Let $a/b, c/d \in H$ such that $(a, c) = 1$, $(b, n) = 1$, and $(d, n) = 1$. Then
-        \[\frac ab - \frac cd = \frac{ad - bc}{bd}\]
+        \[
+        	\frac ab - \frac cd = \frac{ad - bc}{bd}
+        \]
         If $(bd, n) \neq 1$, then there exists some prime $p$ such that $p \mid bd$ and $p \mid n$. Then $p \mid b$ or $p \mid d$, contradicting our assumption. Hence, $(bd, n) = 1$, so that $H \leq G$.
         \item Since $1 = 1^2 = 1/1$, then $1 \in H$ so that $H$ is nonempty. For $x, y \in H$, then $x^2, y^2 \in \q$. Then
-        \[\left(\frac xy\right)^2 = \frac{x^2}{y^2} \in \q\]
+        \[
+        	\left(\frac xy\right)^2 = \frac{x^2}{y^2} \in \q
+        \]
         so that $x/y \in H$, hence $H \leq G$. \qh
     \end{subexercises}
 \end{sol}
@@ -67,25 +77,25 @@
 \begin{solenum}
     \item 
     \[
-    \begin{array}{c|cccc}
-        \circ & 1 & r^2 & s & sr^2 \\
-        \hline
-        1 & 1 & r^2 & s & sr^2 \\
-        r^2 & r^2 & 1 & sr^2 & s \\
-        s & s & sr^2 & 1 & r^2 \\
-        sr^2 & sr^2 & s & r^2 & 1
-    \end{array}
+        \begin{array}{c|cccc}
+            \circ & 1 & r^2 & s & sr^2 \\
+            \hline
+            1 & 1 & r^2 & s & sr^2 \\
+            r^2 & r^2 & 1 & sr^2 & s \\
+            s & s & sr^2 & 1 & r^2 \\
+            sr^2 & sr^2 & s & r^2 & 1
+        \end{array}
     \]
     \item 
     \[
-    \begin{array}{c|cccc}
-        \circ & 1 & r^2 & sr & sr^3 \\
-        \hline
-        1 & 1 & r^2 & sr & sr^3 \\
-        r^2 & r^2 & 1 & sr^3 & sr \\
-        sr & sr & sr^3 & 1 & r^2 \\
-        sr^3 & sr^3 & sr & r^2 & 1
-    \end{array}
+        \begin{array}{c|cccc}
+            \circ & 1 & r^2 & sr & sr^3 \\
+            \hline
+            1 & 1 & r^2 & sr & sr^3 \\
+            r^2 & r^2 & 1 & sr^3 & sr \\
+            sr & sr & sr^3 & 1 & r^2 \\
+            sr^3 & sr^3 & sr & r^2 & 1
+        \end{array}
     \]
     Both tables show closure, since no product is an element outside the subset.
 \end{solenum}
@@ -113,32 +123,40 @@
 
 \begin{sol}
     Let the torsion subgroup be denoted as $\tor(G)$. Since $|1| = 1$, then $1 \in \tor(G)$. If $g, h \in \tor(G)$ such that $|g| = m$ and $|h| = n$, we have
-    \[(gh\inv)^{mn} = g^{mn}(h\inv)^{mn} = (g^m)^n((h^n)\inv)^m = 1^n(1\inv)^m = 1,\]
+    \[
+    	(gh\inv)^{mn} = g^{mn}(h\inv)^{mn} = (g^m)^n((h^n)\inv)^m = 1^n(1\inv)^m = 1,
+    \]
     where the first equality follows from $G$ being Abelian. Then $|gh\inv| \leq mn$, hence $gh\inv \in \tor(G)$, and $\tor(G) \leq G$.
 
     Consider $G = \gl_2(\r)$ where
-    \[A = 
-    \begin{pmatrix}
-        -1 & 0 \\
-        0 & 1
-    \end{pmatrix}, \quad
-    B = 
-    \begin{pmatrix}
-        -1 & 1 \\
-        0 & 1
-    \end{pmatrix}.\]
+    \[
+    	A = 
+        \begin{pmatrix}
+            -1 & 0 \\
+            0 & 1
+        \end{pmatrix}, \quad
+        B = 
+        \begin{pmatrix}
+            -1 & 1 \\
+            0 & 1
+        \end{pmatrix}.
+	\]
     Note that $|A| = |B| = 2$ so that $A, B \in \tor(G)$. However,
-    \[AB = 
-    \begin{pmatrix}
-        1 & -1 \\
-        0 & 1
-    \end{pmatrix}.\]
+    \[
+    	AB = 
+        \begin{pmatrix}
+            1 & -1 \\
+            0 & 1
+        \end{pmatrix}.
+	\]
     By induction, we may show that
-    \[(AB)^n = 
-    \begin{pmatrix}
-        1 & -n \\
-        0 & 1
-    \end{pmatrix}\]
+    \[
+    	(AB)^n = 
+        \begin{pmatrix}
+            1 & -n \\
+            0 & 1
+        \end{pmatrix}
+	\]
     for all $n \in \zp$. Hence, $|AB| = \infty$, so $AB \notin \tor(G)$.
 \end{sol}
 
@@ -148,7 +166,9 @@
 
 \begin{sol}
     The only finite order element in $\z$ is 0, while $\intmod$ is finite. Then
-    \[\tor(\z \times \intmod) = \set{(0, \bar x) \mid \bar x \in \intmod}.\]
+    \[
+    	\tor(\z \times \intmod) = \set{(0, \bar x) \mid \bar x \in \intmod}.
+    \]
     Consider $H = \set{(x, \bar y) \in \z \times \intmod \mid x \neq 0} \cup \set{(0, \bar 0)}$. Then $H$ contains the identity and all elements of infinite order. However, $(1, \bar 1), (-1, \bar 0) \in H$, but $(0, \bar 1) = (1, \bar 1) + (-1, \bar 0) \notin H$, since it has finite order. Hence, $H$ is not a subgroup of $\z \times \intmod$.
 \end{sol}
 
@@ -165,13 +185,17 @@
 
 \begin{spex}[2.1.9]
     Let $G = \gl_n(F)$, where $F$ is any field. Define
-    \[\speclin_n(F) = \set{ A \in \gl_n(F) \mid \det(A) = 1 }\]
+    \[
+    	\speclin_n(F) = \set{ A \in \gl_n(F) \mid \det(A) = 1 }
+    \]
     (called the \textbf{special linear group}). Prove that $\speclin_n(F) \le \gl_n(F)$.
 \end{spex}
 
 \begin{sol}
     Since $\det(I_n) = 1$, then $I_n \in \speclin_n(F)$. Suppose $A, B \in \speclin_n(F)$. Then
-    \[\det(AB\inv) = \det(A)\det(B\inv) = \frac{\det(A)}{\det(B)} = \frac 11 = 1\]
+    \[
+    	\det(AB\inv) = \det(A)\det(B\inv) = \frac{\det(A)}{\det(B)} = \frac 11 = 1
+    \]
     so that $AB\inv \in \speclin_n(F)$. It follows that $\speclin_n(F) \leq \gl_n(F)$.
 \end{sol}
 
@@ -184,7 +208,9 @@
 
 \begin{sol}
     We prove (b) and note that (a) is a special case with $I = \set{1, 2}$ and $H_1 = H$, $H_2 = K$. Let $I$ be an indexing set, and consider the collection of subgroups $\set{ H_i }_{i \in I}$ of $G$. Let
-    \[H = \bigcap_{i \in I} H_i\]
+    \[
+    	H = \bigcap_{i \in I} H_i
+    \]
     Since $1 \in H_i$ for all $i \in I$, then $1 \in H$. Suppose $a, b \in H$. Then $a, b \in H_i$ for all $i \in I$. Since each $H_i$ is a subgroup of $G$, then $ab\inv \in H_i$ for all $i \in I$. Hence, $ab\inv \in H$, and $H \leq G$.
 \end{sol}
 
@@ -201,13 +227,19 @@
     Let $C$ be the set in each part.
     \begin{subexercises}
         \item Since $1 \in A$, then $(1, 1) \in C$ so that $C$ is nonempty. Suppose $(a_1, 1), (a_2, 1) \in C$. Then
-        \[(a_1, 1)(a_2, 1)\inv = (a_1, 1)(a_2\inv, 1) = (a_1a_2\inv, 1) \in C\]
+        \[
+        	(a_1, 1)(a_2, 1)\inv = (a_1, 1)(a_2\inv, 1) = (a_1a_2\inv, 1) \in C
+        \]
         since $a_1a_2\inv \in A$. Hence, $C \leq A \times B$.
         \item Since $1 \in B$, then $(1, 1) \in C$ so that $C$ is nonempty. Suppose $(1, b_1), (1, b_2) \in C$. Then
-        \[(1, b_1)(1, b_2)\inv = (1, b_1)(1, b_2\inv) = (1, b_1b_2\inv) \in C\]
+        \[
+        	(1, b_1)(1, b_2)\inv = (1, b_1)(1, b_2\inv) = (1, b_1b_2\inv) \in C
+        \]
         since $b_1b_2\inv \in B$. Hence, $C \leq A \times B$.
         \item Since $1 \in A$, then $(1, 1) \in C$ so that $C$ is nonempty. Suppose $(a_1, a_1), (a_2, a_2) \in C$. Then
-        \[(a_1, a_1)(a_2, a_2)\inv = (a_1, a_1)(a_2\inv, a_2\inv) = (a_1a_2\inv, a_1a_2\inv) \in C\]
+        \[
+        	(a_1, a_1)(a_2, a_2)\inv = (a_1, a_1)(a_2\inv, a_2\inv) = (a_1a_2\inv, a_1a_2\inv) \in C
+        \]
         since $a_1a_2\inv \in A$. Hence, $C \leq A \times B$. \qh
     \end{subexercises}
 \end{sol}
@@ -224,10 +256,14 @@
     Let $B$ be the sets in question.
     \begin{subexercises}
         \item Since $1 = 1^n$, then $1 \in B$ so that $B$ is nonempty. Suppose $a^n, b^n \in B$. Then
-        \item \[(a^n)(b^n)\inv = a^n b^{-n} = (ab\inv)^n \in B\]
+        \item \[
+ 	(a^n)(b^n)\inv = a^n b^{-n} = (ab\inv)^n \in B
+ \]
         where the last equality follows from the fact that $A$ is Abelian. Hence, $B \leq A$.
         \item Since $1^n = 1$, then $1 \in B$ so that $B$ is nonempty. Suppose $a, b \in B$. Then
-        \[(ab\inv)^n = a^n (b\inv)^n = a^n (b^n)\inv = 1 \cdot 1\inv = 1\]
+        \[
+        	(ab\inv)^n = a^n (b\inv)^n = a^n (b^n)\inv = 1 \cdot 1\inv = 1
+        \]
         where the second equality follows from the fact that $A$ is Abelian. Hence, $B \leq A$. \qh
     \end{subexercises}
 \end{sol}
@@ -252,7 +288,9 @@
 
 \begin{exercise} [2.1.15]
     Let $H_1 \subseteq H_2 \subseteq \cdots$ be an ascending chain of subgroups of $G$. Prove that
-    \[\bigcup_{i = 1}^\infty H_i\]
+    \[
+    	\bigcup_{i = 1}^\infty H_i
+    \]
     is a subgroup of $G$.
 \end{exercise}
 
@@ -267,7 +305,9 @@
 
 \begin{sol}
     Let $\ut_n(F)$ denote the set of $n \times n$ upper triangular matrices with entries from $F$. Observe that $I_n$ contains $0$'s everywhere except the diagonal, hence $I_n \in \ut_n(F)$ so that $\ut_n(F)$ is nonempty. Suppose $A, B \in \ut_n(F)$, and consider $C = AB$. Then the $(i, j)$-th entry of $C$ is given by
-    \[c_{ij} = \sum_{k = 1}^n a_{ik}b_{kj}\]
+    \[
+    	c_{ij} = \sum_{k = 1}^n a_{ik}b_{kj}
+    \]
     Consider the case when $i > j$, which is below the main diagonal.
     \begin{itemize}
         \item If $i > k$, then $a_{ik} = 0$ since $A$ is upper triangular.
@@ -284,8 +324,12 @@
 
 \begin{sol}
     Let $H$ be the set in question. Since the diagonal of $I_n$ is only 1's, then $I_n \in H$. Suppose $A, B \in H$. By the previous exercise, $A, B \in \ut_n(F)$, so it remains to show that $a_{ii} = b_{ii} = 1$ for all $1 \leq i \leq n$. Then
-    \[(AB)_{ii} = \sum_{k = 1}^n a_{ik}b_{ki}\]
+    \[
+    	(AB)_{ii} = \sum_{k = 1}^n a_{ik}b_{ki}
+    \]
     Since $a_{ik} = 0$ for $k < i$ and $b_{ki} = 0$ for $k > i$, then the sum degrades to $a_{ii}b_{ii} = 1$. Then $H$ is closed under multiplication. Moreover, suppose $D \in \ut_n(F)$ such that $DA = I_n$. Then
-    \[1 = (DA)_{ii} = d_{ii}a_{ii}\]
+    \[
+    	1 = (DA)_{ii} = d_{ii}a_{ii}
+    \]
     where we use the above to collapse the $ii$-th term of $DA$. Then $d_{ii} = 1$, hence $D \in H$, and $H$ is closed under inverses. Hence, $H \leq \gl_n(F)$.
 \end{sol}

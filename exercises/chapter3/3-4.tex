@@ -67,23 +67,39 @@
 
 \begin{sol}
     Let $G$ be a solvable group, and let $H \leq G$. Then there exists a chain of subgroups
-    \[1 = G_0 \nsub G_1 \nsub \cdots \nsub G_n = G\]
+    \[
+    	1 = G_0 \nsub G_1 \nsub \cdots \nsub G_n = G
+    \]
     such that $G_{i + 1}/G_i$ is Abelian. Define the subgroups
-    \[H_i = H \cap G_i \quad \text{for each $0 \leq i \leq n$}\]
+    \[
+    	H_i = H \cap G_i \quad \text{for each $0 \leq i \leq n$}
+    \]
     Then $H_0 = H \cap G_0 = 1$ and $H_n = H \cap G_n = H$. It is clear that $H_i \leq H_{i + 1}$ for each $0 \leq i \leq n - 1$. To show that $H_i \nsub H_{i + 1}$, let $g \in H_{i + 1}$ and $x \in H_i$. Then $g \in G_{i + 1}$ and $x \in G_i$. Since $G_i \nsub G_{i + 1}$, then $gxg\inv \in G_i$. Since $g, x \in H$, then $gxg\inv \in H$, hence $gxg\inv \in H_i$. It follows that $H_i \nsub H_{i + 1}$. By the Second Isomorphism Theorem, we have
-    \[H_{i + 1}/H_i \cong H_{i + 1}G_i/G_i \leq G_{i + 1}/G_i\]
+    \[
+    	H_{i + 1}/H_i \cong H_{i + 1}G_i/G_i \leq G_{i + 1}/G_i
+    \]
     Since $G_{i + 1}/G_i$ is Abelian, then so is $H_{i + 1}/H_i$. Therefore, $H$ is solvable with the chain
-    \[1 = H_0 \nsub H_1 \nsub \cdots \nsub H_n = H\]
+    \[
+    	1 = H_0 \nsub H_1 \nsub \cdots \nsub H_n = H
+    \]
     Now let $N \nsub G$. Consider the subgroups
-    \[N_i = G_iN \quad \text{for each $0 \leq i \leq n$}\]
+    \[
+    	N_i = G_iN \quad \text{for each $0 \leq i \leq n$}
+    \]
     Since it is clear that $N_i \leq N_{i + 1}$, we need to show that $N_i \nsub N_{i + 1}$. Let $g \in G_{i + 1}, h \in G_i$, and $n_1, n_2 \in N$. Then
-    \[(gn_1)(hn_2)(gn_1)\inv = g n_1 h n_2 n_1\inv g\inv = g(n_1 h n_2 n_1\inv)g \inv\]
+    \[
+    	(gn_1)(hn_2)(gn_1)\inv = g n_1 h n_2 n_1\inv g\inv = g(n_1 h n_2 n_1\inv)g \inv
+    \]
     Note that $n_1 hn_2n_1\inv \in N_i$ since $h \in G_i \leq G$ and $N \nsub G$. Since $G_i \nsub G_{i + 1}$, then $g(n_1 h n_2 n_1\inv)g \inv \in G_i \subseteq N_i$. It follows that $N_i \nsub N_{i + 1}$.
 
     Lastly, by the Lattice Isomorphism Theorem, then $N_i/N \nsub N_{i + 1}/N$, and the Third Isomorphism Theorem concludes that
-    \[(N_{i + 1}/N)/(N_i/N) \cong N_{i + 1}/N_i \cong G_{i + 1}/(G_iN \cap G_{i + 1}) = G_{i + 1}/G_i\]
+    \[
+    	(N_{i + 1}/N)/(N_i/N) \cong N_{i + 1}/N_i \cong G_{i + 1}/(G_iN \cap G_{i + 1}) = G_{i + 1}/G_i
+    \]
     Since $G_{i + 1}/G_i$ is Abelian, then so is $(N_{i + 1}/N)/(N_i/N)$. Therefore, $G/N$ is solvable with the chain
-    \[1 = N_0/N \nsub N_1/N \nsub \cdots \nsub N_n/N = G/N. \qh\]
+    \[
+    	1 = N_0/N \nsub N_1/N \nsub \cdots \nsub N_n/N = G/N. \qh
+    \]
 \end{sol}
 
 \begin{exercise}[3.4.6]
@@ -92,9 +108,13 @@
 
 \begin{sol}
     Let $G$ be a finite group. If $G = 1$, then the result is trivial. Suppose now $G$ is non-trivial and that the result holds for all groups of order less than $\abs G$. If $G$ is simple, then the composition series is $1 \nsub G$. Suppose now $G$ is not simple, and let $N$ be a maximal, normal subgroup of $G$. Since $\abs N < \abs G$, we may conclude by the inductive hypothesis that there exists a composition series
-    \[1 = N_0 \nsub N_1 \nsub \cdots \nsub N_k = N\]
+    \[
+    	1 = N_0 \nsub N_1 \nsub \cdots \nsub N_k = N
+    \]
     for some $k \in \zp$. Since $N \nsub G$ and $G/N$ is simple, then the chain
-    \[1 = N_0 \nsub N_1 \nsub \cdots \nsub N_k = N \nsub G\]
+    \[
+    	1 = N_0 \nsub N_1 \nsub \cdots \nsub N_k = N \nsub G
+    \]
     is a composition series for $G$. By induction, the result holds for all finite groups.
 \end{sol}
 
@@ -106,11 +126,17 @@
     If $H = G$, then the result follows trivially, since the last term in the composition series must be $H$. Now suppose $H$ is a proper, normal subgroup of $G$. If $\abs G = 1$, the result is trivial. Suppose $\abs G > 1$, and assume the result is true for all groups with order less than $\abs G$.
 
     Since $H$ is proper, then $\abs H < \abs G$, hence we have a composition series
-    \[1 = H_0 \nsub H_1 \nsub \cdots \nsub H_m = H\]
+    \[
+    	1 = H_0 \nsub H_1 \nsub \cdots \nsub H_m = H
+    \]
     by the inductive hypothesis. Now consider the quotient group $G/H$. Since $\abs{G/H} < \abs G$, then by the inductive hypothesis, there exists a composition series
-    \[1 = K_0/H \nsub K_1/H \nsub \cdots \nsub K_n/H = G/H\]
+    \[
+    	1 = K_0/H \nsub K_1/H \nsub \cdots \nsub K_n/H = G/H
+    \]
     for some $n \in \zp$. By the Lattice Isomorphism Theorem, we have $H = K_0 \nsub K_1 \nsub \cdots \nsub K_n = G$. Since each $K_{i + 1}/K_i \cong (K_{i + 1}/H)/(K_i/H)$ is simple, then the chain
-    \[1 = H_0 \nsub H_1 \nsub \cdots \nsub H_m = H = K_0 \nsub K_1 \nsub \cdots \nsub K_n = G\]
+    \[
+    	1 = H_0 \nsub H_1 \nsub \cdots \nsub H_m = H = K_0 \nsub K_1 \nsub \cdots \nsub K_n = G
+    \]
     is a composition series for $G$ with one of its terms equal to $H$. By induction, the result holds for all finite groups.
 \end{sol}
 
@@ -119,11 +145,15 @@
     \begin{enumerate}
         \item[(i)] $G$ is solvable.
         \item[(ii)] $G$ has a chain of subgroups
-        \[1 = H_0 \trianglelefteq H_1 \trianglelefteq H_2 \trianglelefteq \cdots \trianglelefteq H_s = G\]
+        \[
+        	1 = H_0 \trianglelefteq H_1 \trianglelefteq H_2 \trianglelefteq \cdots \trianglelefteq H_s = G
+        \]
         such that $H_{i+1}/H_i$ is cyclic, $0 \le i \le s-1$.
         \item[(iii)] All composition factors of $G$ are of prime order.
         \item[(iv)] $G$ has a chain of subgroups
-        \[1 = N_0 \trianglelefteq N_1 \trianglelefteq N_2 \trianglelefteq \cdots \trianglelefteq N_t = G\]
+        \[
+        	1 = N_0 \trianglelefteq N_1 \trianglelefteq N_2 \trianglelefteq \cdots \trianglelefteq N_t = G
+        \]
         such that each $N_i$ is a normal subgroup of $G$ and $N_{i+1}/N_i$ is Abelian, $0 \le i \le t-1$.
     \end{enumerate}
     \noindent [For (iv), prove that a minimal non-trivial normal subgroup $M$ of $G$ is necessarily Abelian and then use induction. To see that $M$ is Abelian, let $N \trianglelefteq M$ be of prime index (by (iii)) and show that $x^{-1}y^{-1}xy \in N$ for all $x,y \in M$ (cf. \exref{3.1.40}). Apply the same argument to $gNg^{-1}$ to show that $x^{-1}y^{-1}xy$ lies in the intersection of all $G$-conjugates of $N$, and use the minimality of $M$ to conclude that $x^{-1}y^{-1}xy = 1$.]
@@ -131,27 +161,43 @@
 
 \begin{sol}
     \textbf{(i) \rightimp (ii)}: Suppose $G$ is solvable, and consider the chain of subgroups
-    \[1 = G_0 \nsub G_1 \nsub \cdots \nsub G_n = G\]
+    \[
+    	1 = G_0 \nsub G_1 \nsub \cdots \nsub G_n = G
+    \]
     where $G_{i + 1}/G_i$ is Abelian. We prove the following lemma: if $A$ is a finite Abelian group, then there exists a chain of subgroups
-    \[1 = A_0 \nsub A_1 \nsub \cdots \nsub A_k = A\]
+    \[
+    	1 = A_0 \nsub A_1 \nsub \cdots \nsub A_k = A
+    \]
     such that $A_{j + 1}/A_j$ is cyclic. We prove this lemma by induction on $\abs A$. If $\abs A = 1$, the result is trivial. Suppose $\abs A > 1$ and that the result holds for all Abelian groups of order less than $\abs A$. Since $A$ is finite Abelian, there exists some non-identity $a \in A$ such that $\gen a \nsub A$. Then $\abs{\gen a} < \abs A$, hence by the inductive hypothesis, there exists a chain of subgroups
-    \[1 = B_0 \nsub B_1 \nsub \cdots \nsub B_m = \gen a\]
+    \[
+    	1 = B_0 \nsub B_1 \nsub \cdots \nsub B_m = \gen a
+    \]
     such that $B_{j + 1}/B_j$ is cyclic. Now consider the quotient group $A/\gen a$. Since $\abs{A/\gen a} < \abs A$, then by the inductive hypothesis, there exists a chain of subgroups
-    \[1 = C_0/\gen a \nsub C_1/\gen a \nsub \cdots \nsub C_\ell/\gen a = A/\gen a\]
+    \[
+    	1 = C_0/\gen a \nsub C_1/\gen a \nsub \cdots \nsub C_\ell/\gen a = A/\gen a
+    \]
     for some $\ell \in \zp$. By the Lattice Isomorphism Theorem, we have $\gen a = C_0 \nsub C_1 \nsub \cdots \nsub C_\ell = A$. Since each $C_{i + 1}/C_i \cong (C_{i + 1}/\gen a)/(C_i/\gen a)$ is cyclic, then the chain
-    \[1 = B_0 \nsub B_1 \nsub \cdots \nsub B_m = \gen a = C_0 \nsub C_1 \nsub \cdots \nsub C_\ell = A\]
+    \[
+    	1 = B_0 \nsub B_1 \nsub \cdots \nsub B_m = \gen a = C_0 \nsub C_1 \nsub \cdots \nsub C_\ell = A
+    \]
     satisfies the lemma. By induction, the lemma holds for all finite Abelian groups. 
 
     Applying this lemma to each Abelian quotient $G_{i + 1}/G_i$ in the original chain, we obtain a chain of subgroups
-    \[1 = H_0 \nsub H_1 \nsub H_2 \nsub \cdots \nsub H_s = G\]
+    \[
+    	1 = H_0 \nsub H_1 \nsub H_2 \nsub \cdots \nsub H_s = G
+    \]
     such that $H_{i + 1}/H_i$ is cyclic, hence (ii) holds.
 
     \textbf{(ii) \rightimp (iii)}: Suppose $G$ has a chain of subgroups
-    \[1 = H_0 \nsub H_1 \nsub H_2 \nsub \cdots \nsub H_s = G\]
+    \[
+    	1 = H_0 \nsub H_1 \nsub H_2 \nsub \cdots \nsub H_s = G
+    \]
     such that $H_{i + 1}/H_i$ is cyclic. We prove that each composition factor of $G$ is of prime order. We prove this by induction on $\abs G$. If $\abs G = 1$, the result is trivial. Suppose $\abs G > 1$ and that the result holds for all groups of order less than $\abs G$. Since $H_{s - 1} \nsub G$ and $G/H_{s - 1}$ is cyclic, then $G/H_{s - 1} \cong Z_n$ for some $n \in \zp$. If $n$ is prime, then the composition factors of $G/H_{s - 1}$ are of prime order. Since $\abs{H_{s - 1}} < \abs G$, then by the inductive hypothesis, the composition factors of $H_{s - 1}$ are also of prime order, hence all composition factors of $G$ are of prime order. Suppose now $n$ is not prime, so that $n = km$ for some $k, m \in \zp$ where $1 < k, m < n$. Then $Z_n$ has a proper, non-trivial subgroup $\gen{a^m}$ of order $k$. Let $\pi : G \to G/H_{s - 1}$ be the natural projection, and let $K = \pi\inv(\gen{a^m})$. Then $H_{s - 1} \nsub K \nsub G$ so that by the Lattice Isomorphism Theorem, $K/H_{s - 1} \cong \gen{a^m}$ is a proper, non-trivial subgroup of $G/H_{s - 1}$, contradicting that $H_{s - 1}$ is maximal normal in $G$. It follows that $n$ must be prime, hence all composition factors of $G$ are of prime order. By induction, the result holds for all finite groups.
 
     \textbf{(iii) \rightimp (iv)}: Suppose all composition factors of $G$ are of prime order. We prove that $G$ has a chain of subgroups
-    \[1 = N_0 \nsub N_1 \nsub N_2 \nsub \cdots \nsub N_t = G\]
+    \[
+    	1 = N_0 \nsub N_1 \nsub N_2 \nsub \cdots \nsub N_t = G
+    \]
     such that each $N_i$ is a normal subgroup of $G$ and $N_{i + 1}/N_i$ is Abelian. Let $M$ be a minimal, non-trivial normal subgroup of $G$, and suppose $N \nsub M$ have prime index. Then for any $x, y \in M$, we have $x^{-1}y^{-1}xy \in N$ since $M/N$ is Abelian. Now for any $g \in G$, consider $gNg\inv \nsub gMg\inv = M$. By the same argument, we have $x^{-1}y^{-1}xy \in gNg\inv$ for all $x, y \in M$. It follows that $x^{-1}y^{-1}xy$ lies in the intersection of all $G$-conjugates of $N$. Since $M$ is minimal normal in $G$, then this intersection is either 1 or $M$. If it were $M$, then $M$ would be Abelian, contradicting that $M/N$ is non-trivial. Hence, $x^{-1}y^{-1}xy = 1$ for all $x, y \in M$, so that $M$ is Abelian.
 
     \textbf{(iv) \rightimp (i)}: This implication is immediate from the definition of solvable groups.
@@ -159,7 +205,9 @@
 
 \begin{exercise}[3.4.9]
     Prove the following special case of part (2) of the Jordan--H\"older Theorem: assume the finite group $G$ has two composition series
-    \[ 1 = N_0 \trianglelefteq N_1 \trianglelefteq \cdots \trianglelefteq N_r = G \quad\text{and}\quad 1 = M_0 \trianglelefteq M_1 \trianglelefteq M_2 = G. \]
+    \[
+    	 1 = N_0 \trianglelefteq N_1 \trianglelefteq \cdots \trianglelefteq N_r = G \quad\text{and}\quad 1 = M_0 \trianglelefteq M_1 \trianglelefteq M_2 = G. 
+    \]
     Show that $r = 2$ and that the list of composition factors is the same. [Use the Second Isomorphism Theorem.]
 \end{exercise}
 
@@ -167,8 +215,13 @@
     Consider $H = N_{r - 1} \cap M_1$. Then $H \nsub M_1$. Since $M_1/1 \cong M_1$ is simple, then either $H = 1$ or $H = M_1$. If $H = M_1$, then $N_{r - 1} \nsub M_1$. By simplicity of $M_1$, it must be that $N_{r - 1} = M_1$ so that $r = 2$. Both composition series are then the same, so we now suppose $H = 1$.
 
     Noting that $M_1 \nsub G$ and $N_{r - 1} \nsub G$, we may use the Second Isomorphism Theorem to conclude that
-    \[N_{r - 1}M_1/M_1 \cong N_{r - 1}/(N_{r - 1} \cap M_1) = N_{r - 1}/1 \cong N_{r - 1}.\] Observe now that $M_1 \leq N_{r - 1}M_1 \leq G$, hence $N_{r - 1}M_1/M_1 \nsub G/M_1$. By simplicity of $G/M_1$, it must be that $N_{r - 1}M_1 = 1$ or $N_{r - 1}M_1 = G$. Since $N_{r - 1}$ is not trivial, it must be that $N_{r - 1}M_1 = G$. Now, $N_{r - 1}$ is simple, hence $N_{r - 2} = 1 = N_0$, and we may conclude that $r = 2$. Moreover, the composition factors are isomorphic:
-    \[G/N_{r - 1} \cong M_1/(N_{r - 1} \cap M_1) \cong M_1 \quad \text{and} \quad N_{r - 1}/1 \cong N_{r - 1} \cong G/M_1 \qh\]
+    \[
+    	N_{r - 1}M_1/M_1 \cong N_{r - 1}/(N_{r - 1} \cap M_1) = N_{r - 1}/1 \cong N_{r - 1}.
+    \]
+	Observe now that $M_1 \leq N_{r - 1}M_1 \leq G$, hence $N_{r - 1}M_1/M_1 \nsub G/M_1$. By simplicity of $G/M_1$, it must be that $N_{r - 1}M_1 = 1$ or $N_{r - 1}M_1 = G$. Since $N_{r - 1}$ is not trivial, it must be that $N_{r - 1}M_1 = G$. Now, $N_{r - 1}$ is simple, hence $N_{r - 2} = 1 = N_0$, and we may conclude that $r = 2$. Moreover, the composition factors are isomorphic:
+    \[
+    	G/N_{r - 1} \cong M_1/(N_{r - 1} \cap M_1) \cong M_1 \quad \text{and} \quad N_{r - 1}/1 \cong N_{r - 1} \cong G/M_1 \qh
+    \]
 \end{sol}
 
 \begin{exercise}[3.4.10]
@@ -216,9 +269,13 @@
 
 \begin{sol}
     Since $G$ is solvable, we have the sequence
-    \[1 = G_0 \nsub G_1 \nsub \cdots \nsub G_n = G\]
+    \[
+    	1 = G_0 \nsub G_1 \nsub \cdots \nsub G_n = G
+    \]
     where $G_{i + 1}/G_i$ is Abelian. Let $H_i = H \cap G_i$ for each $0 \leq i \leq n$. Since $H$ is non-trivial, consider the set of indices $I = \set{i \in \zp \mid G_i \cap H \neq 1}$. Since $H_n = H$, then $I$ is nonempty. By the Well Ordering Property, there exist some minimal index $k$ such that $H_k = G_k \cap H \neq 1$ but $H_{k - 1} = G_{k - 1} \cap H = 1$. Note that $H_k \nsub G$ since $H \nsub G$ and $G_k \nsub G$. Moreover, by the Second Isomorphism Theorem, we have
-    \[H_k \cong H_k/1 = H_k/(H_k \cap G_{k - 1}) \cong H_k G_{k - 1}/G_{k - 1} \leq G_k/G_{k - 1}\]
+    \[
+    	H_k \cong H_k/1 = H_k/(H_k \cap G_{k - 1}) \cong H_k G_{k - 1}/G_{k - 1} \leq G_k/G_{k - 1}
+    \]
     Since $G_k/G_{k - 1}$ is Abelian, then so is $H_k$. Therefore, $A = H_k$ is a non-trivial, Abelian normal subgroup of $G$ contained in $H$.
 \end{sol}
 
@@ -234,6 +291,8 @@
     \textbf{(i) \rightimp (ii)} Suppose every group of odd order is solvable. Let $G$ be a simple group of odd order. Since $G$ is solvable, then by the characterization of solvable groups, all composition factors of $G$ are of prime order. Since $G$ is simple, then its only composition series is $1 \nsub G$, hence $G$ is of prime order.
 
     \noindent \textbf{(ii) \rightimp (i)} Suppose the only simple groups of odd order are those of prime order. Let $G$ be a group of odd order. We want to show that $G$ is solvable. Consider a composition series of $G$:
-    \[1 = G_0 \nsub G_1 \nsub \cdots \nsub G_n = G.\]
+    \[
+    	1 = G_0 \nsub G_1 \nsub \cdots \nsub G_n = G.
+    \]
     Each composition factor $G_{i+1}/G_i$ is simple and of odd order, so by assumption, each is of prime order and hence Abelian. Therefore, $G$ is solvable.
 \end{sol}

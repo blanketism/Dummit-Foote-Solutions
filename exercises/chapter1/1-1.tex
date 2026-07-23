@@ -10,10 +10,14 @@ Let $G$ be a group.
         \item The operation $\star$ on $\z$ defined by $a \star b = a - b$.
         \item The operation $\star$ on $\r$ defined by $a \star b = a + b + ab$.
         \item The operation $\star$ on $\q$ defined by
-        \[a \star b = \dfrac{a + b}{5}.\]
+        \[
+        	a \star b = \dfrac{a + b}{5}.
+        \]
         \item The operation $\star$ on $\z \times \z$ defined by $(a,b) \star (c,d) = (ad + bc, \, bd)$.
         \item The operation $\star$ on $\q - \set{0}$ defined by
-        \[a \star b = \dfrac{a}{b}.\]
+        \[
+        	a \star b = \dfrac{a}{b}.
+        \]
     \end{subexercises}
 \end{exercise}
 
@@ -31,10 +35,14 @@ Let $G$ be a group.
         \item The operation $\star$ on $\z$ defined by $a \star b = a - b$.
         \item The operation $\star$ on $\r$ defined by $a \star b = a + b + ab$.
         \item The operation $\star$ on $\q$ defined by
-        \[a \star b = \dfrac{a + b}{5}.\]
+        \[
+        	a \star b = \dfrac{a + b}{5}.
+        \]
         \item The operation $\star$ on $\z \times \z$ defined by $(a,b) \star (c,d) = (ad + bc, \, bd)$.
         \item The operation $\star$ on $\q - \set{0}$ defined by
-        \[a \star b = \dfrac{a}{b}.\]
+        \[
+        	a \star b = \dfrac{a}{b}.
+        \]
     \end{subexercises}
 \end{exercise}
 
@@ -52,7 +60,9 @@ Let $G$ be a group.
 
 \begin{sol}
     Let $\bar a, \bar b, \bar c \in \intmod$. By associativity of addition in $\z$, we have:
-    \[(\bar a + \bar b) + \bar c = \bar{(a + b) + c} = \bar{a + (b + c)} = \bar a + (\bar b + \bar c).\qh\]
+    \[
+    	(\bar a + \bar b) + \bar c = \bar{(a + b) + c} = \bar{a + (b + c)} = \bar a + (\bar b + \bar c).\qh
+    \]
 \end{sol}
 
 \begin{exercise}[1.1.4]
@@ -87,13 +97,17 @@ Let $G$ be a group.
     Let $S$ denote the set in each part.
     \begin{subexercises}
         \item $S$ has identity element 0, inverse element $-a/b$ for $a/b \in S$, and inherits associativity from $\q$. Moreover, if $a/b, c/d \in S$ such that $(a, b) = (c, d) = 1$, then
-        \[\frac ab + \frac cd = \frac{ad + bc}{bd},\]
+        \[
+        	\frac ab + \frac cd = \frac{ad + bc}{bd},
+        \]
         where $bd$ is odd. Since an odd number cannot have a factor of 2, the denominator remains odd when reduced to lowest terms. Hence, $S$ is closed under addition, and it is a group.
         \item No: $1/2 \in S$, but $1/2 + 1/2 = 2/2 = 1/1 \notin S$.
         \item Same as (b).
         \item No: $3/2, 1 \in S$, but $3/2 - 1 = 1/2 \notin S$.
         \item Identity, inverses, and associativity are satisfied. Let $a, b \in \z$. Then
-        \[\frac a1 + \frac b1 = \frac{a + b}1, \quad \frac a2 + \frac b2 = \frac{a + b}2, \quad \frac a1 + \frac b2 = \frac{2a + b}2,\]
+        \[
+        	\frac a1 + \frac b1 = \frac{a + b}1, \quad \frac a2 + \frac b2 = \frac{a + b}2, \quad \frac a1 + \frac b2 = \frac{2a + b}2,
+        \]
         where the last case is chosen without loss of generality. Hence, $S$ is closed.
         \item No: $1/3, 1/2 \in S$, but $1/3 + 1/2 = 5/6 \notin S$. \qh
     \end{subexercises}
@@ -132,7 +146,9 @@ Let $G$ be a group.
 
 \begin{solenum}
     \item Since $1^1 = 1$, then $1 \in G$. If $z \in G$ for some $n$, then $(z\inv)^n = (z^n)\inv = 1\inv = 1$, so that $z\inv \in G$. Associativity from $\c$ is inherited by $G$. Finally, let $z, w \in G$ such that $z^n = w^m = 1$ for $n, m \in \zp$. Then
-    \[(zw)^{nm} = z^{nm} w^{nm} = (z^n)^m (w^m)^n = 1 \cdot 1 = 1,\]
+    \[
+    	(zw)^{nm} = z^{nm} w^{nm} = (z^n)^m (w^m)^n = 1 \cdot 1 = 1,
+    \]
     so that $zw \in G$. Hence, $G$ is a group under multiplication.
     \item No; note $1, -1 \in G$, but $1 + (-1) = 0 \notin G$ since $0^n = 0 \neq 1$ for any $n \in \zp$.
 \end{solenum}
@@ -149,12 +165,18 @@ Let $G$ be a group.
 
 \begin{solenum}
     \item Note that addition of two elements in $G$ is given by
-    \[(a + b\sqrt 2) + (c + d\sqrt 2) = (a + c) + (b + d)\sqrt 2 \in G.\]
+    \[
+    	(a + b\sqrt 2) + (c + d\sqrt 2) = (a + c) + (b + d)\sqrt 2 \in G.
+    \]
     From this, we see that $G$ is closed under addition. The identity is $0 + 0\sqrt 2 = 0$, and the inverse of $a + b\sqrt 2$ is $-a - b\sqrt 2$. Associativity is inherited from $\r$. Hence, $G$ is a group under addition.
     \item Note that multiplication of two elements in $G$ is given by
-    \[(a + b\sqrt 2)(c + d\sqrt 2) = (ac + 2bd) + (ad + bc)\sqrt 2 \in G.\]
+    \[
+    	(a + b\sqrt 2)(c + d\sqrt 2) = (ac + 2bd) + (ad + bc)\sqrt 2 \in G.
+    \]
     From this, we see that $G$ is closed under multiplication. The identity is $1 + 0\sqrt 2 = 1$, and the inverse of a nonzero element $a + b\sqrt 2$ is
-    \[(a + b\sqrt 2)\inv = \frac{1}{a + b\sqrt 2} = \frac{1}{a + b\sqrt 2} \cdot \frac{a - b\sqrt 2}{a - b\sqrt 2} = \frac{a - b\sqrt 2}{a^2 - 2b^2} = \frac a{a^2 - 2b^2} - \frac b{a^2 - 2b^2}\sqrt 2.\]
+    \[
+    	(a + b\sqrt 2)\inv = \frac{1}{a + b\sqrt 2} = \frac{1}{a + b\sqrt 2} \cdot \frac{a - b\sqrt 2}{a - b\sqrt 2} = \frac{a - b\sqrt 2}{a^2 - 2b^2} = \frac a{a^2 - 2b^2} - \frac b{a^2 - 2b^2}\sqrt 2.
+    \]
     Observe that $a - b\sqrt 2 \neq 0$, since that would imply $a = b\sqrt 2$, contradicting that $a \in \q$. Moreover, $a + b\sqrt 2 \neq 0$ implies $a^2 - 2b^2 \neq 0$. Hence, the inverse is well-defined and in $G$. Associativity is inherited from $\r$. Hence, the nonzero elements of $G$ are a group under multiplication.
 \end{solenum}
 
@@ -176,11 +198,13 @@ Let $G$ be a group.
 
 \begin{sol}
     For each $\bar x \in \intmod[12]$, add it to itself until we arrive at $\bar 0$. $|\bar 0| = 1$, and $|\bar 1| = 12$ since $12 \cdot \bar 1 = \bar{12} = \bar 0$. In particular, we have:
-    \[\begin{array}{c|c|c|c|c|c|c|c|c|c|c|c|c}
-        \bar x & \bar 0 & \bar 1 & \bar 2 & \bar 3 & \bar 4 & \bar 5 & \bar 6 & \bar 7 & \bar 8 & \bar 9 & \bar{10} & \bar{11} \\
-        \hline
-        |\bar x| & 1 & 12 & 6 & 4 & 3 & 12 & 2 & 12 & 3 & 4 & 6 & 12
-    \end{array}\,. \qh\]
+    \[
+        \begin{array}{c|c|c|c|c|c|c|c|c|c|c|c|c}
+            \bar x & \bar 0 & \bar 1 & \bar 2 & \bar 3 & \bar 4 & \bar 5 & \bar 6 & \bar 7 & \bar 8 & \bar 9 & \bar{10} & \bar{11} \\
+            \hline
+            |\bar x| & 1 & 12 & 6 & 4 & 3 & 12 & 2 & 12 & 3 & 4 & 6 & 12
+        \end{array}\,. \qh
+	\]
 \end{sol}
 
 \begin{exercise}[1.1.12]
@@ -188,11 +212,13 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-    \[\begin{array}{c|c|c|c|c|c|c}
-        \bar x & \bar{1} & \bar{-1} & \bar{5} & \bar{7} & \bar{-7} & \bar{13} \\
-        \hline
-        |\bar x| & 1 & 2 & 2 & 2 & 2 & 1
-    \end{array}\,. \qh\]
+    \[
+    	\begin{array}{c|c|c|c|c|c|c}
+            \bar x & \bar{1} & \bar{-1} & \bar{5} & \bar{7} & \bar{-7} & \bar{13} \\
+            \hline
+            |\bar x| & 1 & 2 & 2 & 2 & 2 & 1
+        \end{array}\,. \qh
+	\]
 \end{sol}
 
 \begin{exercise}[1.1.13]
@@ -200,11 +226,13 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-    \[\begin{array}{c|c|c|c|c|c|c|c|c|c}
+    \[
+    	\begin{array}{c|c|c|c|c|c|c|c|c|c}
             \bar x & \bar 1 & \bar 2 & \bar 6 & \bar 9 & \bar{10} & \bar{12} & \bar{-1} & \bar{-10} & \bar{-18} \\
             \hline
             |\bar x| & 36 & 18 & 6 & 4 & 18 & 3 & 36 & 18 & 2
-    \end{array}\,. \qh\]
+        \end{array}\,. \qh
+	\]
 \end{sol}
 
 \begin{exercise}[1.1.14]
@@ -212,11 +240,13 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-    \[\begin{array}{c|c|c|c|c|c|c}
-        \bar x & \bar 1 & \bar{-1} & \bar 5 & \bar{13} & \bar{-13} & \bar{17} \\
-        \hline
-        |\bar x| & 1 & 2 & 6 & 3 & 6 & 2
-    \end{array}\,. \qh\]
+    \[
+    	\begin{array}{c|c|c|c|c|c|c}
+            \bar x & \bar 1 & \bar{-1} & \bar 5 & \bar{13} & \bar{-13} & \bar{17} \\
+            \hline
+            |\bar x| & 1 & 2 & 6 & 3 & 6 & 2
+        \end{array}\,. \qh
+	\]
 \end{sol}
 
 \begin{exercise}[1.1.15]
@@ -225,7 +255,9 @@ Let $G$ be a group.
 
 \begin{sol}
     We proceed by induction. This holds for $n = 2$ by Proposition 1.1 (iv). Suppose it holds for some $n \in \zp$. Then for $n + 1$, we have
-    \[(a_1 a_2 \ldots a_n a_{n+1})^{-1} = a_{n+1}^{-1} (a_1 a_2 \ldots a_n)^{-1} = a_{n+1}^{-1} a_n^{-1} a_{n-1}^{-1} \ldots a_1^{-1}. \qh\]
+    \[
+    	(a_1 a_2 \ldots a_n a_{n+1})^{-1} = a_{n+1}^{-1} (a_1 a_2 \ldots a_n)^{-1} = a_{n+1}^{-1} a_n^{-1} a_{n-1}^{-1} \ldots a_1^{-1}. \qh
+    \]
 \end{sol}
 
 \begin{exercise}[1.1.16]
@@ -271,15 +303,25 @@ Let $G$ be a group.
     \begin{itemize}
         \item If $a, b \in \zp$, then the result follows from part (a).
         \item If $a \in \zp$ and $b < 0$ (the case of $a < 0$ and $b \in \zp$ is analogous), suppose $a + b \geq 0$. Then
-        \[x^a = x^{a + b - b} = x^{a + b}x^{-b},\]
+        \[
+        	x^a = x^{a + b - b} = x^{a + b}x^{-b},
+        \]
         so that $x^{a + b} = x^a x^b$. If $a + b < 0$, then
-        \[(x^{a + b})\inv = x^{-a - b} = x^{-b} x^{-a} = (x^a x^b)\inv,\]
+        \[
+        	(x^{a + b})\inv = x^{-a - b} = x^{-b} x^{-a} = (x^a x^b)\inv,
+        \]
         implying that $x^{a + b} = x^a x^b$, since inverses are unique. Moreover,
-        \[(x^a)^b = (x^a)^{-(-b)} = ((x^a)^{-b})\inv = (x^{-ab})\inv = x^{ab}.\]
+        \[
+        	(x^a)^b = (x^a)^{-(-b)} = ((x^a)^{-b})\inv = (x^{-ab})\inv = x^{ab}.
+        \]
         \item If $a < 0$ and $b < 0$, then $a + b < 0$ and
-        \[x^{a + b} = x^{b + a} = (x^{-b - a})\inv = (x^{-b} x^{-a})\inv = (x^{-a})\inv (x^{-b})\inv = x^a x^b.\]
+        \[
+        	x^{a + b} = x^{b + a} = (x^{-b - a})\inv = (x^{-b} x^{-a})\inv = (x^{-a})\inv (x^{-b})\inv = x^a x^b.
+        \]
         Moreover,
-        \[(x^a)^b = ((x^{-a})\inv)^b = ((x^{-a})^b)\inv = (x^{(-a)b})\inv = x^{ab}. \qh\]
+        \[
+        	(x^a)^b = ((x^{-a})\inv)^b = ((x^{-a})^b)\inv = (x^{(-a)b})\inv = x^{ab}. \qh
+        \]
     \end{itemize}
 \end{solenum}
 
@@ -289,9 +331,13 @@ Let $G$ be a group.
 
 \begin{sol}
     Suppose $|x| = n \in \zp$. Then
-    \[(x\inv)^n = (x^n)\inv = 1\inv = 1\]
+    \[
+    	(x\inv)^n = (x^n)\inv = 1\inv = 1
+    \]
     so that $|x\inv| \leq n$ and has finite order. Similarly, suppose $|x\inv| = m \in \zp$. Then
-    \[x^m = ((x\inv)^m)\inv = 1\inv = 1\]
+    \[
+    	x^m = ((x\inv)^m)\inv = 1\inv = 1
+    \]
     so that $|x| \leq m$ and has finite order. Then $n = m$, and $|x| = |x\inv|$. Specifically, $x$ has finite order if and only if $x\inv$ has finite order, hence $x$ has infinite order if and only if $x\inv$ has infinite order.
 \end{sol}
 
@@ -311,13 +357,19 @@ Let $G$ be a group.
     We first prove the following lemma.
     \begin{lemma}{$(g\inv xg)^n = g\inv x^n g$ for all $n \in \zp$.}
         We proceed by induction, where $n = 1$ is clear. If it holds for $n \in \zp$, then for $n + 1$, we have
-        \[(g\inv xg)^{n + 1} = (g\inv xg)^n (g\inv xg) = (g\inv x^n g)(g\inv xg) = g\inv x^{n + 1} g.\]
+        \[
+        	(g\inv xg)^{n + 1} = (g\inv xg)^n (g\inv xg) = (g\inv x^n g)(g\inv xg) = g\inv x^{n + 1} g.
+        \]
         Hence, the result follows by induction for all $n \in \zp$.
     \end{lemma}
     Let $|x| = m \in \zp$. Then
-    \[(g\inv xg)^m = g\inv x^m g = g\inv 1 g = 1,\]
+    \[
+    	(g\inv xg)^m = g\inv x^m g = g\inv 1 g = 1,
+    \]
     so that $|g\inv xg| \leq m$. Similarly, let $|g\inv xg| = n \in \zp$. Then
-    \[x^n = (gg\inv) x^n (gg\inv) = g(g\inv xg)^n g\inv = g 1 g\inv = 1,\]
+    \[
+    	x^n = (gg\inv) x^n (gg\inv) = g(g\inv xg)^n g\inv = g 1 g\inv = 1,
+    \]
     so that $|x| \leq n$. Hence, $m = n$, and $|x| = |g\inv x g|$.
 
     Let $a, b \in G$, and put $x = ab$ and $g = a$. Then $|ab| = |a\inv(ab)a| = |ba|$.
@@ -329,9 +381,13 @@ Let $G$ be a group.
 
 \begin{sol}
     Let $|x^s| = r \in \zp$. Then
-    \[(x^s)^t = x^{st} = x^n = 1,\]
+    \[
+    	(x^s)^t = x^{st} = x^n = 1,
+    \]
     so that $r \leq t$. Moreover,
-    \[x^{sr} = (x^s)^r = 1\]
+    \[
+    	x^{sr} = (x^s)^r = 1
+    \]
     implies that $|x| = st \leq sr$, hence $t \leq r$. Thus, $|x^s| = r = t$.
 \end{sol}
 
@@ -343,7 +399,9 @@ Let $G$ be a group.
 
 \begin{sol}
     The case for $n = 0$ and $n = 1$ is clear. If it holds for some $n \in \zp$, then for $n + 1$, we have
-    \[(ab)^{n + 1} = (ab)^n (ab) = (a^n b^n)(ab) = a^n (b^n a) b = a^n (ab^n) b = a^{n + 1} b^{n + 1}.\]
+    \[
+    	(ab)^{n + 1} = (ab)^n (ab) = (a^n b^n)(ab) = a^n (b^n a) b = a^n (ab^n) b = a^{n + 1} b^{n + 1}.
+    \]
     For $n < 0$, then $(ab)^n = ((ab)^{-n})\inv = (b^{-n} a^{-n})\inv = a^n b^n$.
 \end{sol}
 
@@ -353,7 +411,9 @@ Let $G$ be a group.
 
 \begin{sol}
     Since $x^2 = 1$, then $x = x\inv$ for all $x \in G$. Let $a, b \in G$. Then
-    \[ab = (ab)\inv = b\inv a\inv = ba. \qh\]
+    \[
+    	ab = (ab)\inv = b\inv a\inv = ba. \qh
+    \]
 \end{sol}
 
 \begin{spex}[1.1.26]
@@ -378,7 +438,9 @@ Let $G$ be a group.
     Let $(A, \star)$ and $(B, \diamond)$ be groups and let $A \times B$ be their direct product (as defined in Example 6). Verify all the group axioms for $A \times B$:
     \begin{subexercises}
         \item Prove that the associative law holds, i.e., for all $(a_1, b_1), (a_2, b_2), (a_3, b_3) \in A \times B$:
-        \[( (a_1, b_1)(a_2, b_2) )(a_3, b_3) = (a_1, b_1)((a_2, b_2)(a_3, b_3))\]
+        \[
+        	( (a_1, b_1)(a_2, b_2) )(a_3, b_3) = (a_1, b_1)((a_2, b_2)(a_3, b_3))
+        \]
         \item Prove that $(1, 1)$ is the identity of $A \times B$, and
         \item Prove that the inverse of $(a, b)$ is $(a^{-1}, b^{-1})$.
     \end{subexercises}
@@ -403,9 +465,13 @@ Let $G$ be a group.
 
 \begin{sol}
     Let $a, a' \in A$ and $b, b' \in B$. Suppose $A \times B$ is Abelian. Then
-    \[(aa', bb') = (a, b)(a', b') = (a', b')(a, b) = (a'a, b'b)\]
+    \[
+    	(aa', bb') = (a, b)(a', b') = (a', b')(a, b) = (a'a, b'b)
+    \]
     so that $A$ and $B$ are Abelian. If $A$ and $B$ are both Abelian, then
-    \[(a, b)(a', b) = (aa', bb') = (a'a, b'b) = (a', b')(a, b)\]
+    \[
+    	(a, b)(a', b) = (aa', bb') = (a'a, b'b) = (a', b')(a, b)
+    \]
     hence $A \times B$ is Abelian.
 \end{sol}
 
@@ -415,9 +481,13 @@ Let $G$ be a group.
 
 \begin{sol}
     Let $a \in A$ and $b \in B$. Then
-    \[(a, 1)(1, b) = (a \cdot 1, 1 \cdot b) = (a, b) = (1 \cdot a, b \cdot 1) = (1, b)(a, 1)\]
+    \[
+    	(a, 1)(1, b) = (a \cdot 1, 1 \cdot b) = (a, b) = (1 \cdot a, b \cdot 1) = (1, b)(a, 1)
+    \]
     so that $(a, 1)$ and $(1, b)$ commute. Let $\ell = \lcm(|a|, |b|)$. Then
-    \[(a, b)^{\ell} = (a^{\ell}, b^{\ell}) = (1, 1)\]
+    \[
+    	(a, b)^{\ell} = (a^{\ell}, b^{\ell}) = (1, 1)
+    \]
     so that $|(a, b)| \leq \ell$. Moreover, if $(a, b)^k = (1, 1)$ for some $k \in \zp$, then $a^k = 1$ and $b^k = 1$ so that both $|a|$ and $|b|$ divide $k$. Hence, $\ell$ divides $k$ so that $\ell \leq k$. Thus, $|(a, b)| = \ell$.
 \end{sol}
 
@@ -437,7 +507,9 @@ Let $G$ be a group.
 
 \begin{sol}
     Let $a, b \in \zp$ be such that $0 \leq a < b < n$. Suppose $x^a = x^b$. Then
-    \[1 = x^b x^{-a} = x^{b - a}\]
+    \[
+    	1 = x^b x^{-a} = x^{b - a}
+    \]
     so that $|x| \leq b - a < n$, which is a contradiction. Hence, the elements $1, x, x^2, \dots, x^{n-1}$ are all distinct. Since these elements are all in $G$, then $|x| = n \leq |G|$.
 \end{sol}
 
@@ -470,9 +542,13 @@ Let $G$ be a group.
 
 \begin{sol}
     Let $\abs x = n \in \zp$ and let $m \in \z$. By the Division Algorithm, there exist unique integers $q$ and $r$ such that
-    \[m = qn + r\]
+    \[
+    	m = qn + r
+    \]
     where $0 \leq r < n$. Then
-    \[x^m = x^{qn + r} = x^{qn} x^r = (x^n)^q x^r = 1^q x^r = x^r\]
+    \[
+    	x^m = x^{qn + r} = x^{qn} x^r = (x^n)^q x^r = 1^q x^r = x^r
+    \]
     so that any integral power of $x$ equals one of the elements in the set $\set{1, x, x^2, \dots, x^{n-1}}$.
 \end{sol}
 
@@ -487,13 +563,13 @@ Let $G$ be a group.
 
     To see that $|b| = |c| = 2$, we first note that $b^2 = (ca)(ac) = c(a^2)c = c^2$. Suppose $|b| = 3$. Eliminating the possibilities for $b^2$ as before, we have that $b^2 \neq b$ since $b \neq 1$. Moreover, $b^2 = c$ gives $b^2 = c = ab$, or $b = a$, contradicting that $b \neq a$. Lastly, if $b^2 = a$, then $b^3 = ab = c \neq 1$, contradicting that $|b| = 3$. Hence, $b^2 = c^2 = 1$ so that $|b| = |c| = 2$. Then the group table is uniquely determined as follows:
     \[
-    \begin{array}{c|cccc}
-        \star & 1 & a & b & c \\
-        \hline
-        1 & 1 & a & b & c \\
-        a & a & 1 & c & b \\
-        b & b & c & 1 & a \\
-        c & c & b & a & 1 \\
-    \end{array} \qh
+        \begin{array}{c|cccc}
+            \star & 1 & a & b & c \\
+            \hline
+            1 & 1 & a & b & c \\
+            a & a & 1 & c & b \\
+            b & b & c & 1 & a \\
+            c & c & b & a & 1 \\
+        \end{array} \qh
     \]
 \end{sol}

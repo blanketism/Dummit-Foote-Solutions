@@ -30,7 +30,9 @@
 
 \begin{sol}
     Using Proposition 2.5 and $\abs{\intmod[48]} = 48$, then $\gen{\bar a}$ generates $\intmod[48]$ when $(a, 48) = 1$. We have the integers
-    \[a \in \set{1, 5, 7, 11, 13, 17, 19, 23, 25, 29, 31, 35, 37, 41, 43, 47} \qh\]
+    \[
+    	a \in \set{1, 5, 7, 11, 13, 17, 19, 23, 25, 29, 31, 35, 37, 41, 43, 47} \qh
+    \]
 \end{sol}
 
 \begin{exercise}[2.3.4]
@@ -91,7 +93,9 @@
 
 \begin{sol}
     Suppose $\bar r, \bar s \in \intmod[48]$ such that $\bar r = \bar s$. Then $r \equiv s \bmod 48$. If $\psi_a$ is well-defined, then
-    \[\psi_a(\bar r) = \psi_a(r \cdot \bar 1) = x^{a r} = x^{a s} = \psi_a(s \cdot \bar 1) = \psi_a(\bar s)\]
+    \[
+    	\psi_a(\bar r) = \psi_a(r \cdot \bar 1) = x^{a r} = x^{a s} = \psi_a(s \cdot \bar 1) = \psi_a(\bar s)
+    \]
     so that $x^{a (r - s)} = 1$ whenever $48 \mid (r - s)$. This occurs if and only if $36 \mid a(r - s)$ whenever $48 \mid (r - s)$. Since $(36, 48) = 12$, then $36/12 = 3 \mid a$. Hence, $\psi_a$ is well-defined if and only if $3 \mid a$.
 
     Surjectivity requires that $x^a$ generates $Z_{36}$. By Proposition 2.5, this occurs if and only if $(a, 36) = 1$. But if $3 \mid a$, then $(a, 36) \geq 3$, so that $\psi_a$ is never surjective.
@@ -103,7 +107,9 @@
 
 \begin{sol}
     By Proposition 2.5, we have $\abs{\bar 1} = 54$. Since $(54, 30) = 6$, then $|\bar{30}| = 9$. Then $\bar{30} = \bar 6$, hence
-    \[\gen{\bar{30}} = \set{\bar 0, \bar 6, \bar{12}, \bar{18}, \bar{24}, \bar{30}, \bar{36}, \bar{42}, \bar{48}}.\]
+    \[
+    	\gen{\bar{30}} = \set{\bar 0, \bar 6, \bar{12}, \bar{18}, \bar{24}, \bar{30}, \bar{36}, \bar{42}, \bar{48}}.
+    \]
     Moreover, the orders of each $\bar x \in \gen{\bar{30}}$ is just $54/(54, x)$.
 \end{sol}
 
@@ -179,7 +185,9 @@
 
 \begin{sol}
     Let $\ell$ be the least common multiple of $m$ and $n$. Then there exist $a, b \in \z$ such that $\ell = am = bn$. Then
-    \[(xy)^\ell = x^\ell y^\ell = x^{bn}y^{am} = 1 \cdot 1 = 1\]
+    \[
+    	(xy)^\ell = x^\ell y^\ell = x^{bn}y^{am} = 1 \cdot 1 = 1
+    \]
     so that by Proposition 2.3, then $|xy|$ divides $\ell$. Moreover, this is not true if $x$ and $y$ do not commute. If we consider $x = rs$ and $y = s$ in $D_8$, then $|xy| = |rss| = 4$, but $\lcm(|x|, |y|) = \lcm(2, 2)$. Moreover, consider $x = y = r^2 \in D_8$. Then $\abs x = \abs y = 2$, but $\abs{xy} = \abs{r^4} = 1 \neq \lcm(2, 2) = 2$.
 \end{sol}
 
@@ -197,9 +205,13 @@
 
 \begin{sol}
     Define the map $\phi : x^k \mapsto h^k$ so that $\phi(x) = h$. Suppose $x^a = x^b$ for some $a, b \in \z$. Then $n \mid (a - b)$, or $a - b = nk$ for some $k \in \z$. It follows that
-    \[\phi(x^a) = h^a = h^{b + nk} = h^b (h^n)^k = h^b \cdot 1 = h^b = \phi(x^b)\]
+    \[
+    	\phi(x^a) = h^a = h^{b + nk} = h^b (h^n)^k = h^b \cdot 1 = h^b = \phi(x^b)
+    \]
     so that $\phi$ is well-defined. Moreover,
-    \[\phi(x^{a + b}) = h^{a + b} = h^a h^b = \phi(x^a) \phi(x^b)\]
+    \[
+    	\phi(x^{a + b}) = h^{a + b} = h^a h^b = \phi(x^a) \phi(x^b)
+    \]
     so that $\phi$ is a homomorphism. Lastly, if $\psi : Z_n \to H$ is another homomorphism such that $\psi(x) = h$, it must satisfy $\psi(x^k) = \psi(x)^k = h^k$. This shows that $\psi = \phi$.
 \end{sol}
 
@@ -225,12 +237,18 @@
 
 \begin{sol}
     By the binomial theorem,
-    \[(1 + p)^{p^{n - 1}} = \sum_{k = 0}^{p^{n - 1}} \binom{p^{n - 1}}k p^k = 1 + p^n + \sum_{k = 2}^{p^{n - 1}} \binom{p^{n - 1}}k p^k.\]
+    \[
+    	(1 + p)^{p^{n - 1}} = \sum_{k = 0}^{p^{n - 1}} \binom{p^{n - 1}}k p^k = 1 + p^n + \sum_{k = 2}^{p^{n - 1}} \binom{p^{n - 1}}k p^k.
+    \]
     Observe that for $k \geq 2$, the binomial coefficient is
-    \[\binom{p^{n - 1}}{k} = \frac{p^{n - 1}(p^{n - 1} - 1) \cdots (p^{n - 1} - k + 1)}{k!}\]
+    \[
+    	\binom{p^{n - 1}}{k} = \frac{p^{n - 1}(p^{n - 1} - 1) \cdots (p^{n - 1} - k + 1)}{k!}
+    \]
     \begin{lemma}{$k!$ contains at most $p^{k - 1}$ as a factor.}
         Using the formula from \exref{0.2.8}, we obtain
-        \[\sum_{i = 1}^{\infty} \floor*{\frac{k}{p^i}} \leq \sum_{i = 1}^\infty \frac{k}{p^i} = k \cdot \frac{1/p}{1 - 1/p} = \frac{k}{p - 1} \leq \frac k2 \leq k - 1. \qh\]
+        \[
+        	\sum_{i = 1}^{\infty} \floor*{\frac{k}{p^i}} \leq \sum_{i = 1}^\infty \frac{k}{p^i} = k \cdot \frac{1/p}{1 - 1/p} = \frac{k}{p - 1} \leq \frac k2 \leq k - 1. \qh
+        \]
     \end{lemma}
     Then the numerator contains at least $p^{n - 1}$ as a factor, so that the entire term contains at least $p^{n - 1 - (k - 1)} = p^{n - k}$ as a factor. Since this is multiplied by $p^k$ in the summation, then each term for $k \geq 2$ contains at least $p^n$ as a factor, so that $(1 + p)^{p^{n - 1}} \equiv 1 \bmod p^n$.
 
@@ -243,9 +261,13 @@
 
 \begin{sol}
     The process is similar to the previous exercise, where we use the Binomial Theorem to expand $(1 + 2^2)^{2^{n - 2}}$ and see that $k = 0$ and $k = 1$ terms are $1$ and $2^n$ respectively. For $k \geq 2$, we have the summand as
-    \[\binom{2^{n - 2}}k 2^{2k} = \frac{2^{n - 2}(2^{n - 2} - 1) \cdots (2^{n - 2} - k + 1)}{k!} 2^{2k}\]
+    \[
+    	\binom{2^{n - 2}}k 2^{2k} = \frac{2^{n - 2}(2^{n - 2} - 1) \cdots (2^{n - 2} - k + 1)}{k!} 2^{2k}
+    \]
     Using a similar formulation as above, we know that
-    \[\sum_{i = 1}^n \floor*{\frac{k}{2^i}} < \sum_{i = 1}^\infty \floor*{\frac{k}{2^i}} \leq \sum_{i = 1}^\infty \frac{k}{2^i} = k\]
+    \[
+    	\sum_{i = 1}^n \floor*{\frac{k}{2^i}} < \sum_{i = 1}^\infty \floor*{\frac{k}{2^i}} \leq \sum_{i = 1}^\infty \frac{k}{2^i} = k
+    \]
     Since infinity is never achieved, then we may take this as strict, hence the greatest power of 2 is at most $k - 1$. With $2^{2k}$, the entire term contains at least $2^{n - 1 - (k - 1) + 2k} = 2^{n + k}$ as a factor. Since $k \geq 2$, then $n + k \geq n + 2 > n$, so that each term for $k \geq 2$ contains at least $2^n$ as a factor. Hence, $(1 + 2^2)^{2^{n - 2}} \equiv 1 \bmod 2^n$ as desired. Moreover, considering $(1 + 2^2)^{2^{n - 3}}$, the $k = 1$ term is $2^{n - 1}$ which is not divisible by $2^n$. Hence, $(1 + 2^2)^{2^{n - 3}} \not\equiv 1 \bmod 2^n$. Since the only integers that divide $2^n$ are $1, 2, 2^2, \ldots, 2^n$, and the first power that results in $1 \bmod 2^n$ is $2^{n - 2}$, it follows that the order of $5$ in $\units[2^n]$ is $2^{n - 2}$.
 \end{sol}
 
@@ -257,7 +279,9 @@
 
 \begin{sol}
     By Theorem 2.7, we must have one subgroup of order 2 in $\units[2^n]$ if it were cyclic. However,
-    \[(2^n - 1)^2 = (-1)^2 \equiv 1 \bmod 2^n, \quad \text{and} \quad (2^{n - 1} + 1)^2 = 2^{2n - 2} + 2^n + 1 \equiv 1 \bmod 2^n.\]
+    \[
+    	(2^n - 1)^2 = (-1)^2 \equiv 1 \bmod 2^n, \quad \text{and} \quad (2^{n - 1} + 1)^2 = 2^{2n - 2} + 2^n + 1 \equiv 1 \bmod 2^n.
+    \]
     Since $n \geq 3$, then $2^n - 1 \neq 2^{n - 1} + 1$ but both have order 2 in $\units[2^n]$. Hence, it cannot be cyclic.
 \end{sol}
 
@@ -275,11 +299,15 @@
 \begin{solenum}
     \item If $g \in N_G(\gen x)$, then $g \gen x g\inv = \gen x$. In particular, $gxg\inv \in \gen x$, so there exists some $a \in \z$ such that $gxg\inv = x^a$.
     \item Suppose $gxg\inv = x^a$ for some $a \in \z$. We first show that $gx^kg\inv = (gxg\inv)^k$ by induction. For $k = 1$, the result is trivial. Suppose it holds for some $k \geq 1$. Then
-    \[gx^{k + 1}g\inv = gx^kg\inv gxg\inv = (gxg\inv)^k (gxg\inv) = (gxg\inv)^{k + 1}\]
+    \[
+    	gx^{k + 1}g\inv = gx^kg\inv gxg\inv = (gxg\inv)^k (gxg\inv) = (gxg\inv)^{k + 1}
+    \]
     so that the result holds for all positive integers $k$. For negative integers, observe that $(gxg\inv)\inv = gx\inv g\inv$. Using the above result for all positive integers, we may extend it to negative integers as well.
 
     Now, for any integer $k$, we have
-    \[gx^kg\inv = (gxg\inv)^k = (x^a)^k = x^{ak}\]
+    \[
+    	gx^kg\inv = (gxg\inv)^k = (x^a)^k = x^{ak}
+    \]
     so that $g \gen x g\inv \leq \gen x$. Since conjugation is an isomorphism, it is trivial to see that $\abs x = \abs{gxg\inv}$. If $\abs x = n$, then the elements $gx^ig\inv$ for $i = 0, 1, \ldots, n - 1$ are distinct since if $gx^ig\inv = gx^jg\inv$ for some $0 \leq i < j \leq n - 1$, then $x^i = x^j$ which contradicts the order of $x$. Hence, $\abs{g \gen x g\inv} = \abs{\gen x} = n$, so that $g \gen x g\inv = \gen x$. Therefore, $g \in N_G(\gen x)$.
 \end{solenum}
 
@@ -289,7 +317,9 @@
 
 \begin{sol}
     Fix $k \in \zp$ such that $(k, n) = 1$. Let $\phi : x \mapsto x^k$. Since $G$ is cyclic, then $G = \gen x$ for some $x \in G$. For any $y \in G$, there exists some integer $m$ such that $y = x^m$. Since $(k, n) = 1$, there exist integers $s, t$ such that $ks + nt = 1$. Then
-    \[\phi(x^{ms}) = x^{kms} = x^{m(1 - nt)} = x^m (x^n)^{-mt} = x^m \cdot 1 = y\]
+    \[
+    	\phi(x^{ms}) = x^{kms} = x^{m(1 - nt)} = x^m (x^n)^{-mt} = x^m \cdot 1 = y
+    \]
     so that $\phi$ is surjective.
 
     Now let $G$ be any finite group of order $n$. For any $y \in G$, consider the subgroup $\gen y$. If $\abs{\gen y} = m$, then by Lagrange's Theorem, $m \mid n$. Since $(k, n) = 1$, then $(k, m) = 1$ as well. By the previous result, there exists some $z \in \gen y$ such that $z^k = y$. Hence, the map $x \mapsto x^k$ is surjective.
@@ -297,7 +327,9 @@
 
 \begin{spex}[2.3.26]
     Let $Z_n$ be a cyclic group of order $n$ and for each integer $a$ let
-    \[\sigma_a : Z_n \to Z_n \quad \text{by} \quad \sigma_a(x) = x^a \text{ for all } x \in Z_n\]
+    \[
+    	\sigma_a : Z_n \to Z_n \quad \text{by} \quad \sigma_a(x) = x^a \text{ for all } x \in Z_n
+    \]
     \begin{subexercises}
         \item Prove that $\sigma_a$ is an automorphism of $Z_n$ if and only if $a$ and $n$ are relatively prime.
         \item Prove that $\sigma_a = \sigma_b$ if and only if $a \equiv b \bmod n$.
@@ -310,27 +342,41 @@
     \item 
     \begin{itemize}
         \item [\rightimp] Suppose $\sigma_a \in \aut(Z_n)$, and let $d = (n, a)$. Assume, by way of contradiction, that $d \neq 1$. Then there are $s, t \in \z$ such that $n = ds$ and $a = dt$, so that $as = dts = nt$. Let $Z_n = \gen x$. Then
-        \[\sigma_a(x^s) = x^{as} = x^{nt} = (x^n)^t = 1\]
+        \[
+        	\sigma_a(x^s) = x^{as} = x^{nt} = (x^n)^t = 1
+        \]
         If $x^s \neq 1$, then $\ker\sigma_a$ would be non-trivial, contradicting that $\sigma_a$ is an automorphism. Hence, $x^s = 1$, and since $\abs x = n$ and $n \mid s$, then $s = n$ so that $d = 1$.
         \item [\leftimp] Suppose that $(a, n) = 1$. By the previous exercise, then $\sigma_a$ is a surjective map. Since $Z_n$ is finite, then $\sigma_a$ is also bijective. Moreover,
-        \[\sigma_a(xy) = (xy)^a = x^ay^a = \sigma_a(x)\sigma_a(y)\]
+        \[
+        	\sigma_a(xy) = (xy)^a = x^ay^a = \sigma_a(x)\sigma_a(y)
+        \]
         for some $x, y \in Z_n$. Then $\sigma_a$ is also a homomorphism, hence $\sigma_a \in \aut(Z_n)$.
     \end{itemize}
     \item
     \begin{itemize}
         \item [\rightimp] Suppose $\sigma_a = \sigma_b$. Let $Z_n = \gen x$. Then
-        \[x^a = \sigma_a(x) = \sigma_b(x) = x^b\]
+        \[
+        	x^a = \sigma_a(x) = \sigma_b(x) = x^b
+        \]
         so that $n \mid (a - b)$, or $a \equiv b \bmod n$.
         \item [\leftimp] Suppose $a \equiv b \bmod n$. Then there exists some integer $k$ such that $a - b = nk$. Let $Z_n = \gen x$. For any $x^m \in Z_n$, we have
-        \[\sigma_a(x^m) = x^{am} = x^{(b + nk)m} = x^{bm} (x^n)^{km} = x^{bm} \cdot 1 = \sigma_b(x^m)\]
+        \[
+        	\sigma_a(x^m) = x^{am} = x^{(b + nk)m} = x^{bm} (x^n)^{km} = x^{bm} \cdot 1 = \sigma_b(x^m)
+        \]
         so that $\sigma_a = \sigma_b$.
     \end{itemize}
     \item Let $Z_n = \gen x$ and let $\phi \in \aut(Z_n)$. Since $Z_n$ is cyclic, there exists some integer $a$ such that $\phi(x) = x^a$. For any $x^m \in Z_n$, we have
-    \[\phi(x^m) = \phi(x)^m = (x^a)^m = x^{am} = \sigma_a(x^m)\]
+    \[
+    	\phi(x^m) = \phi(x)^m = (x^a)^m = x^{am} = \sigma_a(x^m)
+    \]
     so that $\phi = \sigma_a$.
     \item Let $Z_n = \gen x$. For any $x^m \in Z_n$, we have
-    \[\sigma_a \circ \sigma_b (x^m) = \sigma_a(x^{bm}) = x^{abm} = \sigma_{ab}(x^m)\]
+    \[
+    	\sigma_a \circ \sigma_b (x^m) = \sigma_a(x^{bm}) = x^{abm} = \sigma_{ab}(x^m)
+    \]
     so that $\sigma_a \circ \sigma_b = \sigma_{ab}$. Consider the map
-    \[\phi : \units \to \aut(Z_n) \quad \text{by} \quad \phi(\bar a) = \sigma_a\]
+    \[
+    	\phi : \units \to \aut(Z_n) \quad \text{by} \quad \phi(\bar a) = \sigma_a
+    \]
     By part (b), $\phi$ is well-defined. Part (a) shows that $\phi$ is injective, while part (c) shows that $\phi$ is surjective. The first part of (d) shows that $\phi$ is a homomorphism. Hence, $\phi$ is an isomorphism of $\units$ onto $\aut(Z_n)$.
 \end{solenum}

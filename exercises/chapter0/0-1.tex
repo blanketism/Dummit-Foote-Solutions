@@ -5,41 +5,41 @@
 
 For \exref{0.1.1} through \exref{0.1.4}, let
 \[
-M = 
-\begin{pmatrix}
-    1 & 1 \\
-    0 & 1
-\end{pmatrix}
+    M = 
+    \begin{pmatrix}
+        1 & 1 \\
+        0 & 1
+    \end{pmatrix}
 \]
 and $\bb = \set{X \in \ac \mid MX = XM}$, where $\ac$ denotes the set of $2 \times 2$ matrices with real entries.
 
 \begin{exercise}[0.1.1]
     Determine which of the following elements of $\ac$ lie in $\bb$:
     \[
-    \begin{pmatrix}
-        1 & 1 \\
-        0 & 1
-    \end{pmatrix},
-    \begin{pmatrix}
-        1 & 1 \\
-        1 & 1
-    \end{pmatrix},
-    \begin{pmatrix}
-        0 & 0 \\
-        0 & 0
-    \end{pmatrix},
-    \begin{pmatrix}
-        1 & 1 \\
-        1 & 0
-    \end{pmatrix},
-    \begin{pmatrix}
-        1 & 0 \\
-        0 & 1
-    \end{pmatrix},
-    \begin{pmatrix}
-        0 & 1 \\
-        1 & 0 
-    \end{pmatrix}
+        \begin{pmatrix}
+            1 & 1 \\
+            0 & 1
+        \end{pmatrix},
+        \begin{pmatrix}
+            1 & 1 \\
+            1 & 1
+        \end{pmatrix},
+        \begin{pmatrix}
+            0 & 0 \\
+            0 & 0
+        \end{pmatrix},
+        \begin{pmatrix}
+            1 & 1 \\
+            1 & 0
+        \end{pmatrix},
+        \begin{pmatrix}
+            1 & 0 \\
+            0 & 1
+        \end{pmatrix},
+        \begin{pmatrix}
+            0 & 1 \\
+            1 & 0 
+        \end{pmatrix}
     \]
 \end{exercise}
 
@@ -66,29 +66,30 @@ and $\bb = \set{X \in \ac \mid MX = XM}$, where $\ac$ denotes the set of $2 \tim
 \begin{exercise}[0.1.4]
     Find conditions on $p, q, r, s$ which determine precisely when
     \[
-    \begin{pmatrix}
-        p & q \\
-        r & s
-    \end{pmatrix} \in \bb.
+        \begin{pmatrix}
+            p & q \\
+            r & s
+        \end{pmatrix} \in \bb.
     \]
 \end{exercise}
 
 \begin{sol}
     Let $X$ be the matrix above. Computing $MX = XM$ gives the following system of equations:
     \[
-    \begin{cases}
-        p + r = p \\
-        q + s = p + q \\
-        r = r \\
-        s = r + s
-    \end{cases}
+        \begin{cases}
+            p + r = p \\
+            q + s = p + q \\
+            r = r \\
+            s = r + s
+        \end{cases}
     \]
     Simplifying results in $r = 0$ and $p = s$. Then
-    \[\bb = 
-    \set*{\begin{pmatrix}
-        p & q \\
-        0 & p
-    \end{pmatrix}~\middle|~p, q \in \r}. \qh
+    \[
+        \bb = 
+        \set*{\begin{pmatrix}
+            p & q \\
+            0 & p
+        \end{pmatrix}~\middle|~p, q \in \r}. \qh
     \]
 \end{sol}
 
@@ -115,7 +116,9 @@ and $\bb = \set{X \in \ac \mid MX = XM}$, where $\ac$ denotes the set of $2 \tim
 
 \begin{exercise}[0.1.7]
     Let $f: A \to B$ be a surjective map of sets. Prove that the relation
-    \[a \sim b \iff f(a) = f(b)\]
+    \[
+    	a \sim b \iff f(a) = f(b)
+    \]
     is an equivalence relation whose equivalence classes are the fibers of $f$.
 \end{exercise}
 

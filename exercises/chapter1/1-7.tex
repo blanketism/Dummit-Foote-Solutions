@@ -6,7 +6,9 @@
 
 \begin{sol}
     Let $g, h \in F\unt$ and $f \in F$. Then
-    \[g \cdot (h \cdot f) = g \cdot (hf) = g(hf) = (gh)f = (gh) \cdot f\]
+    \[
+    	g \cdot (h \cdot f) = g \cdot (hf) = g(hf) = (gh)f = (gh) \cdot f
+    \]
     where the associativity of multiplication in $F$ was used to conclude that $g(hf) = (gh)f$. Moreover, $1 \cdot f = 1f = f$ where $1$ is the multiplicative identity in $F$. Therefore, the group action axioms are satisfied and $F\unt$ acts on $F$.
 \end{sol}
 
@@ -16,7 +18,9 @@
 
 \begin{sol}
     Let $z, w \in \z$ and $a \in \z$. Then
-    \[z \cdot (w \cdot a) = z \cdot (w + a) = z + (w + a) = (z + w) + a = (z + w) \cdot a\]
+    \[
+    	z \cdot (w \cdot a) = z \cdot (w + a) = z + (w + a) = (z + w) + a = (z + w) \cdot a
+    \]
     Moreover, $0 \cdot a = 0 + a = a$. Then $\z$ acts on itself.
 \end{sol}
 
@@ -26,7 +30,9 @@
 
 \begin{sol}
     Let $r, s \in \r$ and $(x, y) \in \r^2$. Then
-    \[r \cdot (s \cdot (x, y)) = r \cdot (x + s, y) = (x + s + r, y) = (x + (r + s), y) = (r + s) \cdot (x, y)\]
+    \[
+    	r \cdot (s \cdot (x, y)) = r \cdot (x + s, y) = (x + s + r, y) = (x + (r + s), y) = (r + s) \cdot (x, y)
+    \]
     Moreover, $0 \cdot (x, y) = (x + 0, y) = (x, y)$. Then $\r$ acts on $\r^2$.
 \end{sol}
 
@@ -40,14 +46,22 @@
 
 \begin{solenum}
     \item Let $K$ denote the kernel of the action. If $g, h \in K$, then for any $a \in A$, we have
-    \[gh \cdot a = g \cdot (h \cdot a) = g \cdot a = a\]
+    \[
+    	gh \cdot a = g \cdot (h \cdot a) = g \cdot a = a
+    \]
     so that $gh \in K$. Also, for any $g \in K$ and any $a \in A$, we have
-    \[g\inv \cdot a = g\inv \cdot (g \cdot a) = (g\inv g) \cdot a = 1 \cdot a = a\]
+    \[
+    	g\inv \cdot a = g\inv \cdot (g \cdot a) = (g\inv g) \cdot a = 1 \cdot a = a
+    \]
     so that $g\inv \in K$. Therefore, $K$ is a subgroup of $G$.
     \item Let $G_a$ denote the stabilizer of some fixed $a \in A$. If $g, h \in G_a$, we have
-    \[gh \cdot a = g \cdot (h \cdot a) = g \cdot a = a\]
+    \[
+    	gh \cdot a = g \cdot (h \cdot a) = g \cdot a = a
+    \]
     so that $gh \in G_a$. Also, for any $g \in G_a$, we have
-    \[g\inv \cdot a = g\inv \cdot (g \cdot a) = (g\inv g) \cdot a = 1 \cdot a = a\]
+    \[
+    	g\inv \cdot a = g\inv \cdot (g \cdot a) = (g\inv g) \cdot a = 1 \cdot a = a
+    \]
     so that $g\inv \in G_a$. Therefore, $G_a$ is a subgroup of $G$.
 \end{solenum}
 
@@ -66,7 +80,9 @@
 \begin{solitem}
     \item [\rightimp] Suppose $G$ acts faithfully on $A$ with kernel $K$. Certainly, $1 \cdot a = a$ for all $a \in A$, hence $1 \in K$. If $g \in K$, then $g \cdot a = a$. Faithfulness of the action implies that $g = 1$, so that $K = \set{1}$.
     \item [\leftimp] Suppose the kernel of the action is the set consisting only of the identity. Let $g, h \in G$ be such that $g \cdot a = h \cdot a$ for every $a \in A$. Then
-    \[h\inv g \cdot a = h\inv \cdot (g \cdot a) = h\inv \cdot (h \cdot a) = (h\inv h) \cdot a = 1 \cdot a = a\]
+    \[
+    	h\inv g \cdot a = h\inv \cdot (g \cdot a) = h\inv \cdot (h \cdot a) = (h\inv h) \cdot a = 1 \cdot a = a
+    \]
     so that $h\inv g$ is in the kernel of the action. By assumption, then $h\inv g$ is the identity element of $G$, and $g = h$. Therefore, the action is faithful.
 \end{solitem}
 
@@ -80,7 +96,9 @@
 
 \begin{exercise}[1.7.8]
     Let $A$ be a nonempty set and let $k$ be a positive integer with $k\le |A|$. The symmetric group $S_A$ acts on the set $B$ consisting of all subsets of $A$ of cardinality $k$ by
-    \[\sigma(\set{a_1, \dots, a_k}) = \set{\sigma(a_1), \dots, \sigma(a_k)}.\]
+    \[
+    	\sigma(\set{a_1, \dots, a_k}) = \set{\sigma(a_1), \dots, \sigma(a_k)}.
+    \]
     \begin{subexercises}
         \item Prove that this is a group action.
         \item Describe explicitly how the elements $(1\ 2)$ and $(1\ 2\ 3)$ act on the six $2$-element subsets of $\set{1,2,3,4}$.
@@ -97,16 +115,16 @@
     Moreover, $1 \cdot \set{x_1, \ldots, x_k} = \set{1(x_1), \ldots, 1(x_k)} = \set{x_1, \ldots, x_k}$. Then it is a group action.
     \item
     \[
-    \begin{array}{c|c|c}
-        A & (1\ 2) \cdot A & (1\ 2\ 3) \cdot A \\
-        \hline
-        \set{1, 2} & \set{2, 1} & \set{2, 3} \\
-        \set{1, 3} & \set{2, 3} & \set{2, 1} \\
-        \set{1, 4} & \set{2, 4} & \set{2, 4} \\
-        \set{2, 3} & \set{1, 3} & \set{3, 1} \\
-        \set{2, 4} & \set{1, 4} & \set{3, 4} \\
-        \set{3, 4} & \set{3, 4} & \set{1, 4}
-    \end{array} \qh
+        \begin{array}{c|c|c}
+            A & (1\ 2) \cdot A & (1\ 2\ 3) \cdot A \\
+            \hline
+            \set{1, 2} & \set{2, 1} & \set{2, 3} \\
+            \set{1, 3} & \set{2, 3} & \set{2, 1} \\
+            \set{1, 4} & \set{2, 4} & \set{2, 4} \\
+            \set{2, 3} & \set{1, 3} & \set{3, 1} \\
+            \set{2, 4} & \set{1, 4} & \set{3, 4} \\
+            \set{3, 4} & \set{3, 4} & \set{1, 4}
+        \end{array} \qh
     \]
 \end{solenum}
 
@@ -120,26 +138,26 @@
     \item The proof is similar to that of \exref{1.7.8}.
     \item Since order matters, there are twice as many cases to check:
     \[
-    \begin{array}{c|c|c}
-        A & (1\ 2) \cdot A & (1\ 2\ 3) \cdot A \\
-        \hline
-        (1, 2) & (2, 1) & (2, 3) \\
-        (1, 3) & (2, 3) & (2, 1) \\
-        (1, 4) & (2, 4) & (2, 4) \\
-        (2, 3) & (1, 3) & (3, 1) \\
-        (2, 4) & (1, 4) & (3, 4) \\
-        (3, 4) & (3, 4) & (1, 4)
-    \end{array} \qquad
-    \begin{array}{c|c|c}
-        A & (1\ 2) \cdot A & (1\ 2\ 3) \cdot A \\
-        \hline
-        (2, 1) & (1, 2) & (3, 2) \\
-        (3, 1) & (3, 2) & (1, 2) \\
-        (4, 1) & (4, 2) & (4, 2) \\
-        (3, 2) & (3, 1) & (1, 3) \\
-        (4, 2) & (4, 1) & (4, 3) \\
-        (4, 3) & (4, 3) & (4, 1) \\
-    \end{array}
+        \begin{array}{c|c|c}
+            A & (1\ 2) \cdot A & (1\ 2\ 3) \cdot A \\
+            \hline
+            (1, 2) & (2, 1) & (2, 3) \\
+            (1, 3) & (2, 3) & (2, 1) \\
+            (1, 4) & (2, 4) & (2, 4) \\
+            (2, 3) & (1, 3) & (3, 1) \\
+            (2, 4) & (1, 4) & (3, 4) \\
+            (3, 4) & (3, 4) & (1, 4)
+        \end{array} \qquad
+        \begin{array}{c|c|c}
+            A & (1\ 2) \cdot A & (1\ 2\ 3) \cdot A \\
+            \hline
+            (2, 1) & (1, 2) & (3, 2) \\
+            (3, 1) & (3, 2) & (1, 2) \\
+            (4, 1) & (4, 2) & (4, 2) \\
+            (3, 2) & (3, 1) & (1, 3) \\
+            (4, 2) & (4, 1) & (4, 3) \\
+            (4, 3) & (4, 3) & (4, 1) \\
+        \end{array}
     \]
 \end{solenum}
 
@@ -176,7 +194,9 @@
 
 \begin{sol}
     Let $P_k$ denote the $k$-th pair of opposite vertices
-    \[P_k = \set{k, k + n/2} \quad \text{for } k = 0, \ldots, n/2 - 1.\]
+    \[
+    	P_k = \set{k, k + n/2} \quad \text{for } k = 0, \ldots, n/2 - 1.
+    \]
     Let $P = \set{P_0, \ldots, P_{n/2 - 1}}$. Since $D_{2n}$ is the set of symmetries of an $n$-gon, then $g \cdot P_i = P_j$ for some $j$ for all $g \in D_{2n}$ and $P_i \in P$. Therefore, $D_{2n}$ acts on $P$.
 
     Observe that $r^k \cdot P_i = \set{i + k, i + k + n/2} = P_{i + k \bmod n/2}$. Then $r^k$ is in the kernel if $k \bmod n/2 \equiv 0$, or when $n/2 \mid k$. Since $k < n$, then $k$ is either $0$ or $n/2$. Then 1 and $r^{n/2}$ are in the kernel.
@@ -198,50 +218,66 @@
 
 \begin{exercise}[1.7.14]
     Let $G$ be a group and let $A = G$. Show that if $G$ is non-Abelian then the maps defined by  
-    \[ g \cdot a = ag \quad \text{for all } g,a\in G \]
+    \[
+    	 g \cdot a = ag \quad \text{for all } g,a\in G 
+    \]
     do not satisfy the axioms of a (left) group action of $G$ on itself.
 \end{exercise}
 
 \begin{sol}
     Since $G$ is non-Abelian, there exists $g, h \in G$ such that $gh \neq hg$. Then for any $a \in A$, we have
-    \[g \cdot (h \cdot a) = g \cdot (ah) = (ah)g = a(hg) \]
+    \[
+    	g \cdot (h \cdot a) = g \cdot (ah) = (ah)g = a(hg) 
+    \]
     On the other hand, $(gh) \cdot a = a(gh)$. Since $gh \neq hg$, then $a(hg) \neq a(gh)$ for some $a \in A$. Then the maps do not satisfy the axioms of a left group action.
 \end{sol}
 
 \begin{exercise}[1.7.15]
     Let $G$ be any group and let $A = G$. Show that the maps defined by  
-    \[ g \cdot a = ag^{-1} \quad \text{for all } g,a\in G \]
+    \[
+    	 g \cdot a = ag^{-1} \quad \text{for all } g,a\in G 
+    \]
     do satisfy the axioms of a (left) group action of $G$ on itself.
 \end{exercise}
 
 \begin{sol}
     Let $g, h \in G$. Then for any $a \in A$, we have
-    \[g \cdot (h \cdot a) = g \cdot (ah\inv) = a(h\inv g\inv) = a(gh)\inv = (gh) \cdot a\]
+    \[
+    	g \cdot (h \cdot a) = g \cdot (ah\inv) = a(h\inv g\inv) = a(gh)\inv = (gh) \cdot a
+    \]
     Moreover, $1 \cdot a = a1\inv = a1 = a$. Then the maps define a left group action.
 \end{sol}
 
 \begin{spex}[1.7.16]
     \label{def:conjugation}
     Let $G$ be any group and let $A = G$. Show that the maps defined by  
-    \[ g \cdot a = gag^{-1} \quad \text{for all } g,a\in G \]
+    \[
+    	 g \cdot a = gag^{-1} \quad \text{for all } g,a\in G 
+    \]
     do satisfy the axioms of a (left) group action. This action is called \textbf{conjugation}.
 \end{spex}
 
 \begin{sol}
     Let $g, h \in G$. Then for any $a \in A$, we have
-    \[g \cdot (h \cdot a) = g \cdot (hah\inv) = g(hah\inv)g\inv = (gh)a(gh)\inv = (gh) \cdot a\]
+    \[
+    	g \cdot (h \cdot a) = g \cdot (hah\inv) = g(hah\inv)g\inv = (gh)a(gh)\inv = (gh) \cdot a
+    \]
     Moreover, $1 \cdot a = 1a1\inv = a$. Then the maps define a left group action.
 \end{sol}
 
 \begin{exercise} [1.7.17]
     Let $G$ be a group and let $G$ act on itself by left conjugation, so each $g\in G$ maps $G$ to $G$ by
-    \[ x \mapsto gxg^{-1}. \]
+    \[
+    	 x \mapsto gxg^{-1}. 
+    \]
     For fixed $g\in G$, prove that conjugation by $g$ is an isomorphism from $G$ onto itself. Deduce that $x$ and $gxg^{-1}$ have the same order for all $x\in G$ and that for any subset $A$ of $G$, $|A| = |gAg^{-1}|$ (here $gAg^{-1} = \set{gag^{-1} \mid a\in A}$).
 \end{exercise}
 
 \begin{sol}
     Let $\phi : x \mapsto gxg\inv$. Let $x, y \in G$. Then
-    \[\phi(x y) = g(xy)g\inv = (gxg\inv)(gyg\inv) = \phi(x)\phi(y)\]
+    \[
+    	\phi(x y) = g(xy)g\inv = (gxg\inv)(gyg\inv) = \phi(x)\phi(y)
+    \]
     Moreover, $\phi(1) = g1g\inv = 1$, so $\phi$ preserves the identity. To show injectivity, suppose $\phi(x) = \phi(y)$ for some $x, y \in G$. Then $gxg\inv = gyg\inv$, implying $x = y$. Surjectivity is clear from conjugation by $g\inv$, so $\phi$ is a bijection. Therefore, $\phi$ is an isomorphism from $G$ onto itself.
 
     By \exref{1.6.2} and $\phi \in \aut(G)$, we have $|x| = |gxg\inv|$. Moreover, the bijection $\phi$ restricts to a bijection from $A$ to $gAg\inv$, so $|A| = |gAg\inv|$.
@@ -249,7 +285,9 @@
 
 \begin{exercise}[1.7.18]
     Let $H$ be a group acting on a set $A$. Prove that the relation $\sim$ on $A$ defined by  
-    \[a \sim b \quad \text{if and only if} \quad a = hb \text{ for some } h \in H\]
+    \[
+    	a \sim b \quad \text{if and only if} \quad a = hb \text{ for some } h \in H
+    \]
     is an equivalence relation. (For each $x\in A$ the equivalence class of $x$ under $\sim$ is called the \textbf{orbit} of $x$ under the action of $H$. The orbits under the action of $H$ partition the set $A$.)
 \end{exercise}
 
@@ -262,14 +300,20 @@
 \begin{spex}[1.7.19]
     \label{def:Lagrange's theorem}
     Let $H$ be a subgroup of the finite group $G$ and let $H$ act on $G$ (here $A = G$) by left multiplication. Let $x\in G$ and let $\mathcal{O}$ be the orbit of $x$ under this action of $H$. Prove that the map  
-    \[H \to \mathcal{O}, \qquad h \mapsto hx\]
+    \[
+    	H \to \mathcal{O}, \qquad h \mapsto hx
+    \]
     is a bijection (hence all orbits have cardinality $|H|$). From this and the preceding exercise deduce \textbf{Lagrange's Theorem}:  
-    \[\emph{If $G$ is a finite group and $H$ is a subgroup of $G$ then $|H|$ divides $|G|$}.\]
+    \[
+    	\emph{If $G$ is a finite group and $H$ is a subgroup of $G$ then $|H|$ divides $|G|$}.
+    \]
 \end{spex}
 
 \begin{sol}
     Let $\phi : H \to \oo$ be the map defined by $\phi(h) = hx$ for all $h \in H$. We show that $\phi$ is a bijection. To show injectivity, suppose $\phi(h_1) = \phi(h_2)$ for some $h_1, h_2 \in H$. Then
-    \[h_1 x = h_2 x\]
+    \[
+    	h_1 x = h_2 x
+    \]
     implying that $h_1 = h_2$. Any $y \in \oo$ has some $h \in H$ such that $y = hx$, hence $\phi(h) = y$ and $\phi$ is surjective. Therefore, $\phi$ is a bijection and $\abs \oo = \abs H$.
 
     To deduce Lagrange's Theorem, note by the previous exercise that the orbits of the action of $H$ on $G$ partition $G$. Since each orbit has cardinality $\abs H$, then $\abs G$ is a sum of multiples of $\abs H$. Therefore, $\abs H$ divides $\abs G$.
@@ -283,7 +327,9 @@
     Let $G$ be the group of rigid motions of a tetrahedron with vertices labeled $1, 2, 3, 4$. Then each $\alpha \in G$ sends some vertex to another vertex so that $G$ acts on the set of vertices $A = \set{1, 2, 3, 4}$.
 
     Since $G$ acts on $A$, this gives rise to a homomorphism 
-    \[\phi : G \to S_4 \quad \text{where} \quad \phi(\alpha)(i) = \alpha(i) \quad \text{for all} \quad i \in A.\]
+    \[
+    	\phi : G \to S_4 \quad \text{where} \quad \phi(\alpha)(i) = \alpha(i) \quad \text{for all} \quad i \in A.
+    \]
     To see that $\phi$ is injective, suppose $\phi(\alpha)$ is the identity permutation in $S_4$ for some $\alpha \in G$. Then for every vertex $i \in A$, we have $\phi(\alpha)(i) = i$, so that $\alpha(i) = i$. Since a rigid motion that fixes all vertices must be the identity rigid motion, then $\alpha$ is the identity element of $G$. Therefore, $\phi$ is injective and $G$ is isomorphic to a subgroup of $S_4$.
 \end{sol}
 
@@ -295,7 +341,9 @@
     Recall that $|G| = 24$ from \exref{1.2.10}. Let $G$ be the group of rigid motions of a cube, and let $A = \set{a_1, a_2, a_3, a_4}$ be the set of pairs of opposite vertices of the cube. Then each $\alpha \in G$ sends some pair of opposite vertices to another pair of opposite vertices so that $G$ acts on $A$.
 
     Using similar reasoning as in the exercise, we have an injective homomorphism
-    \[\phi : G \to S_4 \quad \text{where} \quad \phi(\alpha)(a_i) = \alpha(a_i) \quad \text{for all} \quad a_i \in A.\]
+    \[
+    	\phi : G \to S_4 \quad \text{where} \quad \phi(\alpha)(a_i) = \alpha(a_i) \quad \text{for all} \quad a_i \in A.
+    \]
     Since $|G| = 24 = |S_4|$, it follows that $\phi$ is surjective as well, hence $G \cong S_4$.
 \end{sol}
 
@@ -308,7 +356,9 @@
     Let $G$ be the group of rigid motions of an octahedron. Let $A = \set{f_1, f_2, f_3, f_4}$ be the set of pairs of opposite faces of the octahedron. Then each $\alpha \in G$ sends some pair of opposite faces to another pair of opposite faces so that $G$ acts on $A$.
 
     Using similar reasoning as in the previous exercises, we have an injective homomorphism
-    \[\phi : G \to S_4 \quad \text{where} \quad \phi(\alpha)(f_i) = \alpha(f_i) \quad \text{for all} \quad f_i \in A.\]
+    \[
+    	\phi : G \to S_4 \quad \text{where} \quad \phi(\alpha)(f_i) = \alpha(f_i) \quad \text{for all} \quad f_i \in A.
+    \]
     Therefore, $G$ is isomorphic to a subgroup of $S_4$. From \exref{1.2.11}, we know that $|G| = 24$, hence $G \cong S_4$. From the previous exercise, we know that the group of rigid motions of a cube is also isomorphic to $S_4$, so the groups of rigid motions of a cube and of an octahedron are isomorphic.
 \end{sol}
 

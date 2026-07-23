@@ -4,7 +4,9 @@
 	[4.2.1] Let $G$ be $\set{1,a,b,c}$, the Klein 4-group whose group table is written out in Section 2.5.
 	\begin{subexercises}
 		\item Label $1,a,b,c$ with the integers $1,2,4,3$, respectively, and prove that under the left regular representation of $G$ into $S_4$ the non-identity elements are mapped as follows:
-		\[a \mapsto (1\ 2)(3\ 4), \quad b \mapsto (1\ 4)(2\ 3), \quad c \mapsto (1\ 3)(2\ 4).\]
+		\[
+			a \mapsto (1\ 2)(3\ 4), \quad b \mapsto (1\ 4)(2\ 3), \quad c \mapsto (1\ 3)(2\ 4).
+		\]
 		\item Relabel $1,a,b,c$ as $1,4,2,3$, respectively, and compute the image of each element of $G$ under the left regular representation of $G$ into $S_4$. Show that the image of $G$ in $S_4$ under this labelling is the same \emph{subgroup} as the image of $G$ in part (a) (even though the non-identity elements individually map to different permutations under the two different labelling).
 	\end{subexercises}
 \end{exercise}
@@ -29,7 +31,9 @@
 		(1\ 2) \cdot (1\ 3\ 2) & = (1\ 3) && \sigma_{(1\ 2)}(6) = 4
 	\end{align*}
 	Thus, we have $(1\ 2) \mapsto (1\ 2)(3\ 6\ 4\ 5)$. We calculate that $(2\ 3) \mapsto (1\ 3\ 5\ 2)(4\ 6)$. Since $(1\ 2)(2\ 3) = (1\ 2\ 3)$, then
-	\[(1\ 2\ 3) \mapsto (1\ 2)(3\ 6\ 4\ 5)(1\ 3\ 5\ 2)(4\ 6) = (1\ 5\ 6)(2\ 4\ 3)\]
+	\[
+		(1\ 2\ 3) \mapsto (1\ 2)(3\ 6\ 4\ 5)(1\ 3\ 5\ 2)(4\ 6) = (1\ 5\ 6)(2\ 4\ 3)
+	\]
 	Continuing in this way, we find that the images of the elements of $S_3$ under the left regular representation are as follows:
 	\begin{align*}
 		1 & \mapsto 1 \\
@@ -107,7 +111,9 @@
 	\end{align*}
 	Moreover, the subgroup is different from that in part (a) since, for example, the image of $r$ in part (a) is $(1\ 2\ 3\ 4)$ while the image of $r$ in this part is $(1\ 3\ 2\ 4)$.
 	\item Under $\pi_K$, we have $\pi_K(r) = (1\ 2\ 3\ 4)$ and $\pi_K(s) = (1\ 2)(3\ 4)$. With respect to this labeling, we have the subgroup $\wh K = \gen{(1\ 2\ 3\ 4), (1\ 2)(3\ 4)}$. Let $\wh H$ be the subgroup obtained in part (a). Note that $(1\ 2\ 3\ 4)$ is contained in both $\wh H$ and $\wh K$. Moreover, we have following:
-	\[(1\ 2\ 3\ 4)(2\ 4)(1\ 4\ 3\ 2) = (1\ 2)(3\ 4) \in \wh H \quad \text{and} \quad (1\ 2\ 3\ 4)^2(1\ 2)(3\ 4) = (2\ 4) \in \wh K\]
+	\[
+		(1\ 2\ 3\ 4)(2\ 4)(1\ 4\ 3\ 2) = (1\ 2)(3\ 4) \in \wh H \quad \text{and} \quad (1\ 2\ 3\ 4)^2(1\ 2)(3\ 4) = (2\ 4) \in \wh K
+	\]
 	so that both subgroups contain the other generator of the other subgroup. Therefore, $\wh H = \wh K$.
 \end{solenum}
 

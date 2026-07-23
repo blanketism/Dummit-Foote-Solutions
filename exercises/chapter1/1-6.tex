@@ -10,13 +10,21 @@
 
 \begin{solenum}
     \item Inducting on $n$, the base case of $n = 1$ is trivial. If the result holds for $n \in \zp$, then
-    \[\phi(x^{n + 1}) = \phi(x^nx) = \phi(x^n)\phi(x) = \phi(x)^n\phi(x) = \phi(x)^{n + 1}.\]
+    \[
+    	\phi(x^{n + 1}) = \phi(x^nx) = \phi(x^n)\phi(x) = \phi(x)^n\phi(x) = \phi(x)^{n + 1}.
+    \]
     \item Let $1_G$ and $1_H$ be the identity elements of $G$ and $H$, respectively. Then for $n = 0$, we have
-    \[\phi(1_G) = \phi(1_G \cdot 1_G) = \phi(1_G)\phi(1_G),\]
+    \[
+    	\phi(1_G) = \phi(1_G \cdot 1_G) = \phi(1_G)\phi(1_G),
+    \]
     so that $\phi(1_G) = 1_H$. For $n = -1$ and $x \in G$, we have
-    \[1_H = \phi(1_G) = \phi(xx\inv) = \phi(x)\phi(x\inv)\]
+    \[
+    	1_H = \phi(1_G) = \phi(xx\inv) = \phi(x)\phi(x\inv)
+    \]
     so that $\phi(x\inv) = \phi(x)\inv$. Then for $n < -1$, we have
-    \[\phi(x^n) = \phi((x\inv)^{-n}) = \phi(x\inv)^{-n} = \phi(x)^{-n} = \phi(x)^n. \qh\]
+    \[
+    	\phi(x^n) = \phi((x\inv)^{-n}) = \phi(x\inv)^{-n} = \phi(x)^{-n} = \phi(x)^n. \qh
+    \]
 \end{solenum}
 
 \begin{spex}[1.6.2]
@@ -25,9 +33,13 @@
 
 \begin{sol}
     Let $x \in G$. Let $\abs x = m$ and $\abs{\phi(x)} = n$. Then
-    \[1_H = \phi(1_G) = \phi(x^m) = \phi(x)^m\]
+    \[
+    	1_H = \phi(1_G) = \phi(x^m) = \phi(x)^m
+    \]
     so that $n \leq m$. Similarly,
-    \[1_G = \phi\inv(1_H) = \phi\inv(\phi(x)^n) = x^n\]
+    \[
+    	1_G = \phi\inv(1_H) = \phi\inv(\phi(x)^n) = x^n
+    \]
     so that $m \leq n$. It follows that $m = n$, i.e., $|\phi(x)| = |x|$. In particular, this shows that both $x$ and $\phi(x)$ both have either finite or infinite order. In particular, if either $|x|$ or $|\phi(x)|$ had infinite order and the other finite, then this would contradict both having finite order. Moreover, since $\phi$ is bijective, it must be bijective between the elements of order $n$ in $G$ and the elements of order $n$ in $H$. Hence, any two isomorphic groups have the same number of elements of order $n$ for each $n \in \z^+$.
 
     The result is not true if $\phi$ is only assumed to be a homomorphism: the map $\phi : G \to 1$ is a homomorphism for any group $G$, but $G$ may have elements of various orders while $1$ has only the identity element of order 1.
@@ -41,10 +53,14 @@
     Note that $\phi$ is bijective, hence $\phi\inv$ exists and is also an isomorphism.
     \begin{itemize}
         \item [\rightimp] Suppose that $G$ is Abelian. Then for $h_1 = \phi(g_1), h_2 = \phi(g_2) \in H$ for some $g_1, g_2 \in G$, we have
-        \[h_1h_2 = \phi(g_1)\phi(g_2) = \phi(g_1g_2) = \phi(g_2g_1) = \phi(g_2)\phi(g_1) = h_2h_1.\]
+        \[
+        	h_1h_2 = \phi(g_1)\phi(g_2) = \phi(g_1g_2) = \phi(g_2g_1) = \phi(g_2)\phi(g_1) = h_2h_1.
+        \]
         Hence, $H$ is Abelian.
         \item [\leftimp] Suppose that $H$ is Abelian. Then for $g_1 = \phi\inv(h_1), g_2 = \phi\inv(h_2) \in G$ for some $h_1, h_2 \in H$, we have
-        \[g_1g_2 = \phi\inv(h_1)\phi\inv(h_2) = \phi\inv(h_1h_2) = \phi\inv(h_2h_1) = \phi\inv(h_2)\phi\inv(h_1) = g_2g_1.\]
+        \[
+        	g_1g_2 = \phi\inv(h_1)\phi\inv(h_2) = \phi\inv(h_1h_2) = \phi\inv(h_2h_1) = \phi\inv(h_2)\phi\inv(h_1) = g_2g_1.
+        \]
         Hence, $G$ is Abelian.
     \end{itemize}
     Let $\phi : G \to H$ be a homomorphism. In the \rightimp direction, observe that the only property of $\phi$ used was its surjectivity to guarantee the existence of $g_1$ and $g_2$ such that $\phi(g_1) = h_1$ and $\phi(g_2) = h_2$. Hence, if $\phi$ is surjective, then $H$ is Abelian whenever $G$ is Abelian.
@@ -101,7 +117,7 @@
 \begin{exercise} [1.6.10]
     Fill in the details of the proof that the symmetric groups $S_\Delta$ and $S_\Omega$ are isomorphic if $|\Delta| = |\Omega|$ as follows: let $\theta : \Delta \to \Omega$ be a bijection. Define
     \[
-    \phi : S_\Delta \to S_\Omega \quad \text{by} \quad \phi(\sigma) = \theta \circ \sigma \circ \theta^{-1} \quad \text{for all } \sigma \in S_\Delta
+        \phi : S_\Delta \to S_\Omega \quad \text{by} \quad \phi(\sigma) = \theta \circ \sigma \circ \theta^{-1} \quad \text{for all } \sigma \in S_\Delta
     \]
     and prove the following:
     \begin{subexercises}
@@ -115,14 +131,22 @@
 \begin{solenum}
     \item Since $\theta : \Delta \to \Omega$ and $\theta\inv : \Omega \to \Delta$ are both bijections with $\sigma$ a bijection, it follows their composition is a bijection. Moreover, $\theta \circ \sigma \circ \theta^{-1}$ is a permutation of $\Omega$, so that $\phi$ is well-defined.
     \item Consider the mapping 
-    \[\psi : S_\Omega \to S_\Delta\quad \text{by} \quad \psi(\tau) = \theta\inv \circ \tau \circ \theta \quad \text{for all } \tau \in S_\Omega\]
+    \[
+    	\psi : S_\Omega \to S_\Delta\quad \text{by} \quad \psi(\tau) = \theta\inv \circ \tau \circ \theta \quad \text{for all } \tau \in S_\Omega
+    \]
     By the above discussion, $\psi$ is well-defined. For any $\sigma \in S_\Delta$, we have
-    \[\psi(\phi(\sigma)) = \theta\inv \circ (\theta \circ \sigma \circ \theta\inv) \circ \theta = \id_{S_\Delta} \circ \sigma \circ \id_{S_\Delta} = \sigma\]
+    \[
+    	\psi(\phi(\sigma)) = \theta\inv \circ (\theta \circ \sigma \circ \theta\inv) \circ \theta = \id_{S_\Delta} \circ \sigma \circ \id_{S_\Delta} = \sigma
+    \]
     and for any $\tau \in S_\Omega$, we have
-    \[\phi(\psi(\tau)) = \theta \circ (\theta\inv \circ \tau \circ \theta) \circ \theta\inv = \id_{S_\Omega} \circ \tau \circ \id_{S_\Omega} = \tau\]
+    \[
+    	\phi(\psi(\tau)) = \theta \circ (\theta\inv \circ \tau \circ \theta) \circ \theta\inv = \id_{S_\Omega} \circ \tau \circ \id_{S_\Omega} = \tau
+    \]
     so that $\psi$ is a two-sided inverse for $\phi$. Hence, $\phi$ is a bijection from $S_\Delta$ onto $S_\Omega$.
     \item Let $\sigma, \tau \in S_\Delta$. Then
-    \[\phi(\sigma \circ \tau) = \theta \circ (\sigma \circ \tau) \circ \theta\inv = (\theta \circ \sigma) \circ (\tau \circ \theta\inv) = (\theta \circ \sigma \circ \theta\inv) \circ (\theta \circ \tau \circ \theta\inv) = \phi(\sigma) \circ \phi(\tau)\]
+    \[
+    	\phi(\sigma \circ \tau) = \theta \circ (\sigma \circ \tau) \circ \theta\inv = (\theta \circ \sigma) \circ (\tau \circ \theta\inv) = (\theta \circ \sigma \circ \theta\inv) \circ (\theta \circ \tau \circ \theta\inv) = \phi(\sigma) \circ \phi(\tau)
+    \]
     so that $\phi$ is a homomorphism. By the above, $\phi$ is an isomorphism, and hence $S_\Delta \cong S_\Omega$.
 \end{solenum}
 
@@ -132,9 +156,13 @@
 
 \begin{sol}
     The mapping
-    \[\phi : A \times B \to B \times A \quad \text{given by} \quad (a, b) \mapsto (b, a)\]
+    \[
+    	\phi : A \times B \to B \times A \quad \text{given by} \quad (a, b) \mapsto (b, a)
+    \]
     for all $a \in A$ and $b \in B$ is clearly bijective. Moreover, for any $(a_1, b_1), (a_2, b_2) \in A \times B$, we have
-    \[\phi((a_1, b_1)(a_2, b_2)) = \phi((a_1a_2, b_1b_2)) = (b_1b_2, a_1a_2) = (b_1, a_1)(b_2, a_2) = \phi(a_1, b_1)\phi(a_2, b_2)\]
+    \[
+    	\phi((a_1, b_1)(a_2, b_2)) = \phi((a_1a_2, b_1b_2)) = (b_1b_2, a_1a_2) = (b_1, a_1)(b_2, a_2) = \phi(a_1, b_1)\phi(a_2, b_2)
+    \]
     so that $\phi$ is a homomorphism. Therefore, $\phi$ is an isomorphism and $A \times B \cong B \times A$.
 \end{sol}
 
@@ -144,7 +172,9 @@
 
 \begin{sol}
     Consider the mapping
-    \[\phi : G \times C \to A \times H \quad \text{by} \quad ((a, b), c) \mapsto (a, (b, c))\]
+    \[
+    	\phi : G \times C \to A \times H \quad \text{by} \quad ((a, b), c) \mapsto (a, (b, c))
+    \]
     for all $a \in A$, $b \in B$, and $c \in C$. The proof is similar to the previous exercise, hence we omit the details to conclude that $\phi$ is an isomorphism and $G \times C \cong A \times H$.
 \end{sol}
 
@@ -154,15 +184,23 @@
 
 \begin{sol}
     Observe that $1_H \in \phi(G)$ since $\phi(1_G) = 1_H$, so that $\phi(G)$ is nonempty. To show closure, let $h_1, h_2 \in \phi(G)$. Then there exist $g_1, g_2 \in G$ such that $\phi(g_1) = h_1$ and $\phi(g_2) = h_2$. Then
-    \[h_1h_2 = \phi(g_1)\phi(g_2) = \phi(g_1g_2) \in \phi(G)\]
+    \[
+    	h_1h_2 = \phi(g_1)\phi(g_2) = \phi(g_1g_2) \in \phi(G)
+    \]
     so that $h_1h_2 \in \phi(G)$. Finally,
-    \[h_1\inv = \phi(g_1)\inv = \phi(g_1\inv) \in \phi(G)\]
+    \[
+    	h_1\inv = \phi(g_1)\inv = \phi(g_1\inv) \in \phi(G)
+    \]
     so that $h_1\inv \in \phi(G)$. Therefore, $\phi(G)$ is a subgroup of $H$.
 
     Suppose $\phi$ is injective. Then the mapping
-    \[\psi : G \to \phi(G) \quad \text{by} \quad g \mapsto \phi(g)\]
+    \[
+    	\psi : G \to \phi(G) \quad \text{by} \quad g \mapsto \phi(g)
+    \]
     is well-defined. For any $g_1, g_2 \in G$,
-    \[\psi(g_1g_2) = \phi(g_1g_2) = \phi(g_1)\phi(g_2) = \psi(g_1)\psi(g_2)\]
+    \[
+    	\psi(g_1g_2) = \phi(g_1g_2) = \phi(g_1)\phi(g_2) = \psi(g_1)\psi(g_2)
+    \]
     so that $\psi$ is a homomorphism. Moreover, if $\psi(g_1) = \psi(g_2)$, then $\phi(g_1) = \phi(g_2)$, and since $\phi$ is injective, $g_1 = g_2$. Hence, $\psi$ is injective. For any $h \in \phi(G)$, there exists $g \in G$ such that $\phi(g) = h$, and hence $\psi(g) = h$. Therefore, $\psi$ is surjective, hence $\psi$ is an isomorphism and $G \cong \phi(G)$.
 \end{sol}
 
@@ -173,9 +211,13 @@
 
 \begin{sol}
     Denote the kernel of $\phi$ by $\ker\phi$. Since $\phi(1_G) = 1_H$, then $1_G \in \ker\phi$, so that $\ker\phi$ is nonempty. To show closure, let $g_1, g_2 \in \ker\phi$. Then
-    \[\phi(g_1g_2) = \phi(g_1)\phi(g_2) = 1_H1_H = 1_H\]
+    \[
+    	\phi(g_1g_2) = \phi(g_1)\phi(g_2) = 1_H1_H = 1_H
+    \]
     so that $g_1g_2 \in \ker\phi$. Finally,
-    \[\phi(g_1\inv) = \phi(g_1)\inv = 1_H\inv = 1_H\]
+    \[
+    	\phi(g_1\inv) = \phi(g_1)\inv = 1_H\inv = 1_H
+    \]
     so that $g_1\inv \in \ker\phi$. Therefore, $\ker\phi$ is a subgroup of $G$.
     \begin{itemize}
         \item [\rightimp] If $\phi$ is injective, then for $g \in \ker\phi$, we have $\phi(g) = 1_H = \phi(1_G)$. Then $g = 1_G$, so that $\ker\phi = \set{1_G}$.
@@ -189,9 +231,13 @@
 
 \begin{sol}
     Let $(x_1, y_1), (x_2, y_2) \in \r^2$. Then
-    \[\pi((x_1, y_1) + (x_2, y_2)) = \pi((x_1 + x_2, y_1 + y_2)) = x_1 + x_2 = \pi((x_1, y_1)) + \pi((x_2, y_2))\]
+    \[
+    	\pi((x_1, y_1) + (x_2, y_2)) = \pi((x_1 + x_2, y_1 + y_2)) = x_1 + x_2 = \pi((x_1, y_1)) + \pi((x_2, y_2))
+    \]
     so that $\pi$ is a homomorphism. Moreover, if $(x, y) \in \ker(\pi)$, then $\pi((x, y)) = x = 0$. Hence,
-    \[\ker(\pi) = \set{(0, y) \mid y \in \r} \qh\]
+    \[
+    	\ker(\pi) = \set{(0, y) \mid y \in \r} \qh
+    \]
 \end{sol}
 
 \begin{exercise}[1.6.16]
@@ -200,7 +246,9 @@
 
 \begin{sol}
     The proof is similar to the previous exercise, hence we omit the details to conclude that $\pi_1$ and $\pi_2$ are homomorphisms. Moreover, if $(a, b) \in \ker(\pi_1)$, then $\pi_1((a, b)) = a = 1_A$. If $(a, b) \in \ker(\pi_2)$, then $\pi_2((a, b)) = b = 1_B$. Hence,
-    \[\ker(\pi_1) = \set{(1_A, b) \mid b \in B}, \quad \text{and} \quad \ker(\pi_2) = \set{(a, 1_B) \mid a \in A} \qh\]
+    \[
+    	\ker(\pi_1) = \set{(1_A, b) \mid b \in B}, \quad \text{and} \quad \ker(\pi_2) = \set{(a, 1_B) \mid a \in A} \qh
+    \]
 \end{sol}
 
 \begin{exercise} [1.6.17]
@@ -209,10 +257,14 @@
 
 \begin{solitem}
     \item [\rightimp] Suppose $\phi$ is a homomorphism. Then for $g, h \in G$, we have
-    \[(gh)\inv = \phi(gh) = \phi(g)\phi(h) = g\inv h\inv = h\inv g\inv.\]
+    \[
+    	(gh)\inv = \phi(gh) = \phi(g)\phi(h) = g\inv h\inv = h\inv g\inv.
+    \]
     Since inverses are unique, then $hg = gh$ so that $G$ is Abelian.
     \item [\leftimp] Suppose $G$ is Abelian. Then for $g, h \in G$, we have
-    \[\phi(gh) = (gh)\inv = h\inv g\inv = g\inv h\inv = \phi(g)\phi(h),\]
+    \[
+    	\phi(gh) = (gh)\inv = h\inv g\inv = g\inv h\inv = \phi(g)\phi(h),
+    \]
     so that $\phi$ is a homomorphism.
 \end{solitem}
 
@@ -230,9 +282,13 @@
 
 \begin{sol}
     Since $G \subseteq \c$, then $G$ is Abelian. Let $\phi : z \to z^k$. Hence, for any $z, w \in G$, we have
-    \[\phi(zw) = (zw)^k = z^kw^k = \phi(z)\phi(w)\]
+    \[
+    	\phi(zw) = (zw)^k = z^kw^k = \phi(z)\phi(w)
+    \]
     so that $\phi$ is a homomorphism. To show surjectivity, let $w \in G$ such that $w^n = 1$ for some $n \in \zp$. Note that $w^{1/k} \in G$ because $(z^{1/k})^{nk} = z^n = 1$. Then
-    \[\phi(z^{1/k}) = (z^{1/k})^k = z\]
+    \[
+    	\phi(z^{1/k}) = (z^{1/k})^k = z
+    \]
     so that $\phi$ is surjective. Finally, any $z = e^{2\pi i/k} \in G$ is such that $\phi(z) = z^k = 1$ with $z \neq 1$ since $k > 1$. Hence, $\phi$ is not injective and thus not an isomorphism.
 \end{sol}
 
@@ -243,9 +299,13 @@
 
 \begin{sol}
     Observe that $\aut(G)$ is associative under function composition and has identity through the identity map $\id : G \to G$ given by $\id(g) = g$. Moreover, $\phi \circ \psi$ for $\phi, \psi \in \aut(G)$ is a bijection. Then for any $g, h \in G$, we have
-    \[(\phi \circ \psi)(gh) = \phi(\psi(gh)) = \phi(\psi(g)\psi(h)) = \phi(\psi(g))\phi(\psi(h)) = (\phi \circ \psi)(g)(\phi \circ \psi)(h),\]
+    \[
+    	(\phi \circ \psi)(gh) = \phi(\psi(gh)) = \phi(\psi(g)\psi(h)) = \phi(\psi(g))\phi(\psi(h)) = (\phi \circ \psi)(g)(\phi \circ \psi)(h),
+    \]
     so that $\phi \circ \psi$ is a homomorphism. Hence, $\phi \circ \psi \in \aut(G)$, and $\aut(G)$ is closed under function composition. Finally, for any $\phi \in \aut(G)$, then $\phi\inv$ exists and is a bijection. Then
-    \[\phi\inv(gh) = \phi\inv(\phi(\phi\inv(g))\phi(\phi\inv(h))) = \phi\inv(\phi(\phi\inv(g)\phi\inv(h))) = \phi\inv(g)\phi\inv(h),\]
+    \[
+    	\phi\inv(gh) = \phi\inv(\phi(\phi\inv(g))\phi(\phi\inv(h))) = \phi\inv(\phi(\phi\inv(g)\phi\inv(h))) = \phi\inv(g)\phi\inv(h),
+    \]
     so that $\phi\inv$ is a homomorphism. Hence, $\phi\inv \in \aut(G)$, and $(\aut(G), \circ)$ is a group.
 \end{sol}
 
@@ -255,7 +315,9 @@
 
 \begin{sol}
     Let $\phi : \q \to \q$ be defined by $\phi(q) = kq$ for all $q \in \q$. For any $p, q \in \q$, we have
-    \[\phi(p + q) = k(p + q) = kp + kq = \phi(p) + \phi(q),\]
+    \[
+    	\phi(p + q) = k(p + q) = kp + kq = \phi(p) + \phi(q),
+    \]
     so that $\phi$ is a homomorphism. Bijectivity is clear, hence $\phi \in \aut(\q)$.
 \end{sol}
 
@@ -265,7 +327,9 @@
 
 \begin{sol}
     Let $\phi : A \to A$ be defined by $\phi(a) = a^k$ for all $a \in A$. For any $a_1, a_2 \in A$, we have
-    \[\phi(a_1a_2) = (a_1a_2)^k = a_1^k a_2^k = \phi(a_1)\phi(a_2)\]
+    \[
+    	\phi(a_1a_2) = (a_1a_2)^k = a_1^k a_2^k = \phi(a_1)\phi(a_2)
+    \]
     so that $\phi$ is a homomorphism. For $k = -1$, see \exref{1.6.17} to conclude that $\phi \in \aut(A)$.
 \end{sol}
 
@@ -277,13 +341,19 @@
 
 \begin{sol}
     Define the map
-    \[f : G \to G \quad \text{by} \quad x \mapsto x\inv \sigma(x)\]
+    \[
+    	f : G \to G \quad \text{by} \quad x \mapsto x\inv \sigma(x)
+    \]
     for all $x \in G$. If $f(x) = f(y)$ for $x, y \in G$, then $x\inv \sigma(x) = y\inv \sigma(y)$ so that $yx\inv = \sigma(yx\inv)$. Since $\sigma$ is fixed point free, then $yx\inv = 1$ and $x = y$. Hence, $f$ is injective. Since $G$ is finite, then $f$ is also surjective, and every element of $G$ may be written in the form $x\inv \sigma(x)$ for some $x \in G$.
 
     Let $g \in G$ be arbitrary. Then there exists $x \in G$ such that $g = x\inv \sigma(x)$. Applying $\sigma$ to both sides, we have
-    \[\sigma(g) = \sigma(x\inv \sigma(x)) = \sigma(x\inv) \sigma^2(x) = \sigma(x)\inv x = (x\inv \sigma(x))\inv = g\inv.\]
+    \[
+    	\sigma(g) = \sigma(x\inv \sigma(x)) = \sigma(x\inv) \sigma^2(x) = \sigma(x)\inv x = (x\inv \sigma(x))\inv = g\inv.
+    \]
     Then for any $g, h \in G$, we have
-    \[\sigma(gh) = (gh)\inv = h\inv g\inv = \sigma(h) \sigma(g) = \sigma(hg).\]
+    \[
+    	\sigma(gh) = (gh)\inv = h\inv g\inv = \sigma(h) \sigma(g) = \sigma(hg).
+    \]
     Since $\sigma$ is injective, then $gh = hg$ and $G$ is Abelian.
 \end{sol}
 
@@ -293,11 +363,15 @@
 
 \begin{sol}
     To show that $G$ is isomorphic to $D_{2n}$, we first need to produce an element $t \in G$ of order $n$ along with an element $x \in G$ of order 2 such that $xt = t\inv x$. The clear choice is to let $t = xy$ and keep $x$ as is. Note that $|t| = |xy| = n$ by assumption, and $|x| = 2$ by assumption. Moreover,
-    \[xt = x(xy) = (xx)y = y = (xy)\inv x = t\inv x\]
+    \[
+    	xt = x(xy) = (xx)y = y = (xy)\inv x = t\inv x
+    \]
     so that the elements $x, t \in G$ satisfy the relations of $D_{2n}$. Additionally, observe that $y = xt$ so that $t$ and $x$ generate $G$. Following this, it is easy to see that every element of $G$ can be written in the form $x^i t^j$ for $i \in \set{0, 1}$ and $0 \leq j < n$. For $x = 0$, we have the elements in the cyclic subgroup generated by $t$, and for $x = 1$, we have the elements $\set{x, xt, xt^2, \ldots, xt^{n-1}}$. Since $|t| = n$, then these are all distinct elements of $G$. Hence, $|G| = 2n$.
 
     Since the relations of $D_{2n}$ are satisfied by $x, t \in G$, $G$ is generated by $x$ and $t$, and $|G| = |D_{2n}| = 2n$, it follows that the map
-    \[\phi : D_{2n} \to G \quad \text{by} \quad r \mapsto t, s \mapsto x\]
+    \[
+    	\phi : D_{2n} \to G \quad \text{by} \quad r \mapsto t, s \mapsto x
+    \]
     extends to an isomorphism from $D_{2n}$ onto $G$. Therefore, $G \cong D_{2n}$.
 \end{sol}
 
@@ -306,25 +380,25 @@
     \begin{subexercises}
         \item Prove that the matrix 
         \[
-        \begin{pmatrix}
-        \cos \theta & -\sin \theta \\
-        \sin \theta & \cos \theta
-        \end{pmatrix}
+            \begin{pmatrix}
+                \cos \theta & -\sin \theta \\
+                \sin \theta & \cos \theta
+            \end{pmatrix}
         \]
         is the matrix of the linear transformation which rotates the $x,y$-plane about the origin in a counterclockwise direction by $\theta$ radians.
         \item Prove that the map $\phi : D_{2n} \to \gl_2(\r)$ defined on generators by
         \[
-        \phi(r) = 
-        \begin{pmatrix}
-            \cos \theta & -\sin \theta \\
-            \sin \theta & \cos \theta
-        \end{pmatrix}
-        \quad \text{and} \quad
-        \phi(s) = 
-        \begin{pmatrix}
-            0 & 1 \\
-            1 & 0
-        \end{pmatrix}
+            \phi(r) = 
+            \begin{pmatrix}
+                \cos \theta & -\sin \theta \\
+                \sin \theta & \cos \theta
+            \end{pmatrix}
+            \quad \text{and} \quad
+            \phi(s) = 
+            \begin{pmatrix}
+                0 & 1 \\
+                1 & 0
+            \end{pmatrix}
         \]
         extends to a homomorphism of $D_{2n}$ into $\gl_2(\r)$.
         \item Prove that the homomorphism $\phi$ defined above is injective.
@@ -333,45 +407,50 @@
 
 \begin{solenum}
     \item Let $\r^2$ be generated by the standard basis vectors $\b e_1 = (1 \quad 0)^T$ and $\b e_2 = (0 \quad 1)^T$. Let $T$ denote the linear transformation which rotates the $x,y$-plane about the origin in a counterclockwise direction by $\theta$ radians. Then
-    \[T(\b e_1) = 
-    \begin{pmatrix}
-        \cos \theta \\
-        \sin \theta
-    \end{pmatrix}, \quad \text{and} \quad
-    T(\b e_2) = 
-    \begin{pmatrix}
-        -\sin \theta \\
-        \cos \theta
-    \end{pmatrix}.
+    \[
+        T(\b e_1) = 
+        \begin{pmatrix}
+            \cos \theta \\
+            \sin \theta
+        \end{pmatrix}, \quad \text{and} \quad
+        T(\b e_2) = 
+        \begin{pmatrix}
+            -\sin \theta \\
+            \cos \theta
+        \end{pmatrix}.
     \]
     Then the matrix of $T$ with respect to the standard basis $\set{\b e_1, \b e_2}$ is exactly the desired matrix.
     \item It is easy to show by induction that for any positive $k$, then $\phi(r)^k$ is given by the following matrix:
-    \[\phi(r)^k = \begin{pmatrix}
-        \cos (k\theta) & -\sin (k\theta) \\
-        \sin (k\theta) & \cos (k\theta)
-    \end{pmatrix}\]
+    \[
+        \phi(r)^k = \begin{pmatrix}
+            \cos (k\theta) & -\sin (k\theta) \\
+            \sin (k\theta) & \cos (k\theta)
+        \end{pmatrix}
+    \]
     so that $\phi(r)^n = I$. It is fairly straightforward to see that the set of vectors $\set{T(\b e_1), T(\b e_2)}$ is orthonormal, so $\phi(r)$ is an orthogonal matrix, and hence $\phi(r)\inv = \phi(r)^T$. Moreover, we can calculate that $\phi(s)^2 = I$. Lastly, we calculate that
-    \[\phi(s)\phi(r) = 
-    \begin{pmatrix}
-        0 & 1 \\
-        1 & 0
-    \end{pmatrix}
-    \begin{pmatrix}
-        \cos \theta & -\sin \theta \\
-        \sin \theta & \cos \theta
-    \end{pmatrix} = 
-    \begin{pmatrix}
-        \sin \theta & \cos \theta \\
-        \cos \theta & -\sin \theta
-    \end{pmatrix} = 
-    \begin{pmatrix}
-        \cos \theta & \sin \theta \\
-        -\sin \theta & \cos \theta
-    \end{pmatrix}
-    \begin{pmatrix}
-        0 & 1 \\
-        1 & 0
-    \end{pmatrix} = \phi(r)\inv \phi(s)\]
+    \[
+        \phi(s)\phi(r) = 
+        \begin{pmatrix}
+            0 & 1 \\
+            1 & 0
+        \end{pmatrix}
+        \begin{pmatrix}
+            \cos \theta & -\sin \theta \\
+            \sin \theta & \cos \theta
+        \end{pmatrix} = 
+        \begin{pmatrix}
+            \sin \theta & \cos \theta \\
+            \cos \theta & -\sin \theta
+        \end{pmatrix} = 
+        \begin{pmatrix}
+            \cos \theta & \sin \theta \\
+            -\sin \theta & \cos \theta
+        \end{pmatrix}
+        \begin{pmatrix}
+            0 & 1 \\
+            1 & 0
+        \end{pmatrix} = \phi(r)\inv \phi(s)
+    \]
     so that $\phi(s)\phi(r) = \phi(r)\inv \phi(s)$. Since these relations match those of $D_{2n}$, then $\phi$ extends to a homomorphism from $D_{2n}$ to $\gl_2(\r)$.
     \item To show that $\phi$ is injective, we show that $\ker\phi$ is trivial. Let $g \in \ker\phi$.
     \begin{itemize}
@@ -383,17 +462,18 @@
 
 \begin{exercise}[1.6.26]
     Let $i$ and $j$ be the generators of $Q_8$ described in Section 5. Prove that the map $\phi$ from $Q_8$ to $\gl_2(\c)$ defined on generators by
-    \[\phi(i) = 
-    \begin{pmatrix}
-        \sqrt{-1} & 0 \\
-        0 & -\sqrt{-1}
-    \end{pmatrix}
-    \quad \text{and} \quad
-    \phi(j) = 
-    \begin{pmatrix}
-        0 & -1 \\
-        1 & 0
-    \end{pmatrix}
+    \[
+        \phi(i) = 
+        \begin{pmatrix}
+            \sqrt{-1} & 0 \\
+            0 & -\sqrt{-1}
+        \end{pmatrix}
+        \quad \text{and} \quad
+        \phi(j) = 
+        \begin{pmatrix}
+            0 & -1 \\
+            1 & 0
+        \end{pmatrix}
     \]
     extends to a homomorphism. Prove that $\phi$ is injective.
 \end{exercise}

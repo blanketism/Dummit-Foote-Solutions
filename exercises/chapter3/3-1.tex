@@ -12,7 +12,9 @@ Let $G$ and $H$ be groups.
     Observe that $1_G \in \phi\inv(E)$ since $\phi(1_G) = 1_H \in E$. Let $x, y \in \phi\inv(E)$ so that $\phi(x), \phi(y) \in E$. Since $E \leq H$, then $\phi(xy\inv) = \phi(x)\phi(y)\inv \in E$, hence $xy\inv \in \phi\inv(E)$. Therefore, $\phi\inv(E) \leq G$.
 
     Suppose $E \nsub H$. Then $heh\inv \in E$ for all $h \in H$ and $e \in H$. Let $x \in \phi\inv(E)$ and $g \in G$. Then
-    \[\phi(gxg\inv) = \phi(g)\phi(x)\phi(g)\inv \in E,\]
+    \[
+    	\phi(gxg\inv) = \phi(g)\phi(x)\phi(g)\inv \in E,
+    \]
     so that $gxg\inv \in \phi\inv(E)$. Therefore, $\phi\inv(E) \nsub G$. Then $\ker \phi = \phi\inv(1_H) \nsub G$ since $\set{1_H} \nsub H$.
 \end{sol}
 
@@ -24,7 +26,9 @@ Let $G$ and $H$ be groups.
 
 \begin{sol}
     Let $w \in Z$, and define $v = u\inv w$. Then
-    \[\phi(v) = \phi(u\inv w) = \phi(u)\inv \phi(w) = a\inv (ab) = b\]
+    \[
+    	\phi(v) = \phi(u\inv w) = \phi(u)\inv \phi(w) = a\inv (ab) = b
+    \]
     so that $v \in Y$ and $uv = w$.
 \end{sol}
 
@@ -34,7 +38,9 @@ Let $G$ and $H$ be groups.
 
 \begin{sol}
     Let $aB, a'B \in A/B$. Then
-    \[(aB)(a'B) = (aa')B = (a'a)B = (a'B)(aB)\]
+    \[
+    	(aB)(a'B) = (aa')B = (a'a)B = (a'B)(aB)
+    \]
     so that $A/B$ is Abelian.
 
     To obtain Abelian quotient groups, consider non-Abelian groups and their centers. Put $G = D_8$ and $N = Z(D_8) = \gen{r^2}$. Then $G/N \cong V_4$ is Abelian.
@@ -46,7 +52,9 @@ Let $G$ and $H$ be groups.
 
 \begin{sol}
     Inducting on $\alpha$, the base case $\alpha = 0$ is clear since $(gN)^0 = N = g^0N$. Suppose the statement holds for some $\alpha \in \z$. Then
-    \[(gN)^{\alpha + 1} = (gN)^{\alpha}(gN) = g^{\alpha}N gN = g^{\alpha + 1}N.\]
+    \[
+    	(gN)^{\alpha + 1} = (gN)^{\alpha}(gN) = g^{\alpha}N gN = g^{\alpha + 1}N.
+    \]
     Hence, the statement holds for all $\alpha \in \zp \cup \set 0$. The case of $\alpha = -1$ is handled by Proposition 3.5. For all negative $\alpha$, utilize $\alpha = -1$ and the positive case to obtain the result.
 \end{sol}
 
@@ -66,7 +74,9 @@ Let $G$ and $H$ be groups.
 
 \begin{sol}
     $\phi\inv(+1)$ consists of positive reals and $\phi\inv(-1)$ negative reals. Let $x, y \in \r\unt$. Then
-    \[\phi(xy) = \frac{xy}{\abs{xy}} = \frac{x}{\abs x} \cdot \frac{y}{\abs y} = \phi(x)\phi(y) \qh\]
+    \[
+    	\phi(xy) = \frac{xy}{\abs{xy}} = \frac{x}{\abs x} \cdot \frac{y}{\abs y} = \phi(x)\phi(y) \qh
+    \]
 \end{sol}
 
 \begin{exercise}[3.1.7]
@@ -75,7 +85,9 @@ Let $G$ and $H$ be groups.
 
 \begin{sol}
     Let $(x_1, y_1), (x_2, y_2) \in \r^2$. Then
-    \[\pi((x_1, y_1) + (x_2, y_2)) = (x_1 + x_2) + (y_1 + y_2) = (x_1 + y_1) + (x_2 + y_2) = \pi((x_1, y_1)) + \pi((x_2, y_2)),\]
+    \[
+    	\pi((x_1, y_1) + (x_2, y_2)) = (x_1 + x_2) + (y_1 + y_2) = (x_1 + y_1) + (x_2 + y_2) = \pi((x_1, y_1)) + \pi((x_2, y_2)),
+    \]
     hence $\pi$ is a homomorphism. Moreover, $\pi$ is surjective since $\pi((a, 0)) = a$ for all $a \in \r$. We have $\ker\pi$ as the line $y = -x$, and $\pi\inv(a)$ as $y = a - x$, which is $\ker\pi$ translated up by $a$.
 \end{sol}
 
@@ -85,7 +97,9 @@ Let $G$ and $H$ be groups.
 
 \begin{sol}
     Let $x, y \in \r\unt$. Then
-    \[\phi(xy) = \abs{xy} = \abs x \abs y = \phi(x)\phi(y)\]
+    \[
+    	\phi(xy) = \abs{xy} = \abs x \abs y = \phi(x)\phi(y)
+    \]
     so that $\phi$ is a homomorphism. Note that $\abs x > 0$ for any $x \in \r\unt$, so $\im(\phi) = \r^+$. $\ker(\phi) = \set{-1, 1}$, and the fiber of $\phi$ over some $a \in \r^+$ is simply $\set{-a, a}$.
 \end{sol}
 
@@ -111,7 +125,9 @@ Let $G$ and $H$ be groups.
 
 \begin{sol}
     To show that $\phi$ is well-defined, suppose $\bar a = \bar b$ in $\intmod[8]$. Then $8 \mid (a - b)$, so that $a - b = 8k$ for some $k \in \z$. Then $a - b = 4(2k)$, so that $4 \mid (a - b)$ and $\bar a = \bar b$ in $\intmod[4]$. Hence, $\phi$ is well-defined. Moreover, for any $\bar a, \bar b \in \intmod[8]$, then
-    \[\phi(\bar a + \bar b) = \phi(\overline{a + b}) = \overline{a + b} = \bar a + \bar b = \phi(\bar a) + \phi(\bar b)\]
+    \[
+    	\phi(\bar a + \bar b) = \phi(\overline{a + b}) = \overline{a + b} = \bar a + \bar b = \phi(\bar a) + \phi(\bar b)
+    \]
     so that $\phi$ is a homomorphism. Note that for any $\bar c \in \intmod[4]$, then $\phi(\bar c) = \bar c$, so $\phi$ is surjective. The fibers of $\phi$:
     \begin{align*}
         \phi\inv(\bar 0) & = \set{\bar 0, \bar 4} \\
@@ -124,121 +140,143 @@ Let $G$ and $H$ be groups.
 
 \begin{exercise}[3.1.11]
     Let $F$ be a field and let
-    \[G = \set*{\left.
-    \begin{pmatrix}
-        a & b \\
-        0 & c 
-    \end{pmatrix}~\right|~a, b, c \in F, ac \neq 0} \leq \gl_2(F)\]
+    \[
+    	G = \set*{\left.
+        \begin{pmatrix}
+            a & b \\
+            0 & c 
+        \end{pmatrix}~\right|~a, b, c \in F, ac \neq 0} \leq \gl_2(F)
+	\]
     \begin{subexercises}
         \item Prove that the map
-        \[\phi : 
-        \begin{pmatrix}
-            a & b \\
-            0 & c
-        \end{pmatrix} \mapsto a\]
+        \[
+        	\phi : 
+            \begin{pmatrix}
+                a & b \\
+                0 & c
+            \end{pmatrix} \mapsto a
+	    \]
         is a surjective homomorphism from $G$ onto $F\unt$ (recall that $F\unt$ is the multiplicative group of nonzero elements in $F$). Describe the fibers and kernel of $\phi$.
         \item Prove that the map
-        \[\psi : 
-        \begin{pmatrix}
-            a & b \\
-            0 & c
-        \end{pmatrix} \mapsto (a, c)\]
+        \[
+        	\psi : 
+            \begin{pmatrix}
+                a & b \\
+                0 & c
+            \end{pmatrix} \mapsto (a, c)
+        \]
         is a surjective homomorphism from $G$ onto $F\unt \times F\unt$. Describe the fibers and kernel of $\psi$. 
         \item Let
-        \[H = \set*{\left .
-        \begin{pmatrix}
-            1 & b \\
-            0 & 1
-        \end{pmatrix} ~\right\vert~b \in F}\]
+        \[
+        	H = \set*{\left .
+            \begin{pmatrix}
+                1 & b \\
+                0 & 1
+            \end{pmatrix} ~\right\vert~b \in F}
+        \]
         Prove that $H$ is isomorphic to the additive group $F$.
     \end{subexercises}
 \end{exercise}
 
 \begin{solenum}
     \item Observe that
-    \[\phi\left(
-    \begin{pmatrix}
-        a & 1 \\
-        0 & 1
-    \end{pmatrix}\right) = a\]
+    \[
+    	\phi\left(
+        \begin{pmatrix}
+            a & 1 \\
+            0 & 1
+        \end{pmatrix}\right) = a
+	\]
     so that $\phi$ is surjective. Moreover, for any $a, b, c, d, e, f \in F$ with $ac \neq 0$ and $df \neq 0$, we have
-    \[\phi\left(
-    \begin{pmatrix}
-        a & b \\
-        0 & c
-    \end{pmatrix}
-    \begin{pmatrix}
-        d & e \\
-        0 & f
-    \end{pmatrix}\right) = 
-    \phi\left(
-    \begin{pmatrix}
-        ad & ae + bf \\
-        0 & cf
-    \end{pmatrix}\right) = ad = 
-    \phi\left(
-    \begin{pmatrix}
-        a & b \\
-        0 & c
-    \end{pmatrix}\right)
-    \phi\left(
-    \begin{pmatrix}
-        d & e \\
-        0 & f
-    \end{pmatrix}\right)\]
+    \[
+    	\phi\left(
+        \begin{pmatrix}
+            a & b \\
+            0 & c
+        \end{pmatrix}
+        \begin{pmatrix}
+            d & e \\
+            0 & f
+        \end{pmatrix}\right) = 
+        \phi\left(
+        \begin{pmatrix}
+            ad & ae + bf \\
+            0 & cf
+        \end{pmatrix}\right) = ad = 
+        \phi\left(
+        \begin{pmatrix}
+            a & b \\
+            0 & c
+        \end{pmatrix}\right)
+        \phi\left(
+        \begin{pmatrix}
+            d & e \\
+            0 & f
+        \end{pmatrix}\right)
+	\]
     and $\phi$ is then a homomorphism. The fiber of $a \in F\unt$ over $\phi$ is
-    \[\phi\inv(a) = 
-    \set*{\left.
-    \begin{pmatrix}
-        a & s \\
-        0 & t
-    \end{pmatrix}~\right|~s, t \in F, t \neq 0}\]
+    \[
+    	\phi\inv(a) = 
+        \set*{\left.
+        \begin{pmatrix}
+            a & s \\
+            0 & t
+        \end{pmatrix}~\right|~s, t \in F, t \neq 0}
+	\]
     with $\ker\phi = \phi\inv(1)$.
     \item To show that $\psi$ is surjective is similar as the previous exercise. The fiber of any $(a, c) \in F\unt \times F\unt$ is
-    \[\psi\inv((a, c)) = 
-    \set*{\left.
-    \begin{pmatrix}
-        a & s \\
-        0 & c
-    \end{pmatrix}~\right|~s \in F}\]
+    \[
+    	\psi\inv((a, c)) = 
+        \set*{\left.
+        \begin{pmatrix}
+            a & s \\
+            0 & c
+        \end{pmatrix}~\right|~s \in F}
+	\]
     with $\ker\psi = \psi\inv((1, 1))$.
     \item Define the mapping $\pi_1 : H \to F$ given by
-    \[\pi_1\left(
-    \begin{pmatrix}
-        1 & b \\
-        0 & 1
-    \end{pmatrix}\right) = b\]
+    \[
+    	\pi_1\left(
+        \begin{pmatrix}
+            1 & b \\
+            0 & 1
+        \end{pmatrix}\right) = b
+	\]
     Define another map $\pi_2 : F \to H$ given by
-    \[\pi_2(b) = 
-    \begin{pmatrix}
-        1 & b \\
-        0 & 1
-    \end{pmatrix}\]
+    \[
+    	\pi_2(b) = 
+        \begin{pmatrix}
+            1 & b \\
+            0 & 1
+        \end{pmatrix}
+	\]
     It is clear that $\pi_2$ is a two-sided inverse of $\pi_1$. For any $b, c \in F$, we have
-    \[\pi_1\left(
-    \begin{pmatrix}
-        1 & b \\
-        0 & 1
-    \end{pmatrix}
-    \begin{pmatrix}
-        1 & c \\
-        0 & 1
-    \end{pmatrix}\right) = 
-    \pi_1\left(
-    \begin{pmatrix}
-        1 & b + c \\
-        0 & 1
-    \end{pmatrix}\right) = b + c = 
-    \pi_1\left(
-    \begin{pmatrix}
-        1 & b \\
-        0 & 1
-    \end{pmatrix}\right) + 
-    \pi_1\left(
-    \begin{pmatrix}
-        1 & c \\
-        0 & 1
-    \end{pmatrix}\right)\]
+    \[
+    	\pi_1\left(
+        \begin{pmatrix}
+            1 & b \\
+            0 & 1
+        \end{pmatrix}
+        \begin{pmatrix}
+            1 & c \\
+            0 & 1
+        \end{pmatrix}\right) = 
+        \pi_1\left(
+        \begin{pmatrix}
+            1 & b + c \\
+            0 & 1
+        \end{pmatrix}\right) = b + c = 
+        \pi_1\left(
+        \begin{pmatrix}
+            1 & b \\
+            0 & 1
+        \end{pmatrix}\right) + 
+        \pi_1\left(
+        \begin{pmatrix}
+            1 & c \\
+            0 & 1
+        \end{pmatrix}\right)
+	\]
     so that $\pi_1$ is a homomorphism. Then $\pi_1$ is an isomorphism, and $H \cong F$.
 \end{solenum}
 
@@ -315,7 +353,9 @@ Let $G$ and $H$ be groups.
 
 \begin{sol}
     Since $A$ is Abelian, any proper subgroup $B$ of $A$ is normal. To that end, let $aB \in A/B$, and let $n \in \zp$. Since $A$ is divisible, there exists some $x \in A$ such that $x^n = a$. Then
-    \[(xB)^n = x^n B = aB\]
+    \[
+    	(xB)^n = x^n B = aB
+    \]
     so that $A/B$ is divisible. Observe that $\q$ is divisible, since for any $q \in \q$ and $n \in \zp$, there exists $p \in \q$ such that $np = q$, namely $p = q/n$. Moreover, $\z$ is a proper subgroup of $\q$, so by the first part, $\q/\z$ is divisible.
 \end{sol}
 
@@ -325,9 +365,13 @@ Let $G$ and $H$ be groups.
 
 \begin{sol}
     We prove the general case. Since $G = \gen S$, then for any $g \in G$, we have
-    \[g = s_1^{\alpha_1} s_2^{\alpha_2} \cdots s_k^{\alpha_k}, \quad s_i \in S, \alpha_i \in \z\]
+    \[
+    	g = s_1^{\alpha_1} s_2^{\alpha_2} \cdots s_k^{\alpha_k}, \quad s_i \in S, \alpha_i \in \z
+    \]
     Observe that $\bar S = \set{\bar s \mid s \in S}$. Then for any $\bar g \in \bar G$, we have
-    \[\bar g = \bar{s_1^{\alpha_1} s_2^{\alpha_2} \cdots s_k^{\alpha_k}} = \bar s_1^{\alpha_1} \bar s_2^{\alpha_2} \cdots \bar s_k^{\alpha_k}\]
+    \[
+    	\bar g = \bar{s_1^{\alpha_1} s_2^{\alpha_2} \cdots s_k^{\alpha_k}} = \bar s_1^{\alpha_1} \bar s_2^{\alpha_2} \cdots \bar s_k^{\alpha_k}
+    \]
     so that $\bar g \in \gen{\bar S}$. Hence, $\bar G \subseteq \gen{\bar S}$. Since $\bar s \in \bar G$ for any $s \in S$, then $\gen{\bar S} \subseteq \bar G$. Therefore, $\bar G = \gen{\bar S}$.
 
     The case of $G = \gen{x, y}$ is a special case where $S = \set{x, y}$.
@@ -356,11 +400,11 @@ Let $G$ and $H$ be groups.
     \end{align*}
     \item The orders of the elements of $\bar G$ are
     \[
-    \begin{array}{c|c|c|c|c|c|c|c|c}
-        \bar x & \bar 1 & \bar r & \bar r^2 & \bar r^3 & \bar s & \bar{sr} & \bar{sr^2} & \bar{sr^3} \\
-        \hline
-        \abs x & 1 & 4 & 2 & 4 & 2 & 2 & 2 & 2
-    \end{array}
+        \begin{array}{c|c|c|c|c|c|c|c|c}
+            \bar x & \bar 1 & \bar r & \bar r^2 & \bar r^3 & \bar s & \bar{sr} & \bar{sr^2} & \bar{sr^3} \\
+            \hline
+            \abs x & 1 & 4 & 2 & 4 & 2 & 2 & 2 & 2
+        \end{array}
     \]
     \item $\bar{rs} = \bar{sr^3}, \bar{sr^{-2}s} = \bar r^2, \bar{s\inv r\inv sr} = \bar r^2$.
     \item We first note that $\bar H = \set{1, \bar r^2, \bar s, \bar{sr^2}}$. To show that $\bar H \nsub \bar G$, we simplify the process by noting that elements of $\bar G$ are of the form $\bar r^k$ or $\bar{sr^k}$. If an element is of the former, we have
@@ -376,7 +420,9 @@ Let $G$ and $H$ be groups.
     where $\bar{sr^k}\inv = \bar{r^{-k}s}$. The above calculations show that for every $\bar g \in \bar G$, then $\bar{gr^2g\inv}, \bar{gsg\inv} \in H$ so that $\bar{gHg\inv} = \bar H$, hence $\bar H \nsub \bar G$. Moreover, it is easy to see that every element of $\bar H$ is of order 2 so that $\bar H \cong V_4$.
 
     Let $\pi : G \to \bar G$ be the natural projection of $G$ onto $\bar G$. Then $\pi\inv(\bar H)$ is the complete preimage of $\bar H$, or the set of elements that map to a coset in $\bar H$. Using part (b), we see that
-    \[\pi\inv(\bar H) = \set{1, r^2, r^4, r^6, s, sr^2, sr^4, sr^6}\]
+    \[
+    	\pi\inv(\bar H) = \set{1, r^2, r^4, r^6, s, sr^2, sr^4, sr^6}
+    \]
     Note that $|\pi\inv(\bar H)| = 8$, and the elements of $\bar H$ satisfy the relations $(r^2)^4 = s^2 = 1$. Then the mapping $\phi : D_8 \to \pi\inv(\bar H)$ given by $\phi(r) = r^2$ and $\phi(s) = s$ extends to a homomorphism that is clearly surjective. Then $\phi$ is an isomorphism, and $\pi\inv(\bar H) \cong D_8$.
     \item From the previous exercise, we have that $\bar G = \gen{\bar r, \bar s}$. Since $\bar r^2$ commutes with both $\bar r$ and $\bar s$, then $\bar r^2 \in Z(\bar G)$. However, $\bar{rs} \neq \bar{sr}$ and $\bar{r^3s} \neq \bar{sr^3}$. Additionally, none of $\bar{sr}, \bar{sr^2}$, nor $\bar{sr^3}$ commute with $\bar r$ so that $Z(\bar G) = \set{\bar 1, \bar r^2}$. The elements of $\widehat G = \bar G/Z(\bar G)$ are as follows:
     \begin{align*}
@@ -408,11 +454,11 @@ Let $G$ and $H$ be groups.
     \end{align*}
     \item The orders are
     \[
-    \begin{array}{c|c|c|c|c|c|c|c|c}
-        \bar x & \bar 1 & \bar\sigma & \bar\sigma^2 & \bar\sigma^3 & \bar\tau & \bar{\tau\sigma} & \bar{\tau\sigma^2} & \bar{\tau\sigma^3} \\
-        \hline
-        \abs{\bar x} & 1 & 4 & 2 & 4 & 2 & 2 & 2 & 2
-    \end{array}
+        \begin{array}{c|c|c|c|c|c|c|c|c}
+            \bar x & \bar 1 & \bar\sigma & \bar\sigma^2 & \bar\sigma^3 & \bar\tau & \bar{\tau\sigma} & \bar{\tau\sigma^2} & \bar{\tau\sigma^3} \\
+            \hline
+            \abs{\bar x} & 1 & 4 & 2 & 4 & 2 & 2 & 2 & 2
+        \end{array}
     \]
     \item $\bar{\sigma\tau} = \bar{\tau\sigma^3}, \bar{\tau\sigma^{-2}\tau} = \bar\sigma^2, \bar{\tau\inv\sigma\inv\tau\sigma} = \bar\sigma^2$.
     \item Note that $\bar\sigma^4 = \bar\tau^2 = \bar 1$, and $\bar{\sigma\tau} = \bar{\tau\sigma^3} = \bar{\tau\sigma^7} = \bar{\tau\sigma}$ so that $\bar G$ satisfies the same relations in $D_8$. Then the mapping $\phi : \bar G \to D_8$ given by $\phi(\bar\sigma) = r$ and $\phi(\bar\tau) = s$ extends to a surjective homomorphism, hence $\bar G \cong D_8$.
@@ -440,11 +486,11 @@ Let $G$ and $H$ be groups.
     \end{align*}
     \item The orders are
     \[
-    \begin{array}{c|c|c|c|c|c|c|c|c}
-        \bar x & \bar 1 & \bar v & \bar v^2 & \bar v^3 & \bar u & \bar{uv} & \bar{uv^2} & \bar{uv^3} \\
-        \hline
-        \abs{\bar x} & 1 & 4 & 2 & 4 & 2 & 2 & 2 & 2
-    \end{array}
+        \begin{array}{c|c|c|c|c|c|c|c|c}
+            \bar x & \bar 1 & \bar v & \bar v^2 & \bar v^3 & \bar u & \bar{uv} & \bar{uv^2} & \bar{uv^3} \\
+            \hline
+            \abs{\bar x} & 1 & 4 & 2 & 4 & 2 & 2 & 2 & 2
+        \end{array}
     \]
     \item $\bar{vu} = \bar{uv^5}, \bar{uv^{-2}u} = \bar u^2, \bar{u\inv v\inv uv} = \bar 1$.
     \item Since $\bar{vu} = \bar{uv^5} = \bar{uv}$, $\bar G$ is Abelian. Moreover, using the presentation of $Z_2 \times Z_4$ in \exref{2.5.12}, we see that $\bar u^2 = \bar v^4 = 1$ so that $\bar G$ satisfies the same relations. Then $\phi : \bar G \to Z_2 \times Z_4$ given by $\phi(\bar u) = a$ and $\phi(\bar v) = b$ is a surjective homomorphism, hence $\bar G \cong Z_2 \times Z_4$.
@@ -463,20 +509,24 @@ Let $G$ and $H$ be groups.
     \item Note that for some $\wt x \in \wt G$, we have $\wt x = \bar x\gen{12} = \set{\bar x, \bar{x + 12}}$. It follows that $x = 0, 1, 2, \dots, 11$ produces distinct cosets.
     \item The orders are
     \[
-    \begin{array}{c|c|c|c|c|c|c|c|c|c|c|c|c}
-        \wt x & \wt 0 & \wt 1 & \wt 2 & \wt 3 & \wt 4 & \wt 5 & \wt 6 & \wt 7 & \wt 8 & \wt 9 & \wt{10} & \wt{11} \\
-        \hline
-        \abs{\wt x} & 1 & 12 & 6 & 4 & 3 & 12 & 2 & 12 & 3 & 4 & 6 & 12
-    \end{array}
+        \begin{array}{c|c|c|c|c|c|c|c|c|c|c|c|c}
+            \wt x & \wt 0 & \wt 1 & \wt 2 & \wt 3 & \wt 4 & \wt 5 & \wt 6 & \wt 7 & \wt 8 & \wt 9 & \wt{10} & \wt{11} \\
+            \hline
+            \abs{\wt x} & 1 & 12 & 6 & 4 & 3 & 12 & 2 & 12 & 3 & 4 & 6 & 12
+        \end{array}
     \]
     \item Define the mapping $\phi : \wt G \to \intmod[12]$ given by $\phi(\wt x) = \bar x$. This map is trivially a bijection, and for any $\wt x, \wt y \in \wt G$, then
-    \[\phi(\wt x + \wt y) = \phi(\wt{x + y}) = \bar{x + y} = \bar x + \bar y = \phi(\wt x) + \phi(\wt y)\]
+    \[
+    	\phi(\wt x + \wt y) = \phi(\wt{x + y}) = \bar{x + y} = \bar x + \bar y = \phi(\wt x) + \phi(\wt y)
+    \]
     so that $\phi$ is a homomorphism. Then $\wt G \cong \intmod[12]$.
 \end{solenum}
 
 \begin{exercise}[3.1.21]
     Let $G = Z_4 \times Z_4$ be given in terms of the following generators and relations:
-    \[G = \gen{x, y \mid x^4 = y^4 = 1, xy = yx}\]
+    \[
+    	G = \gen{x, y \mid x^4 = y^4 = 1, xy = yx}
+    \]
     Let $\bar G = G/\gen{x^2y^2}$ (note that every subgroup of the Abelian group $G$ is normal).
     \begin{subexercises}
         \item Show that the order of $\bar G$ is 8.
@@ -497,14 +547,16 @@ Let $G$ and $H$ be groups.
     \end{align*}
     \item The orders are
     \[
-    \begin{array}{c|c|c|c|c|c|c|c|c}
-        \bar g & \bar 1 & \bar x & \bar x^2 & \bar x^3 & \bar y & \bar{xy} & \bar{x^2y} & \bar{x^3y} \\
-        \hline
-        \abs{\bar g} & 1 & 4 & 2 & 4 & 4 & 2 & 4 & 2
-    \end{array}
+        \begin{array}{c|c|c|c|c|c|c|c|c}
+            \bar g & \bar 1 & \bar x & \bar x^2 & \bar x^3 & \bar y & \bar{xy} & \bar{x^2y} & \bar{x^3y} \\
+            \hline
+            \abs{\bar g} & 1 & 4 & 2 & 4 & 4 & 2 & 4 & 2
+        \end{array}
     \]
     \item Using the presentation of $Z_2 \times Z_4$ in \exref{2.5.12}, and noting that $\bar{xy}^2 = \bar x^4 = 1$ then the mapping $\phi : Z_2 \times Z_4 \to \bar G$ given by
-    \[\phi(a) = \bar{xy}, \quad \phi(b) = \bar x\]
+    \[
+    	\phi(a) = \bar{xy}, \quad \phi(b) = \bar x
+    \]
     extends to a unique homomorphism. Now suppose $\phi(a^sb^t) = \phi(a^ub^v)$. Then $\bar{xy}^s\bar x^t = \bar{xy}^u\bar x^v$. Since $\gen{\bar{xy}} \cap \gen{\bar x}$ is trivial, then $\bar{xy}^{s - u} = \bar x^{v - t}$ imply that both quantities must be one. Then $\bar{xy}^s = \bar{xy}^u$ and $\bar x^v = \bar x^t$. Then $s \equiv u \bmod 2$ and $v \equiv t \bmod 4$, so that $a^sb^t = a^ub^t$ since $\abs a = 2$ and $\abs b = 4$. Then $\phi$ is injective. Because $\abs{Z_2 \times Z_4} = \abs{\bar G} = 8$, then $\phi$ is an isomorphism, hence $\bar G \cong Z_2 \times Z_4 \cong Z_4 \times Z_2$.
 \end{solenum}
 
@@ -518,7 +570,9 @@ Let $G$ and $H$ be groups.
 \begin{solenum}
     \item Observe that $H \cap K \leq G$ since $H \leq G$ and $K \leq G$. Let $g \in G$ and $x \in H \cap K$. Since $H \nsub G$ and $K \nsub G$, then $gxg\inv \in H$ and $gxg\inv \in K$, hence $gxg\inv \in H \cap K$. Then $g(H \cap K)g\inv \subseteq H \cap K$. By Theorem 3.6, then $H \cap K \nsub G$.
     \item Let $G$ be a group and $I$ be a nonempty set of indices, possibly not countable. Consider the collection of subgroups $\set{N_i \mid i \in I}$ of $G$, where $N_i \nsub G$ for every $i \in I$. Consider their intersection
-    \[N = \bigcap_{i \in I} N_i\]
+    \[
+    	N = \bigcap_{i \in I} N_i
+    \]
     Since $N \leq G$, what remains to be shown is that $gNg\inv \subseteq N$ for some $g \in G$. To that end, let $n \in N$. Then $gng\inv \in N_i$ for each $i \in I$ because $N_i \nsub G$. It follows that $gng\inv \in N$ so that $gNg\inv \subseteq N$.
 \end{solenum}
 
@@ -528,9 +582,13 @@ Let $G$ and $H$ be groups.
 
 \begin{sol}
     Let $G$ be a group and $I$ be a nonempty set of indices. Let $\set{N_i \mid i \in I}$ be a collection of normal subgroups of $G$, and let $N = \gen{N_i \mid i \in I}$ be the join of the collection. Let $g \in G$ and $n \in N$. Then
-    \[n = n_1n_2 \dots n_k \quad \text{where $n_i \in N_i$ for some $i \in I$}\]
+    \[
+    	n = n_1n_2 \dots n_k \quad \text{where $n_i \in N_i$ for some $i \in I$}
+    \]
     Since $N_i \nsub G$, then $gn_ig\inv \in N_i$ for each $1 \leq i \leq k$. Then
-    \[gng\inv = g(n_1n_2 \ldots n_k)g\inv = (gn_1g\inv)(gn_2g\inv) \cdots (gn_kg\inv)\]
+    \[
+    	gng\inv = g(n_1n_2 \ldots n_k)g\inv = (gn_1g\inv)(gn_2g\inv) \cdots (gn_kg\inv)
+    \]
     Because $gng\inv$ is written as a product of elements where each one belongs to some $N_i$, it follows that it is in the join $N$, hence $gNg\inv \subseteq N$. Then $N \nsub G$.
 \end{sol}
 
@@ -556,29 +614,33 @@ Let $G$ and $H$ be groups.
         \item[\leftimp] Suppose $gNg\inv \subseteq N$ for every $g \in G$, and let $n \in N$. For some $g \in G$, we have $g\inv Ng \subseteq N$ so that $g\inv ng \in N$. Then $n = g(g\inv ng)g\inv \in gNg\inv$. Hence, $N \subseteq gNg\inv$, and $N = gNg\inv$. Therefore, $N \nsub G$.
     \end{itemize}
     \item Let
-    \[n = 
-    \begin{pmatrix}
-        1 & x \\
-        0 & 1
-    \end{pmatrix} \in N\]
+    \[
+    	n = 
+        \begin{pmatrix}
+            1 & x \\
+            0 & 1
+        \end{pmatrix} \in N
+	\]
     where $x \in \z$. Then
-    \[gng\inv = 
-    \begin{pmatrix}
-        2 & 0 \\
-        0 & 1
-    \end{pmatrix}
-    \begin{pmatrix}
-        1 & x \\
-        0 & 1
-    \end{pmatrix}
-    \begin{pmatrix}
-        1/2 & 0 \\
-        0 & 1
-    \end{pmatrix} = 
-    \begin{pmatrix}
-        1 & 2x \\
-        0 & 1
-    \end{pmatrix} \in N\]
+    \[
+    	gng\inv = 
+        \begin{pmatrix}
+            2 & 0 \\
+            0 & 1
+        \end{pmatrix}
+        \begin{pmatrix}
+            1 & x \\
+            0 & 1
+        \end{pmatrix}
+        \begin{pmatrix}
+            1/2 & 0 \\
+            0 & 1
+        \end{pmatrix} = 
+        \begin{pmatrix}
+            1 & 2x \\
+            0 & 1
+        \end{pmatrix} \in N
+	\]
     since $2x \in \z$. Notice that the upper right entry of $gng\inv$ for any $n \in N$ will be even, so any matrix with an odd integer in the upper right entry will have no such $n \in N$ such that $gng\inv$ is that matrix.
 \end{solenum}
 
@@ -596,12 +658,18 @@ Let $G$ and $H$ be groups.
 \begin{solenum}
     \item Observe that $g(ab)g\inv = (gag\inv)(gbg\inv)$. To see that the orders are the same, refer to \exref{1.1.22}.
     \item For any $g \in G$, then
-    \[(ga\inv g\inv)(gag\inv) = ga\inv (g\inv g) ag\inv = g(a\inv a)g\inv = gg\inv = 1\]
+    \[
+    	(ga\inv g\inv)(gag\inv) = ga\inv (g\inv g) ag\inv = g(a\inv a)g\inv = gg\inv = 1
+    \]
     so that $(gag\inv)\inv = ga\inv g\inv$.
     \item If $S$ is empty, then $N = \gen\varnothing = 1$ is trivial. Otherwise, suppose $S$ is nonempty, and let $n \in N$. Since $N = \gen S$, then
-    \[n = s_1s_2 \cdots s_k, \quad s_i \in S \text{ for all } i = 1, 2, \ldots, k.\]
+    \[
+    	n = s_1s_2 \cdots s_k, \quad s_i \in S \text{ for all } i = 1, 2, \ldots, k.
+    \]
     Since
-    \[gng\inv = (gs_1g\inv)(gs_2g\inv) \cdots (gs_kg\inv)\]
+    \[
+    	gng\inv = (gs_1g\inv)(gs_2g\inv) \cdots (gs_kg\inv)
+    \]
     for every $g \in G$, and $gSg\inv \subseteq N$, then the right hand side is also in $N$, hence $gNg\inv \subseteq N$ so that $N \nsub G$.
     \item
     \begin{itemize}
@@ -633,9 +701,13 @@ Let $G$ and $H$ be groups.
     \item [\rightimp] Immediate, since $gSg\inv \subseteq gNg\inv = N$ because $g \in N_G(N)$.
 
     \item [\leftimp] If $S$ is empty, then $N$ is trivial, hence is normal. Otherwise, suppose $S$ is nonempty, and let $n \in N$. Since $N = \gen S$, then
-    \[n = s_1s_2 \cdots s_k, \quad s_i \in S \text{ for all } i = 1, 2, \ldots, k.\]
+    \[
+    	n = s_1s_2 \cdots s_k, \quad s_i \in S \text{ for all } i = 1, 2, \ldots, k.
+    \]
     Since
-    \[gng\inv = (gs_1g\inv)(gs_2g\inv) \cdots (gs_kg\inv)\]
+    \[
+    	gng\inv = (gs_1g\inv)(gs_2g\inv) \cdots (gs_kg\inv)
+    \]
     for every $g \in G$, and $gSg\inv \subseteq N$, then the right hand side is also in $N$, hence $gNg\inv \subseteq N$. Since $N$ is finite, we may use the previous exercise to conclude that $g \in N_G(N)$.
 \end{solitem}
 
@@ -646,15 +718,25 @@ Let $G$ and $H$ be groups.
 \begin{solitem}
     \item [\rightimp] Immediate, since $gNg\inv = N$ for every $g \in G$, so $tSt\inv \subseteq N$.
     \item [\leftimp] Let $S$ and $T$ be nonempty subsets of $G$, and let $g \in G$. By assumpion, $g \in \gen T$ implies that
-    \[g = t_1t_2 \dots t_k, \quad t_i \in T \text{ for each } i = 1, 2, \ldots, k.\]
+    \[
+    	g = t_1t_2 \dots t_k, \quad t_i \in T \text{ for each } i = 1, 2, \ldots, k.
+    \]
     We proceed by induction on the word length of $g \in \gen T$. The base case of $t_1St_1\inv \subseteq N$ is satisfied by assumption. Assume now that $gSg\inv \subseteq N$ for $k$-length words made up of elements from $T$. Consider a word of length $k + 1$ given by 
-    \[g = t_1t_2 \ldots t_kt_{k + 1}, \quad t_i \in T \text{ for each } i = 1, 2, \ldots, k + 1.\]
+    \[
+    	g = t_1t_2 \ldots t_kt_{k + 1}, \quad t_i \in T \text{ for each } i = 1, 2, \ldots, k + 1.
+    \]
     Let $\wh t = t_1t_2 \ldots t_k$ so that $g = \wh tt_{k + 1}$. By the induction assumption, $\wh tS\wh t\inv \subseteq N$. For any $s \in S$, then 
-    \[gsg\inv = \wh tt_{k + 1}st_{k + 1}\inv \wh t\inv = \wh t(t_{k + 1}st_{k + 1}\inv)\wh t\inv\]
+    \[
+    	gsg\inv = \wh tt_{k + 1}st_{k + 1}\inv \wh t\inv = \wh t(t_{k + 1}st_{k + 1}\inv)\wh t\inv
+    \]
     where $t_{k + 1}st_{k + 1}\inv \in N$ because $tSt\inv \subseteq N$ for every $t \in T$. Since $N = \gen S$, then
-    \[t_{k + 1}st_{k + 1}\inv = s_1s_2 \ldots s_m, \quad s_i \in S \text{ for each } i = 1, 2, \ldots, m.\]
+    \[
+    	t_{k + 1}st_{k + 1}\inv = s_1s_2 \ldots s_m, \quad s_i \in S \text{ for each } i = 1, 2, \ldots, m.
+    \]
     Then
-    \[\wh t(t_{k + 1}st_{k + 1}\inv)\wh t\inv = (\wh ts_1\wh t\inv)(\wh ts_2 \wh t\inv) \cdots (\wh ts_m \wh t\inv) \in N\]
+    \[
+    	\wh t(t_{k + 1}st_{k + 1}\inv)\wh t\inv = (\wh ts_1\wh t\inv)(\wh ts_2 \wh t\inv) \cdots (\wh ts_m \wh t\inv) \in N
+    \]
     Hence, $gsg\inv \in N$ so that $gSg\inv \subseteq N$. Induction shows that this is true for every $g \in G$, and by finiteness of $N$, we use the result from the previous exercise to conclude that $N \nsub G$.
 \end{solitem}
 
@@ -721,7 +803,9 @@ Let $G$ and $H$ be groups.
 \begin{solenum}
     \item Observe that $\gen{r^k} = \set{1, r^k, r^{2k}, \ldots, r^{n - k}}$. It is clear that $r\gen{r^k}r\inv = \gen{r^k}$, and observe that $sr^ks\inv = r^{-k} = r^{n - k}$ so that $s\gen{r^k}s\inv = \gen{r^k}$. Since $r, s \in N_{D_{2n}}(\gen{r^k})$, then $\gen{r^k} \nsub D_{2n}$.
     \item Consider $D_{2n}/\gen{r^k}$. Since $k \mid n$, then the order of $\gen{r^k}$ is $n/k$, and the number of cosets in the quotient group is $2n/(n/k) = 2k$. Now consider the cosets $\bar r$ and $\bar s$:
-    \[\bar r = \set{r, r^{k + 1}, r^{2k + 1}, \ldots, r^{n - k + 1}} \quad \text{and} \quad \bar s = \set{s, sr^k, sr^{2k}, \ldots, sr^{n - k}}\]
+    \[
+    	\bar r = \set{r, r^{k + 1}, r^{2k + 1}, \ldots, r^{n - k + 1}} \quad \text{and} \quad \bar s = \set{s, sr^k, sr^{2k}, \ldots, sr^{n - k}}
+    \]
     It is clear that $\bar s \neq \bar 1$, and $\bar s^2 = \bar 1$ so that $\abs{\bar s} = 2$. Moreover, $\bar r^k = \bar 1$, hence $\abs{\bar r} \leq k$. However, note that $\bar r^i = \bar 1$ when $i \mid k$ so that $\abs{\bar r} = k$. This clearly satisfies the relations for $D_{2k}$, hence $D_{2n}/\gen{r^k} \cong D_{2k}$. 
 \end{solenum}
 
@@ -731,19 +815,27 @@ Let $G$ and $H$ be groups.
 
 \begin{sol}
     Since $\speclin_n(F) \leq \gl_n(F)$ by \exref{2.1.9}, it remains to be shown that $\speclin_n(F)$ is normal in $\gl_n(F)$. Let $S \in \speclin_n(F)$ and $X \in \gl_n(F)$. Then
-    \[\det(XSX\inv) = \det(X)\det(S)\det(X\inv) = 1\]
+    \[
+    	\det(XSX\inv) = \det(X)\det(S)\det(X\inv) = 1
+    \]
     so that $XSX\inv \in \speclin_n(F)$. Then $X\speclin_n(F)X\inv \subseteq \speclin_n(F)$ for every $X \in \gl_n(F)$, and since conjugation is an isomorphism, then $X\speclin_n(F)X\inv = \speclin_n(F)$. Hence, $\speclin_n(F) \nsub \gl_n(F)$.
 
     Observe that a normal subgroup corresponds to the kernel of some homomorphism. It is clear that the mapping $\det : \gl_n(F) \to F\unt$ is a homomorphism, and the elements that map to the identity in $F\unt$ are precisely those matrices with determinant 1, i.e. $\speclin_n(F)$. Then we may consider the mapping $\phi : \gl_n(F)/\speclin_n(F) \to F\unt$ given by $\phi(\bar X) = \det(X)$.
 
     We now show that $\phi$ is well-defined. Suppose $\bar A = \bar B$ for some $\bar A, \bar B \in \gl_n(F)/\speclin_n(F)$. Then for some $AS \in \bar A$ for $S \in \speclin_n(F)$. there exists $S' \in \speclin_n(F)$ such that $AS = BS'$. Then
-    \[\phi(\bar A) = \det(A) = \det(AS) = \det(BS') = \det(B) = \phi(\bar B)\]
+    \[
+    	\phi(\bar A) = \det(A) = \det(AS) = \det(BS') = \det(B) = \phi(\bar B)
+    \]
     so that $\phi$ is well-defined.
 
     Suppose $\phi(\bar A) = \phi(\bar B)$ for $\bar A, \bar B \in \gl_n(F)/\speclin_n(F)$. Then $\det(A) = \det(B)$. Let $AS \in \bar A$ for some $S \in \speclin_n(F)$. Note that $B\inv$ exists since $B \in \gl_n(F)$. Then
-    \[\det(B\inv AS) = \det(B\inv)\det(A)\det(S) = \det(A)\inv\det(A)\det(S) = 1\]
+    \[
+    	\det(B\inv AS) = \det(B\inv)\det(A)\det(S) = \det(A)\inv\det(A)\det(S) = 1
+    \]
     so that $B\inv AS \in \speclin_n(F)$, hence $B\inv AS = S'$ for some $S' \in \speclin_n(F)$. It follows that $AS = BS'$ so that $AS \in \bar B$, hence $\bar A \subseteq \bar B$. A similar argument shows that $\bar B \subseteq \bar A$, so that $\bar A = \bar B$ and $\phi$ is injective. Moreover, for some $f \in F\unt$, then $\det(fI_n) = f\det(I_n) = f$ so that $\phi$ is surjective. Lastly, for $\bar A, \bar B \in \speclin_n(F)$, then
-    \[\phi(\bar{AB}) = \det(AB) = \det(A)\det(B) = \phi(\bar A)\phi(\bar B)\]
+    \[
+    	\phi(\bar{AB}) = \det(AB) = \det(A)\det(B) = \phi(\bar A)\phi(\bar B)
+    \]
     so that $\phi$ is a homomorphism. Then $\phi$ is a bijective homomorphism, and $\gl_n(F)/\speclin_n(F) \cong F\unt$.
 \end{sol}
 
@@ -753,9 +845,13 @@ Let $G$ and $H$ be groups.
 
 \begin{sol}
     Suppose $G/Z(G)$ is cyclic with generator $xZ(G)$. Let $g, h \in G$. Then there exist integers $a, b \in \z$ and elements $z_1, z_2 \in Z(G)$ such that
-    \[g = x^a z_1 \quad \text{and} h = x^b z_2\]
+    \[
+    	g = x^a z_1 \quad \text{and} h = x^b z_2
+    \]
     Then
-    \[gh = (x^a z_1)(x^b z_2) = (x^b z_2)(x^a z_1) = hg\]
+    \[
+    	gh = (x^a z_1)(x^b z_2) = (x^b z_2)(x^a z_1) = hg
+    \]
     since $z_1, z_2 \in Z(G)$. Hence, $G$ is Abelian.
 \end{sol}
 
@@ -765,13 +861,17 @@ Let $G$ and $H$ be groups.
 
 \begin{sol}
     Let $C$ be the given set. It is clear that $C \leq A \times B$. To show that $C \nsub A \times B$, let $(a, b) \in A \times B$. Then for any $(a', 1) \in C$, we have
-    \[(a, b)(a', 1)(a, b)\inv = (aa'a\inv, b1b\inv) = (aa'a\inv, 1) \in C\]
+    \[
+    	(a, b)(a', 1)(a, b)\inv = (aa'a\inv, b1b\inv) = (aa'a\inv, 1) \in C
+    \]
     hence, $C \nsub A \times B$.
 
     Let $\phi : A \times B/C \to B$ be given by $\phi((a, b)C) = b$. To show that this is well-defined, suppose $(a, b)C = (a', b')C$. Then $C = (a\inv, b\inv)(a', b')C$, or that $(a\inv a', b\inv b') \in C$. Then $b\inv b' = 1$, or $b = b'$ so that $\phi$ is well-defined.
 
     Suppose $\phi((a, b)C) = \phi((a', b')C)$. Then $b = b'$ so that $(a, b)C = (a', b')C$, hence $\phi$ is injective. Moreover, $\phi((1, b)C) = b$ so that $\phi$ is surjective. Lastly, for $(a, b)C, (a', b')C \in A \times B/C$, then
-    \[\phi((a, b)C (a', b')C) = \phi((aa', bb')C) = bb' = \phi((a, b)C)\phi((a', b')C)\]
+    \[
+    	\phi((a, b)C (a', b')C) = \phi((aa', bb')C) = bb' = \phi((a, b)C)\phi((a', b')C)
+    \]
     so that $\phi$ is a bijective homomorphism. Hence, $A \times B/C \cong B$.
 \end{sol}
 
@@ -783,7 +883,9 @@ Let $G$ and $H$ be groups.
     By \exref{1.1.29}, $A \times A$ is Abelian since $A$ is Abelian, hence every subgroup of $A \times A$ is normal, including $D$.
 
     Let $\phi : (A \times A)/D \to A$ be given by $\phi((a, b)D) = ab\inv$. To show that this is well-defined, suppose $(a_1, b_1)D = (a_2, b_2)D$. Then $D = (a_1\inv, b_1\inv)(a_2, b_2)D$, or that $(a_1\inv a_2, b_1\inv b_2) \in D$. Then $a_1\inv a_2 = b_1\inv b_2$, or $a_2b_2\inv = a_1b_1\inv$ so that $\phi$ is well-defined. We may follow this argument backwards to show that $\phi$ is injective. Moreover, $\phi((a, 1)D) = a$ so that $\phi$ is surjective. Lastly, for $(a_1, b_1)D, (a_2, b_2)D \in (A \times A)/D$, then
-    \[\phi((a_1, b_1)D (a_2, b_2)D) = \phi((a_1a_2, b_1b_2)D) = a_1a_2(b_1b_2)\inv = (a_1b_1\inv)(a_2b_2\inv) = \phi((a_1, b_1)D)\phi((a_2, b_2)D)\]
+    \[
+    	\phi((a_1, b_1)D (a_2, b_2)D) = \phi((a_1a_2, b_1b_2)D) = a_1a_2(b_1b_2)\inv = (a_1b_1\inv)(a_2b_2\inv) = \phi((a_1, b_1)D)\phi((a_2, b_2)D)
+    \]
     so that $\phi$ is a bijective homomorphism. Hence, $(A \times A)/D \cong A$.
 \end{sol}
 
@@ -811,7 +913,9 @@ Let $G$ and $H$ be groups.
 
 \begin{sol}
     Let $g \in G$ and $x\inv y\inv xy \in N$. Then 
-    \[g(x\inv y\inv xy)g\inv = (gx\inv g\inv)(g y\inv g\inv)(gxg\inv)(gyg\inv) = (gxg\inv)\inv(gyg\inv)\inv(gxg\inv)(gyg\inv) \in N\]
+    \[
+    	g(x\inv y\inv xy)g\inv = (gx\inv g\inv)(g y\inv g\inv)(gxg\inv)(gyg\inv) = (gxg\inv)\inv(gyg\inv)\inv(gxg\inv)(gyg\inv) \in N
+    \]
     so that $g[x, y]g\inv = [gxg\inv, gyg\inv] \in N$. Then $gNg\inv \subseteq N$, hence $N \nsub G$.
     
     $G/N$ is Abelian, since the previous exercise shows that $\bar x$ and $\bar y$ in $G/N$ commute when $[x, y] \in N$.
@@ -831,18 +935,28 @@ Let $G$ and $H$ be groups.
 
 \begin{sol}
     For any $g \in G$, let $\wt g \in \pp$ denote the element such that $g \in \wt g$. We now show that $\wt 1 \leq G$. Since $1 \in \wt 1$, then $\wt 1$ is nonempty. Suppose $g, h \in \wt 1$. Then
-    \[\wt{gh} = \wt g \cdot \wt h = \wt 1 \cdot \wt 1 = \wt 1\]
+    \[
+    	\wt{gh} = \wt g \cdot \wt h = \wt 1 \cdot \wt 1 = \wt 1
+    \]
     so that $gh \in \wt 1$. Lastly, if $g \in \wt 1$, then
-    \[\wt{g\inv} = \wt{g\inv} \cdot \wt 1 = \wt{g\inv} \cdot \wt g = \wt{g\inv g} = \wt 1\]
+    \[
+    	\wt{g\inv} = \wt{g\inv} \cdot \wt 1 = \wt{g\inv} \cdot \wt g = \wt{g\inv g} = \wt 1
+    \]
     so that $g\inv \in \wt 1$. Hence, $\wt 1 \leq G$.
 
     To show that $\wt 1 \nsub G$, let $g \in G$ and $x \in \wt 1$. Then
-    \[\wt{gxg\inv} = \wt g \cdot \wt x \cdot \wt{g\inv} = \wt g \cdot \wt 1 \cdot \wt{g\inv} = \wt{gg\inv} = \wt 1\]
+    \[
+    	\wt{gxg\inv} = \wt g \cdot \wt x \cdot \wt{g\inv} = \wt g \cdot \wt 1 \cdot \wt{g\inv} = \wt{gg\inv} = \wt 1
+    \]
     so that $gxg\inv \in \wt 1$, hence $\wt 1 \nsub G$.
 
     To show that the elements of $\pp$ are the cosets of $\wt 1$, let $g \in G$ with $\bar g \in G/\wt 1$. We show that $\bar g = \wt g$. For any $x \in \bar g$, then $x \in g\wt 1$, or $x = gh$ for some $h \in \wt 1$. Then
-    \[\wt x = \wt{gh} = \wt g \cdot \wt h = \wt g \cdot \wt 1 = \wt g\]
+    \[
+    	\wt x = \wt{gh} = \wt g \cdot \wt h = \wt g \cdot \wt 1 = \wt g
+    \]
     so that $x \in \wt g$, hence $\bar g \subseteq \wt g$. Similarly, for any $y \in \wt g$, consider the element $g\inv y \in G$. Then
-    \[\wt{g\inv y} = \wt{g\inv} \cdot \wt y = \wt{g\inv} \cdot \wt g = \wt{g\inv g} = \wt 1\]
+    \[
+    	\wt{g\inv y} = \wt{g\inv} \cdot \wt y = \wt{g\inv} \cdot \wt g = \wt{g\inv g} = \wt 1
+    \]
     so that $g\inv y \in \wt 1$, or $y \in g\wt 1 = \bar g$. Hence, $\wt g \subseteq \bar g$, and $\bar g = \wt g$.
 \end{sol}

@@ -16,13 +16,19 @@ Let $G$ be a group.
 
 \begin{sol}
     Let $\ac = \set{A \leq G \mid N \subseteq A}$ be the set of subgroups of $G$ containing $N$. Let $\bar{\ac} = \set{\bar A \leq \bar G}$ be the set of subgroups of $\bar G = G/N$. Define the map
-    \[\phi : \ac \to \bar{\ac} \quad \text{by} \quad \phi(A) = \bar A = A/N\]
+    \[
+    	\phi : \ac \to \bar{\ac} \quad \text{by} \quad \phi(A) = \bar A = A/N
+    \]
     We first show that $\phi(A) \leq \bar G$. Since $1 \in A$ for any $A \in \ac$, then $1N = N \in \bar A$ so that $\bar 1 \in \bar A$, hence $\bar A$ is nonempty. Let $\bar a, \bar b \in \bar A$, where $a, b \in A$. Since $A \leq G$, then $ab\inv \in A$, hence
-    \[\bar a \bar b\inv = \bar{ab\inv} \in \bar A\]
+    \[
+    	\bar a \bar b\inv = \bar{ab\inv} \in \bar A
+    \]
     so that $\bar A \leq \bar G$.
 
     Next, we show that $\phi$ is surjective. Let $\bar A \in \bar{\ac}$, and let $\pi : G \to \bar G$ be the natural projection homomorphism. Consider $\pi\inv(\bar A)$. Since $\pi$ is a homomorphism, then $\pi\inv(\bar A) \leq G$. Moreover, since $\bar 1 \in \bar A$, then $N = \pi\inv(\bar 1) \subseteq \pi\inv(\bar A)$ so that $\pi\inv(\bar A) \in \ac$. Note that
-    \[\phi(\pi\inv(\bar A)) = \pi\inv(\bar A)/N = \bar A\]
+    \[
+    	\phi(\pi\inv(\bar A)) = \pi\inv(\bar A)/N = \bar A
+    \]
     so that $\phi$ is surjective. To show that $\phi$ is injective, suppose $\phi(A) = \phi(B)$ for some $A, B \in \ac$. Then $\bar A = \bar B$ implies that for some $a \in A$, there is some $b \in B$ such that $\bar a = \bar b$, hence $aN = bN$ so that $b\inv a \in N \subseteq B$. It follows that $a = b(b\inv a) \in B$, hence $A \subseteq B$. A similar argument shows that $B \subseteq A$, hence $A = B$ so that $\phi$ is injective. Therefore, $\phi$ is a bijection.
     \begin{enumerate}
         \item 
@@ -31,14 +37,20 @@ Let $G$ be a group.
             \item[\leftimp] Suppose $\bar A \leq \bar B$ for $A, B \in \ac$. Let $a \in A$ for some $a \in A$. Then $\bar a \in \bar A$ so that $\bar a \in \bar B$, hence there is some $b \in B$ such that $\bar a = \bar b$. It follows that $aN = bN$ so that $b\inv a \in N \subseteq B$, hence $a = b(b\inv a) \in B$. Therefore, $A \leq B$.
         \end{itemize}
         \item Define the map
-        \[\psi : B/A \to \bar B / \bar A \quad \text{by} \quad \psi(bA) = \bar b \bar A\]
+        \[
+        	\psi : B/A \to \bar B / \bar A \quad \text{by} \quad \psi(bA) = \bar b \bar A
+        \]
         for $b \in B$. To show $\psi$ is well-defined, suppose $b_1A = b_2A$ for some $b_1, b_2 \in B$. Then $b_2\inv b_1 \in A$, hence $\bar{b_2\inv b_1} \in \bar A$. Then $\bar{b_1} bar A = \bar{b_2} \bar A$, hence $\psi(b_1A) = \psi(b_2A)$.
 
         Suppose $bA \in \ker\psi$. Then $\psi(bA) = \bar A$ so that $\bar b \bar A = \bar A$. Then $\bar b \in \bar A$, hence $bN \in A/N$, and $b \in A$. Then $bA = A$ which is the identity in $B/A$ so that $\ker\psi = 1$, hence $\psi$ is injective. To show that $\psi$ is surjective, let $\bar b \bar A \in \bar B/\bar A$ for $\bar b \in B$. By definition of $\bar B$, there exists $b \in B$ such that $\bar b = bN$. Then $\psi(bA) = \bar b \bar A$, hence $\psi$ is surjective. Lastly, for any $b_1A, b_2A \in B/A$,
-        \[\psi(b_1A \cdot b_2A) = \psi(b_1b_2A) = \bar{b_1b_2} \bar A = \bar b_1 \bar b_2 \bar A = \psi(b_1A) \cdot \psi(b_2A)\]
+        \[
+        	\psi(b_1A \cdot b_2A) = \psi(b_1b_2A) = \bar{b_1b_2} \bar A = \bar b_1 \bar b_2 \bar A = \psi(b_1A) \cdot \psi(b_2A)
+        \]
         so that $\psi$ is a homomorphism. Therefore, $\psi$ is an isomorphism and $|B : A| = |B/A| = |\bar B / \bar A| = |\bar B : \bar A|$.
         \item Let $\bar x \in \bar{\gen{A, B}}$. Then $x \in \gen{A, B}$ so that $x = x_1x_2 \ldots x_n$ where $x_i \in A \cup B$ for each $1 \leq i \leq n$. It follows that
-        \[\bar x = \bar{x_1x_2} \ldots \bar{x_n}\]
+        \[
+        	\bar x = \bar{x_1x_2} \ldots \bar{x_n}
+        \]
         where $\bar{x_i} \in \bar A \cup \bar B$ for each $1 \leq i \leq n$, hence $\bar x \in \gen{\bar A, \bar B}$, and $\bar{\gen{A, B}} \subseteq \gen{\bar A, \bar B}$. 
         
         Conversely, let $\bar x \in \gen{\bar A, \bar B}$. Then $\bar x = \bar{x_1x_2} \ldots \bar{x_n}$ where $\bar{x_i} \in \bar A \cup \bar B$ for each $1 \leq i \leq n$. It follows that $x = x_1x_2 \ldots x_n$ where $x_i \in A \cup B$ for each $1 \leq i \leq n$, hence $x \in \gen{A, B}$ so that $\bar x \in \bar{\gen{A, B}}$. Therefore, $\bar{\gen{A, B}} = \gen{\bar A, \bar B}$.
@@ -48,7 +60,9 @@ Let $G$ be a group.
         \item 
         \begin{itemize}
             \item[\rightimp] Suppose $A \nsub G$ for some $A \in \ac$. Let $\bar g \in \bar G$ and $\bar a \in \bar A$ for some $g \in G$ and $a \in A$. Note that
-            \[(\bar g)(\bar a)(\bar g)\inv = \bar{gag\inv}\]
+            \[
+            	(\bar g)(\bar a)(\bar g)\inv = \bar{gag\inv}
+            \]
             Since $A \nsub G$, then $gag\inv \in A$, hence $\bar{gag\inv} \in \bar A$. It follows that $(\bar g)(\bar a)(\bar g)\inv \in \bar A$, hence $\bar A \nsub \bar G$.
             \item[\leftimp] Suppose $\bar A \nsub \bar G$ for some $A \in \ac$. Let $g \in G$ and $a \in A$. Since $\bar{gag\inv} = (\bar g)(\bar a)(\bar g)\inv \in \bar A$, then $gag\inv N \in A/N$, hence $gag\inv \in A$. It follows that $A \nsub G$. \qh
         \end{itemize}
@@ -65,11 +79,15 @@ Let $G$ be a group.
 
 \begin{sol}
     Since $H \nsub G$ and $K \leq G$, then $HK \leq G$ by Corollary 3.15. By Proposition 3.14, $HK = KH$. By \exref{3.2.11}, we have
-    \[|G : H| = |G : HK| \cdot |HK : H|\]
+    \[
+    	|G : H| = |G : HK| \cdot |HK : H|
+    \]
     Since $|G : H| = p$, we have two cases:
     \begin{enumerate}
         \item If $|G : HK| = 1$, then $G = HK = KH$. By the Second Isomorphism Theorem, we have
-        \[K/(K \cap H) \cong KH/H = G/H\]
+        \[
+        	K/(K \cap H) \cong KH/H = G/H
+        \]
         so that $|K : K \cap H| = |KH : H| = |G : H| = p$.
         \item If $|G : HK| = p$, then $|HK : H| = 1$, hence $HK = H$. It follows that $K \leq H$. \qh
     \end{enumerate}
@@ -81,11 +99,17 @@ Let $G$ be a group.
 
 \begin{sol}
     Define the map
-    \[\phi : A \times B \to (A/C) \times (B/D) \quad \text{by} \quad \phi(a, b) = (aC, bD)\]
+    \[
+    	\phi : A \times B \to (A/C) \times (B/D) \quad \text{by} \quad \phi(a, b) = (aC, bD)
+    \]
     for $a \in A$ and $b \in B$. It is easy to see that $\phi$ is well-defined. Moreover, for any $(a_1, b_1), (a_2, b_2) \in A \times B$,
-    \[\phi((a_1, b_1)(a_2, b_2)) = \phi(a_1a_2, b_1b_2) = (a_1a_2C, b_1b_2D) = (a_1C, b_1D)(a_2C, b_2D) = \phi(a_1, b_1) \phi(a_2, b_2)\]
+    \[
+    	\phi((a_1, b_1)(a_2, b_2)) = \phi(a_1a_2, b_1b_2) = (a_1a_2C, b_1b_2D) = (a_1C, b_1D)(a_2C, b_2D) = \phi(a_1, b_1) \phi(a_2, b_2)
+    \]
     so that $\phi$ is a homomorphism. To show that $\phi$ is surjective, let $(aC, bD) \in (A/C) \times (B/D)$ for some $a \in A$ and $b \in B$. Then $\phi(a, b) = (aC, bD)$, hence $\phi$ is surjective. Lastly, suppose $(a, b) \in \ker\phi$. Then $\phi(a, b) = (C, D)$ so that $aC = C$ and $bD = D$. It follows that $a \in C$ and $b \in D$, hence $(a, b) \in C \times D$. Therefore, $\ker\phi = C \times D$, so that by the First Isomorphism Theorem, $C \times D \nsub A \times B$ and
-    \[(A \times B)/(C \times D) \cong (A/C) \times (B/D). \qh\]
+    \[
+    	(A \times B)/(C \times D) \cong (A/C) \times (B/D). \qh
+    \]
 \end{sol}
 
 \begin{exercise}[3.3.5]
@@ -173,13 +197,21 @@ Let $G$ be a group.
         \end{tikzpicture}
     \end{center}
     Consider the mapping
-    \[\phi : G \to (G/M) \times (G/N) \quad \text{by} \quad \phi(g) = (gM, gN)\]
+    \[
+    	\phi : G \to (G/M) \times (G/N) \quad \text{by} \quad \phi(g) = (gM, gN)
+    \]
     for $g \in G$. It is easy to see that $\phi$ is well-defined. Moreover, for any $g_1, g_2 \in G$,
-    \[\phi(g_1g_2) = (g_1g_2M, g_1g_2N) = (g_1M, g_1N)(g_2M, g_2N) = \phi(g_1)\phi(g_2)\]
+    \[
+    	\phi(g_1g_2) = (g_1g_2M, g_1g_2N) = (g_1M, g_1N)(g_2M, g_2N) = \phi(g_1)\phi(g_2)
+    \]
     so that $\phi$ is a homomorphism. To show that $\phi$ is surjective, let $(g_1M, g_2N) \in (G/M) \times (G/N)$ for some $g_1, g_2 \in G$. Since $G = MN = NM$, there exists $m, m' \in M$ and $n, n' \in N$ such that $g_1 = nm$ and $g_2 = m'n'$. Then $g_1M = nM$ and $g_2N = m'N$, so that
-    \[\phi(nm') = (nm'M, nm'N) = (nM, m'N) = (g_1M, g_2N)\]
+    \[
+    	\phi(nm') = (nm'M, nm'N) = (nM, m'N) = (g_1M, g_2N)
+    \]
     so that $\phi$ is surjective. Lastly, suppose $g \in \ker\phi$. Then $\phi(g) = (M, N)$ so that $gM = M$ and $gN = N$. It follows that $g \in M$ and $g \in N$, hence $g \in M \cap N$. Therefore, $\ker\phi = M \cap N$, so that by the First Isomorphism Theorem, we have
-    \[G/(M \cap N) \cong (G/M) \times (G/N). \qh\]
+    \[
+    	G/(M \cap N) \cong (G/M) \times (G/N). \qh
+    \]
 \end{sol}
 
 \begin{exercise}[3.3.8]
@@ -196,7 +228,9 @@ Let $G$ be a group.
 
 \begin{sol}
     Since $P \cap N \leq P$, then $|P \cap N|$ divides $|P| = p^a$. Similarly, since $P \cap N \leq N$, then $|P \cap N|$ divides $|N| = p^b n$. It follows that $|P \cap N|$ divides $\gcd(p^a, p^b n) = p^b$, hence $|P \cap N| = p^c$ for some $c \leq b$. By the Second Isomorphism Theorem, we have
-    \[PN/N \cong P/(P \cap N)\]
+    \[
+    	PN/N \cong P/(P \cap N)
+    \]
     so that $|PN/N| = |P|/|P \cap N| = p^{a - c}$. Since $PN/N \leq G/N$, then $|PN/N|$ divides $|G/N|$. It follows that $p^{a - c}$ divides $|G|/|N| = (p^a m)/(p^b n) = p^{a - b}(m/n)$. Since $p$ does not divide $m/n$, then $p^{a - c}$ divides $p^{a - b}$, hence $c \geq b$. Therefore, $c = b$ so that $|P \cap N| = p^b$ and $|PN/N| = p^{a - b}$.
 \end{sol}
 
@@ -206,7 +240,9 @@ Let $G$ be a group.
 
 \begin{sol}
     It follows by the Second Isomorphism Theorem that $HN \leq G$ and $HN/N \cong H/(H \cap N)$. Note that
-    \[|HN| = \frac{\abs H \abs N}{\abs{H \cap N}} \quad \text{must divide} \quad \abs G = \abs H |G : H|\]
+    \[
+    	|HN| = \frac{\abs H \abs N}{\abs{H \cap N}} \quad \text{must divide} \quad \abs G = \abs H |G : H|
+    \]
     Hence, $|N|/\abs{H \cap N}$ divides $|G : H|$. Since $(|G : H|, \abs H) = 1$, and $|N|/|H \cap N|$ divides $|G : H|$, it follows that $(|N|/\abs{H \cap N}, \abs H) = 1$, hence $(\abs{N : H \cap N}, \abs{H \cap N}) = 1$. Then $H \cap N$ is a Hall subgroup of $N$.
 
     Now, observe that $|G/N : HN/N| = |G|/|HN| = |G:H|/|HN : H|$. Moreover, $|HN/N| = |H|/|H \cap N|$. Then $(|G/N : HN/N|, |HN/N|) = 1$ follows because $(|G : H|, \abs H) = 1$, hence $HN/N$ is a Hall subgroup of $G/N$.

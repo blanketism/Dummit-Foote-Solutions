@@ -4,17 +4,23 @@
 
 \begin{exercise}[5.1.1]
     Show that the center of a direct product is the direct product of the centers:
-    \[Z(G_1 \times G_2 \times \cdots \times G_n) = Z(G_1) \times Z(G_2) \times \cdots \times Z(G_n)\]
+    \[
+    	Z(G_1 \times G_2 \times \cdots \times G_n) = Z(G_1) \times Z(G_2) \times \cdots \times Z(G_n)
+    \]
     Deduce that the direct product of two groups is Abelian if and only if each of the factors is Abelian.
 \end{exercise}
 
 \begin{sol}
     Let $G = G_1 \times G_2 \times \cdots \times G_n$. Let $z = (z_1, z_2, \ldots, z_n) \in Z(G)$. Then for any $g = (g_1, g_2, \ldots, g_n) \in G$, we have $zg = gz$, or equivalently,
-    \[(z_1g_1, z_2g_2, \ldots, z_ng_n) = (g_1z_1, g_2z_2, \ldots, g_nz_n)\]
+    \[
+    	(z_1g_1, z_2g_2, \ldots, z_ng_n) = (g_1z_1, g_2z_2, \ldots, g_nz_n)
+    \]
     This implies that $z_i g_i = g_i z_i$ for all $i$, so $z_i \in Z(G_i)$ for all $i$. Thus, $z \in Z(G_1) \times Z(G_2) \times \cdots \times Z(G_n)$, and we have shown that $Z(G) \subseteq Z(G_1) \times Z(G_2) \times \cdots \times Z(G_n)$.
 
     Conversely, let $z = (z_1, z_2, \ldots, z_n) \in Z(G_1) \times Z(G_2) \times \cdots \times Z(G_n)$. Then for any $g = (g_1, g_2, \ldots, g_n) \in G$, we have
-    \[zg = (z_1g_1, z_2g_2, \ldots, z_ng_n) = (g_1z_1, g_2z_2, \ldots, g_nz_n) = gz\]
+    \[
+    	zg = (z_1g_1, z_2g_2, \ldots, z_ng_n) = (g_1z_1, g_2z_2, \ldots, g_nz_n) = gz
+    \]
     Thus, $z \in Z(G)$, and we have shown that $Z(G_1) \times Z(G_2) \times \cdots \times Z(G_n) \subseteq Z(G)$.
 \end{sol}
 
@@ -39,7 +45,9 @@
 
 \begin{sol}
     Let $x \in G_I$ and $y \in G_K$. Then $x$ has the identity in all coordinates corresponding to $J = \set{1, 2, \ldots, n} - I$, and $y$ has the identity in all coordinates corresponding to $L = \set{1, 2, \ldots, n} - K$. Since $I$ and $K$ are disjoint, we have $J \cup L = \set{1, 2, \ldots, n}$, so every coordinate of $x$ and $y$ is the identity in at least one of them. Thus, when we compute the product $xy$, we have
-    \[xy = (x_1y_1, x_2y_2, \ldots, x_ny_n) = (y_1x_1, y_2x_2, \ldots, y_nx_n) = yx\]
+    \[
+    	xy = (x_1y_1, x_2y_2, \ldots, x_ny_n) = (y_1x_1, y_2x_2, \ldots, y_nx_n) = yx
+    \]
     as desired.
 \end{sol}
 
@@ -59,7 +67,9 @@
 
 \begin{sol}
     Note that $Q_8$ is non-Abelian, so we may use the idea of a diagonal subgroup from \exref{3.1.38}. In particular, let $H = \gen{(i, 1)} = \set{(1, 0), (i, 1), (-1, 2), (-i, 3)}$. Then $H$ is a subgroup of $Q_8 \times Z_4$ that is isomorphic to $\gen{i}$. However,
-    \[(j, 0)(i, 1)(j, 0)\inv = (ji(-j), 0 + 1 + 0) = (-i, 1)\]
+    \[
+    	(j, 0)(i, 1)(j, 0)\inv = (ji(-j), 0 + 1 + 0) = (-i, 1)
+    \]
     is not in $H$, so $H$ is not normal in $Q_8 \times Z_4$.
 \end{sol}
 
@@ -69,15 +79,21 @@
 
 \begin{sol}
     Let $H \leq Q_8 \times E_{2^n}$. Suppose $(a, b) \in H$ and $(x, y) \in Q_8 \times E_{2^n}$. Note that $(a\inv, b) \in H$, since every $b \in E_{2^n}$ is its own inverse. Then
-    \[(x, y)(a, b)(x, y)\inv = (xax\inv, yby\inv) = (xax\inv, b)\]
+    \[
+    	(x, y)(a, b)(x, y)\inv = (xax\inv, yby\inv) = (xax\inv, b)
+    \]
     since $E_{2^n}$ is Abelian. If $a \in Z(Q_8)$, then $xax\inv = a$, so $(x, y)(a, b)(x, y)\inv = (a, b) \in H$. If $a \notin Z(Q_8)$, then $a$ is one of $i, j, k$ or their inverses. In all cases, we have $xax\inv$ is one of $i, j, k$ or their inverses, so $xax\inv \in H$. Thus, $(x, y)(a, b)(x, y)\inv \in H$ for all $(a, b) \in H$ and $(x, y) \in Q_8 \times E_{2^n}$, so $H$ is normal in $Q_8 \times E_{2^n}$.
 \end{sol}
 
 \begin{exercise}[5.1.7]
     Let $G_1, G_2, \ldots, G_n$ be groups and $\pi$ be a fixed element of $S_n$. Prove that the map 
-    \[\phi_\pi : G_1 \times G_2 \times \cdots \times G_n \to G_{\pi\inv(1)} \times G_{\pi\inv(2)} \times \cdots \times G_{\pi\inv(n)}\]
+    \[
+    	\phi_\pi : G_1 \times G_2 \times \cdots \times G_n \to G_{\pi\inv(1)} \times G_{\pi\inv(2)} \times \cdots \times G_{\pi\inv(n)}
+    \]
     defined by
-    \[\phi_\pi(g_1, g_2, \ldots, g_n) = (g_{\pi\inv(1)}, g_{\pi\inv(2)}, \ldots, g_{\pi\inv(n)})\]
+    \[
+    	\phi_\pi(g_1, g_2, \ldots, g_n) = (g_{\pi\inv(1)}, g_{\pi\inv(2)}, \ldots, g_{\pi\inv(n)})
+    \]
     is an isomorphism (so that changing the order of the factors in a direct product does not change the isomorphism type).
 \end{exercise}
 
@@ -90,17 +106,25 @@
         & = \phi_\pi(g)\phi_\pi(h)
     \end{align*}
     Noting that $\pi \in S_n$ is a bijection, consider the map $\phi_{\pi\inv} : G_{\pi\inv(1)} \times G_{\pi\inv(2)} \times \cdots \times G_{\pi\inv(n)} \to G_1 \times G_2 \times \cdots \times G_n$ defined by
-    \[\phi_{\pi\inv}(g_1, g_2, \ldots, g_n) = (g_{\pi(1)}, g_{\pi(2)}, \ldots, g_{\pi(n)})\]
+    \[
+    	\phi_{\pi\inv}(g_1, g_2, \ldots, g_n) = (g_{\pi(1)}, g_{\pi(2)}, \ldots, g_{\pi(n)})
+    \]
     Then $\phi_{\pi\inv}$ is a homomorphism by the same argument as above. Moreover, $\phi_{\pi\inv}$ is the inverse of $\phi_\pi$, since
-    \[\phi_\pi(\phi_{\pi\inv}(g_1, g_2, \ldots, g_n)) = \phi_\pi(g_{\pi(1)}, g_{\pi(2)}, \ldots, g_{\pi(n)}) = (g_1, g_2, \ldots, g_n)\]
+    \[
+    	\phi_\pi(\phi_{\pi\inv}(g_1, g_2, \ldots, g_n)) = \phi_\pi(g_{\pi(1)}, g_{\pi(2)}, \ldots, g_{\pi(n)}) = (g_1, g_2, \ldots, g_n)
+    \]
     and
-    \[\phi_{\pi\inv}(\phi_\pi(g_1, g_2, \ldots, g_n)) = \phi_{\pi\inv}(g_{\pi\inv(1)}, g_{\pi\inv(2)}, \ldots, g_{\pi\inv(n)}) = (g_1, g_2, \ldots, g_n).\]
+    \[
+    	\phi_{\pi\inv}(\phi_\pi(g_1, g_2, \ldots, g_n)) = \phi_{\pi\inv}(g_{\pi\inv(1)}, g_{\pi\inv(2)}, \ldots, g_{\pi\inv(n)}) = (g_1, g_2, \ldots, g_n).
+    \]
     Therefore, $\phi_\pi$ is an isomorphism.
 \end{sol}
 
 \begin{exercise}[5.1.8]
     Let $G_1 = G_2 = \cdots = G_n$ and let $G = G_1 \times \cdots \times G_n$. Under the notation of the preceding exercise show that $\phi_\pi \in \text{Aut}(G)$. Show also that the map $\pi \mapsto \phi_\pi$ is an injective homomorphism of $S_n$ into $\text{Aut}(G)$. (In particular, $\phi_{\pi_1} \circ \phi_{\pi_2} = \phi_{\pi_1 \pi_2}$. It is at this point that the $\pi^{-1}$'s in the definition of $\phi_\pi$ are needed. The underlying reason for this is because if $e_i$ is the $n$-tuple with 1 in position $i$ and zeros elsewhere, $1 \leq i \leq n$, then $S_n$ acts on $\set{e_1, \ldots, e_n}$ by $\pi \cdot e_i = e_{\pi(i)}$; this is a left group action. If the $n$-tuple $(g_1, \ldots, g_n)$ is represented by $g_1 e_1 + \cdots + g_n e_n$, then this left group action on $\set{e_1, \ldots, e_n}$ extends to a left group action on sums by
-    \[\pi \cdot (g_1 e_1 + g_2 e_2 + \cdots + g_n e_n) = g_1 e_{\pi(1)} + g_2 e_{\pi(2)} + \cdots + g_n e_{\pi(n)}.\]
+    \[
+    	\pi \cdot (g_1 e_1 + g_2 e_2 + \cdots + g_n e_n) = g_1 e_{\pi(1)} + g_2 e_{\pi(2)} + \cdots + g_n e_{\pi(n)}.
+    \]
     The coefficient of $e_{\pi(i)}$ on the right hand side is $g_i$, so the coefficient of $e_i$ is $g_{\pi^{-1}(i)}$. Thus the right hand side may be rewritten as $g_{\pi^{-1}(1)} e_1 + g_{\pi^{-1}(2)} e_2 + \cdots + g_{\pi^{-1}(n)} e_n$, which is precisely the sum attached to the $n$-tuple $(g_{\pi^{-1}(1)}, g_{\pi^{-1}(2)}, \ldots, g_{\pi^{-1}(n)})$. In other words, any permutation of the ``position vectors'' $e_1, \ldots, e_n$ (which fixes their coefficients) is the same as the inverse permutation on the coefficients (fixing the $e_i$'s). If one uses $\pi$'s in place of $\pi^{-1}$'s in the definition of $\phi_\pi$ then the map $\pi \mapsto \phi_\pi$ is not necessarily a homomorphism --- it corresponds to a \emph{right} group action.)
 \end{exercise}
 
@@ -125,7 +149,10 @@
 
 \begin{exercise}[5.1.10]
     Let $p$ be a prime. Let $A$ and $B$ be two cyclic groups of order $p$ with generators $x$ and $y$ respectively. Set $E = A \times B$ so that $E$ is the elementary Abelian group of order $p^2$: $E_{p^2}$ Prove that the distinct subgroups of $E$ of order $p$ are
-    \[\langle x \rangle, \quad \langle xy \rangle, \quad \langle xy^2 \rangle, \quad \ldots, \quad \langle xy^{p-1} \rangle, \quad \langle y \rangle\] (note that there are $p + 1$ of them).
+    \[
+    	\langle x \rangle, \quad \langle xy \rangle, \quad \langle xy^2 \rangle, \quad \ldots, \quad \langle xy^{p-1} \rangle, \quad \langle y \rangle
+    \]
+	(note that there are $p + 1$ of them).
 \end{exercise}
 
 \begin{sol}
@@ -138,13 +165,17 @@
 
 \begin{sol}
     Every element of $E_{p^n}$ has order $p$, so every subgroup of order $p$ is generated by a single non-identity element. Since there are $p^n - 1$ non-identity elements in $E_{p^n}$, and each subgroup of order $p$ has $p - 1$ generators (the non-identity elements of the subgroup), the number of subgroups of order $p$ in $E_{p^n}$ is
-    \[\frac{p^n - 1}{p - 1} = 1 + p + p^2 + \cdots + p^{n-1}\]
+    \[
+    	\frac{p^n - 1}{p - 1} = 1 + p + p^2 + \cdots + p^{n-1}
+    \]
     as desired.
 \end{sol}
 
 \begin{spex}[5.1.12]
     Let $A$ and $B$ be groups. Assume $Z(A)$ contains a subgroup $Z_1$ and $Z(B)$ contains a subgroup $Z_2$ with $Z_1 \cong Z_2$. Let this isomorphism be given by the map $x_i \mapsto y_i$ for all $x_i \in Z_1$. A \textbf{\emph{central product}} of $A$ and $B$ is a quotient
-    \[(A \times B)/Z \quad \text{where} \quad Z = \set{(x_i, y_i^{-1}) \mid x_i \in Z_1}\]
+    \[
+    	(A \times B)/Z \quad \text{where} \quad Z = \set{(x_i, y_i^{-1}) \mid x_i \in Z_1}
+    \]
     and is denoted by $A * B$ --- it is not unique since it depends on $Z_1$, $Z_2$ and the isomorphism between them. (Think of $A * B$ as the direct product of $A$ and $B$ ``collapsed'' by identifying each element $x_i \in Z_1$ with its corresponding element $y_i \in Z_2$.)
     \begin{subexercises}
         \item Prove that the images of $A$ and $B$ in the quotient group $A * B$ are isomorphic to $A$ and $B$, respectively, and that these images intersect in a central subgroup isomorphic to $Z_1$. Find $|A * B|$.
@@ -154,9 +185,13 @@
 
 \begin{solenum}
     \item Consider the maps $\pi_A : A \to A * B$ and $\pi_B : B \to A * B$ defined by $\pi_A(a) = (a, 1)Z$ and $\pi_B(b) = (1, b)Z$. It is clear that $\pi_A$ and $\pi_B$ are homomorphisms. Moreover, $\ker\pi_A$ consists of the elements $a \in A$ such that $(a, 1) \in Z$. Then $y_i = 1$, and since $x_i \mapsto y_i$ is an isomorphism, we have $x_i = 1$, so $a = 1$. Thus, $\ker\pi_A$ is trivial, and $\pi_A$ is injective. Similarly, $\ker\pi_B$ is trivial, and $\pi_B$ is injective. Therefore, the images of $A$ and $B$ in $A * B$ are isomorphic to $A$ and $B$, respectively. Moreover, the images of $A$ and $B$ in $A * B$ intersect in the subgroup $\set{(x_i, 1)Z \mid x_i \in Z_1}$, which is isomorphic to $Z_1$. Finally, since $Z$ has $|Z_1|$ elements, we have
-    \[|A * B| = \frac{|A||B|}{|Z_1|}.\]
+    \[
+    	|A * B| = \frac{|A||B|}{|Z_1|}.
+    \]
     \item Let $Z_D$ denote the $Z$ in the quotient for $Z_4 * D_8$ and let $Z_Q$ denote the $Z$ in the quotient for $Z_4 * Q_8$. Let $x$ generate $Z_4$ in $Z_4 * D_8$ and $y$ generate $Z_4$ in $Z_4 * Q_8$. Let $r$ and $s$ be the generators of $D_8$ in $Z_4 * D_8$ and let $i$ and $j$ be the generators of $Q_8$ in $Z_4 * Q_8$. Let $\b x$ denote the coset $(x, 1)Z_D$ in $Z_4 * D_8$, and use similar notation for the elements $r, s, y, i, j$. Let $\b z = \b j\b y\inv$. Consider the map $\phi : Z_4 * D_8 \to Z_4 * Q_8$ defined by 
-    \[\phi(\b x^\alpha\b r^\beta\b s^\gamma) = \b y^\alpha\b i^\beta\b z^\gamma.\]
+    \[
+    	\phi(\b x^\alpha\b r^\beta\b s^\gamma) = \b y^\alpha\b i^\beta\b z^\gamma.
+    \]
     To see that this is well-defined, suppose $\b x^\alpha\b r^\beta\b s^\gamma = \b 1$ in $Z_4 * D_8$. Then $\b r^\beta\b s^\gamma$ is in the image of $Z_4$ in $Z_4 * D_8$, so $\b r^\beta\b s^\gamma = \b x^{2\delta}$ for some $\delta$. Since $r^2$ is central in $D_8$, we have $\b r^\beta\b s^\gamma = \b r^{\beta + 2\delta}\b s^\gamma$. If $\gamma = 0$, then $\b r^{\beta + 2\delta} = \b 1$, so $4 \mid \beta + 2\delta$. If $\gamma = 1$, then $\b r^{\beta + 2\delta}\b s = \b 1$, so $4 \mid \beta + 2\delta - 2$. In either case, we have $4 \mid \beta + 2\delta$, so $\b r^\beta\b s^\gamma = \b x^{2\delta} = \b 1$. Thus, $\alpha$ is even, and we have $\phi(\b x^\alpha\b r^\beta\b s^\gamma) = \b y^\alpha\b i^\beta\b z^\gamma = \b 1$. Therefore, $\phi$ is well-defined. It is clear that $\phi$ is a homomorphism. Moreover, if $\phi(\b x^\alpha\b r^\beta\b s^\gamma) = \b 1$, then $\alpha$ is even and $\beta$ and $\gamma$ are zero, so $\phi$ is injective. Finally, since $|Z_4 * D_8| = |Z_4 * Q_8|$, we conclude that $\phi$ is an isomorphism.
 \end{solenum}
 
@@ -166,31 +201,45 @@
 
 \begin{sol}
     To construct the presentations, we note that $\b x$ should satisfy the relations of $Z_4$, $\b r$ and $\b s$ should satisfy the relations of $D_8$, and $\b i$ and $\b z$ should satisfy the relations of $Q_8$. Moreover, we have the relations $\b x^2 = \b r^2$ in $Z_4 * D_8$, since $\b x^2\b r^{-2} = \b 1$. Lastly, $\b x$ is central in that $\b x \b r = \b r\b x$ and $\b x\b s = \b s\b x$ in $Z_4 * D_8$. Then a presentation for $Z_4 * D_8$ is
-    \[\gen{\b x, \b r, \b s \mid \b r^4 = \b s^2 = \b 1, \b x^2 = \b r^2, \b s\b r\b s = \b r\inv, \b x\b r = \b r\b x, \b x\b s = \b s\b x}.\]
+    \[
+    	\gen{\b x, \b r, \b s \mid \b r^4 = \b s^2 = \b 1, \b x^2 = \b r^2, \b s\b r\b s = \b r\inv, \b x\b r = \b r\b x, \b x\b s = \b s\b x}.
+    \]
     To find a presentation for $Z_4 * Q_8$, we may use the isomorphism $\phi$ from the preceding exercise to rewrite the presentation for $Z_4 * D_8$ in terms of $\b y, \b i, \b z$. In particular, we have $\b y^2 = \b i^2\b z^2$, $\b z^2 = \b 1$, and $\b y\b i = \b i\b y\b z$. Thus, a presentation for $Z_4 * Q_8$ is
-    \[\gen{\b y, \b i, \b z \mid \b i^4 = \b z^2 = \b 1, \b y^2 = \b i^2, \b z\b i \b z = \b i\inv, \b y\b i = \b i\b y, \b y\b z = \b z\b y}. \qh\]
+    \[
+    	\gen{\b y, \b i, \b z \mid \b i^4 = \b z^2 = \b 1, \b y^2 = \b i^2, \b z\b i \b z = \b i\inv, \b y\b i = \b i\b y, \b y\b z = \b z\b y}. \qh
+    \]
 \end{sol}
 
 \begin{exercise}[5.1.14]
     Let $G = A_1 \times A_2 \times \cdots \times A_n$, and for each $i$, let $B_i$ be a normal subgroup of $A_i$. Prove that $B_1 \times B_2 \times \cdots \times B_n \nsub G$, and that
-    \[(A_1 \times A_2 \times \cdots \times A_n)/(B_1 \times B_2 \times \cdots \times B_n) \cong (A_1/B_1) \times (A_2/B_2) \times \cdots \times (A_n/B_n).\]
+    \[
+    	(A_1 \times A_2 \times \cdots \times A_n)/(B_1 \times B_2 \times \cdots \times B_n) \cong (A_1/B_1) \times (A_2/B_2) \times \cdots \times (A_n/B_n).
+    \]
 \end{exercise}
 
 \begin{sol}
     Let $G = A_1 \times A_2 \times \cdots \times A_n$ and let $B_i \nsub A_i$ for all $i$. Let $H = B_1 \times B_2 \times \cdots \times B_n$. It is clear that $H$ is a subgroup of $G$. Moreover, since each $B_i$ is normal in $A_i$, we have that for any $g = (a_1, a_2, \ldots, a_n) \in G$ and any $h = (b_1, b_2, \ldots, b_n) \in H$, we have
-    \[ghg\inv = (a_1b_1a_1\inv, a_2b_2a_2\inv, \ldots, a_nb_na_n\inv) \in H\]
+    \[
+    	ghg\inv = (a_1b_1a_1\inv, a_2b_2a_2\inv, \ldots, a_nb_na_n\inv) \in H
+    \]
     since $a_ib_ia_i\inv \in B_i$ for all $i$. Thus, $H$ is normal in $G$.
 
     Consider the map $\phi : G \to (A_1/B_1) \times (A_2/B_2) \times \cdots \times (A_n/B_n)$ defined by
-    \[\phi((a_1, a_2, \ldots, a_n)) = (a_1B_1, a_2B_2, \ldots, a_nB_n).\]
+    \[
+    	\phi((a_1, a_2, \ldots, a_n)) = (a_1B_1, a_2B_2, \ldots, a_nB_n).
+    \]
     It is clear that $\phi$ is a homomorphism. Moreover, $\phi$ is surjective since for any $(a_1B_1, a_2B_2, \ldots, a_nB_n)$, we have $\phi((a_1, a_2, \ldots, a_n)) = (a_1B_1, a_2B_2, \ldots, a_nB_n)$. Finally, the kernel of $\phi$ is the set of all $(a_1, a_2, \ldots, a_n)$ such that $a_i \in B_i$ for all $i$, which is exactly $H$. Thus, by the First Isomorphism Theorem, we have
-    \[G/H \cong (A_1/B_1) \times (A_2/B_2) \times \cdots \times (A_n/B_n)\]
+    \[
+    	G/H \cong (A_1/B_1) \times (A_2/B_2) \times \cdots \times (A_n/B_n)
+    \]
     as desired.
 \end{sol}
 
 \begin{exercise}[5.1.15]
     Let $I$ be any nonempty index set and let $(G_i, \star_i)$ be a group for each $i \in I$. The \emph{direct product} of the groups $G_i$, $i \in I$ is the set $G = \prod_{i \in I} G_i$ (the Cartesian product of the $G_i$'s) with a binary operation defined as follows: if $\prod a_i$ and $\prod b_i$ are elements of $G$, then their product in $G$ is given by
-    \[\left(\prod_{i \in I} a_i\right)\left(\prod_{i \in I} b_i\right) = \prod_{i \in I} (a_i \star_i b_i)\]
+    \[
+    	\left(\prod_{i \in I} a_i\right)\left(\prod_{i \in I} b_i\right) = \prod_{i \in I} (a_i \star_i b_i)
+    \]
     (i.e., the group operation in the direct product is defined componentwise).
     \begin{subexercises}
         \item Show that this binary operation is well-defined and associative.
@@ -202,7 +251,9 @@
 
 \begin{solenum}
     \item To show well-definedness, let $\prod \alpha_i = \prod a_i$ and $\prod \beta_i = \prod b_i$. Then $\alpha_i = a_i$ and $\beta_i = b_i$ for all $i$, so
-    \[\left(\prod_{i \in I} \alpha_i\right)\left(\prod_{i \in I} \beta_i\right) = \prod_{i \in I} (\alpha_i \star_i \beta_i) = \prod_{i \in I} (a_i \star_i b_i)\]
+    \[
+    	\left(\prod_{i \in I} \alpha_i\right)\left(\prod_{i \in I} \beta_i\right) = \prod_{i \in I} (\alpha_i \star_i \beta_i) = \prod_{i \in I} (a_i \star_i b_i)
+    \]
     as desired. To show associativity, let $\prod a_i$, $\prod b_i$, and $\prod c_i$ be elements of $G$. Then
     \begin{align*}
         \left(\prod_{i \in I} a_i\right)\left(\left(\prod_{i \in I} b_i\right)\left(\prod_{i \in I} c_i\right)\right) & = \left(\prod_{i \in I} a_i\right)\left(\prod_{i \in I} (b_i \star_i c_i)\right) \\
@@ -213,14 +264,22 @@
     \end{align*}
     as desired.
     \item Let $\prod a_i$ be an element of $G$. Then
-    \[\left(\prod_{i \in I} 1_i\right)\left(\prod_{i \in I} a_i\right) = \prod_{i \in I} (1_i \star_i a_i) = \prod_{i \in I} a_i\]
+    \[
+    	\left(\prod_{i \in I} 1_i\right)\left(\prod_{i \in I} a_i\right) = \prod_{i \in I} (1_i \star_i a_i) = \prod_{i \in I} a_i
+    \]
     and
-    \[\left(\prod_{i \in I} a_i\right)\left(\prod_{i \in I} 1_i\right) = \prod_{i \in I} (a_i \star_i 1_i) = \prod_{i \in I} a_i.\]
+    \[
+    	\left(\prod_{i \in I} a_i\right)\left(\prod_{i \in I} 1_i\right) = \prod_{i \in I} (a_i \star_i 1_i) = \prod_{i \in I} a_i.
+    \]
     Thus, $\prod 1_i$ is the identity element of $G$.
     \item Let $\prod a_i$ be an element of $G$. Then
-    \[\left(\prod_{i \in I} a_i\right)\left(\prod_{i \in I} a_i^{-1}\right) = \prod_{i \in I} (a_i \star_i a_i^{-1}) = \prod_{i \in I} 1_i\]
+    \[
+    	\left(\prod_{i \in I} a_i\right)\left(\prod_{i \in I} a_i^{-1}\right) = \prod_{i \in I} (a_i \star_i a_i^{-1}) = \prod_{i \in I} 1_i
+    \]
     and
-    \[\left(\prod_{i \in I} a_i^{-1}\right)\left(\prod_{i \in I} a_i\right) = \prod_{i \in I} (a_i^{-1} \star_i a_i) = \prod_{i \in I} 1_i.\]
+    \[
+    	\left(\prod_{i \in I} a_i^{-1}\right)\left(\prod_{i \in I} a_i\right) = \prod_{i \in I} (a_i^{-1} \star_i a_i) = \prod_{i \in I} 1_i.
+    \]
     Thus, $\prod a_i^{-1}$ is the inverse of $\prod a_i$. We conclude that $G$ is a group with inverse and identity as described above.
 \end{solenum}
 
@@ -232,25 +291,40 @@
     Proposition 2 stated for direct arbitrary groups is as follows: if $G = \prod_{i \in I} G_i$ is a direct product of groups, then
     \begin{enumerate}
         \item Fix each $i$ with $j$-th coordinate where $j \neq i$ is the identity element of $G_j$ for $1 \leq j \leq n$. Then
-        \[\wh G_i = \set{(1, 1, \ldots, 1, g_i, 1, \ldots) \mid g_i \in G_i}\] is a normal subgroup of $G$ that is isomorphic to $G_i$, or that
-        \[G/\wh G_i \cong \prod_{j \neq i} G_j.\]
+        \[
+        	\wh G_i = \set{(1, 1, \ldots, 1, g_i, 1, \ldots) \mid g_i \in G_i}
+        \] 
+        is a normal subgroup of $G$ that is isomorphic to $G_i$, or that
+        \[
+        	G/\wh G_i \cong \prod_{j \neq i} G_j.
+        \]
         \item For fixed $i$, define $\pi_i : G \to G_i$ by $\pi_i((g_j)_{j \in I}) = g_i$. Then $\pi_i$ is a surjective homomorphism with kernel $\wh G_i$, so $G/\wh G_i \cong G_i$.
         \item If $x \in G_i$ and $y \in G_j$ for $i \neq j$, then $x$ and $y$ commute in $G$.
     \end{enumerate}
     The proof is similar to the proof of Proposition 2 in the text.
     \begin{enumerate}
         \item It is clear that $\wh G_i$ is a subgroup of $G$. Moreover, for any $\prod_{j \in I} g_j \in G$ and any $h = \prod_{j \neq i} 1_j h_i \in \wh G_i$, we have
-        \[\left(\prod_{j \in I} g_j\right)h\left(\prod_{j \in I} g_j\right)\inv = \prod_{j \neq i} 1_j (g_i h_i g_i\inv) \in \wh G_i\]
+        \[
+        	\left(\prod_{j \in I} g_j\right)h\left(\prod_{j \in I} g_j\right)\inv = \prod_{j \neq i} 1_j (g_i h_i g_i\inv) \in \wh G_i
+        \]
         since $g_i h_i g_i\inv \in G_i$. Thus, $\wh G_i$ is normal in $G$. Consider the map $\phi : G_i \to \wh G_i$ defined by $\phi(g_i) = \prod_{j \neq i} 1_j g_i$. It is clear that $\phi$ is a homomorphism. Moreover, if $\phi(g_i) = \prod_{j \neq i} 1_j g_i = \prod_{j \neq i} 1_j$, then $g_i$ is the identity element of $G_i$, so $\phi$ is injective. Finally, for any $\prod_{j \neq i} 1_j h_i \in \wh G_i$, we have $\phi(h_i) = \prod_{j \neq i} 1_j h_i$, so $\phi$ is surjective. Thus, $\wh G_i$ is isomorphic to $G_i$. 
         
         Consider the map
-        \[\psi : G \to \prod_{j \neq i} G_j \text{ defined by } \psi\left(\prod_{j \in I} g_j\right) = \prod_{j \neq i} g_j.\]
+        \[
+        	\psi : G \to \prod_{j \neq i} G_j \text{ defined by } \psi\left(\prod_{j \in I} g_j\right) = \prod_{j \neq i} g_j.
+        \]
         It is clear that $\psi$ is a homomorphism. Moreover, the kernel of $\psi$ is $\wh G_i$, so by the First Isomorphism Theorem, we have
-        \[G/\wh G_i \cong \prod_{j \neq i} G_j.\]
+        \[
+        	G/\wh G_i \cong \prod_{j \neq i} G_j.
+        \]
         \item For fixed $i$, it is clear that $\pi_i$ is a homomorphism. Moreover, $\pi_i$ is surjective since for any $g_i \in G_i$, we have $\pi_i(\prod_{j \in I} 1_j g_i) = g_i$. Finally, the kernel of $\pi_i$ is $\wh G_i$, so by the First Isomorphism Theorem, we have
-        \[G/\wh G_i \cong G_i.\]
+        \[
+        	G/\wh G_i \cong G_i.
+        \]
         \item Let $x = \prod_{j \neq i} 1_j x_i$ and $y = \prod_{j \neq k} 1_j y_k$ for some $i \neq k$. Then
-        \[xy = \prod_{j \neq i, k} 1_j x_i y_k = \prod_{j \neq i, k} 1_j y_k x_i = yx\]
+        \[
+        	xy = \prod_{j \neq i, k} 1_j x_i y_k = \prod_{j \neq i, k} 1_j y_k x_i = yx
+        \]
         as desired.
     \end{enumerate}
 \end{sol}
@@ -289,8 +363,12 @@
     \item Consider the group $\intmod[2] \times \z$. The element $(1, 0)$ has order 2, and the element $(0, 1)$ has infinite order.
     \item By Cayley's Theorem, every finite group is isomorphic to a subgroup of some symmetric group $S_n$. We may then consider the group $G = S_1 \times S_2 \times S_3 \times \cdots$. For any finite group $H$, there is some $n$ such that $H$ is isomorphic to a subgroup of $S_n$, so $H$ is isomorphic to a subgroup of $G$.
     \item Let $G = \z \times \z \times \cdots$. Consider the map $\phi : G \to G \times G$ defined by
-    \[\phi((a_1, a_2, a_3, \ldots)) = ((a_1, a_3, a_5, \ldots), (a_2, a_4, a_6, \ldots)).\]
+    \[
+    	\phi((a_1, a_2, a_3, \ldots)) = ((a_1, a_3, a_5, \ldots), (a_2, a_4, a_6, \ldots)).
+    \]
     It is clear that $\phi$ is a homomorphism. Moreover, if $\phi((a_1, a_2, a_3, \ldots)) = ((0, 0, 0, \ldots), (0, 0, 0, \ldots))$, then $a_i = 0$ for all $i$, so $\phi$ is injective. Finally, let $((b_1, b_2, b_3, \ldots), (c_1, c_2, c_3, \ldots))$ be an element of $G \times G$. Then 
-    \[\phi((b_1, c_1, b_2, c_2, b_3, c_3, \ldots)) = ((b_1, b_2, b_3, \ldots), (c_1, c_2, c_3, \ldots)),\]
+    \[
+    	\phi((b_1, c_1, b_2, c_2, b_3, c_3, \ldots)) = ((b_1, b_2, b_3, \ldots), (c_1, c_2, c_3, \ldots)),
+    \]
     so $\phi$ is surjective. Thus, $\phi$ is an isomorphism and $G \cong G \times G$.
 \end{solenum}
