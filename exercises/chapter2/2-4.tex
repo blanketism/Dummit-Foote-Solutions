@@ -5,35 +5,46 @@
 \end{exercise}
 
 \begin{sol}
-    It is clear that $H \subseteq \gen H$. Recall that $\gen H$ is the intersection of all subgroups of $G$ that contain $H$. Since $H$ is itself a subgroup of $G$ that contains $H$, then $\gen H \subseteq H$. Hence, $\gen H = H$.
+    It is clear that $H \subseteq \gen H$.
+	Recall that $\gen H$ is the intersection of all subgroups of $G$ that contain $H$.
+	Since $H$ is itself a subgroup of $G$ that contains $H$, then $\gen H \subseteq H$.
+	Hence, $\gen H = H$.
 \end{sol}
 
 \begin{exercise}[2.4.2]
-    Prove that if $A$ is a subset of $B$ then $\langle A\rangle \le \langle B\rangle$. Give an example where $A \subseteq B$ with $A \ne B$ but $\langle A\rangle = \langle B\rangle$.
+    Prove that if $A$ is a subset of $B$ then $\langle A\rangle \le \langle B\rangle$.
+	Give an example where $A \subseteq B$ with $A \ne B$ but $\langle A\rangle = \langle B\rangle$.
 \end{exercise}
 
 \begin{sol}
-    Since $\gen B$ is the smallest subgroup of $G$ that contains $B$, and $A \subseteq B$, then $A \subseteq \gen B$. Since $\gen A$ is the smallest subgroup of $G$ that contains $A$, then $\gen A \subseteq \gen B$, so that $\gen A \leq \gen B$.
+    Since $\gen B$ is the smallest subgroup of $G$ that contains $B$, and $A \subseteq B$, then $A \subseteq \gen B$.
+	Since $\gen A$ is the smallest subgroup of $G$ that contains $A$, then $\gen A \subseteq \gen B$, so that $\gen A \leq \gen B$.
 
-    Take $G = \z$ with $A = \set 1$ and $B = \set{1, 2}$. Then $A \subseteq B$ with $A \ne B$, but $\gen A = \gen B = \z$.
+    Take $G = \z$ with $A = \set 1$ and $B = \set{1, 2}$.
+	Then $A \subseteq B$ with $A \ne B$, but $\gen A = \gen B = \z$.
 \end{sol}
 
 \begin{exercise}[2.4.3]
-    Prove that if $H$ is an Abelian subgroup of a group $G$ then $\langle H, Z(G)\rangle$ is Abelian. Give an explicit example of an Abelian subgroup $H$ of a group $G$ such that $\langle H, C_G(H)\rangle$ is not Abelian.
+    Prove that if $H$ is an Abelian subgroup of a group $G$ then $\langle H, Z(G)\rangle$ is Abelian.
+	Give an explicit example of an Abelian subgroup $H$ of a group $G$ such that $\langle H, C_G(H)\rangle$ is not Abelian.
 \end{exercise}
 
 \begin{sol}
-    Let $g, h \in \gen{H, Z(G)}$. Using Proposition 2.9, we may put them as follows:
+    Let $g, h \in \gen{H, Z(G)}$.
+	Using Proposition 2.9, we may put them as follows:
     \[
     	g = g_1^{\ep_1}g_2^{\ep_2} \ldots g_m^{\ep_m}, \quad h = h_1^{\delta_1}h_2^{\delta_2} \ldots h_n^{\delta_n}
     \]
-    where $\ep_i = \delta_i = \pm 1$, and $g_i, h_i \in H \cup Z(G)$ for all $i$. Since elements of $H$ commute amongst each other, and elements of $Z(G)$ commute with every element, we obtain
+    where $\ep_i = \delta_i = \pm 1$, and $g_i, h_i \in H \cup Z(G)$ for all $i$.
+	Since elements of $H$ commute amongst each other, and elements of $Z(G)$ commute with every element, we obtain
     \[
     	gh = g_1^{\ep_1} \ldots g_m^{\ep_m}h_1^{\delta_1} \ldots h_n^{\delta_n} = h_1^{\delta_1} \ldots h_n^{\delta_n}g_1^{\ep_1} \ldots g_m^{\ep_m} = hg
     \]
     so that $\gen{H, Z(G)}$ is Abelian.
 
-    Consider non-Abelian groups with non-trivial centers. Let $G = D_8$ and $H = Z(G) = \set{1, r^2}$. Then $C_G(H) = G$, but $\gen{H, C_G(H)} = \gen{Z(G), G} = G$ which is non-Abelian.
+    Consider non-Abelian groups with non-trivial centers.
+	Let $G = D_8$ and $H = Z(G) = \set{1, r^2}$.
+	Then $C_G(H) = G$, but $\gen{H, C_G(H)} = \gen{Z(G), G} = G$ which is non-Abelian.
 \end{sol}
 
 \begin{exercise}[2.4.4]
@@ -43,7 +54,11 @@
 \begin{sol}
     If $H$ is trivial, then $H - \set 1 = \varnothing$ so that $\gen\varnothing = 1 = H$.
 
-    If $H$ is non-trivial, let $h \in H$. If $h = 1$, then $h \in \gen{H - \set 1}$. If $h \neq 1$, then $h \in H - \set 1$ so that $h \in \gen{H - \set 1}$, so $H \leq \gen{H - \set 1}$. Since $H - \set 1 \subseteq H$, we have $\gen{H - \set 1} \leq H$. Then $\gen{H - \set 1} = H$.
+    If $H$ is non-trivial, let $h \in H$.
+	If $h = 1$, then $h \in \gen{H - \set 1}$.
+	If $h \neq 1$, then $h \in H - \set 1$ so that $h \in \gen{H - \set 1}$, so $H \leq \gen{H - \set 1}$.
+	Since $H - \set 1 \subseteq H$, we have $\gen{H - \set 1} \leq H$.
+	Then $\gen{H - \set 1} = H$.
 \end{sol}
 
 \begin{exercise}[2.4.5]
@@ -51,7 +66,8 @@
 \end{exercise}
 
 \begin{sol}
-    See \exref{1.3.20} for a discussion on why a pair of 2-cycles generate $S_3$. Calculations can be repeated for any other pair of distinct 2-cycles in $S_3$.
+    See \exref{1.3.20} for a discussion on why a pair of 2-cycles generate $S_3$.
+	Calculations can be repeated for any other pair of distinct 2-cycles in $S_3$.
 \end{sol}
 
 \begin{exercise}[2.4.6]
@@ -59,7 +75,9 @@
 \end{exercise}
 
 \begin{sol}
-    Let $a = (1\ 2)$ and $b = (3\ 4)$. Then $\gen{a, ab} = \set{1, a, b, ab}$ where $ab = ba$ since they are disjoint cycles. Moreover, $\abs a = \abs b = \abs{ab} = 2$ so that it is noncyclic.
+    Let $a = (1\ 2)$ and $b = (3\ 4)$.
+	Then $\gen{a, ab} = \set{1, a, b, ab}$ where $ab = ba$ since they are disjoint cycles.
+	Moreover, $\abs a = \abs b = \abs{ab} = 2$ so that it is noncyclic.
 \end{sol}
 
 \begin{exercise}[2.4.7]
@@ -67,7 +85,12 @@
 \end{exercise}
 
 \begin{sol}
-    Let $\alpha = (1\ 2)$ and $\beta = (1\ 3)(2\ 4)$. Let $\gamma = \alpha\beta$. It is routine to verify $\gamma\alpha = \alpha\gamma\inv$ and that $\abs\gamma = 4$. By \exref{1.2.6}, these satisfy the relations of $D_8$. Moreover, $\gen{\alpha, \beta}$ contains $\gen\gamma$ and the distinct elements $\alpha\gamma, \alpha\gamma^2, \alpha\gamma^3$, along with the identity, giving 8 distinct elements. Hence, $\gen{\alpha, \beta}$ has order 8 and is isomorphic to $D_8$.
+    Let $\alpha = (1\ 2)$ and $\beta = (1\ 3)(2\ 4)$.
+	Let $\gamma = \alpha\beta$.
+	It is routine to verify $\gamma\alpha = \alpha\gamma\inv$ and that $\abs\gamma = 4$.
+	By \exref{1.2.6}, these satisfy the relations of $D_8$.
+	Moreover, $\gen{\alpha, \beta}$ contains $\gen\gamma$ and the distinct elements $\alpha\gamma, \alpha\gamma^2, \alpha\gamma^3$, along with the identity, giving 8 distinct elements.
+	Hence, $\gen{\alpha, \beta}$ has order 8 and is isomorphic to $D_8$.
 \end{sol}
 
 \begin{exercise}[2.4.8] 
@@ -75,7 +98,10 @@
 \end{exercise}
 
 \begin{sol}
-    Let $\alpha = (1\ 2\ 3\ 4)$ and $\beta = (1\ 2\ 4\ 3)$. Since $\abs\alpha = 4$ and $\abs{\alpha\beta} = \abs{(1\ 3\ 2)} = 3$, then $\gen{\alpha, \beta}$ must have order 12 or 24 by Lagrange's. Observe that $\alpha^2 = (1\ 3)(2\ 4)$ and $\alpha^3\beta\alpha^3 = (1\ 2)$. Then $\gen{\alpha, \beta}$ has a subgroup of order 8 by \exref{2.4.7}, so $\gen{\alpha, \beta}$ must have order 24 and hence equals $S_4$.
+    Let $\alpha = (1\ 2\ 3\ 4)$ and $\beta = (1\ 2\ 4\ 3)$.
+	Since $\abs\alpha = 4$ and $\abs{\alpha\beta} = \abs{(1\ 3\ 2)} = 3$, then $\gen{\alpha, \beta}$ must have order 12 or 24 by Lagrange's.
+	Observe that $\alpha^2 = (1\ 3)(2\ 4)$ and $\alpha^3\beta\alpha^3 = (1\ 2)$.
+	Then $\gen{\alpha, \beta}$ has a subgroup of order 8 by \exref{2.4.7}, so $\gen{\alpha, \beta}$ must have order 24 and hence equals $S_4$.
 \end{sol}
 
 \begin{exercise}[2.4.9]
@@ -90,7 +116,8 @@
             1 & 1
         \end{pmatrix}.
     \]
-    \hint{Recall from \exref{2.1.9} that $\speclin_2(\f_3)$ is the subgroup of matrices of determinant $1$. You may assume this subgroup has order $24$---this will be an exercise in Section 3.2.}
+    \hint{Recall from \exref{2.1.9} that $\speclin_2(\f_3)$ is the subgroup of matrices of determinant $1$.
+	You may assume this subgroup has order $24$---this will be an exercise in Section 3.2.}
 \end{exercise}
 
 \begin{sol}
@@ -201,11 +228,17 @@
             1 & -1
         \end{pmatrix}
 	\]
-    By direct computation, we have that $A^4 = B^4 = I_2$, and $A^2 = B^2 = -I_2$. Moreover, $AB = -BA$. Hence, the subgroup generated by $A$ and $B$ satisfies the relations of the quaternion group $Q_8$. Then the map
+    By direct computation, we have that $A^4 = B^4 = I_2$, and $A^2 = B^2 = -I_2$.
+	Moreover, $AB = -BA$.
+	Hence, the subgroup generated by $A$ and $B$ satisfies the relations of the quaternion group $Q_8$.
+	Then the map
     \[
     	\phi : Q_8 \to \gen{A, B} \quad \text{by} \quad i \mapsto A, \quad j \mapsto B
     \]
-    extends to a homomorphism since the relations are satisfied. Moreover, $\phi$ maps generators of $Q_8$ to generators of $\gen{A, B}$ so that $\phi$ is surjective. In particular, this implies $|\gen{A, B}| \leq |Q_8| = 8$. Since $B \notin \gen A$, we must have $|\gen{A, B}| = 8$, and hence $\phi$ is an isomorphism.
+    extends to a homomorphism since the relations are satisfied.
+	Moreover, $\phi$ maps generators of $Q_8$ to generators of $\gen{A, B}$ so that $\phi$ is surjective.
+	In particular, this implies $|\gen{A, B}| \leq |Q_8| = 8$.
+	Since $B \notin \gen A$, we must have $|\gen{A, B}| = 8$, and hence $\phi$ is an isomorphism.
 \end{sol}
 
 \begin{exercise}[2.4.11]
@@ -213,7 +246,8 @@
 \end{exercise}
 
 \begin{sol}
-    Recall that $Q_8$ and $S_4$ both have 6 elements of order 4. However, no two elements in $Q_8$ can generate the entirety of $\speclin_2(\f_3)$ since $\abs{Q_8} = 8$, while $S_4 = \gen{(1\ 2\ 3\ 4), (1\ 2\ 4\ 3)}$, hence they cannot be isomorphic.
+    Recall that $Q_8$ and $S_4$ both have 6 elements of order 4.
+	However, no two elements in $Q_8$ can generate the entirety of $\speclin_2(\f_3)$ since $\abs{Q_8} = 8$, while $S_4 = \gen{(1\ 2\ 3\ 4), (1\ 2\ 4\ 3)}$, hence they cannot be isomorphic.
 \end{sol}
 
 \begin{exercise}[2.4.12]
@@ -223,13 +257,18 @@
 \end{exercise}
 
 \begin{sol}
-    Let $\ut_3(\f_2)$ denote the upper triangular matrices in $\gl_3(\f_2)$. Note each matrix has 1's on the diagonal, and the 3 entries above the diagonal can each be either 0 or 1. Therefore, there are $2^3 = 8$ such matrices, so $\abs{\ut_3(\f_2)} = 8$. Using the notation from \exref{1.4.11}, we must find $X, Y \in \ut_3(\f_2)$ such that $X^4 = Y^2 = I_3$ and $XY = YX^3$.
+    Let $\ut_3(\f_2)$ denote the upper triangular matrices in $\gl_3(\f_2)$.
+	Note each matrix has 1's on the diagonal, and the 3 entries above the diagonal can each be either 0 or 1.
+	Therefore, there are $2^3 = 8$ such matrices, so $\abs{\ut_3(\f_2)} = 8$.
+	Using the notation from \exref{1.4.11}, we must find $X, Y \in \ut_3(\f_2)$ such that $X^4 = Y^2 = I_3$ and $XY = YX^3$.
 
-    From \exref{1.4.11} (d), pick out elements of order 4 and 2, namely $X = (1, 0, 1)$ and $Y = (1, 0, 0)$. The first set of relations are easily verified, while the relation $XY = YX^3$ can be checked by direct computation:
+    From \exref{1.4.11} (d), pick out elements of order 4 and 2, namely $X = (1, 0, 1)$ and $Y = (1, 0, 0)$.
+	The first set of relations are easily verified, while the relation $XY = YX^3$ can be checked by direct computation:
     \[
     	XY = (1, 0, 1)(1, 0, 0) = (0, 0, 1) = (1, 0, 0)(1, 1, 1) = YX^3.
     \]
-    Moreover, $Y \notin \gen X$, so $\gen{X, Y}$ has more than 4 elements. Since $\ut_3(\f_2)$ has 8 elements, it follows that $\gen{X, Y} = \ut_3(\f_2)$, and thus $\ut_3(\f_2) \cong D_8$.
+    Moreover, $Y \notin \gen X$, so $\gen{X, Y}$ has more than 4 elements.
+	Since $\ut_3(\f_2)$ has 8 elements, it follows that $\gen{X, Y} = \ut_3(\f_2)$, and thus $\ut_3(\f_2) \cong D_8$.
 \end{sol}
 
 \begin{exercise}[2.4.13]
@@ -237,7 +276,10 @@
 \end{exercise}
 
 \begin{sol}
-    Let $P$ be the set in question and $\q_+\unt$ be the multiplicative group of positive rationals. Since $\gen P \leq \q_+\unt$, then $(1 / p)\inv = p \in \gen P$, so $p^k \in \gen P$ for $k \in \z$. Then for any $q \in \q_+\unt$ with $q = m/n$ for $m, n \in \zp$, we may write $m$ and $n$ as products of primes. Then $m/n = q \in \gen P$, hence $\q_+\unt \leq \gen P$.
+    Let $P$ be the set in question and $\q_+\unt$ be the multiplicative group of positive rationals.
+	Since $\gen P \leq \q_+\unt$, then $(1 / p)\inv = p \in \gen P$, so $p^k \in \gen P$ for $k \in \z$.
+	Then for any $q \in \q_+\unt$ with $q = m/n$ for $m, n \in \zp$, we may write $m$ and $n$ as products of primes.
+	Then $m/n = q \in \gen P$, hence $\q_+\unt \leq \gen P$.
 \end{sol}
 
 \begin{spex}[2.4.14]
@@ -257,20 +299,27 @@
     \[
     	A = \set*{\frac{p_1}{q_1}, \frac{p_2}{q_2}, \ldots, \frac{p_n}{q_n}}
     \]
-    where $(p_i, q_i) = 1$ for all $1 \leq i \leq n$. Then every element $h \in H$ is of the form
+    where $(p_i, q_i) = 1$ for all $1 \leq i \leq n$.
+	Then every element $h \in H$ is of the form
     \[
     	h = \sum_{i = 1}^n a_i\frac{p_i}{q_i}, \quad a_i \in \z
     \]
-    since $\q$ is Abelian. Define the quantities
+    since $\q$ is Abelian.
+	Define the quantities
     \[
     	k = \prod_{i = 1}^n q_i, \quad k_j = k/q_j
     \]
-    so that $k$ is the product of all denominators in $A$, and $k_j$ is the product of all denominators except the denominator in the $j$-th fraction of $A$. We may then rewrite $h$ as
+    so that $k$ is the product of all denominators in $A$, and $k_j$ is the product of all denominators except the denominator in the $j$-th fraction of $A$.
+	We may then rewrite $h$ as
     \[
     	h = \frac 1k \sum_{i = 1}^n a_ip_ik_i
     \]
-    so that $h \in \gen{1/k}$, which is a cyclic subgroup of $\q$. Then $H \leq \gen{1/k}$, hence it is cyclic.
-    \item Suppose $\q$ was finitely generated. Then $\q = \gen{p/q}$ where $(p, q) = 1$, by the previous part. Let $r \in \z$ such that $r$ does not divide $q$. Then there is some $n \in \z$ such that
+    so that $h \in \gen{1/k}$, which is a cyclic subgroup of $\q$.
+	Then $H \leq \gen{1/k}$, hence it is cyclic.
+    \item Suppose $\q$ was finitely generated.
+	Then $\q = \gen{p/q}$ where $(p, q) = 1$, by the previous part.
+	Let $r \in \z$ such that $r$ does not divide $q$.
+	Then there is some $n \in \z$ such that
     \[
     	n \frac pq = \frac 1r
     \]
@@ -282,11 +331,15 @@
 \end{exercise}
 
 \begin{sol}
-    By the previous exercise, such a subgroup cannot be finitely generated. Consider the set
+    By the previous exercise, such a subgroup cannot be finitely generated.
+	Consider the set
     \[
     	A = \set*{\left. \frac 1{2^k} \right| k \in \zp \cup \set 0}
     \]
-    where $\gen A \leq \q$. Note that $\gen A < \q$ since $1/3 \notin \gen A$. Moreover, if $\gen A = \gen{p/q}$, then $q = 2^m$ since every element of $A$ has a power of 2. Then $1/2^{m + 1} \notin \gen{p/q}$, but $1/2^{m + 1} \in \gen A$, hence $\gen A$ cannot be cyclic.
+    where $\gen A \leq \q$.
+	Note that $\gen A < \q$ since $1/3 \notin \gen A$.
+	Moreover, if $\gen A = \gen{p/q}$, then $q = 2^m$ since every element of $A$ has a power of 2.
+	Then $1/2^{m + 1} \notin \gen{p/q}$, but $1/2^{m + 1} \in \gen A$, hence $\gen A$ cannot be cyclic.
 \end{sol}
 
 \begin{spex}[2.4.16]
@@ -300,17 +353,43 @@
 \end{spex}
 
 \begin{solenum}
-    \item If $H$ is maximal, we are done. If not, there exists $H_1 < G$ such that $H < H_1$. If $H_1$ is maximal, then we are done. Otherwise, construct subgroups $H_i$ such that $H_i < H_{i + 1} < G$. Since $G$ is finite, this process must terminate at some $H_k$ which is maximal. Then $H_k$ is a maximal subgroup with $H < H_k$.
-    \item Since $s \notin \gen r$, then $\gen r < D_{2n}$. If $\gen r$ is not maximal, there exists $H < G$ such that $sr^k \in H$ for $1 \leq k < n$. Since $r^{n - k} \in H$, then $sr^kr^{n - k} = s \in H$, which implies $H = D_{2n}$, contradicting that $H$ is a proper subgroup. It follows that $\gen r$ is maximal.
+    \item If $H$ is maximal, we are done.
+	If not, there exists $H_1 < G$ such that $H < H_1$.
+	If $H_1$ is maximal, then we are done.
+	Otherwise, construct subgroups $H_i$ such that $H_i < H_{i + 1} < G$.
+	Since $G$ is finite, this process must terminate at some $H_k$ which is maximal.
+	Then $H_k$ is a maximal subgroup with $H < H_k$.
+    \item Since $s \notin \gen r$, then $\gen r < D_{2n}$.
+	If $\gen r$ is not maximal, there exists $H < G$ such that $sr^k \in H$ for $1 \leq k < n$.
+	Since $r^{n - k} \in H$, then $sr^kr^{n - k} = s \in H$, which implies $H = D_{2n}$, contradicting that $H$ is a proper subgroup.
+	It follows that $\gen r$ is maximal.
     \item
     \begin{itemize}
-        \item [\rightimp] Suppose $H$ is maximal, and put $H = \gen{x^k}$ and $d = (n, k)$. Note that $d > 1$ for the subgroup to be proper. Since $d \mid k$, then $H \leq \gen{x^d}$. By maximality of $H$, we must have either $H = \gen{x^d}$ or $\gen{x^d} = G$. In the first case, $d = k$ so that $k \mid n$. In the second case, $\gen{x^d} = G$, so that $d = 1$. However, this would imply that $k = n/d = n/1 = n$, which contradicts that $H$ is a proper subgroup. Hence, $k$ must be a prime dividing $n$. If $k$ is composite, say $k = ab$ for $1 < a, b < k$, then $H < \gen{x^a} < G$, contradicting maximality. Then $k$ must be prime.
-        \item [\leftimp] Suppose that $H = \gen{x^p}$ for prime $p \mid n$. If $H$ is not maximal, there exists $\gen{x^d}$ such that $d \mid p$. Since $p$ is prime, then either $d = 1$ or $p$. If $d = 1$, then $\gen{x^d} = G$ which shows that $\gen{x^d}$ is not a proper subgroup of $G$. If $d = p$, then $\gen{x^d} = \gen{x^p}$ so that $H$ is not a proper subgroup of $\gen{x^d}$. It follows that $H$ is maximal. \qh
+        \item [\rightimp] Suppose $H$ is maximal, and put $H = \gen{x^k}$ and $d = (n, k)$.
+	Note that $d > 1$ for the subgroup to be proper.
+	Since $d \mid k$, then $H \leq \gen{x^d}$.
+	By maximality of $H$, we must have either $H = \gen{x^d}$ or $\gen{x^d} = G$.
+	In the first case, $d = k$ so that $k \mid n$.
+	In the second case, $\gen{x^d} = G$, so that $d = 1$.
+	However, this would imply that $k = n/d = n/1 = n$, which contradicts that $H$ is a proper subgroup.
+	Hence, $k$ must be a prime dividing $n$.
+	If $k$ is composite, say $k = ab$ for $1 < a, b < k$, then $H < \gen{x^a} < G$, contradicting maximality.
+	Then $k$ must be prime.
+        \item [\leftimp] Suppose that $H = \gen{x^p}$ for prime $p \mid n$.
+	If $H$ is not maximal, there exists $\gen{x^d}$ such that $d \mid p$.
+	Since $p$ is prime, then either $d = 1$ or $p$.
+	If $d = 1$, then $\gen{x^d} = G$ which shows that $\gen{x^d}$ is not a proper subgroup of $G$.
+	If $d = p$, then $\gen{x^d} = \gen{x^p}$ so that $H$ is not a proper subgroup of $\gen{x^d}$.
+	It follows that $H$ is maximal. \qh
     \end{itemize}
 \end{solenum}
 
 \begin{spex}[2.4.17]
-    This is an exercise involving Zorn's Lemma. Prove that every non-trivial finitely generated group possesses maximal subgroups. Let $G$ be a finitely generated group, say $G=\langle g_1, g_2, \ldots, g_n\rangle$, and let $\mathcal{S}$ be the set of all proper subgroups of $G$. Then $\mathcal{S}$ is partially ordered by inclusion. Let $\mathcal{C}$ be a chain in $\mathcal{S}$.
+    This is an exercise involving Zorn's Lemma.
+	Prove that every non-trivial finitely generated group possesses maximal subgroups.
+	Let $G$ be a finitely generated group, say $G=\langle g_1, g_2, \ldots, g_n\rangle$, and let $\mathcal{S}$ be the set of all proper subgroups of $G$.
+	Then $\mathcal{S}$ is partially ordered by inclusion.
+	Let $\mathcal{C}$ be a chain in $\mathcal{S}$.
     \begin{subexercises}
         \item Prove that the union $H$ of all the subgroups in $\mathcal{C}$ is a subgroup of $G$.
         \item Prove that $H$ is a proper subgroup.  
@@ -319,17 +398,30 @@
 \end{spex}
 
 \begin{solenum}
-    \item Let $\cc \subseteq \ss$ be a chain. Put
+    \item Let $\cc \subseteq \ss$ be a chain.
+	Put
     \[
     	H = \bigcup_{K \in \cc}K
     \]
-    Since at least one subgroup is in $\cc$ and subgroups are nonempty, then $\cc$ is nonempty. Suppose $g, h \in H$. Then $g \in K_1$ and $h \in K_2$ for some $K_1, K_2 \in \cc$ such that $K_1 \leq K_2$ or $K_2 \leq K_1$, or both. Without loss of generality, suppose $K_1 \leq K_2$. Then $g \in K_2$ as well so that $gh\inv \in K_2 \subseteq H$. Then $H \leq G$.
-    \item If $H$ was not a proper subgroup, then $H$ must contain all generators $g_i$. Associate each generator with a (not necessarily distinct) subgroup $K_i$ so that $g_i \in K_i$ for every $1 \leq i \leq n$. Since $\cc$ is a chain, then we may order the subgroups such that $K_j \leq K_{j + 1}$ for all $1 \leq j \leq n - 1$. It follows that $K_n$ contains every generator $g_i$ so that $K_n = G$, contradicting that $\cc$ is a chain of proper subgroups of $G$. 
-    \item Because $G$ is non-trivial, then $\set 1 \in \ss$ so that $\ss$ is nonempty. Moreover, $H \in \ss$ by the previous part, and for any $K \in \cc$, we have $K \leq H$ so that $H$ is an upper bound for $\cc$. Then every chain in $\ss$ has an upper bound, so by Zorn's Lemma, $\ss$ must have a maximal element.
+    Since at least one subgroup is in $\cc$ and subgroups are nonempty, then $\cc$ is nonempty.
+	Suppose $g, h \in H$.
+	Then $g \in K_1$ and $h \in K_2$ for some $K_1, K_2 \in \cc$ such that $K_1 \leq K_2$ or $K_2 \leq K_1$, or both.
+	Without loss of generality, suppose $K_1 \leq K_2$.
+	Then $g \in K_2$ as well so that $gh\inv \in K_2 \subseteq H$.
+	Then $H \leq G$.
+    \item If $H$ was not a proper subgroup, then $H$ must contain all generators $g_i$.
+	Associate each generator with a (not necessarily distinct) subgroup $K_i$ so that $g_i \in K_i$ for every $1 \leq i \leq n$.
+	Since $\cc$ is a chain, then we may order the subgroups such that $K_j \leq K_{j + 1}$ for all $1 \leq j \leq n - 1$.
+	It follows that $K_n$ contains every generator $g_i$ so that $K_n = G$, contradicting that $\cc$ is a chain of proper subgroups of $G$. 
+    \item Because $G$ is non-trivial, then $\set 1 \in \ss$ so that $\ss$ is nonempty.
+	Moreover, $H \in \ss$ by the previous part, and for any $K \in \cc$, we have $K \leq H$ so that $H$ is an upper bound for $\cc$.
+	Then every chain in $\ss$ has an upper bound, so by Zorn's Lemma, $\ss$ must have a maximal element.
 \end{solenum}
 
 \begin{exercise}[2.4.18] 
-    Let $p$ be a prime and let $Z = \set{z\in \c \mid z^{p^n}=1 \text{ for some } n\in \z^+}$ (so $Z$ is the multiplicative group of all $p$-power roots of unity in $\c$). For each $k\in \z^+$ let $H_k = \set{z\in Z \mid z^{p^k}=1}$ (the group of $p^k$th roots of unity). Prove:
+    Let $p$ be a prime and let $Z = \set{z\in \c \mid z^{p^n}=1 \text{ for some } n\in \z^+}$ (so $Z$ is the multiplicative group of all $p$-power roots of unity in $\c$).
+	For each $k\in \z^+$ let $H_k = \set{z\in Z \mid z^{p^k}=1}$ (the group of $p^k$th roots of unity).
+	Prove:
     \begin{subexercises}
         \item $H_k \le H_m$ if and only if $k\le m$.
         \item $H_k$ is cyclic for all $k$.
@@ -340,26 +432,51 @@
 \end{exercise}
 
 \begin{solenum}
-    \item Note that $|H_k| = p^k$ for any $k$ as there are exactly $p^k$ roots of unity. Now, if $H_k \leq H_m$, then $p^k \mid p^m$ by Lagrange's Theorem. Then $p^k \leq p^m$, or $k \leq m$ since $p > 0$.
+    \item Note that $|H_k| = p^k$ for any $k$ as there are exactly $p^k$ roots of unity.
+	Now, if $H_k \leq H_m$, then $p^k \mid p^m$ by Lagrange's Theorem.
+	Then $p^k \leq p^m$, or $k \leq m$ since $p > 0$.
     
-    If $k \leq m$, then $p^k \leq p^m$. In particular, $p^k \mid p^m$. Then for any $z \in H_k$, we have
+    If $k \leq m$, then $p^k \leq p^m$.
+	In particular, $p^k \mid p^m$.
+	Then for any $z \in H_k$, we have
     \[
     	z^{p^m} = (z^{p^k})^{p^{m - k}} = 1
     \]
-    so that $z \in H_m$. Then $H_k \leq H_m$.
-    \item Let $\theta = e^{2\pi i/p^k}$. Note that $\gen\theta$ has order $p^k$, and $\gen\theta \subseteq H_k$. Now for some $z \in H_k$, we have $z = e^{2\pi ix/p^k}$ for some $0 \leq x < p^k$. Then $z = (e^{2\pi i/p^k})^x \in \gen\theta$ so that $\gen\theta = H_k$.
-    \item Let $H$ be a proper subgroup of $Z$. Note that every element in $Z$ has order $p^i$ for some $i \in \zp$, so elements of $H$ will have similar orders. Define the set
+    so that $z \in H_m$.
+	Then $H_k \leq H_m$.
+    \item Let $\theta = e^{2\pi i/p^k}$.
+	Note that $\gen\theta$ has order $p^k$, and $\gen\theta \subseteq H_k$.
+	Now for some $z \in H_k$, we have $z = e^{2\pi ix/p^k}$ for some $0 \leq x < p^k$.
+	Then $z = (e^{2\pi i/p^k})^x \in \gen\theta$ so that $\gen\theta = H_k$.
+    \item Let $H$ be a proper subgroup of $Z$.
+	Note that every element in $Z$ has order $p^i$ for some $i \in \zp$, so elements of $H$ will have similar orders.
+	Define the set
     \[
     	S = \set{n \in \zp \mid \abs h = p^n \text{ for some $h \in H$}}
     \]
-    so that $S$ is the set of integers $n$ such that $H$ contains a $p^n$-th root of unity. Moreover, $H$ is trivially nonempty if we define $H_0 = \set{z \in Z \mid z^{p^0} = z = 1}$ so that the trivial proper subgroup $\set 1$ of $Z$ allows $1 \in H$.
+    so that $S$ is the set of integers $n$ such that $H$ contains a $p^n$-th root of unity.
+	Moreover, $H$ is trivially nonempty if we define $H_0 = \set{z \in Z \mid z^{p^0} = z = 1}$ so that the trivial proper subgroup $\set 1$ of $Z$ allows $1 \in H$.
     
-    Suppose now that $S$ is infinite. For any $n \in \zp$, there exists $h \in H$ and $m \in \zp$ such that $\abs h = p^m > p^n$, for otherwise it would be that every $h \in H$ has order $\abs h \leq p^n$, meaning that $n$ is an upper bound for $S$. Then $\abs h = p^m$ so that $H_m = \gen h$, and $H_m \leq H$. Since $H_n \leq H_m$ for every $n \in \zp$, then
+    Suppose now that $S$ is infinite.
+	For any $n \in \zp$, there exists $h \in H$ and $m \in \zp$ such that $\abs h = p^m > p^n$, for otherwise it would be that every $h \in H$ has order $\abs h \leq p^n$, meaning that $n$ is an upper bound for $S$.
+	Then $\abs h = p^m$ so that $H_m = \gen h$, and $H_m \leq H$.
+	Since $H_n \leq H_m$ for every $n \in \zp$, then
     \[
     	Z = \bigcup_{n \in \zp} H_n \subseteq H
     \]
-    which shows $Z \leq H$. But $H \leq Z$, hence $Z = H$, which contradicts that $H < Z$. It must be that $S$ is finite, so it has some maximal element $s$. Because $s \in S$, then there is $h_0 \in H$ where $\abs{h_0} = p^s$ so that $H_s = \gen{h_0} \leq H$. Suppose $h \in H$ with $\abs h = p^k$ for some $k \in \zp$. Then $k \in S$ where $k \leq s$ so that $H_k \leq H_s$. Since $h \in H_k$, then $h \in H_s$ so $H \leq H_s$. Hence, $H = H_s$.
-    \item Put $Z = \gen{z_1, z_2, \ldots, z_n}$ for some $n \in \zp$ such that $\abs{z_i} = p^{x_i}$. Let $x = \max(x_1, x_2, \ldots, x_n)$. Then $z_i \in H_x$ for every $1 \leq i \leq n$ so that $Z \leq H_x$. But recall that $Z$ comprises every $p$-power roots of unity so that $Z$ is not a subgroup of $H_x$, contradicting part (a). It must be that $Z$ is infinitely generated.
+    which shows $Z \leq H$.
+	But $H \leq Z$, hence $Z = H$, which contradicts that $H < Z$.
+	It must be that $S$ is finite, so it has some maximal element $s$.
+	Because $s \in S$, then there is $h_0 \in H$ where $\abs{h_0} = p^s$ so that $H_s = \gen{h_0} \leq H$.
+	Suppose $h \in H$ with $\abs h = p^k$ for some $k \in \zp$.
+	Then $k \in S$ where $k \leq s$ so that $H_k \leq H_s$.
+	Since $h \in H_k$, then $h \in H_s$ so $H \leq H_s$.
+	Hence, $H = H_s$.
+    \item Put $Z = \gen{z_1, z_2, \ldots, z_n}$ for some $n \in \zp$ such that $\abs{z_i} = p^{x_i}$.
+	Let $x = \max(x_1, x_2, \ldots, x_n)$.
+	Then $z_i \in H_x$ for every $1 \leq i \leq n$ so that $Z \leq H_x$.
+	But recall that $Z$ comprises every $p$-power roots of unity so that $Z$ is not a subgroup of $H_x$, contradicting part (a).
+	It must be that $Z$ is infinitely generated.
 \end{solenum}
 
 \begin{spex}[2.4.19] 
@@ -371,8 +488,12 @@
 \end{spex}
 
 \begin{solenum}
-    \item Suppose $p/q \in \q$. Then $(p/qn)n = p/q$, where $p/qn \in \q$.
-    \item Let $G$ be finite Abelian with $|G| = n$. For some non-trivial $g \in G$, we have $g^n = 1$. If $G$ was divisible, then there would be some $x \in G$ such that $x^n = g$. But then $g = x^n = 1$, contradicting that $g$ is non-trivial.
+    \item Suppose $p/q \in \q$.
+	Then $(p/qn)n = p/q$, where $p/qn \in \q$.
+    \item Let $G$ be finite Abelian with $|G| = n$.
+	For some non-trivial $g \in G$, we have $g^n = 1$.
+	If $G$ was divisible, then there would be some $x \in G$ such that $x^n = g$.
+	But then $g = x^n = 1$, contradicting that $g$ is non-trivial.
 \end{solenum}
 
 \begin{exercise}[2.4.20]
@@ -380,7 +501,11 @@
 \end{exercise}
 
 \begin{sol}
-    Suppose $A \times B$ is divisible, and let $a \in A, b \in B$, and $k \in \zp$. Then there exists $(c, d) \in A \times B$ such that $(c, d)^k = (c^k, d^k) = (a, b)$. But then $c^k = a$ and $d^k = b$ so that $A$ and $B$ are divisible.
+    Suppose $A \times B$ is divisible, and let $a \in A, b \in B$, and $k \in \zp$.
+	Then there exists $(c, d) \in A \times B$ such that $(c, d)^k = (c^k, d^k) = (a, b)$.
+	But then $c^k = a$ and $d^k = b$ so that $A$ and $B$ are divisible.
     
-    If $A$ and $B$ are both divisible, pick $(a, b) \in A \times B$ and let $k \in \zp$. Then there exists $c \in A$ and $d \in B$ such that $c^k = a$ and $d^k = b$. Then $(c, d)^k = (c^k, d^k) = (a, b)$ so that $A \times B$ is divisible.
+    If $A$ and $B$ are both divisible, pick $(a, b) \in A \times B$ and let $k \in \zp$.
+	Then there exists $c \in A$ and $d \in B$ such that $c^k = a$ and $d^k = b$.
+	Then $(c, d)^k = (c^k, d^k) = (a, b)$ so that $A \times B$ is divisible.
 \end{sol}

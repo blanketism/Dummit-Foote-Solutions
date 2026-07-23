@@ -1,15 +1,19 @@
 \subsection{Group Actions}
 
 \begin{exercise}[1.7.1]
-    Let $F$ be a field. Show that the multiplicative group of nonzero elements of $F$ (denoted by $F^\times$) acts on the set $F$ by $g\cdot a = g a$, where $g\in F^\times$, $a\in F$ and $ga$ is the usual product in $F$ of the two field elements (state clearly which axioms in the definition of a field are used). 
+    Let $F$ be a field.
+	Show that the multiplicative group of nonzero elements of $F$ (denoted by $F^\times$) acts on the set $F$ by $g\cdot a = g a$, where $g\in F^\times$, $a\in F$ and $ga$ is the usual product in $F$ of the two field elements (state clearly which axioms in the definition of a field are used). 
 \end{exercise}
 
 \begin{sol}
-    Let $g, h \in F\unt$ and $f \in F$. Then
+    Let $g, h \in F\unt$ and $f \in F$.
+	Then
     \[
     	g \cdot (h \cdot f) = g \cdot (hf) = g(hf) = (gh)f = (gh) \cdot f
     \]
-    where the associativity of multiplication in $F$ was used to conclude that $g(hf) = (gh)f$. Moreover, $1 \cdot f = 1f = f$ where $1$ is the multiplicative identity in $F$. Therefore, the group action axioms are satisfied and $F\unt$ acts on $F$.
+    where the associativity of multiplication in $F$ was used to conclude that $g(hf) = (gh)f$.
+	Moreover, $1 \cdot f = 1f = f$ where $1$ is the multiplicative identity in $F$.
+	Therefore, the group action axioms are satisfied and $F\unt$ acts on $F$.
 \end{sol}
 
 \begin{exercise}[1.7.2]
@@ -17,11 +21,13 @@
 \end{exercise}
 
 \begin{sol}
-    Let $z, w \in \z$ and $a \in \z$. Then
+    Let $z, w \in \z$ and $a \in \z$.
+	Then
     \[
     	z \cdot (w \cdot a) = z \cdot (w + a) = z + (w + a) = (z + w) + a = (z + w) \cdot a
     \]
-    Moreover, $0 \cdot a = 0 + a = a$. Then $\z$ acts on itself.
+    Moreover, $0 \cdot a = 0 + a = a$.
+	Then $\z$ acts on itself.
 \end{sol}
 
 \begin{exercise}[1.7.3]
@@ -29,15 +35,18 @@
 \end{exercise}
 
 \begin{sol}
-    Let $r, s \in \r$ and $(x, y) \in \r^2$. Then
+    Let $r, s \in \r$ and $(x, y) \in \r^2$.
+	Then
     \[
     	r \cdot (s \cdot (x, y)) = r \cdot (x + s, y) = (x + s + r, y) = (x + (r + s), y) = (r + s) \cdot (x, y)
     \]
-    Moreover, $0 \cdot (x, y) = (x + 0, y) = (x, y)$. Then $\r$ acts on $\r^2$.
+    Moreover, $0 \cdot (x, y) = (x + 0, y) = (x, y)$.
+	Then $\r$ acts on $\r^2$.
 \end{sol}
 
 \begin{spex}[1.7.4]
-    Let $G$ be a group acting on a set $A$ and fix some $a\in A$. Show that the following sets are {\hypersetup{linkcolor=red}\hyperref[def:subgroup]{subgroups}} of $G$:
+    Let $G$ be a group acting on a set $A$ and fix some $a\in A$.
+	Show that the following sets are {\hypersetup{linkcolor=red}\hyperref[def:subgroup]{subgroups}} of $G$:
     \begin{subexercises}
         \item the kernel of the action,
         \item $\set{g\in G \mid g a = a}$--this subgroup is called the \textbf{stabilizer} of $a$ in $G$.
@@ -45,24 +54,30 @@
 \end{spex}
 
 \begin{solenum}
-    \item Let $K$ denote the kernel of the action. If $g, h \in K$, then for any $a \in A$, we have
+    \item Let $K$ denote the kernel of the action.
+	If $g, h \in K$, then for any $a \in A$, we have
     \[
     	gh \cdot a = g \cdot (h \cdot a) = g \cdot a = a
     \]
-    so that $gh \in K$. Also, for any $g \in K$ and any $a \in A$, we have
+    so that $gh \in K$.
+	Also, for any $g \in K$ and any $a \in A$, we have
     \[
     	g\inv \cdot a = g\inv \cdot (g \cdot a) = (g\inv g) \cdot a = 1 \cdot a = a
     \]
-    so that $g\inv \in K$. Therefore, $K$ is a subgroup of $G$.
-    \item Let $G_a$ denote the stabilizer of some fixed $a \in A$. If $g, h \in G_a$, we have
+    so that $g\inv \in K$.
+	Therefore, $K$ is a subgroup of $G$.
+    \item Let $G_a$ denote the stabilizer of some fixed $a \in A$.
+	If $g, h \in G_a$, we have
     \[
     	gh \cdot a = g \cdot (h \cdot a) = g \cdot a = a
     \]
-    so that $gh \in G_a$. Also, for any $g \in G_a$, we have
+    so that $gh \in G_a$.
+	Also, for any $g \in G_a$, we have
     \[
     	g\inv \cdot a = g\inv \cdot (g \cdot a) = (g\inv g) \cdot a = 1 \cdot a = a
     \]
-    so that $g\inv \in G_a$. Therefore, $G_a$ is a subgroup of $G$.
+    so that $g\inv \in G_a$.
+	Therefore, $G_a$ is a subgroup of $G$.
 \end{solenum}
 
 \begin{exercise}[1.7.5]
@@ -70,7 +85,13 @@
 \end{exercise}
 
 \begin{sol}
-    Let $K$ denote the kernel of the action, and let $K'$ denote $\ker\phi$, where $\phi : G \to S_A$ is the permutation representation corresponding to the action. Suppose $g \in K$. Then $g \cdot a = a$ for every $a \in A$, hence $\phi(g)$ is the identity permutation in $S_A$ and $g \in K'$. Conversely, suppose $g \in K'$. Then $\phi(g)$ is the identity permutation in $S_A$, so that for every $a \in A$, we have $\phi(g)(a) = a$. But $\phi(g)(a) = g \cdot a$ by definition of the permutation representation, so that $g \cdot a = a$ for every $a \in A$ and $g \in K$. Therefore, $K = K'$.
+    Let $K$ denote the kernel of the action, and let $K'$ denote $\ker\phi$, where $\phi : G \to S_A$ is the permutation representation corresponding to the action.
+	Suppose $g \in K$.
+	Then $g \cdot a = a$ for every $a \in A$, hence $\phi(g)$ is the identity permutation in $S_A$ and $g \in K'$.
+	Conversely, suppose $g \in K'$.
+	Then $\phi(g)$ is the identity permutation in $S_A$, so that for every $a \in A$, we have $\phi(g)(a) = a$.
+	But $\phi(g)(a) = g \cdot a$ by definition of the permutation representation, so that $g \cdot a = a$ for every $a \in A$ and $g \in K$.
+	Therefore, $K = K'$.
 \end{sol}
 
 \begin{exercise}[1.7.6]
@@ -78,12 +99,19 @@
 \end{exercise}
 
 \begin{solitem}
-    \item [\rightimp] Suppose $G$ acts faithfully on $A$ with kernel $K$. Certainly, $1 \cdot a = a$ for all $a \in A$, hence $1 \in K$. If $g \in K$, then $g \cdot a = a$. Faithfulness of the action implies that $g = 1$, so that $K = \set{1}$.
-    \item [\leftimp] Suppose the kernel of the action is the set consisting only of the identity. Let $g, h \in G$ be such that $g \cdot a = h \cdot a$ for every $a \in A$. Then
+    \item [\rightimp] Suppose $G$ acts faithfully on $A$ with kernel $K$.
+	Certainly, $1 \cdot a = a$ for all $a \in A$, hence $1 \in K$.
+	If $g \in K$, then $g \cdot a = a$.
+	Faithfulness of the action implies that $g = 1$, so that $K = \set{1}$.
+    \item [\leftimp] Suppose the kernel of the action is the set consisting only of the identity.
+	Let $g, h \in G$ be such that $g \cdot a = h \cdot a$ for every $a \in A$.
+	Then
     \[
     	h\inv g \cdot a = h\inv \cdot (g \cdot a) = h\inv \cdot (h \cdot a) = (h\inv h) \cdot a = 1 \cdot a = a
     \]
-    so that $h\inv g$ is in the kernel of the action. By assumption, then $h\inv g$ is the identity element of $G$, and $g = h$. Therefore, the action is faithful.
+    so that $h\inv g$ is in the kernel of the action.
+	By assumption, then $h\inv g$ is the identity element of $G$, and $g = h$.
+	Therefore, the action is faithful.
 \end{solitem}
 
 \begin{exercise}[1.7.7]
@@ -91,11 +119,18 @@
 \end{exercise}
 
 \begin{sol}
-    Let $V$ be a vector space over a field $F$. Let $F\unt$ act on $V$ by $r \cdot v = rv$ for all $r \in F\unt$ and $v \in V$. If $V = \set 0$ is trivial, then $r \cdot 0 = 0$ for all $r \in F\unt$, hence the action is not faithful. Otherwise, let $v \in V$ be nonzero. Then $r \cdot v = v$ implies $(r - 1)v = 0$. Since $v \neq 0$, then $r - 1 = 0$, or $r = 1$. Therefore, the action is faithful.
+    Let $V$ be a vector space over a field $F$.
+	Let $F\unt$ act on $V$ by $r \cdot v = rv$ for all $r \in F\unt$ and $v \in V$.
+	If $V = \set 0$ is trivial, then $r \cdot 0 = 0$ for all $r \in F\unt$, hence the action is not faithful.
+	Otherwise, let $v \in V$ be nonzero.
+	Then $r \cdot v = v$ implies $(r - 1)v = 0$.
+	Since $v \neq 0$, then $r - 1 = 0$, or $r = 1$.
+	Therefore, the action is faithful.
 \end{sol}
 
 \begin{exercise}[1.7.8]
-    Let $A$ be a nonempty set and let $k$ be a positive integer with $k\le |A|$. The symmetric group $S_A$ acts on the set $B$ consisting of all subsets of $A$ of cardinality $k$ by
+    Let $A$ be a nonempty set and let $k$ be a positive integer with $k\le |A|$.
+	The symmetric group $S_A$ acts on the set $B$ consisting of all subsets of $A$ of cardinality $k$ by
     \[
     	\sigma(\set{a_1, \dots, a_k}) = \set{\sigma(a_1), \dots, \sigma(a_k)}.
     \]
@@ -106,13 +141,15 @@
 \end{exercise}
 
 \begin{solenum}
-    \item Let $\sigma, \tau \in S_A$. Then for any cardinality $k$ subset $\set{x_1, \ldots, x_k}$ of $A$, we have
+    \item Let $\sigma, \tau \in S_A$.
+	Then for any cardinality $k$ subset $\set{x_1, \ldots, x_k}$ of $A$, we have
     \begin{align*}
         \sigma \cdot (\tau \cdot \set{x_1, \ldots, x_k}) & = \sigma \cdot \set{\tau(x_1), \ldots, \tau(x_k)} \\
         & = \set{\sigma(\tau(x_1)), \ldots, \sigma(\tau(x_k))} \\
         & = (\sigma \circ \tau) \cdot \set{x_1, \ldots, x_k}
     \end{align*}
-    Moreover, $1 \cdot \set{x_1, \ldots, x_k} = \set{1(x_1), \ldots, 1(x_k)} = \set{x_1, \ldots, x_k}$. Then it is a group action.
+    Moreover, $1 \cdot \set{x_1, \ldots, x_k} = \set{1(x_1), \ldots, 1(x_k)} = \set{x_1, \ldots, x_k}$.
+	Then it is a group action.
     \item
     \[
         \begin{array}{c|c|c}
@@ -170,8 +207,17 @@
 \end{exercise}
 
 \begin{solenum}
-    \item Let $\sigma \in S_n$ be non-identity. Then there exists $a \in A$ such that $\sigma(a) \neq a$. If $k < \abs A$, then we can choose a $k$-element subset $S$ of $A$ such that $a \in S$ and $\sigma(a) \notin S$. Then $\sigma(S) \neq S$, hence no non-identity permutation fixes every $k$-element subset of $A$. Therefore, the action is faithful for all $1 \leq k < \abs A$. If $k = \abs A$, then any $k$-element subset of $A$ is $A$ itself, which is fixed by all permutations, so the action is not faithful for $k = \abs A$.
-    \item Let $\sigma \in S_n$ be a non-identity permutation. Then there exists some $a \in A$ such that $\sigma(a) \neq a$. Consider the ordered $k$-tuple $T = (a, x_2, x_3, \ldots, x_k)$. Then $\sigma(T) = (\sigma(a), \sigma(x_2), \ldots, \sigma(x_k)) \neq T$ because $\sigma a \neq a$. Therefore, no non-identity permutation fixes every ordered $k$-tuple of elements of $A$, and the action is faithful for all $1 \leq k \leq \abs A$.
+    \item Let $\sigma \in S_n$ be non-identity.
+	Then there exists $a \in A$ such that $\sigma(a) \neq a$.
+	If $k < \abs A$, then we can choose a $k$-element subset $S$ of $A$ such that $a \in S$ and $\sigma(a) \notin S$.
+	Then $\sigma(S) \neq S$, hence no non-identity permutation fixes every $k$-element subset of $A$.
+	Therefore, the action is faithful for all $1 \leq k < \abs A$.
+	If $k = \abs A$, then any $k$-element subset of $A$ is $A$ itself, which is fixed by all permutations, so the action is not faithful for $k = \abs A$.
+    \item Let $\sigma \in S_n$ be a non-identity permutation.
+	Then there exists some $a \in A$ such that $\sigma(a) \neq a$.
+	Consider the ordered $k$-tuple $T = (a, x_2, x_3, \ldots, x_k)$.
+	Then $\sigma(T) = (\sigma(a), \sigma(x_2), \ldots, \sigma(x_k)) \neq T$ because $\sigma a \neq a$.
+	Therefore, no non-identity permutation fixes every ordered $k$-tuple of elements of $A$, and the action is faithful for all $1 \leq k \leq \abs A$.
 \end{solenum}
 
 \begin{exercise}[1.7.11]
@@ -179,7 +225,8 @@
 \end{exercise}
 
 \begin{sol}
-    Let $\phi : D_8 \to S_4$ be the permutation representation of the action of $D_8$ on the vertices of a square $\set{1, 2, 3, 4}$, where the vertices are labeled in order around the square starting in the top left corner, then going clockwise. Then the cycle decompositions are as follows:
+    Let $\phi : D_8 \to S_4$ be the permutation representation of the action of $D_8$ on the vertices of a square $\set{1, 2, 3, 4}$, where the vertices are labeled in order around the square starting in the top left corner, then going clockwise.
+	Then the cycle decompositions are as follows:
     \begin{align*}
         \phi(1) & = 1 & \phi(r) & = (1\ 2\ 3\ 4) \\
         \phi(r^2) & = (1\ 3)(2\ 4) & \phi(r^3) & = (1\ 4\ 3\ 2) \\
@@ -189,7 +236,8 @@
 \end{sol}
 
 \begin{exercise}[1.7.12]
-    Assume $n$ is an even positive integer and show that $D_{2n}$ acts on the set consisting of pairs of opposite vertices of a regular $n$-gon. Find the kernel of this action (label vertices as usual).
+    Assume $n$ is an even positive integer and show that $D_{2n}$ acts on the set consisting of pairs of opposite vertices of a regular $n$-gon.
+	Find the kernel of this action (label vertices as usual).
 \end{exercise}
 
 \begin{sol}
@@ -197,13 +245,28 @@
     \[
     	P_k = \set{k, k + n/2} \quad \text{for } k = 0, \ldots, n/2 - 1.
     \]
-    Let $P = \set{P_0, \ldots, P_{n/2 - 1}}$. Since $D_{2n}$ is the set of symmetries of an $n$-gon, then $g \cdot P_i = P_j$ for some $j$ for all $g \in D_{2n}$ and $P_i \in P$. Therefore, $D_{2n}$ acts on $P$.
+    Let $P = \set{P_0, \ldots, P_{n/2 - 1}}$.
+	Since $D_{2n}$ is the set of symmetries of an $n$-gon, then $g \cdot P_i = P_j$ for some $j$ for all $g \in D_{2n}$ and $P_i \in P$.
+	Therefore, $D_{2n}$ acts on $P$.
 
-    Observe that $r^k \cdot P_i = \set{i + k, i + k + n/2} = P_{i + k \bmod n/2}$. Then $r^k$ is in the kernel if $k \bmod n/2 \equiv 0$, or when $n/2 \mid k$. Since $k < n$, then $k$ is either $0$ or $n/2$. Then 1 and $r^{n/2}$ are in the kernel.
+    Observe that $r^k \cdot P_i = \set{i + k, i + k + n/2} = P_{i + k \bmod n/2}$.
+	Then $r^k$ is in the kernel if $k \bmod n/2 \equiv 0$, or when $n/2 \mid k$.
+	Since $k < n$, then $k$ is either $0$ or $n/2$.
+	Then 1 and $r^{n/2}$ are in the kernel.
 
-    On the other hand, since $n$ is even, we have two types of reflections. Let $s_v$ denote the reflection across the line through the vertices $i$ and $i + n/2$. Let $s_m$ denote the reflection across the line bisecting the edge formed by the vertices $i$ and $i + 1$. Then $s_v \cdot P_i = P_i$, while $s_v \cdot P_j = P_{(2i - j) \bmod n/2}$ for $j \neq i$. Then $j \equiv 2i - j \bmod n/2$, or $n/2 \mid 2(j - i)$. Since $j \neq i$ and $0 \leq i, j \leq n/2 - 1$, then $j - i \equiv n/4 \bmod n/2$. Then only $P_i$ is fixed by $s_v$ when $2 \mid n$, while both $P_i$ and $P_{i + n/4}$ are fixed when $4 \mid n$. Then $s_v$ is in the kernel when $n/2 \leq 2$, or $n = 4$.
+    On the other hand, since $n$ is even, we have two types of reflections.
+	Let $s_v$ denote the reflection across the line through the vertices $i$ and $i + n/2$.
+	Let $s_m$ denote the reflection across the line bisecting the edge formed by the vertices $i$ and $i + 1$.
+	Then $s_v \cdot P_i = P_i$, while $s_v \cdot P_j = P_{(2i - j) \bmod n/2}$ for $j \neq i$.
+	Then $j \equiv 2i - j \bmod n/2$, or $n/2 \mid 2(j - i)$.
+	Since $j \neq i$ and $0 \leq i, j \leq n/2 - 1$, then $j - i \equiv n/4 \bmod n/2$.
+	Then only $P_i$ is fixed by $s_v$ when $2 \mid n$, while both $P_i$ and $P_{i + n/4}$ are fixed when $4 \mid n$.
+	Then $s_v$ is in the kernel when $n/2 \leq 2$, or $n = 4$.
 
-    It is clear that $s_m$ does not have a free pair to fix. One may observe that $s_m \cdot P_j = P_{(2i + 1 - j) \bmod n/2}$, so $j \equiv 2i + 1 - j \bmod n/2$, or $n/2 \mid 2(j - i) + 1$. If $4 \mid n$, then $n/2$ is even while $2(j - 1) + 1$ is odd. If $4 \nmid n$, then we have at most one pair fixed, hence $s_m$ in the kernel when $n/2 \leq 1$ or $n = 2$.
+    It is clear that $s_m$ does not have a free pair to fix.
+	One may observe that $s_m \cdot P_j = P_{(2i + 1 - j) \bmod n/2}$, so $j \equiv 2i + 1 - j \bmod n/2$, or $n/2 \mid 2(j - i) + 1$.
+	If $4 \mid n$, then $n/2$ is even while $2(j - 1) + 1$ is odd.
+	If $4 \nmid n$, then we have at most one pair fixed, hence $s_m$ in the kernel when $n/2 \leq 1$ or $n = 2$.
 
     Hence, the kernel is $D_4$ when $n = 2$, $\set{1, r^2, s, sr^2}$ when $n = 4$, and $\set{1, r^2}$ when $n \geq 6$.
 \end{sol}
@@ -213,11 +276,14 @@
 \end{exercise}
 
 \begin{sol}
-    If $g$ is in the kernel of the left regular action of $G$ on itself, then $g \cdot 1 = 1$ in particular. Then $g1 = 1$, implying that $g = 1$. Then the kernel of the left regular action is trivial.
+    If $g$ is in the kernel of the left regular action of $G$ on itself, then $g \cdot 1 = 1$ in particular.
+	Then $g1 = 1$, implying that $g = 1$.
+	Then the kernel of the left regular action is trivial.
 \end{sol}
 
 \begin{exercise}[1.7.14]
-    Let $G$ be a group and let $A = G$. Show that if $G$ is non-Abelian then the maps defined by  
+    Let $G$ be a group and let $A = G$.
+	Show that if $G$ is non-Abelian then the maps defined by  
     \[
     	 g \cdot a = ag \quad \text{for all } g,a\in G 
     \]
@@ -225,15 +291,19 @@
 \end{exercise}
 
 \begin{sol}
-    Since $G$ is non-Abelian, there exists $g, h \in G$ such that $gh \neq hg$. Then for any $a \in A$, we have
+    Since $G$ is non-Abelian, there exists $g, h \in G$ such that $gh \neq hg$.
+	Then for any $a \in A$, we have
     \[
     	g \cdot (h \cdot a) = g \cdot (ah) = (ah)g = a(hg) 
     \]
-    On the other hand, $(gh) \cdot a = a(gh)$. Since $gh \neq hg$, then $a(hg) \neq a(gh)$ for some $a \in A$. Then the maps do not satisfy the axioms of a left group action.
+    On the other hand, $(gh) \cdot a = a(gh)$.
+	Since $gh \neq hg$, then $a(hg) \neq a(gh)$ for some $a \in A$.
+	Then the maps do not satisfy the axioms of a left group action.
 \end{sol}
 
 \begin{exercise}[1.7.15]
-    Let $G$ be any group and let $A = G$. Show that the maps defined by  
+    Let $G$ be any group and let $A = G$.
+	Show that the maps defined by  
     \[
     	 g \cdot a = ag^{-1} \quad \text{for all } g,a\in G 
     \]
@@ -241,28 +311,34 @@
 \end{exercise}
 
 \begin{sol}
-    Let $g, h \in G$. Then for any $a \in A$, we have
+    Let $g, h \in G$.
+	Then for any $a \in A$, we have
     \[
     	g \cdot (h \cdot a) = g \cdot (ah\inv) = a(h\inv g\inv) = a(gh)\inv = (gh) \cdot a
     \]
-    Moreover, $1 \cdot a = a1\inv = a1 = a$. Then the maps define a left group action.
+    Moreover, $1 \cdot a = a1\inv = a1 = a$.
+	Then the maps define a left group action.
 \end{sol}
 
 \begin{spex}[1.7.16]
     \label{def:conjugation}
-    Let $G$ be any group and let $A = G$. Show that the maps defined by  
+    Let $G$ be any group and let $A = G$.
+	Show that the maps defined by  
     \[
     	 g \cdot a = gag^{-1} \quad \text{for all } g,a\in G 
     \]
-    do satisfy the axioms of a (left) group action. This action is called \textbf{conjugation}.
+    do satisfy the axioms of a (left) group action.
+	This action is called \textbf{conjugation}.
 \end{spex}
 
 \begin{sol}
-    Let $g, h \in G$. Then for any $a \in A$, we have
+    Let $g, h \in G$.
+	Then for any $a \in A$, we have
     \[
     	g \cdot (h \cdot a) = g \cdot (hah\inv) = g(hah\inv)g\inv = (gh)a(gh)\inv = (gh) \cdot a
     \]
-    Moreover, $1 \cdot a = 1a1\inv = a$. Then the maps define a left group action.
+    Moreover, $1 \cdot a = 1a1\inv = a$.
+	Then the maps define a left group action.
 \end{sol}
 
 \begin{exercise}[1.7.17]
@@ -270,53 +346,78 @@
     \[
     	 x \mapsto gxg^{-1}. 
     \]
-    For fixed $g\in G$, prove that conjugation by $g$ is an isomorphism from $G$ onto itself. Deduce that $x$ and $gxg^{-1}$ have the same order for all $x\in G$ and that for any subset $A$ of $G$, $|A| = |gAg^{-1}|$ (here $gAg^{-1} = \set{gag^{-1} \mid a\in A}$).
+    For fixed $g\in G$, prove that conjugation by $g$ is an isomorphism from $G$ onto itself.
+	Deduce that $x$ and $gxg^{-1}$ have the same order for all $x\in G$ and that for any subset $A$ of $G$, $|A| = |gAg^{-1}|$ (here $gAg^{-1} = \set{gag^{-1} \mid a\in A}$).
 \end{exercise}
 
 \begin{sol}
-    Let $\phi : x \mapsto gxg\inv$. Let $x, y \in G$. Then
+    Let $\phi : x \mapsto gxg\inv$.
+	Let $x, y \in G$.
+	Then
     \[
     	\phi(x y) = g(xy)g\inv = (gxg\inv)(gyg\inv) = \phi(x)\phi(y)
     \]
-    Moreover, $\phi(1) = g1g\inv = 1$, so $\phi$ preserves the identity. To show injectivity, suppose $\phi(x) = \phi(y)$ for some $x, y \in G$. Then $gxg\inv = gyg\inv$, implying $x = y$. Surjectivity is clear from conjugation by $g\inv$, so $\phi$ is a bijection. Therefore, $\phi$ is an isomorphism from $G$ onto itself.
+    Moreover, $\phi(1) = g1g\inv = 1$, so $\phi$ preserves the identity.
+	To show injectivity, suppose $\phi(x) = \phi(y)$ for some $x, y \in G$.
+	Then $gxg\inv = gyg\inv$, implying $x = y$.
+	Surjectivity is clear from conjugation by $g\inv$, so $\phi$ is a bijection.
+	Therefore, $\phi$ is an isomorphism from $G$ onto itself.
 
-    By \exref{1.6.2} and $\phi \in \aut(G)$, we have $|x| = |gxg\inv|$. Moreover, the bijection $\phi$ restricts to a bijection from $A$ to $gAg\inv$, so $|A| = |gAg\inv|$.
+    By \exref{1.6.2} and $\phi \in \aut(G)$, we have $|x| = |gxg\inv|$.
+	Moreover, the bijection $\phi$ restricts to a bijection from $A$ to $gAg\inv$, so $|A| = |gAg\inv|$.
 \end{sol}
 
 \begin{exercise}[1.7.18]
-    Let $H$ be a group acting on a set $A$. Prove that the relation $\sim$ on $A$ defined by  
+    Let $H$ be a group acting on a set $A$.
+	Prove that the relation $\sim$ on $A$ defined by  
     \[
     	a \sim b \quad \text{if and only if} \quad a = hb \text{ for some } h \in H
     \]
-    is an equivalence relation. (For each $x\in A$ the equivalence class of $x$ under $\sim$ is called the \textbf{orbit} of $x$ under the action of $H$. The orbits under the action of $H$ partition the set $A$.)
+    is an equivalence relation. (For each $x\in A$ the equivalence class of $x$ under $\sim$ is called the \textbf{orbit} of $x$ under the action of $H$.
+	The orbits under the action of $H$ partition the set $A$.)
 \end{exercise}
 
 \begin{solitem}
-    \item Let $a \in A$. Then $a = 1a$, hence $a \sim a$.
-    \item Let $a, b \in A$ such that $a \sim b$. Then $a = hb$ for some $h \in H$. Then $b = h\inv a$, hence $b \sim a$.
-    \item Let $a, b, c \in A$ such that $a \sim b$ and $b \sim c$. Then $a = bh_1$ and $b = ch_2$ for some $h_1, h_2 \in H$. Then $a = (ch_2)h_1 = c(h_2h_1)$, hence $a \sim c$.
+    \item Let $a \in A$.
+	Then $a = 1a$, hence $a \sim a$.
+    \item Let $a, b \in A$ such that $a \sim b$.
+	Then $a = hb$ for some $h \in H$.
+	Then $b = h\inv a$, hence $b \sim a$.
+    \item Let $a, b, c \in A$ such that $a \sim b$ and $b \sim c$.
+	Then $a = bh_1$ and $b = ch_2$ for some $h_1, h_2 \in H$.
+	Then $a = (ch_2)h_1 = c(h_2h_1)$, hence $a \sim c$.
 \end{solitem}
 
 \begin{spex}[1.7.19]
     \label{def:Lagrange's theorem}
-    Let $H$ be a subgroup of the finite group $G$ and let $H$ act on $G$ (here $A = G$) by left multiplication. Let $x\in G$ and let $\mathcal{O}$ be the orbit of $x$ under this action of $H$. Prove that the map  
+    Let $H$ be a subgroup of the finite group $G$ and let $H$ act on $G$ (here $A = G$) by left multiplication.
+	Let $x\in G$ and let $\mathcal{O}$ be the orbit of $x$ under this action of $H$.
+	Prove that the map  
     \[
     	H \to \mathcal{O}, \qquad h \mapsto hx
     \]
-    is a bijection (hence all orbits have cardinality $|H|$). From this and the preceding exercise deduce \textbf{Lagrange's Theorem}:  
+    is a bijection (hence all orbits have cardinality $|H|$).
+	From this and the preceding exercise deduce \textbf{Lagrange's Theorem}:  
     \[
     	\emph{If $G$ is a finite group and $H$ is a subgroup of $G$ then $|H|$ divides $|G|$}.
     \]
 \end{spex}
 
 \begin{sol}
-    Let $\phi : H \to \oo$ be the map defined by $\phi(h) = hx$ for all $h \in H$. We show that $\phi$ is a bijection. To show injectivity, suppose $\phi(h_1) = \phi(h_2)$ for some $h_1, h_2 \in H$. Then
+    Let $\phi : H \to \oo$ be the map defined by $\phi(h) = hx$ for all $h \in H$.
+	We show that $\phi$ is a bijection.
+	To show injectivity, suppose $\phi(h_1) = \phi(h_2)$ for some $h_1, h_2 \in H$.
+	Then
     \[
     	h_1 x = h_2 x
     \]
-    implying that $h_1 = h_2$. Any $y \in \oo$ has some $h \in H$ such that $y = hx$, hence $\phi(h) = y$ and $\phi$ is surjective. Therefore, $\phi$ is a bijection and $\abs \oo = \abs H$.
+    implying that $h_1 = h_2$.
+	Any $y \in \oo$ has some $h \in H$ such that $y = hx$, hence $\phi(h) = y$ and $\phi$ is surjective.
+	Therefore, $\phi$ is a bijection and $\abs \oo = \abs H$.
 
-    To deduce Lagrange's Theorem, note by the previous exercise that the orbits of the action of $H$ on $G$ partition $G$. Since each orbit has cardinality $\abs H$, then $\abs G$ is a sum of multiples of $\abs H$. Therefore, $\abs H$ divides $\abs G$.
+    To deduce Lagrange's Theorem, note by the previous exercise that the orbits of the action of $H$ on $G$ partition $G$.
+	Since each orbit has cardinality $\abs H$, then $\abs G$ is a sum of multiples of $\abs H$.
+	Therefore, $\abs H$ divides $\abs G$.
 \end{sol}
 
 \begin{exercise}[1.7.20]
@@ -324,13 +425,17 @@
 \end{exercise}
 
 \begin{sol}
-    Let $G$ be the group of rigid motions of a tetrahedron with vertices labeled $1, 2, 3, 4$. Then each $\alpha \in G$ sends some vertex to another vertex so that $G$ acts on the set of vertices $A = \set{1, 2, 3, 4}$.
+    Let $G$ be the group of rigid motions of a tetrahedron with vertices labeled $1, 2, 3, 4$.
+	Then each $\alpha \in G$ sends some vertex to another vertex so that $G$ acts on the set of vertices $A = \set{1, 2, 3, 4}$.
 
     Since $G$ acts on $A$, this gives rise to a homomorphism 
     \[
     	\phi : G \to S_4 \quad \text{where} \quad \phi(\alpha)(i) = \alpha(i) \quad \text{for all} \quad i \in A.
     \]
-    To see that $\phi$ is injective, suppose $\phi(\alpha)$ is the identity permutation in $S_4$ for some $\alpha \in G$. Then for every vertex $i \in A$, we have $\phi(\alpha)(i) = i$, so that $\alpha(i) = i$. Since a rigid motion that fixes all vertices must be the identity rigid motion, then $\alpha$ is the identity element of $G$. Therefore, $\phi$ is injective and $G$ is isomorphic to a subgroup of $S_4$.
+    To see that $\phi$ is injective, suppose $\phi(\alpha)$ is the identity permutation in $S_4$ for some $\alpha \in G$.
+	Then for every vertex $i \in A$, we have $\phi(\alpha)(i) = i$, so that $\alpha(i) = i$.
+	Since a rigid motion that fixes all vertices must be the identity rigid motion, then $\alpha$ is the identity element of $G$.
+	Therefore, $\phi$ is injective and $G$ is isomorphic to a subgroup of $S_4$.
 \end{sol}
 
 \begin{exercise}[1.7.21]
@@ -338,7 +443,9 @@
 \end{exercise}
 
 \begin{sol}
-    Recall that $|G| = 24$ from \exref{1.2.10}. Let $G$ be the group of rigid motions of a cube, and let $A = \set{a_1, a_2, a_3, a_4}$ be the set of pairs of opposite vertices of the cube. Then each $\alpha \in G$ sends some pair of opposite vertices to another pair of opposite vertices so that $G$ acts on $A$.
+    Recall that $|G| = 24$ from \exref{1.2.10}.
+	Let $G$ be the group of rigid motions of a cube, and let $A = \set{a_1, a_2, a_3, a_4}$ be the set of pairs of opposite vertices of the cube.
+	Then each $\alpha \in G$ sends some pair of opposite vertices to another pair of opposite vertices so that $G$ acts on $A$.
 
     Using similar reasoning as in the exercise, we have an injective homomorphism
     \[
@@ -353,21 +460,30 @@
 \end{exercise}
 
 \begin{sol}
-    Let $G$ be the group of rigid motions of an octahedron. Let $A = \set{f_1, f_2, f_3, f_4}$ be the set of pairs of opposite faces of the octahedron. Then each $\alpha \in G$ sends some pair of opposite faces to another pair of opposite faces so that $G$ acts on $A$.
+    Let $G$ be the group of rigid motions of an octahedron.
+	Let $A = \set{f_1, f_2, f_3, f_4}$ be the set of pairs of opposite faces of the octahedron.
+	Then each $\alpha \in G$ sends some pair of opposite faces to another pair of opposite faces so that $G$ acts on $A$.
 
     Using similar reasoning as in the previous exercises, we have an injective homomorphism
     \[
     	\phi : G \to S_4 \quad \text{where} \quad \phi(\alpha)(f_i) = \alpha(f_i) \quad \text{for all} \quad f_i \in A.
     \]
-    Therefore, $G$ is isomorphic to a subgroup of $S_4$. From \exref{1.2.11}, we know that $|G| = 24$, hence $G \cong S_4$. From the previous exercise, we know that the group of rigid motions of a cube is also isomorphic to $S_4$, so the groups of rigid motions of a cube and of an octahedron are isomorphic.
+    Therefore, $G$ is isomorphic to a subgroup of $S_4$.
+	From \exref{1.2.11}, we know that $|G| = 24$, hence $G \cong S_4$.
+	From the previous exercise, we know that the group of rigid motions of a cube is also isomorphic to $S_4$, so the groups of rigid motions of a cube and of an octahedron are isomorphic.
 \end{sol}
 
 \begin{exercise}[1.7.23]
-    Explain why the action of the group of rigid motions of a cube on the set of three pairs of opposite faces is not faithful. Find the kernel of this action.
+    Explain why the action of the group of rigid motions of a cube on the set of three pairs of opposite faces is not faithful.
+	Find the kernel of this action.
 \end{exercise}
 
 \begin{sol}
     The group of rigid motions of a cube has 24 elements, while permutations of the set of three pairs of opposing faces has 6 elements, so the action cannot be faithful as no homomorphism can be injective between finite groups of different sizes (if there was some injective homomorphism, it would imply bijectivity between the two groups of different cardinality, which is impossible).
     
-    Consider a cube such that its center is at the origin of $\r^3$ space. Then any rotation around the axes fixes a pair of faces, while sends the other two pairs back to themselves (to visualize this explicitly, consider the cube with vertices $(\pm 1, \pm 1, \pm 1)$ and the $z$-axis. A rotation around the $z$-axis would fix the faces $(\pm 1, \pm 1, 1)$ and $(\pm 1, \pm 1, -1)$, while it rotates the pair of faces $(1, \pm 1, \pm 1)$ and $(-1, \pm 1, \pm 1)$ back to each other---these are the faces that vary along the $x$-axis. One can construct the same for the pair of faces that lie along the $y$-axis and deduce the same thing). There are exactly 3 of these $180^\circ$ rotations, so the kernel of this action consists of these rotations and the identity.
+    Consider a cube such that its center is at the origin of $\r^3$ space.
+	Then any rotation around the axes fixes a pair of faces, while sends the other two pairs back to themselves (to visualize this explicitly, consider the cube with vertices $(\pm 1, \pm 1, \pm 1)$ and the $z$-axis.
+	A rotation around the $z$-axis would fix the faces $(\pm 1, \pm 1, 1)$ and $(\pm 1, \pm 1, -1)$, while it rotates the pair of faces $(1, \pm 1, \pm 1)$ and $(-1, \pm 1, \pm 1)$ back to each other---these are the faces that vary along the $x$-axis.
+	One can construct the same for the pair of faces that lie along the $y$-axis and deduce the same thing).
+	There are exactly 3 of these $180^\circ$ rotations, so the kernel of this action consists of these rotations and the identity.
 \end{sol}

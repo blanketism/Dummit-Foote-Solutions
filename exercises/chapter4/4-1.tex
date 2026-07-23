@@ -5,51 +5,98 @@
 Let $G$ be a group and let $A$ be a nonempty set.
 
 \begin{exercise}[4.1.1]
-	Let $G$ act on the set $A$. Prove that if $a,b \in A$ and $b = g \cdot a$ for some $g \in G$, then \(G_b = g G_a g^{-1}\) (\(G_a\) is the stabilizer of $a$). Deduce that if $G$ acts transitively on $A$ then the kernel of the action is
+	Let $G$ act on the set $A$.
+	Prove that if $a,b \in A$ and $b = g \cdot a$ for some $g \in G$, then \(G_b = g G_a g^{-1}\) (\(G_a\) is the stabilizer of $a$).
+	Deduce that if $G$ acts transitively on $A$ then the kernel of the action is
 	\[
 		\bigcap_{g \in G} g G_a g^{-1}.
 	\]
 \end{exercise}
 
 \begin{sol}
-	Suppose $h \in G_b$. We want to show that $h \in gG_ag\inv$. Since $h \in G_b$, we have $h \cdot b = b$. But $b = g \cdot a$, so $h \cdot (g \cdot a) = g \cdot a$. Applying $g\inv$ to both sides, we get $g\inv h g \cdot a = a$. This means that $g\inv h g \in G_a$, so $h \in g G_a g\inv$. Thus, we have shown that \(G_b \subseteq g G_a g^{-1}\). For the other direction, suppose $h \in g G_a g^{-1}$. Then there exists some $k \in G_a$ such that $h = g k g^{-1}$. We want to show that $h \in G_b$. We have $h \cdot b = (g k g^{-1}) \cdot (g \cdot a) = g \cdot (k \cdot a) = g \cdot a = b$, since $k \in G_a$ implies $k \cdot a = a$. Thus, $h \in G_b$. Therefore, we have shown that \(g G_a g^{-1} \subseteq G_b\). Combining both inclusions, we conclude that \(G_b = g G_a g^{-1}\).
+	Suppose $h \in G_b$.
+	We want to show that $h \in gG_ag\inv$.
+	Since $h \in G_b$, we have $h \cdot b = b$.
+	But $b = g \cdot a$, so $h \cdot (g \cdot a) = g \cdot a$.
+	Applying $g\inv$ to both sides, we get $g\inv h g \cdot a = a$.
+	This means that $g\inv h g \in G_a$, so $h \in g G_a g\inv$.
+	Thus, we have shown that \(G_b \subseteq g G_a g^{-1}\).
+	For the other direction, suppose $h \in g G_a g^{-1}$.
+	Then there exists some $k \in G_a$ such that $h = g k g^{-1}$.
+	We want to show that $h \in G_b$.
+	We have $h \cdot b = (g k g^{-1}) \cdot (g \cdot a) = g \cdot (k \cdot a) = g \cdot a = b$, since $k \in G_a$ implies $k \cdot a = a$.
+	Thus, $h \in G_b$.
+	Therefore, we have shown that \(g G_a g^{-1} \subseteq G_b\).
+	Combining both inclusions, we conclude that \(G_b = g G_a g^{-1}\).
 
-	Now, if $G$ acts transitively on $A$, then for any $b \in A$, there exists some $g \in G$ such that $b = g \cdot a$. From the first part, we have \(G_b = g G_a g^{-1}\). The kernel of the action is the intersection of all stabilizers \(G_b\) for \(b \in A\). Therefore, the kernel is
+	Now, if $G$ acts transitively on $A$, then for any $b \in A$, there exists some $g \in G$ such that $b = g \cdot a$.
+	From the first part, we have \(G_b = g G_a g^{-1}\).
+	The kernel of the action is the intersection of all stabilizers \(G_b\) for \(b \in A\).
+	Therefore, the kernel is
 	\[
 		\bigcap_{b \in A} G_b = \bigcap_{g \in G} g G_a g^{-1}. \qh
 	\]
 \end{sol}
 
 \begin{exercise}[4.1.2]
-	Let $G$ be a permutation group on the set $A$ (i.e., \(G \leq S_A\)), let \(\sigma \in G\) and let \(a \in A\). Prove that \(\sigma G_a \sigma^{-1} = G_{\sigma(a)}\). Deduce that if $G$ acts transitively on $A$ then 
+	Let $G$ be a permutation group on the set $A$ (i.e., \(G \leq S_A\)), let \(\sigma \in G\) and let \(a \in A\).
+	Prove that \(\sigma G_a \sigma^{-1} = G_{\sigma(a)}\).
+	Deduce that if $G$ acts transitively on $A$ then 
 	\[
 		\bigcap_{\sigma \in G} \sigma G_a \sigma^{-1} = 1.
 	\]
 \end{exercise}
 
 \begin{sol}
-	Suppose $\tau \in \sigma G_a\sigma\inv$. We want to show that $\tau \in G_{\sigma(a)}$. Since $\tau \in \sigma G_a \sigma^{-1}$, there exists some $\rho \in G_a$ such that $\tau = \sigma \rho \sigma^{-1}$. We have $\tau \cdot \sigma(a) = (\sigma \rho \sigma^{-1}) \cdot \sigma(a) = \sigma \cdot (\rho \cdot a) = \sigma(a)$, since $\rho \in G_a$ implies $\rho \cdot a = a$. Thus, $\tau \in G_{\sigma(a)}$. Therefore, we have shown that \(\sigma G_a \sigma^{-1} \subseteq G_{\sigma(a)}\). For the other direction, suppose $\tau \in G_{\sigma(a)}$. We want to show that $\tau \in \sigma G_a \sigma^{-1}$. We have $\tau \cdot \sigma(a) = \sigma(a)$. Applying $\sigma^{-1}$ to both sides, we get $\sigma^{-1} \tau \sigma \cdot a = a$. This means that $\sigma^{-1} \tau \sigma \in G_a$, so $\tau \in \sigma G_a \sigma^{-1}$. Thus, we have shown that \(G_{\sigma(a)} \subseteq \sigma G_a \sigma^{-1}\). Combining both inclusions, we conclude that \(\sigma G_a \sigma^{-1} = G_{\sigma(a)}\).
+	Suppose $\tau \in \sigma G_a\sigma\inv$.
+	We want to show that $\tau \in G_{\sigma(a)}$.
+	Since $\tau \in \sigma G_a \sigma^{-1}$, there exists some $\rho \in G_a$ such that $\tau = \sigma \rho \sigma^{-1}$.
+	We have $\tau \cdot \sigma(a) = (\sigma \rho \sigma^{-1}) \cdot \sigma(a) = \sigma \cdot (\rho \cdot a) = \sigma(a)$, since $\rho \in G_a$ implies $\rho \cdot a = a$.
+	Thus, $\tau \in G_{\sigma(a)}$.
+	Therefore, we have shown that \(\sigma G_a \sigma^{-1} \subseteq G_{\sigma(a)}\).
+	For the other direction, suppose $\tau \in G_{\sigma(a)}$.
+	We want to show that $\tau \in \sigma G_a \sigma^{-1}$.
+	We have $\tau \cdot \sigma(a) = \sigma(a)$.
+	Applying $\sigma^{-1}$ to both sides, we get $\sigma^{-1} \tau \sigma \cdot a = a$.
+	This means that $\sigma^{-1} \tau \sigma \in G_a$, so $\tau \in \sigma G_a \sigma^{-1}$.
+	Thus, we have shown that \(G_{\sigma(a)} \subseteq \sigma G_a \sigma^{-1}\).
+	Combining both inclusions, we conclude that \(\sigma G_a \sigma^{-1} = G_{\sigma(a)}\).
 
-	Now, if $G$ acts transitively on $A$, then for any $b \in A$, there exists some $\sigma \in G$ such that $b = \sigma(a)$. From the first part, we have \(\sigma G_a \sigma^{-1} = G_b\). The kernel of the action is the intersection of all stabilizers \(G_b\) for \(b \in A\). Therefore, the kernel is
+	Now, if $G$ acts transitively on $A$, then for any $b \in A$, there exists some $\sigma \in G$ such that $b = \sigma(a)$.
+	From the first part, we have \(\sigma G_a \sigma^{-1} = G_b\).
+	The kernel of the action is the intersection of all stabilizers \(G_b\) for \(b \in A\).
+	Therefore, the kernel is
 	\[
 		\bigcap_{b \in A} G_b = \bigcap_{\sigma \in G} \sigma G_a \sigma^{-1} = 1. \qh
 	\]
 \end{sol}
 
 \begin{exercise}[4.1.3]
-	Assume that $G$ is an Abelian, transitive subgroup of $S_A$. Show that \(\sigma(a) \neq a\) for all \(\sigma \in G - \set{1}\) and all \(a \in A\). Deduce that \(|G| = |A|\). [Use the preceding exercise.]
+	Assume that $G$ is an Abelian, transitive subgroup of $S_A$.
+	Show that \(\sigma(a) \neq a\) for all \(\sigma \in G - \set{1}\) and all \(a \in A\).
+	Deduce that \(|G| = |A|\). [Use the preceding exercise.]
 \end{exercise}
 
 \begin{sol}
-	Since $G$ is Abelian, then the conjugate of $G_a$ is trivial, i.e., $\sigma G_a \sigma\inv = G_a$ for all $\sigma \in G$. From the previous exercise, we know that the kernel of this action is trivial. However, the intersection of all $\sigma G_a\sigma\inv$ is just $G_a$ so that $G_a = 1$. Then $G_a$ is trivial for every $a \in A$, hence $\sigma(a) \neq a$ for all $\sigma \in G - \set{1}$ and all $a \in A$. It follows by Proposition 4.2 that $|G|/|G_a| = |A|$, hence $|G| = |A|$ because $G_a$ is trivial.
+	Since $G$ is Abelian, then the conjugate of $G_a$ is trivial, i.e., $\sigma G_a \sigma\inv = G_a$ for all $\sigma \in G$.
+	From the previous exercise, we know that the kernel of this action is trivial.
+	However, the intersection of all $\sigma G_a\sigma\inv$ is just $G_a$ so that $G_a = 1$.
+	Then $G_a$ is trivial for every $a \in A$, hence $\sigma(a) \neq a$ for all $\sigma \in G - \set{1}$ and all $a \in A$.
+	It follows by Proposition 4.2 that $|G|/|G_a| = |A|$, hence $|G| = |A|$ because $G_a$ is trivial.
 \end{sol}
 
 \begin{exercise}[4.1.4]
-	Let \(S_3\) act on the set \(\Omega\) of ordered pairs \(\set{(i,j) \mid 1 \le i,j \le 3}\) by \(\sigma((i,j)) = (\sigma(i), \sigma(j))\). Find the orbits of \(S_3\) on \(\Omega\). For each \(\sigma \in S_3\) find the cycle decomposition of \(\sigma\) under this action (i.e., find its cycle decomposition when \(\sigma\) is considered as an element of \(S_9\)—first fix a labeling of these nine ordered pairs). For each orbit \(\mathcal{O}\) of $S_3$ acting on these nine points, pick some \(a \in \mathcal{O}\) and find the stabilizer of \(a\) in \(S_3\).
+	Let \(S_3\) act on the set \(\Omega\) of ordered pairs \(\set{(i,j) \mid 1 \le i,j \le 3}\) by \(\sigma((i,j)) = (\sigma(i), \sigma(j))\).
+	Find the orbits of \(S_3\) on \(\Omega\).
+	For each \(\sigma \in S_3\) find the cycle decomposition of \(\sigma\) under this action (i.e., find its cycle decomposition when \(\sigma\) is considered as an element of \(S_9\)—first fix a labeling of these nine ordered pairs).
+	For each orbit \(\mathcal{O}\) of $S_3$ acting on these nine points, pick some \(a \in \mathcal{O}\) and find the stabilizer of \(a\) in \(S_3\).
 \end{exercise}
 
 \begin{sol}
-	Note that in $\Omega$, there are two types of ordered pairs: those with identical elements and those with distinct elements. In the former case, it is clear that any $\sigma \in S_3$ will map such a pair to another pair with identical elements. In the latter case, it is easy to find some $\sigma \in S_3$ that maps any ordered pair with distinct elements to any other such pair. We now label the elements of $\Omega$ accordingly:
+	Note that in $\Omega$, there are two types of ordered pairs: those with identical elements and those with distinct elements.
+	In the former case, it is clear that any $\sigma \in S_3$ will map such a pair to another pair with identical elements.
+	In the latter case, it is easy to find some $\sigma \in S_3$ that maps any ordered pair with distinct elements to any other such pair.
+	We now label the elements of $\Omega$ accordingly:
     \begin{itemize}
         \item 1 = (1, 1)
         \item 2 = (2, 2)
@@ -65,13 +112,19 @@ Let $G$ be a group and let $A$ be a nonempty set.
 	\[
 		\oo_1 = \set{(i, i) \mid i \in \set{1, 2, 3}} \quad \text{and} \quad \oo_2 = \set{(i, j) \mid i \neq j}
 	\]
-	of $S_3$ acting on $\Omega$. Note that $|\oo_1| = 3$ and $|\oo_2| = 6$. Now for each $\sigma \in S_3$, we find its cycle decomposition as an element of $S_9$. We describe how to compute one such cycle decomposition, and the rest follow similarly. Consider $\sigma = (1 2 3) \in S_3$. Then we have the following mappings:
+	of $S_3$ acting on $\Omega$.
+	Note that $|\oo_1| = 3$ and $|\oo_2| = 6$.
+	Now for each $\sigma \in S_3$, we find its cycle decomposition as an element of $S_9$.
+	We describe how to compute one such cycle decomposition, and the rest follow similarly.
+	Consider $\sigma = (1 2 3) \in S_3$.
+	Then we have the following mappings:
 	\begin{itemize}
 		\item $(1, 1) \mapsto (2, 2) \mapsto (3, 3) \mapsto (1, 1)$, which corresponds to the cycle $(1\ 2\ 3)$ in $S_9$.
 		\item $(1, 2) \mapsto (2, 3) \mapsto (3, 1) \mapsto (1, 2)$, which corresponds to the cycle $(4\ 8\ 7)$ in $S_9$.
 		\item $(2, 1) \mapsto (3, 2) \mapsto (1, 3) \mapsto (2, 1)$, which corresponds to the cycle $(5\ 9\ 6)$ in $S_9$.
 	\end{itemize}
-	Combining these cycles, we find that the cycle decomposition of $\sigma = (1 2 3)$ in $S_9$ is $(1\ 2\ 3)(4\ 8\ 7)(5\ 9\ 6)$. The cycle decompositions for all elements of $S_3$ acting on $\Omega$ are as follows:
+	Combining these cycles, we find that the cycle decomposition of $\sigma = (1 2 3)$ in $S_9$ is $(1\ 2\ 3)(4\ 8\ 7)(5\ 9\ 6)$.
+	The cycle decompositions for all elements of $S_3$ acting on $\Omega$ are as follows:
     \begin{itemize}
         \item $1 \in S_3$ is the same as $1 \in S_9$.
         \item $(1 2)$: $(1\ 2)(4\ 5)(6\ 7)(8\ 9)$
@@ -80,7 +133,12 @@ Let $G$ be a group and let $A$ be a nonempty set.
         \item $(1 2 3)$: $(1\ 2\ 3)(4\ 8\ 7)(5\ 9\ 6)$
         \item $(1 3 2)$: $(1\ 3\ 2)(4\ 7\ 8)(5\ 6\ 9)$
     \end{itemize}
-	For $\oo_1$, we pick $a = (1, 1)$. The only $\sigma \in S_3$ that fixes $(1, 1)$ is the identity permutation and $(2\ 3)$, so the stabilizer of $(1, 1)$ in $S_3$ is $\gen{(2\ 3)}$. Moreover, we have $|G_a||\oo_1| = 2 \cdot 3 = 6 = |S_3|$ as expected. For $\oo_2$, we pick $a = (1, 2)$. The only $\sigma \in S_3$ that fixes $(1, 2)$ is the identity permutation, so the stabilizer of $(1, 2)$ in $S_3$ is 1. Again, $|G_a||\oo_2| = 1 \cdot 6 = 6 = |S_3|$.
+	For $\oo_1$, we pick $a = (1, 1)$.
+	The only $\sigma \in S_3$ that fixes $(1, 1)$ is the identity permutation and $(2\ 3)$, so the stabilizer of $(1, 1)$ in $S_3$ is $\gen{(2\ 3)}$.
+	Moreover, we have $|G_a||\oo_1| = 2 \cdot 3 = 6 = |S_3|$ as expected.
+	For $\oo_2$, we pick $a = (1, 2)$.
+	The only $\sigma \in S_3$ that fixes $(1, 2)$ is the identity permutation, so the stabilizer of $(1, 2)$ in $S_3$ is 1.
+	Again, $|G_a||\oo_2| = 1 \cdot 6 = 6 = |S_3|$.
 \end{sol}
 
 \begin{exercise}[4.1.5]
@@ -92,7 +150,8 @@ Let $G$ be a group and let $A$ be a nonempty set.
 \end{exercise}
 
 \begin{solenum}
-	\item We begin by classifying these set of triples. There are five types of triples:
+	\item We begin by classifying these set of triples.
+	There are five types of triples:
 	\begin{itemize}
 		\item Type 1: Triples with all identical elements.
 		\item Type 2: Triples whose two first coordinates are identical.
@@ -100,7 +159,9 @@ Let $G$ be a group and let $A$ be a nonempty set.
 		\item Type 4: Triples whose last two coordinates are identical.
 		\item Type 5: Triples with all distinct elements.
 	\end{itemize}
-	Note that this is a correct classification. One may suggest to combine Types 2, 3, and 4 into a singular type. However, observe that no elements may be permuted such that the location of a pair of identical coordinates move to another one, i.e., there is no such permutation $\sigma$ in $S_3$ such that $(1, 1, 2)$ maps to $(1, 2, 2)$.We now label the elements of $\Omega$ lexicographically as follows, i.e., we begin by increasing the last coordinate, then increasing the middle coordinate, and finally increasing the first coordinate:
+	Note that this is a correct classification.
+	One may suggest to combine Types 2, 3, and 4 into a singular type.
+	However, observe that no elements may be permuted such that the location of a pair of identical coordinates move to another one, i.e., there is no such permutation $\sigma$ in $S_3$ such that $(1, 1, 2)$ maps to $(1, 2, 2)$.We now label the elements of $\Omega$ lexicographically as follows, i.e., we begin by increasing the last coordinate, then increasing the middle coordinate, and finally increasing the first coordinate:
     \begin{itemize}
         \item $1 = (1, 1, 1)$
         \item $2 = (1, 1, 2)$
@@ -147,8 +208,17 @@ Let $G$ be a group and let $A$ be a nonempty set.
 		\item $(1\ 2\ 3)$: $(1\ 14\ 27)(2\ 15\ 25)(3\ 13\ 26)(4\ 17\ 21)(5\ 18\ 19)(6\ 16\ 20)(7\ 11\ 24)(8\ 12\ 22)(9\ 10\ 23)$
 		\item $(1\ 3\ 2)$: $(1\ 27\ 14)(2\ 25\ 15)(3\ 26\ 13)(4\ 21\ 17)(5\ 19\ 18)(6\ 20\ 16)(7\ 24\ 11)(8\ 22\ 12)(9\ 23\ 10)$
 	\end{itemize}
-	For $\oo_1$, pick $a = (1\ 1\ 1)$. The elements that stabilize $a$ are the identity permutation and $(2\ 3)$, so the stabilizer of $a$ in $S_3$ is $\gen{(2\ 3)}$. We have $|G_a||\oo_1| = 2 \cdot 3 = 6 = |S_3|$. For the other orbits, note that $S_3$ acts transitively on each of them, so the stabilizer of any chosen element in these orbits is trivial. For example, for $\oo_2$, pick $a = (1\ 1\ 2)$. The only element that stabilizes $a$ is the identity permutation, so the stabilizer of $a$ in $S_3$ is 1. We have $|G_a||\oo_2| = 1 \cdot 6 = 6 = |S_3|$. The same logic applies to $\oo_3$, $\oo_4$, and $\oo_5$.
-	\item We begin by classifying the nonempty subsets of $\set{1, 2, 3}$. There are three types of subsets: 1-element subsets, 2-element subsets, and the 3-element subset. We now label the elements of $\mathcal{P}(\set{1, 2, 3}) - \set{\varnothing}$ as follows:
+	For $\oo_1$, pick $a = (1\ 1\ 1)$.
+	The elements that stabilize $a$ are the identity permutation and $(2\ 3)$, so the stabilizer of $a$ in $S_3$ is $\gen{(2\ 3)}$.
+	We have $|G_a||\oo_1| = 2 \cdot 3 = 6 = |S_3|$.
+	For the other orbits, note that $S_3$ acts transitively on each of them, so the stabilizer of any chosen element in these orbits is trivial.
+	For example, for $\oo_2$, pick $a = (1\ 1\ 2)$.
+	The only element that stabilizes $a$ is the identity permutation, so the stabilizer of $a$ in $S_3$ is 1.
+	We have $|G_a||\oo_2| = 1 \cdot 6 = 6 = |S_3|$.
+	The same logic applies to $\oo_3$, $\oo_4$, and $\oo_5$.
+	\item We begin by classifying the nonempty subsets of $\set{1, 2, 3}$.
+	There are three types of subsets: 1-element subsets, 2-element subsets, and the 3-element subset.
+	We now label the elements of $\mathcal{P}(\set{1, 2, 3}) - \set{\varnothing}$ as follows:
     \begin{itemize}
         \item $1 = \set{1}$
         \item $2 = \set{2}$
@@ -173,7 +243,14 @@ Let $G$ be a group and let $A$ be a nonempty set.
 		\item $(1\ 2\ 3)$: $(1\ 2\ 3)(4\ 6\ 5)$
 		\item $(1\ 3\ 2)$: $(1\ 3\ 2)(4\ 5\ 6)$
 	\end{itemize}
-	For $\oo_1$, pick $a = \set{1}$. The only elements that stabilize $a$ are the identity permutation and $(2\ 3)$, so the stabilizer of $a$ in $S_3$ is $\gen{(2\ 3)}$. We have $|G_a||\oo_1| = 2 \cdot 3 = 6 = |S_3|$. For $\oo_2$, pick $a = \set{1, 2}$. The only elements that stabilize $a$ are the identity permutation and $(1\ 2)$, so the stabilizer of $a$ in $S_3$ is $\gen{(1\ 2)}$. We have $|G_a||\oo_2| = 2 \cdot 3 = 6 = |S_3|$. For $\oo_3$, note that $S_3$ acts trivially on this orbit, so the stabilizer of $\set{1, 2, 3}$ in $S_3$ is all of $S_3$. We have $|G_a||\oo_3| = 6 \cdot 1 = 6 = |S_3|$.
+	For $\oo_1$, pick $a = \set{1}$.
+	The only elements that stabilize $a$ are the identity permutation and $(2\ 3)$, so the stabilizer of $a$ in $S_3$ is $\gen{(2\ 3)}$.
+	We have $|G_a||\oo_1| = 2 \cdot 3 = 6 = |S_3|$.
+	For $\oo_2$, pick $a = \set{1, 2}$.
+	The only elements that stabilize $a$ are the identity permutation and $(1\ 2)$, so the stabilizer of $a$ in $S_3$ is $\gen{(1\ 2)}$.
+	We have $|G_a||\oo_2| = 2 \cdot 3 = 6 = |S_3|$.
+	For $\oo_3$, note that $S_3$ acts trivially on this orbit, so the stabilizer of $\set{1, 2, 3}$ in $S_3$ is all of $S_3$.
+	We have $|G_a||\oo_3| = 6 \cdot 1 = 6 = |S_3|$.
 \end{solenum}
 
 \begin{exercise}[4.1.6]
@@ -186,73 +263,157 @@ Let $G$ be a group and let $A$ be a nonempty set.
 \end{exercise}
 
 \begin{solenum}
-	\item Note that the size of the orbit is given by \(|S_4|/|G_{x_1 + x_2}| = 24/4 = 6\). The polynomials in the orbit of $S_4$ on $R$ containing \(x_1 + x_2\) are
+	\item Note that the size of the orbit is given by \(|S_4|/|G_{x_1 + x_2}| = 24/4 = 6\).
+	The polynomials in the orbit of $S_4$ on $R$ containing \(x_1 + x_2\) are
 	\[
 		x_1 + x_2, x_1 + x_3, x_1 + x_4, x_2 + x_3, x_2 + x_4, x_3 + x_4
 	\]
-	\item The size of the orbit is 3. The polynomials in the orbit of $S_4$ on $R$ containing \(x_1 x_2 + x_3 x_4\) are
+	\item The size of the orbit is 3.
+	The polynomials in the orbit of $S_4$ on $R$ containing \(x_1 x_2 + x_3 x_4\) are
 	\[
 		x_1 x_2 + x_3 x_4, x_1 x_3 + x_2 x_4, x_1 x_4 + x_2 x_3
 	\]
-	\item Note that the stabilizer of \((x_1 + x_2)(x_3 + x_4)\) has order 8 (it is the same as that of \(x_1 x_2 + x_3 x_4\)). Thus, the size of the orbit is 3. The polynomials in the orbit of $S_4$ on $R$ containing \((x_1 + x_2)(x_3 + x_4)\) are
+	\item Note that the stabilizer of \((x_1 + x_2)(x_3 + x_4)\) has order 8 (it is the same as that of \(x_1 x_2 + x_3 x_4\)).
+	Thus, the size of the orbit is 3.
+	The polynomials in the orbit of $S_4$ on $R$ containing \((x_1 + x_2)(x_3 + x_4)\) are
 	\[
 		(x_1 + x_2)(x_3 + x_4), (x_1 + x_3)(x_2 + x_4), (x_1 + x_4)(x_2 + x_3)\qh
 	\]
 \end{solenum}
 
 \begin{spex}[4.1.7]
-	Let $G$ be a transitive permutation group on the finite set $A$. A \emph{block} is a nonempty subset $B$ of $A$ such that for all $\sigma \in G$ either $\sigma(B) = B$ or $\sigma(B) \cap B = \varnothing$ (here $\sigma(B) = \set{\sigma(b) \mid b \in B}$). 
+	Let $G$ be a transitive permutation group on the finite set $A$.
+	A \emph{block} is a nonempty subset $B$ of $A$ such that for all $\sigma \in G$ either $\sigma(B) = B$ or $\sigma(B) \cap B = \varnothing$ (here $\sigma(B) = \set{\sigma(b) \mid b \in B}$). 
 	\begin{subexercises}
 		\item Prove that if $B$ is a block containing the element $a$ of $A$, then the set $G_B$ defined by $G_B = \set{\sigma \in G \mid \sigma(B) = B}$ is a subgroup of $G$ containing $G_a$.
 		\item Show that if $B$ is a block and $\sigma_1(B), \sigma_2(B), \ldots, \sigma_n(B)$ are all the distinct images of $B$ under the elements of $G$, then these form a partition of $A$.
-		\item A (transitive) group $G$ on a set $A$ is said to be \emph{primitive} if the only blocks in $A$ are the trivial ones: the sets of size $1$ and $A$ itself. Show that $S_4$ is primitive on $A = \set{1,2,3,4}$. Show that $D_8$ is not primitive as a permutation group on the four vertices of a square.
+		\item A (transitive) group $G$ on a set $A$ is said to be \emph{primitive} if the only blocks in $A$ are the trivial ones: the sets of size $1$ and $A$ itself.
+		Show that $S_4$ is primitive on $A = \set{1,2,3,4}$.
+		Show that $D_8$ is not primitive as a permutation group on the four vertices of a square.
 		\item Prove that the transitive group $G$ is primitive on $A$ if and only if for each $a \in A$, the only subgroups of $G$ containing $G_a$ are $G_a$ and $G$ (i.e., $G_a$ is a \emph{maximal} subgroup of $G$, cf. \exref{2.4.16}). [Use part (a).]
 	\end{subexercises}
 \end{spex}
 
 \begin{solenum}
-	\item We first show that $G_B$ is a subgroup of $G$. Since $1(B) = B$, then $1 \in G_B$, hence it is nonempty. If $\sigma, \tau \in G$ such that $\sigma(B) = B$ and $\tau(B) = B$, we note that $\tau\inv(B) = B$ as well, hence $\sigma, \tau\inv \in G_B$. Then $(\sigma\tau\inv)(B) = \sigma(\tau\inv(B)) = \sigma(B) = B$, so $\sigma\tau\inv \in G_B$. Hence $G_B \leq G$.
+	\item We first show that $G_B$ is a subgroup of $G$.
+	Since $1(B) = B$, then $1 \in G_B$, hence it is nonempty.
+	If $\sigma, \tau \in G$ such that $\sigma(B) = B$ and $\tau(B) = B$, we note that $\tau\inv(B) = B$ as well, hence $\sigma, \tau\inv \in G_B$.
+	Then $(\sigma\tau\inv)(B) = \sigma(\tau\inv(B)) = \sigma(B) = B$, so $\sigma\tau\inv \in G_B$.
+	Hence $G_B \leq G$.
 	
-	Now, let $a \in B$. If $\sigma \in G_a$, then $\sigma(a) = a$. Since $a \in B$, then $\sigma(a) \in \sigma(B)$. But $\sigma(a) = a \in B$, so $\sigma(B) \cap B \neq \varnothing$. By the definition of a block, this implies that $\sigma(B) = B$, hence $\sigma \in G_B$. Therefore, we have shown that $G_a \leq G_B$.
-	\item Let $B$ be a block and let $\sigma_1(B), \sigma_2(B), \ldots, \sigma_n(B)$ be all the distinct images of $B$ under the elements of $G$. By transitivity of $G$ on $A$, then for some $a \in A$, there exists $b \in B$ such that $\sigma(b) = a$. Then $a \in \sigma(B)$, and since $\sigma(B)$ is one of the sets $\sigma_1(B), \sigma_2(B), \ldots, \sigma_n(B)$, it follows that
+	Now, let $a \in B$.
+	If $\sigma \in G_a$, then $\sigma(a) = a$.
+	Since $a \in B$, then $\sigma(a) \in \sigma(B)$.
+	But $\sigma(a) = a \in B$, so $\sigma(B) \cap B \neq \varnothing$.
+	By the definition of a block, this implies that $\sigma(B) = B$, hence $\sigma \in G_B$.
+	Therefore, we have shown that $G_a \leq G_B$.
+	\item Let $B$ be a block and let $\sigma_1(B), \sigma_2(B), \ldots, \sigma_n(B)$ be all the distinct images of $B$ under the elements of $G$.
+	By transitivity of $G$ on $A$, then for some $a \in A$, there exists $b \in B$ such that $\sigma(b) = a$.
+	Then $a \in \sigma(B)$, and since $\sigma(B)$ is one of the sets $\sigma_1(B), \sigma_2(B), \ldots, \sigma_n(B)$, it follows that
 	\[
 		\bigcup_{i=1}^n \sigma_i(B) = A.
 	\]
-	Suppose there existed $i \neq j$ where $\sigma_i(B) \cap \sigma_j(B) \neq \varnothing$. Then there are $b, b' \in B$ such that $\sigma_i(b) = \sigma_j(b')$, or $(\sigma_j\inv\sigma_i)(b) = b'$, hence $\sigma_j\inv\sigma_i(B) \cap B \neq \varnothing$. Since $B$ is a block, then $\sigma_j\inv\sigma_i(B) = B$, hence $\sigma_i(B) = \sigma_j(B)$, contradicting the assumption that they are distinct. Therefore, the sets $\sigma_1(B), \sigma_2(B), \ldots, \sigma_n(B)$ are disjoint, and we conclude that they form a partition of $A$.
-	\item Let $B \subset A$, i.e., a proper subset of $A$. If $|B| = 1$, then it is trivial. Suppose $|B| > 1$, and without loss of generality, let $1 \in B$ and some $1 \neq i \in B$ as well. Then there exists some $\sigma \in S_4$ such that $\sigma(1) = 1$ and $\sigma(i) = j$ for $j \notin B$. Then $\sigma(B) \cap B \neq \varnothing$ so that $\sigma(B) = B$, hence $j \in B$. We may repeat this to show that $B = A$, contradicting the assumption that $B$ is a proper subset of $A$. Therefore, the only blocks in $A$ are the trivial ones, and $S_4$ is primitive on $A$.
+	Suppose there existed $i \neq j$ where $\sigma_i(B) \cap \sigma_j(B) \neq \varnothing$.
+	Then there are $b, b' \in B$ such that $\sigma_i(b) = \sigma_j(b')$, or $(\sigma_j\inv\sigma_i)(b) = b'$, hence $\sigma_j\inv\sigma_i(B) \cap B \neq \varnothing$.
+	Since $B$ is a block, then $\sigma_j\inv\sigma_i(B) = B$, hence $\sigma_i(B) = \sigma_j(B)$, contradicting the assumption that they are distinct.
+	Therefore, the sets $\sigma_1(B), \sigma_2(B), \ldots, \sigma_n(B)$ are disjoint, and we conclude that they form a partition of $A$.
+	\item Let $B \subset A$, i.e., a proper subset of $A$.
+	If $|B| = 1$, then it is trivial.
+	Suppose $|B| > 1$, and without loss of generality, let $1 \in B$ and some $1 \neq i \in B$ as well.
+	Then there exists some $\sigma \in S_4$ such that $\sigma(1) = 1$ and $\sigma(i) = j$ for $j \notin B$.
+	Then $\sigma(B) \cap B \neq \varnothing$ so that $\sigma(B) = B$, hence $j \in B$.
+	We may repeat this to show that $B = A$, contradicting the assumption that $B$ is a proper subset of $A$.
+	Therefore, the only blocks in $A$ are the trivial ones, and $S_4$ is primitive on $A$.
 	
-	Now, consider $D_8$ acting on the four vertices of a square. Let $B$ be the set containing the two opposite vertices. Then for any $\sigma \in D_8$, either $\sigma(B) = B$ or $\sigma(B) \cap B = \varnothing$. Thus, $B$ is a non-trivial block, and $D_8$ is not primitive in its action on the four vertices of a square.
-	\item \rightimp If $G$ is primitive on $A$. Let $H \leq G$ such that $G_a \leq H \leq G$, and let $B$ be the orbit of $H$ so that $B = H \cdot a$. Since $1 \in H$ because $H \leq G$, then $1 \cdot a = a \in B$. By part (a), we know that $a \in B$ implies $G_a \leq G_B$ so that $B$ is now a block containing $a$. Primitivity of $G$ implies that $B$ is either $\set a$ or $A$ itself. If $B = \set a$, then for any $\sigma \in H$, we have $\sigma \cdot a \in B$, hence $\sigma \cdot a = a$, so $\sigma \in G_a$. Therefore, $H \leq G_a$, and since $G_a \leq H$, then $H = G_a$. If $B = A$, then for any $b \in A$, there exists some $\sigma \in H$ such that $\sigma \cdot a = b$. Thus, for any $b \in A$, there exists some $\sigma \in H$ such that $\sigma(b) = a$, hence $H$ is transitive on $A$. Therefore, $H = G$. We have shown that the only subgroups of $G$ containing $G_a$ are $G_a$ and $G$.
+	Now, consider $D_8$ acting on the four vertices of a square.
+	Let $B$ be the set containing the two opposite vertices.
+	Then for any $\sigma \in D_8$, either $\sigma(B) = B$ or $\sigma(B) \cap B = \varnothing$.
+	Thus, $B$ is a non-trivial block, and $D_8$ is not primitive in its action on the four vertices of a square.
+	\item \rightimp If $G$ is primitive on $A$.
+	Let $H \leq G$ such that $G_a \leq H \leq G$, and let $B$ be the orbit of $H$ so that $B = H \cdot a$.
+	Since $1 \in H$ because $H \leq G$, then $1 \cdot a = a \in B$.
+	By part (a), we know that $a \in B$ implies $G_a \leq G_B$ so that $B$ is now a block containing $a$.
+	Primitivity of $G$ implies that $B$ is either $\set a$ or $A$ itself.
+	If $B = \set a$, then for any $\sigma \in H$, we have $\sigma \cdot a \in B$, hence $\sigma \cdot a = a$, so $\sigma \in G_a$.
+	Therefore, $H \leq G_a$, and since $G_a \leq H$, then $H = G_a$.
+	If $B = A$, then for any $b \in A$, there exists some $\sigma \in H$ such that $\sigma \cdot a = b$.
+	Thus, for any $b \in A$, there exists some $\sigma \in H$ such that $\sigma(b) = a$, hence $H$ is transitive on $A$.
+	Therefore, $H = G$.
+	We have shown that the only subgroups of $G$ containing $G_a$ are $G_a$ and $G$.
 	
-	\noindent\leftimp Suppose now that $G_a$ is maximal in $G$. Let $B$ be a block of $A$ that contains some $a \in A$. By part (a), we know that $G_a \leq G_B \leq G$. Maximality of $G_a$ implies that either $G_B = G_a$ or $G_B = G$. If $G_B = G_a$, then for any $\sigma \in G_B$, we have $\sigma \in G_a$, hence $\sigma(a) = a$. Since $a \in B$, then $\sigma(a) \in \sigma(B)$, so $\sigma(a) \in B$. Therefore, $\sigma(a) = a \in B$, and it follows that $\sigma(B) \cap B \neq \varnothing$. By the definition of a block, this implies that $\sigma(B) = B$. Thus, for any $\sigma \in G_B$, we have $\sigma(B) = B$, so $B = \set a$. If $G_B = G$, then for any $b \in A$, there exists some $\sigma \in G$ such that $\sigma(a) = b$. Since $\sigma \in G_B$, then $\sigma(B) = B$, hence $b \in B$. Therefore, $B = A$. We have shown that the only blocks in $A$ are the trivial ones, so $G$ is primitive on $A$.
+	\noindent\leftimp Suppose now that $G_a$ is maximal in $G$.
+	Let $B$ be a block of $A$ that contains some $a \in A$.
+	By part (a), we know that $G_a \leq G_B \leq G$.
+	Maximality of $G_a$ implies that either $G_B = G_a$ or $G_B = G$.
+	If $G_B = G_a$, then for any $\sigma \in G_B$, we have $\sigma \in G_a$, hence $\sigma(a) = a$.
+	Since $a \in B$, then $\sigma(a) \in \sigma(B)$, so $\sigma(a) \in B$.
+	Therefore, $\sigma(a) = a \in B$, and it follows that $\sigma(B) \cap B \neq \varnothing$.
+	By the definition of a block, this implies that $\sigma(B) = B$.
+	Thus, for any $\sigma \in G_B$, we have $\sigma(B) = B$, so $B = \set a$.
+	If $G_B = G$, then for any $b \in A$, there exists some $\sigma \in G$ such that $\sigma(a) = b$.
+	Since $\sigma \in G_B$, then $\sigma(B) = B$, hence $b \in B$.
+	Therefore, $B = A$.
+	We have shown that the only blocks in $A$ are the trivial ones, so $G$ is primitive on $A$.
 \end{solenum}
 
 \begin{exercise}[4.1.8]
 	A transitive permutation group $G$ on a set $A$ is called \emph{doubly transitive} if for any (hence all) $a \in A$ the subgroup $G_a$ is transitive on the set $A - \set{a}$.
 	\begin{subexercises}
 		\item Prove that $S_n$ is doubly transitive on $\set{1,2,\ldots,n}$ for all $n \ge 2$.
-		\item Prove that a doubly transitive group is primitive. Deduce that $D_8$ is not doubly transitive in its action on the 4 vertices of a square.
+		\item Prove that a doubly transitive group is primitive.
+		Deduce that $D_8$ is not doubly transitive in its action on the 4 vertices of a square.
 	\end{subexercises}
 \end{exercise}
 
 \begin{solenum}
-	\item Let $G_a$ be the stabilizer of $a \in \set{1, 2, \ldots, n}$. Note that $G_a$ is the set of all permutations that fix $a$ and permute the remaining $n - 1$ elements so that $G_a \cong S_{n - 1}$. Since $S_{n - 1}$ is transitive on the set $\set{1, 2, \ldots, n} - \set{a}$ for all $n - 1 \geq 1$, then $G_a$ is transitive on $A - \set{a}$ for all $n \geq 2$. Therefore, $S_n$ is doubly transitive on $\set{1, 2, \ldots, n}$ for all $n \geq 2$.
-	\item Let $G$ be double transitive and let $B$ be a block containing some $a \in A$. Take $b \in B$ such that $b \neq a$. Double transitivity of $G$ implies that there exists some $\sigma \in G_a$ such that $\sigma(b) = c$ for any $c \in A - \set{a}$. Since $\sigma \in G_a$, then $\sigma(B) = B$, hence $c \in B$. Therefore, $B = A$, and we conclude that the only blocks in $A$ are the trivial ones. Thus, $G$ is primitive on $A$. Since $D_8$ is not primitive in its action on the four vertices of a square (as shown in part (c) of the previous exercise), then it is not doubly transitive.
+	\item Let $G_a$ be the stabilizer of $a \in \set{1, 2, \ldots, n}$.
+	Note that $G_a$ is the set of all permutations that fix $a$ and permute the remaining $n - 1$ elements so that $G_a \cong S_{n - 1}$.
+	Since $S_{n - 1}$ is transitive on the set $\set{1, 2, \ldots, n} - \set{a}$ for all $n - 1 \geq 1$, then $G_a$ is transitive on $A - \set{a}$ for all $n \geq 2$.
+	Therefore, $S_n$ is doubly transitive on $\set{1, 2, \ldots, n}$ for all $n \geq 2$.
+	\item Let $G$ be double transitive and let $B$ be a block containing some $a \in A$.
+	Take $b \in B$ such that $b \neq a$.
+	Double transitivity of $G$ implies that there exists some $\sigma \in G_a$ such that $\sigma(b) = c$ for any $c \in A - \set{a}$.
+	Since $\sigma \in G_a$, then $\sigma(B) = B$, hence $c \in B$.
+	Therefore, $B = A$, and we conclude that the only blocks in $A$ are the trivial ones.
+	Thus, $G$ is primitive on $A$.
+	Since $D_8$ is not primitive in its action on the four vertices of a square (as shown in part (c) of the previous exercise), then it is not doubly transitive.
 \end{solenum}
 
 \begin{spex}[4.1.9]
-	[4.1.9] Assume $G$ acts transitively on the finite set $A$ and let $H$ be a normal subgroup of $G$. Let $\mathcal{O}_1, \mathcal{O}_2, \ldots, \mathcal{O}_r$ be the distinct orbits of $H$ on $A$.
+	[4.1.9] Assume $G$ acts transitively on the finite set $A$ and let $H$ be a normal subgroup of $G$.
+	Let $\mathcal{O}_1, \mathcal{O}_2, \ldots, \mathcal{O}_r$ be the distinct orbits of $H$ on $A$.
 	\begin{subexercises}
-		\item Prove that $G$ permutes the sets $\mathcal{O}_1, \mathcal{O}_2, \ldots, \mathcal{O}_r$, in the sense that for each $g \in G$ and each $i \in \set{1,\ldots,r}$ there is a $j$ such that $g \mathcal{O}_i = \mathcal{O}_j$, where $g\mathcal{O} = \set{g \cdot a \mid a \in \mathcal{O}}$ (i.e., in the notation of Exercise 7 the sets $\mathcal{O}_1, \ldots, \mathcal{O}_r$ are blocks). Prove that $G$ is transitive on $\set{\mathcal{O}_1, \ldots, \mathcal{O}_r}$. Deduce that all orbits of $H$ on $A$ have the same cardinality.
-		\item Prove that if $a \in \mathcal{O}_1$ then $|\mathcal{O}_1| = |H : H \cap G_a|$ and prove that $r = |G : HG_a|$. [Draw the sublattice describing the Second Isomorphism Theorem for the subgroups $H$ and $G_a$ of $G$. Note that $H \cap G_a = H_a$.]
+		\item Prove that $G$ permutes the sets $\mathcal{O}_1, \mathcal{O}_2, \ldots, \mathcal{O}_r$, in the sense that for each $g \in G$ and each $i \in \set{1,\ldots,r}$ there is a $j$ such that $g \mathcal{O}_i = \mathcal{O}_j$, where $g\mathcal{O} = \set{g \cdot a \mid a \in \mathcal{O}}$ (i.e., in the notation of Exercise 7 the sets $\mathcal{O}_1, \ldots, \mathcal{O}_r$ are blocks).
+		Prove that $G$ is transitive on $\set{\mathcal{O}_1, \ldots, \mathcal{O}_r}$.
+		Deduce that all orbits of $H$ on $A$ have the same cardinality.
+		\item Prove that if $a \in \mathcal{O}_1$ then $|\mathcal{O}_1| = |H : H \cap G_a|$ and prove that $r = |G : HG_a|$. [Draw the sublattice describing the Second Isomorphism Theorem for the subgroups $H$ and $G_a$ of $G$.
+		Note that $H \cap G_a = H_a$.]
 	\end{subexercises}
 \end{spex}
 
 \begin{solenum}
-	\item Let $g \in G$ and $\oo_i$ be an orbit of $H$ on $A$. Let $a \in \oo_i$ so that $\oo_i = H \cdot a = \set{h \cdot a \mid h \in H}$. Consider the set $g\oo_i = \set{g \cdot (h \cdot a) \mid h \in H}$. Since $H$ is normal in $G$, then for any $h \in H$, we have $ghg\inv \in H$. Then $g\oo_i = H \cdot (g \cdot a)$, which is the orbit of $H$ containing $g \cdot a$. Therefore, there exists some $j$ such that $g\oo_i = \oo_j$.
+	\item Let $g \in G$ and $\oo_i$ be an orbit of $H$ on $A$.
+	Let $a \in \oo_i$ so that $\oo_i = H \cdot a = \set{h \cdot a \mid h \in H}$.
+	Consider the set $g\oo_i = \set{g \cdot (h \cdot a) \mid h \in H}$.
+	Since $H$ is normal in $G$, then for any $h \in H$, we have $ghg\inv \in H$.
+	Then $g\oo_i = H \cdot (g \cdot a)$, which is the orbit of $H$ containing $g \cdot a$.
+	Therefore, there exists some $j$ such that $g\oo_i = \oo_j$.
 	
-	To show that $G$ is transitive on $\set{\oo_1, \ldots, \oo_r}$, let $\oo_i$ and $\oo_j$ be any two orbits of $H$ on $A$. Since $G$ is transitive on $A$, then for some $a \in \oo_i$ and $b \in \oo_j$, there exists some $g \in G$ such that $g \cdot a = b$. Then $g\oo_i$ is the orbit of $H$ containing $b$, hence $g\oo_i = \oo_j$. Therefore, $G$ is transitive on $\set{\oo_1, \ldots, \oo_r}$. Since $G$ is transitive on $\set{\oo_1, \ldots, \oo_r}$, then all orbits of $H$ on $A$ have the same cardinality.
-	\item Suppose $a \in \oo_1$. By Proposition 4.2, we have $|\oo_1| = |H : H_a|$. Since $H_a = H \cap G_a$, then $|\oo_1| = |H : H \cap G_a|$. Moreover, the orbits of $H$ partition $A$ and have the same size by the previous solution, so we have $|A| = r|\oo_1|$. By applying Proposition 4.2 again, we have $|A| = |G : G_a|$. Therefore, $|G : G_a| = r|\oo_1| = r|H : H \cap G_a|$. By the Second Isomorphism Theorem, we also have that $H/(H \cap G_a) \cong HG_a/G_a$ so that $|H : H \cap G_a| = |HG_a : G_a|$. Now recall by \exref{3.2.11} that $|G : K| = |G : H||H : K|$ for subgroups $K \leq H \leq G$. Applying this to the subgroups $G_a \leq HG_a \leq G$, we have $|G : G_a| = |G : HG_a||HG_a : G_a| = |G : HG_a||H : H \cap G_a|.$ We then have $r|H : H \cap G_a| = |G : HG_a||H : H \cap G_a|$, or $r = |G : HG_a|$. Moreover, the sublattice is given as follows:
+	To show that $G$ is transitive on $\set{\oo_1, \ldots, \oo_r}$, let $\oo_i$ and $\oo_j$ be any two orbits of $H$ on $A$.
+	Since $G$ is transitive on $A$, then for some $a \in \oo_i$ and $b \in \oo_j$, there exists some $g \in G$ such that $g \cdot a = b$.
+	Then $g\oo_i$ is the orbit of $H$ containing $b$, hence $g\oo_i = \oo_j$.
+	Therefore, $G$ is transitive on $\set{\oo_1, \ldots, \oo_r}$.
+	Since $G$ is transitive on $\set{\oo_1, \ldots, \oo_r}$, then all orbits of $H$ on $A$ have the same cardinality.
+	\item Suppose $a \in \oo_1$.
+	By Proposition 4.2, we have $|\oo_1| = |H : H_a|$.
+	Since $H_a = H \cap G_a$, then $|\oo_1| = |H : H \cap G_a|$.
+	Moreover, the orbits of $H$ partition $A$ and have the same size by the previous solution, so we have $|A| = r|\oo_1|$.
+	By applying Proposition 4.2 again, we have $|A| = |G : G_a|$.
+	Therefore, $|G : G_a| = r|\oo_1| = r|H : H \cap G_a|$.
+	By the Second Isomorphism Theorem, we also have that $H/(H \cap G_a) \cong HG_a/G_a$ so that $|H : H \cap G_a| = |HG_a : G_a|$.
+	Now recall by \exref{3.2.11} that $|G : K| = |G : H||H : K|$ for subgroups $K \leq H \leq G$.
+	Applying this to the subgroups $G_a \leq HG_a \leq G$, we have $|G : G_a| = |G : HG_a||HG_a : G_a| = |G : HG_a||H : H \cap G_a|.$ We then have $r|H : H \cap G_a| = |G : HG_a||H : H \cap G_a|$, or $r = |G : HG_a|$.
+	Moreover, the sublattice is given as follows:
 	\begin{center}
 		\begin{tikzpicture}
 			\node (G) at (0, 0) {$G$};
@@ -269,22 +430,45 @@ Let $G$ be a group and let $A$ be a nonempty set.
 \end{solenum}
 
 \begin{spex}[4.1.10]
-	Let $H$ and $K$ be subgroups of the group $G$. For each $x \in G$ define the $HK$ \emph{double coset} of $x$ in $G$ to be the set $HxK = \set{hxk \mid h \in H, k \in K}$.
+	Let $H$ and $K$ be subgroups of the group $G$.
+	For each $x \in G$ define the $HK$ \emph{double coset} of $x$ in $G$ to be the set $HxK = \set{hxk \mid h \in H, k \in K}$.
 	\begin{subexercises}
 		\item Prove that $HxK$ is the union of the left cosets $x_1K, \ldots, x_nK$ where $\set{x_1K, \ldots, x_nK}$ is the orbit containing $xK$ of $H$ acting by left multiplication on the set of left cosets of $K$.
 		\item Prove that $HxK$ is a union of right cosets of $H$.
-		\item Show that $HxK$ and $HyK$ are either the same set or are disjoint for all $x, y \in G$. Show that the set of $HK$ double cosets partitions $G$.
+		\item Show that $HxK$ and $HyK$ are either the same set or are disjoint for all $x, y \in G$.
+		Show that the set of $HK$ double cosets partitions $G$.
 		\item Prove that $|HxK| = |K| \cdot |H : H \cap xKx^{-1}|$.
 		\item Prove that $|HxK| = |H| \cdot |K : K \cap x^{-1}Hx|$.
 	\end{subexercises}
 \end{spex}
 
 \begin{solenum}
-	\item Let $\oo$ be the orbit containing $xK$ of $H$ acting by left multiplication on the set of left cosets of $K$. Then $\oo = \set{hxK \mid h \in H}$, and let $\set{x_1K, \ldots, x_nK}$ be the distinct left cosets in $\oo$. Let $\kk$ be the union of these left cosets, i.e., $\kk = \bigcup_1^n x_iK$.
+	\item Let $\oo$ be the orbit containing $xK$ of $H$ acting by left multiplication on the set of left cosets of $K$.
+	Then $\oo = \set{hxK \mid h \in H}$, and let $\set{x_1K, \ldots, x_nK}$ be the distinct left cosets in $\oo$.
+	Let $\kk$ be the union of these left cosets, i.e., $\kk = \bigcup_1^n x_iK$.
 	
-	Now pick $y \in HxK$. Then there exist $h \in H$ and $k \in K$ such that $y = hxk$. Note that $hxK \in \oo$, so there exists some $i$ such that $hxK = x_iK$. Therefore, $y = hxk \in x_iK \subseteq \kk$, hence $HxK \subseteq \kk$. If $z \in \kk$, then there exists some $i$ and some $k' \in K$ such that $z = x_ik'$. Since $x_iK \in \oo$, then there exists some $h' \in H$ such that $x_iK = h'xK$, hence $x_i = h'xk''$ for some $k'' \in K$. Therefore, $z = x_ik' = h'xkk'' \in HxK$, so $\kk \subseteq HxK$. We have shown that $HxK = \kk$, i.e., $HxK$ is the union of the left cosets $x_1K, \ldots, x_nK$.
+	Now pick $y \in HxK$.
+	Then there exist $h \in H$ and $k \in K$ such that $y = hxk$.
+	Note that $hxK \in \oo$, so there exists some $i$ such that $hxK = x_iK$.
+	Therefore, $y = hxk \in x_iK \subseteq \kk$, hence $HxK \subseteq \kk$.
+	If $z \in \kk$, then there exists some $i$ and some $k' \in K$ such that $z = x_ik'$.
+	Since $x_iK \in \oo$, then there exists some $h' \in H$ such that $x_iK = h'xK$, hence $x_i = h'xk''$ for some $k'' \in K$.
+	Therefore, $z = x_ik' = h'xkk'' \in HxK$, so $\kk \subseteq HxK$.
+	We have shown that $HxK = \kk$, i.e., $HxK$ is the union of the left cosets $x_1K, \ldots, x_nK$.
 	\item The proof is similar to that of part (a). 
-	\item Let $x, y \in G$. Suppose $HxK \cap HyK \neq \varnothing$. Then there exist $h_1, h_2 \in H$ and $k_1, k_2 \in K$ such that $h_1 x k_1 = h_2 y k_2$. Rearranging, we have $y = h_2\inv h_1 x k_1 k_2\inv$, hence $y \in HxK$. Therefore, $HyK \subseteq HxK$. By symmetry, we also have $HxK \subseteq HyK$, so $HxK = HyK$. We have shown that $HxK$ and $HyK$ are either the same set or are disjoint for all $x, y \in G$. Since every element of $G$ is in some double coset of the form $HxK$, then the set of $HK$ double cosets partitions $G$.
-	\item Recall that the orbit of $xK$ under this action is $\oo = \set{hxK \mid h \in H}$. By Proposition 4.2, we have $|\oo| = |H : H_{xK}|$, where $H_{xK}$ is the stabilizer of $xK$ in $H$. Observe that $H_{xK} = \set{h \in H \mid hxK = xK}$. Then $hxK = xK$ implies that there exists some $k \in K$ such that $hxk = x$, or equivalently, $h = x k x\inv$. Therefore, $H_{xK} = H \cap x K x\inv$. By part (a), we have $|HxK| = |\oo| \cdot |K| = |H : H \cap x K x\inv| \cdot |K|$.
+	\item Let $x, y \in G$.
+	Suppose $HxK \cap HyK \neq \varnothing$.
+	Then there exist $h_1, h_2 \in H$ and $k_1, k_2 \in K$ such that $h_1 x k_1 = h_2 y k_2$.
+	Rearranging, we have $y = h_2\inv h_1 x k_1 k_2\inv$, hence $y \in HxK$.
+	Therefore, $HyK \subseteq HxK$.
+	By symmetry, we also have $HxK \subseteq HyK$, so $HxK = HyK$.
+	We have shown that $HxK$ and $HyK$ are either the same set or are disjoint for all $x, y \in G$.
+	Since every element of $G$ is in some double coset of the form $HxK$, then the set of $HK$ double cosets partitions $G$.
+	\item Recall that the orbit of $xK$ under this action is $\oo = \set{hxK \mid h \in H}$.
+	By Proposition 4.2, we have $|\oo| = |H : H_{xK}|$, where $H_{xK}$ is the stabilizer of $xK$ in $H$.
+	Observe that $H_{xK} = \set{h \in H \mid hxK = xK}$.
+	Then $hxK = xK$ implies that there exists some $k \in K$ such that $hxk = x$, or equivalently, $h = x k x\inv$.
+	Therefore, $H_{xK} = H \cap x K x\inv$.
+	By part (a), we have $|HxK| = |\oo| \cdot |K| = |H : H \cap x K x\inv| \cdot |K|$.
 	\item Similar to part (d).
 \end{solenum}

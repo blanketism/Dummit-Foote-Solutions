@@ -33,7 +33,8 @@
 \end{exercise}
 
 \begin{sol}
-    Since $k \mid a$ and $k \mid b$, there exist $x, y \in \z$ such that $a = kx$ and $b = ky$. Then for any $s, t \in \z$, we have
+    Since $k \mid a$ and $k \mid b$, there exist $x, y \in \z$ such that $a = kx$ and $b = ky$.
+	Then for any $s, t \in \z$, we have
     \[
     	as + bt = (kx)s + (ky)t = k(xs + yt),
     \]
@@ -45,11 +46,14 @@
 \end{exercise}
 
 \begin{sol}
-    Since $n$ is composite, put $n = ab$ with $1 < a, b < n$. Then $n \mid ab$, but $n \nmid a$ and $n \nmid b$.
+    Since $n$ is composite, put $n = ab$ with $1 < a, b < n$.
+	Then $n \mid ab$, but $n \nmid a$ and $n \nmid b$.
 \end{sol}
 
 \begin{exercise}[0.2.4]
-    Let $a, b$ and $N$ be fixed integers with $a$ and $b$ nonzero, and let $d = (a, b)$ be the greatest common divisor of $a$ and $b$. Suppose $x_0$ and $y_0$ are particular solutions to $ax + by = N$. Prove, for any integer $t$, that the integers
+    Let $a, b$ and $N$ be fixed integers with $a$ and $b$ nonzero, and let $d = (a, b)$ be the greatest common divisor of $a$ and $b$.
+	Suppose $x_0$ and $y_0$ are particular solutions to $ax + by = N$.
+	Prove, for any integer $t$, that the integers
     \[
     	x = x_0 + \frac bdt \quad \text{and} \quad y = y_0 - \frac adt
     \]
@@ -94,7 +98,13 @@
 \end{exercise}
 
 \begin{sol}
-    Suppose $S$ has no minimal element, and let $T$ be $\zp \setminus S$, the set of nonnegative integers not in $S$. Since $0$ is minimal in $\zp$, then $0 \notin S$, hence $0 \in T$. Fix $k \in \zp$, and suppose every $j$ such that $0 \leq j \leq k$ is in $T$. Observe $k + 1 \notin S$, for otherwise it would be minimal in $S$, since every integer less than or equal to $k$ is in $T$. Then $k + 1 \in T$. By induction, every nonnegative integer is in $T$, contradicting that $S$ is nonempty. Therefore, $S$ must have a minimal element.
+    Suppose $S$ has no minimal element, and let $T$ be $\zp \setminus S$, the set of nonnegative integers not in $S$.
+	Since $0$ is minimal in $\zp$, then $0 \notin S$, hence $0 \in T$.
+	Fix $k \in \zp$, and suppose every $j$ such that $0 \leq j \leq k$ is in $T$.
+	Observe $k + 1 \notin S$, for otherwise it would be minimal in $S$, since every integer less than or equal to $k$ is in $T$.
+	Then $k + 1 \in T$.
+	By induction, every nonnegative integer is in $T$, contradicting that $S$ is nonempty.
+	Therefore, $S$ must have a minimal element.
 
     If $s_1, s_2 \in S$ are both minimal, then $s_1 \leq s_2$ and $s_2 \leq s_1$ imply $s_1 = s_2$.
 \end{sol}
@@ -104,21 +114,31 @@
 \end{exercise}
 
 \begin{sol}
-    Suppose there existed $a, b$ such that $a^2 = pb^2$. If $(a, b) \neq 1$, divide both $a$ and $b$ by $(a, b)$ to get relatively prime integers. Then $p \mid a^2$, which implies $p \mid a$. Put $a = pk$ for $k \in \z$. Then
+    Suppose there existed $a, b$ such that $a^2 = pb^2$.
+	If $(a, b) \neq 1$, divide both $a$ and $b$ by $(a, b)$ to get relatively prime integers.
+	Then $p \mid a^2$, which implies $p \mid a$.
+	Put $a = pk$ for $k \in \z$.
+	Then
     \[
     	a^2 = (pk)^2 = p^2k^2 = pb^2,
     \]
-    hence $b^2 = pk^2$. But then $p \mid b$, contradicting that $(a, b) = 1$.
+    hence $b^2 = pk^2$.
+	But then $p \mid b$, contradicting that $(a, b) = 1$.
 \end{sol}
 
 \begin{spex}[0.2.8]
-    Let $p$ be a prime, $n \in \zp$. Find a formula for the largest power of $p$ which divides $n! = n(n - 1)(n - 2) \ldots 2 \cdot 1$.
+    Let $p$ be a prime, $n \in \zp$.
+	Find a formula for the largest power of $p$ which divides $n! = n(n - 1)(n - 2) \ldots 2 \cdot 1$.
 
     \hint{It involves the greatest integer function.}
 \end{spex}
 
 \begin{sol}
-    In the product $n!$, a factor of $p$ appears in each of the integers $p, 2p, \ldots, \floor{n/p}p$. Hence, there are $\floor{n/p}$ factors of $p$ in $n!$. Similarly, a factor of $p^2$ appears in each of the integers $p^2, 2p^2, \ldots, \floor{n/p^2}p^2$, so there are $\floor{n/p^2}$ factors of $p^2$ in $n!$. This contributes an additional factor of $p$ that was counted only once in the previous step. Continuing this process, we find that the largest power of $p$ which divides $n!$ is
+    In the product $n!$, a factor of $p$ appears in each of the integers $p, 2p, \ldots, \floor{n/p}p$.
+	Hence, there are $\floor{n/p}$ factors of $p$ in $n!$.
+	Similarly, a factor of $p^2$ appears in each of the integers $p^2, 2p^2, \ldots, \floor{n/p^2}p^2$, so there are $\floor{n/p^2}$ factors of $p^2$ in $n!$.
+	This contributes an additional factor of $p$ that was counted only once in the previous step.
+	Continuing this process, we find that the largest power of $p$ which divides $n!$ is
     \[
     	\floor*{\frac np} + \floor*{\frac{n}{p^2}} + \cdots + \floor*{\frac{n}{p^m}} = \sum_{i=1}^{m} \floor*{\frac{n}{p^i}},
     \]
@@ -134,17 +154,24 @@
 \end{sol}
 
 \begin{exercise}[0.2.10]
-    Prove for any given positive integer $N$ there exist only finitely many integers $n$ with $\phi(n) = N$ where $\phi$ denotes Euler's $\phi$-function. Conclude in particular that $\phi$ tends to infinity as $n$ tends to infinity.
+    Prove for any given positive integer $N$ there exist only finitely many integers $n$ with $\phi(n) = N$ where $\phi$ denotes Euler's $\phi$-function.
+	Conclude in particular that $\phi$ tends to infinity as $n$ tends to infinity.
 \end{exercise}
 
 \begin{sol}
-    Fix $N \in \zp$, and consider $n \in \zp$ such that $\phi(n) = N$. Let $n = p_1^{\alpha_1} p_2^{\alpha_2} \cdots p_k^{\alpha_k}$ be the prime factorization of $n$. Then
+    Fix $N \in \zp$, and consider $n \in \zp$ such that $\phi(n) = N$.
+	Let $n = p_1^{\alpha_1} p_2^{\alpha_2} \cdots p_k^{\alpha_k}$ be the prime factorization of $n$.
+	Then
     \[
     	\phi(n) = \prod_{i=1}^k p_i^{\alpha_i - 1}(p_i - 1) = N.
     \]
-    Since each factor $p_i^{\alpha_i - 1}(p_i - 1)$ divides $N$, we have $p_i - 1 \leq N$, so $p_i \leq N + 1$, bounding the number of possible primes. For the exponents, $p_i^{\alpha_i - 1} \leq N$ gives $\alpha_i \leq 1 + \log_2 N$ since $p_i \geq 2$. With finitely many choices for each $p_i$ and $\alpha_i$, there are only finitely many $n$ with $\phi(n) = N$.
+    Since each factor $p_i^{\alpha_i - 1}(p_i - 1)$ divides $N$, we have $p_i - 1 \leq N$, so $p_i \leq N + 1$, bounding the number of possible primes.
+	For the exponents, $p_i^{\alpha_i - 1} \leq N$ gives $\alpha_i \leq 1 + \log_2 N$ since $p_i \geq 2$.
+	With finitely many choices for each $p_i$ and $\alpha_i$, there are only finitely many $n$ with $\phi(n) = N$.
 
-    If $\phi$ did not tend to infinity, there would exist some $M \in \zp$ such that $\phi(n) \leq M$ for infinitely many $n$. But then some value $N \leq M$ would satisfy $\phi(n) = N$ for infinitely many $n$, contradicting the above. Hence $\phi(n) \to \infty$ as $n \to \infty$.
+    If $\phi$ did not tend to infinity, there would exist some $M \in \zp$ such that $\phi(n) \leq M$ for infinitely many $n$.
+	But then some value $N \leq M$ would satisfy $\phi(n) = N$ for infinitely many $n$, contradicting the above.
+	Hence $\phi(n) \to \infty$ as $n \to \infty$.
 \end{sol}
 
 \begin{exercise}[0.2.11]
@@ -152,11 +179,13 @@
 \end{exercise}
 
 \begin{sol}
-    Let $n \in \zp$ with $d \mid n$. Put their prime factorizations as
+    Let $n \in \zp$ with $d \mid n$.
+	Put their prime factorizations as
     \[
     	n = p_1^{\alpha_1} p_2^{\alpha_2} \cdots p_k^{\alpha_k}, \quad d = p_1^{\beta_1} p_2^{\beta_2} \cdots p_j^{\beta_j},
     \]
-    where $j \leq k$ and $1 \leq \beta_i \leq \alpha_i$ for all $1 \leq i \leq j$. Then $\phi(d) \mid \phi(n)$, since
+    where $j \leq k$ and $1 \leq \beta_i \leq \alpha_i$ for all $1 \leq i \leq j$.
+	Then $\phi(d) \mid \phi(n)$, since
     \[
     	\frac{\phi(n)}{\phi(d)} = \prod_{i = 1}^j \frac{p_i^{\alpha_i - 1}(p_i - 1)}{p_i^{\beta_i - 1}(p_i - 1)} \cdot \prod_{i = j+1}^k p_i^{\alpha_i - 1}(p_i - 1) = \prod_{i = 1}^j p_i^{\alpha_i - \beta_i} \cdot \prod_{i = j+1}^k p_i^{\alpha_i - 1}(p_i - 1) \in \z. \qh
     \]

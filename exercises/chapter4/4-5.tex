@@ -3,13 +3,22 @@
 Let $G$ be a finite group and let $p$ be a prime.
 
 \begin{exercise}[4.5.1]
-	Prove that if $P \in \syl_p(G)$ and $H$ is a subgroup of $G$ containing $P$ then $P \in \syl_p(H)$. Give an example to show that in general, a Sylow $p$-subgroup of a subgroup of $G$ need not be a Sylow $p$-subgroup of $G$.
+	Prove that if $P \in \syl_p(G)$ and $H$ is a subgroup of $G$ containing $P$ then $P \in \syl_p(H)$.
+	Give an example to show that in general, a Sylow $p$-subgroup of a subgroup of $G$ need not be a Sylow $p$-subgroup of $G$.
 \end{exercise}
 
 \begin{sol}
-	Let $|G| = p^n m$ where $p \nmid m$. Since $P \leq H \leq G$, then $|H| = p^k t$ for some $k \leq n$ and $p \nmid t$. Since $P \in \syl_p(G)$, then $|P| = p^n$. However, since $P \leq H$, then $|P| = p^n \leq |H| = p^k t$. Therefore, we must have $k = n$, so that $|H| = p^n t$. Hence, $P \in \syl_p(H)$.
+	Let $|G| = p^n m$ where $p \nmid m$.
+	Since $P \leq H \leq G$, then $|H| = p^k t$ for some $k \leq n$ and $p \nmid t$.
+	Since $P \in \syl_p(G)$, then $|P| = p^n$.
+	However, since $P \leq H$, then $|P| = p^n \leq |H| = p^k t$.
+	Therefore, we must have $k = n$, so that $|H| = p^n t$.
+	Hence, $P \in \syl_p(H)$.
 
-	Consider $G = S_4$ and its subgroup $H = A_4$. Then $|G| = 24$ and $|H| = 12$. A Sylow 2-subgroup of $H$ is isomorphic to $V_4$, which has order 4. However, a Sylow 2-subgroup of $G$ has order 8, so that the Sylow 2-subgroup of $H$ is not a Sylow 2-subgroup of $G$.
+	Consider $G = S_4$ and its subgroup $H = A_4$.
+	Then $|G| = 24$ and $|H| = 12$.
+	A Sylow 2-subgroup of $H$ is isomorphic to $V_4$, which has order 4.
+	However, a Sylow 2-subgroup of $G$ has order 8, so that the Sylow 2-subgroup of $H$ is not a Sylow 2-subgroup of $G$.
 \end{sol}
 
 \begin{exercise}[4.5.2]
@@ -17,7 +26,11 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	Let $|H| = p^n m$ where $p \nmid m$. Then $|Q| = p^n$. Note that $|gHg\inv| = |H| = p^n m$ since conjugation is an isomorphism. Moreover, $|gQg\inv| = |Q| = p^n$. Therefore, $gQg\inv \in \syl_p(gHg\inv)$.
+	Let $|H| = p^n m$ where $p \nmid m$.
+	Then $|Q| = p^n$.
+	Note that $|gHg\inv| = |H| = p^n m$ since conjugation is an isomorphism.
+	Moreover, $|gQg\inv| = |Q| = p^n$.
+	Therefore, $gQg\inv \in \syl_p(gHg\inv)$.
 \end{sol}
 
 \begin{exercise}[4.5.3]
@@ -25,7 +38,12 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	Let $|G| = p^n m$ where $p \nmid m$. By Sylow's Theorem, there exists some $P \in \syl_p(G)$ such that $|P| = p^n$. Since $n \geq 1$, then $P$ is non-trivial. By Theorem 4.8, we know that the center $Z(P)$ is non-trivial. Since $Z(P)$ is Abelian, then by Proposition 3.21, there exists some element $x \in Z(P)$ such that $|x| = p$. Therefore, $x \in G$ has order $p$.
+	Let $|G| = p^n m$ where $p \nmid m$.
+	By Sylow's Theorem, there exists some $P \in \syl_p(G)$ such that $|P| = p^n$.
+	Since $n \geq 1$, then $P$ is non-trivial.
+	By Theorem 4.8, we know that the center $Z(P)$ is non-trivial.
+	Since $Z(P)$ is Abelian, then by Proposition 3.21, there exists some element $x \in Z(P)$ such that $|x| = p$.
+	Therefore, $x \in G$ has order $p$.
 \end{sol}
 
 \begin{exercise}[4.5.4]
@@ -33,7 +51,9 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	For $D_{12}$, we have $|D_{12}| = 12 = 2^2 \cdot 3$. Therefore, the Sylow 2-subgroups have order 4 and the Sylow 3-subgroups have order 3. The Sylow 2-subgroups are
+	For $D_{12}$, we have $|D_{12}| = 12 = 2^2 \cdot 3$.
+	Therefore, the Sylow 2-subgroups have order 4 and the Sylow 3-subgroups have order 3.
+	The Sylow 2-subgroups are
 	\[
 		\gen{r^3, s}, \quad \gen{r^3, rs}, \quad \gen{r^3, r^2s}.
 	\]
@@ -43,9 +63,27 @@ Let $G$ be a finite group and let $p$ be a prime.
 	\]
 	where this is the only Sylow 3-subgroup, since if $n_3 = 4$, then there would be $8$ elements of order $3$, which is impossible.
 
-	We first show that the Sylow $p$-subgroups of a direct product are the direct products of the Sylow $p$-subgroups of each factor. Let $G$ and $H$ be finite groups, and let $P \in \syl_p(G)$ and $Q \in \syl_p(H)$. Then $|P| = p^n$ and $|Q| = p^m$ for some $n, m \geq 0$. Therefore, $|P \times Q| = p^{n + m}$. Moreover, since $|G \times H| = |G||H|$, then the highest power of $p$ dividing $|G \times H|$ is also $p^{n + m}$. Hence, $P \times Q \in \syl_p(G \times H)$. For the converse, let $R \in \syl_p(G \times H)$. Then $|R| = p^k$ for some $k \geq 0$. Consider the projections $\pi_G : G \times H \to G$ and $\pi_H : G \times H \to H$. Then $\pi_G(R)$ is a $p$-subgroup of $G$ and $\pi_H(R)$ is a $p$-subgroup of $H$. Therefore, there exist Sylow $p$-subgroups $P$ of $G$ and $Q$ of $H$ such that $\pi_G(R) \leq P$ and $\pi_H(R) \leq Q$. Hence, $R \leq P \times Q$. Since $|R| = p^k$ is the highest power of $p$ dividing $|G \times H|$, then we must have $|P \times Q| = p^k$. Therefore, $R = P \times Q$. This shows that the Sylow $p$-subgroups of a direct product are the direct products of the Sylow $p$-subgroups of each factor.
+	We first show that the Sylow $p$-subgroups of a direct product are the direct products of the Sylow $p$-subgroups of each factor.
+	Let $G$ and $H$ be finite groups, and let $P \in \syl_p(G)$ and $Q \in \syl_p(H)$.
+	Then $|P| = p^n$ and $|Q| = p^m$ for some $n, m \geq 0$.
+	Therefore, $|P \times Q| = p^{n + m}$.
+	Moreover, since $|G \times H| = |G||H|$, then the highest power of $p$ dividing $|G \times H|$ is also $p^{n + m}$.
+	Hence, $P \times Q \in \syl_p(G \times H)$.
+	For the converse, let $R \in \syl_p(G \times H)$.
+	Then $|R| = p^k$ for some $k \geq 0$.
+	Consider the projections $\pi_G : G \times H \to G$ and $\pi_H : G \times H \to H$.
+	Then $\pi_G(R)$ is a $p$-subgroup of $G$ and $\pi_H(R)$ is a $p$-subgroup of $H$.
+	Therefore, there exist Sylow $p$-subgroups $P$ of $G$ and $Q$ of $H$ such that $\pi_G(R) \leq P$ and $\pi_H(R) \leq Q$.
+	Hence, $R \leq P \times Q$.
+	Since $|R| = p^k$ is the highest power of $p$ dividing $|G \times H|$, then we must have $|P \times Q| = p^k$.
+	Therefore, $R = P \times Q$.
+	This shows that the Sylow $p$-subgroups of a direct product are the direct products of the Sylow $p$-subgroups of each factor.
 
-	We now proceed with $S_3 \times S_3$. Note that $|S_3 \times S_3| = 36 = 2^2 \cdot 3^2$. Therefore, the Sylow 2-subgroups have order 4 and the Sylow 3-subgroups have order 9. Moreover, note that $\syl_2(S_3)$ is the set of subgroups generated by transpositions, and $\syl_3(S_3)$ is the unique subgroup generated by a 3-cycle. Therefore, we have
+	We now proceed with $S_3 \times S_3$.
+	Note that $|S_3 \times S_3| = 36 = 2^2 \cdot 3^2$.
+	Therefore, the Sylow 2-subgroups have order 4 and the Sylow 3-subgroups have order 9.
+	Moreover, note that $\syl_2(S_3)$ is the set of subgroups generated by transpositions, and $\syl_3(S_3)$ is the unique subgroup generated by a 3-cycle.
+	Therefore, we have
 	\[
 		\syl_2(S_3 \times S_3) = \set{\gen\alpha \times \gen\beta \mid \alpha, \beta \in \{(1\ 2), (1\ 3), (2\ 3)}\}
 	\]
@@ -57,9 +95,14 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	Let $|D_{2n}| = 2n = 2 p^k m$ where $p \nmid m$ and $k \geq 1$. Then the Sylow $p$-subgroups have order $p^k$. Note that $r^m$ has order $p^k$, so that $\gen{r^m}$ is a Sylow $p$-subgroup and is cyclic. Moreover, conjugacy of Sylow $p$-subgroups imply that any Sylow $p$-subgroup is also cyclic.
+	Let $|D_{2n}| = 2n = 2 p^k m$ where $p \nmid m$ and $k \geq 1$.
+	Then the Sylow $p$-subgroups have order $p^k$.
+	Note that $r^m$ has order $p^k$, so that $\gen{r^m}$ is a Sylow $p$-subgroup and is cyclic.
+	Moreover, conjugacy of Sylow $p$-subgroups imply that any Sylow $p$-subgroup is also cyclic.
 
-	To see that the Sylow $p$-subgroup is normal, note that $n_p \equiv 1 \bmod p$ and $n_p \mid 2m$. Since $p$ is odd and $p \nmid m$, then $(2m, p) = 1$. Therefore, $n_p = 1$, so that the Sylow $p$-subgroup is unique and hence normal.
+	To see that the Sylow $p$-subgroup is normal, note that $n_p \equiv 1 \bmod p$ and $n_p \mid 2m$.
+	Since $p$ is odd and $p \nmid m$, then $(2m, p) = 1$.
+	Therefore, $n_p = 1$, so that the Sylow $p$-subgroup is unique and hence normal.
 \end{sol}
 
 \begin{exercise}[4.5.6]
@@ -67,7 +110,8 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	The Sylow 3-subgroups of both $A_4$ and $S_4$ have order 3. The Sylow 3-subgroups of $S_4$ are
+	The Sylow 3-subgroups of both $A_4$ and $S_4$ have order 3.
+	The Sylow 3-subgroups of $S_4$ are
 	\[
 		\gen{(1\ 2\ 3)}, \quad \gen{(1\ 2\ 4)}, \quad \gen{(1\ 3\ 4)}, \quad \gen{(2\ 3\ 4)}.
 	\]
@@ -79,11 +123,16 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	The Sylow 2-subgroups of $S_4$ have order 8. Note that we have calculated 2 of these subgroups in \exref{4.2.5}, namely parts (a) and (b). Since $n_2 \equiv 1 \bmod 2$ and $n_2 \mid 3$, then $n_2 = 1$ or $3$. However, there are more than one Sylow 2-subgroup, so that $n_2 = 3$. One of the Sylow 2-subgroups is
+	The Sylow 2-subgroups of $S_4$ have order 8.
+	Note that we have calculated 2 of these subgroups in \exref{4.2.5}, namely parts (a) and (b).
+	Since $n_2 \equiv 1 \bmod 2$ and $n_2 \mid 3$, then $n_2 = 1$ or $3$.
+	However, there are more than one Sylow 2-subgroup, so that $n_2 = 3$.
+	One of the Sylow 2-subgroups is
 	\[
 		\gen{(1\ 2\ 3\ 4), (2\ 4)} = \set{1, (1\ 2\ 3\ 4), (1\ 3)(2\ 4), (1\ 4\ 3\ 2), (2\ 4), (1\ 2)(3\ 4), (1\ 3), (1\ 4)(2\ 3)}.
 	\]
-	The other two can be reached by conjugation. For example, conjugating by $(2\ 3)$ gives
+	The other two can be reached by conjugation.
+	For example, conjugating by $(2\ 3)$ gives
 	\[
 		\gen{(1\ 3\ 2\ 4), (3\ 4)} = \set{1, (1\ 3\ 2\ 4), (1\ 2)(3\ 4), (1\ 4\ 2\ 3), (3\ 4), (1\ 3)(2\ 4), (1\ 2), (1\ 4)(2\ 3)},
 	\]
@@ -107,7 +156,10 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	Recall that $|\speclin_2(\f_3)| = 24 = 3 \cdot 2^3$. Therefore, the Sylow 3-subgroups have order 3. Moreover, recall that $\speclin_2(\f_3)$ is generated by the two matrices as listed in \exref{2.4.9}. Since every group of order 3 is cyclic, it is clear that two distinct Sylow 3-subgroups are
+	Recall that $|\speclin_2(\f_3)| = 24 = 3 \cdot 2^3$.
+	Therefore, the Sylow 3-subgroups have order 3.
+	Moreover, recall that $\speclin_2(\f_3)$ is generated by the two matrices as listed in \exref{2.4.9}.
+	Since every group of order 3 is cyclic, it is clear that two distinct Sylow 3-subgroups are
 	\[
 		\gen{A} = \left\{I_2,
 		\begin{bmatrix}
@@ -128,7 +180,10 @@ Let $G$ be a finite group and let $p$ be a prime.
 			2 & 1
 		\end{bmatrix} \right\}
 	\] 
-	Since $n_3 \equiv 1 \bmod 3$ and $n_3 \mid 8$, then $n_3 = 4$ since we were able to exhibit more than one Sylow 3-subgroup. Conjugating $A$ by $B$, we obtain another matrix $C$ of order 3. Conjugating $B$ by $C$ gives another matrix $D$ of order 3. Therefore, the other two Sylow 3-subgroups are 
+	Since $n_3 \equiv 1 \bmod 3$ and $n_3 \mid 8$, then $n_3 = 4$ since we were able to exhibit more than one Sylow 3-subgroup.
+	Conjugating $A$ by $B$, we obtain another matrix $C$ of order 3.
+	Conjugating $B$ by $C$ gives another matrix $D$ of order 3.
+	Therefore, the other two Sylow 3-subgroups are 
 	\[
 		\gen C = \left\{I_2, 
 		\begin{bmatrix}
@@ -167,17 +222,42 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	Let $P$ be the subgroup generated by the two matrices. Note that $P \cong Q_8$ by \exref{2.4.10} so that $|P| = 8$, and $P \in \syl_2(\speclin_2(\f_3))$. To show uniqueness, let $Q \in \syl_2(\speclin_2(\f_3))$. Since $Q$ is conjugate to $P$, then $Q \cong Q_8$ as well. We now consider $|P \cap Q|$, and let $Z = \gen I$ be the subgroup of $P$ associated with $Z(Q_8)$. For any $g \in \speclin_2(\f_3)$, then $gPg\inv \cong Q_8$. However, $gZg\inv \leq gPg\inv$ is a subgroup of order 2, and $Z \leq gPg\inv$ as well, since $Z \leq Z(\speclin_2(\f_3))$. It follows that $gZg\inv = Z$, hence $Z \nsub \speclin_2(\f_3)$ and every Sylow 2-subgroup must contain $Z$.
+	Let $P$ be the subgroup generated by the two matrices.
+	Note that $P \cong Q_8$ by \exref{2.4.10} so that $|P| = 8$, and $P \in \syl_2(\speclin_2(\f_3))$.
+	To show uniqueness, let $Q \in \syl_2(\speclin_2(\f_3))$.
+	Since $Q$ is conjugate to $P$, then $Q \cong Q_8$ as well.
+	We now consider $|P \cap Q|$, and let $Z = \gen I$ be the subgroup of $P$ associated with $Z(Q_8)$.
+	For any $g \in \speclin_2(\f_3)$, then $gPg\inv \cong Q_8$.
+	However, $gZg\inv \leq gPg\inv$ is a subgroup of order 2, and $Z \leq gPg\inv$ as well, since $Z \leq Z(\speclin_2(\f_3))$.
+	It follows that $gZg\inv = Z$, hence $Z \nsub \speclin_2(\f_3)$ and every Sylow 2-subgroup must contain $Z$.
 
-	Clearly, the intersection cannot be trivial since both $P$ and $Q$ are isomorphic to $Q_8$, hence they must both contain $Z$. If $|P \cap Q| = 2$, then $P \cap Q = Z$. Note that in $P$, there are 6 elements of order 4. However, taking the case of $n_3 = 3$, then there would be $1 + 1 + 6 \cdot 3 = 20$ elements accounted for, where the first 1 is from the identity, the second 1 is from the unique element of order 2, and $6 \cdot 3$ is from the elements of order 4 in each Sylow 2-subgroup. However, from \exref{4.5.9}, there are at least 8 elements of order 3, giving a total of at least 28 elements, which is impossible. Therefore, $|P \cap Q| \neq 2$.
+	Clearly, the intersection cannot be trivial since both $P$ and $Q$ are isomorphic to $Q_8$, hence they must both contain $Z$.
+	If $|P \cap Q| = 2$, then $P \cap Q = Z$.
+	Note that in $P$, there are 6 elements of order 4.
+	However, taking the case of $n_3 = 3$, then there would be $1 + 1 + 6 \cdot 3 = 20$ elements accounted for, where the first 1 is from the identity, the second 1 is from the unique element of order 2, and $6 \cdot 3$ is from the elements of order 4 in each Sylow 2-subgroup.
+	However, from \exref{4.5.9}, there are at least 8 elements of order 3, giving a total of at least 28 elements, which is impossible.
+	Therefore, $|P \cap Q| \neq 2$.
 
-	If $|P \cap Q| = 4$, first let $P = \set{I, -I, A, A^3, B, B^3, AB, A^3B^3}$ where $A$ and $B$ generate $P$. Since $P \cap Q \leq P \cong Q_8$ and has order 4, it must be one of the cyclic subgroups. Without loss of generality, let $P \cap Q = \gen A$. Since we are assuming distinct Sylow 2-subgroups, then we may let $Q = \set{I, -I, A, A^3, C, C^3, AC, A^3C^3}$ for some $C \notin P$. Let $R$ be the third Sylow 2-subgroup. Then $|P \cap R|$ must also be 4 by the preceding reasons of ruling out 1 and 2, while 8 would imply $P = R$. Therefore, $P \cap R$ is also a cyclic subgroup of order 4. Again, without loss of generality, let $P \cap R = \gen B$. Then we may let $R = \set{I, -I, B, B^3, D, D^3, BD, B^3D^3}$ for some $D \notin P$. Now consider $Q \cap R$, which must also have order 4. However, by construction, $Q$ and $R$ only share the elements $I, -I$, so that $|Q \cap R| = 2$, a contradiction. Therefore, $|P \cap Q| \neq 4$.
+	If $|P \cap Q| = 4$, first let $P = \set{I, -I, A, A^3, B, B^3, AB, A^3B^3}$ where $A$ and $B$ generate $P$.
+	Since $P \cap Q \leq P \cong Q_8$ and has order 4, it must be one of the cyclic subgroups.
+	Without loss of generality, let $P \cap Q = \gen A$.
+	Since we are assuming distinct Sylow 2-subgroups, then we may let $Q = \set{I, -I, A, A^3, C, C^3, AC, A^3C^3}$ for some $C \notin P$.
+	Let $R$ be the third Sylow 2-subgroup.
+	Then $|P \cap R|$ must also be 4 by the preceding reasons of ruling out 1 and 2, while 8 would imply $P = R$.
+	Therefore, $P \cap R$ is also a cyclic subgroup of order 4.
+	Again, without loss of generality, let $P \cap R = \gen B$.
+	Then we may let $R = \set{I, -I, B, B^3, D, D^3, BD, B^3D^3}$ for some $D \notin P$.
+	Now consider $Q \cap R$, which must also have order 4.
+	However, by construction, $Q$ and $R$ only share the elements $I, -I$, so that $|Q \cap R| = 2$, a contradiction.
+	Therefore, $|P \cap Q| \neq 4$.
 
-	Hence, we must have $|P \cap Q| = 8$, so that $P = Q$. Therefore, $P$ is the unique Sylow 2-subgroup of $\speclin_2(\f_3)$.
+	Hence, we must have $|P \cap Q| = 8$, so that $P = Q$.
+	Therefore, $P$ is the unique Sylow 2-subgroup of $\speclin_2(\f_3)$.
 \end{sol}
 
 \begin{exercise}[4.5.11]
-	Show that the center of $\speclin_2(\f_3)$ is the group of order 2 consisting of $\pm I$, where $I$ is the identity matrix. Prove that $\speclin_2(\f_3)/Z(\speclin_2(\f_3)) \cong A_4$. [Use facts about groups of order 12.]
+	Show that the center of $\speclin_2(\f_3)$ is the group of order 2 consisting of $\pm I$, where $I$ is the identity matrix.
+	Prove that $\speclin_2(\f_3)/Z(\speclin_2(\f_3)) \cong A_4$. [Use facts about groups of order 12.]
 \end{exercise}
 
 \begin{sol}
@@ -199,7 +279,8 @@ Let $G$ be a finite group and let $p$ be a prime.
 			c & d
 		\end{bmatrix}
 	\]
-	in $\speclin_2(\f_3)$, where $Z \in Z(\speclin_2(\f_3))$. Then
+	in $\speclin_2(\f_3)$, where $Z \in Z(\speclin_2(\f_3))$.
+	Then
 	\[
 		AZ = 
 		\begin{bmatrix}
@@ -211,7 +292,8 @@ Let $G$ be a finite group and let $p$ be a prime.
 			c & c + d \\
 		\end{bmatrix} = ZA
 	\]
-	from which we can determine $c = 0$ and $a = d$. Then
+	from which we can determine $c = 0$ and $a = d$.
+	Then
 	\[
 		BZ = 
 		\begin{bmatrix}
@@ -223,24 +305,49 @@ Let $G$ be a finite group and let $p$ be a prime.
 			a & a
 		\end{bmatrix} = ZB
 	\]
-	from which we can determine that $a \in \f_3$ and $b = 0$. Then $Z = aI_2$. To prove the second part, we show that $\speclin_2(\f_3)/Z(\speclin_2(\f_3))$ does not have a normal Sylow 3-subgroup. To that end, let $P \in \syl_3(\speclin_2(\f_3))$, and consider $P \cap Z$. Under the projection homomorphism $\pi$ restricted to $P$, it is clear that $\ker(\pi|_P) = P \cap Z$, since $\ker(\pi|_P)$ are elements $p \in P$ such that $\pi(p) = Z$. By the First Isomorphism Theorem, then $P/\ker(\pi|_P) \cong \pi(P)$, or $P/P \cap Z \cong \pi(P)$. Since $(|P|, |Z|) = 1$ and $P \cap Z$ is a subgroup of both, then the intersection is trivial so that $P \cong \pi(P)$. Then $|\pi(P)| = 3$ so that $\pi(P) \in \syl_3(\speclin_2(\f_3)/Z(\speclin_2(\f_3)))$. This shows that any Sylow 3-subgroup of $\speclin_2(\f_3)$ is also a Sylow 3-subgroup of the quotient.
+	from which we can determine that $a \in \f_3$ and $b = 0$.
+	Then $Z = aI_2$.
+	To prove the second part, we show that $\speclin_2(\f_3)/Z(\speclin_2(\f_3))$ does not have a normal Sylow 3-subgroup.
+	To that end, let $P \in \syl_3(\speclin_2(\f_3))$, and consider $P \cap Z$.
+	Under the projection homomorphism $\pi$ restricted to $P$, it is clear that $\ker(\pi|_P) = P \cap Z$, since $\ker(\pi|_P)$ are elements $p \in P$ such that $\pi(p) = Z$.
+	By the First Isomorphism Theorem, then $P/\ker(\pi|_P) \cong \pi(P)$, or $P/P \cap Z \cong \pi(P)$.
+	Since $(|P|, |Z|) = 1$ and $P \cap Z$ is a subgroup of both, then the intersection is trivial so that $P \cong \pi(P)$.
+	Then $|\pi(P)| = 3$ so that $\pi(P) \in \syl_3(\speclin_2(\f_3)/Z(\speclin_2(\f_3)))$.
+	This shows that any Sylow 3-subgroup of $\speclin_2(\f_3)$ is also a Sylow 3-subgroup of the quotient.
 
-	Since \exref{4.5.9} showed that $\speclin_2(\f_3)$ has 4 Sylow 3-subgroups, then there are also 4 Sylow 3-subgroups in the quotient. Hence, $n_3(\speclin_2(\f_3)/Z(\speclin_2(\f_3))) = 4 \neq 1$. By the text's classification of groups of order 12, it must be that the quotient group is isomorphic to $A_4$.
+	Since \exref{4.5.9} showed that $\speclin_2(\f_3)$ has 4 Sylow 3-subgroups, then there are also 4 Sylow 3-subgroups in the quotient.
+	Hence, $n_3(\speclin_2(\f_3)/Z(\speclin_2(\f_3))) = 4 \neq 1$.
+	By the text's classification of groups of order 12, it must be that the quotient group is isomorphic to $A_4$.
 \end{sol}
 
 \begin{exercise}[4.5.12]
-	Let $2n = 2^ak$ where $k$ is odd. Prove that the number of Sylow 2-subgroups of $D_{2n}$ is $k$. [Prove that if $P \in \syl_2(D_{2n})$ then $N_{D_{2n}}(P) = P$.]
+	Let $2n = 2^ak$ where $k$ is odd.
+	Prove that the number of Sylow 2-subgroups of $D_{2n}$ is $k$. [Prove that if $P \in \syl_2(D_{2n})$ then $N_{D_{2n}}(P) = P$.]
 \end{exercise}
 
 \begin{sol}
-	We construct a Sylow 2-subgroup. Note that $n = 2^{a - 1}k = |r|$ so that $|r^k| = 2^{a - 1}$. Since $s$ has order 2, then $P = \gen{r^k, s}$ has order $2^a$ and is a Sylow 2-subgroup of $D_{2n}$. To show that $N_{D_{2n}}(P) = P$, let $g \in N_{D_{2n}}(P)$. We then have two cases:
+	We construct a Sylow 2-subgroup.
+	Note that $n = 2^{a - 1}k = |r|$ so that $|r^k| = 2^{a - 1}$.
+	Since $s$ has order 2, then $P = \gen{r^k, s}$ has order $2^a$ and is a Sylow 2-subgroup of $D_{2n}$.
+	To show that $N_{D_{2n}}(P) = P$, let $g \in N_{D_{2n}}(P)$.
+	We then have two cases:
 	\begin{itemize}
-		\item If $g = r^i$ for some $i$, then it normalizes $s$. In particular, $r^isr^{-i} = r^{2i}s \in P$. Then $r^{2i}s = r^{km}s$ for some $m$. It follows that $k \mid 2i$. However, $k$ is odd so that $k \mid i$, hence $r^i \in \gen{r^k} \leq P$.
-		\item If $g = sr^i$, it also normalizes $s$. Then $sr^is(sr^i)\inv = sr^isr^{-i} = r^{-2i}s \in P$. Then $r^{-2i}s = r^{km}s$ for some $m$. It follows that $k \mid -2i$. However, $k$ is odd so that $k \mid i$, hence $sr^i \in \gen{r^k, s} = P$.
+		\item If $g = r^i$ for some $i$, then it normalizes $s$.
+	In particular, $r^isr^{-i} = r^{2i}s \in P$.
+	Then $r^{2i}s = r^{km}s$ for some $m$.
+	It follows that $k \mid 2i$.
+	However, $k$ is odd so that $k \mid i$, hence $r^i \in \gen{r^k} \leq P$.
+		\item If $g = sr^i$, it also normalizes $s$.
+	Then $sr^is(sr^i)\inv = sr^isr^{-i} = r^{-2i}s \in P$.
+	Then $r^{-2i}s = r^{km}s$ for some $m$.
+	It follows that $k \mid -2i$.
+	However, $k$ is odd so that $k \mid i$, hence $sr^i \in \gen{r^k, s} = P$.
 	\end{itemize}
 	In both cases, we have $g \in P$, so that $N_{D_{2n}}(P) = P$.
 
-	Now we show that the number of Sylow 2-subgroups of $D_{2n}$ is $k$. Note that the number of Sylow 2-subgroups is given by the index of the normalizer of any Sylow 2-subgroup. Since we have shown that the normalizer is just the subgroup itself, then the number of Sylow 2-subgroups is given by the index of any Sylow 2-subgroup, which is $|D_{2n}|/|P| = 2^ak/2^a = k$. 
+	Now we show that the number of Sylow 2-subgroups of $D_{2n}$ is $k$.
+	Note that the number of Sylow 2-subgroups is given by the index of the normalizer of any Sylow 2-subgroup.
+	Since we have shown that the normalizer is just the subgroup itself, then the number of Sylow 2-subgroups is given by the index of any Sylow 2-subgroup, which is $|D_{2n}|/|P| = 2^ak/2^a = k$. 
 \end{sol}
 
 \begin{exercise}[4.5.13]
@@ -248,7 +355,14 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	Note that $56 = 2^3 \cdot 7$. Recall that $n_7 \equiv 1 \bmod 7$ and $n_7 \mid 8$, so that $n_7 = 1$ or $8$. Moreover, $n_2 \equiv 1 \bmod 2$ and $n_2 \mid 7$, so that $n_2 = 1$ or $7$. Assume, by way of contradiction, that both $n_7 = 8$ and $n_2 = 7$. Then there are at least $8 \cdot 6 = 48$ elements of order 7. For the Sylow 2-subgroups, their pairwise intersection can have at most 4 elements, so that there are at least $7 \cdot 4 = 28$ elements of order 2-power order. This gives a total of at least 77 elements, which is impossible. Therefore, either $n_7 = 1$ or $n_2 = 1$, so that there is a normal Sylow $p$-subgroup for some prime $p$ dividing the order of the group.
+	Note that $56 = 2^3 \cdot 7$.
+	Recall that $n_7 \equiv 1 \bmod 7$ and $n_7 \mid 8$, so that $n_7 = 1$ or $8$.
+	Moreover, $n_2 \equiv 1 \bmod 2$ and $n_2 \mid 7$, so that $n_2 = 1$ or $7$.
+	Assume, by way of contradiction, that both $n_7 = 8$ and $n_2 = 7$.
+	Then there are at least $8 \cdot 6 = 48$ elements of order 7.
+	For the Sylow 2-subgroups, their pairwise intersection can have at most 4 elements, so that there are at least $7 \cdot 4 = 28$ elements of order 2-power order.
+	This gives a total of at least 77 elements, which is impossible.
+	Therefore, either $n_7 = 1$ or $n_2 = 1$, so that there is a normal Sylow $p$-subgroup for some prime $p$ dividing the order of the group.
 \end{sol}
 
 \begin{exercise}[4.5.14]
@@ -256,7 +370,15 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	Note that $312 = 2^3 \cdot 3 \cdot 13$. Recall that $n_{13} \equiv 1 \bmod 13$ and $n_{13} \mid 24$, so that $n_{13} = 1$ or $24$. Moreover, $n_3 \equiv 1 \bmod 3$ and $n_3 \mid 104$, so that $n_3 = 1, 13, 52$, or $104$. Lastly, $n_2 \equiv 1 \bmod 2$ and $n_2 \mid 39$, so that $n_2 = 1, 3, 13$, or $39$. Assume, by way of contradiction, that $n_{13} = 24$, $n_3 > 1$, and $n_2 > 1$. In particular, then $n_3 \geq 13$ and $n_2 \geq 3$. The Sylow-3 and Sylow-13 subgroups intersect trivially, while the Sylow 2-subgroups can have at most 4 elements in common. Then there are at least $24 \cdot 12 = 288$ elements of order 13, at least $13 \cdot 2 = 26$ elements of order 3, and at least $3 \cdot 4 = 12$ elements of order 2-power order, giving a total of at least 326 elements, which is impossible. Therefore, either $n_{13} = 1$, or $n_3 = 1$, or $n_2 = 1$, so that there is a normal Sylow $p$-subgroup for some prime $p$ dividing the order of the group.
+	Note that $312 = 2^3 \cdot 3 \cdot 13$.
+	Recall that $n_{13} \equiv 1 \bmod 13$ and $n_{13} \mid 24$, so that $n_{13} = 1$ or $24$.
+	Moreover, $n_3 \equiv 1 \bmod 3$ and $n_3 \mid 104$, so that $n_3 = 1, 13, 52$, or $104$.
+	Lastly, $n_2 \equiv 1 \bmod 2$ and $n_2 \mid 39$, so that $n_2 = 1, 3, 13$, or $39$.
+	Assume, by way of contradiction, that $n_{13} = 24$, $n_3 > 1$, and $n_2 > 1$.
+	In particular, then $n_3 \geq 13$ and $n_2 \geq 3$.
+	The Sylow-3 and Sylow-13 subgroups intersect trivially, while the Sylow 2-subgroups can have at most 4 elements in common.
+	Then there are at least $24 \cdot 12 = 288$ elements of order 13, at least $13 \cdot 2 = 26$ elements of order 3, and at least $3 \cdot 4 = 12$ elements of order 2-power order, giving a total of at least 326 elements, which is impossible.
+	Therefore, either $n_{13} = 1$, or $n_3 = 1$, or $n_2 = 1$, so that there is a normal Sylow $p$-subgroup for some prime $p$ dividing the order of the group.
 \end{sol}
 
 \begin{exercise}[4.5.15]
@@ -264,23 +386,40 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	Note that $351 = 3^3 \cdot 13$. Recall that $n_{13} \equiv 1 \bmod 13$ and $n_{13} \mid 27$, so that $n_{13} = 1$ or $27$. Moreover, $n_3 \equiv 1 \bmod 3$ and $n_3 \mid 13$, so that $n_3 = 1$ or $13$. Assume, by way of contradiction, that both $n_{13} = 27$ and $n_3 = 13$. The Sylow-13 subgroups intersect trivially, while the Sylow-3 subgroups can have at most 9 elements in common. Then there are at least $27 \cdot 12 = 324$ elements of order 13 and at least $13 \cdot 8 = 104$ elements of order 3, giving a total of at least 428 elements, which is impossible. Therefore, either $n_{13} = 1$ or $n_3 = 1$, so that there is a normal Sylow $p$-subgroup for some prime $p$ dividing the order of the group.
+	Note that $351 = 3^3 \cdot 13$.
+	Recall that $n_{13} \equiv 1 \bmod 13$ and $n_{13} \mid 27$, so that $n_{13} = 1$ or $27$.
+	Moreover, $n_3 \equiv 1 \bmod 3$ and $n_3 \mid 13$, so that $n_3 = 1$ or $13$.
+	Assume, by way of contradiction, that both $n_{13} = 27$ and $n_3 = 13$.
+	The Sylow-13 subgroups intersect trivially, while the Sylow-3 subgroups can have at most 9 elements in common.
+	Then there are at least $27 \cdot 12 = 324$ elements of order 13 and at least $13 \cdot 8 = 104$ elements of order 3, giving a total of at least 428 elements, which is impossible.
+	Therefore, either $n_{13} = 1$ or $n_3 = 1$, so that there is a normal Sylow $p$-subgroup for some prime $p$ dividing the order of the group.
 \end{sol}
 
 \begin{exercise}[4.5.16]
-	Let $|G| = pqr$, where $p, q$ and $r$ are primes with $p < q < r$. Prove that $G$ has a normal Sylow subgroup for either $p, q$ or $r$.
+	Let $|G| = pqr$, where $p, q$ and $r$ are primes with $p < q < r$.
+	Prove that $G$ has a normal Sylow subgroup for either $p, q$ or $r$.
 \end{exercise}
 
 \begin{sol}
-	Assume, by way of contradiction, that $G$ does not contain a normal Sylow subgroup. In particular, $n_r \neq 1$ so that $n_r = pq$. Then $G$ contains $pq(r - 1)$ elements of order $r$. Moreover, $n_q = 1$ or $pr$. If $n_q = pr$, then there are $pr(q - 1)$ elements of order $q$. Then there are 
+	Assume, by way of contradiction, that $G$ does not contain a normal Sylow subgroup.
+	In particular, $n_r \neq 1$ so that $n_r = pq$.
+	Then $G$ contains $pq(r - 1)$ elements of order $r$.
+	Moreover, $n_q = 1$ or $pr$.
+	If $n_q = pr$, then there are $pr(q - 1)$ elements of order $q$.
+	Then there are 
 	\[
 		pq(r - 1) + pr(q - 1) = pqr - pq + prq - pr = 2pqr - p(q + r)
 	\]
-	elements of order $q$ or $r$. Observe that $(q - 1)(r - 1) - 1 > 0$ since $q \geq 3$ and $r \geq 5$. Then
+	elements of order $q$ or $r$.
+	Observe that $(q - 1)(r - 1) - 1 > 0$ since $q \geq 3$ and $r \geq 5$.
+	Then
 	\[
 		(q - 1)(r - 1) - 1 = qr - q - r = qr - (q + r) > 0
 	\]
-	so that $qr > q + r$. Then $pqr > p(q + r)$, so that $2pqr - p(q + r) > pqr$. This gives a contradiction since there are at most $pqr$ elements in $G$. Therefore, $n_q = 1$, so that there is a normal Sylow subgroup in $G$.
+	so that $qr > q + r$.
+	Then $pqr > p(q + r)$, so that $2pqr - p(q + r) > pqr$.
+	This gives a contradiction since there are at most $pqr$ elements in $G$.
+	Therefore, $n_q = 1$, so that there is a normal Sylow subgroup in $G$.
 \end{sol}
 
 \begin{exercise}[4.5.17]
@@ -288,9 +427,18 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	Note that $105 = 3 \cdot 5 \cdot 7$. Recall that $n_7 \equiv 1 \bmod 7$ and $n_7 \mid 15$, so that $n_7 = 1$ or $15$. Moreover, $n_5 \equiv 1 \bmod 5$ and $n_5 \mid 21$, so that $n_5 = 1$ or $21$. Assume, by way of contradiction, that both $n_7 = 15$ and $n_5 = 21$. Then there are at least $15 \cdot 6 = 90$ elements of order 7 and at least $21 \cdot 4 = 84$ elements of order 5, giving a total of at least 174 elements, which is impossible. Therefore, either $n_7 = 1$ or $n_5 = 1$, so that there is a normal Sylow subgroup for either prime.
+	Note that $105 = 3 \cdot 5 \cdot 7$.
+	Recall that $n_7 \equiv 1 \bmod 7$ and $n_7 \mid 15$, so that $n_7 = 1$ or $15$.
+	Moreover, $n_5 \equiv 1 \bmod 5$ and $n_5 \mid 21$, so that $n_5 = 1$ or $21$.
+	Assume, by way of contradiction, that both $n_7 = 15$ and $n_5 = 21$.
+	Then there are at least $15 \cdot 6 = 90$ elements of order 7 and at least $21 \cdot 4 = 84$ elements of order 5, giving a total of at least 174 elements, which is impossible.
+	Therefore, either $n_7 = 1$ or $n_5 = 1$, so that there is a normal Sylow subgroup for either prime.
 
-	Without loss of generality, let $P \in \syl_5(G)$ be normal. Then $G/P$ has order 21, and $G/P$ contains a normal Sylow 7-subgroup $Q/P$. Taking the preimage of $Q/P$ under the projection homomorphism $\pi$, then $\pi\inv(Q/P)$ contains a normal Sylow 7-subgroup $Q$ of $G$. From Corollary 4.20, we know that $Q$ is characteristic in $\pi\inv(Q/P)$, and $\pi\inv(Q/P)$ is normal in $G$, so that $Q$ is normal in $G$ as well. Therefore, there is a normal Sylow 5-subgroup and a normal Sylow 7-subgroup in $G$.
+	Without loss of generality, let $P \in \syl_5(G)$ be normal.
+	Then $G/P$ has order 21, and $G/P$ contains a normal Sylow 7-subgroup $Q/P$.
+	Taking the preimage of $Q/P$ under the projection homomorphism $\pi$, then $\pi\inv(Q/P)$ contains a normal Sylow 7-subgroup $Q$ of $G$.
+	From Corollary 4.20, we know that $Q$ is characteristic in $\pi\inv(Q/P)$, and $\pi\inv(Q/P)$ is normal in $G$, so that $Q$ is normal in $G$ as well.
+	Therefore, there is a normal Sylow 5-subgroup and a normal Sylow 7-subgroup in $G$.
 \end{sol}
 
 \begin{exercise}[4.5.18]
@@ -298,7 +446,8 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	We have $n_5 \equiv 1 \bmod 5$, and $n_5 \mid 8$. The only choice is $n_5 = 1$, so that there is a normal Sylow 5-subgroup in the group.
+	We have $n_5 \equiv 1 \bmod 5$, and $n_5 \mid 8$.
+	The only choice is $n_5 = 1$, so that there is a normal Sylow 5-subgroup in the group.
 \end{sol}
 
 \begin{exercise}[4.5.19]
@@ -306,7 +455,10 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	Note that $6545 = 5 \cdot 7 \cdot 11 \cdot 17$. Moreover, $n_5 \equiv 1 \bmod 5$ and $n_5 \mid 7 \cdot 11 \cdot 17 = 1309$. Since $n_5$ is not modulo 5 when it is 7, 77, or 1309, then $n_5 = 1$. Therefore, there is a normal Sylow 5-subgroup in $G$, so that $G$ is not simple.
+	Note that $6545 = 5 \cdot 7 \cdot 11 \cdot 17$.
+	Moreover, $n_5 \equiv 1 \bmod 5$ and $n_5 \mid 7 \cdot 11 \cdot 17 = 1309$.
+	Since $n_5$ is not modulo 5 when it is 7, 77, or 1309, then $n_5 = 1$.
+	Therefore, there is a normal Sylow 5-subgroup in $G$, so that $G$ is not simple.
 \end{sol}
 
 \begin{exercise}[4.5.20]
@@ -314,7 +466,12 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	Note that $1365 = 3 \cdot 5 \cdot 7 \cdot 13$. Suppose that none of the $n_i \equiv 1 \bmod i$ for $i = 3, 5, 7, 13$ is equal to 1. Then $n_{13} = 1$ or 105, $n_7 = 1$ or 15, $n_5 = 1, 21$, or 91, and $n_3 = 1, 13$, or 91. Then the number of elements of order 13 is at least $105 \cdot 12 = 1260$, the number of elements of order 7 is at least $15 \cdot 6 = 90$, the number of elements of order 5 is at least $21 \cdot 4 = 84$, and the number of elements of order 3 is at least $13 \cdot 2 = 26$. This gives a total of at least $1260 + 90 + 84 + 26 = 1460$ elements, which is impossible. Therefore, there must be a normal Sylow subgroup in $G$, so that $G$ is not simple.
+	Note that $1365 = 3 \cdot 5 \cdot 7 \cdot 13$.
+	Suppose that none of the $n_i \equiv 1 \bmod i$ for $i = 3, 5, 7, 13$ is equal to 1.
+	Then $n_{13} = 1$ or 105, $n_7 = 1$ or 15, $n_5 = 1, 21$, or 91, and $n_3 = 1, 13$, or 91.
+	Then the number of elements of order 13 is at least $105 \cdot 12 = 1260$, the number of elements of order 7 is at least $15 \cdot 6 = 90$, the number of elements of order 5 is at least $21 \cdot 4 = 84$, and the number of elements of order 3 is at least $13 \cdot 2 = 26$.
+	This gives a total of at least $1260 + 90 + 84 + 26 = 1460$ elements, which is impossible.
+	Therefore, there must be a normal Sylow subgroup in $G$, so that $G$ is not simple.
 \end{sol}
 
 \begin{exercise}[4.5.21]
@@ -322,7 +479,11 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	Note that $2907 = 3^2 \cdot 17 \cdot 19$. Suppose that none of the $n_i \equiv 1 \bmod i$ for $i = 3, 17, 19$ is equal to 1. Then $n_{19} = 1$ or 153, $n_{17} = 1$ or 171, and $n_3 = 1$ or 19. Assuming that the Sylow 3-subgroups intersect non-trivially, then there are at least $19 \cdot 6 = 114$ elements of 3-power order, at least $153 \cdot 18 = 2754$ elements of order 19, and at least $171 \cdot 16 = 2736$ elements of order 17, giving a total of at least $114 + 2754 + 2736 = 5604$ elements, which is impossible. Therefore, there must be a normal Sylow subgroup in $G$, so that $G$ is not simple.
+	Note that $2907 = 3^2 \cdot 17 \cdot 19$.
+	Suppose that none of the $n_i \equiv 1 \bmod i$ for $i = 3, 17, 19$ is equal to 1.
+	Then $n_{19} = 1$ or 153, $n_{17} = 1$ or 171, and $n_3 = 1$ or 19.
+	Assuming that the Sylow 3-subgroups intersect non-trivially, then there are at least $19 \cdot 6 = 114$ elements of 3-power order, at least $153 \cdot 18 = 2754$ elements of order 19, and at least $171 \cdot 16 = 2736$ elements of order 17, giving a total of at least $114 + 2754 + 2736 = 5604$ elements, which is impossible.
+	Therefore, there must be a normal Sylow subgroup in $G$, so that $G$ is not simple.
 \end{sol}
 
 \begin{exercise}[4.5.22]
@@ -330,7 +491,11 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	Note that $132 = 2^2 \cdot 3 \cdot 11$. Suppose that none of the $n_i \equiv 1 \bmod i$ for $i = 2, 3, 11$ is equal to 1. Then $n_{11} = 1$ or 12, $n_3 = 1$ or 22, and $n_2 = 1, 11$ or 33. Assuming that the Sylow 2-subgroups intersect non-trivially, then there are at least $11 \cdot 3 = 33$ elements of order 2-power order, at least $22 \cdot 2 = 44$ elements of order 3, and at least $12 \cdot 10 = 120$ elements of order 11, giving a total of at least $33 + 44 + 120 = 197$ elements, which is impossible. Therefore, there must be a normal Sylow subgroup in $G$, so that $G$ is not simple.
+	Note that $132 = 2^2 \cdot 3 \cdot 11$.
+	Suppose that none of the $n_i \equiv 1 \bmod i$ for $i = 2, 3, 11$ is equal to 1.
+	Then $n_{11} = 1$ or 12, $n_3 = 1$ or 22, and $n_2 = 1, 11$ or 33.
+	Assuming that the Sylow 2-subgroups intersect non-trivially, then there are at least $11 \cdot 3 = 33$ elements of order 2-power order, at least $22 \cdot 2 = 44$ elements of order 3, and at least $12 \cdot 10 = 120$ elements of order 11, giving a total of at least $33 + 44 + 120 = 197$ elements, which is impossible.
+	Therefore, there must be a normal Sylow subgroup in $G$, so that $G$ is not simple.
 \end{sol}
 
 \begin{exercise}[4.5.23]
@@ -338,7 +503,9 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	Note that $462 = 2 \cdot 3 \cdot 7 \cdot 11$. Since $n_{11} \equiv 1 \bmod 11$, and no divisor of $462/11 = 42$ is congruent to 1 modulo 11, then $n_{11} = 1$. Therefore, there is a normal Sylow 11-subgroup in $G$, so that $G$ is not simple.
+	Note that $462 = 2 \cdot 3 \cdot 7 \cdot 11$.
+	Since $n_{11} \equiv 1 \bmod 11$, and no divisor of $462/11 = 42$ is congruent to 1 modulo 11, then $n_{11} = 1$.
+	Therefore, there is a normal Sylow 11-subgroup in $G$, so that $G$ is not simple.
 \end{sol}
 
 \begin{exercise}[4.5.24]
@@ -346,9 +513,20 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	Note that $231 = 3 \cdot 7 \cdot 11$. Since $n_{11} \equiv 1 \bmod 11$, and no divisor of $231/11 = 21$ is congruent to 1 modulo 11, then $n_{11} = 1$. Therefore, there is a normal Sylow 11-subgroup in $G$. Let $P$ be the Sylow 11-subgroup so that $P \nsub G$. We proceed similarly to the text regarding groups of order $pq$. Since $P$ is normal, then $G/C_G(P)$ is isomorphic to a subgroup of $\aut(P)$. Since $P \cong Z_{11}$, then $|\aut(P)| = 10$. Moreover, the image of the action of $G$ on $P$ by conjugation has order dividing 10 but also divides 231, so that the image is trivial. Therefore, $G/C_G(P)$ is trivial, so that $C_G(P) = G$. This means that $P \leq Z(G)$, so that $Z(G)$ contains a Sylow 11-subgroup of $G$.
+	Note that $231 = 3 \cdot 7 \cdot 11$.
+	Since $n_{11} \equiv 1 \bmod 11$, and no divisor of $231/11 = 21$ is congruent to 1 modulo 11, then $n_{11} = 1$.
+	Therefore, there is a normal Sylow 11-subgroup in $G$.
+	Let $P$ be the Sylow 11-subgroup so that $P \nsub G$.
+	We proceed similarly to the text regarding groups of order $pq$.
+	Since $P$ is normal, then $G/C_G(P)$ is isomorphic to a subgroup of $\aut(P)$.
+	Since $P \cong Z_{11}$, then $|\aut(P)| = 10$.
+	Moreover, the image of the action of $G$ on $P$ by conjugation has order dividing 10 but also divides 231, so that the image is trivial.
+	Therefore, $G/C_G(P)$ is trivial, so that $C_G(P) = G$.
+	This means that $P \leq Z(G)$, so that $Z(G)$ contains a Sylow 11-subgroup of $G$.
 
-	Next, we show that a Sylow 7-subgroup is normal in $G$. Since $n_7 \equiv 1 \bmod 7$ and no divisor of 33 is congruent to 1 modulo 7, then $n_7 = 1$. Therefore, there is a normal Sylow 7-subgroup in $G$.
+	Next, we show that a Sylow 7-subgroup is normal in $G$.
+	Since $n_7 \equiv 1 \bmod 7$ and no divisor of 33 is congruent to 1 modulo 7, then $n_7 = 1$.
+	Therefore, there is a normal Sylow 7-subgroup in $G$.
 \end{sol}
 
 \begin{exercise}[4.5.25]
@@ -356,37 +534,77 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	Note that $385 = 5 \cdot 7 \cdot 11$. Since $n_7 \equiv 1 \bmod 7$, and no divisor of $385/7 = 55$ is congruent to 1 modulo 7, then $n_7 = 1$. Therefore, there is a normal Sylow 7-subgroup in $G$. Let $P$ be the Sylow 7-subgroup so that $P \nsub G$. Similarly to the previous problem, it's trivial to see that $|\aut(P)| = 6$, and the image of the action of $G$ on $P$ by conjugation has order dividing 6 but also divides 385, so that the image is trivial. Therefore, $G/C_G(P)$ is trivial, so that $C_G(P) = G$. This means that $P \leq Z(G)$, so that $Z(G)$ contains a Sylow 7-subgroup of $G$.
+	Note that $385 = 5 \cdot 7 \cdot 11$.
+	Since $n_7 \equiv 1 \bmod 7$, and no divisor of $385/7 = 55$ is congruent to 1 modulo 7, then $n_7 = 1$.
+	Therefore, there is a normal Sylow 7-subgroup in $G$.
+	Let $P$ be the Sylow 7-subgroup so that $P \nsub G$.
+	Similarly to the previous problem, it's trivial to see that $|\aut(P)| = 6$, and the image of the action of $G$ on $P$ by conjugation has order dividing 6 but also divides 385, so that the image is trivial.
+	Therefore, $G/C_G(P)$ is trivial, so that $C_G(P) = G$.
+	This means that $P \leq Z(G)$, so that $Z(G)$ contains a Sylow 7-subgroup of $G$.
 
-	Next, we show that a Sylow 11-subgroup is normal in $G$. Since $n_{11} \equiv 1 \bmod 11$ and no divisor of 35 is congruent to 1 modulo 11, then $n_{11} = 1$. Therefore, there is a normal Sylow 11-subgroup in $G$.
+	Next, we show that a Sylow 11-subgroup is normal in $G$.
+	Since $n_{11} \equiv 1 \bmod 11$ and no divisor of 35 is congruent to 1 modulo 11, then $n_{11} = 1$.
+	Therefore, there is a normal Sylow 11-subgroup in $G$.
 \end{sol}
 
 \begin{exercise}[4.5.26]
-	Let $G$ be a group of order 105. Prove that if a Sylow 3-subgroup of $G$ is normal then $G$ is Abelian.
+	Let $G$ be a group of order 105.
+	Prove that if a Sylow 3-subgroup of $G$ is normal then $G$ is Abelian.
 \end{exercise}
 
 \begin{sol}
-	Let $P$ be the Sylow 3-subgroup of $G$. Since $P$ is normal, then $|G/P| = 35$. Then $|\aut(P)| = 2$, so that the image of the action of $G$ on $P$ by conjugation has order dividing 2 but also divides 35, so that the image is trivial. Therefore, $G/C_G(P)$ is trivial, so that $C_G(P) = G$. This means that $P \leq Z(G)$, so that $Z(G)$ contains a Sylow 3-subgroup of $G$. In particular, $|G/Z(G)| \leq |G/P| = 35$. Since groups of order 35 are cyclic and $|G/Z(G)|$ divides 35, then $G/Z(G)$ is cyclic. By \exref{3.1.36}, then $G$ is Abelian.
+	Let $P$ be the Sylow 3-subgroup of $G$.
+	Since $P$ is normal, then $|G/P| = 35$.
+	Then $|\aut(P)| = 2$, so that the image of the action of $G$ on $P$ by conjugation has order dividing 2 but also divides 35, so that the image is trivial.
+	Therefore, $G/C_G(P)$ is trivial, so that $C_G(P) = G$.
+	This means that $P \leq Z(G)$, so that $Z(G)$ contains a Sylow 3-subgroup of $G$.
+	In particular, $|G/Z(G)| \leq |G/P| = 35$.
+	Since groups of order 35 are cyclic and $|G/Z(G)|$ divides 35, then $G/Z(G)$ is cyclic.
+	By \exref{3.1.36}, then $G$ is Abelian.
 \end{sol}
 
 \begin{exercise}[4.5.27]
-	Let $G$ be a group of order 315 which has a normal Sylow 3-subgroup. Prove that $Z(G)$ contains a Sylow 3-subgroup of $G$ and deduce that $G$ is Abelian.
+	Let $G$ be a group of order 315 which has a normal Sylow 3-subgroup.
+	Prove that $Z(G)$ contains a Sylow 3-subgroup of $G$ and deduce that $G$ is Abelian.
 \end{exercise}
 
 \begin{sol}
-	Let $P$ be the Sylow 3-subgroup of $G$. Note that $|P| = 9$, and $|G/P| = 35$. Then either $P \cong Z_9$ or $P \cong Z_3 \times Z_3$. In the first case, $|\aut(P)| = 6$, and in the second case, $|\aut(P)| = 48$. In both cases, $|\aut(P)|$ divides $|G/P| = 35$, so that the image of the action of $G$ on $P$ by conjugation is trivial. Therefore, $G/C_G(P)$ is trivial, so that $C_G(P) = G$. This means that $P \leq Z(G)$, so that $Z(G)$ contains a Sylow 3-subgroup of $G$. In particular, $|G/Z(G)| \leq |G/P| = 35$. Since groups of order 35 are cyclic and $|G/Z(G)|$ divides 35, then $G/Z(G)$ is cyclic. By \exref{3.1.36}, then $G$ is Abelian.
+	Let $P$ be the Sylow 3-subgroup of $G$.
+	Note that $|P| = 9$, and $|G/P| = 35$.
+	Then either $P \cong Z_9$ or $P \cong Z_3 \times Z_3$.
+	In the first case, $|\aut(P)| = 6$, and in the second case, $|\aut(P)| = 48$.
+	In both cases, $|\aut(P)|$ divides $|G/P| = 35$, so that the image of the action of $G$ on $P$ by conjugation is trivial.
+	Therefore, $G/C_G(P)$ is trivial, so that $C_G(P) = G$.
+	This means that $P \leq Z(G)$, so that $Z(G)$ contains a Sylow 3-subgroup of $G$.
+	In particular, $|G/Z(G)| \leq |G/P| = 35$.
+	Since groups of order 35 are cyclic and $|G/Z(G)|$ divides 35, then $G/Z(G)$ is cyclic.
+	By \exref{3.1.36}, then $G$ is Abelian.
 \end{sol}
 
 \begin{exercise}[4.5.28]
-	Let $G$ be a group of order 1575. Prove that if a Sylow 3-subgroup of $G$ is normal, then a Sylow 5-subgroup and a Sylow 7-subgroup are normal. In this situation prove that $G$ is Abelian.
+	Let $G$ be a group of order 1575.
+	Prove that if a Sylow 3-subgroup of $G$ is normal, then a Sylow 5-subgroup and a Sylow 7-subgroup are normal.
+	In this situation prove that $G$ is Abelian.
 \end{exercise}
 
 \begin{sol}
-	Note that $|G| = 3^2 \cdot 5^2 \cdot 7$. Let $P$ be the normal Sylow-3 subgroup of $G$. Let $Q$ be a Sylow 5-subgroup and $R$ be a Sylow 7-subgroup of $G$. Since $P \nsub G$, then $PQ \leq G$ and $PR \leq G$ with orders $3^2 \cdot 5^2$ and $3^2 \cdot 7$ respectively. 
+	Note that $|G| = 3^2 \cdot 5^2 \cdot 7$.
+	Let $P$ be the normal Sylow-3 subgroup of $G$.
+	Let $Q$ be a Sylow 5-subgroup and $R$ be a Sylow 7-subgroup of $G$.
+	Since $P \nsub G$, then $PQ \leq G$ and $PR \leq G$ with orders $3^2 \cdot 5^2$ and $3^2 \cdot 7$ respectively. 
 
-	Consider a Sylow 5-subgroup of $PQ$. Note that $n_5(PQ) \equiv 1 \bmod 5$ and $n_5(PQ) \mid 9$, so that $n_5(PQ) = 1$. Therefore, there is a normal Sylow 5-subgroup in $PQ$, which must be $Q$ since $Q$ is a Sylow 5-subgroup of $PQ$. It also follows that $P \leq N_{PQ}(Q) \leq N_G(Q)$. Since $|G : N_G(Q)|$ divides $|G : PQ| = 7$ so that $n_5(G) = 1$. We may use similar reasoning to show that $n_7(G) = 1$ as well. Therefore, there is a normal Sylow 5-subgroup and a normal Sylow 7-subgroup in $G$. Moreover, it is easy to see that the subgroups $P, Q$, and $R$ are all Abelian since $p^2$-order groups are Abelian, and $R$ has prime order hence it is cyclic.
+	Consider a Sylow 5-subgroup of $PQ$.
+	Note that $n_5(PQ) \equiv 1 \bmod 5$ and $n_5(PQ) \mid 9$, so that $n_5(PQ) = 1$.
+	Therefore, there is a normal Sylow 5-subgroup in $PQ$, which must be $Q$ since $Q$ is a Sylow 5-subgroup of $PQ$.
+	It also follows that $P \leq N_{PQ}(Q) \leq N_G(Q)$.
+	Since $|G : N_G(Q)|$ divides $|G : PQ| = 7$ so that $n_5(G) = 1$.
+	We may use similar reasoning to show that $n_7(G) = 1$ as well.
+	Therefore, there is a normal Sylow 5-subgroup and a normal Sylow 7-subgroup in $G$.
+	Moreover, it is easy to see that the subgroups $P, Q$, and $R$ are all Abelian since $p^2$-order groups are Abelian, and $R$ has prime order hence it is cyclic.
 
-	Observe that the pairwise intersections of $P, Q$, and $R$ are trivial since their orders are pairwise coprime. Then $PQR \leq G$ and $|PQR| = 3^2 \cdot 5^2 \cdot 7 = |G|$, so that $G = PQR$. Since $P, Q$, and $R$ are all Abelian, then $G$ is Abelian as well.
+	Observe that the pairwise intersections of $P, Q$, and $R$ are trivial since their orders are pairwise coprime.
+	Then $PQR \leq G$ and $|PQR| = 3^2 \cdot 5^2 \cdot 7 = |G|$, so that $G = PQR$.
+	Since $P, Q$, and $R$ are all Abelian, then $G$ is Abelian as well.
 \end{sol}
 
 \begin{spex}[4.5.29]
@@ -394,21 +612,58 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{spex}
 
 \begin{sol}
-	Let $p, q, r$ be distinct primes. From the text, orders of 12, 30, $pq$, and $p^2q$ where $p < q$ are eliminated. Moreover, orders of $p$ are eliminated as they are cyclic, $p^n$ are eliminated as they have non-trivial centers by Theorem 4.8, and $pqr$ are eliminated by \exref{4.5.16}. The only remaining orders are 24, 36, 40, 48, 54, 56, 72, 80, 84, 90, and 96. We examine each in detail:
+	Let $p, q, r$ be distinct primes.
+	From the text, orders of 12, 30, $pq$, and $p^2q$ where $p < q$ are eliminated.
+	Moreover, orders of $p$ are eliminated as they are cyclic, $p^n$ are eliminated as they have non-trivial centers by Theorem 4.8, and $pqr$ are eliminated by \exref{4.5.16}.
+	The only remaining orders are 24, 36, 40, 48, 54, 56, 72, 80, 84, 90, and 96.
+	We examine each in detail:
 	\begin{itemize}
-		\item $|G| = 24$: If $n_3 = 4$, then we may have $G$ acting on the set of Sylow 3-subgroups by conjugation. Simplicity of $G$ implies that $\ker\phi$ is either trivial or all of $G$. If $\ker\phi = \set 1$, then $G \cong S_4$, which is not simple. If $\ker\phi = G$, then every Sylow 3-subgroup is normal, which is also a contradiction. 
-		\item $|G| = 36$: If $n_3 = 4$, let $P_1$ and $P_2$ be two distinct Sylow 3-subgroups. Observe that $P_1 \cap P_2 \geq 3$ since $P_1P_2$ would have 81 elements otherwise. Then $N_G(P_1 \cap P_2)$ contains both $P_1$ and $P_2$. Moreover, $P_1 \subseteq N_G(P_1 \cap P_2)$ and $P_2 \subseteq N_G(P_1 \cap P_2)$. Then $|N_G(P_1 \cap P_2)|$ is a multiple of 9 but cannot be 9, since $P$ and $Q$ are both contained such that $P \neq Q$ as $n_3 = 4$. Then $|N_G(P_1 \cap P_2)|$ is either 18 or 36. If it is the former, then it has index 2 which means $N_G(P_1 \cap P_2)$ is normal in $G$, which is a contradiction. If it is the latter, then $P_1 \cap P_2$ is normal in $G$, which is also a contradiction. 
-		\item $|G| = 40$: Note that $n_5 \equiv 1 \bmod 5$ and $n_5 \mid 8$, so that $n_5 = 1$. Therefore, there is a normal Sylow 5-subgroup in $G$, which is a contradiction.
-		\item $|G| = 48$: By simplicity, we see that $n_2 = 3$. Let $P$ and $Q$ be distinct Sylow-2 subgroups. Note that $|P \cap Q|$ cannot be 1 or 16 as $P$ and $Q$ are distinct. Moreover, they cannot be 2 or 4 since $|PQ|$ would be 128 or 16. Then $|P \cap Q| = 8$. Consider its normalizer $N_G(P \cap Q)$. Observe that $|N_G(P \cap Q)| > 16$ since $P$ and $Q$ are distinct, and the normalizer also divides 48. It follows that $|N_G(P \cap Q)| = 48$ so that $P \cap Q \nsub G$, which is a contradiction.
-		\item $|G| = 54$: Note that $n_3 \equiv 1 \bmod 3$ and $n_3 \mid 2$, so that $n_3 = 1$. Therefore, there is a normal Sylow 3-subgroup in $G$, which is a contradiction.
-		\item $|G| = 56$: If $n_7 = 8$, then there are at least $8 \cdot 6 = 48$ elements of order 7, leaving 8 elements left. Since $|P| = 8$ for some $P \in \syl_2(G)$, then we only have room for one Sylow 2-subgroup, so that $n_2 = 1$. Therefore, there is a normal Sylow 2-subgroup in $G$, which is a contradiction.
-		\item $|G| = 72$: Suppose $n_3 = 4$. Then the induced homomorphism $\phi : G \to S_4$ cannot have a non-trivial kernel. Then $G$ has a non-trivial normal subgroup, which is a contradiction.
-		\item $|G| = 80$: If $n_6 = 16$, then there are at least $16 \cdot 4 = 64$ elements of order 5, leaving only 16 elements left. Since $|P| = 16$ for some $P \in \syl_2(G)$, then we only have room for one Sylow 2-subgroup, so that $n_2 = 1$. Therefore, there is a normal Sylow 2-subgroup in $G$, which is a contradiction.
-		\item $|G| = 84$: Since $n_7 \equiv 1 \bmod 7$ and $n_7 \mid 12$, then $n_7 = 1$. Therefore, there is a normal Sylow 7-subgroup in $G$, which is a contradiction.
-		\item $|G| = 90$: If $n_5 = 6$, then there are at least 24 elements of order 5. Moreover, $n_3 = 10$ such that all the Sylow-3 subgroups intersect trivially, then there are at least $10 \cdot 8 = 80$ elements of order 3, which is impossible. Then the Sylow-3 subgroups must intersect non-trivially. If $P, Q \in \syl_3(G)$ such that $|P \cap Q| = 3$, we may use a similar argument as in $|G| = 36$ to determine that $N_G(P \cap Q)$ has order 45 or 90.
-		\item $|G| = 96$: We have that either $n_3 = 4$ or $n_3 = 16$, since $n_3 \mid 32$. Consider $N_G(P)$ for some $P \in \syl_3(G)$. Then $|G : N_G(P)| = 4$ if $n_3 = 4$ so that an induced homomorphism from $G$ to $S_4$ has a non-trivial kernel, which is a contradiction. If $n_3 = 16$, we may use the same arguments as $|G| = 36$ or 90 to show a contradiction as well.
+		\item $|G| = 24$: If $n_3 = 4$, then we may have $G$ acting on the set of Sylow 3-subgroups by conjugation.
+	Simplicity of $G$ implies that $\ker\phi$ is either trivial or all of $G$.
+	If $\ker\phi = \set 1$, then $G \cong S_4$, which is not simple.
+	If $\ker\phi = G$, then every Sylow 3-subgroup is normal, which is also a contradiction. 
+		\item $|G| = 36$: If $n_3 = 4$, let $P_1$ and $P_2$ be two distinct Sylow 3-subgroups.
+	Observe that $P_1 \cap P_2 \geq 3$ since $P_1P_2$ would have 81 elements otherwise.
+	Then $N_G(P_1 \cap P_2)$ contains both $P_1$ and $P_2$.
+	Moreover, $P_1 \subseteq N_G(P_1 \cap P_2)$ and $P_2 \subseteq N_G(P_1 \cap P_2)$.
+	Then $|N_G(P_1 \cap P_2)|$ is a multiple of 9 but cannot be 9, since $P$ and $Q$ are both contained such that $P \neq Q$ as $n_3 = 4$.
+	Then $|N_G(P_1 \cap P_2)|$ is either 18 or 36.
+	If it is the former, then it has index 2 which means $N_G(P_1 \cap P_2)$ is normal in $G$, which is a contradiction.
+	If it is the latter, then $P_1 \cap P_2$ is normal in $G$, which is also a contradiction. 
+		\item $|G| = 40$: Note that $n_5 \equiv 1 \bmod 5$ and $n_5 \mid 8$, so that $n_5 = 1$.
+	Therefore, there is a normal Sylow 5-subgroup in $G$, which is a contradiction.
+		\item $|G| = 48$: By simplicity, we see that $n_2 = 3$.
+	Let $P$ and $Q$ be distinct Sylow-2 subgroups.
+	Note that $|P \cap Q|$ cannot be 1 or 16 as $P$ and $Q$ are distinct.
+	Moreover, they cannot be 2 or 4 since $|PQ|$ would be 128 or 16.
+	Then $|P \cap Q| = 8$.
+	Consider its normalizer $N_G(P \cap Q)$.
+	Observe that $|N_G(P \cap Q)| > 16$ since $P$ and $Q$ are distinct, and the normalizer also divides 48.
+	It follows that $|N_G(P \cap Q)| = 48$ so that $P \cap Q \nsub G$, which is a contradiction.
+		\item $|G| = 54$: Note that $n_3 \equiv 1 \bmod 3$ and $n_3 \mid 2$, so that $n_3 = 1$.
+	Therefore, there is a normal Sylow 3-subgroup in $G$, which is a contradiction.
+		\item $|G| = 56$: If $n_7 = 8$, then there are at least $8 \cdot 6 = 48$ elements of order 7, leaving 8 elements left.
+	Since $|P| = 8$ for some $P \in \syl_2(G)$, then we only have room for one Sylow 2-subgroup, so that $n_2 = 1$.
+	Therefore, there is a normal Sylow 2-subgroup in $G$, which is a contradiction.
+		\item $|G| = 72$: Suppose $n_3 = 4$.
+	Then the induced homomorphism $\phi : G \to S_4$ cannot have a non-trivial kernel.
+	Then $G$ has a non-trivial normal subgroup, which is a contradiction.
+		\item $|G| = 80$: If $n_6 = 16$, then there are at least $16 \cdot 4 = 64$ elements of order 5, leaving only 16 elements left.
+	Since $|P| = 16$ for some $P \in \syl_2(G)$, then we only have room for one Sylow 2-subgroup, so that $n_2 = 1$.
+	Therefore, there is a normal Sylow 2-subgroup in $G$, which is a contradiction.
+		\item $|G| = 84$: Since $n_7 \equiv 1 \bmod 7$ and $n_7 \mid 12$, then $n_7 = 1$.
+	Therefore, there is a normal Sylow 7-subgroup in $G$, which is a contradiction.
+		\item $|G| = 90$: If $n_5 = 6$, then there are at least 24 elements of order 5.
+	Moreover, $n_3 = 10$ such that all the Sylow-3 subgroups intersect trivially, then there are at least $10 \cdot 8 = 80$ elements of order 3, which is impossible.
+	Then the Sylow-3 subgroups must intersect non-trivially.
+	If $P, Q \in \syl_3(G)$ such that $|P \cap Q| = 3$, we may use a similar argument as in $|G| = 36$ to determine that $N_G(P \cap Q)$ has order 45 or 90.
+		\item $|G| = 96$: We have that either $n_3 = 4$ or $n_3 = 16$, since $n_3 \mid 32$.
+	Consider $N_G(P)$ for some $P \in \syl_3(G)$.
+	Then $|G : N_G(P)| = 4$ if $n_3 = 4$ so that an induced homomorphism from $G$ to $S_4$ has a non-trivial kernel, which is a contradiction.
+	If $n_3 = 16$, we may use the same arguments as $|G| = 36$ or 90 to show a contradiction as well.
 	\end{itemize}
-	By Theorem 4.23, we know that simple groups of order 60 are isomorphic to $A_5$. Therefore, if $G$ is a non-Abelian simple group of order less than 100, then $G \cong A_5$.
+	By Theorem 4.23, we know that simple groups of order 60 are isomorphic to $A_5$.
+	Therefore, if $G$ is a non-Abelian simple group of order less than 100, then $G \cong A_5$.
 \end{sol}
 
 \begin{exercise}[4.5.30]
@@ -416,7 +671,11 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	Note that $168 = 2^3 \cdot 3 \cdot 7$. Since $n_7 \equiv 1 \bmod 7$ and $n_7 \mid 24$, then $n_7 = 1$ or $8$. If $n_7 = 1$, then there is a normal Sylow 7-subgroup in the group, which is a contradiction. Therefore, $n_7 = 8$. Since each Sylow-7 subgroup has 6 elements of order 7, and the Sylow-7 subgroups intersect trivially, then there are $8 \cdot 6 = 48$ elements of order 7 in a simple group of order 168.
+	Note that $168 = 2^3 \cdot 3 \cdot 7$.
+	Since $n_7 \equiv 1 \bmod 7$ and $n_7 \mid 24$, then $n_7 = 1$ or $8$.
+	If $n_7 = 1$, then there is a normal Sylow 7-subgroup in the group, which is a contradiction.
+	Therefore, $n_7 = 8$.
+	Since each Sylow-7 subgroup has 6 elements of order 7, and the Sylow-7 subgroups intersect trivially, then there are $8 \cdot 6 = 48$ elements of order 7 in a simple group of order 168.
 \end{sol}
 
 \begin{exercise}[4.5.31]
@@ -424,60 +683,102 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	Recall that $A_5$ is simple. Then for $A_5$:
+	Recall that $A_5$ is simple.
+	Then for $A_5$:
 	\begin{itemize}
-		\item $n_2(A_5)$: Since $A_4 \leq A_5$ and $A_4$ contains 3 Sylow-2 subgroups, then $n_2(A_5) \geq 3$. Note that the elements of any $P \in \syl_2(A_5)$ are of the form $(a\ b)(c\ d)$. Then there are 15 elements of order 2 in $A_5$, and each Sylow-2 subgroup has 3 elements of order 2, so that there are $15/3 = 5$ Sylow-2 subgroups in $A_5$.
+		\item $n_2(A_5)$: Since $A_4 \leq A_5$ and $A_4$ contains 3 Sylow-2 subgroups, then $n_2(A_5) \geq 3$.
+	Note that the elements of any $P \in \syl_2(A_5)$ are of the form $(a\ b)(c\ d)$.
+	Then there are 15 elements of order 2 in $A_5$, and each Sylow-2 subgroup has 3 elements of order 2, so that there are $15/3 = 5$ Sylow-2 subgroups in $A_5$.
 		\item $n_3(A_5)$: Since $A_5$ contains 20 elements of order 3, and each Sylow-3 subgroup has 2 elements of order 3, then there are $20/2 = 10$ Sylow-3 subgroups in $A_5$.
 		\item $n_5(A_5)$: Since $n_5 \equiv 1 \bmod 5$ and $n_5 \mid 12, n_5(A_5) = 6$.
 	\end{itemize}
 	For $S_5$:
 	\begin{itemize}
-		\item $n_2(S_5)$: Consider subgroups of the form $\gen{(a\ b\ c\ d), (a\ c)}$ where $a$ is minimal out of the 4 integers. Subgroups of this form can be checked to see that they are indeed order 8 and are thus Sylow-2 subgroups (in fact, these are isomorphic to $D_8$). We may construct 15 such subgroups so that $n_2(S_5) \geq 15$. Since $n_2 \equiv 1 \bmod 2$ and $n_2 \mid 15$, then $n_2(S_5) = 15$.
+		\item $n_2(S_5)$: Consider subgroups of the form $\gen{(a\ b\ c\ d), (a\ c)}$ where $a$ is minimal out of the 4 integers.
+	Subgroups of this form can be checked to see that they are indeed order 8 and are thus Sylow-2 subgroups (in fact, these are isomorphic to $D_8$).
+	We may construct 15 such subgroups so that $n_2(S_5) \geq 15$.
+	Since $n_2 \equiv 1 \bmod 2$ and $n_2 \mid 15$, then $n_2(S_5) = 15$.
 		\item $n_3(S_5)$: We may use a similar counting argument as $n_2(A_5)$ to show that there are 10 Sylow-3 subgroups in $S_5$ as well.
 		\item $n_5(S_5)$: Since we have more than two Sylow-5 subgroups in $S_5$, then $n_5(S_5) = 6$.
 	\end{itemize}	
 \end{sol}
 
 \begin{exercise}[4.5.32]
-	Let $P$ be a Sylow $p$-subgroup of $H$ and let $H$ be a subgroup of $K$. If $P \nsub H$ and $H \nsub K$, prove that $P$ is normal in $K$. Deduce that if $P \in \syl_p(G)$ and $H = N_G(P)$, then $N_G(H) = H$ (in words: normalizers of Sylow $p$-subgroups are self-normalizing).
+	Let $P$ be a Sylow $p$-subgroup of $H$ and let $H$ be a subgroup of $K$.
+	If $P \nsub H$ and $H \nsub K$, prove that $P$ is normal in $K$.
+	Deduce that if $P \in \syl_p(G)$ and $H = N_G(P)$, then $N_G(H) = H$ (in words: normalizers of Sylow $p$-subgroups are self-normalizing).
 \end{exercise}
 
 \begin{sol}
-	Let $k \in K$. Note that $kPk\inv \leq kHk\inv = H$ since $H \nsub K$. Moreover, $kPk\inv$ is a Sylow $p$-subgroup of $H$ since $P$ is a Sylow $p$-subgroup of $H$. However, $P \nsub H$ implies that $P$ is the unique Sylow $p$-subgroup of $H$. Therefore, $kPk\inv = P$, so that $P \nsub K$.
+	Let $k \in K$.
+	Note that $kPk\inv \leq kHk\inv = H$ since $H \nsub K$.
+	Moreover, $kPk\inv$ is a Sylow $p$-subgroup of $H$ since $P$ is a Sylow $p$-subgroup of $H$.
+	However, $P \nsub H$ implies that $P$ is the unique Sylow $p$-subgroup of $H$.
+	Therefore, $kPk\inv = P$, so that $P \nsub K$.
 
-	By assumption, $P \nsub H$ and $H \nsub N_G(H)$ by definition. The previous part shows that $P \nsub N_G(H)$. Since $P$ is a Sylow $p$-subgroup of $H$, then $P$ is a Sylow $p$-subgroup of $N_G(H)$ as well. Then by the previous part, $P \nsub N_G(H)$ implies that $N_G(H) \nsub N_G(H)$, so that $N_G(H) = H$.
+	By assumption, $P \nsub H$ and $H \nsub N_G(H)$ by definition.
+	The previous part shows that $P \nsub N_G(H)$.
+	Since $P$ is a Sylow $p$-subgroup of $H$, then $P$ is a Sylow $p$-subgroup of $N_G(H)$ as well.
+	Then by the previous part, $P \nsub N_G(H)$ implies that $N_G(H) \nsub N_G(H)$, so that $N_G(H) = H$.
 \end{sol}
 
 \begin{exercise}[4.5.33]
-	Let $P$ be a normal Sylow $p$-subgroup of $G$ and let $H$ be any subgroup of $G$. Prove that $P \cap H$ is the unique Sylow $p$-subgroup of $H$.
+	Let $P$ be a normal Sylow $p$-subgroup of $G$ and let $H$ be any subgroup of $G$.
+	Prove that $P \cap H$ is the unique Sylow $p$-subgroup of $H$.
 \end{exercise}
 
 \begin{sol}
-	Assume that $P \cap H$ is not the unique Sylow $p$-subgroup of $H$. Then there is some $Q \in \syl_p(H)$ such that $P \cap H$ is not contained in $Q$. Since $P \nsub G$ and $Q$ is a $p$-subgroup of $G$, then $Q \leq P$ since $P$ is the unique Sylow $p$-subgroup of $G$. Moreover, $Q \leq H$, so that $Q \leq P \cap H$, which is a contradiction. Therefore, $P \cap H \nsub H$.
+	Assume that $P \cap H$ is not the unique Sylow $p$-subgroup of $H$.
+	Then there is some $Q \in \syl_p(H)$ such that $P \cap H$ is not contained in $Q$.
+	Since $P \nsub G$ and $Q$ is a $p$-subgroup of $G$, then $Q \leq P$ since $P$ is the unique Sylow $p$-subgroup of $G$.
+	Moreover, $Q \leq H$, so that $Q \leq P \cap H$, which is a contradiction.
+	Therefore, $P \cap H \nsub H$.
 \end{sol}
 
 \begin{exercise}[4.5.34]
-	Let $P \in \syl_p(G)$ and assume $N \nsub G$. Use the conjugacy part of Sylow's Theorem to prove that $P \cap N$ is a Sylow $p$-subgroup of $N$. Deduce that $PN/N$ is a Sylow $p$-subgroup of $G/N$ (note that this may also be done by the Second Isomorphism Theorem—cf. \exref{3.3.9}).
+	Let $P \in \syl_p(G)$ and assume $N \nsub G$.
+	Use the conjugacy part of Sylow's Theorem to prove that $P \cap N$ is a Sylow $p$-subgroup of $N$.
+	Deduce that $PN/N$ is a Sylow $p$-subgroup of $G/N$ (note that this may also be done by the Second Isomorphism Theorem—cf. \exref{3.3.9}).
 \end{exercise}
 
 \begin{sol}
-	We first note that it is clear that for any $g \in G$, then $g(P \cap N)g\inv = (gPg\inv) \cap (gNg\inv) = (gPg\inv) \cap N$ since $N \nsub G$. Since $P \cap N$ is a $p$-group, then $P \cap N \leq Q$ for some $Q \in \syl_p(N)$. Moreover, $Q$ being a $p$-group implies that $Q \leq gPg\inv$ for some $g \in G$. By definition, $Q \leq N$ so that we have
+	We first note that it is clear that for any $g \in G$, then $g(P \cap N)g\inv = (gPg\inv) \cap (gNg\inv) = (gPg\inv) \cap N$ since $N \nsub G$.
+	Since $P \cap N$ is a $p$-group, then $P \cap N \leq Q$ for some $Q \in \syl_p(N)$.
+	Moreover, $Q$ being a $p$-group implies that $Q \leq gPg\inv$ for some $g \in G$.
+	By definition, $Q \leq N$ so that we have
 	\[
 		Q \leq (gPg\inv) \cap N = g(P \cap N)g\inv \leq gQg\inv
 	\]
-	From this, we have that $P \cap N \leq Q \leq g(P \cap N)g\inv$. By finiteness and the fact that $|P \cap N| = |g(P \cap N)g\inv|$, then $P \cap N = Q$. Therefore, $P \cap N$ is a Sylow $p$-subgroup of $N$.
+	From this, we have that $P \cap N \leq Q \leq g(P \cap N)g\inv$.
+	By finiteness and the fact that $|P \cap N| = |g(P \cap N)g\inv|$, then $P \cap N = Q$.
+	Therefore, $P \cap N$ is a Sylow $p$-subgroup of $N$.
 
-	Next, we show that $PN/N$ is a Sylow $p$-subgroup of $G/N$. By the Second Isomorphism Theorem, we have that $PN/N \cong P/(P \cap N)$. Let $|G| = p^\alpha m$ where $p \nmid m$ and $|N| = p^\beta n$ where $p \nmid n$. Observe that $|G/N : PN/N| = |G: PN|$ divides $|G : P| = m$. It follows that $|G/N : PN/N|$ is relatively prime to $p$. Since $P \cap N \leq P$, then $\beta \leq \alpha$ so that $|PN/N| = |P/(P \cap N)| = p^{\alpha - \beta}$. Therefore, $PN/N$ is a Sylow $p$-subgroup of $G/N$.
+	Next, we show that $PN/N$ is a Sylow $p$-subgroup of $G/N$.
+	By the Second Isomorphism Theorem, we have that $PN/N \cong P/(P \cap N)$.
+	Let $|G| = p^\alpha m$ where $p \nmid m$ and $|N| = p^\beta n$ where $p \nmid n$.
+	Observe that $|G/N : PN/N| = |G: PN|$ divides $|G : P| = m$.
+	It follows that $|G/N : PN/N|$ is relatively prime to $p$.
+	Since $P \cap N \leq P$, then $\beta \leq \alpha$ so that $|PN/N| = |P/(P \cap N)| = p^{\alpha - \beta}$.
+	Therefore, $PN/N$ is a Sylow $p$-subgroup of $G/N$.
 \end{sol}
 
 \begin{exercise}[4.5.35]
-	Let $P \in \syl_p(G)$ and let $H \leq G$. Prove that $gPg\inv \cap H$ is a Sylow $p$-subgroup of $H$ for some $g \in G$. Give an explicit example that $hPh\inv \cap H$ is not necessarily a Sylow $p$-subgroup of $H$ for any $h \in H$ (in particular, we cannot always take $g = 1$ in the first part of this theorem, as we could when $H$ was normal in $G$).
+	Let $P \in \syl_p(G)$ and let $H \leq G$.
+	Prove that $gPg\inv \cap H$ is a Sylow $p$-subgroup of $H$ for some $g \in G$.
+	Give an explicit example that $hPh\inv \cap H$ is not necessarily a Sylow $p$-subgroup of $H$ for any $h \in H$ (in particular, we cannot always take $g = 1$ in the first part of this theorem, as we could when $H$ was normal in $G$).
 \end{exercise}
 
 \begin{sol}
-	By the First Sylow Theorem, there exists $Q \in \syl_p(H)$. The conjugacy part of Sylow's Theorem guarantees that there exists some $g \in G$ such that $Q \leq gPg\inv$. Moreover, $Q \leq H$ so that $Q \leq gPg\inv \cap H$. Observe that $gPg\inv \cap H$ is a $p$-group since it is a subgroup of $gPg\inv$. Therefore, $gPg\inv \cap H \leq Q$ for some $Q \in \syl_p(H)$. From this, we have that $Q = gPg\inv \cap H$, so that $gPg\inv \cap H$ is a Sylow $p$-subgroup of $H$.
+	By the First Sylow Theorem, there exists $Q \in \syl_p(H)$.
+	The conjugacy part of Sylow's Theorem guarantees that there exists some $g \in G$ such that $Q \leq gPg\inv$.
+	Moreover, $Q \leq H$ so that $Q \leq gPg\inv \cap H$.
+	Observe that $gPg\inv \cap H$ is a $p$-group since it is a subgroup of $gPg\inv$.
+	Therefore, $gPg\inv \cap H \leq Q$ for some $Q \in \syl_p(H)$.
+	From this, we have that $Q = gPg\inv \cap H$, so that $gPg\inv \cap H$ is a Sylow $p$-subgroup of $H$.
 
-	Let $G = S_3, P = \gen{(1\ 2)}$ and $H = \gen{(1\ 3)}$ with $p = 2$. Then $P$ is a Sylow-2 subgroup of $G$. However, $hPh\inv \cap H$ is trivial for any $h \in H$, so that $hPh\inv \cap H$ is not a Sylow-2 subgroup of $H$ for any $h \in H$.
+	Let $G = S_3, P = \gen{(1\ 2)}$ and $H = \gen{(1\ 3)}$ with $p = 2$.
+	Then $P$ is a Sylow-2 subgroup of $G$.
+	However, $hPh\inv \cap H$ is trivial for any $h \in H$, so that $hPh\inv \cap H$ is not a Sylow-2 subgroup of $H$ for any $h \in H$.
 \end{sol}
 
 \begin{exercise}[4.5.36]
@@ -485,13 +786,20 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	We first show that the map $\phi : \syl_p(G) \to \syl_p(G/N)$ defined by $\phi(P) = PN/N$ is well-defined. Let $P \in \syl_p(G)$. By \exref{4.5.34}, we have that $PN/N$ is a Sylow $p$-subgroup of $G/N$, so that $\phi(P) \in \syl_p(G/N)$.
+	We first show that the map $\phi : \syl_p(G) \to \syl_p(G/N)$ defined by $\phi(P) = PN/N$ is well-defined.
+	Let $P \in \syl_p(G)$.
+	By \exref{4.5.34}, we have that $PN/N$ is a Sylow $p$-subgroup of $G/N$, so that $\phi(P) \in \syl_p(G/N)$.
 
-	We now show that $\phi$ is surjective. Let $\bar Q \in \syl_p(G/N)$. By the conjugacy part of Sylow's Theorem, there exists some $\bar g \in G/N$ such that
+	We now show that $\phi$ is surjective.
+	Let $\bar Q \in \syl_p(G/N)$.
+	By the conjugacy part of Sylow's Theorem, there exists some $\bar g \in G/N$ such that
 	\[
 		\bar Q = \bar g\bar P\bar g\inv = \pi(gPg\inv)
 	\]
-	where $\pi : G \to G/N$ is the natural projection homomorphism. Since $P \in \syl_p(G)$, then $gPg\inv \in \syl_p(G)$ as well. Hence, $\pi(gPg\inv) = \bar Q$ so that $\phi(gPg\inv) = \bar Q$. Therefore, $\phi$ is surjective, so that $n_p(G/N) \leq n_p(G)$.
+	where $\pi : G \to G/N$ is the natural projection homomorphism.
+	Since $P \in \syl_p(G)$, then $gPg\inv \in \syl_p(G)$ as well.
+	Hence, $\pi(gPg\inv) = \bar Q$ so that $\phi(gPg\inv) = \bar Q$.
+	Therefore, $\phi$ is surjective, so that $n_p(G/N) \leq n_p(G)$.
 \end{sol}
 
 \begin{exercise}[4.5.37]
@@ -499,22 +807,47 @@ Let $G$ be a finite group and let $p$ be a prime.
 	\begin{subexercises}
 		\item Prove that $R$ is contained in every Sylow $p$-subgroup of $G$.
 		\item If $S$ is another normal $p$-subgroup of $G$, prove that $RS$ is also a normal $p$-subgroup of $G$.
-		\item The subgroup $O_p(G)$ is defined to be the group generated by all normal $p$-subgroups of $G$. Prove that $O_p(G)$ is the unique largest $p$-subgroup of $G$ and $O_p(G)$ equals the intersection of all Sylow $p$-subgroups of $G$.
-		\item Let $\bar G = G/O_p(G)$. Prove that $O_p(\bar G) = \bar 1$ (i.e., $\bar G$ has no non-trivial normal $p$-subgroup).
+		\item The subgroup $O_p(G)$ is defined to be the group generated by all normal $p$-subgroups of $G$.
+		Prove that $O_p(G)$ is the unique largest $p$-subgroup of $G$ and $O_p(G)$ equals the intersection of all Sylow $p$-subgroups of $G$.
+		\item Let $\bar G = G/O_p(G)$.
+		Prove that $O_p(\bar G) = \bar 1$ (i.e., $\bar G$ has no non-trivial normal $p$-subgroup).
 	\end{subexercises}
 \end{exercise}
 
 \begin{solenum}
-	\item Let $P \in \syl_p(G)$. Observe that $RP$ is a $p$-subgroup of $G$ since $R$ and $P$ are both $p$-groups. Moreover, $P \leq RP$ and $P$ is a Sylow $p$-subgroup of $G$, so that $P = RP$. It follows that $R \leq P$, so that $R$ is contained in every Sylow $p$-subgroup of $G$.
-	\item Let $g \in G$. Since $R \nsub G$ and $S \nsub G$, then $gRg\inv = R$ and $gSg\inv = S$. Then $g(RS)g\inv = (gRg\inv)(gSg\inv) = RS$, so that $RS \nsub G$. Moreover, $RS$ is a $p$-group because $R \cap S$ is a $p$-group, hence $|RS|$ is a power of $p$.
-	\item By induction, we have that the product of any finite number of normal $p$-subgroups of $G$ is a normal $p$-subgroup of $G$. Since the set of normal $p$-subgroups of $G$ is non-empty (it contains the trivial subgroup), then $O_p(G)$ is a normal $p$-subgroup of $G$. Moreover, if $R$ is a normal $p$-subgroup of $G$, then $R \leq O_p(G)$ by definition. Uniqueness follows from that fact that $O_p(G)$ contains every normal $p$-subgroup of $G$ and is itself a normal $p$-subgroup of $G$.
+	\item Let $P \in \syl_p(G)$.
+	Observe that $RP$ is a $p$-subgroup of $G$ since $R$ and $P$ are both $p$-groups.
+	Moreover, $P \leq RP$ and $P$ is a Sylow $p$-subgroup of $G$, so that $P = RP$.
+	It follows that $R \leq P$, so that $R$ is contained in every Sylow $p$-subgroup of $G$.
+	\item Let $g \in G$.
+	Since $R \nsub G$ and $S \nsub G$, then $gRg\inv = R$ and $gSg\inv = S$.
+	Then $g(RS)g\inv = (gRg\inv)(gSg\inv) = RS$, so that $RS \nsub G$.
+	Moreover, $RS$ is a $p$-group because $R \cap S$ is a $p$-group, hence $|RS|$ is a power of $p$.
+	\item By induction, we have that the product of any finite number of normal $p$-subgroups of $G$ is a normal $p$-subgroup of $G$.
+	Since the set of normal $p$-subgroups of $G$ is non-empty (it contains the trivial subgroup), then $O_p(G)$ is a normal $p$-subgroup of $G$.
+	Moreover, if $R$ is a normal $p$-subgroup of $G$, then $R \leq O_p(G)$ by definition.
+	Uniqueness follows from that fact that $O_p(G)$ contains every normal $p$-subgroup of $G$ and is itself a normal $p$-subgroup of $G$.
 	
-	Next, we show that $O_p(G)$ equals the intersection of all Sylow $p$-subgroups of $G$. Let $\mathcal P$ be the set of all Sylow $p$-subgroups of $G$. Since every normal $p$-subgroup of $G$ is contained in every Sylow $p$-subgroup of $G$, then $O_p(G)$ is contained in every Sylow $p$-subgroup of $G$, so that $O_p(G) \leq \bigcap_{P \in \mathcal P} P$. Conversely, let $\bigcap_{P \in \mathcal P} P = R$. Since every Sylow $p$-subgroup contains every normal $p$-subgroup, then every Sylow $p$-subgroup contains $R$, so that $R$ is a normal subgroup of $G$. Moreover, since the intersection of any number of subgroups is a subgroup, then $R$ is a subgroup. Finally, since each Sylow $p$-subgroup is a $p$-group, then their intersection is also a $p$-group. Therefore, $\bigcap_{P \in \mathcal P} P = R \leq O_p(G)$.
-	\item Let $\bar R$ be a normal $p$-subgroup of $\bar G$. Let $\pi : G \to \bar G$ be the natural projection homomorphism. Then $\pi\inv(\bar R)$ is a normal subgroup of $G$ since $\bar R$ is normal in $\bar G$. Moreover, $\pi\inv(\bar R)$ is a $p$-group as follows: using the First Isomorphism Theorem, we have that $\pi\inv(\bar R)/O_p(G) \cong \bar R$. It follows that
+	Next, we show that $O_p(G)$ equals the intersection of all Sylow $p$-subgroups of $G$.
+	Let $\mathcal P$ be the set of all Sylow $p$-subgroups of $G$.
+	Since every normal $p$-subgroup of $G$ is contained in every Sylow $p$-subgroup of $G$, then $O_p(G)$ is contained in every Sylow $p$-subgroup of $G$, so that $O_p(G) \leq \bigcap_{P \in \mathcal P} P$.
+	Conversely, let $\bigcap_{P \in \mathcal P} P = R$.
+	Since every Sylow $p$-subgroup contains every normal $p$-subgroup, then every Sylow $p$-subgroup contains $R$, so that $R$ is a normal subgroup of $G$.
+	Moreover, since the intersection of any number of subgroups is a subgroup, then $R$ is a subgroup.
+	Finally, since each Sylow $p$-subgroup is a $p$-group, then their intersection is also a $p$-group.
+	Therefore, $\bigcap_{P \in \mathcal P} P = R \leq O_p(G)$.
+	\item Let $\bar R$ be a normal $p$-subgroup of $\bar G$.
+	Let $\pi : G \to \bar G$ be the natural projection homomorphism.
+	Then $\pi\inv(\bar R)$ is a normal subgroup of $G$ since $\bar R$ is normal in $\bar G$.
+	Moreover, $\pi\inv(\bar R)$ is a $p$-group as follows: using the First Isomorphism Theorem, we have that $\pi\inv(\bar R)/O_p(G) \cong \bar R$.
+	It follows that
 	\[
 		|\pi\inv(\bar R)| = |O_p(G)||\bar R| = p^\alpha p^\beta = p^{\alpha + \beta}
 	\]
-	hence $\pi\inv(\bar R)$ is a $p$-group. Since $\pi\inv(\bar R)$ is a normal $p$-subgroup of $G$, then $\pi\inv(\bar R) \leq O_p(G)$. It follows that $\bar R = \pi(\pi\inv(\bar R)) \leq \pi(O_p(G)) = \bar 1$, so that $\bar R$ is trivial. Therefore, $O_p(\bar G) = \bar 1$.
+	hence $\pi\inv(\bar R)$ is a $p$-group.
+	Since $\pi\inv(\bar R)$ is a normal $p$-subgroup of $G$, then $\pi\inv(\bar R) \leq O_p(G)$.
+	It follows that $\bar R = \pi(\pi\inv(\bar R)) \leq \pi(O_p(G)) = \bar 1$, so that $\bar R$ is trivial.
+	Therefore, $O_p(\bar G) = \bar 1$.
 \end{solenum}
 
 \begin{exercise}[4.5.38]
@@ -522,17 +855,26 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	Let $G$ act on $\syl_p(G) = \set{P_1, P_2, \ldots P_{n_p}}$ by conjugation. Note that $P = P_1$ also acts on $\syl_p(G)$ by conjugation, which we can then decompose into the orbits
+	Let $G$ act on $\syl_p(G) = \set{P_1, P_2, \ldots P_{n_p}}$ by conjugation.
+	Note that $P = P_1$ also acts on $\syl_p(G)$ by conjugation, which we can then decompose into the orbits
 	\[
 		\syl_p(G) = \oo_1 \cup \oo_2 \cup \cdots \cup \oo_k, \quad n_p = \sum_{i = 1}^k |\oo_i|
 	\]
-	By definition, $|\oo_i| = |P : N_P(P_i)|$. Using Lemma 4.19, we see that $N_P(P_i) = P \cap N_G(P_i) = P \cap P_i$, hence $|\oo_i| = |P : P \cap P_i|$. We also note that $|\oo_1| = 1$ since $P \in \syl_p(G)$ is fixed by the action of $P$ on $\syl_p(G)$ by conjugation, and $|\oo_i| > 1$ for $i > 1$ since $P_i$ is not fixed by the action of $P$ on $\syl_p(G)$ by conjugation.
+	By definition, $|\oo_i| = |P : N_P(P_i)|$.
+	Using Lemma 4.19, we see that $N_P(P_i) = P \cap N_G(P_i) = P \cap P_i$, hence $|\oo_i| = |P : P \cap P_i|$.
+	We also note that $|\oo_1| = 1$ since $P \in \syl_p(G)$ is fixed by the action of $P$ on $\syl_p(G)$ by conjugation, and $|\oo_i| > 1$ for $i > 1$ since $P_i$ is not fixed by the action of $P$ on $\syl_p(G)$ by conjugation.
 
-	By definition, each $P_i$ is a $p$-group, hence their intersections are also $p$-groups. It follows that each $|\oo_i|$ is a power of $p$. If the orders of each $\oo_i$ are all at least $p^2$, hence
+	By definition, each $P_i$ is a $p$-group, hence their intersections are also $p$-groups.
+	It follows that each $|\oo_i|$ is a power of $p$.
+	If the orders of each $\oo_i$ are all at least $p^2$, hence
 	\[
 		n_p = |\oo_1| + \sum_{i = 2}^k |\oo_i| \equiv 1 \bmod p^2
 	\]
-	Then $n_p$ is congruent to $1 \bmod p^2$, which is a contradiction. Therefore, there exists some $i > 1$ such that $|\oo_i| = p$. Let $Q = P_i$. Then $|P : P \cap Q| = p$ as desired. By symmetry, we also have that $|Q : P \cap Q| = p$.
+	Then $n_p$ is congruent to $1 \bmod p^2$, which is a contradiction.
+	Therefore, there exists some $i > 1$ such that $|\oo_i| = p$.
+	Let $Q = P_i$.
+	Then $|P : P \cap Q| = p$ as desired.
+	By symmetry, we also have that $|Q : P \cap Q| = p$.
 \end{sol}
 
 \begin{exercise}[4.5.39]
@@ -544,7 +886,11 @@ Let $G$ be a finite group and let $p$ be a prime.
 	\[
 		|\gl_n(\f_p)| = \prod_{i = 0}^{n-1} (p^n - p^i) = p^{n(n - 1)/2} \prod_{i = 1}^n (p^i - 1)
 	\]
-	Then the order of a Sylow $p$-subgroup of $\gl_n(\f_p)$ is $p^{n(n - 1)/2}$. Let $P$ be the subgroup of strictly upper triangular matrices in $\gl_n(\f_p)$. We know by \exref{2.1.17} that $P$ is a subgroup of $\gl_n(\f_p)$. If the main diagonal of a matrix in $P$ are all 1's, then there are $n(n - 1)/2$ entries above the main diagonal, and each entry can be any element of $\f_p$. It follows that $|P| = p^{n(n - 1)/2}$, so that $P$ is a Sylow $p$-subgroup of $\gl_n(\f_p)$.
+	Then the order of a Sylow $p$-subgroup of $\gl_n(\f_p)$ is $p^{n(n - 1)/2}$.
+	Let $P$ be the subgroup of strictly upper triangular matrices in $\gl_n(\f_p)$.
+	We know by \exref{2.1.17} that $P$ is a subgroup of $\gl_n(\f_p)$.
+	If the main diagonal of a matrix in $P$ are all 1's, then there are $n(n - 1)/2$ entries above the main diagonal, and each entry can be any element of $\f_p$.
+	It follows that $|P| = p^{n(n - 1)/2}$, so that $P$ is a Sylow $p$-subgroup of $\gl_n(\f_p)$.
 \end{sol}
 
 \begin{exercise}[4.5.40]
@@ -552,7 +898,9 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	Since $n_p = |G : N_P(G)|$ for any $P \in \syl_p(G)$, we can find $n_p$ by finding the normalizer of a Sylow $p$-subgroup of $\gl_2(\f_p)$. Let $P$ be the subgroup of strictly upper triangular matrices in $\gl_2(\f_p)$. We have that
+	Since $n_p = |G : N_P(G)|$ for any $P \in \syl_p(G)$, we can find $n_p$ by finding the normalizer of a Sylow $p$-subgroup of $\gl_2(\f_p)$.
+	Let $P$ be the subgroup of strictly upper triangular matrices in $\gl_2(\f_p)$.
+	We have that
 	\[
 		P = 
 		\left\{\left.
@@ -569,7 +917,10 @@ Let $G$ be a finite group and let $p$ be a prime.
 			\end{pmatrix}
 		\right\rangle
 	\]
-	Let $A$ be the generator of $P$. Let $X \in G$ be an arbitrary element of $\gl_2(\f_p)$. For $X$ to be in $N_G(P)$, then we must have that $XAX\inv \in P$, or $XAX\inv = A^k$ for some $k \in \f_p$. Let
+	Let $A$ be the generator of $P$.
+	Let $X \in G$ be an arbitrary element of $\gl_2(\f_p)$.
+	For $X$ to be in $N_G(P)$, then we must have that $XAX\inv \in P$, or $XAX\inv = A^k$ for some $k \in \f_p$.
+	Let
 	\[
 		X =
 		\begin{pmatrix}
@@ -592,7 +943,8 @@ Let $G$ be a finite group and let $p$ be a prime.
 			-c^2 & -bc + ac + ad
 		\end{pmatrix}
 	\]
-	For $XAX\inv$ to be in $P$, we must have that $c = 0$. It follows that
+	For $XAX\inv$ to be in $P$, we must have that $c = 0$.
+	It follows that
 	\[
 		XAX\inv = 
 		\frac{1}{ad}
@@ -608,7 +960,8 @@ Let $G$ be a finite group and let $p$ be a prime.
 			\end{pmatrix}~\right| a, d \in \f_p^\times, b \in \f_p
 		\right\}
 	\]
-	where $a, d \in \f_p\unt$ since $X$ must be invertible. We have that $|N_G(P)| = p(p - 1)^2$, so that
+	where $a, d \in \f_p\unt$ since $X$ must be invertible.
+	We have that $|N_G(P)| = p(p - 1)^2$, so that
 	\[
 		n_p = |G : N_G(P)| = \frac{|\gl_2(\f_p)|}{|N_G(P)|} = \frac{p(p - 1)^2(p + 1)}{p(p - 1)^2} = p + 1 \qh
 	\]
@@ -619,11 +972,19 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	It is clear that $|\speclin_2(\f_4)| = 60$. Moreover, $n_5 \equiv 1 \bmod 5$, so we only need to exhibit 2 distinct Sylow-5 subgroups of $\speclin_2(\f_4)$ to show that $\speclin_2(\f_4)$ is simple.
+	It is clear that $|\speclin_2(\f_4)| = 60$.
+	Moreover, $n_5 \equiv 1 \bmod 5$, so we only need to exhibit 2 distinct Sylow-5 subgroups of $\speclin_2(\f_4)$ to show that $\speclin_2(\f_4)$ is simple.
 
-	Let $\alpha$ and $\beta$ be the two remaining elements of $\f_4$ that aren't 0 or 1. Since $\f_4\unt$ is cyclic, then $\alpha$ and $\beta$ are generators of $\f_4\unt$, are inverses of each other, and satisfy $\alpha^2 = \beta$ and $\beta^2 = \alpha$, hence $\f_4 = \set{0, 1, \alpha, \alpha^2}$. We also claim that $\f_4 \cong V_4$ as additive groups. If $\f_4 \cong \intmod[4]$ instead, then we may suppose that $1 + 1 = \alpha$. Then $(1 + 1)(1 + 1) = \alpha^2 \neq 1$. But by distribution, we have that $(1 + 1)(1 + 1) = 1 + 1 + 1 + 1 = 0$, which is a contradiction. Therefore, $\f_4 \cong V_4$, and every element has additive order 2.
+	Let $\alpha$ and $\beta$ be the two remaining elements of $\f_4$ that aren't 0 or 1.
+	Since $\f_4\unt$ is cyclic, then $\alpha$ and $\beta$ are generators of $\f_4\unt$, are inverses of each other, and satisfy $\alpha^2 = \beta$ and $\beta^2 = \alpha$, hence $\f_4 = \set{0, 1, \alpha, \alpha^2}$.
+	We also claim that $\f_4 \cong V_4$ as additive groups.
+	If $\f_4 \cong \intmod[4]$ instead, then we may suppose that $1 + 1 = \alpha$.
+	Then $(1 + 1)(1 + 1) = \alpha^2 \neq 1$.
+	But by distribution, we have that $(1 + 1)(1 + 1) = 1 + 1 + 1 + 1 = 0$, which is a contradiction.
+	Therefore, $\f_4 \cong V_4$, and every element has additive order 2.
 
-	To find two distinct Sylow-5 groups of $\speclin_2(\f_4)$, we first find an element of order 5 in $\speclin_2(\f_4)$. Noting that $\alpha + 1 = \alpha^2$, consider the matrix
+	To find two distinct Sylow-5 groups of $\speclin_2(\f_4)$, we first find an element of order 5 in $\speclin_2(\f_4)$.
+	Noting that $\alpha + 1 = \alpha^2$, consider the matrix
 	\[
 		A =
 		\begin{pmatrix}
@@ -639,7 +1000,8 @@ Let $G$ be a finite group and let $p$ be a prime.
 			\alpha & \alpha^2 + 1
 		\end{pmatrix}
 	\]
-	where $\alpha^2 + 1 = 1 + \alpha + 1 = \alpha$. We also have
+	where $\alpha^2 + 1 = 1 + \alpha + 1 = \alpha$.
+	We also have
 	\[
 		A^3 =
 		\begin{pmatrix}
@@ -647,7 +1009,10 @@ Let $G$ be a finite group and let $p$ be a prime.
 			\alpha & 1
 		\end{pmatrix}
 	\]
-	In computing $A^3 \cdot A^2$, we obtain $\alpha^2 + \alpha = \alpha(\alpha + 1) = 1$ so that $|A| = 5$. Considering $B$ with $\alpha^2$ in place of $\alpha$ in $A$, it can be similarly concluded that $|B| = 5$ with $\gen B \neq \gen A$. Since we have produced 2 distinct Sylow-5 subgroups of $\speclin_2(\f_4)$, then $\speclin_2(\f_4)$ is simple. By Theorem 4.23, we have that $\speclin_2(\f_4) \cong A_5$.
+	In computing $A^3 \cdot A^2$, we obtain $\alpha^2 + \alpha = \alpha(\alpha + 1) = 1$ so that $|A| = 5$.
+	Considering $B$ with $\alpha^2$ in place of $\alpha$ in $A$, it can be similarly concluded that $|B| = 5$ with $\gen B \neq \gen A$.
+	Since we have produced 2 distinct Sylow-5 subgroups of $\speclin_2(\f_4)$, then $\speclin_2(\f_4)$ is simple.
+	By Theorem 4.23, we have that $\speclin_2(\f_4) \cong A_5$.
 \end{sol}
 
 \begin{exercise}[4.5.42]
@@ -655,7 +1020,12 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	Since an icosahedron has 12 vertices, we obtain 6 pairs of opposite vertices. For each pair, we admit rotations of $2\pi/5$ about the axis through the pair since 5 faces meet at each vertex. This subgroup is clearly $\intmod[5]$, hence we have 6 Sylow-5 subgroups. Since $n_5 \equiv 1 \bmod 5$ and $n_5 \mid 12$, then $n_5 = 6$. Therefore, the group of rigid motions in $\r^3$ of an icosahedron is simple. By Theorem 4.23, we have that the group of rigid motions in $\r^3$ of an icosahedron is isomorphic to $A_5$.
+	Since an icosahedron has 12 vertices, we obtain 6 pairs of opposite vertices.
+	For each pair, we admit rotations of $2\pi/5$ about the axis through the pair since 5 faces meet at each vertex.
+	This subgroup is clearly $\intmod[5]$, hence we have 6 Sylow-5 subgroups.
+	Since $n_5 \equiv 1 \bmod 5$ and $n_5 \mid 12$, then $n_5 = 6$.
+	Therefore, the group of rigid motions in $\r^3$ of an icosahedron is simple.
+	By Theorem 4.23, we have that the group of rigid motions in $\r^3$ of an icosahedron is isomorphic to $A_5$.
 \end{sol}
 
 \begin{exercise}[4.5.43]
@@ -663,41 +1033,65 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	By duality of the icosahedron and dodecahedron, we may associate pairs of vertices in \exref{4.5.42} with pairs of faces instead. The proof is very similar, hence we omit the details. We conclude that the group of rigid motions in $\r^3$ of a dodecahedron is isomorphic to $A_5$.
+	By duality of the icosahedron and dodecahedron, we may associate pairs of vertices in \exref{4.5.42} with pairs of faces instead.
+	The proof is very similar, hence we omit the details.
+	We conclude that the group of rigid motions in $\r^3$ of a dodecahedron is isomorphic to $A_5$.
 \end{sol}
 
 \begin{exercise}[4.5.44]
-	Let $p$ be the smallest prime dividing the order of the finite group $G$. If $P \in \syl_p(G)$ and $P$ is cyclic, prove that $N_G(P) = C_G(P)$.
+	Let $p$ be the smallest prime dividing the order of the finite group $G$.
+	If $P \in \syl_p(G)$ and $P$ is cyclic, prove that $N_G(P) = C_G(P)$.
 \end{exercise}
 
 \begin{sol}
-	Observe that $C_G(P) \leq N_G(P)$ by definition. Note that $|P| = p^k$ for some $k \in \zp$ and is cyclic. Noting that $N_G(P)/C_G(P)$ is isomorphic to a subgroup of $\aut(P)$ and $|\aut(P)| = p^{k - 1}(p - 1)$, then $|N_G(P)/C_G(P)|$ divides $p^{k - 1}(p - 1)$. It follows that every prime $q$ that divides $|N_G(P)/C_G(P)|$ must satisfy $q \mid p^{k - 1}(p - 1)$. Since $p$ is the smallest prime dividing the order of $G$, but $P$ is also a Sylow $p$-subgroup of $G$, then $|N_G(P)/C_G(P)|$ cannot be divisible by $p$, hence it divides $p - 1$. Since $p - 1 < p$, then $|N_G(P)/C_G(P)|$ cannot be divisible by any prime, so that $|N_G(P)/C_G(P)| = 1$. Therefore, $N_G(P) = C_G(P)$.
+	Observe that $C_G(P) \leq N_G(P)$ by definition.
+	Note that $|P| = p^k$ for some $k \in \zp$ and is cyclic.
+	Noting that $N_G(P)/C_G(P)$ is isomorphic to a subgroup of $\aut(P)$ and $|\aut(P)| = p^{k - 1}(p - 1)$, then $|N_G(P)/C_G(P)|$ divides $p^{k - 1}(p - 1)$.
+	It follows that every prime $q$ that divides $|N_G(P)/C_G(P)|$ must satisfy $q \mid p^{k - 1}(p - 1)$.
+	Since $p$ is the smallest prime dividing the order of $G$, but $P$ is also a Sylow $p$-subgroup of $G$, then $|N_G(P)/C_G(P)|$ cannot be divisible by $p$, hence it divides $p - 1$.
+	Since $p - 1 < p$, then $|N_G(P)/C_G(P)|$ cannot be divisible by any prime, so that $|N_G(P)/C_G(P)| = 1$.
+	Therefore, $N_G(P) = C_G(P)$.
 \end{sol}
 
 \begin{exercise}[4.5.45]
-	Find generators for a Sylow $p$-subgroup of $S_{2p}$, where $p$ is an odd prime. Show that this is an Abelian group of order $p^2$.
+	Find generators for a Sylow $p$-subgroup of $S_{2p}$, where $p$ is an odd prime.
+	Show that this is an Abelian group of order $p^2$.
 \end{exercise}
 
 \begin{sol}
-	Utilizing the formula obtained from \exref{1.2.8}, the highest power of $p$ dividing $|S_{2p}|$ is $p^2$. We can find a Sylow $p$-subgroup of $S_{2p}$ by considering the subgroup generated by the two disjoint $p$-cycles $(1\ 2\ \cdots p)$ and $(p + 1\ p + 2\ \cdots 2p)$. Since these two cycles are disjoint, they commute with each other, so that the subgroup generated by these two cycles is an Abelian group. Moreover, since each cycle has order $p$, then the subgroup generated by these two cycles has order $p^2$.
+	Utilizing the formula obtained from \exref{1.2.8}, the highest power of $p$ dividing $|S_{2p}|$ is $p^2$.
+	We can find a Sylow $p$-subgroup of $S_{2p}$ by considering the subgroup generated by the two disjoint $p$-cycles $(1\ 2\ \cdots p)$ and $(p + 1\ p + 2\ \cdots 2p)$.
+	Since these two cycles are disjoint, they commute with each other, so that the subgroup generated by these two cycles is an Abelian group.
+	Moreover, since each cycle has order $p$, then the subgroup generated by these two cycles has order $p^2$.
 \end{sol}
 
 \begin{exercise}[4.5.46]
-	Find generators for a Sylow $p$-subgroup of $S_{p^2}$, where $p$ is a prime. Show that this is a non-Abelian group of order $p^{p + 1}$.
+	Find generators for a Sylow $p$-subgroup of $S_{p^2}$, where $p$ is a prime.
+	Show that this is a non-Abelian group of order $p^{p + 1}$.
 \end{exercise}
 
 \begin{sol}
-	Again, we may use \exref{1.2.8} to see that the highest power of $p$ dividing $|S_{p^2}|$ is $p^{p + 1}$. To build the Sylow $p$-subgroup $P$, we note that $|P| = p^p p$, which suggest that we will need to construct two subgroups $A$ and $B$ of $P$ such that $|A| = p^p$, $|B| = p$, and $P = AB$. Let $\alpha_i = (ip + 1\ ip + 2 \cdots ip + p)$ for $i = 0, 1, \ldots p - 1$. It is clear that the $\alpha_i$ are pairwise disjoint $p$-cycles, hence $A = \gen{\alpha_0, \alpha_1, \ldots \alpha_{p - 1}}$ is an Abelian group of order $p^p$.
+	Again, we may use \exref{1.2.8} to see that the highest power of $p$ dividing $|S_{p^2}|$ is $p^{p + 1}$.
+	To build the Sylow $p$-subgroup $P$, we note that $|P| = p^p p$, which suggest that we will need to construct two subgroups $A$ and $B$ of $P$ such that $|A| = p^p$, $|B| = p$, and $P = AB$.
+	Let $\alpha_i = (ip + 1\ ip + 2 \cdots ip + p)$ for $i = 0, 1, \ldots p - 1$.
+	It is clear that the $\alpha_i$ are pairwise disjoint $p$-cycles, hence $A = \gen{\alpha_0, \alpha_1, \ldots \alpha_{p - 1}}$ is an Abelian group of order $p^p$.
 
 	Consider the $p$-cycle
 	\[
 		\beta = (1\ p + 1\ 2p + 1\ \cdots (p - 1)p + 1)(2\ p + 2\ 2p + 2\ \cdots (p - 1)p + 2) \cdots (p\ 2p\ 3p\ \cdots p^2)
 	\]
-	It is clear that $\beta$ has order $p$. Moreover, $\beta$ acts on $A$ by conjugation as follows:
+	It is clear that $\beta$ has order $p$.
+	Moreover, $\beta$ acts on $A$ by conjugation as follows:
 	\[
 		\beta \alpha_i \beta\inv = \alpha_{i + 1}
 	\]
-	where the indices are taken modulo $p$. Equipped with $B = \gen\beta$, we see that $B$ normalizes $A$ since $\beta$ permutes the generators of $A$. Moreover, $A \cap B = \set{1}$ since $A$ is an Abelian group of order $p^p$ and $B$ is a cyclic group of order $p$. It follows that $P = AB$ is a subgroup of $S_{p^2}$ of order $p^{p + 1}$, so that $P$ is a Sylow $p$-subgroup of $S_{p^2}$. Finally, we show that $P$ is non-Abelian. Note that $\beta \alpha_0 \beta\inv = \alpha_1 \neq \alpha_0$, so that $\beta$ does not commute with $\alpha_0$. Therefore, $P$ is non-Abelian.
+	where the indices are taken modulo $p$.
+	Equipped with $B = \gen\beta$, we see that $B$ normalizes $A$ since $\beta$ permutes the generators of $A$.
+	Moreover, $A \cap B = \set{1}$ since $A$ is an Abelian group of order $p^p$ and $B$ is a cyclic group of order $p$.
+	It follows that $P = AB$ is a subgroup of $S_{p^2}$ of order $p^{p + 1}$, so that $P$ is a Sylow $p$-subgroup of $S_{p^2}$.
+	Finally, we show that $P$ is non-Abelian.
+	Note that $\beta \alpha_0 \beta\inv = \alpha_1 \neq \alpha_0$, so that $\beta$ does not commute with $\alpha_0$.
+	Therefore, $P$ is non-Abelian.
 \end{sol}
 
 \begin{exercise}[4.5.47]
@@ -713,13 +1107,16 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{sol}
 
 \begin{exercise}[4.5.48]
-	Carry out the same process as in the preceding exercise for all even numbers less than $1,000$. Explain the relative lengths of the lists versus the number of integers tested.
+	Carry out the same process as in the preceding exercise for all even numbers less than $1,000$.
+	Explain the relative lengths of the lists versus the number of integers tested.
 \end{exercise}
 
 \begin{sol}
 	Please see \verb|sylow-even.txt| for the solution.
 
-	In \exref{4.5.47}, we only counted 1,714 integers. In this exercise, we counted 491 integers which include the integers of the form $2^\alpha m$, hence $n_2$ will not be forced to be 1 for all groups of order $n$ by the congruence condition in Sylow's Theorem. Therefore, we have a much longer relative list of integers in this exercise than in the previous exercise.
+	In \exref{4.5.47}, we only counted 1,714 integers.
+	In this exercise, we counted 491 integers which include the integers of the form $2^\alpha m$, hence $n_2$ will not be forced to be 1 for all groups of order $n$ by the congruence condition in Sylow's Theorem.
+	Therefore, we have a much longer relative list of integers in this exercise than in the previous exercise.
 \end{sol}
 
 \begin{exercise}[4.5.49]
@@ -729,39 +1126,64 @@ Let $G$ be a finite group and let $p$ be a prime.
 \begin{sol}
 	From \exref{4.2.11} and \exref{4.2.12}, we may deduce the following: if $G$ is finite with $x \in G$ such that $|x|$ is even and $|G|/|x|$ is odd, then $G$ has a normal subgroup of index 2.
 
-	Fix an odd $m$. Inducting on $n$, we observe that $n = 1$ is trivially true as the subgroup would have order $m$ and index 2, hence it would be normal. Supposing the hypothesis is true up to $n - 1$, consider $|G| = 2^nm$. Let $x \in G$ be a generator for the cyclic Sylow-2 subgroup of $G$. Then $|x|$ is even and $|G|/|x|$ is odd, so that $G$ has a normal subgroup $N$ of index 2. In particular, $|N| = 2^{n - 1}m$ so that by the inductive hypothesis, $N$ (which is cyclic because the Sylow-2 subgroup is cyclic) has a normal cyclic subgroup $K$ of order $m$.
+	Fix an odd $m$.
+	Inducting on $n$, we observe that $n = 1$ is trivially true as the subgroup would have order $m$ and index 2, hence it would be normal.
+	Supposing the hypothesis is true up to $n - 1$, consider $|G| = 2^nm$.
+	Let $x \in G$ be a generator for the cyclic Sylow-2 subgroup of $G$.
+	Then $|x|$ is even and $|G|/|x|$ is odd, so that $G$ has a normal subgroup $N$ of index 2.
+	In particular, $|N| = 2^{n - 1}m$ so that by the inductive hypothesis, $N$ (which is cyclic because the Sylow-2 subgroup is cyclic) has a normal cyclic subgroup $K$ of order $m$.
 
-	We now show that $K \nsub G$. We claim that $K$ is the unique subgroup of $N$ of order $m$. If $L \leq N$ is another subgroup with order $m$, then $K \nsub N$ implies that $KL \leq N$, hence
+	We now show that $K \nsub G$.
+	We claim that $K$ is the unique subgroup of $N$ of order $m$.
+	If $L \leq N$ is another subgroup with order $m$, then $K \nsub N$ implies that $KL \leq N$, hence
 	\[
 		|KL| = \frac{|K||L|}{|K \cap L|} = \frac{m^2}{|K \cap L|}.
 	\]
-	Since $|KL|$ divides $|N|$, then $m/|K \cap L|$ divides $2^{n - 1}$, so that $|K \cap L| = m$. It follows that $K = L$, so that $K$ is the unique subgroup of $N$ of order $m$. Since $K$ is the unique subgroup of $N$ of order $m$, then $gKg\inv = K$ for any $g \in G$, so that $K \nsub G$. Therefore, $G$ has a normal subgroup of order $m$.
+	Since $|KL|$ divides $|N|$, then $m/|K \cap L|$ divides $2^{n - 1}$, so that $|K \cap L| = m$.
+	It follows that $K = L$, so that $K$ is the unique subgroup of $N$ of order $m$.
+	Since $K$ is the unique subgroup of $N$ of order $m$, then $gKg\inv = K$ for any $g \in G$, so that $K \nsub G$.
+	Therefore, $G$ has a normal subgroup of order $m$.
 \end{sol}
 
 \begin{exercise}[4.5.50]
-	Prove that if $U$ and $W$ are normal subsets of a Sylow $p$-subgroup $P$ of $G$ then $U$ is conjugate to $W$ if and only if $U$ is conjugate to $W$ in $N_G(P)$. Deduce that two elements in the center of $P$ are conjugate in $G$ if and only if they are conjugate in $N_G(P)$. (A subset $U$ of $P$ is normal in $P$ if $N_P(U) = P$.)
+	Prove that if $U$ and $W$ are normal subsets of a Sylow $p$-subgroup $P$ of $G$ then $U$ is conjugate to $W$ if and only if $U$ is conjugate to $W$ in $N_G(P)$.
+	Deduce that two elements in the center of $P$ are conjugate in $G$ if and only if they are conjugate in $N_G(P)$. (A subset $U$ of $P$ is normal in $P$ if $N_P(U) = P$.)
 \end{exercise}
 
 \begin{sol}
 	\leavevmode
 	\begin{itemize}
-		\item[\rightimp] Suppose $U$ is conjugate to $W$ in $G$. Then there exists $g \in G$ such that $gUg\inv = W$, or $g\inv Wg = U$. Taking some $p \in P$ and some $gpg\inv \in gPg\inv$, then
+		\item[\rightimp] Suppose $U$ is conjugate to $W$ in $G$.
+	Then there exists $g \in G$ such that $gUg\inv = W$, or $g\inv Wg = U$.
+	Taking some $p \in P$ and some $gpg\inv \in gPg\inv$, then
 		\[
 			gpg\inv W gp\inv g\inv = gpUp\inv g\inv = gUg\inv = W
 		\]
 		where $pUp\inv = U$ since $U \nsub P$.
 
-		Since $gPg\inv$ is a $p$-group, and $W \nsub P$, then $P \leq N_G(W)$. Hence, $P \in \syl_p(N_G(W))$. By the conjugacy part of Sylow's Theorem, there exists some $n \in N_G(W)$ such that $nPn\inv = gPg\inv$. Then $n\inv g \in N_G(P)$ since $n\inv gPg\inv gn\inv = P$, so that $n\inv gUg\inv n = n\inv Wn = W$. Therefore, $U$ is conjugate to $W$ in $N_G(P)$.
-		\item[\leftimp] If $U$ is conjugate to $W$ in $N_G(P)$, then there exists some $n \in N_G(P)$ such that $nUn\inv = W$. Since $N_G(P) \leq G$, then $U$ is conjugate to $W$ in $G$ as well because $n \in G$.
+		Since $gPg\inv$ is a $p$-group, and $W \nsub P$, then $P \leq N_G(W)$.
+	Hence, $P \in \syl_p(N_G(W))$.
+	By the conjugacy part of Sylow's Theorem, there exists some $n \in N_G(W)$ such that $nPn\inv = gPg\inv$.
+	Then $n\inv g \in N_G(P)$ since $n\inv gPg\inv gn\inv = P$, so that $n\inv gUg\inv n = n\inv Wn = W$.
+	Therefore, $U$ is conjugate to $W$ in $N_G(P)$.
+		\item[\leftimp] If $U$ is conjugate to $W$ in $N_G(P)$, then there exists some $n \in N_G(P)$ such that $nUn\inv = W$.
+	Since $N_G(P) \leq G$, then $U$ is conjugate to $W$ in $G$ as well because $n \in G$.
 	\end{itemize}
 \end{sol}
 
 \begin{exercise}[4.5.51]
-	Let $P$ be a Sylow $p$-subgroup of $G$ and let $M$ be any subgroup of $G$ which contains $N_G(P)$. Prove that $|G : M| \equiv 1 \bmod p$.
+	Let $P$ be a Sylow $p$-subgroup of $G$ and let $M$ be any subgroup of $G$ which contains $N_G(P)$.
+	Prove that $|G : M| \equiv 1 \bmod p$.
 \end{exercise}
 
 \begin{sol}
-	Since $P \in \syl_p(G)$, then $P \in \syl_p(M)$ as well since $N_G(P) \leq M$. Moreover, let $m \in N_M(P)$. Then $mPm\inv = P$, so that $m \in N_G(P)$ since $P$ is a Sylow $p$-subgroup of $G$. Then we have $N_M(P) \subseteq N_G(P)$. Conversely, $N_G(P) \subseteq N_M(P)$ since $N_G(P) \leq M$. It follows that $N_M(P) = N_G(P)$, so that $|G : N_G(P)| = |M : N_M(P)| \equiv 1 \bmod p$. Then
+	Since $P \in \syl_p(G)$, then $P \in \syl_p(M)$ as well since $N_G(P) \leq M$.
+	Moreover, let $m \in N_M(P)$.
+	Then $mPm\inv = P$, so that $m \in N_G(P)$ since $P$ is a Sylow $p$-subgroup of $G$.
+	Then we have $N_M(P) \subseteq N_G(P)$.
+	Conversely, $N_G(P) \subseteq N_M(P)$ since $N_G(P) \leq M$.
+	It follows that $N_M(P) = N_G(P)$, so that $|G : N_G(P)| = |M : N_M(P)| \equiv 1 \bmod p$.
+	Then
 	\[
 		|G : N_G(P)| = |G : M||M : N_G(P)| = |G : M||M : N_M(P)| \equiv 1 \bmod p
 	\]
@@ -769,23 +1191,42 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{sol}
 
 \begin{exercise}[4.5.52]
-	Suppose $G$ is a finite simple group in which every proper subgroup is Abelian. If $M$ and $N$ are distinct, maximal subgroups of $G$, prove that $M \cap N$ = 1. (See \exref{4.3.23}.)
+	Suppose $G$ is a finite simple group in which every proper subgroup is Abelian.
+	If $M$ and $N$ are distinct, maximal subgroups of $G$, prove that $M \cap N$ = 1. (See \exref{4.3.23}.)
 \end{exercise}
 
 \begin{sol}
-	Let $X = M \cap N$. Because $M$ and $N$ are Abelian, then $X$ is Abelian. Moreover, $N_G(X)$ contains both $M$ and $N$ so that $N_G(X) = G$ and $X \nsub G$. Simplicity of $G$ forces $X = 1$. Therefore, $M \cap N = 1$.
+	Let $X = M \cap N$.
+	Because $M$ and $N$ are Abelian, then $X$ is Abelian.
+	Moreover, $N_G(X)$ contains both $M$ and $N$ so that $N_G(X) = G$ and $X \nsub G$.
+	Simplicity of $G$ forces $X = 1$.
+	Therefore, $M \cap N = 1$.
 \end{sol}
 
 \begin{exercise}[4.5.53]
-	Use the preceding exercise to prove that if $G$ is any non-Abelian group in which every proper subgroup is Abelian then $G$ is not simple. (Let $G$ be a counterexample to this assertion and use \exref{4.3.24} to show that $G$ has more than one conjugacy class of maximal subgroups. Use the method of \exref{4.3.23} to count the elements which lie in all conjugates of $M$ and $N$, where $M$ and $N$ are nonconjugate maximal subgroups of $G$; show that this gives more than $|G|$ elements.)
+	Use the preceding exercise to prove that if $G$ is any non-Abelian group in which every proper subgroup is Abelian then $G$ is not simple. (Let $G$ be a counterexample to this assertion and use \exref{4.3.24} to show that $G$ has more than one conjugacy class of maximal subgroups.
+	Use the method of \exref{4.3.23} to count the elements which lie in all conjugates of $M$ and $N$, where $M$ and $N$ are nonconjugate maximal subgroups of $G$; show that this gives more than $|G|$ elements.)
 \end{exercise}
 
 \begin{sol}
-	Assume for the sake of contradiction that $G$ is simple. We first note that $G$ is the union of its maximal subgroups, since every proper subgroup of $G$ is contained in a maximal subgroup. Moreover, conjugates of maximal subgroups are also maximal: if $M$ is a maximal subgroup of $G$ with $g \in G$ such that $gMg \inv \leq H$ for some $H \leq G$, then $M \leq g\inv Hg$ so that $g\inv Hg = G$ or $M$. It follows that $gMg\inv = G$ or $M$, hence $gMg\inv = M$ since $M$ is a proper subgroup of $G$. Therefore, $gMg\inv$ is a maximal subgroup of $G$. Lastly, simplicity of $G$ forces $M$ to be a non-normal subgroup, hence $N_G(M) = M$ by maximality of $M$.
+	Assume for the sake of contradiction that $G$ is simple.
+	We first note that $G$ is the union of its maximal subgroups, since every proper subgroup of $G$ is contained in a maximal subgroup.
+	Moreover, conjugates of maximal subgroups are also maximal: if $M$ is a maximal subgroup of $G$ with $g \in G$ such that $gMg \inv \leq H$ for some $H \leq G$, then $M \leq g\inv Hg$ so that $g\inv Hg = G$ or $M$.
+	It follows that $gMg\inv = G$ or $M$, hence $gMg\inv = M$ since $M$ is a proper subgroup of $G$.
+	Therefore, $gMg\inv$ is a maximal subgroup of $G$.
+	Lastly, simplicity of $G$ forces $M$ to be a non-normal subgroup, hence $N_G(M) = M$ by maximality of $M$.
 
-	We now show that there are at least two distinct conjugacy classes of maximal subgroups of $G$. Assume by way of contradiction that there is only one conjugacy class of maximal subgroups of $G$. Let $M$ be a maximal subgroup of $G$ such that for any maximal subgroup $N$ of $G$, there exists some $g \in G$ such that $gMg\inv = N$. Moreover, recall that the number of conjugates of $M$ is $|G : N_G(M)| = |G : M|$. Since conjugates intersect trivially by \exref{4.5.52}, then the number of elements in the union of all conjugates of $M$ is $|G : M|(|M| - 1) + 1$, or $|G| - |G : M| + 1$. However, $M \neq G$, hence $|G : M| > 1$, so that $|G| - |G : M| + 1 < |G|$. This is a contradiction since $G$ is the union of its maximal subgroups. Therefore, there are at least two distinct conjugacy classes of maximal subgroups of $G$.
+	We now show that there are at least two distinct conjugacy classes of maximal subgroups of $G$.
+	Assume by way of contradiction that there is only one conjugacy class of maximal subgroups of $G$.
+	Let $M$ be a maximal subgroup of $G$ such that for any maximal subgroup $N$ of $G$, there exists some $g \in G$ such that $gMg\inv = N$.
+	Moreover, recall that the number of conjugates of $M$ is $|G : N_G(M)| = |G : M|$.
+	Since conjugates intersect trivially by \exref{4.5.52}, then the number of elements in the union of all conjugates of $M$ is $|G : M|(|M| - 1) + 1$, or $|G| - |G : M| + 1$.
+	However, $M \neq G$, hence $|G : M| > 1$, so that $|G| - |G : M| + 1 < |G|$.
+	This is a contradiction since $G$ is the union of its maximal subgroups.
+	Therefore, there are at least two distinct conjugacy classes of maximal subgroups of $G$.
 
-	Lastly, observe that $|M| \geq 2$ and $|N| \geq 2$ since $M$ and $N$ are non-Abelian. It follows that
+	Lastly, observe that $|M| \geq 2$ and $|N| \geq 2$ since $M$ and $N$ are non-Abelian.
+	It follows that
 	\[
 		|G| - |G : M| - |G : N| = |G|\left(1 - \frac{1}{|M|} - \frac{1}{|N|}\right) \geq 0.
 	\]
@@ -793,25 +1234,40 @@ Let $G$ be a finite group and let $p$ be a prime.
 	\[
 		|G| + (|G| - |G : M| - |G : N|) + 1 > |G|
 	\]
-	so that $G$ has more than $|G|$ elements, which is a contradiction. Therefore, $G$ is not simple.
+	so that $G$ has more than $|G|$ elements, which is a contradiction.
+	Therefore, $G$ is not simple.
 \end{sol}
 
 \begin{exercise}[4.5.54]
-	Prove the following classification: if $G$ is a finite group of order $p_1p_2 \cdots p_r$ where the $p_i$'s are distinct primes such that $p_i$ does not divide $p_j - 1$ for all $i$ and $j$, then $G$ is cyclic. (By induction, every proper subgroup of $G$ is cyclic, so $G$ is not simple by the preceding exercise. If $N$ is a non-trivial proper normal subgroup, $N$ is cyclic and $G/N$ acts as automorphisms of $N$. Use Proposition 16 to show that $N \leq Z(G)$ and use induction to show $G/Z(G)$ is cyclic, hence $G$ is Abelian by \exref{3.1.36}.)
+	Prove the following classification: if $G$ is a finite group of order $p_1p_2 \cdots p_r$ where the $p_i$'s are distinct primes such that $p_i$ does not divide $p_j - 1$ for all $i$ and $j$, then $G$ is cyclic. (By induction, every proper subgroup of $G$ is cyclic, so $G$ is not simple by the preceding exercise.
+	If $N$ is a non-trivial proper normal subgroup, $N$ is cyclic and $G/N$ acts as automorphisms of $N$.
+	Use Proposition 16 to show that $N \leq Z(G)$ and use induction to show $G/Z(G)$ is cyclic, hence $G$ is Abelian by \exref{3.1.36}.)
 \end{exercise}
 
 \begin{sol}
-	We proceed by induction on $r$. For $r = 1$, then $|G| = p_1$ which implies that $G$ is cyclic.
+	We proceed by induction on $r$.
+	For $r = 1$, then $|G| = p_1$ which implies that $G$ is cyclic.
 
-	Assume by way of contradiction that $G$ is not Abelian. By \exref{4.5.53}, $G$ is not simple. Let $N$ be a non-trivial normal subgroup of $G$ with $|N| = q_1q_2 \cdots q_s$ are primes from $p_1, p_2, \ldots, p_r$. Moreover, $N$ is cyclic by the inductive hypothesis.
+	Assume by way of contradiction that $G$ is not Abelian.
+	By \exref{4.5.53}, $G$ is not simple.
+	Let $N$ be a non-trivial normal subgroup of $G$ with $|N| = q_1q_2 \cdots q_s$ are primes from $p_1, p_2, \ldots, p_r$.
+	Moreover, $N$ is cyclic by the inductive hypothesis.
 
-	By $N \nsub G$, then $G$ acts on $N$ which induces the homomorphism $\psi : G \to \aut(N)$. Moreover, cyclicity of $N$ implies that
+	By $N \nsub G$, then $G$ acts on $N$ which induces the homomorphism $\psi : G \to \aut(N)$.
+	Moreover, cyclicity of $N$ implies that
 	\[
 		|\aut(N)| = \phi(|N|) = \prod_{i = 1}^s (q_i - 1).
 	\]
-	By definition, we have that no $p_i$ divides any of $q_i - 1$, hence $\ker\psi = G$. It follows that $G$ acts trivially on $N$, so that $N \leq Z(G)$. We then see that $G/Z(G)$ is cyclic by the inductive hypothesis since $|G/Z(G)|$ divides $|G|$. By \exref{3.1.36}, $G$ is Abelian, which is a contradiction. Therefore, $G$ is Abelian.
+	By definition, we have that no $p_i$ divides any of $q_i - 1$, hence $\ker\psi = G$.
+	It follows that $G$ acts trivially on $N$, so that $N \leq Z(G)$.
+	We then see that $G/Z(G)$ is cyclic by the inductive hypothesis since $|G/Z(G)|$ divides $|G|$.
+	By \exref{3.1.36}, $G$ is Abelian, which is a contradiction.
+	Therefore, $G$ is Abelian.
 
-	Finally, we show that $G$ is cyclic. Let $g_i$ be a generator of the Sylow $p_i$-subgroup of $G$ for each $i$. Since the Sylow $p_i$-subgroups of $G$ are all cyclic, then $\gen{g_i} \cap \gen{g_j} = 1$ for all $i \neq j$. It follows that $g_1g_2 \cdots g_r$ has order $p_1p_2 \cdots p_r$, so that $G = \gen{g_1g_2 \cdots g_r}$ is cyclic.
+	Finally, we show that $G$ is cyclic.
+	Let $g_i$ be a generator of the Sylow $p_i$-subgroup of $G$ for each $i$.
+	Since the Sylow $p_i$-subgroups of $G$ are all cyclic, then $\gen{g_i} \cap \gen{g_j} = 1$ for all $i \neq j$.
+	It follows that $g_1g_2 \cdots g_r$ has order $p_1p_2 \cdots p_r$, so that $G = \gen{g_1g_2 \cdots g_r}$ is cyclic.
 \end{sol}
 
 \begin{exercise}[4.5.55]
@@ -821,8 +1277,15 @@ Let $G$ be a finite group and let $p$ be a prime.
 \begin{sol}
 	We proceed by contrapositive, i.e., if $n$ is not a product of distinct primes, or if $n$ is a product of distinct primes but there exist some $i$ and $j$ such that $p_i \mid p_j - 1$, then there exists some non-cyclic group of order $n$.
 	\begin{itemize}
-		\item Suppose $n$ is not a product of distinct primes, i.e., $n = p^2m$ for some prime $p$ and some integer $m \geq 1$. Consider the group $\intmod[p] \times \intmod[p] \times \intmod[m]$. Note that $\intmod[p] \times \intmod[p]$ is a non-cyclic group of order $p^2$, since every non-identity element of $\intmod[p]$ has order $p$. If $G$ were cyclic, then the isomorphic copy of $\intmod[p] \times \intmod[p]$ in $G$, namely $\intmod[p] \times \intmod[p] \times \set{0}$, would also be cyclic, which is a contradiction. Therefore, $\intmod[p] \times \intmod[p] \times \intmod[m]$ is a non-cyclic group of order $n$.
-		\item By the text, if $p \mid q - 1$, then there exists a non-Abelian group of order $pq$. Let $H$ be such a group, and let $m$ be an integer such that $n = pqm$, and $(pq, m) = 1$. Consider the group $H \times \intmod[m]$. Using similar reasoning as in the previous case, $(H \times \set 0) \cong H$ is a non-cyclic subgroup of $H \times \intmod[m]$, so that $H \times \intmod[m]$ is a non-cyclic group of order $n$. \qh
+		\item Suppose $n$ is not a product of distinct primes, i.e., $n = p^2m$ for some prime $p$ and some integer $m \geq 1$.
+	Consider the group $\intmod[p] \times \intmod[p] \times \intmod[m]$.
+	Note that $\intmod[p] \times \intmod[p]$ is a non-cyclic group of order $p^2$, since every non-identity element of $\intmod[p]$ has order $p$.
+	If $G$ were cyclic, then the isomorphic copy of $\intmod[p] \times \intmod[p]$ in $G$, namely $\intmod[p] \times \intmod[p] \times \set{0}$, would also be cyclic, which is a contradiction.
+	Therefore, $\intmod[p] \times \intmod[p] \times \intmod[m]$ is a non-cyclic group of order $n$.
+		\item By the text, if $p \mid q - 1$, then there exists a non-Abelian group of order $pq$.
+	Let $H$ be such a group, and let $m$ be an integer such that $n = pqm$, and $(pq, m) = 1$.
+	Consider the group $H \times \intmod[m]$.
+	Using similar reasoning as in the previous case, $(H \times \set 0) \cong H$ is a non-cyclic subgroup of $H \times \intmod[m]$, so that $H \times \intmod[m]$ is a non-cyclic group of order $n$. \qh
 	\end{itemize}
 \end{sol}
 
@@ -831,5 +1294,12 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	We proceed by induction on $|G|$. If $G$ is Abelian, then $G$ is solvable. Assume that the hypothesis holds for all groups of order less than $|G|$. If $G$ is not simple, then there exists some non-trivial normal subgroup $N$ of $G$. Since $N$ and $G/N$ are both groups in which every proper subgroup is Abelian (specifically, $G/N$ has every proper subgroup Abelian because each $H/N \leq G/N$ has some $H \leq G$ that is Abelian, by hypothesis), then by the inductive hypothesis, $N$ and $G/N$ are solvable. It follows that $G$ is solvable as well. If $G$ is simple, then by \exref{4.5.53}, $G$ is Abelian, hence solvable. Therefore, in either case, $G$ is solvable.
+	We proceed by induction on $|G|$.
+	If $G$ is Abelian, then $G$ is solvable.
+	Assume that the hypothesis holds for all groups of order less than $|G|$.
+	If $G$ is not simple, then there exists some non-trivial normal subgroup $N$ of $G$.
+	Since $N$ and $G/N$ are both groups in which every proper subgroup is Abelian (specifically, $G/N$ has every proper subgroup Abelian because each $H/N \leq G/N$ has some $H \leq G$ that is Abelian, by hypothesis), then by the inductive hypothesis, $N$ and $G/N$ are solvable.
+	It follows that $G$ is solvable as well.
+	If $G$ is simple, then by \exref{4.5.53}, $G$ is Abelian, hence solvable.
+	Therefore, in either case, $G$ is solvable.
 \end{sol}

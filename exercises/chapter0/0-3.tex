@@ -5,7 +5,8 @@
 \end{exercise}
 
 \begin{sol}
-    Note that $\bar x = \set{x + 18k \mid k \in \z}$. Explicitly, we have:
+    Note that $\bar x = \set{x + 18k \mid k \in \z}$.
+	Explicitly, we have:
     \begin{align*}
         \bar 0 & = \set{0, 18, -18, 36, -36, \ldots} & \bar 1 & = \set{1, 19, -17, 37, -35, \ldots} & \bar 2 & = \set{2, 20, -16, 38, -34, \ldots} \\
         \bar 3 & = \set{3, 21, -15, 39, -33, \ldots} & \bar 4 & = \set{4, 22, -14, 40, -32, \ldots} & \bar 5 & = \set{5, 23, -13, 41, -31, \ldots} \\
@@ -23,11 +24,17 @@
 \end{exercise}
 
 \begin{sol}
-    Let $m \in \z$. By the Division Algorithm, there exists unique $q, r \in \z$ such that
+    Let $m \in \z$.
+	By the Division Algorithm, there exists unique $q, r \in \z$ such that
     \[
     	m = nq + r, \quad 0 \leq r < n.
     \]
-    Then $m \equiv r \bmod n$, so $m \in \bar r$. By definition, $\bar r$ is one of $\bar 0, \bar 1, \ldots, \bar{n - 1}$. Thus, every equivalence class in $\intmod$ is one of $\bar 0, \bar 1, \ldots, \bar{n - 1}$. Moreover, they are all distinct. Otherwise, if $\bar x = \bar y$ for $0 \leq x, y < n$, then $x \equiv y \bmod n$, or $n \mid (x - y)$. However, since $-n < x - y < n$, we must have $x - y = 0$, or $x = y$.
+    Then $m \equiv r \bmod n$, so $m \in \bar r$.
+	By definition, $\bar r$ is one of $\bar 0, \bar 1, \ldots, \bar{n - 1}$.
+	Thus, every equivalence class in $\intmod$ is one of $\bar 0, \bar 1, \ldots, \bar{n - 1}$.
+	Moreover, they are all distinct.
+	Otherwise, if $\bar x = \bar y$ for $0 \leq x, y < n$, then $x \equiv y \bmod n$, or $n \mid (x - y)$.
+	However, since $-n < x - y < n$, we must have $x - y = 0$, or $x = y$.
 \end{sol}
 
 \begin{exercise}[0.3.3]
@@ -81,7 +88,9 @@
         9^4 \bmod 100 & \equiv 61 & 9^{32} \bmod 100 & \equiv 21 \\
         9^8 \bmod 100 & \equiv 21 & 9^{64} \bmod 100 & \equiv 41
     \end{align*}
-    Observe that $9^{64} \equiv 9^4 \equiv 61 \bmod 100$. Then $9^{60} \equiv 1 \bmod 100$, so that $9^{1500} \equiv 9^{25 \cdot 60} \equiv 1^{25} \equiv 1 \bmod 100$. Thus, the last two digits of $9^{1500}$ are $01$.
+    Observe that $9^{64} \equiv 9^4 \equiv 61 \bmod 100$.
+	Then $9^{60} \equiv 1 \bmod 100$, so that $9^{1500} \equiv 9^{25 \cdot 60} \equiv 1^{25} \equiv 1 \bmod 100$.
+	Thus, the last two digits of $9^{1500}$ are $01$.
 \end{sol}
 
 \begin{exercise}[0.3.6]
@@ -117,17 +126,29 @@
 \begin{exercise}[0.3.8]
     Prove that the equation $a^2 + b^2 = 3c^2$ has no solutions in nonzero integers $a, b$ and $c$.
     
-    \hint{Consider the equation mod 4 as in the previous two exercises and show that $a, b$ and $c$ would all have to be divisible by $2$. Then each of $a^2, b^2$ and $c^2$ has a factor of $4$ and by dividing through by $4$ show that there would be a smaller set of solutions to the original equation. Iterate to reach a contradiction.}
+    \hint{Consider the equation mod 4 as in the previous two exercises and show that $a, b$ and $c$ would all have to be divisible by $2$.
+	Then each of $a^2, b^2$ and $c^2$ has a factor of $4$ and by dividing through by $4$ show that there would be a smaller set of solutions to the original equation.
+	Iterate to reach a contradiction.}
 \end{exercise}
 
 \begin{sol}
-    We consider $a^2 + b^2 = 3c^2$ in mod 4. By \exref{0.3.7}, $a^2 + b^2$ is either 0, 1, or 2 mod 4. By \exref{0.3.6}, $c^2$ is either 0 or 1 mod 4, so that $3c^2$ is either 0 or 3 mod 4. Thus, both sides must be 0 mod 4.
+    We consider $a^2 + b^2 = 3c^2$ in mod 4.
+	By \exref{0.3.7}, $a^2 + b^2$ is either 0, 1, or 2 mod 4.
+	By \exref{0.3.6}, $c^2$ is either 0 or 1 mod 4, so that $3c^2$ is either 0 or 3 mod 4.
+	Thus, both sides must be 0 mod 4.
 
-    It is clear that $4 \mid 3 c^2$ implies $4 \mid c^2$, and hence $2 \mid c$. Observe that if $a$ and $b$ were both odd, then $a^2 + b^2 \equiv 2 \mod 4$. If one of $a$ or $b$ were odd and the other even, then $a^2 + b^2 \equiv 1 \mod 4$. Thus, both $a$ and $b$ must be even. Put $a = 2\alpha$, $b = 2\beta$, and $c = 2\gamma$ for nonzero $\alpha, \beta, \gamma \in \z$. Substituting into the original equation gives
+    It is clear that $4 \mid 3 c^2$ implies $4 \mid c^2$, and hence $2 \mid c$.
+	Observe that if $a$ and $b$ were both odd, then $a^2 + b^2 \equiv 2 \mod 4$.
+	If one of $a$ or $b$ were odd and the other even, then $a^2 + b^2 \equiv 1 \mod 4$.
+	Thus, both $a$ and $b$ must be even.
+	Put $a = 2\alpha$, $b = 2\beta$, and $c = 2\gamma$ for nonzero $\alpha, \beta, \gamma \in \z$.
+	Substituting into the original equation gives
     \[
     	 (2\alpha)^2 + (2\beta)^2 = 3(2\gamma)^2.
     \]
-    We may divide by 4 to obtain $\alpha^2 + \beta^2 = 3\gamma^2$, which is the same form as the original equation but with integers with smaller absolute values. Repeating this process leads to an infinite descent, which is impossible. Therefore, there are no solutions in nonzero integers $a, b,$ and $c$.
+    We may divide by 4 to obtain $\alpha^2 + \beta^2 = 3\gamma^2$, which is the same form as the original equation but with integers with smaller absolute values.
+	Repeating this process leads to an infinite descent, which is impossible.
+	Therefore, there are no solutions in nonzero integers $a, b,$ and $c$.
 \end{sol}
 
 \begin{exercise}[0.3.9]
@@ -135,7 +156,8 @@
 \end{exercise}
 
 \begin{sol}
-    Put $a = 2k + 1$ for $k \in \z$. Then $a^2 = 4k(k + 1) + 1 \equiv 1 \bmod 8$ since $k(k + 1)$ is always even.
+    Put $a = 2k + 1$ for $k \in \z$.
+	Then $a^2 = 4k(k + 1) + 1 \equiv 1 \bmod 8$ since $k(k + 1)$ is always even.
 \end{sol}
 
 \begin{spex}[0.3.10]
@@ -145,8 +167,12 @@
 \begin{sol}
     It suffices to show that $\bar a \in \units$ if and only if $(a, n) = 1$.
     \begin{itemize}
-        \item[\rightimp] If $\bar a \in \units$, then there exists $\bar b \in \intmod$ such that $\bar a \cdot \bar b = \bar 1$. Then $ab \equiv 1 \bmod n$ implies the existence of $k \in \z$ such that $ab - 1 = kn$, or $ab - kn = 1$. Thus, $(a, n) = 1$.
-        \item[\leftimp] By $(a, n) = 1$, there exists $x, y \in \z$ such that $ax + ny = 1$, or $ax = 1 - ny$. We then have $ax \equiv 1 \bmod n$, so that $\bar a \cdot \bar x = \bar 1$. Thus, $\bar a \in \units$. \qh
+        \item[\rightimp] If $\bar a \in \units$, then there exists $\bar b \in \intmod$ such that $\bar a \cdot \bar b = \bar 1$.
+	Then $ab \equiv 1 \bmod n$ implies the existence of $k \in \z$ such that $ab - 1 = kn$, or $ab - kn = 1$.
+	Thus, $(a, n) = 1$.
+        \item[\leftimp] By $(a, n) = 1$, there exists $x, y \in \z$ such that $ax + ny = 1$, or $ax = 1 - ny$.
+	We then have $ax \equiv 1 \bmod n$, so that $\bar a \cdot \bar x = \bar 1$.
+	Thus, $\bar a \in \units$. \qh
     \end{itemize}
 \end{sol}
 
@@ -155,7 +181,8 @@
 \end{exercise}
 
 \begin{sol}
-    Since $\bar a, \bar b \in \units$, there exist $\bar c, \bar d \in \intmod$ such that $\bar a \cdot \bar c = \bar b \cdot \bar d = \bar 1$. Then
+    Since $\bar a, \bar b \in \units$, there exist $\bar c, \bar d \in \intmod$ such that $\bar a \cdot \bar c = \bar b \cdot \bar d = \bar 1$.
+	Then
     \[
     	(\bar a \cdot \bar b)(\bar c \cdot \bar d) = (\bar a \cdot \bar c)(\bar b \cdot \bar d) = \bar 1 \cdot \bar 1 = \bar 1,
     \]
@@ -163,33 +190,41 @@
 \end{sol}
 
 \begin{exercise}[0.3.12]
-    Let $n \in \z, n > 1$ and let $a \in \z$ with $1 \leq a \leq n$. Prove if $a$ and $n$ are not relatively prime, there exists an integer $b$ with $1 \leq b < n$ such that $ab \equiv 0 \bmod n$ and deduce that there cannot be an integer $c$ such that $ac \equiv 1 \bmod n$.
+    Let $n \in \z, n > 1$ and let $a \in \z$ with $1 \leq a \leq n$.
+	Prove if $a$ and $n$ are not relatively prime, there exists an integer $b$ with $1 \leq b < n$ such that $ab \equiv 0 \bmod n$ and deduce that there cannot be an integer $c$ such that $ac \equiv 1 \bmod n$.
 \end{exercise}
 
 \begin{sol}
-    Let $(a, n) = d > 1$. Then $a/d, n/d \in \z$. Put $b = n/d$, so that $1 \leq b < n$ and
+    Let $(a, n) = d > 1$.
+	Then $a/d, n/d \in \z$.
+	Put $b = n/d$, so that $1 \leq b < n$ and
     \[
     	ab = a(n/d) = (a/d)n \equiv 0 \bmod n.
     \]
-    If there existed some $c \in \z$ such that $ac \equiv 1 \bmod n$, then $(ac)b \equiv b \bmod n$. However, $ab \equiv 0 \bmod n$, so that $0 \equiv b \bmod n$, which is impossible since $1 \leq b < n$.
+    If there existed some $c \in \z$ such that $ac \equiv 1 \bmod n$, then $(ac)b \equiv b \bmod n$.
+	However, $ab \equiv 0 \bmod n$, so that $0 \equiv b \bmod n$, which is impossible since $1 \leq b < n$.
 \end{sol}
 
 \begin{exercise}[0.3.13]
-    Let $n \in \z, n > 1$ and let $a \in \z$ with $1 \leq a \leq n$. Prove that if $a$ and $n$ are relatively prime then there is an integer $c$ such that $ac \equiv 1 \bmod n$.
+    Let $n \in \z, n > 1$ and let $a \in \z$ with $1 \leq a \leq n$.
+	Prove that if $a$ and $n$ are relatively prime then there is an integer $c$ such that $ac \equiv 1 \bmod n$.
 
     \hint{Use the fact that the GCD of two integers is a $\z$-linear combination of the integers.}
 \end{exercise}
 
 \begin{sol}
-    Since $(a, n) = 1$, there exists $c, x \in \z$ such that $ac + nx = 1$. Then $ac \equiv 1 \bmod n$.
+    Since $(a, n) = 1$, there exists $c, x \in \z$ such that $ac + nx = 1$.
+	Then $ac \equiv 1 \bmod n$.
 \end{sol}
 
 \begin{exercise}[0.3.14]
-    Conclude from the previous two exercises that $\units$ is the set of elements $\bar a$ of $\intmod$ with $(a, n) = 1$ and hence prove Proposition 4. Verify this directly in the case $n = 12$.
+    Conclude from the previous two exercises that $\units$ is the set of elements $\bar a$ of $\intmod$ with $(a, n) = 1$ and hence prove Proposition 4.
+	Verify this directly in the case $n = 12$.
 \end{exercise}
 
 \begin{sol}
-    The previous two exercises show that $a$ and $n$ are relatively prime if and only if there exists $b$ such that $ab \equiv 1 \bmod n$, which is exactly the proposition. For $n = 12$, the elements $1, 5, 7, 11$ are relatively prime to $12$, so that $\units[12] = \set{\bar 1, \bar 5, \bar 7, \bar{11}} $ whose inverses are $\bar 1, \bar 5, \bar 7, \bar{11}$ respectively. 
+    The previous two exercises show that $a$ and $n$ are relatively prime if and only if there exists $b$ such that $ab \equiv 1 \bmod n$, which is exactly the proposition.
+	For $n = 12$, the elements $1, 5, 7, 11$ are relatively prime to $12$, so that $\units[12] = \set{\bar 1, \bar 5, \bar 7, \bar{11}} $ whose inverses are $\bar 1, \bar 5, \bar 7, \bar{11}$ respectively. 
 \end{sol}
 
 \begin{exercise}[0.3.15]
@@ -203,7 +238,8 @@
 \end{exercise}
 
 \begin{sol}
-    Use the Euclidean Algorithm to find $x, y \in \z$ such that $ax + ny = 1$ for each pair $(a, n)$. Then $ax \equiv 1 \bmod n$, and $x$ is the multiplicative inverse of $\bar a$ in $\intmod$.
+    Use the Euclidean Algorithm to find $x, y \in \z$ such that $ax + ny = 1$ for each pair $(a, n)$.
+	Then $ax \equiv 1 \bmod n$, and $x$ is the multiplicative inverse of $\bar a$ in $\intmod$.
     \begin{subexercises}
         \item 17.
         \item 40.
@@ -213,7 +249,9 @@
 \end{sol}
 
 \begin{exercise}[0.3.16]
-    Write a computer program to add and multiply mod $n$, for any $n$ given as input. The output of these operations should be the least residues of the sums and products of two integers. Also include the feature that if $(a, n) = 1$, an integer $c$ between $1$ and $n - 1$ such that $\bar a \cdot \bar c = \bar 1$ may be printed on request. 
+    Write a computer program to add and multiply mod $n$, for any $n$ given as input.
+	The output of these operations should be the least residues of the sums and products of two integers.
+	Also include the feature that if $(a, n) = 1$, an integer $c$ between $1$ and $n - 1$ such that $\bar a \cdot \bar c = \bar 1$ may be printed on request. 
     
     \note{Your program should not, of course, simply quote ``mod'' functions already built into many systems.}
 \end{exercise}

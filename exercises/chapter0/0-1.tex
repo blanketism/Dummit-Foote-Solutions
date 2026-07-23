@@ -44,7 +44,10 @@ and $\bb = \set{X \in \ac \mid MX = XM}$, where $\ac$ denotes the set of $2 \tim
 \end{exercise}
 
 \begin{sol}
-    Let $M_i$ denote the $i$-th matrix in the list. Then $M_1, M_3, M_5, M_6$ are $M$, the zero matrix, $I_2$, and the exchange matrix respectively. Among these, $M_1, M_3, M_5$ belong to $\bb$, while $M_6 \notin \bb$. Direct calculation shows $M_2$ and $M_4$ are not in $\bb$.
+    Let $M_i$ denote the $i$-th matrix in the list.
+	Then $M_1, M_3, M_5, M_6$ are $M$, the zero matrix, $I_2$, and the exchange matrix respectively.
+	Among these, $M_1, M_3, M_5$ belong to $\bb$, while $M_6 \notin \bb$.
+	Direct calculation shows $M_2$ and $M_4$ are not in $\bb$.
 \end{sol}
 
 \begin{exercise}[0.1.2]
@@ -74,7 +77,8 @@ and $\bb = \set{X \in \ac \mid MX = XM}$, where $\ac$ denotes the set of $2 \tim
 \end{exercise}
 
 \begin{sol}
-    Let $X$ be the matrix above. Computing $MX = XM$ gives the following system of equations:
+    Let $X$ be the matrix above.
+	Computing $MX = XM$ gives the following system of equations:
     \[
         \begin{cases}
             p + r = p \\
@@ -83,7 +87,8 @@ and $\bb = \set{X \in \ac \mid MX = XM}$, where $\ac$ denotes the set of $2 \tim
             s = r + s
         \end{cases}
     \]
-    Simplifying results in $r = 0$ and $p = s$. Then
+    Simplifying results in $r = 0$ and $p = s$.
+	Then
     \[
         \bb = 
         \set*{\begin{pmatrix}
@@ -111,11 +116,13 @@ and $\bb = \set{X \in \ac \mid MX = XM}$, where $\ac$ denotes the set of $2 \tim
 \end{exercise}
 
 \begin{sol}
-    No. Note that $1=1.000\ldots = 0.999\ldots$, but $f(1.000\ldots) = 0$ and $f(0.999\ldots) = 9$.
+    No.
+	Note that $1=1.000\ldots = 0.999\ldots$, but $f(1.000\ldots) = 0$ and $f(0.999\ldots) = 9$.
 \end{sol}
 
 \begin{exercise}[0.1.7]
-    Let $f: A \to B$ be a surjective map of sets. Prove that the relation
+    Let $f: A \to B$ be a surjective map of sets.
+	Prove that the relation
     \[
     	a \sim b \iff f(a) = f(b)
     \]
@@ -125,5 +132,6 @@ and $\bb = \set{X \in \ac \mid MX = XM}$, where $\ac$ denotes the set of $2 \tim
 \begin{sol}
     That $\sim$ is an equivalence relation follows from $=$ being an equivalence relation.
 
-    The equivalence class of $a \in A$ is $\set{x \in A \mid x \sim a}$. By definition, this is $\set{x \in A \mid f(x) = f(a)}$, which is precisely the fiber of $f$ over $f(a)$.
+    The equivalence class of $a \in A$ is $\set{x \in A \mid x \sim a}$.
+	By definition, this is $\set{x \in A \mid f(x) = f(a)}$, which is precisely the fiber of $f$ over $f(a)$.
 \end{sol}

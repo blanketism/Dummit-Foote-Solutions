@@ -9,61 +9,80 @@
 \end{exercise}
 
 \begin{solenum}
-    \item Inducting on $n$, the base case of $n = 1$ is trivial. If the result holds for $n \in \zp$, then
+    \item Inducting on $n$, the base case of $n = 1$ is trivial.
+	If the result holds for $n \in \zp$, then
     \[
     	\phi(x^{n + 1}) = \phi(x^nx) = \phi(x^n)\phi(x) = \phi(x)^n\phi(x) = \phi(x)^{n + 1}.
     \]
-    \item Let $1_G$ and $1_H$ be the identity elements of $G$ and $H$, respectively. Then for $n = 0$, we have
+    \item Let $1_G$ and $1_H$ be the identity elements of $G$ and $H$, respectively.
+	Then for $n = 0$, we have
     \[
     	\phi(1_G) = \phi(1_G \cdot 1_G) = \phi(1_G)\phi(1_G),
     \]
-    so that $\phi(1_G) = 1_H$. For $n = -1$ and $x \in G$, we have
+    so that $\phi(1_G) = 1_H$.
+	For $n = -1$ and $x \in G$, we have
     \[
     	1_H = \phi(1_G) = \phi(xx\inv) = \phi(x)\phi(x\inv)
     \]
-    so that $\phi(x\inv) = \phi(x)\inv$. Then for $n < -1$, we have
+    so that $\phi(x\inv) = \phi(x)\inv$.
+	Then for $n < -1$, we have
     \[
     	\phi(x^n) = \phi((x\inv)^{-n}) = \phi(x\inv)^{-n} = \phi(x)^{-n} = \phi(x)^n. \qh
     \]
 \end{solenum}
 
 \begin{spex}[1.6.2]
-    If $\phi : G \to H$ is an isomorphism, prove that $|\phi(x)| = |x|$ for all $x \in G$. Deduce that any two isomorphic groups have the same number of elements of order $n$ for each $n \in \z^+$. Is the result true if $\phi$ is only assumed to be a homomorphism?
+    If $\phi : G \to H$ is an isomorphism, prove that $|\phi(x)| = |x|$ for all $x \in G$.
+	Deduce that any two isomorphic groups have the same number of elements of order $n$ for each $n \in \z^+$.
+	Is the result true if $\phi$ is only assumed to be a homomorphism?
 \end{spex}
 
 \begin{sol}
-    Let $x \in G$. Let $\abs x = m$ and $\abs{\phi(x)} = n$. Then
+    Let $x \in G$.
+	Let $\abs x = m$ and $\abs{\phi(x)} = n$.
+	Then
     \[
     	1_H = \phi(1_G) = \phi(x^m) = \phi(x)^m
     \]
-    so that $n \leq m$. Similarly,
+    so that $n \leq m$.
+	Similarly,
     \[
     	1_G = \phi\inv(1_H) = \phi\inv(\phi(x)^n) = x^n
     \]
-    so that $m \leq n$. It follows that $m = n$, i.e., $|\phi(x)| = |x|$. In particular, this shows that both $x$ and $\phi(x)$ both have either finite or infinite order. In particular, if either $|x|$ or $|\phi(x)|$ had infinite order and the other finite, then this would contradict both having finite order. Moreover, since $\phi$ is bijective, it must be bijective between the elements of order $n$ in $G$ and the elements of order $n$ in $H$. Hence, any two isomorphic groups have the same number of elements of order $n$ for each $n \in \z^+$.
+    so that $m \leq n$.
+	It follows that $m = n$, i.e., $|\phi(x)| = |x|$.
+	In particular, this shows that both $x$ and $\phi(x)$ both have either finite or infinite order.
+	In particular, if either $|x|$ or $|\phi(x)|$ had infinite order and the other finite, then this would contradict both having finite order.
+	Moreover, since $\phi$ is bijective, it must be bijective between the elements of order $n$ in $G$ and the elements of order $n$ in $H$.
+	Hence, any two isomorphic groups have the same number of elements of order $n$ for each $n \in \z^+$.
 
     The result is not true if $\phi$ is only assumed to be a homomorphism: the map $\phi : G \to 1$ is a homomorphism for any group $G$, but $G$ may have elements of various orders while $1$ has only the identity element of order 1.
 \end{sol}
 
 \begin{exercise}[1.6.3]
-    If $\phi : G \to H$ is an isomorphism, prove that $G$ is Abelian if and only if $H$ is Abelian. If $\phi : G \to H$ is a homomorphism, what additional conditions on $\phi$ (if any) are sufficient to ensure that if $G$ is Abelian, then so is $H$?
+    If $\phi : G \to H$ is an isomorphism, prove that $G$ is Abelian if and only if $H$ is Abelian.
+	If $\phi : G \to H$ is a homomorphism, what additional conditions on $\phi$ (if any) are sufficient to ensure that if $G$ is Abelian, then so is $H$?
 \end{exercise}
 
 \begin{sol}
     Note that $\phi$ is bijective, hence $\phi\inv$ exists and is also an isomorphism.
     \begin{itemize}
-        \item [\rightimp] Suppose that $G$ is Abelian. Then for $h_1 = \phi(g_1), h_2 = \phi(g_2) \in H$ for some $g_1, g_2 \in G$, we have
+        \item [\rightimp] Suppose that $G$ is Abelian.
+	Then for $h_1 = \phi(g_1), h_2 = \phi(g_2) \in H$ for some $g_1, g_2 \in G$, we have
         \[
         	h_1h_2 = \phi(g_1)\phi(g_2) = \phi(g_1g_2) = \phi(g_2g_1) = \phi(g_2)\phi(g_1) = h_2h_1.
         \]
         Hence, $H$ is Abelian.
-        \item [\leftimp] Suppose that $H$ is Abelian. Then for $g_1 = \phi\inv(h_1), g_2 = \phi\inv(h_2) \in G$ for some $h_1, h_2 \in H$, we have
+        \item [\leftimp] Suppose that $H$ is Abelian.
+	Then for $g_1 = \phi\inv(h_1), g_2 = \phi\inv(h_2) \in G$ for some $h_1, h_2 \in H$, we have
         \[
         	g_1g_2 = \phi\inv(h_1)\phi\inv(h_2) = \phi\inv(h_1h_2) = \phi\inv(h_2h_1) = \phi\inv(h_2)\phi\inv(h_1) = g_2g_1.
         \]
         Hence, $G$ is Abelian.
     \end{itemize}
-    Let $\phi : G \to H$ be a homomorphism. In the \rightimp direction, observe that the only property of $\phi$ used was its surjectivity to guarantee the existence of $g_1$ and $g_2$ such that $\phi(g_1) = h_1$ and $\phi(g_2) = h_2$. Hence, if $\phi$ is surjective, then $H$ is Abelian whenever $G$ is Abelian.
+    Let $\phi : G \to H$ be a homomorphism.
+	In the \rightimp direction, observe that the only property of $\phi$ used was its surjectivity to guarantee the existence of $g_1$ and $g_2$ such that $\phi(g_1) = h_1$ and $\phi(g_2) = h_2$.
+	Hence, if $\phi$ is surjective, then $H$ is Abelian whenever $G$ is Abelian.
 \end{sol}
 
 \begin{exercise}[1.6.4]
@@ -79,7 +98,8 @@
 \end{exercise}
 
 \begin{sol}
-    $\r$ is uncountable, while $\q$ is countable. But bijections preserve cardinality.
+    $\r$ is uncountable, while $\q$ is countable.
+	But bijections preserve cardinality.
 \end{sol}
 
 \begin{exercise}[1.6.6]
@@ -87,7 +107,8 @@
 \end{exercise}
 
 \begin{sol}
-    Every nonzero element of $\z$ has infinite order. However, $1/k \in \q$ has order $k$.
+    Every nonzero element of $\z$ has infinite order.
+	However, $1/k \in \q$ has order $k$.
 \end{sol}
 
 \begin{exercise}[1.6.7]
@@ -115,7 +136,8 @@
 \end{sol}
 
 \begin{exercise}[1.6.10]
-    Fill in the details of the proof that the symmetric groups $S_\Delta$ and $S_\Omega$ are isomorphic if $|\Delta| = |\Omega|$ as follows: let $\theta : \Delta \to \Omega$ be a bijection. Define
+    Fill in the details of the proof that the symmetric groups $S_\Delta$ and $S_\Omega$ are isomorphic if $|\Delta| = |\Omega|$ as follows: let $\theta : \Delta \to \Omega$ be a bijection.
+	Define
     \[
         \phi : S_\Delta \to S_\Omega \quad \text{by} \quad \phi(\sigma) = \theta \circ \sigma \circ \theta^{-1} \quad \text{for all } \sigma \in S_\Delta
     \]
@@ -129,12 +151,14 @@
 \end{exercise}
 
 \begin{solenum}
-    \item Since $\theta : \Delta \to \Omega$ and $\theta\inv : \Omega \to \Delta$ are both bijections with $\sigma$ a bijection, it follows their composition is a bijection. Moreover, $\theta \circ \sigma \circ \theta^{-1}$ is a permutation of $\Omega$, so that $\phi$ is well-defined.
+    \item Since $\theta : \Delta \to \Omega$ and $\theta\inv : \Omega \to \Delta$ are both bijections with $\sigma$ a bijection, it follows their composition is a bijection.
+	Moreover, $\theta \circ \sigma \circ \theta^{-1}$ is a permutation of $\Omega$, so that $\phi$ is well-defined.
     \item Consider the mapping 
     \[
     	\psi : S_\Omega \to S_\Delta\quad \text{by} \quad \psi(\tau) = \theta\inv \circ \tau \circ \theta \quad \text{for all } \tau \in S_\Omega
     \]
-    By the above discussion, $\psi$ is well-defined. For any $\sigma \in S_\Delta$, we have
+    By the above discussion, $\psi$ is well-defined.
+	For any $\sigma \in S_\Delta$, we have
     \[
     	\psi(\phi(\sigma)) = \theta\inv \circ (\theta \circ \sigma \circ \theta\inv) \circ \theta = \id_{S_\Delta} \circ \sigma \circ \id_{S_\Delta} = \sigma
     \]
@@ -142,16 +166,20 @@
     \[
     	\phi(\psi(\tau)) = \theta \circ (\theta\inv \circ \tau \circ \theta) \circ \theta\inv = \id_{S_\Omega} \circ \tau \circ \id_{S_\Omega} = \tau
     \]
-    so that $\psi$ is a two-sided inverse for $\phi$. Hence, $\phi$ is a bijection from $S_\Delta$ onto $S_\Omega$.
-    \item Let $\sigma, \tau \in S_\Delta$. Then
+    so that $\psi$ is a two-sided inverse for $\phi$.
+	Hence, $\phi$ is a bijection from $S_\Delta$ onto $S_\Omega$.
+    \item Let $\sigma, \tau \in S_\Delta$.
+	Then
     \[
     	\phi(\sigma \circ \tau) = \theta \circ (\sigma \circ \tau) \circ \theta\inv = (\theta \circ \sigma) \circ (\tau \circ \theta\inv) = (\theta \circ \sigma \circ \theta\inv) \circ (\theta \circ \tau \circ \theta\inv) = \phi(\sigma) \circ \phi(\tau)
     \]
-    so that $\phi$ is a homomorphism. By the above, $\phi$ is an isomorphism, and hence $S_\Delta \cong S_\Omega$.
+    so that $\phi$ is a homomorphism.
+	By the above, $\phi$ is an isomorphism, and hence $S_\Delta \cong S_\Omega$.
 \end{solenum}
 
 \begin{exercise}[1.6.11]
-    Let $A$ and $B$ be groups. Prove that $A \times B \cong B \times A$.
+    Let $A$ and $B$ be groups.
+	Prove that $A \times B \cong B \times A$.
 \end{exercise}
 
 \begin{sol}
@@ -159,15 +187,18 @@
     \[
     	\phi : A \times B \to B \times A \quad \text{given by} \quad (a, b) \mapsto (b, a)
     \]
-    for all $a \in A$ and $b \in B$ is clearly bijective. Moreover, for any $(a_1, b_1), (a_2, b_2) \in A \times B$, we have
+    for all $a \in A$ and $b \in B$ is clearly bijective.
+	Moreover, for any $(a_1, b_1), (a_2, b_2) \in A \times B$, we have
     \[
     	\phi((a_1, b_1)(a_2, b_2)) = \phi((a_1a_2, b_1b_2)) = (b_1b_2, a_1a_2) = (b_1, a_1)(b_2, a_2) = \phi(a_1, b_1)\phi(a_2, b_2)
     \]
-    so that $\phi$ is a homomorphism. Therefore, $\phi$ is an isomorphism and $A \times B \cong B \times A$.
+    so that $\phi$ is a homomorphism.
+	Therefore, $\phi$ is an isomorphism and $A \times B \cong B \times A$.
 \end{sol}
 
 \begin{exercise}[1.6.12]
-    Let $A$, $B$, and $C$ be groups and let $G = A \times B$ and $H = B \times C$. Prove that $G \times C \cong A \times H$.
+    Let $A$, $B$, and $C$ be groups and let $G = A \times B$ and $H = B \times C$.
+	Prove that $G \times C \cong A \times H$.
 \end{exercise}
 
 \begin{sol}
@@ -175,93 +206,129 @@
     \[
     	\phi : G \times C \to A \times H \quad \text{by} \quad ((a, b), c) \mapsto (a, (b, c))
     \]
-    for all $a \in A$, $b \in B$, and $c \in C$. The proof is similar to the previous exercise, hence we omit the details to conclude that $\phi$ is an isomorphism and $G \times C \cong A \times H$.
+    for all $a \in A$, $b \in B$, and $c \in C$.
+	The proof is similar to the previous exercise, hence we omit the details to conclude that $\phi$ is an isomorphism and $G \times C \cong A \times H$.
 \end{sol}
 
 \begin{spex}[1.6.13]
-    Let $G$ and $H$ be groups and let $\phi : G \to H$ be a homomorphism. Prove that the image of $\phi$, $\phi(G)$, is a \defref{subgroup} of $H$. Prove that if $\phi$ is injective then $G \cong \phi(G)$.
+    Let $G$ and $H$ be groups and let $\phi : G \to H$ be a homomorphism.
+	Prove that the image of $\phi$, $\phi(G)$, is a \defref{subgroup} of $H$.
+	Prove that if $\phi$ is injective then $G \cong \phi(G)$.
 \end{spex}
 
 \begin{sol}
-    Observe that $1_H \in \phi(G)$ since $\phi(1_G) = 1_H$, so that $\phi(G)$ is nonempty. To show closure, let $h_1, h_2 \in \phi(G)$. Then there exist $g_1, g_2 \in G$ such that $\phi(g_1) = h_1$ and $\phi(g_2) = h_2$. Then
+    Observe that $1_H \in \phi(G)$ since $\phi(1_G) = 1_H$, so that $\phi(G)$ is nonempty.
+	To show closure, let $h_1, h_2 \in \phi(G)$.
+	Then there exist $g_1, g_2 \in G$ such that $\phi(g_1) = h_1$ and $\phi(g_2) = h_2$.
+	Then
     \[
     	h_1h_2 = \phi(g_1)\phi(g_2) = \phi(g_1g_2) \in \phi(G)
     \]
-    so that $h_1h_2 \in \phi(G)$. Finally,
+    so that $h_1h_2 \in \phi(G)$.
+	Finally,
     \[
     	h_1\inv = \phi(g_1)\inv = \phi(g_1\inv) \in \phi(G)
     \]
-    so that $h_1\inv \in \phi(G)$. Therefore, $\phi(G)$ is a subgroup of $H$.
+    so that $h_1\inv \in \phi(G)$.
+	Therefore, $\phi(G)$ is a subgroup of $H$.
 
-    Suppose $\phi$ is injective. Then the mapping
+    Suppose $\phi$ is injective.
+	Then the mapping
     \[
     	\psi : G \to \phi(G) \quad \text{by} \quad g \mapsto \phi(g)
     \]
-    is well-defined. For any $g_1, g_2 \in G$,
+    is well-defined.
+	For any $g_1, g_2 \in G$,
     \[
     	\psi(g_1g_2) = \phi(g_1g_2) = \phi(g_1)\phi(g_2) = \psi(g_1)\psi(g_2)
     \]
-    so that $\psi$ is a homomorphism. Moreover, if $\psi(g_1) = \psi(g_2)$, then $\phi(g_1) = \phi(g_2)$, and since $\phi$ is injective, $g_1 = g_2$. Hence, $\psi$ is injective. For any $h \in \phi(G)$, there exists $g \in G$ such that $\phi(g) = h$, and hence $\psi(g) = h$. Therefore, $\psi$ is surjective, hence $\psi$ is an isomorphism and $G \cong \phi(G)$.
+    so that $\psi$ is a homomorphism.
+	Moreover, if $\psi(g_1) = \psi(g_2)$, then $\phi(g_1) = \phi(g_2)$, and since $\phi$ is injective, $g_1 = g_2$.
+	Hence, $\psi$ is injective.
+	For any $h \in \phi(G)$, there exists $g \in G$ such that $\phi(g) = h$, and hence $\psi(g) = h$.
+	Therefore, $\psi$ is surjective, hence $\psi$ is an isomorphism and $G \cong \phi(G)$.
 \end{sol}
 
 \begin{spex}[1.6.14]
     \label{def:kernel}
-    Let $G$ and $H$ be groups and let $\phi : G \to H$ be a homomorphism. Define the \textbf{kernel} of $\phi$ to be $\set{ g \in G \mid \phi(g) = 1_H }$ (so the kernel is the set of elements in $G$ which map to the identity of $H$, i.e., is the fiber over the identity of $H$). Prove that the kernel of $\phi$ is a subgroup of $G$. Prove that $\phi$ is injective if and only if the kernel of $\phi$ is the identity subgroup of $G$.
+    Let $G$ and $H$ be groups and let $\phi : G \to H$ be a homomorphism.
+	Define the \textbf{kernel} of $\phi$ to be $\set{ g \in G \mid \phi(g) = 1_H }$ (so the kernel is the set of elements in $G$ which map to the identity of $H$, i.e., is the fiber over the identity of $H$).
+	Prove that the kernel of $\phi$ is a subgroup of $G$.
+	Prove that $\phi$ is injective if and only if the kernel of $\phi$ is the identity subgroup of $G$.
 \end{spex}
 
 \begin{sol}
-    Denote the kernel of $\phi$ by $\ker\phi$. Since $\phi(1_G) = 1_H$, then $1_G \in \ker\phi$, so that $\ker\phi$ is nonempty. To show closure, let $g_1, g_2 \in \ker\phi$. Then
+    Denote the kernel of $\phi$ by $\ker\phi$.
+	Since $\phi(1_G) = 1_H$, then $1_G \in \ker\phi$, so that $\ker\phi$ is nonempty.
+	To show closure, let $g_1, g_2 \in \ker\phi$.
+	Then
     \[
     	\phi(g_1g_2) = \phi(g_1)\phi(g_2) = 1_H1_H = 1_H
     \]
-    so that $g_1g_2 \in \ker\phi$. Finally,
+    so that $g_1g_2 \in \ker\phi$.
+	Finally,
     \[
     	\phi(g_1\inv) = \phi(g_1)\inv = 1_H\inv = 1_H
     \]
-    so that $g_1\inv \in \ker\phi$. Therefore, $\ker\phi$ is a subgroup of $G$.
+    so that $g_1\inv \in \ker\phi$.
+	Therefore, $\ker\phi$ is a subgroup of $G$.
     \begin{itemize}
-        \item [\rightimp] If $\phi$ is injective, then for $g \in \ker\phi$, we have $\phi(g) = 1_H = \phi(1_G)$. Then $g = 1_G$, so that $\ker\phi = \set{1_G}$.
-        \item [\leftimp] If $\ker\phi = \set{1_G}$, then for $g_1, g_2 \in G$, if $\phi(g_1) = \phi(g_2)$, we have $\phi(g_1)\phi(g_2)\inv = 1_H$, so $g_1g_2\inv \in \ker\phi$. Hence, $g_1g_2\inv = 1_G$, and thus $g_1 = g_2$. Therefore, $\phi$ is injective. \qh
+        \item [\rightimp] If $\phi$ is injective, then for $g \in \ker\phi$, we have $\phi(g) = 1_H = \phi(1_G)$.
+	Then $g = 1_G$, so that $\ker\phi = \set{1_G}$.
+        \item [\leftimp] If $\ker\phi = \set{1_G}$, then for $g_1, g_2 \in G$, if $\phi(g_1) = \phi(g_2)$, we have $\phi(g_1)\phi(g_2)\inv = 1_H$, so $g_1g_2\inv \in \ker\phi$.
+	Hence, $g_1g_2\inv = 1_G$, and thus $g_1 = g_2$.
+	Therefore, $\phi$ is injective. \qh
     \end{itemize}
 \end{sol}
 
 \begin{exercise}[1.6.15]
-    Define a map $\pi : \r^2 \to \r$ by $\pi((x,y)) = x$. Prove that $\pi$ is a homomorphism and find the kernel of $\pi$.
+    Define a map $\pi : \r^2 \to \r$ by $\pi((x,y)) = x$.
+	Prove that $\pi$ is a homomorphism and find the kernel of $\pi$.
 \end{exercise}
 
 \begin{sol}
-    Let $(x_1, y_1), (x_2, y_2) \in \r^2$. Then
+    Let $(x_1, y_1), (x_2, y_2) \in \r^2$.
+	Then
     \[
     	\pi((x_1, y_1) + (x_2, y_2)) = \pi((x_1 + x_2, y_1 + y_2)) = x_1 + x_2 = \pi((x_1, y_1)) + \pi((x_2, y_2))
     \]
-    so that $\pi$ is a homomorphism. Moreover, if $(x, y) \in \ker(\pi)$, then $\pi((x, y)) = x = 0$. Hence,
+    so that $\pi$ is a homomorphism.
+	Moreover, if $(x, y) \in \ker(\pi)$, then $\pi((x, y)) = x = 0$.
+	Hence,
     \[
     	\ker(\pi) = \set{(0, y) \mid y \in \r} \qh
     \]
 \end{sol}
 
 \begin{exercise}[1.6.16]
-    Let $A$ and $B$ be groups and let $G$ be their direct product, $A \times B$. Prove that the maps $\pi_1 : G \to A$ and $\pi_2 : G \to B$ defined by $\pi_1((a,b)) = a$ and $\pi_2((a,b)) = b$ are homomorphisms and find their kernels.
+    Let $A$ and $B$ be groups and let $G$ be their direct product, $A \times B$.
+	Prove that the maps $\pi_1 : G \to A$ and $\pi_2 : G \to B$ defined by $\pi_1((a,b)) = a$ and $\pi_2((a,b)) = b$ are homomorphisms and find their kernels.
 \end{exercise}
 
 \begin{sol}
-    The proof is similar to the previous exercise, hence we omit the details to conclude that $\pi_1$ and $\pi_2$ are homomorphisms. Moreover, if $(a, b) \in \ker(\pi_1)$, then $\pi_1((a, b)) = a = 1_A$. If $(a, b) \in \ker(\pi_2)$, then $\pi_2((a, b)) = b = 1_B$. Hence,
+    The proof is similar to the previous exercise, hence we omit the details to conclude that $\pi_1$ and $\pi_2$ are homomorphisms.
+	Moreover, if $(a, b) \in \ker(\pi_1)$, then $\pi_1((a, b)) = a = 1_A$.
+	If $(a, b) \in \ker(\pi_2)$, then $\pi_2((a, b)) = b = 1_B$.
+	Hence,
     \[
     	\ker(\pi_1) = \set{(1_A, b) \mid b \in B}, \quad \text{and} \quad \ker(\pi_2) = \set{(a, 1_B) \mid a \in A} \qh
     \]
 \end{sol}
 
 \begin{exercise}[1.6.17]
-    Let $G$ be any group. Prove that the map from $G$ to itself defined by $g \mapsto g^{-1}$ is a homomorphism if and only if $G$ is Abelian.
+    Let $G$ be any group.
+	Prove that the map from $G$ to itself defined by $g \mapsto g^{-1}$ is a homomorphism if and only if $G$ is Abelian.
 \end{exercise}
 
 \begin{solitem}
-    \item [\rightimp] Suppose $\phi$ is a homomorphism. Then for $g, h \in G$, we have
+    \item [\rightimp] Suppose $\phi$ is a homomorphism.
+	Then for $g, h \in G$, we have
     \[
     	(gh)\inv = \phi(gh) = \phi(g)\phi(h) = g\inv h\inv = h\inv g\inv.
     \]
     Since inverses are unique, then $hg = gh$ so that $G$ is Abelian.
-    \item [\leftimp] Suppose $G$ is Abelian. Then for $g, h \in G$, we have
+    \item [\leftimp] Suppose $G$ is Abelian.
+	Then for $g, h \in G$, we have
     \[
     	\phi(gh) = (gh)\inv = h\inv g\inv = g\inv h\inv = \phi(g)\phi(h),
     \]
@@ -269,7 +336,8 @@
 \end{solitem}
 
 \begin{exercise}[1.6.18]
-    Let $G$ be any group. Prove that the map from $G$ to itself defined by $g \mapsto g^2$ is a homomorphism if and only if $G$ is Abelian.
+    Let $G$ be any group.
+	Prove that the map from $G$ to itself defined by $g \mapsto g^2$ is a homomorphism if and only if $G$ is Abelian.
 \end{exercise}
 
 \begin{sol}
@@ -277,36 +345,51 @@
 \end{sol}
 
 \begin{exercise}[1.6.19]
-    Let $G = \set{ z \in \c \mid z^n = 1 \text{ for some } n \in \z^+ }$. Prove that for any fixed integer $k > 1$ the map from $G$ to itself defined by $z \mapsto z^k$ is a surjective homomorphism but is not an isomorphism.
+    Let $G = \set{ z \in \c \mid z^n = 1 \text{ for some } n \in \z^+ }$.
+	Prove that for any fixed integer $k > 1$ the map from $G$ to itself defined by $z \mapsto z^k$ is a surjective homomorphism but is not an isomorphism.
 \end{exercise}
 
 \begin{sol}
-    Since $G \subseteq \c$, then $G$ is Abelian. Let $\phi : z \to z^k$. Hence, for any $z, w \in G$, we have
+    Since $G \subseteq \c$, then $G$ is Abelian.
+	Let $\phi : z \to z^k$.
+	Hence, for any $z, w \in G$, we have
     \[
     	\phi(zw) = (zw)^k = z^kw^k = \phi(z)\phi(w)
     \]
-    so that $\phi$ is a homomorphism. To show surjectivity, let $w \in G$ such that $w^n = 1$ for some $n \in \zp$. Note that $w^{1/k} \in G$ because $(z^{1/k})^{nk} = z^n = 1$. Then
+    so that $\phi$ is a homomorphism.
+	To show surjectivity, let $w \in G$ such that $w^n = 1$ for some $n \in \zp$.
+	Note that $w^{1/k} \in G$ because $(z^{1/k})^{nk} = z^n = 1$.
+	Then
     \[
     	\phi(z^{1/k}) = (z^{1/k})^k = z
     \]
-    so that $\phi$ is surjective. Finally, any $z = e^{2\pi i/k} \in G$ is such that $\phi(z) = z^k = 1$ with $z \neq 1$ since $k > 1$. Hence, $\phi$ is not injective and thus not an isomorphism.
+    so that $\phi$ is surjective.
+	Finally, any $z = e^{2\pi i/k} \in G$ is such that $\phi(z) = z^k = 1$ with $z \neq 1$ since $k > 1$.
+	Hence, $\phi$ is not injective and thus not an isomorphism.
 \end{sol}
 
 \begin{spex}[1.6.20]
     \label{def:automorphism group}
-    Let $G$ be a group and let $\aut(G)$ be the set of all isomorphisms from $G$ onto $G$. Prove that $\aut(G)$ is a group under function composition (called the \textbf{automorphism group} of $G$ and the elements of $\aut(G)$ are called \textbf{automorphisms} of $G$).
+    Let $G$ be a group and let $\aut(G)$ be the set of all isomorphisms from $G$ onto $G$.
+	Prove that $\aut(G)$ is a group under function composition (called the \textbf{automorphism group} of $G$ and the elements of $\aut(G)$ are called \textbf{automorphisms} of $G$).
 \end{spex}
 
 \begin{sol}
-    Observe that $\aut(G)$ is associative under function composition and has identity through the identity map $\id : G \to G$ given by $\id(g) = g$. Moreover, $\phi \circ \psi$ for $\phi, \psi \in \aut(G)$ is a bijection. Then for any $g, h \in G$, we have
+    Observe that $\aut(G)$ is associative under function composition and has identity through the identity map $\id : G \to G$ given by $\id(g) = g$.
+	Moreover, $\phi \circ \psi$ for $\phi, \psi \in \aut(G)$ is a bijection.
+	Then for any $g, h \in G$, we have
     \[
     	(\phi \circ \psi)(gh) = \phi(\psi(gh)) = \phi(\psi(g)\psi(h)) = \phi(\psi(g))\phi(\psi(h)) = (\phi \circ \psi)(g)(\phi \circ \psi)(h),
     \]
-    so that $\phi \circ \psi$ is a homomorphism. Hence, $\phi \circ \psi \in \aut(G)$, and $\aut(G)$ is closed under function composition. Finally, for any $\phi \in \aut(G)$, then $\phi\inv$ exists and is a bijection. Then
+    so that $\phi \circ \psi$ is a homomorphism.
+	Hence, $\phi \circ \psi \in \aut(G)$, and $\aut(G)$ is closed under function composition.
+	Finally, for any $\phi \in \aut(G)$, then $\phi\inv$ exists and is a bijection.
+	Then
     \[
     	\phi\inv(gh) = \phi\inv(\phi(\phi\inv(g))\phi(\phi\inv(h))) = \phi\inv(\phi(\phi\inv(g)\phi\inv(h))) = \phi\inv(g)\phi\inv(h),
     \]
-    so that $\phi\inv$ is a homomorphism. Hence, $\phi\inv \in \aut(G)$, and $(\aut(G), \circ)$ is a group.
+    so that $\phi\inv$ is a homomorphism.
+	Hence, $\phi\inv \in \aut(G)$, and $(\aut(G), \circ)$ is a group.
 \end{sol}
 
 \begin{exercise}[1.6.21]
@@ -314,27 +397,34 @@
 \end{exercise}
 
 \begin{sol}
-    Let $\phi : \q \to \q$ be defined by $\phi(q) = kq$ for all $q \in \q$. For any $p, q \in \q$, we have
+    Let $\phi : \q \to \q$ be defined by $\phi(q) = kq$ for all $q \in \q$.
+	For any $p, q \in \q$, we have
     \[
     	\phi(p + q) = k(p + q) = kp + kq = \phi(p) + \phi(q),
     \]
-    so that $\phi$ is a homomorphism. Bijectivity is clear, hence $\phi \in \aut(\q)$.
+    so that $\phi$ is a homomorphism.
+	Bijectivity is clear, hence $\phi \in \aut(\q)$.
 \end{sol}
 
 \begin{exercise}[1.6.22]
-    Let $A$ be an Abelian group and fix some $k \in \z$. Prove that the map $a \mapsto a^k$ is a homomorphism from $A$ to itself. If $k = -1$ prove that this homomorphism is an isomorphism (i.e., is an automorphism of $A$).
+    Let $A$ be an Abelian group and fix some $k \in \z$.
+	Prove that the map $a \mapsto a^k$ is a homomorphism from $A$ to itself.
+	If $k = -1$ prove that this homomorphism is an isomorphism (i.e., is an automorphism of $A$).
 \end{exercise}
 
 \begin{sol}
-    Let $\phi : A \to A$ be defined by $\phi(a) = a^k$ for all $a \in A$. For any $a_1, a_2 \in A$, we have
+    Let $\phi : A \to A$ be defined by $\phi(a) = a^k$ for all $a \in A$.
+	For any $a_1, a_2 \in A$, we have
     \[
     	\phi(a_1a_2) = (a_1a_2)^k = a_1^k a_2^k = \phi(a_1)\phi(a_2)
     \]
-    so that $\phi$ is a homomorphism. For $k = -1$, see \exref{1.6.17} to conclude that $\phi \in \aut(A)$.
+    so that $\phi$ is a homomorphism.
+	For $k = -1$, see \exref{1.6.17} to conclude that $\phi \in \aut(A)$.
 \end{sol}
 
 \begin{spex}[1.6.23]
-    Let $G$ be a finite group which possesses an automorphism $\sigma$ such that $\sigma(g) = g$ if and only if $g = 1$. If $\sigma^2$ is the identity map from $G$ to $G$, prove that $G$ is Abelian (such an automorphism $\sigma$ is called \textbf{fixed point free} of order 2).
+    Let $G$ be a finite group which possesses an automorphism $\sigma$ such that $\sigma(g) = g$ if and only if $g = 1$.
+	If $\sigma^2$ is the identity map from $G$ to $G$, prove that $G$ is Abelian (such an automorphism $\sigma$ is called \textbf{fixed point free} of order 2).
 
     \hint{Show that every element of $G$ can be written in the form $x^{-1}\sigma(x)$ and apply $\sigma$ to such an expression.}
 \end{spex}
@@ -344,9 +434,15 @@
     \[
     	f : G \to G \quad \text{by} \quad x \mapsto x\inv \sigma(x)
     \]
-    for all $x \in G$. If $f(x) = f(y)$ for $x, y \in G$, then $x\inv \sigma(x) = y\inv \sigma(y)$ so that $yx\inv = \sigma(yx\inv)$. Since $\sigma$ is fixed point free, then $yx\inv = 1$ and $x = y$. Hence, $f$ is injective. Since $G$ is finite, then $f$ is also surjective, and every element of $G$ may be written in the form $x\inv \sigma(x)$ for some $x \in G$.
+    for all $x \in G$.
+	If $f(x) = f(y)$ for $x, y \in G$, then $x\inv \sigma(x) = y\inv \sigma(y)$ so that $yx\inv = \sigma(yx\inv)$.
+	Since $\sigma$ is fixed point free, then $yx\inv = 1$ and $x = y$.
+	Hence, $f$ is injective.
+	Since $G$ is finite, then $f$ is also surjective, and every element of $G$ may be written in the form $x\inv \sigma(x)$ for some $x \in G$.
 
-    Let $g \in G$ be arbitrary. Then there exists $x \in G$ such that $g = x\inv \sigma(x)$. Applying $\sigma$ to both sides, we have
+    Let $g \in G$ be arbitrary.
+	Then there exists $x \in G$ such that $g = x\inv \sigma(x)$.
+	Applying $\sigma$ to both sides, we have
     \[
     	\sigma(g) = \sigma(x\inv \sigma(x)) = \sigma(x\inv) \sigma^2(x) = \sigma(x)\inv x = (x\inv \sigma(x))\inv = g\inv.
     \]
@@ -358,21 +454,31 @@
 \end{sol}
 
 \begin{exercise}[1.6.24]
-    Let $G$ be a finite group and let $x$ and $y$ be distinct elements of order 2 in $G$ that generate $G$. Prove that $G \cong D_{2n}$, where $n = |xy|$.
+    Let $G$ be a finite group and let $x$ and $y$ be distinct elements of order 2 in $G$ that generate $G$.
+	Prove that $G \cong D_{2n}$, where $n = |xy|$.
 \end{exercise}
 
 \begin{sol}
-    To show that $G$ is isomorphic to $D_{2n}$, we first need to produce an element $t \in G$ of order $n$ along with an element $x \in G$ of order 2 such that $xt = t\inv x$. The clear choice is to let $t = xy$ and keep $x$ as is. Note that $|t| = |xy| = n$ by assumption, and $|x| = 2$ by assumption. Moreover,
+    To show that $G$ is isomorphic to $D_{2n}$, we first need to produce an element $t \in G$ of order $n$ along with an element $x \in G$ of order 2 such that $xt = t\inv x$.
+	The clear choice is to let $t = xy$ and keep $x$ as is.
+	Note that $|t| = |xy| = n$ by assumption, and $|x| = 2$ by assumption.
+	Moreover,
     \[
     	xt = x(xy) = (xx)y = y = (xy)\inv x = t\inv x
     \]
-    so that the elements $x, t \in G$ satisfy the relations of $D_{2n}$. Additionally, observe that $y = xt$ so that $t$ and $x$ generate $G$. Following this, it is easy to see that every element of $G$ can be written in the form $x^i t^j$ for $i \in \set{0, 1}$ and $0 \leq j < n$. For $x = 0$, we have the elements in the cyclic subgroup generated by $t$, and for $x = 1$, we have the elements $\set{x, xt, xt^2, \ldots, xt^{n-1}}$. Since $|t| = n$, then these are all distinct elements of $G$. Hence, $|G| = 2n$.
+    so that the elements $x, t \in G$ satisfy the relations of $D_{2n}$.
+	Additionally, observe that $y = xt$ so that $t$ and $x$ generate $G$.
+	Following this, it is easy to see that every element of $G$ can be written in the form $x^i t^j$ for $i \in \set{0, 1}$ and $0 \leq j < n$.
+	For $x = 0$, we have the elements in the cyclic subgroup generated by $t$, and for $x = 1$, we have the elements $\set{x, xt, xt^2, \ldots, xt^{n-1}}$.
+	Since $|t| = n$, then these are all distinct elements of $G$.
+	Hence, $|G| = 2n$.
 
     Since the relations of $D_{2n}$ are satisfied by $x, t \in G$, $G$ is generated by $x$ and $t$, and $|G| = |D_{2n}| = 2n$, it follows that the map
     \[
     	\phi : D_{2n} \to G \quad \text{by} \quad r \mapsto t, s \mapsto x
     \]
-    extends to an isomorphism from $D_{2n}$ onto $G$. Therefore, $G \cong D_{2n}$.
+    extends to an isomorphism from $D_{2n}$ onto $G$.
+	Therefore, $G \cong D_{2n}$.
 \end{sol}
 
 \begin{exercise}[1.6.25]
@@ -406,7 +512,9 @@
 \end{exercise}
 
 \begin{solenum}
-    \item Let $\r^2$ be generated by the standard basis vectors $\b e_1 = (1 \quad 0)^T$ and $\b e_2 = (0 \quad 1)^T$. Let $T$ denote the linear transformation which rotates the $x,y$-plane about the origin in a counterclockwise direction by $\theta$ radians. Then
+    \item Let $\r^2$ be generated by the standard basis vectors $\b e_1 = (1 \quad 0)^T$ and $\b e_2 = (0 \quad 1)^T$.
+	Let $T$ denote the linear transformation which rotates the $x,y$-plane about the origin in a counterclockwise direction by $\theta$ radians.
+	Then
     \[
         T(\b e_1) = 
         \begin{pmatrix}
@@ -427,7 +535,10 @@
             \sin (k\theta) & \cos (k\theta)
         \end{pmatrix}
     \]
-    so that $\phi(r)^n = I$. It is fairly straightforward to see that the set of vectors $\set{T(\b e_1), T(\b e_2)}$ is orthonormal, so $\phi(r)$ is an orthogonal matrix, and hence $\phi(r)\inv = \phi(r)^T$. Moreover, we can calculate that $\phi(s)^2 = I$. Lastly, we calculate that
+    so that $\phi(r)^n = I$.
+	It is fairly straightforward to see that the set of vectors $\set{T(\b e_1), T(\b e_2)}$ is orthonormal, so $\phi(r)$ is an orthogonal matrix, and hence $\phi(r)\inv = \phi(r)^T$.
+	Moreover, we can calculate that $\phi(s)^2 = I$.
+	Lastly, we calculate that
     \[
         \phi(s)\phi(r) = 
         \begin{pmatrix}
@@ -451,17 +562,22 @@
             1 & 0
         \end{pmatrix} = \phi(r)\inv \phi(s)
     \]
-    so that $\phi(s)\phi(r) = \phi(r)\inv \phi(s)$. Since these relations match those of $D_{2n}$, then $\phi$ extends to a homomorphism from $D_{2n}$ to $\gl_2(\r)$.
-    \item To show that $\phi$ is injective, we show that $\ker\phi$ is trivial. Let $g \in \ker\phi$.
+    so that $\phi(s)\phi(r) = \phi(r)\inv \phi(s)$.
+	Since these relations match those of $D_{2n}$, then $\phi$ extends to a homomorphism from $D_{2n}$ to $\gl_2(\r)$.
+    \item To show that $\phi$ is injective, we show that $\ker\phi$ is trivial.
+	Let $g \in \ker\phi$.
     \begin{itemize}
         \item If $g = r^k$ for some $0 \leq k < n$, then $\phi(r^k) \neq I$, since $\phi(r)^k$ is a rotation matrix and only $\phi(r)^n = I$.
-        \item If $g = sr^k$ for some $0 \leq k < n$, then $\phi(sr^k) = \phi(s)\phi(r)^k$. Note that $\phi(s)$ has determinant $-1$ while $\phi(r)^k$ has determinant $1$ since it is a rotation matrix. Hence, $\phi(sr^k)$ has determinant $-1$ and cannot be the identity matrix.
+        \item If $g = sr^k$ for some $0 \leq k < n$, then $\phi(sr^k) = \phi(s)\phi(r)^k$.
+	Note that $\phi(s)$ has determinant $-1$ while $\phi(r)^k$ has determinant $1$ since it is a rotation matrix.
+	Hence, $\phi(sr^k)$ has determinant $-1$ and cannot be the identity matrix.
     \end{itemize}
     Therefore, the only element in $\ker\phi$ is the identity element of $D_{2n}$, so that $\phi$ is injective.
 \end{solenum}
 
 \begin{exercise}[1.6.26]
-    Let $i$ and $j$ be the generators of $Q_8$ described in Section 5. Prove that the map $\phi$ from $Q_8$ to $\gl_2(\c)$ defined on generators by
+    Let $i$ and $j$ be the generators of $Q_8$ described in Section 5.
+	Prove that the map $\phi$ from $Q_8$ to $\gl_2(\c)$ defined on generators by
     \[
         \phi(i) = 
         \begin{pmatrix}
@@ -475,9 +591,12 @@
             1 & 0
         \end{pmatrix}
     \]
-    extends to a homomorphism. Prove that $\phi$ is injective.
+    extends to a homomorphism.
+	Prove that $\phi$ is injective.
 \end{exercise}
 
 \begin{sol}
-    Matrix multiplication shows that the relations described in \exref{1.5.3} are satisfied, so that $\phi$ extends to a homomorphism from $Q_8$ to $\gl_2(\c)$. Moreover, $\phi$ is injective since the only element that maps to the identity matrix is $1 \in Q_8$. Therefore, $\phi$ is an injective homomorphism.
+    Matrix multiplication shows that the relations described in \exref{1.5.3} are satisfied, so that $\phi$ extends to a homomorphism from $Q_8$ to $\gl_2(\c)$.
+	Moreover, $\phi$ is injective since the only element that maps to the identity matrix is $1 \in Q_8$.
+	Therefore, $\phi$ is an injective homomorphism.
 \end{sol}
