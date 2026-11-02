@@ -264,7 +264,7 @@
 
 \begin{sol}[spsol]
 	We first prove the lemma: let $a, b, m, n \in \zbb$ such that $(m, n) = 1$.
-	If $a \equiv b \bmod m$ and $a \equiv b \bmod n$, then $a \equiv b \bmod{mn}$.
+	If $a \equiv b \pmod m$ and $a \equiv b \pmod n$, then $a \equiv b \pmod{mn}$.
 	Indeed, we have that
 	\[
 		a - b = xm \quad \text{and} \quad a - b = yn
@@ -276,20 +276,20 @@
 	\[
 		a - b = yn = kmn,
 	\]
-	so that $a \equiv b \bmod{mn}$.
+	so that $a \equiv b \pmod{mn}$.
 
 	Let $x \in \units[24]$.
 	Note that $x$ is always odd.
 	Then $\gcd(x, 24) = 1$, hence $(x, 3) = (x, 8) = 1$.
-	Since $(x, 3) = 1$, $x \equiv 1$ or $2 \bmod 3$.
-	Then $x^2 \equiv 1 \bmod 3$.
+	Since $(x, 3) = 1$, $x \equiv 1$ or $2 \pmod 3$.
+	Then $x^2 \equiv 1 \pmod 3$.
 	Since $(x, 8) = 1$, let $x = 2k + 1$ for some $k \in \zbb$.
 	Then
 	\[
 		x^2 = (2k + 1)^2 = 4k^2 + 4k + 1 = 4k(k + 1) + 1.
 	\]
-	Since one of $k$ or $k + 1$ is even, $4k(k + 1)$ is divisible by 8, so that $x^2 \equiv 1 \bmod 8$.
-	By the lemma above, we have $x^2 \equiv 1 \bmod 24$.
+	Since one of $k$ or $k + 1$ is even, $4k(k + 1)$ is divisible by 8, so that $x^2 \equiv 1 \pmod 8$.
+	By the lemma above, we have $x^2 \equiv 1 \pmod 24$.
 	Therefore, every element of $\units[24]$ has order dividing 2, so that $\units[24]$ is an elementary Abelian group.
 \end{sol}
 

@@ -199,7 +199,7 @@
     	\sigma^{i + 1}(a_k) = \sigma(\sigma^i(a_k)) = \sigma(a_{k + i}) = a_{k + i + 1}.
     \]
     To see that $|\sigma| = m$, note that $\sigma^m(a_k) = a_{k+m} = a_k$ for all $k \in \set{1,2,\dots,m}$, so that $\sigma^m = \id$.
-	If $|\sigma| = i < m$, then $\sigma^i(a_1) = a_{1+i} = a_1$, which implies that $i \equiv 0 \bmod m$.
+	If $|\sigma| = i < m$, then $\sigma^i(a_1) = a_{1+i} = a_1$, which implies that $i \equiv 0 \pmod m$.
 	Hence, $|\sigma| = m$.
 \end{sol}
 
@@ -210,20 +210,20 @@
 
 \begin{soliff}[spsol]
     \rightimp Suppose $(m, i) = k > 1$.
-	If $i > m$, replace $i$ with $i \bmod m$ since $\sigma^i = \sigma^{i \bmod m}$.
+	If $i > m$, replace $i$ with $i \pmod m$ since $\sigma^i = \sigma^{i \pmod m}$.
 	Then $i = k\ell$ for $\ell \in \zp$.
 	It is clear that $(\sigma^i)^{m/k} = \sigma^{\ell m} = \id$, so that $|\sigma^i| \leq m/k < m$.
 	Hence, $\sigma^i$ is not an $m$-cycle.
     
     \leftimp Suppose that $(m, i) = 1$.
-	Denote $x_m \equiv x \bmod m$.
+	Denote $x_m \equiv x \pmod m$.
 	We claim that the integers
     \[
     	1_m, (1 + i)_m, (1 + 2i)_m, \ldots, (1 + (m - 1)i)_m
     \]
     are all distinct.
 	Suppose $(1 + xi)_m = (1 + yi)_m$ for some $0 \leq x, y \leq m - 1$ with $x \neq y$.
-	Then $i(x - y) \equiv 0 \bmod m$.
+	Then $i(x - y) \equiv 0 \pmod m$.
 	Since $(m, i) = 1$, $m \mid (x - y)$.
 	However, since $1 - m \leq x - y \leq m - 1$, the only choice for $x - y$ is 0, or that $x = y$.
 	Then we have exactly $m$ distinct integers so that
@@ -255,8 +255,8 @@
     \end{lemma}
     
     Assume for contradiction that there exists an $n$-cycle $\sigma$ and $k$ such that $\sigma^k = \tau$.
-	Then $\tau^2(1) = 1$, hence $\sigma^{2k}(1) = 1$, or $2k \equiv 0 \bmod n$.
-	Moreover, $\tau^3(3) = 3$, hence $\sigma^{3k}(3) = 3$, or $3k \equiv 0 \bmod n$.
+	Then $\tau^2(1) = 1$, hence $\sigma^{2k}(1) = 1$, or $2k \equiv 0 \pmod n$.
+	Moreover, $\tau^3(3) = 3$, hence $\sigma^{3k}(3) = 3$, or $3k \equiv 0 \pmod n$.
 	Then $n \mid 2k$ and $n \mid 3k$, so that $n \mid (2k, 3k)$.
 	By the lemma, $(2k, 3k) = k(2, 3) = k$, so that $n \mid k$.
 	However, $\sigma^k \neq 1$, so $n \nmid k$.

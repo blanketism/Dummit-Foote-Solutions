@@ -107,7 +107,7 @@
 
 \begin{sol}
     Suppose $\bar r, \bar s \in \intmod[48]$ such that $\bar r = \bar s$.
-	Then $r \equiv s \bmod 48$.
+	Then $r \equiv s \pmod 48$.
 	If $\psi_a$ is well-defined, then
     \[
     	\psi_a(\bar r) = \psi_a(r \cdot \bar 1) = x^{a r} = x^{a s} = \psi_a(s \cdot \bar 1) = \psi_a(\bar s)
@@ -282,7 +282,7 @@
 
 \begin{spex}{2.3.21}
     Let $p$ be an odd prime and let $n$ be a positive integer.
-	Use the Binomial Theorem to show that $(1 + p)^{p^{n - 1}} \equiv 1 \bmod p^n$ but $(1 + p)^{p^{n - 2}} \not\equiv 1 \bmod p^n$.
+	Use the Binomial Theorem to show that $(1 + p)^{p^{n - 1}} \equiv 1 \pmod p^n$ but $(1 + p)^{p^{n - 2}} \not\equiv 1 \pmod p^n$.
 	Deduce that $1 + p$ is an element of order $p^{n - 1}$ in the multiplicative group $\units[p^n]$.
 \end{spex}
 
@@ -302,7 +302,7 @@
         \]
     \end{lemma}
     Then the numerator contains at least $p^{n - 1}$ as a factor, so that the entire term contains at least $p^{n - 1 - (k - 1)} = p^{n - k}$ as a factor.
-	Since this is multiplied by $p^k$ in the summation, each term for $k \geq 2$ contains at least $p^n$ as a factor, so that $(1 + p)^{p^{n - 1}} \equiv 1 \bmod p^n$.
+	Since this is multiplied by $p^k$ in the summation, each term for $k \geq 2$ contains at least $p^n$ as a factor, so that $(1 + p)^{p^{n - 1}} \equiv 1 \pmod p^n$.
 
     Now consider $(1 + p)^{p^{n - 2}}$.
 	Using the binomial theorem, this expands to $1 + p^{n - 1} +$ terms that are divisible by $p^n$.
@@ -311,7 +311,7 @@
 
 \begin{spex}{2.3.22}
     Let $n$ be an integer $\geq 3$.
-	Use the Binomial Theorem to show that $(1 + 2^2)^{2^{n - 2}} \equiv 1 \bmod 2^n$ but $(1 + 2^2)^{2^{n - 3}} \not\equiv 1 \bmod 2^n$.
+	Use the Binomial Theorem to show that $(1 + 2^2)^{2^{n - 2}} \equiv 1 \pmod 2^n$ but $(1 + 2^2)^{2^{n - 3}} \not\equiv 1 \pmod 2^n$.
 	Deduce that 5 is an element of order $2^{n - 2}$ in the multiplicative group $\units[2^n]$.
 \end{spex}
 
@@ -328,11 +328,11 @@
     Since infinity is never achieved, we may take this as strict, hence the greatest power of 2 is at most $k - 1$.
 	With $2^{2k}$, the entire term contains at least $2^{n - 2 - (k - 1) + 2k} = 2^{n + k - 1}$ as a factor.
 	Since $k \geq 2$, $n + k - 1 \geq n + 1 > n$, so that each term for $k \geq 2$ contains at least $2^n$ as a factor.
-	Hence, $(1 + 2^2)^{2^{n - 2}} \equiv 1 \bmod 2^n$ as desired.
+	Hence, $(1 + 2^2)^{2^{n - 2}} \equiv 1 \pmod 2^n$ as desired.
 	
     Considering $(1 + 2^2)^{2^{n - 3}}$, the $k = 1$ term is $2^{n - 1}$ which is not divisible by $2^n$.
-	Hence, $(1 + 2^2)^{2^{n - 3}} \not\equiv 1 \bmod 2^n$.
-	Since the only integers that divide $2^n$ are $1, 2, 2^2, \ldots, 2^n$, and the first power that results in $1 \bmod 2^n$ is $2^{n - 2}$, it follows that the order of $5$ in $\units[2^n]$ is $2^{n - 2}$.
+	Hence, $(1 + 2^2)^{2^{n - 3}} \not\equiv 1 \pmod 2^n$.
+	Since the only integers that divide $2^n$ are $1, 2, 2^2, \ldots, 2^n$, and the first power that results in $1 \pmod 2^n$ is $2^{n - 2}$, it follows that the order of $5$ in $\units[2^n]$ is $2^{n - 2}$.
 \end{sol}
 
 \begin{exercise}{2.3.23}
@@ -345,7 +345,7 @@
     By Theorem 2.7, we must have one subgroup of order 2 in $\units[2^n]$ if it were cyclic.
 	However,
     \[
-    	(2^n - 1)^2 = (-1)^2 \equiv 1 \bmod 2^n, \quad \text{and} \quad (2^{n - 1} + 1)^2 = 2^{2n - 2} + 2^n + 1 \equiv 1 \bmod 2^n.
+    	(2^n - 1)^2 = (-1)^2 \equiv 1 \pmod 2^n, \quad \text{and} \quad (2^{n - 1} + 1)^2 = 2^{2n - 2} + 2^n + 1 \equiv 1 \pmod 2^n.
     \]
     Since $n \geq 3$, $2^n - 1 \neq 2^{n - 1} + 1$ but both have order 2 in $\units[2^n]$.
 	Hence, it cannot be cyclic.
@@ -423,7 +423,7 @@
     \]
     \begin{subexercises}
         \item Prove that $\sigma_a$ is an automorphism of $Z_n$ if and only if $a$ and $n$ are relatively prime.
-        \item Prove that $\sigma_a = \sigma_b$ if and only if $a \equiv b \bmod n$.
+        \item Prove that $\sigma_a = \sigma_b$ if and only if $a \equiv b \pmod n$.
         \item Prove that \emph{every} automorphism of $Z_n$ is equal to $\sigma_a$ for some integer $a$.
         \item Prove that $\sigma_a \circ \sigma_b = \sigma_{ab}$.
 	    Deduce that the map $\bar a \mapsto \sigma_a$ is an isomorphism of $\units$ onto the automorphism group of $Z_n$ (so $\aut(Z_n)$ is an Abelian group of order $\phi(n)$).
@@ -458,9 +458,9 @@
     \[
         x^a = \sigma_a(x) = \sigma_b(x) = x^b
     \]
-    so that $n \mid (a - b)$, or $a \equiv b \bmod n$.
+    so that $n \mid (a - b)$, or $a \equiv b \pmod n$.
 
-    \leftimp Suppose $a \equiv b \bmod n$.
+    \leftimp Suppose $a \equiv b \pmod n$.
 	Then there exists some integer $k$ such that $a - b = nk$.
 	Let $Z_n = \gen x$.
 	For any $x^m \in Z_n$, we have

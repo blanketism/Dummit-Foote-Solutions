@@ -272,12 +272,12 @@
     Then $r^k \cdot P_i = P_i$ for all $i$ if and only if $k = 0$ or $k = n/2$.
     On the other hand, let $sr^k$ be a reflection. Then
     \[
-        sr^k \cdot P_j = s \cdot P_{j + k \bmod n/2} = P_{-(j + k) \bmod n/2}
+        sr^k \cdot P_j = s \cdot P_{j + k \pmod n/2} = P_{-(j + k) \pmod n/2}
     \]
     for all $j$.
 
-    In particular, $sr^k \cdot P_0 = P_{-k \bmod n/2}$, so $sr^k$ does not fix $P_0$ unless $-k \equiv 0 \bmod n/2$.
-    If $-k \equiv 0 \bmod n/2$, then $sr^k \cdot P_1 = P_{(0 - 1) \bmod n/2} = P_{n/2 - 1}$.
+    In particular, $sr^k \cdot P_0 = P_{-k \pmod n/2}$, so $sr^k$ does not fix $P_0$ unless $-k \equiv 0 \pmod n/2$.
+    If $-k \equiv 0 \pmod n/2$, then $sr^k \cdot P_1 = P_{(0 - 1) \pmod n/2} = P_{n/2 - 1}$.
     Since $n/2 \geq 3$, $n/2 - 1 \neq 1$, so $sr^k$ does not fix $P_1$.
     Hence, no reflection is in the kernel of the action.
     It follows that the kernel of the action is $\set{\id, r^{n/2}}$.

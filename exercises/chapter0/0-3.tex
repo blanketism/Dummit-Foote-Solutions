@@ -30,11 +30,11 @@
         m = nq + r, \quad 0 \leq r < n.
     \]
 
-    Then $m \equiv r \bmod n$ so that $\bar m = \bar r$. Since $0 \leq r < n$, $\bar r \in \set{\bar 0, \bar 1, \ldots, \bar{n - 1}}$.
+    Then $m \equiv r \pmod n$ so that $\bar m = \bar r$. Since $0 \leq r < n$, $\bar r \in \set{\bar 0, \bar 1, \ldots, \bar{n - 1}}$.
     It follows that every equivalence class $\bar m$ is equal to one of $\bar 0, \bar 1, \ldots, \bar{n - 1}$.
     
     To see that they are distinct, suppose $\bar x = \bar y$ for $0 \leq x, y < n$.
-    Then $x \equiv y \bmod n$ so that $n \mid (x - y)$.
+    Then $x \equiv y \pmod n$ so that $n \mid (x - y)$.
     Since $-n < x - y < n$, we must have $x - y = 0$, so that $x = y$.
     Hence, $\bar 0, \bar 1, \ldots, \bar{n - 1}$ are distinct.
 \end{sol}
@@ -46,18 +46,18 @@
     \]
     is any positive integer, then
     \[
-    	a \equiv (a_n + a_{n - 1} + \cdots + a_1 + a_0) \bmod 9.
+    	a \equiv (a_n + a_{n - 1} + \cdots + a_1 + a_0) \pmod 9.
     \]
-    \hint{Use the fact that $10 \equiv 1 \bmod 9$.}
+    \hint{Use the fact that $10 \equiv 1 \pmod 9$.}
 
     \note{Note that this is the usual arithmetic rule that the remainder after division by 9 is the same as the sum of the decimal digits mod 9—in particular an integer is divisible by 9 if and only if the sum of its digits is divisible by 9.}
 \end{exercise}
 
 \begin{sol}
     \begin{align*}
-        a & \equiv (a_n10^n + a_{n - 1}10^{n - 1} + \cdots + a_110 + a_0) \bmod 9 \\
-        & \equiv (a_n1^n + a_{n - 1}1^{n - 1} + \cdots + a_11 + a_0) \bmod 9 \\
-        & \equiv (a_n + a_{n - 1} + \cdots + a_1 + a_0) \bmod 9 \qedhere
+        a & \equiv (a_n10^n + a_{n - 1}10^{n - 1} + \cdots + a_110 + a_0) \pmod 9 \\
+        & \equiv (a_n1^n + a_{n - 1}1^{n - 1} + \cdots + a_11 + a_0) \pmod 9 \\
+        & \equiv (a_n + a_{n - 1} + \cdots + a_1 + a_0) \pmod 9 \qedhere
     \end{align*}
 \end{sol}
 
@@ -66,12 +66,12 @@
 \end{exercise}
 
 \begin{sol}
-    Consider the following calculations mod 29, where we note that $37 \equiv 8 \bmod 29$:
+    Consider the following calculations mod 29, where we note that $37 \equiv 8 \pmod 29$:
     \begin{align*}
-        8^2 \bmod 29 & \equiv 6 & 8^8 \bmod 29 & \equiv 20 & 8^{32} \bmod 29 & \equiv 7 \\
-        8^4 \bmod 29 & \equiv 7 & 8^{16} \bmod 29 & \equiv 23 & 8^{64} \bmod 29 & \equiv 20
+        8^2 \pmod 29 & \equiv 6 & 8^8 \pmod 29 & \equiv 20 & 8^{32} \pmod 29 & \equiv 7 \\
+        8^4 \pmod 29 & \equiv 7 & 8^{16} \pmod 29 & \equiv 23 & 8^{64} \pmod 29 & \equiv 20
     \end{align*}
-    Then $8^{100} \equiv 8^{64} \cdot 8^{32} \cdot 8^4 \equiv 20 \cdot 7 \cdot 7 \equiv 23 \bmod 29$.
+    Then $8^{100} \equiv 8^{64} \cdot 8^{32} \cdot 8^4 \equiv 20 \cdot 7 \cdot 7 \equiv 23 \pmod 29$.
 \end{sol}
 
 \begin{exercise}{0.3.5}
@@ -83,11 +83,11 @@
 \begin{sol}
     Doing repeated squaring, we have
     \begin{align*}
-        9^2 \bmod 100 & \equiv 81 & 9^8 \bmod 100 & \equiv 21 & 9^{32} \bmod 100 & \equiv 81 \\
-        9^4 \bmod 100 & \equiv 61 & 9^{16} \bmod 100 & \equiv 41 & 9^{64} \bmod 100 & \equiv 61
+        9^2 \pmod 100 & \equiv 81 & 9^8 \pmod 100 & \equiv 21 & 9^{32} \pmod 100 & \equiv 81 \\
+        9^4 \pmod 100 & \equiv 61 & 9^{16} \pmod 100 & \equiv 41 & 9^{64} \pmod 100 & \equiv 61
     \end{align*}
-    Observe that $9^{64} \equiv 9^4 \equiv 61 \bmod 100$.
-	Then $9^{60} \equiv 1 \bmod 100$, so that $9^{1500} \equiv 9^{25 \cdot 60} \equiv 1^{25} \equiv 1 \bmod 100$.
+    Observe that $9^{64} \equiv 9^4 \equiv 61 \pmod 100$.
+	Then $9^{60} \equiv 1 \pmod 100$, so that $9^{1500} \equiv 9^{25 \cdot 60} \equiv 1^{25} \equiv 1 \pmod 100$.
 	Thus, the last two digits of $9^{1500}$ are $01$.
 \end{sol}
 
@@ -96,7 +96,7 @@
 \end{exercise}
 
 \begin{sol}
-    $0^2 \equiv 0 \bmod 4$, $1^2 \equiv 1 \bmod 4$, $2^2 \equiv 0 \bmod 4$, and $3^2 \equiv 1 \bmod 4$.
+    $0^2 \equiv 0 \pmod 4$, $1^2 \equiv 1 \pmod 4$, $2^2 \equiv 0 \pmod 4$, and $3^2 \equiv 1 \pmod 4$.
 \end{sol}
 
 \begin{exercise}{0.3.7}
@@ -118,9 +118,9 @@
 \end{exercise}
 
 \begin{sol}
-    Considering the equation modulo 4, we know that $a^2 + b^2 \equiv 0, 1, 2 \bmod 4$ by \exref{0.3.7}, but $3c^2 \equiv 0, 3 \bmod 4$ by \exref{0.3.6}.
+    Considering the equation modulo 4, we know that $a^2 + b^2 \equiv 0, 1, 2 \pmod 4$ by \exref{0.3.7}, but $3c^2 \equiv 0, 3 \pmod 4$ by \exref{0.3.6}.
     Hence, both sides must be congruent to 0 mod 4.
-    Since $3c^2 \equiv 0 \bmod 4$, we have $c^2 \equiv 0 \bmod 4$, so that $c$ is even.
+    Since $3c^2 \equiv 0 \pmod 4$, we have $c^2 \equiv 0 \pmod 4$, so that $c$ is even.
     Then $3c^2$ has a factor of 4, so that $a^2 + b^2$ has a factor of 4, and hence both $a$ and $b$ are even.
     Divide each of $a, b$ and $c$ by 2 to get a smaller solution to the original equation.
     By infinite descent, we can iterate the process to obtain no solution in nonzero integers $a, b$ and $c$.
@@ -132,7 +132,7 @@
 
 \begin{sol}
     Put $a = 2k + 1$ for $k \in \zbb$.
-	Then $a^2 = 4k(k + 1) + 1 \equiv 1 \bmod 8$ since $k(k + 1)$ is always even.
+	Then $a^2 = 4k(k + 1) + 1 \equiv 1 \pmod 8$ since $k(k + 1)$ is always even.
 \end{sol}
 
 \begin{spex}{0.3.10}
@@ -144,11 +144,11 @@
     Hence, it suffices to show that $\bar a \in \units$ if and only if $(a, n) = 1$.
     
     \rightimp If $\bar a \in \units$, then there exists $\bar b \in \intmod$ such that $\bar a \cdot \bar b = \bar 1$.
-    Then $ab \equiv 1 \bmod n$ implies the existence of $k \in \zbb$ such that $ab - 1 = kn$, or $ab - kn = 1$.
+    Then $ab \equiv 1 \pmod n$ implies the existence of $k \in \zbb$ such that $ab - 1 = kn$, or $ab - kn = 1$.
     Thus, $(a, n) = 1$.
     
     \leftimp By $(a, n) = 1$, there exists $x, y \in \zbb$ such that $ax + ny = 1$, or $ax = 1 - ny$.
-    We then have $ax \equiv 1 \bmod n$, so that $\bar a \cdot \bar x = \bar 1$.
+    We then have $ax \equiv 1 \pmod n$, so that $\bar a \cdot \bar x = \bar 1$.
     Thus, $\bar a \in \units$.
 \end{sol}
 
@@ -167,7 +167,7 @@
 
 \begin{exercise}{0.3.12}
     Let $n \in \zbb, n > 1$ and let $a \in \zbb$ with $1 \leq a \leq n$.
-	Prove if $a$ and $n$ are not relatively prime, there exists an integer $b$ with $1 \leq b < n$ such that $ab \equiv 0 \bmod n$ and deduce that there cannot be an integer $c$ such that $ac \equiv 1 \bmod n$.
+	Prove if $a$ and $n$ are not relatively prime, there exists an integer $b$ with $1 \leq b < n$ such that $ab \equiv 0 \pmod n$ and deduce that there cannot be an integer $c$ such that $ac \equiv 1 \pmod n$.
 \end{exercise}
 
 \begin{sol}
@@ -175,22 +175,22 @@
 	Then $a/d, n/d \in \zbb$.
 	Put $b = n/d$, so that $1 \leq b < n$ and
     \[
-    	ab = a(n/d) = (a/d)n \equiv 0 \bmod n.
+    	ab = a(n/d) = (a/d)n \equiv 0 \pmod n.
     \]
-    If there existed some $c \in \zbb$ such that $ac \equiv 1 \bmod n$, then $(ac)b \equiv b \bmod n$.
-	However, $ab \equiv 0 \bmod n$, so that $0 \equiv b \bmod n$, which is impossible since $1 \leq b < n$.
+    If there existed some $c \in \zbb$ such that $ac \equiv 1 \pmod n$, then $(ac)b \equiv b \pmod n$.
+	However, $ab \equiv 0 \pmod n$, so that $0 \equiv b \pmod n$, which is impossible since $1 \leq b < n$.
 \end{sol}
 
 \begin{exercise}{0.3.13}
     Let $n \in \zbb, n > 1$ and let $a \in \zbb$ with $1 \leq a \leq n$.
-	Prove that if $a$ and $n$ are relatively prime then there is an integer $c$ such that $ac \equiv 1 \bmod n$.
+	Prove that if $a$ and $n$ are relatively prime then there is an integer $c$ such that $ac \equiv 1 \pmod n$.
 
     \hint{Use the fact that the GCD of two integers is a $\zbb$-linear combination of the integers.}
 \end{exercise}
 
 \begin{sol}
     Since $(a, n) = 1$, there exists $c, x \in \zbb$ such that $ac + nx = 1$.
-	Then $ac \equiv 1 \bmod n$.
+	Then $ac \equiv 1 \pmod n$.
 \end{sol}
 
 \begin{exercise}{0.3.14}
@@ -199,7 +199,7 @@
 \end{exercise}
 
 \begin{sol}
-    The previous two exercises show that $a$ and $n$ are relatively prime if and only if there exists $b$ such that $ab \equiv 1 \bmod n$, which is exactly the proposition.
+    The previous two exercises show that $a$ and $n$ are relatively prime if and only if there exists $b$ such that $ab \equiv 1 \pmod n$, which is exactly the proposition.
 	For $n = 12$, the elements $1, 5, 7, 11$ are relatively prime to $12$, so that $\units[12] = \set{\bar 1, \bar 5, \bar 7, \bar{11}} $ whose inverses are $\bar 1, \bar 5, \bar 7, \bar{11}$ respectively. 
 \end{sol}
 
@@ -215,7 +215,7 @@
 
 \begin{sol}
     We use the Euclidean Algorithm to find $x, y \in \zbb$ such that $ax + ny = 1$ for each pair $(a, n)$.
-	Then $ax \equiv 1 \bmod n$, and $x$ is the multiplicative inverse of $\bar a$ in $\intmod$.
+	Then $ax \equiv 1 \pmod n$, and $x$ is the multiplicative inverse of $\bar a$ in $\intmod$.
     \begin{subexercises}
         \item 17.
         \item 40.

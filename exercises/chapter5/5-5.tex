@@ -169,13 +169,13 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	Then $\theta((h, k)) = (\sigma\inv(h), k^a)$ is a 2-sided inverse of $\psi$, so $\psi$ is bijective.
         \item We first prove a lemma: if $m \mid n$, then the map defined by
         \[
-        	\nu : \units[n] \to \units[m], \quad \nu(a) = a \bmod m
+        	\nu : \units[n] \to \units[m], \quad \nu(a) = a \pmod m
         \]
         is a surjective homomorphism.
-	We first check that $\nu$ is well-defined: if $a \equiv b \bmod n$, then $n \mid (a - b)$, so $m \mid (a - b)$, hence $a \equiv b \bmod m$.
+	We first check that $\nu$ is well-defined: if $a \equiv b \pmod n$, then $n \mid (a - b)$, so $m \mid (a - b)$, hence $a \equiv b \pmod m$.
 	Next, we check that $\nu$ is a homomorphism: for any $a, b \in \units[n]$, we have
         \[
-        	\nu(ab) = ab \bmod m = (a \bmod m)(b \bmod m) = \nu(a)\nu(b).
+        	\nu(ab) = ab \pmod m = (a \pmod m)(b \pmod m) = \nu(a)\nu(b).
         \]
         Finally, we check that $\nu$ is surjective: let $a \in \units[m]$.
 	If $a \in \units[n]$, then $\nu(a) = a$.
@@ -186,7 +186,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
             \item If $p \mid a$, then $p \nmid c$ by definition of $c$, hence $p \nmid b$.
             \item If $p \nmid a$, then $p \mid c$ by definition of $c$, hence $p \nmid b$.
         \end{itemize}
-        Thus, $b \in \units[n]$, and $\nu(b) = b \bmod m = a + cm \bmod m = a$.
+        Thus, $b \in \units[n]$, and $\nu(b) = b \pmod m = a + cm \pmod m = a$.
 	Hence, $\nu$ is surjective.
         
         Suppose $K \cong Z_n$ is finite.
@@ -196,7 +196,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	It follows that $(a, m) = 1$. 
         
         Consider the surjective homomorphism $\nu : \units[n] \to \units[m]$ defined in the lemma above.
-	Since $(a, m) = 1$, we have $a \in \units[m]$, so there exists some $b \in \units[n]$ such that $\nu(b) = b \bmod m = a$.
+	Since $(a, m) = 1$, we have $a \in \units[m]$, so there exists some $b \in \units[n]$ such that $\nu(b) = b \pmod m = a$.
 	Then $\theta((h, k)) = (\sigma\inv(h), k^b)$ is a 2-sided inverse of $\psi$, so $\psi$ is bijective. \qedhere
     \end{enumerate}
 \end{sol}
@@ -225,7 +225,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     \item Note that $56 = 2^3 \cdot 7$.
 	By the Fundamental Theorem of Finite Abelian Groups, the partitions of 3 are $3, 2 + 1, 1 + 1 + 1$, so the Abelian groups of order 56 are of the form $Z_8 \times Z_7$, $Z_4 \times Z_2 \times Z_7$, and $Z_2 \times Z_2 \times Z_2 \times Z_7$.
     \item Let $n_7$ be the number of Sylow 7-subgroups of $G$.
-	Then $n_7 \equiv 1 \bmod 7$ and $n_7 \mid 2^3$, so $n_7 = 1$ or $8$.
+	Then $n_7 \equiv 1 \pmod 7$ and $n_7 \mid 2^3$, so $n_7 = 1$ or $8$.
 	If $n_7 = 1$, then the unique Sylow 7-subgroup is normal.
 	Suppose $n_7 = 8$.
 	Then there are $8 \cdot 6 = 48$ elements of order 7 in $G$, so the remaining $56 - 48 = 8$ elements of $G$ must be the identity and the elements of a Sylow 2-subgroup.
@@ -427,7 +427,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 \begin{sol}
     Let $P \in \syl_5(G)$ and $Q \in \syl_3(G)$.
 	Then $|P| = 25$ and $|Q| = 3$.
-	By the Sylow theorems, we have $n_5 \equiv 1 \bmod 5$ and $n_5 \mid 3$, so $n_5 = 1$ or 3.
+	By the Sylow theorems, we have $n_5 \equiv 1 \pmod 5$ and $n_5 \mid 3$, so $n_5 = 1$ or 3.
 	If $n_5 = 1$, then the unique Sylow 5-subgroup is normal.
 	If $n_5 = 3$, then there are $3 \cdot 24 = 72$ elements of order 5 in $G$, so the remaining $75 - 72 = 3$ elements of $G$ must be the identity and the elements of a Sylow 3-subgroup.
 	Hence, the Sylow 3-subgroup is unique, so it is normal.
@@ -477,7 +477,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	\]
     where, once entries are taken mod 19, results in $I_2$, hence $|M| = 5$.
 	Moreover, we know that $1805 = 19^2 \cdot 5$.
-	Since $n_{19} \equiv 1 \bmod 19$ and $n_{19} \mid 5$, $n_{19} = 1$, so $P \in \syl_{19}(G)$ is normal.
+	Since $n_{19} \equiv 1 \pmod 19$ and $n_{19} \mid 5$, $n_{19} = 1$, so $P \in \syl_{19}(G)$ is normal.
 	Moreover, we have $P \cong Z_{361}$ or $P \cong Z_{19} \times Z_{19}$.
 	If $P \cong Z_{361}$, then $\aut(P) \cong \units[361]$, which has order $19 \cdot 18 = 342$.
 	Since $|Q| = 5$, the only homomorphism $\phi : Q \to \aut(P)$ is the trivial homomorphism, so $G \cong P \semidir Q \cong P \times Q \cong Z_{361} \times Z_5$.
@@ -526,7 +526,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     \item Note that $147 = 3 \cdot 7^2$.
 	By the Fundamental Theorem of Finite Abelian Groups, the partitions of 2 are $2, 1 + 1$, so the Abelian groups of order 147 are of the form $Z_{49} \times Z_3$ and $Z_7 \times Z_7 \times Z_3$.
     \item Let $n_7$ be the number of Sylow 7-subgroups of $G$.
-	Then $n_7 \equiv 1 \bmod 7$ and $n_7 \mid 3$, so $n_7 = 1$.
+	Then $n_7 \equiv 1 \pmod 7$ and $n_7 \mid 3$, so $n_7 = 1$.
 	Hence, the unique Sylow 7-subgroup is normal.
     \item Let $P \cong Z_{49}$ and $Q \cong Z_3$.
 	Then $\aut(P) \cong \units[49]$, which has order $7 \cdot 6 = 42$.
@@ -614,7 +614,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     \[
     	a^ib^j = z = qzq\inv = qa^ib^jq\inv = qaq\inv qbq\inv = a^{2i}b^{2j}.
     \]
-    Then this implies that $2i \equiv i \bmod 7$ and $2j \equiv j \bmod 7$, so $i = j =0$.
+    Then this implies that $2i \equiv i \pmod 7$ and $2j \equiv j \pmod 7$, so $i = j =0$.
 	Hence, $Z(G_3) \cap (\gen a \times \gen b) = 1$.
 	Now, consider when $z \in Z(G_3) - (\gen a \times \gen b)$.
 	Then $z = a^ib^jq^k$ for some $0 \leq i, j \leq 6$ and $1 \leq k \leq 2$.
@@ -664,7 +664,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	We have the Abelian groups $Z_7 \times Z_4$ and $Z_7 \times Z_2 \times Z_2$.
 	Let $P \in \syl_7(G)$ and $S \in \syl_2(G)$.
 	Then $|P| = 7$ and $|S| = 4$.
-	By the Sylow theorems, we have $n_7 \equiv 1 \bmod 7$ and $n_7 \mid 4$, so $n_7 = 1$.
+	By the Sylow theorems, we have $n_7 \equiv 1 \pmod 7$ and $n_7 \mid 4$, so $n_7 = 1$.
 	Hence, the unique Sylow 7-subgroup is normal.
 	Moreover, we have $P \cong Z_7$ and $S \cong Z_4$ or $Z_2 \times Z_2$.
 	We then have two cases to consider:
@@ -722,7 +722,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     We have the Abelian groups $Z_5 \times Z_4$ and $Z_5 \times Z_2 \times Z_2$.
 	Let $P \in \syl_5(G)$ and $S \in \syl_2(G)$.
 	Then $|P| = 5$ and $|S| = 4$.
-	By the Sylow theorems, we have $n_5 \equiv 1 \bmod 5$ and $n_5 \mid 4$, so $n_5 = 1$.
+	By the Sylow theorems, we have $n_5 \equiv 1 \pmod 5$ and $n_5 \mid 4$, so $n_5 = 1$.
 	Hence, the unique Sylow 5-subgroup is normal.
 	Moreover, we have $P \cong Z_5$ and $S \cong Z_4$ or $Z_2 \times Z_2$.
 	We then have two cases to consider:
@@ -781,25 +781,25 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 \end{sol}
 
 \begin{exercise}{5.5.13}
-    Classify groups of order $4p$, where $p$ is a prime greater than 3. [There are four isomorphism types when $p \equiv 3 \bmod 4$, and five isomorphism types when $p \equiv 1 \bmod 4$.]
+    Classify groups of order $4p$, where $p$ is a prime greater than 3. [There are four isomorphism types when $p \equiv 3 \pmod 4$, and five isomorphism types when $p \equiv 1 \pmod 4$.]
 \end{exercise}
 
 \begin{sol}
-    We have a framework for each case of $p$, namely \exref{5.5.11} when $p \equiv 3 \bmod 4$, and \exref{5.5.12} when $p \equiv 1 \bmod 4$.
+    We have a framework for each case of $p$, namely \exref{5.5.11} when $p \equiv 3 \pmod 4$, and \exref{5.5.12} when $p \equiv 1 \pmod 4$.
 	The only difference is that we have $P \in \syl_p(G)$ and $S \in \syl_2(G)$, where $|P| = p$ and $|S| = 4$.
-	By the Sylow theorems, we have $n_p \equiv 1 \bmod p$ and $n_p \mid 4$, so $n_p = 1$.
+	By the Sylow theorems, we have $n_p \equiv 1 \pmod p$ and $n_p \mid 4$, so $n_p = 1$.
 	Hence, the unique Sylow $p$-subgroup is normal.
 	Moreover, we have $P = \gen q \cong Z_p$ and $S \cong Z_4$ or $Z_2 \times Z_2$.
 	We then have two cases to consider:
     \begin{itemize}
         \item If $S \cong Z_4 = \gen s$, then $s$ has different candidates to be sent to in $\aut(P) = \units[p]$, which has order $p - 1$.
-	    If $p \equiv 3 \bmod 4$, then $p - 1 \equiv 2 \bmod 4$, hence $\phi(s)$ can only be sent to $\id$ or the unique element of order 2 in $\aut(P)$.
+	    If $p \equiv 3 \pmod 4$, then $p - 1 \equiv 2 \pmod 4$, hence $\phi(s)$ can only be sent to $\id$ or the unique element of order 2 in $\aut(P)$.
 	    If we have the latter case, then $sqs\inv = q\inv$, and we have
         \[
         	G \cong P \semidir S \cong Z_p \semidir Z_4 = \set{q, s \mid q^p = s^4 = 1, sqs\inv = q\inv}.
         \]
         
-        If $p \equiv 1 \bmod 4$, then $p - 1 \equiv 0 \bmod 4$, hence $\phi(s)$ can be sent to $\id$ or one of the two elements of order 4 in $\aut(P)$ (which are isomorphic since their images generate the same subgroup), or the unique element of order 2 in $\aut(P)$.
+        If $p \equiv 1 \pmod 4$, then $p - 1 \equiv 0 \pmod 4$, hence $\phi(s)$ can be sent to $\id$ or one of the two elements of order 4 in $\aut(P)$ (which are isomorphic since their images generate the same subgroup), or the unique element of order 2 in $\aut(P)$.
 	    If $\aut(P) = \gen\alpha$, let $\rho = \alpha^{(p - 1)/4}$, which has order 4.
 	    Then we have the three non-trivial homomorphisms
         \[
@@ -864,7 +864,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 
 \begin{solenum}[spsol]
     \item Clear, from Corollary 4.22.
-    \item If $Q$ is not normal in $G$, then $n_3 \equiv 1 \bmod 3$ and $n_3 \mid 20$ implies that $n_3 = 4$ or 10.
+    \item If $Q$ is not normal in $G$, then $n_3 \equiv 1 \pmod 3$ and $n_3 \mid 20$ implies that $n_3 = 4$ or 10.
 	If $n_3 = 10$, then since $P \nsub G$, we know that $PQ_i$ is a subgroup of $G$ that is cyclic.
 	But then $PQ_i \cap PQ_j = 5$ intersect at $P$, which means there would be $10 \cdot 10$ elements in $G$, which would be a contradiction.
 	Hence, $n_3 = 4$.
@@ -876,7 +876,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	If we consider $\pi$ to be the natural projection map from $G$ to $G/P$, we claim that the map $\psi : \syl_3(G) \to \syl_3(G/P)$ given by $\psi(Q_i) \to \pi(Q_i)$ is a bijection.
 	Note that this is a well-defined map, since $\pi(Q_i) = Q_iP/P$ is a subgroup of $G/P$, and since $Q_iP \leq G$ with order 15, $Q_iP/P$ has order 3, so $\pi(Q_i) \in \syl_3(G/P)$.
 	To see that $\psi$ is injective, suppose that $\psi(Q_i) = \psi(Q_j)$, then $Q_iP/P = Q_jP/P$, which implies that $Q_iP = Q_jP$.
-	Since $|Q_iP| = |Q_jP| = 15$, and $n_3(Q_iP) \equiv 1 \bmod 3$ and $n_3(Q_iP) \mid 5$, $n_3(Q_iP) = 1$.
+	Since $|Q_iP| = |Q_jP| = 15$, and $n_3(Q_iP) \equiv 1 \pmod 3$ and $n_3(Q_iP) \mid 5$, $n_3(Q_iP) = 1$.
 	Hence, $Q_i = Q_j$, so $\psi$ is injective.
 	Since $n_3(G) = 4$, $|\syl_3(G/P)| \geq 4$.
 	By injectivity, it must be that $\psi$ is a bijection, hence $n_3(G/P) = 4$.
@@ -1164,7 +1164,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     Hence, $A$ is similar to the diagonal matrix with entries $1$ and $-1$. 
 
     Let $|G| = 2p^2$, $P \in \syl_p(G)$, and $Q \in \syl_2(G)$.
-	Since $n_p \equiv 1 \bmod p$ and $n_p \mid 2$, $p$ being odd implies that $n_p = 1$, hence $P \nsub G$.
+	Since $n_p \equiv 1 \pmod p$ and $n_p \mid 2$, $p$ being odd implies that $n_p = 1$, hence $P \nsub G$.
 	Moreover, $|P| = p^2$ implies that $P \cong Z_{p^2}$, or $Z_p \times Z_p$.
 	Put $Q = \gen q$.
 	We split by cases:
@@ -1280,15 +1280,15 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	However, this only occurs in $G_1$, hence $a^ib \notin Z(G_2), Z(G_3), Z(G_4)$.
 	We can conclude that $Z(G_2), Z(G_3), Z(G_4) \subseteq \gen a$.
 	Note that for $a^i$ to commute with $b$, then $ba^ib\inv = a^i$, or that $a^{ri} = a^i$, where $r = -1, 2^{n - 1} + 1, 2^{n - 1} - 1$ for $G_2, G_3, G_4$, respectively.
-	Equating exponents, it must be that $i(r - 1) \equiv 0 \bmod 2^n$.
+	Equating exponents, it must be that $i(r - 1) \equiv 0 \pmod 2^n$.
 	We analyze each group:
     \begin{itemize}
-        \item For $G_2$, we have $r - 1 = -2$, hence $i \equiv 0 \bmod 2^{n - 1}$.
+        \item For $G_2$, we have $r - 1 = -2$, hence $i \equiv 0 \pmod 2^{n - 1}$.
 	Then $Z(G_2) = \gen{a^{2^{n - 1}}} \cong Z_2$. (Alternatively, we know that $D_{2^{n + 1}} = D_{2k}$ for some even $k$, and $Z(D_{2k}) = \gen{r^k} \cong Z_2$.)
-        \item For $G_3$, we have $r - 1 = 2^{n - 1}$, hence $i \equiv 0 \bmod 2$.
+        \item For $G_3$, we have $r - 1 = 2^{n - 1}$, hence $i \equiv 0 \pmod 2$.
 	Then $Z(G_3) = \gen{a^2} \cong Z_{2^{n - 1}}$.
-        \item For $G_4$, we have $r - 1 = 2^{n - 1} - 2$, hence $2i(2^{n - 2} - 1) \equiv 0 \bmod 2^n$.
-	Since $2^{n - 2} - 1$ is odd, $i \equiv 0 \bmod 2^{n - 1}$.
+        \item For $G_4$, we have $r - 1 = 2^{n - 1} - 2$, hence $2i(2^{n - 2} - 1) \equiv 0 \pmod 2^n$.
+	Since $2^{n - 2} - 1$ is odd, $i \equiv 0 \pmod 2^{n - 1}$.
 	Then $Z(G_4) = \gen{a^{2^{n - 1}}} \cong Z_2$.
     \end{itemize}
     We see that $Z(G_2) \cong Z(G_4)$, but $Z(G_3)$ is not isomorphic to either of them.
@@ -1301,7 +1301,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
         \item For $G_2$, we have $r + 1 = 0$, hence $(a^ib)^2 = a^0 = 1$.
 	Then all elements of the form $a^ib$ have order 2, and there are $2^n$ such elements.
         \item For $G_4$, we have $r + 1 = 2^{n - 1}$, hence $(a^ib)^2 = a^{i2^{n - 1}}$.
-	Then $(a^ib)^2 = 1$ if and only if $i \equiv 0 \bmod 2$, hence there are $2^{n - 1}$ such elements.
+	Then $(a^ib)^2 = 1$ if and only if $i \equiv 0 \pmod 2$, hence there are $2^{n - 1}$ such elements.
     \end{itemize}
     Since $G_2$ and $G_4$ have different numbers of elements of order 2, they are not isomorphic.
 	Hence, we have shown that the four groups are pairwise non-isomorphic.
@@ -1431,7 +1431,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     	|\bar H| = |C_{\bar H}(P)| + \sum_{i = 1}^k |P : C_P(\bar x[i])|,
     \]
     where $\bar x[1], \ldots, \bar x[k]$ are representatives of the non-singleton orbits of the $P$-conjugation on $\bar H$.
-	Note that $|P : C_P(\bar x[i])|$ is a power of $p$, hence $|C_{\bar H}(P)| \equiv |\bar H| \equiv 0 \bmod p$.
+	Note that $|P : C_P(\bar x[i])|$ is a power of $p$, hence $|C_{\bar H}(P)| \equiv |\bar H| \equiv 0 \pmod p$.
 	Since $\bar 1 \in C_{\bar H}(P)$, $|C_{\bar H}(P)| \geq p$.
 	Then there exists some $\bar h \in C_{\bar H}(P)$ with $\bar h \neq \bar 1$.
 	Let $h \in H$ be the preimage of $\bar h$ in $H$.
@@ -1626,7 +1626,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     If $r = 1$, then $n = p$ or $p^2$.
     Since any group of order $p$ or $p^2$ is Abelian, we are done.
     If $r = 2$, then $n = p_1^{\alpha_1}p_2^{\alpha_2}$, where $\alpha_i = 1$ or $2$ for $i = 1, 2$.
-    If $P_i \in \syl_{p_i}(G)$, then $n_{p_i} \equiv 1 \bmod p_i$ and $n_{p_i} \mid p_j^{\alpha_j}$ for $j \neq i$.
+    If $P_i \in \syl_{p_i}(G)$, then $n_{p_i} \equiv 1 \pmod p_i$ and $n_{p_i} \mid p_j^{\alpha_j}$ for $j \neq i$.
     Since $p_i$ does not divide $p_j^{\alpha_j} - 1$, we have that $n_{p_i} = 1$ for $i = 1, 2$.
     Hence, $P_1$ and $P_2$ are normal in $G$, and $G = P_1 \times P_2$ is Abelian.
 
