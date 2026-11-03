@@ -44,10 +44,9 @@ and $\bcal = \set{X \in \acal \mid MX = XM}$, where $\acal$ denotes the set of $
 \end{exercise}
 
 \begin{sol}
-    Let $M_i$ denote the $i$th matrix in the list above.
-	Then $M_1, M_3, M_5, M_6$ denote $M$, the zero matrix, $I_2$, and the exchange matrix respectively.
-	Among these, $M_1, M_3, M_5$ belong to $\bcal$, while $M_6 \notin \bcal$.
-	Direct calculation shows $M_2$ and $M_4$ are not in $\bcal$.
+    Let $X_i$ denote the $i$th matrix in the list above.
+	Then $X_1$, $X_3$, and $X_5$ are $M$, the zero matrix, and the identity matrix respectively, so $X_1, X_3, X_5 \in \bcal$.
+	Direct calculation shows $X_2, X_4, X_6 \notin \bcal$.
 \end{sol}
 
 \begin{exercise}{0.1.2}
@@ -81,20 +80,20 @@ and $\bcal = \set{X \in \acal \mid MX = XM}$, where $\acal$ denotes the set of $
 	Computing $MX = XM$ gives the following system of equations:
     \[
         \begin{cases}
-            p + r = p \\
-            q + s = p + q \\
-            r = r \\
-            s = r + s
+            p + r = p, \\
+            q + s = p + q, \\
+            s = r + s.
         \end{cases}
     \]
-    Simplifying results in $r = 0$ and $p = s$.
-	Then
+    Thus, $r = 0$ and $p = s$, so
     \[
         \bcal = 
-        \set*{\begin{pmatrix}
-            p & q \\
-            0 & p
-        \end{pmatrix}~\middle|~p, q \in \rbb}. \qedhere
+        \set*{
+            \begin{pmatrix}
+                p & q \\
+                0 & p
+            \end{pmatrix}
+        \setmid p, q \in \rbb}. \qedhere
     \]
 \end{sol}
 
@@ -116,8 +115,7 @@ and $\bcal = \set{X \in \acal \mid MX = XM}$, where $\acal$ denotes the set of $
 \end{exercise}
 
 \begin{sol}
-    No.
-	Note that $1=1.000\ldots = 0.999\ldots$, but $f(1.000\ldots) = 0$ and $f(0.999\ldots) = 9$.
+    No: $1=1.000\ldots = 0.999\ldots$, but $f(1.000\ldots) = 0$ and $f(0.999\ldots) = 9$.
 \end{sol}
 
 \begin{exercise}{0.1.7}
@@ -134,4 +132,5 @@ and $\bcal = \set{X \in \acal \mid MX = XM}$, where $\acal$ denotes the set of $
 
     The equivalence class of $a \in A$ is $\set{x \in A \mid x \sim a}$.
 	By definition, this is $\set{x \in A \mid f(x) = f(a)}$, which is precisely the fiber of $f$ over $f(a)$.
+    Conversely, given $b \in B$, surjectivity of $f$ gives $a \in A$ such that $f(a) = b$, so $f\inv(b) = f\inv(f(a))$ is the equivalence class of $a$ under $\sim$.
 \end{sol}

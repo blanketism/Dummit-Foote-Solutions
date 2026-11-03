@@ -5,8 +5,7 @@
 \end{exercise}
 
 \begin{sol}
-    Note that $\bar x = \set{x + 18k \mid k \in \zbb}$.
-	Explicitly, we have:
+    Note that $\bar x = \set{x + 18k \mid k \in \zbb}$ for $0 \leq x \leq 17$, so
     \begin{align*}
         \bar 0 & = \set{0, 18, -18, 36, -36, \ldots} & \bar 1 & = \set{1, 19, -17, 37, -35, \ldots} & \bar 2 & = \set{2, 20, -16, 38, -34, \ldots} \\
         \bar 3 & = \set{3, 21, -15, 39, -33, \ldots} & \bar 4 & = \set{4, 22, -14, 40, -32, \ldots} & \bar 5 & = \set{5, 23, -13, 41, -31, \ldots} \\
@@ -25,13 +24,12 @@
 
 \begin{sol}
     Let $m \in \zbb$ be given.
-    By the Division Algorithm there exist unique $q, r \in \zbb$ such that
+    By the Division Algorithm there exist $q, r \in \zbb$ such that
     \[
         m = nq + r, \quad 0 \leq r < n.
     \]
 
-    Then $m \equiv r \pmod n$ so that $\bar m = \bar r$. Since $0 \leq r < n$, $\bar r \in \set{\bar 0, \bar 1, \ldots, \bar{n - 1}}$.
-    It follows that every equivalence class $\bar m$ is equal to one of $\bar 0, \bar 1, \ldots, \bar{n - 1}$.
+    Then $m \equiv r \pmod n$ so that $\bar m = \bar r$. Since $0 \leq r < n$, every equivalence class $\bar m$ is equal to one of $\bar 0, \bar 1, \ldots, \bar{n - 1}$.
     
     To see that they are distinct, suppose $\bar x = \bar y$ for $0 \leq x, y < n$.
     Then $x \equiv y \pmod n$ so that $n \mid (x - y)$.
@@ -54,11 +52,11 @@
 \end{exercise}
 
 \begin{sol}
-    \begin{align*}
-        a & \equiv (a_n10^n + a_{n - 1}10^{n - 1} + \cdots + a_110 + a_0) \pmod 9 \\
-        & \equiv (a_n1^n + a_{n - 1}1^{n - 1} + \cdots + a_11 + a_0) \pmod 9 \\
-        & \equiv (a_n + a_{n - 1} + \cdots + a_1 + a_0) \pmod 9 \qedhere
-    \end{align*}
+    By Theorem 0.3, $10 \equiv 1 \pmod 9$ gives $10^i \equiv 1^i = 1 \pmod 9$ for any nonnegative integer $i$ so that each term $a_i 10^i \equiv a_i \pmod 9$.
+    Summing over all terms gives
+    \[
+        a = \sum_{i=0}^{n} a_i 10^i \equiv \sum_{i=0}^{n} a_i \pmod 9. \qedhere
+    \]
 \end{sol}
 
 \begin{exercise}{0.3.4}
@@ -66,12 +64,13 @@
 \end{exercise}
 
 \begin{sol}
-    Consider the following calculations mod 29, where we note that $37 \equiv 8 \pmod 29$:
+    By Theorem 0.3, $37 \equiv 8 \pmod{29}$ gives $37^{100} \equiv 8^{100} \pmod{29}$.
+    Taking powers of $8 \pmod{29}$, we compute
     \begin{align*}
-        8^2 \pmod 29 & \equiv 6 & 8^8 \pmod 29 & \equiv 20 & 8^{32} \pmod 29 & \equiv 7 \\
-        8^4 \pmod 29 & \equiv 7 & 8^{16} \pmod 29 & \equiv 23 & 8^{64} \pmod 29 & \equiv 20
+        8^2 & \equiv 6 & 8^8 & \equiv 20 & 8^{32} & \equiv 7 \\
+        8^4 & \equiv 7 & 8^{16} & \equiv 23 & 8^{64} & \equiv 20.
     \end{align*}
-    Then $8^{100} \equiv 8^{64} \cdot 8^{32} \cdot 8^4 \equiv 20 \cdot 7 \cdot 7 \equiv 23 \pmod 29$.
+    Then $8^{100} \equiv 8^{64} \cdot 8^{32} \cdot 8^4 \equiv 20 \cdot 7 \cdot 7 \equiv 23 \pmod{29}$, so the remainder when $37^{100}$ is divided by $29$ is $23$.
 \end{sol}
 
 \begin{exercise}{0.3.5}
@@ -81,14 +80,12 @@
 \end{exercise}
 
 \begin{sol}
-    Doing repeated squaring, we have
-    \begin{align*}
-        9^2 \pmod 100 & \equiv 81 & 9^8 \pmod 100 & \equiv 21 & 9^{32} \pmod 100 & \equiv 81 \\
-        9^4 \pmod 100 & \equiv 61 & 9^{16} \pmod 100 & \equiv 41 & 9^{64} \pmod 100 & \equiv 61
-    \end{align*}
-    Observe that $9^{64} \equiv 9^4 \equiv 61 \pmod 100$.
-	Then $9^{60} \equiv 1 \pmod 100$, so that $9^{1500} \equiv 9^{25 \cdot 60} \equiv 1^{25} \equiv 1 \pmod 100$.
-	Thus, the last two digits of $9^{1500}$ are $01$.
+    Taking powers of $9 \pmod{100}$, we have
+    \[
+        9^2 \equiv 81 \pmod{100}, \quad 9^4 \equiv 61 \pmod{100}, \quad 9^8 \equiv 21 \pmod{100}.
+    \]
+    Note that $9^{10} = 9^8 \cdot 9^2 \equiv 21 \cdot 81 \equiv 1 \pmod{100}$.
+    By Theorem 0.3, $9^{1500} = (9^{10})^{150} \equiv 1^{150} \equiv 1 \pmod{100}$, so the last two digits are $01$.
 \end{sol}
 
 \begin{exercise}{0.3.6}
@@ -96,7 +93,8 @@
 \end{exercise}
 
 \begin{sol}
-    $0^2 \equiv 0 \pmod 4$, $1^2 \equiv 1 \pmod 4$, $2^2 \equiv 0 \pmod 4$, and $3^2 \equiv 1 \pmod 4$.
+    By \exref{0.3.2}, we need only consider the integers $0$, $1$, $2$, and $3$.
+    By Theorem 0.3, $\bar{a}^2 = \bar{a^2}$, so $0^2 \equiv 0 \pmod 4$, $1^2 \equiv 1 \pmod 4$, $2^2 \equiv 0 \pmod 4$, and $3^2 \equiv 1 \pmod 4$.
 \end{sol}
 
 \begin{exercise}{0.3.7}
@@ -106,24 +104,25 @@
 \end{exercise}
 
 \begin{sol}
-    By \exref{0.3.6}, $a^2$ and $b^2$ are either 0 or 1 mod 4, so their sum cannot be 3 mod 4.
+    By \exref{0.3.6} and Theorem 0.3, $a^2 + b^2 \equiv 0$, $1$, or $2 \pmod 4$, so it can never be congruent to $3 \pmod 4$.
 \end{sol}
 
 \begin{exercise}{0.3.8}
     Prove that the equation $a^2 + b^2 = 3c^2$ has no solutions in nonzero integers $a, b$ and $c$.
     
-    \hint{Consider the equation mod 4 as in the previous two exercises and show that $a, b$ and $c$ would all have to be divisible by $2$.
+    \hint{Consider the equation $\pmod{4}$ as in the previous two exercises and show that $a, b$ and $c$ would all have to be divisible by $2$.
 	Then each of $a^2, b^2$ and $c^2$ has a factor of $4$ and by dividing through by $4$ show that there would be a smaller set of solutions to the original equation.
 	Iterate to reach a contradiction.}
 \end{exercise}
 
 \begin{sol}
-    Considering the equation modulo 4, we know that $a^2 + b^2 \equiv 0, 1, 2 \pmod 4$ by \exref{0.3.7}, but $3c^2 \equiv 0, 3 \pmod 4$ by \exref{0.3.6}.
-    Hence, both sides must be congruent to 0 mod 4.
+    Consider the equation $\pmod 4$.
+    By \exref{0.3.7} and \exref{0.3.6}, $a^2 + b^2 \equiv 0$, $1$, or $2 \pmod 4$, while $3c^2 \equiv 0$ or $3 \pmod 4$.
+    Hence, both sides must be congruent to $0 \pmod 4$.
     Since $3c^2 \equiv 0 \pmod 4$, we have $c^2 \equiv 0 \pmod 4$, so that $c$ is even.
-    Then $3c^2$ has a factor of 4, so that $a^2 + b^2$ has a factor of 4, and hence both $a$ and $b$ are even.
-    Divide each of $a, b$ and $c$ by 2 to get a smaller solution to the original equation.
-    By infinite descent, we can iterate the process to obtain no solution in nonzero integers $a, b$ and $c$.
+    Since $a^2$ and $b^2$ are $0$ or $1 \pmod 4$ by \exref{0.3.6}, $a^2 + b^2 \equiv 0 \pmod 4$ forces $a^2 \equiv b^2 \equiv 0 \pmod 4$, whence $a$ and $b$ are even.
+    Divide each of $a$, $b$, and $c$ by $2$ to get a smaller solution to the original equation.
+    Iterating this process leads to a sequence of strictly positive and decreasing integers $|c| > |c|/2 > |c|/4 > \dots$, which is impossible.
 \end{sol}
 
 \begin{exercise}{0.3.9}
@@ -132,7 +131,7 @@
 
 \begin{sol}
     Put $a = 2k + 1$ for $k \in \zbb$.
-	Then $a^2 = 4k(k + 1) + 1 \equiv 1 \pmod 8$ since $k(k + 1)$ is always even.
+	Then $a^2 = 4k(k + 1) + 1 \equiv 1 \pmod 8$ since $k(k + 1)$ is even.
 \end{sol}
 
 \begin{spex}{0.3.10}
@@ -140,16 +139,7 @@
 \end{spex}
 
 \begin{sol}[spsol]
-    Recall that $\phi(n)$ is the number of integers $a$ with $1 \leq a \leq n$ such that $(a, n) = 1$.
-    Hence, it suffices to show that $\bar a \in \units$ if and only if $(a, n) = 1$.
-    
-    \rightimp If $\bar a \in \units$, then there exists $\bar b \in \intmod$ such that $\bar a \cdot \bar b = \bar 1$.
-    Then $ab \equiv 1 \pmod n$ implies the existence of $k \in \zbb$ such that $ab - 1 = kn$, or $ab - kn = 1$.
-    Thus, $(a, n) = 1$.
-    
-    \leftimp By $(a, n) = 1$, there exists $x, y \in \zbb$ such that $ax + ny = 1$, or $ax = 1 - ny$.
-    We then have $ax \equiv 1 \pmod n$, so that $\bar a \cdot \bar x = \bar 1$.
-    Thus, $\bar a \in \units$.
+    By \exref{0.3.2}, $a \mapsto \bar a$ is a bijection from $\set{1, \ldots, n}$ to $\intmod$, so by Proposition 0.4, $|\units|$ is the number of integers $a$ with $1 \leq a \leq n$ such that $(a, n) = 1$, which is precisely $\phi(n)$.
 \end{sol}
 
 \begin{exercise}{0.3.11}
@@ -177,8 +167,8 @@
     \[
     	ab = a(n/d) = (a/d)n \equiv 0 \pmod n.
     \]
-    If there existed some $c \in \zbb$ such that $ac \equiv 1 \pmod n$, then $(ac)b \equiv b \pmod n$.
-	However, $ab \equiv 0 \pmod n$, so that $0 \equiv b \pmod n$, which is impossible since $1 \leq b < n$.
+    If there existed some $c \in \zbb$ such that $ac \equiv 1 \pmod n$, then $c(ab) \equiv b \pmod n$.
+	However, $ab \equiv 0 \pmod n$, so $0 \equiv b \pmod n$, which is impossible since $1 \leq b < n$.
 \end{sol}
 
 \begin{exercise}{0.3.13}
@@ -189,7 +179,7 @@
 \end{exercise}
 
 \begin{sol}
-    Since $(a, n) = 1$, there exists $c, x \in \zbb$ such that $ac + nx = 1$.
+    Since $(a, n) = 1$, there exist $c, x \in \zbb$ such that $ac + nx = 1$.
 	Then $ac \equiv 1 \pmod n$.
 \end{sol}
 
@@ -199,8 +189,12 @@
 \end{exercise}
 
 \begin{sol}
-    The previous two exercises show that $a$ and $n$ are relatively prime if and only if there exists $b$ such that $ab \equiv 1 \pmod n$, which is exactly the proposition.
-	For $n = 12$, the elements $1, 5, 7, 11$ are relatively prime to $12$, so that $\units[12] = \set{\bar 1, \bar 5, \bar 7, \bar{11}} $ whose inverses are $\bar 1, \bar 5, \bar 7, \bar{11}$ respectively. 
+    The previous two exercises show that $a$ and $n$ are relatively prime if and only if there exists $b$ such that $ab \equiv 1 \pmod n$.
+    Since $\bar a$ has a representative in $\set{1, \ldots, n}$ and coprimality does not depend on the choice of representative, $\bar a \in \units$ if and only if $(a, n) = 1$, which proves the proposition.
+
+	For $n = 12$, note that $\bar 2 \cdot \bar 6 = \bar 3 \cdot \bar 4 = \bar 8 \cdot \bar 3 = \bar 9 \cdot \bar 4 = \bar{10} \cdot \bar 6 = \bar 0$, so the classes $\bar 0, \bar 2, \bar 3, \bar 4, \bar 6, \bar 8, \bar 9, \bar{10}$ have no multiplicative inverse by \exref{0.3.12}.
+    Moreover, $1^2 \equiv 5^2 \equiv 7^2 \equiv 11^2 \equiv 1 \pmod{12}$, so $\bar 1, \bar 5, \bar 7, \bar{11}$ are their own multiplicative inverses.
+    Therefore, $\units[12] = \set{\bar 1, \bar 5, \bar 7, \bar{11}}$.
 \end{sol}
 
 \begin{exercise}{0.3.15}
@@ -214,13 +208,13 @@
 \end{exercise}
 
 \begin{sol}
-    We use the Euclidean Algorithm to find $x, y \in \zbb$ such that $ax + ny = 1$ for each pair $(a, n)$.
-	Then $ax \equiv 1 \pmod n$, and $x$ is the multiplicative inverse of $\bar a$ in $\intmod$.
+    We use the Euclidean Algorithm to find $x, y \in \zbb$ such that $ax + ny = 1$ for each pair, so that $(a, n) = 1$.
+	Then $ax \equiv 1 \pmod n$, and $\bar x$ is the multiplicative inverse of $\bar a$ in $\intmod$.
     \begin{subexercises}
-        \item 17.
-        \item 40.
-        \item 253.
-        \item 77695236753. \qedhere
+        \item $17$.
+        \item $40$.
+        \item $253$.
+        \item $77695236753$. \qedhere
     \end{subexercises}
 \end{sol}
 
