@@ -34,7 +34,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{sol}
 
 \begin{exercise}{4.5.3}
-	Use Sylow's Theorem to prove Cauchy's Theorem. (Note that we only used Cauchy's Theorem for Abelian groups--Proposition 3.21--in the proof of Sylow's Theorem, so this line of reasoning is not circular.)
+	Use Sylow's Theorem to prove Cauchy's Theorem. (Note that we only used Cauchy's Theorem for abelian groups--Proposition 3.21--in the proof of Sylow's Theorem, so this line of reasoning is not circular.)
 \end{exercise}
 
 \begin{sol}
@@ -42,7 +42,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 	By Sylow's Theorem, there exists some $P \in \syl_p(G)$ such that $|P| = p^n$.
 	Since $n \geq 1$, $P$ is non-trivial.
 	By Theorem 4.8, we know that the center $Z(P)$ is non-trivial.
-	Since $Z(P)$ is Abelian, by Proposition 3.21, there exists some element $x \in Z(P)$ such that $|x| = p$.
+	Since $Z(P)$ is abelian, by Proposition 3.21, there exists some element $x \in Z(P)$ such that $|x| = p$.
 	Therefore, $x \in G$ has order $p$.
 \end{sol}
 
@@ -528,7 +528,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 
 \begin{exercise}{4.5.26}
 	Let $G$ be a group of order 105.
-	Prove that if a Sylow 3-subgroup of $G$ is normal then $G$ is Abelian.
+	Prove that if a Sylow 3-subgroup of $G$ is normal then $G$ is abelian.
 \end{exercise}
 
 \begin{sol}
@@ -539,12 +539,12 @@ Let $G$ be a finite group and let $p$ be a prime.
 	This means that $P \leq Z(G)$, so that $Z(G)$ contains a Sylow 3-subgroup of $G$.
 	In particular, $|G/Z(G)| \leq |G/P| = 35$.
 	Since groups of order 35 are cyclic and $|G/Z(G)|$ divides 35, $G/Z(G)$ is cyclic.
-	By \exref{3.1.36}, then $G$ is Abelian.
+	By \exref{3.1.36}, then $G$ is abelian.
 \end{sol}
 
 \begin{exercise}{4.5.27}
 	Let $G$ be a group of order 315 which has a normal Sylow 3-subgroup.
-	Prove that $Z(G)$ contains a Sylow 3-subgroup of $G$, and deduce that $G$ is Abelian.
+	Prove that $Z(G)$ contains a Sylow 3-subgroup of $G$, and deduce that $G$ is abelian.
 \end{exercise}
 
 \begin{sol}
@@ -557,13 +557,13 @@ Let $G$ be a finite group and let $p$ be a prime.
 	This means that $P \leq Z(G)$, so that $Z(G)$ contains a Sylow 3-subgroup of $G$.
 	In particular, $|G/Z(G)| \leq |G/P| = 35$.
 	Since groups of order 35 are cyclic and $|G/Z(G)|$ divides 35, $G/Z(G)$ is cyclic.
-	By \exref{3.1.36}, then $G$ is Abelian.
+	By \exref{3.1.36}, then $G$ is abelian.
 \end{sol}
 
 \begin{exercise}{4.5.28}
 	Let $G$ be a group of order 1575.
 	Prove that if a Sylow 3-subgroup of $G$ is normal, then a Sylow 5-subgroup and a Sylow 7-subgroup are normal.
-	In this situation prove that $G$ is Abelian.
+	In this situation prove that $G$ is abelian.
 \end{exercise}
 
 \begin{sol}
@@ -579,15 +579,15 @@ Let $G$ be a finite group and let $p$ be a prime.
 	Since $|G : N_G(Q)|$ divides $|G : PQ| = 7$ so that $n_5(G) = 1$.
 	We may use similar reasoning to show that $n_7(G) = 1$ as well.
 	Therefore, there is a normal Sylow 5-subgroup and a normal Sylow 7-subgroup in $G$.
-	Moreover, it is easy to see that the subgroups $P, Q$, and $R$ are all Abelian since $p^2$-order groups are Abelian, and $R$ has prime order hence it is cyclic.
+	Moreover, it is easy to see that the subgroups $P, Q$, and $R$ are all abelian since $p^2$-order groups are abelian, and $R$ has prime order hence it is cyclic.
 
 	Observe that the pairwise intersections of $P, Q$, and $R$ are trivial since their orders are pairwise relatively prime.
 	Then $PQR \leq G$ and $|PQR| = 3^2 \cdot 5^2 \cdot 7 = |G|$, so that $G = PQR$.
-	Since $P, Q$, and $R$ are all Abelian, $G$ is Abelian as well.
+	Since $P, Q$, and $R$ are all abelian, $G$ is abelian as well.
 \end{sol}
 
 \begin{spex}{4.5.29}
-	If $G$ is a non-Abelian simple group of order $< 100$, prove that $G \cong A_5$. (Eliminate all orders but 60.)
+	If $G$ is a non-abelian simple group of order $< 100$, prove that $G \cong A_5$. (Eliminate all orders but 60.)
 \end{spex}
 
 \begin{sol}[spsol]
@@ -642,7 +642,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 	If $n_3 = 16$, we may use the same arguments as $|G| = 36$ or 90 to show a contradiction as well.
 	\end{itemize}
 	By Theorem 4.23, we know that simple groups of order 60 are isomorphic to $A_5$.
-	Therefore, if $G$ is a non-Abelian simple group of order less than 100, then $G \cong A_5$.
+	Therefore, if $G$ is a non-abelian simple group of order less than 100, then $G \cong A_5$.
 \end{sol}
 
 \begin{exercise}{4.5.30}
@@ -1034,26 +1034,26 @@ Let $G$ be a finite group and let $p$ be a prime.
 
 \begin{exercise}{4.5.45}
 	Find generators for a Sylow $p$-subgroup of $S_{2p}$, where $p$ is an odd prime.
-	Show that this is an Abelian group of order $p^2$.
+	Show that this is an abelian group of order $p^2$.
 \end{exercise}
 
 \begin{sol}
 	Utilizing the formula obtained from \exref{1.2.8}, the highest power of $p$ dividing $|S_{2p}|$ is $p^2$.
 	We can find a Sylow $p$-subgroup of $S_{2p}$ by considering the subgroup generated by the two disjoint $p$-cycles $\cyc{1 2 cdots p}$ and $\cyc{p + 1 p + 2 cdots 2p}$.
-	Since these two cycles are disjoint, they commute with each other, so that the subgroup generated by these two cycles is an Abelian group.
+	Since these two cycles are disjoint, they commute with each other, so that the subgroup generated by these two cycles is an abelian group.
 	Moreover, since each cycle has order $p$, the subgroup generated by these two cycles has order $p^2$.
 \end{sol}
 
 \begin{exercise}{4.5.46}
 	Find generators for a Sylow $p$-subgroup of $S_{p^2}$, where $p$ is a prime.
-	Show that this is a non-Abelian group of order $p^{p + 1}$.
+	Show that this is a non-abelian group of order $p^{p + 1}$.
 \end{exercise}
 
 \begin{sol}
 	Again, we may use \exref{1.2.8} to see that the highest power of $p$ dividing $|S_{p^2}|$ is $p^{p + 1}$.
 	To build the Sylow $p$-subgroup $P$, we note that $|P| = p^p p$, which suggest that we will need to construct two subgroups $A$ and $B$ of $P$ such that $|A| = p^p$, $|B| = p$, and $P = AB$.
 	Let $\alpha_i = \cyc{ip + 1 ip + 2 cdots ip + p}$ for $i = 0, 1, \ldots p - 1$.
-	It is clear that the $\alpha_i$ are pairwise disjoint $p$-cycles, hence $A = \gen{\alpha_0, \alpha_1, \ldots \alpha_{p - 1}}$ is an Abelian group of order $p^p$.
+	It is clear that the $\alpha_i$ are pairwise disjoint $p$-cycles, hence $A = \gen{\alpha_0, \alpha_1, \ldots \alpha_{p - 1}}$ is an abelian group of order $p^p$.
 
 	Consider the $p$-cycle
 	\[
@@ -1066,11 +1066,11 @@ Let $G$ be a finite group and let $p$ be a prime.
 	\]
 	where the indices are taken modulo $p$.
 	Equipped with $B = \gen\beta$, we see that $B$ normalizes $A$ since $\beta$ permutes the generators of $A$.
-	Moreover, $A \cap B = \set{1}$ since $A$ is an Abelian group of order $p^p$ and $B$ is a cyclic group of order $p$.
+	Moreover, $A \cap B = \set{1}$ since $A$ is an abelian group of order $p^p$ and $B$ is a cyclic group of order $p$.
 	It follows that $P = AB$ is a subgroup of $S_{p^2}$ of order $p^{p + 1}$, so that $P$ is a Sylow $p$-subgroup of $S_{p^2}$.
-	Finally, we show that $P$ is non-Abelian.
+	Finally, we show that $P$ is non-abelian.
 	Note that $\beta \alpha_0 \beta\inv = \alpha_1 \neq \alpha_0$, so that $\beta$ does not commute with $\alpha_0$.
-	Therefore, $P$ is non-Abelian.
+	Therefore, $P$ is non-abelian.
 \end{sol}
 
 \begin{exercise}{4.5.47}
@@ -1168,20 +1168,20 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{sol}
 
 \begin{exercise}{4.5.52}
-	Suppose $G$ is a finite simple group in which every proper subgroup is Abelian.
+	Suppose $G$ is a finite simple group in which every proper subgroup is abelian.
 	If $M$ and $N$ are distinct, maximal subgroups of $G$, prove that $M \cap N$ = 1. (See \exref{4.3.23}.)
 \end{exercise}
 
 \begin{sol}
 	Let $X = M \cap N$.
-	Because $M$ and $N$ are Abelian, then $X$ is Abelian.
+	Because $M$ and $N$ are abelian, then $X$ is abelian.
 	Moreover, $N_G(X)$ contains both $M$ and $N$ so that $N_G(X) = G$ and $X \nsub G$.
 	Simplicity of $G$ forces $X = 1$.
 	Therefore, $M \cap N = 1$.
 \end{sol}
 
 \begin{exercise}{4.5.53}
-	Use the preceding exercise to prove that if $G$ is any non-Abelian group in which every proper subgroup is Abelian then $G$ is not simple. (Let $G$ be a counterexample to this assertion and use \exref{4.3.24} to show that $G$ has more than one conjugacy class of maximal subgroups.
+	Use the preceding exercise to prove that if $G$ is any non-abelian group in which every proper subgroup is abelian then $G$ is not simple. (Let $G$ be a counterexample to this assertion and use \exref{4.3.24} to show that $G$ has more than one conjugacy class of maximal subgroups.
 	Use the method of \exref{4.3.23} to count the elements which lie in all conjugates of $M$ and $N$, where $M$ and $N$ are nonconjugate maximal subgroups of $G$; show that this gives more than $|G|$ elements.)
 \end{exercise}
 
@@ -1202,7 +1202,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 	This is a contradiction since $G$ is the union of its maximal subgroups.
 	Therefore, there are at least two distinct conjugacy classes of maximal subgroups of $G$.
 
-	Lastly, observe that $|M| \geq 2$ and $|N| \geq 2$ since $M$ and $N$ are non-Abelian.
+	Lastly, observe that $|M| \geq 2$ and $|N| \geq 2$ since $M$ and $N$ are non-abelian.
 	It follows that
 	\[
 		|G| - |G : M| - |G : N| = |G|\left(1 - \frac{1}{|M|} - \frac{1}{|N|}\right) \geq 0.
@@ -1218,14 +1218,14 @@ Let $G$ be a finite group and let $p$ be a prime.
 \begin{exercise}{4.5.54}
 	Prove the following classification: if $G$ is a finite group of order $p_1p_2 \cdots p_r$ where the $p_i$'s are distinct primes such that $p_i$ does not divide $p_j - 1$ for all $i$ and $j$, then $G$ is cyclic. (By induction, every proper subgroup of $G$ is cyclic, so $G$ is not simple by the preceding exercise.
 	If $N$ is a non-trivial proper normal subgroup, $N$ is cyclic and $G/N$ acts as automorphisms of $N$.
-	Use Proposition 16 to show that $N \leq Z(G)$ and use induction to show $G/Z(G)$ is cyclic, hence $G$ is Abelian by \exref{3.1.36}.)
+	Use Proposition 16 to show that $N \leq Z(G)$ and use induction to show $G/Z(G)$ is cyclic, hence $G$ is abelian by \exref{3.1.36}.)
 \end{exercise}
 
 \begin{sol}
 	We proceed by induction on $r$.
 	For $r = 1$, then $|G| = p_1$ which implies that $G$ is cyclic.
 
-	Assume by way of contradiction that $G$ is not Abelian.
+	Assume by way of contradiction that $G$ is not abelian.
 	By \exref{4.5.53}, $G$ is not simple.
 	Let $N$ be a non-trivial normal subgroup of $G$ with $|N| = q_1q_2 \cdots q_s$ are primes from $p_1, p_2, \ldots, p_r$.
 	Moreover, $N$ is cyclic by the inductive hypothesis.
@@ -1238,8 +1238,8 @@ Let $G$ be a finite group and let $p$ be a prime.
 	By definition, we have that no $p_i$ divides any of $q_i - 1$, hence $\ker\psi = G$.
 	It follows that $G$ acts trivially on $N$, so that $N \leq Z(G)$.
 	We then see that $G/Z(G)$ is cyclic by the inductive hypothesis since $|G/Z(G)|$ divides $|G|$.
-	By \exref{3.1.36}, $G$ is Abelian, which is a contradiction.
-	Therefore, $G$ is Abelian.
+	By \exref{3.1.36}, $G$ is abelian, which is a contradiction.
+	Therefore, $G$ is abelian.
 
 	Finally, we show that $G$ is cyclic.
 	Let $g_i$ be a generator of the Sylow $p_i$-subgroup of $G$ for each $i$.
@@ -1259,7 +1259,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 	Note that $\intmod[p] \times \intmod[p]$ is a non-cyclic group of order $p^2$, since every non-identity element of $\intmod[p]$ has order $p$.
 	If $G$ were cyclic, then the isomorphic copy of $\intmod[p] \times \intmod[p]$ in $G$, namely $\intmod[p] \times \intmod[p] \times \set{0}$, would also be cyclic, which is a contradiction.
 	Therefore, $\intmod[p] \times \intmod[p] \times \intmod[m]$ is a non-cyclic group of order $n$.
-		\item By the text, if $p \mid q - 1$, then there exists a non-Abelian group of order $pq$.
+		\item By the text, if $p \mid q - 1$, then there exists a non-abelian group of order $pq$.
 	Let $H$ be such a group, and let $m$ be an integer such that $n = pqm$, and $(pq, m) = 1$.
 	Consider the group $H \times \intmod[m]$.
 	Using similar reasoning as in the previous case, $(H \times \set 0) \cong H$ is a non-cyclic subgroup of $H \times \intmod[m]$, so that $H \times \intmod[m]$ is a non-cyclic group of order $n$. \qedhere
@@ -1267,16 +1267,16 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{sol}
 
 \begin{exercise}{4.5.56}
-	If $G$ is a finite group in which every proper subgroup is Abelian, show that $G$ is solvable.
+	If $G$ is a finite group in which every proper subgroup is abelian, show that $G$ is solvable.
 \end{exercise}
 
 \begin{sol}
 	We proceed by induction on $|G|$.
-	If $G$ is Abelian, then $G$ is solvable.
+	If $G$ is abelian, then $G$ is solvable.
 	Assume that the hypothesis holds for all groups of order less than $|G|$.
 	If $G$ is not simple, then there exists some non-trivial normal subgroup $N$ of $G$.
-	Since $N$ and $G/N$ are both groups in which every proper subgroup is Abelian (specifically, $G/N$ has every proper subgroup Abelian because each $H/N \leq G/N$ has some $H \leq G$ that is Abelian, by hypothesis), by the inductive hypothesis, $N$ and $G/N$ are solvable.
+	Since $N$ and $G/N$ are both groups in which every proper subgroup is abelian (specifically, $G/N$ has every proper subgroup abelian because each $H/N \leq G/N$ has some $H \leq G$ that is abelian, by hypothesis), by the inductive hypothesis, $N$ and $G/N$ are solvable.
 	It follows that $G$ is solvable as well.
-	If $G$ is simple, then by \exref{4.5.53}, $G$ is Abelian, hence solvable.
+	If $G$ is simple, then by \exref{4.5.53}, $G$ is abelian, hence solvable.
 	Therefore, in either case, $G$ is solvable.
 \end{sol}

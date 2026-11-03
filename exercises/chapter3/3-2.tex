@@ -54,18 +54,18 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}{3.2.4}
-    Show that if $|G| = pq$ for some primes $p$ and $q$ (not necessarily distinct) then either $G$ is Abelian or $Z(G) = 1$. [See \exref{3.1.36}.]
+    Show that if $|G| = pq$ for some primes $p$ and $q$ (not necessarily distinct) then either $G$ is abelian or $Z(G) = 1$. [See \exref{3.1.36}.]
 \end{exercise}
 
 \begin{sol}
-    If $G$ is Abelian, then we are done.
-	Suppose $G$ is not Abelian, so that $Z(G)$ is a proper subgroup of $G$.
+    If $G$ is abelian, then we are done.
+	Suppose $G$ is not abelian, so that $Z(G)$ is a proper subgroup of $G$.
 	Suppose $Z(G) \neq 1$.
 	By Lagrange's Theorem, the possible orders of $Z(G)$ are $p$ or $q$.
 	Without loss of generality, assume $|Z(G)| = p$.
 	Then $|G/Z(G)| = |G|/|Z(G)| = pq/p = q$, which is prime.
 	By Corollary 3.10, $G/Z(G) \cong Z_q$, which is cyclic.
-	By \exref{3.1.36}, $G$ is Abelian, a contradiction.
+	By \exref{3.1.36}, $G$ is abelian, a contradiction.
 	Hence, $Z(G) = 1$.
 \end{sol}
 
@@ -388,7 +388,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{spex}{3.2.20}
-    If $A$ is an Abelian group with $A \nsub G$ and $B$ is any subgroup of $G$ prove that $A \cap B \nsub AB$.
+    If $A$ is an abelian group with $A \nsub G$ and $B$ is any subgroup of $G$ prove that $A \cap B \nsub AB$.
 \end{spex}
 
 \begin{sol}[spsol]
@@ -398,7 +398,7 @@ Let $G$ be a group.
     	(ab)(x)(ab)\inv = a(bxb\inv)a\inv
     \]
     Since $A \nsub G$, $bxb\inv \in A$.
-	Moreover, since $A$ is Abelian, $a(bxb\inv)a\inv = bxb\inv \in A$.
+	Moreover, since $A$ is abelian, $a(bxb\inv)a\inv = bxb\inv \in A$.
 	Also, since $x, b \in B$ and $B \leq G$, $bxb\inv \in B$.
 	It follows that $(ab)x(ab)\inv \in A \cap B$, hence $A \cap B \nsub AB$.
 \end{sol}

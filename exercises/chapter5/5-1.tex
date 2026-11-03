@@ -1,4 +1,4 @@
-\section{Direct and Semidirect Products and Abelian Groups}
+\section{Direct and Semidirect Products and abelian Groups}
 
 \subsection{Direct Products}
 
@@ -7,7 +7,7 @@
     \[
     	Z(G_1 \times G_2 \times \cdots \times G_n) = Z(G_1) \times Z(G_2) \times \cdots \times Z(G_n)
     \]
-    Deduce that the direct product of two groups is Abelian if and only if each of the factors is Abelian.
+    Deduce that the direct product of two groups is abelian if and only if each of the factors is abelian.
 \end{exercise}
 
 \begin{sol}
@@ -27,8 +27,8 @@
     \]
     Thus, $z \in Z(G)$, and we have shown that $Z(G_1) \times Z(G_2) \times \cdots \times Z(G_n) \subseteq Z(G)$.
 
-    In particular, if two groups $G_1$ and $G_2$ are Abelian, then $Z(G_1) = G_1$ and $Z(G_2) = G_2$, so $Z(G_1 \times G_2) = Z(G_1) \times Z(G_2) = G_1 \times G_2$, which is Abelian.
-    Conversely, if $G_1 \times G_2$ is Abelian, then $Z(G_1 \times G_2) = G_1 \times G_2$, so $Z(G_1) \times Z(G_2) = G_1 \times G_2$, which implies that $Z(G_1) = G_1$ and $Z(G_2) = G_2$, so both $G_1$ and $G_2$ are Abelian.
+    In particular, if two groups $G_1$ and $G_2$ are abelian, then $Z(G_1) = G_1$ and $Z(G_2) = G_2$, so $Z(G_1 \times G_2) = Z(G_1) \times Z(G_2) = G_1 \times G_2$, which is abelian.
+    Conversely, if $G_1 \times G_2$ is abelian, then $Z(G_1 \times G_2) = G_1 \times G_2$, so $Z(G_1) \times Z(G_2) = G_1 \times G_2$, which implies that $Z(G_1) = G_1$ and $Z(G_2) = G_2$, so both $G_1$ and $G_2$ are abelian.
 \end{sol}
 
 \begin{exercise}{5.1.2}
@@ -117,7 +117,7 @@
 \end{exercise}
 
 \begin{sol}
-    Note that $Q_8$ is non-Abelian, so we may use the idea of a diagonal subgroup from \exref{3.1.38}.
+    Note that $Q_8$ is non-abelian, so we may use the idea of a diagonal subgroup from \exref{3.1.38}.
 	In particular, let $H = \gen{(i, 1)} = \set{(1, 0), (i, 1), (-1, 2), (-i, 3)}$.
 	Then $H$ is a subgroup of $Q_8 \times Z_4$ that is isomorphic to $\gen{i}$.
 	However,
@@ -139,7 +139,7 @@
     \[
     	(x, y)(a, b)(x, y)\inv = (xax\inv, yby\inv) = (xax\inv, b),
     \]
-    where we used the fact that $E_{2^n}$ is Abelian.
+    where we used the fact that $E_{2^n}$ is abelian.
 	Since every subgroup of $Q_8$ is normal, we have $xax\inv \in \gen a$.
     Note that $xax\inv \neq a^2$, since $a^2$ is the unique element of order 2 in $Q_8$, and $xax\inv$ has the same order as $a$.
     Then either $xax\inv = a$ or $xax\inv = a\inv$.
@@ -232,7 +232,7 @@
 \begin{exercise}{5.1.10}
     Let $p$ be a prime.
 	Let $A$ and $B$ be two cyclic groups of order $p$ with generators $x$ and $y$ respectively.
-	Set $E = A \times B$ so that $E$ is the elementary Abelian group of order $p^2$: $E_{p^2}$ Prove that the distinct subgroups of $E$ of order $p$ are
+	Set $E = A \times B$ so that $E$ is the elementary abelian group of order $p^2$: $E_{p^2}$ Prove that the distinct subgroups of $E$ of order $p$ are
     \[
     	\langle x \rangle, \quad \langle xy \rangle, \quad \langle xy^2 \rangle, \quad \ldots, \quad \langle xy^{p-1} \rangle, \quad \langle y \rangle
     \]
@@ -250,7 +250,7 @@
 
 \begin{exercise}{5.1.11}
     Let $p$ be a prime, and let $n \in \zp$.
-	Find a formula for the number of subgroups of order $p$ in the elementary Abelian group $E_{p^n}$.
+	Find a formula for the number of subgroups of order $p$ in the elementary abelian group $E_{p^n}$.
 \end{exercise}
 
 \begin{sol}

@@ -78,11 +78,11 @@ Let $F$ be a field and let $n \in \zp$.
 \end{sol}
 
 \begin{exercise}{1.4.3}
-    Show that $\gl_2(\fbb_2)$ is non-Abelian.
+    Show that $\gl_2(\fbb_2)$ is non-abelian.
 \end{exercise}
 
 \begin{sol}
-    It is trivial to see that the following two matrices do not commute, hence $\gl_2(\fbb_2)$ is non-Abelian.
+    It is trivial to see that the following two matrices do not commute, hence $\gl_2(\fbb_2)$ is non-abelian.
     \[
         \begin{pmatrix}
             1 & 1 \\
@@ -151,15 +151,15 @@ Let $F$ be a field and let $n \in \zp$.
 \end{sol}
 
 \begin{exercise}{1.4.8}
-    Show that $\gl_n(F)$ is non-Abelian for any $n \geq 2$ and any $F$.
+    Show that $\gl_n(F)$ is non-abelian for any $n \geq 2$ and any $F$.
 \end{exercise}
 
 \begin{sol}
     Consider the subset $S = \set{0, 1}$ of $F$.
 	Then $\gl_n(S)$ is a subset of $\gl_n(F)$.
-    We induce on $n$ to show that $\gl_n(S)$ is non-Abelian for all $n \geq 2$.
-	For $n = 2$, we have $\gl_2(S)$ is non-Abelian by \exref{1.4.3}.
-	Suppose that $\gl_n(S)$ is non-Abelian for some $n \geq 2$.
+    We induce on $n$ to show that $\gl_n(S)$ is non-abelian for all $n \geq 2$.
+	For $n = 2$, we have $\gl_2(S)$ is non-abelian by \exref{1.4.3}.
+	Suppose that $\gl_n(S)$ is non-abelian for some $n \geq 2$.
 	Then there exist $A, B \in \gl_n(S)$ such that $AB \neq BA$.
 	Consider the matrices
     \[
@@ -176,9 +176,9 @@ Let $F$ be a field and let $n \in \zp$.
 	\]
     Observe that $A_0B_0$ contains $AB$ as a block matrix, while $B_0A_0$ contains $BA$ as a block matrix.
 	Since $AB \neq BA$, $A_0B_0 \neq B_0A_0$.
-	Hence, $\gl_{n + 1}(S)$ is non-Abelian.
-	By induction, $\gl_n(S)$ is non-Abelian for all $n \geq 2$.
-	Since $\gl_n(S) \subseteq \gl_n(F)$, $\gl_n(F)$ is non-Abelian for all $n \geq 2$.
+	Hence, $\gl_{n + 1}(S)$ is non-abelian.
+	By induction, $\gl_n(S)$ is non-abelian for all $n \geq 2$.
+	Since $\gl_n(S) \subseteq \gl_n(F)$, $\gl_n(F)$ is non-abelian for all $n \geq 2$.
 \end{sol}
 
 \begin{exercise}{1.4.9}
@@ -324,7 +324,7 @@ Let $F$ be a field and let $n \in \zp$.
     be elements of $H(F)$.
     \begin{subexercises}
         \item Compute the matrix product $XY$ and deduce that $H(F)$ is closed under matrix multiplication.
-	    Exhibit explicit matrices such that $XY \neq YX$ (so that $H(F)$ is always non-Abelian).
+	    Exhibit explicit matrices such that $XY \neq YX$ (so that $H(F)$ is always non-abelian).
         \item Find an explicit formula for the matrix inverse $X\inv$ and deduce that $H(F)$ is closed under inverses.
         \item Prove the associative law for $H(F)$ and deduce that $H(F)$ is a group of order $|F|^3$. (Do not assume that matrix multiplication is associative.)
         \item Find the order of each element of the finite group $H(\intmod[2])$.
@@ -373,7 +373,7 @@ Let $F$ be a field and let $n \in \zp$.
             0 & 0 & 1
         \end{pmatrix} = YX,
     \]
-    so that $H(F)$ is non-Abelian.
+    so that $H(F)$ is non-abelian.
     \item From part (a), we know $G$ is closed under matrix multiplication.
 	For ease of notation, represent a matrix as a tuple: $X = (a, b, c)$ and $Y = (d, e, f)$.
 	Then we may represent matrix multiplication in $H(F)$ as

@@ -57,32 +57,32 @@
 \end{sol}
 
 \begin{exercise}{1.6.3}
-    If $\phi : G \to H$ is an isomorphism, prove that $G$ is Abelian if and only if $H$ is Abelian.
-	If $\phi : G \to H$ is a homomorphism, what additional conditions on $\phi$ (if any) are sufficient to ensure that if $G$ is Abelian, then so is $H$?
+    If $\phi : G \to H$ is an isomorphism, prove that $G$ is abelian if and only if $H$ is abelian.
+	If $\phi : G \to H$ is a homomorphism, what additional conditions on $\phi$ (if any) are sufficient to ensure that if $G$ is abelian, then so is $H$?
 \end{exercise}
 
 \begin{sol}
     Note that $\phi$ is bijective, hence $\phi\inv$ exists and is also an isomorphism.
 
-    \rightimp Suppose that $G$ is Abelian.
+    \rightimp Suppose that $G$ is abelian.
     Given $h_1, h_2 \in H$, there exist $g_1, g_2 \in G$ such that $\phi(g_1) = h_1$ and $\phi(g_2) = h_2$.
     Then
     \[
         h_1h_2 = \phi(g_1)\phi(g_2) = \phi(g_1g_2) = \phi(g_2g_1) = \phi(g_2)\phi(g_1) = h_2h_1,
     \]
-    so that $H$ is Abelian.
+    so that $H$ is abelian.
 
-    \leftimp Suppose that $H$ is Abelian.
+    \leftimp Suppose that $H$ is abelian.
     Given $g_1, g_2 \in G$, there exist $h_1, h_2 \in H$ such that $\phi\inv(h_1) = g_1$ and $\phi\inv(h_2) = g_2$.
     Then
     \[
         g_1g_2 = \phi\inv(h_1)\phi\inv(h_2) = \phi\inv(h_1h_2) = \phi\inv(h_2h_1) = \phi\inv(h_2)\phi\inv(h_1) = g_2g_1,
     \]
-    so that $G$ is Abelian.
+    so that $G$ is abelian.
     
     Let $\phi : G \to H$ be a homomorphism.
 	In the \rightimp direction, observe that the only property of $\phi$ used was its surjectivity to guarantee the existence of $g_1$ and $g_2$ such that $\phi(g_1) = h_1$ and $\phi(g_2) = h_2$.
-	Hence, if $\phi$ is surjective, then $H$ is Abelian whenever $G$ is Abelian.
+	Hence, if $\phi$ is surjective, then $H$ is abelian whenever $G$ is abelian.
 \end{sol}
 
 \begin{exercise}{1.6.4}
@@ -327,7 +327,7 @@
 
 \begin{exercise}{1.6.17}
     Let $G$ be any group.
-	Prove that the map from $G$ to itself defined by $g \mapsto g^{-1}$ is a homomorphism if and only if $G$ is Abelian.
+	Prove that the map from $G$ to itself defined by $g \mapsto g^{-1}$ is a homomorphism if and only if $G$ is abelian.
 \end{exercise}
 
 \begin{soliff}
@@ -336,9 +336,9 @@
     \[
         gh = (h\inv g\inv)\inv = \phi(h\inv g\inv) = \phi(h\inv)\phi(g\inv) = hg,
     \]
-    so $G$ is Abelian.
+    so $G$ is abelian.
     
-    \leftimp Suppose $G$ is Abelian.
+    \leftimp Suppose $G$ is abelian.
 	Then for $g, h \in G$, we have
     \[
     	\phi(gh) = (gh)\inv = h\inv g\inv = g\inv h\inv = \phi(g)\phi(h),
@@ -348,7 +348,7 @@
 
 \begin{exercise}{1.6.18}
     Let $G$ be any group.
-	Prove that the map from $G$ to itself defined by $g \mapsto g^2$ is a homomorphism if and only if $G$ is Abelian.
+	Prove that the map from $G$ to itself defined by $g \mapsto g^2$ is a homomorphism if and only if $G$ is abelian.
 \end{exercise}
 
 \begin{sol}
@@ -361,7 +361,7 @@
 \end{exercise}
 
 \begin{sol}
-    Since $G \subseteq \cbb$, $G$ is Abelian.
+    Since $G \subseteq \cbb$, $G$ is abelian.
 	Let $\phi : z \to z^k$.
 	Hence, for any $z, w \in G$, we have
     \[
@@ -417,7 +417,7 @@
 \end{sol}
 
 \begin{exercise}{1.6.22}
-    Let $A$ be an Abelian group and fix some $k \in \zbb$.
+    Let $A$ be an abelian group and fix some $k \in \zbb$.
 	Prove that the map $a \mapsto a^k$ is a homomorphism from $A$ to itself.
 	If $k = -1$ prove that this homomorphism is an isomorphism (i.e., is an automorphism of $A$).
 \end{exercise}
@@ -434,7 +434,7 @@
 
 \begin{spex}{1.6.23}
     Let $G$ be a finite group which possesses an automorphism $\sigma$ such that $\sigma(g) = g$ if and only if $g = 1$.
-	If $\sigma^2$ is the identity map from $G$ to $G$, prove that $G$ is Abelian (such an automorphism $\sigma$ is called \textbf{fixed point free} of order 2).
+	If $\sigma^2$ is the identity map from $G$ to $G$, prove that $G$ is abelian (such an automorphism $\sigma$ is called \textbf{fixed point free} of order 2).
 
     \hint{Show that every element of $G$ can be written in the form $x^{-1}\sigma(x)$ and apply $\sigma$ to such an expression.}
 \end{spex}
@@ -460,7 +460,7 @@
     \[
     	\sigma(gh) = (gh)\inv = h\inv g\inv = \sigma(h) \sigma(g) = \sigma(hg).
     \]
-    Since $\sigma$ is injective, $gh = hg$ and $G$ is Abelian.
+    Since $\sigma$ is injective, $gh = hg$ and $G$ is abelian.
 \end{sol}
 
 \begin{exercise}{1.6.24}

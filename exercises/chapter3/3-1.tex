@@ -48,9 +48,9 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{exercise}{3.1.3}
-    Let $A$ be an Abelian group and let $B$ be a subgroup of $A$.
-	Prove that $A/B$ is Abelian.
-	Give an example of a non-Abelian group $G$ containing a proper normal subgroup $N$ such that $G/N$ is Abelian.
+    Let $A$ be an abelian group and let $B$ be a subgroup of $A$.
+	Prove that $A/B$ is abelian.
+	Give an example of a non-abelian group $G$ containing a proper normal subgroup $N$ such that $G/N$ is abelian.
 \end{exercise}
 
 \begin{sol}
@@ -59,11 +59,11 @@ Let $G$ and $H$ be groups.
     \[
     	(aB)(a'B) = (aa')B = (a'a)B = (a'B)(aB)
     \]
-    so that $A/B$ is Abelian.
+    so that $A/B$ is abelian.
 
-    To obtain Abelian quotient groups, consider non-Abelian groups and their centers.
+    To obtain abelian quotient groups, consider non-abelian groups and their centers.
 	Put $G = D_8$ and $N = Z(D_8) = \gen{r^2}$.
-	Then $G/N \cong V_4$ is Abelian.
+	Then $G/N \cong V_4$ is abelian.
 \end{sol}
 
 \begin{exercise}{3.1.4}
@@ -431,12 +431,12 @@ Let $G$ and $H$ be groups.
 \end{solenum}
 
 \begin{exercise}{3.1.15}
-    Prove that a quotient of a divisible Abelian group by any proper subgroup is also divisible.
+    Prove that a quotient of a divisible abelian group by any proper subgroup is also divisible.
 	Deduce that $\qbb/\zbb$ is divisible (cf. \exref{2.4.19}).
 \end{exercise}
 
 \begin{sol}
-    Since $A$ is Abelian, any proper subgroup $B$ of $A$ is normal.
+    Since $A$ is abelian, any proper subgroup $B$ of $A$ is normal.
 	To that end, let $aB \in A/B$, and let $n \in \zp$.
 	Since $A$ is divisible, there exists some $x \in A$ such that $x^n = a$.
 	Then
@@ -583,7 +583,7 @@ Let $G$ and $H$ be groups.
         \item Exhibit each element of $\bar{G}$ in the form $\bar{u}^a \bar{v}^b$, for some integers $a$ and $b$.
         \item Find the order of each of the elements of $\bar{G}$ exhibited in (b).
         \item Write each of the following elements of $\bar{G}$ in the form $\bar{u}^a \bar{v}^b$, for some integers $a$ and $b$ as in (b): $\bar{vu}$, $\bar{uv^{-2}u}$, $\bar{u\inv v\inv uv}$.
-        \item Prove that $\bar{G}$ is Abelian and is isomorphic to $Z_2 \times Z_4$.
+        \item Prove that $\bar{G}$ is abelian and is isomorphic to $Z_2 \times Z_4$.
     \end{subexercises}
 \end{exercise}
 
@@ -606,7 +606,7 @@ Let $G$ and $H$ be groups.
         \end{array}
     \]
     \item $\bar{vu} = \bar{uv^5} = \bar{uv},\; \bar{uv^{-2}u} = \bar{v^2},\; \bar{u\inv v\inv uv} = \bar{v^2}$.
-    \item Since $\bar{vu} = \bar{uv^5} = \bar{uv}$, $\bar G$ is Abelian.
+    \item Since $\bar{vu} = \bar{uv^5} = \bar{uv}$, $\bar G$ is abelian.
 	Moreover, using the presentation of $Z_2 \times Z_4$ in \exref{2.5.12}, we see that $\bar u^2 = \bar v^4 = 1$ so that $\bar G$ satisfies the same relations.
 	Then $\phi : \bar G \to Z_2 \times Z_4$ given by $\phi(\bar u) = a$ and $\phi(\bar v) = b$ is a surjective homomorphism, hence $\bar G \cong Z_2 \times Z_4$.
 \end{solenum}
@@ -645,7 +645,7 @@ Let $G$ and $H$ be groups.
     \[
     	G = \gen{x, y \mid x^4 = y^4 = 1, xy = yx}
     \]
-    Let $\bar G = G/\gen{x^2y^2}$ (note that every subgroup of the Abelian group $G$ is normal).
+    Let $\bar G = G/\gen{x^2y^2}$ (note that every subgroup of the abelian group $G$ is normal).
     \begin{subexercises}
         \item Show that the order of $\bar G$ is 8.
         \item Exhibit each element of $\bar G$ in the form $\bar x^a \bar y^b$ for some integers $a$ and $b$.
@@ -1072,7 +1072,7 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{exercise}{3.1.36} 
-    Prove that if $G/Z(G)$ is cyclic then $G$ is Abelian. [If $G/Z(G)$ is cyclic with generator $xZ(G)$, show that every element of $G$ can be written in the form $x^a z$ for some integer $a \in \zbb$ and some element $z \in Z(G)$.]
+    Prove that if $G/Z(G)$ is cyclic then $G$ is abelian. [If $G/Z(G)$ is cyclic with generator $xZ(G)$, show that every element of $G$ can be written in the form $x^a z$ for some integer $a \in \zbb$ and some element $z \in Z(G)$.]
 \end{exercise}
 
 \begin{sol}
@@ -1087,7 +1087,7 @@ Let $G$ and $H$ be groups.
     	gh = (x^a z_1)(x^b z_2) = (x^b z_2)(x^a z_1) = hg
     \]
     since $z_1, z_2 \in Z(G)$.
-	Hence, $G$ is Abelian.
+	Hence, $G$ is abelian.
 \end{sol}
 
 \begin{exercise}{3.1.37}
@@ -1122,12 +1122,12 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{exercise}{3.1.38}
-    Let $A$ be an Abelian group and let $D$ be the (diagonal) subgroup $\set{(a,a) \mid a \in A}$ of $A \times A$.
+    Let $A$ be an abelian group and let $D$ be the (diagonal) subgroup $\set{(a,a) \mid a \in A}$ of $A \times A$.
 	Prove that $D$ is a normal subgroup of $A \times A$ and $(A \times A)/D \cong A$.
 \end{exercise}
 
 \begin{sol}
-    By \exref{1.1.29}, $A \times A$ is Abelian since $A$ is Abelian, hence every subgroup of $A \times A$ is normal, including $D$.
+    By \exref{1.1.29}, $A \times A$ is abelian since $A$ is abelian, hence every subgroup of $A \times A$ is normal, including $D$.
 
     Let $\phi : (A \times A)/D \to A$ be given by $\phi((a, b)D) = ab\inv$.
 	To show that this is well-defined, suppose $(a_1, b_1)D = (a_2, b_2)D$.
@@ -1144,7 +1144,7 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{exercise}{3.1.39}
-    Suppose $A$ is the non-Abelian group $S_3$ and $D$ is the diagonal subgroup $\set{(a,a) \mid a \in A}$ of $A \times A$.
+    Suppose $A$ is the non-abelian group $S_3$ and $D$ is the diagonal subgroup $\set{(a,a) \mid a \in A}$ of $A \times A$.
 	Prove that $D$ is not normal in $A \times A$.
 \end{exercise}
 
@@ -1173,7 +1173,7 @@ Let $G$ and $H$ be groups.
 
 \begin{spex}{3.1.41}
     Let $G$ be a group.
-	Prove that $N = \langle x\inv y\inv xy \mid x,y \in G \rangle$ is a normal subgroup of $G$ and $G/N$ is Abelian ($N$ is called the \emph{commutator} subgroup of $G$).
+	Prove that $N = \langle x\inv y\inv xy \mid x,y \in G \rangle$ is a normal subgroup of $G$ and $G/N$ is abelian ($N$ is called the \emph{commutator} subgroup of $G$).
 \end{spex}
 
 \begin{sol}[spsol]
@@ -1185,7 +1185,7 @@ Let $G$ and $H$ be groups.
     so that $g[x, y]g\inv = [gxg\inv, gyg\inv] \in N$.
 	Then $gNg\inv \subseteq N$, hence $N \nsub G$.
     
-    $G/N$ is Abelian, since the previous exercise shows that $\bar x$ and $\bar y$ in $G/N$ commute when $[x, y] \in N$.
+    $G/N$ is abelian, since the previous exercise shows that $\bar x$ and $\bar y$ in $G/N$ commute when $[x, y] \in N$.
 \end{sol}
 
 \begin{exercise}{3.1.42}

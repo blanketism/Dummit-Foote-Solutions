@@ -136,9 +136,9 @@
 \end{sol}
 
 \begin{spex}{2.1.6}
-    Let $G$ be an Abelian group.
+    Let $G$ be an abelian group.
 	Prove that $\set{ g \in G \mid |g| < \infty }$ is a subgroup of $G$ (called the \textbf{torsion subgroup} of $G$).
-	Give an explicit example where this set is not a subgroup when $G$ is non-Abelian.
+	Give an explicit example where this set is not a subgroup when $G$ is non-abelian.
 \end{spex}
 
 \begin{sol}[spsol]
@@ -148,7 +148,7 @@
     \[
     	(gh\inv)^{mn} = g^{mn}(h\inv)^{mn} = (g^m)^n((h^n)\inv)^m = 1^n(1\inv)^m = 1,
     \]
-    where the first equality follows from $G$ being Abelian.
+    where the first equality follows from $G$ being abelian.
 	Then $|gh\inv| \leq mn$, hence $gh\inv \in \tor(G)$, and $\tor(G) \leq G$.
 
     Consider $G = \gl_2(\rbb)$ where
@@ -308,7 +308,7 @@
 \end{sol}
 
 \begin{exercise}{2.1.12}
-    Let $A$ be an Abelian group and fix some $n \in \zbb$.
+    Let $A$ be an abelian group and fix some $n \in \zbb$.
 	Prove that the following sets are subgroups of $A$.
     \begin{subexercises}
         \item $\set{ a^n \mid a \in A }$.
@@ -325,7 +325,7 @@
         \[
         	(a^n)(b^n)\inv = a^n b^{-n} = (ab\inv)^n \in B
         \]
-        where the last equality follows from the fact that $A$ is Abelian.
+        where the last equality follows from the fact that $A$ is abelian.
 	    Hence, $B \leq A$.
         \item Since $1^n = 1$, $1 \in B$ so that $B$ is nonempty.
         Suppose $a, b \in B$.
@@ -333,7 +333,7 @@
         \[
         	(ab\inv)^n = a^n (b\inv)^n = a^n (b^n)\inv = 1 \cdot 1\inv = 1
         \]
-        where the second equality follows from the fact that $A$ is Abelian.
+        where the second equality follows from the fact that $A$ is abelian.
         Hence, $B \leq A$. \qedhere
     \end{subexercises}
 \end{sol}

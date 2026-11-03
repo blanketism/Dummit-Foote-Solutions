@@ -16,12 +16,12 @@
 \end{sol}
 
 \begin{spex}{4.4.2}
-	Prove that if $G$ is an Abelian group of order $pq$, where $p$ and $q$ are distinct primes, then $G$ is cyclic. (Use Cauchy's Theorem to produce elements of order $p$ and $q$ and consider the order of their product.)
+	Prove that if $G$ is an abelian group of order $pq$, where $p$ and $q$ are distinct primes, then $G$ is cyclic. (Use Cauchy's Theorem to produce elements of order $p$ and $q$ and consider the order of their product.)
 \end{spex}
 
 \begin{sol}[spsol]
 	By Cauchy's Theorem, there are elements $g, h \in G$ such that $\abs g = p$ and $\abs h = q$.
-	Since $G$ is Abelian, we have $\abs{gh} = \lcm(\abs g, \abs h) = \lcm(p, q) = pq$.
+	Since $G$ is abelian, we have $\abs{gh} = \lcm(\abs g, \abs h) = \lcm(p, q) = pq$.
 	Therefore, $G = \gen{gh}$ is cyclic.
 \end{sol}
 
@@ -82,8 +82,8 @@
 	In particular, this holds for every $\phi_g \in \inn(G)$ so that $\phi_g(H) = gHg\inv = H$ for every $g \in G$.
 	Therefore, $H \nsub G$.
 
-	Consider the Abelian group $G = \intmod[2] \times \intmod[2]$.
-	Then every subgroup of $G$ is normal since $G$ is Abelian.
+	Consider the abelian group $G = \intmod[2] \times \intmod[2]$.
+	Then every subgroup of $G$ is normal since $G$ is abelian.
 	However, the subgroup $H = \set{(0,0), (1,0)}$ is not characteristic in $G$ since the automorphism $\sigma : G \to G$ defined by $\sigma((a,b)) = (b,a)$ sends $H$ to the distinct subgroup $\set{(0,0), (0,1)}$.
 	Therefore, $H$ is a normal subgroup of $G$ that is not characteristic.
 \end{sol}
@@ -125,7 +125,7 @@
 	\item Consider $A_4$.
 	Then $V_4 \cha A_4$ as shown previously.
 	Consider $H = \gen{\cyc{1 2}\cyc{3 4}} \leq V_4$.
-	Since $V_4$ is Abelian, $H \nsub V_4$.
+	Since $V_4$ is abelian, $H \nsub V_4$.
 	However, taking $\cyc{1 2 3} \in A_4$, we have
 	\[
 		\cyc{1 2 3}\cyc{1 2}\cyc{3 4}\cyc{3 2 1} = \cyc{1 4}\cyc{2 3} \notin H
@@ -144,9 +144,9 @@
 \end{sol}
 
 \begin{exercise}{4.4.10}
-	Let $G$ be a group, let $A$ be an Abelian normal subgroup of $G$, and write $\overline{G}=G/A$.
+	Let $G$ be a group, let $A$ be an abelian normal subgroup of $G$, and write $\overline{G}=G/A$.
 	Show that $\overline{G}$ acts (on the left) by conjugation on $A$ by $\bar g \cdot a = gag^{-1}$, where $g$ is any representative of the coset $\bar g$ (in particular, show that this action is well-defined).
-	Give an explicit example to show that this action is not well-defined if $A$ is non-Abelian.
+	Give an explicit example to show that this action is not well-defined if $A$ is non-abelian.
 \end{exercise}
 
 \begin{sol}
@@ -156,13 +156,13 @@
 	\[
 		\bar g \cdot a = gag\inv = ga a_0a_0\inv g\inv = ga_0a(ga_0)\inv = hah\inv = \bar h \cdot a
 	\]
-	since $A$ is Abelian.
+	since $A$ is abelian.
 	Therefore, the action is well-defined.
 
 	Consider $G = S_3$ and $A = S_3$ itself.
 	Then $\bar 1 = \bar{\cyc{1 2}}$ in $\bar G$.
 	However, for $a = \cyc{1 3}$, we have $\bar 1 \cdot a = a = \cyc{1 3}$ but, but $\bar{\cyc{1 2}} \cdot a = \cyc{1 2}\cyc{1 3}\cyc{1 2} = \cyc{2 3} \neq a$.
-	Therefore, the action is not well-defined if $A$ is non-Abelian.
+	Therefore, the action is not well-defined if $A$ is non-abelian.
 \end{sol}
 
 \begin{exercise}{4.4.11}
@@ -219,15 +219,15 @@
 \begin{exercise}{4.4.13}
 	Let $G$ be a group of order $203$.
 	Prove that if $H$ is a normal subgroup of order $7$ in $G$ then $H \le Z(G)$.
-	Deduce that $G$ is Abelian in this case.
+	Deduce that $G$ is abelian in this case.
 \end{exercise}
 
 \begin{sol}
 	Note that $203 = 7 \cdot 29$.
 	The proof of showing that $H \leq Z(G)$ is similar to the previous exercise.
-	To see that $G$ is Abelian, consider the quotient group $G/H$.
+	To see that $G$ is abelian, consider the quotient group $G/H$.
 	Since $|G/H| = 29$ is prime, $G/H$ is cyclic.
-	By \exref{3.1.36}, we have that $G$ is Abelian.
+	By \exref{3.1.36}, we have that $G$ is abelian.
 \end{sol}
 
 \begin{exercise}{4.4.14}
@@ -254,12 +254,12 @@
 
 	Observe that $|\units[9]| = |\units[18]| = 6$.
 	By \exref{4.2.10}, groups of order 6 are isomorphic to either $Z_6$ or $S_3$.
-	However, both groups are Abelian, so that $\units[9]$ and $\units[18]$ must be isomorphic to $Z_6$.
+	However, both groups are abelian, so that $\units[9]$ and $\units[18]$ must be isomorphic to $Z_6$.
 	Therefore, both groups are cyclic.
 \end{sol}
 
 \begin{spex}{4.4.16}
-	Prove that $\units[24]$ is an elementary Abelian group of order $8$. (We shall see later that $\units[n]$ is an elementary Abelian group if and only if $n \mid 24$.)
+	Prove that $\units[24]$ is an elementary abelian group of order $8$. (We shall see later that $\units[n]$ is an elementary abelian group if and only if $n \mid 24$.)
 \end{spex}
 
 \begin{sol}[spsol]
@@ -290,7 +290,7 @@
 	\]
 	Since one of $k$ or $k + 1$ is even, $4k(k + 1)$ is divisible by 8, so that $x^2 \equiv 1 \pmod 8$.
 	By the lemma above, we have $x^2 \equiv 1 \pmod 24$.
-	Therefore, every element of $\units[24]$ has order dividing 2, so that $\units[24]$ is an elementary Abelian group.
+	Therefore, every element of $\units[24]$ has order dividing 2, so that $\units[24]$ is an elementary abelian group.
 \end{sol}
 
 \begin{exercise}{4.4.17}
@@ -446,15 +446,15 @@
 
 \begin{spex}{4.4.20}
 	For any finite group $P$ let $d(P)$ be the minimum number of generators of $P$ (so, for example, $d(P)=1$ if and only if $P$ is a non-trivial cyclic group and $d(Q_8)=2$).
-	Let $m(P)$ be the maximum of the integers $d(A)$ as $A$ runs over all Abelian subgroups of $P$ (so, for example, $m(Q_8)=1$ and $m(D_8)=2$).
+	Let $m(P)$ be the maximum of the integers $d(A)$ as $A$ runs over all abelian subgroups of $P$ (so, for example, $m(Q_8)=1$ and $m(D_8)=2$).
 	Define
 	\[
-		J(P)=\langle A \mid A \text{ is an Abelian subgroup of } P \text{ with } d(A)=m(P)\rangle.
+		J(P)=\langle A \mid A \text{ is an abelian subgroup of } P \text{ with } d(A)=m(P)\rangle.
 	\]
 	($J(P)$ is called the \emph{Thompson subgroup} of $P$.)
 	\begin{subexercises}
 		\item Prove that $J(P)$ is a characteristic subgroup of $P$.
-		\item For each of the following groups $P$, list all Abelian subgroups $A$ of $P$ that satisfy $d(A)=m(P)$: $Q_8$, $D_8$, $D_{16}$, and $QD_{16}$ (where $QD_{16}$ is the quasidihedral group of order $16$ defined in \exref{2.5.11}). (Use the lattices of subgroups for these groups in Section 2.5.)
+		\item For each of the following groups $P$, list all abelian subgroups $A$ of $P$ that satisfy $d(A)=m(P)$: $Q_8$, $D_8$, $D_{16}$, and $QD_{16}$ (where $QD_{16}$ is the quasidihedral group of order $16$ defined in \exref{2.5.11}). (Use the lattices of subgroups for these groups in Section 2.5.)
 		\item Show that $J(Q_8)=Q_8$, $J(D_8)=D_8$, $J(D_{16})=D_{16}$, and $J(QD_{16})$ is a dihedral subgroup of order $8$ in $QD_{16}$.
 		\item Prove that if $Q\le P$ and $J(P)$ is a subgroup of $Q$, then $J(P)=J(Q)$.
 		Deduce that if $P$ is a subgroup (not necessarily normal) of the finite group $G$ and $J(P)$ is contained in some subgroup $Q$ of $P$ such that $Q \nsub G$, then $J(P) \nsub G$.
@@ -463,26 +463,26 @@
 
 \begin{solenum}[spsol]
 	\item Let $\sigma \in \aut(P)$.
-	Let $A$ be an Abelian subgroup of $P$ such that $d(A) = m(P)$.
-	Then $\sigma(A)$ is also an Abelian subgroup of $P$.
+	Let $A$ be an abelian subgroup of $P$ such that $d(A) = m(P)$.
+	Then $\sigma(A)$ is also an abelian subgroup of $P$.
 	Moreover, it is clear that $d(\sigma(A)) = d(A) = m(P)$.
 	Therefore, $\sigma(J(P)) = J(P)$, so that $J(P)$ is characteristic in $P$.
 	\item 
 	\begin{itemize}
-		\item $Q_8$: From the lattice, we see that every Abelian subgroup is cyclic so that $m(Q_8) = 1$.
-	The Abelian subgroups $A$ with $d(A) = 1$ are $\gen{i}$, $\gen{j}$, and $\gen{k}$.
-		\item $D_8$: From the lattice, we see that the Abelian subgroups with maximum number of generators are those isomorphic to $V_4$, hence $m(D_8) = 2$.
-	The Abelian subgroups $A$ with $d(A) = 2$ are $\gen{r^2, s}$ and $\gen{r^2, rs}$.
-		\item $D_{16}$: From the lattice, we see that the Abelian subgroups with maximum number of generators are those isomorphic to $V_4$, hence $m(D_{16}) = 2$.
-	The Abelian subgroups $A$ with $d(A) = 2$ are $\gen{r^4, s}$, $\gen{r^4, r^5s}$, $\gen{r^4, r^2s}$, and $\gen{r^4, r^3s}$.
-		\item $QD_{16}$: From the lattice, we see that the Abelian subgroups with maximum number of generators are those isomorphic to $V_4$, hence $m(QD_{16}) = 2$.
-	The Abelian subgroups $A$ with $d(A) = 2$ are $\gen{\tau\sigma^2, \sigma^4}$ and $\gen{\tau, \sigma^4}$.
+		\item $Q_8$: From the lattice, we see that every abelian subgroup is cyclic so that $m(Q_8) = 1$.
+	The abelian subgroups $A$ with $d(A) = 1$ are $\gen{i}$, $\gen{j}$, and $\gen{k}$.
+		\item $D_8$: From the lattice, we see that the abelian subgroups with maximum number of generators are those isomorphic to $V_4$, hence $m(D_8) = 2$.
+	The abelian subgroups $A$ with $d(A) = 2$ are $\gen{r^2, s}$ and $\gen{r^2, rs}$.
+		\item $D_{16}$: From the lattice, we see that the abelian subgroups with maximum number of generators are those isomorphic to $V_4$, hence $m(D_{16}) = 2$.
+	The abelian subgroups $A$ with $d(A) = 2$ are $\gen{r^4, s}$, $\gen{r^4, r^5s}$, $\gen{r^4, r^2s}$, and $\gen{r^4, r^3s}$.
+		\item $QD_{16}$: From the lattice, we see that the abelian subgroups with maximum number of generators are those isomorphic to $V_4$, hence $m(QD_{16}) = 2$.
+	The abelian subgroups $A$ with $d(A) = 2$ are $\gen{\tau\sigma^2, \sigma^4}$ and $\gen{\tau, \sigma^4}$.
 	\end{itemize}
 	\item 
 	\begin{itemize}
-		\item Any pair of the Abelian subgroups in (b) generate $Q_8$, so that $J(Q_8) = Q_8$.
+		\item Any pair of the abelian subgroups in (b) generate $Q_8$, so that $J(Q_8) = Q_8$.
 		\item Note that $r, s \in \gen{r^2, s} \cup \gen{r^2, rs}$, so that $J(D_8) = D_8$.
-		\item Note that $r^3 = r^3s \cdot s$ and $r = r^4 \cdot r^{-3}$ so that the join of all Abelian subgroups in (b) generates $D_{16}$.
+		\item Note that $r^3 = r^3s \cdot s$ and $r = r^4 \cdot r^{-3}$ so that the join of all abelian subgroups in (b) generates $D_{16}$.
 	Therefore, $J(D_{16}) = D_{16}$.
 		\item Observe that
 		\[
@@ -492,12 +492,12 @@
 	Since $\tau^2 = (\sigma^2)^4 = 1$, and $\sigma^2\tau = \tau\sigma^6$, the mapping $\phi : D_8 \to \gen{\sigma^2, \tau}$ defined by $\phi(r) = \sigma^2$ and $\phi(s) = \tau$ is an isomorphism.
 	Therefore, $J(QD_{16})$ is a dihedral subgroup of order 8 in $QD_{16}$.
 	\end{itemize}
-	\item Note that any Abelian subgroup of $Q$ is also an Abelian subgroup of $P$.
+	\item Note that any abelian subgroup of $Q$ is also an abelian subgroup of $P$.
 	Therefore, $m(Q) \leq m(P)$.
-	Since $J(P) \leq Q$, every Abelian subgroup $A$ of $P$ with $d(A) = m(P)$ is also an Abelian subgroup of $Q$.
+	Since $J(P) \leq Q$, every abelian subgroup $A$ of $P$ with $d(A) = m(P)$ is also an abelian subgroup of $Q$.
 	Therefore, $m(P) \leq m(Q)$.
 	Hence, $m(P) = m(Q)$.
-	Moreover, any Abelian subgroup $B$ of $Q$ with $d(B) = m(Q) = m(P)$ is also an Abelian subgroup of $P$.
+	Moreover, any abelian subgroup $B$ of $Q$ with $d(B) = m(Q) = m(P)$ is also an abelian subgroup of $P$.
 	Therefore, $J(P) = J(Q)$.
 	
 	Using that $J(P) = J(Q)$, then part (a) implies that $J(P) \cha Q$.

@@ -1,11 +1,11 @@
 \subsection{Composition Series and the H\"older Program}
 
 \begin{exercise}{3.4.1}
-    Prove that if $G$ is an Abelian simple group then $G \cong \zbb_p$ for some prime $p$ (do not assume $G$ is a finite group).
+    Prove that if $G$ is an abelian simple group then $G \cong \zbb_p$ for some prime $p$ (do not assume $G$ is a finite group).
 \end{exercise}
 
 \begin{sol}
-    Since $G$ is Abelian, every subgroup of $G$ is normal.
+    Since $G$ is abelian, every subgroup of $G$ is normal.
 	Moreover, simplicity of $G$ implies that its only subgroups are 1 and $G$.
 	If $G$ is the trivial group, then $G \cong Z_1$.
 	Suppose $G$ is non-trivial, and let $g \in G$ be non-identity.
@@ -58,11 +58,11 @@
 
 \begin{sol}
     A clear composition series is $1 \nsub \gen{\sigma^4} \nsub \gen{\sigma^2} \nsub \gen{\sigma} \nsub QD_{16}$, with each composition factor isomorphic to $Z_2$.
-	Since all composition factors are Abelian, $QD_{16}$ is solvable.
+	Since all composition factors are abelian, $QD_{16}$ is solvable.
 \end{sol}
 
 \begin{exercise}{3.4.4}
-    Use Cauchy's Theorem and induction to show that a finite Abelian group has a subgroup of order $n$ for each positive divisor $n$ of its order.
+    Use Cauchy's Theorem and induction to show that a finite abelian group has a subgroup of order $n$ for each positive divisor $n$ of its order.
 \end{exercise}
 
 \begin{sol}
@@ -70,19 +70,19 @@
 	If $m = 1$, the result is trivial.
 	We now proceed by induction on $m$.
 
-    Suppose that every finite Abelian group of order strictly less than $m$ has a subgroup of order $n$ for each positive divisor $n$ of its order.
+    Suppose that every finite abelian group of order strictly less than $m$ has a subgroup of order $n$ for each positive divisor $n$ of its order.
 	Let $n \in \zp$ where $n \mid m$.
 	If $n$ is prime, then there exists $g \in G$ where $\abs g = n$ by Cauchy's Theorem.
 	Then $\abs g \leq G$ is a subgroup of order $n$, and the result is true. 
     
     If $n$ is not prime, then $n = kp$ for some prime divisor $p$ of $n$.
 	Since $p \mid m$, there exists an element $h \in G$ where $\abs h = p$ by Cauchy's Theorem.
-	Then $\gen h$ has order $p$, and $G/\gen h$ is a finite Abelian group of order $m/p < m$.
+	Then $\gen h$ has order $p$, and $G/\gen h$ is a finite abelian group of order $m/p < m$.
 	Since $n$ divides $m$, $k$ divides $m/p$.
 	By the inductive hypothesis, there exists a subgroup $\bar H$ of $G/\gen h$ such that $\abs{\bar H} = k$.
 	By the Lattice Isomorphism Theorem, there exists a subgroup $H$ of $G$ containing $\gen h$ such that $H/\gen h = \bar H$.
 	Then $\abs H = \abs{\bar H} \abs{\gen h} = kp = n$, hence $H$ is a subgroup of $G$ of order $n$.
-	By induction, the result holds for all finite Abelian groups.
+	By induction, the result holds for all finite abelian groups.
 \end{sol}
 
 \begin{spex}{3.4.5}
@@ -95,7 +95,7 @@
     \[
     	1 = G_0 \nsub G_1 \nsub \cdots \nsub G_n = G
     \]
-    such that $G_{i + 1}/G_i$ is Abelian.
+    such that $G_{i + 1}/G_i$ is abelian.
 	Define the subgroups
     \[
     	H_i = H \cap G_i \quad \text{for each $0 \leq i \leq n$}
@@ -111,7 +111,7 @@
     \[
     	H_{i + 1}/H_i \cong H_{i + 1}G_i/G_i \leq G_{i + 1}/G_i
     \]
-    Since $G_{i + 1}/G_i$ is Abelian, so is $H_{i + 1}/H_i$.
+    Since $G_{i + 1}/G_i$ is abelian, so is $H_{i + 1}/H_i$.
 	Therefore, $H$ is solvable with the chain
     \[
     	1 = H_0 \nsub H_1 \nsub \cdots \nsub H_n = H
@@ -135,7 +135,7 @@
     \[
     	(N_{i + 1}/N)/(N_i/N) \cong N_{i + 1}/N_i \cong G_{i + 1}/(G_iN \cap G_{i + 1}) = G_{i + 1}/G_i
     \]
-    Since $G_{i + 1}/G_i$ is Abelian, so is $(N_{i + 1}/N)/(N_i/N)$.
+    Since $G_{i + 1}/G_i$ is abelian, so is $(N_{i + 1}/N)/(N_i/N)$.
 	Therefore, $G/N$ is solvable with the chain
     \[
     	1 = N_0/N \nsub N_1/N \nsub \cdots \nsub N_n/N = G/N. \qedhere
@@ -210,10 +210,10 @@
         \[
         	1 = N_0 \trianglelefteq N_1 \trianglelefteq N_2 \trianglelefteq \cdots \trianglelefteq N_t = G
         \]
-        such that each $N_i$ is a normal subgroup of $G$ and $N_{i+1}/N_i$ is Abelian, $0 \le i \le t-1$.
+        such that each $N_i$ is a normal subgroup of $G$ and $N_{i+1}/N_i$ is abelian, $0 \le i \le t-1$.
     \end{enumerate}
-    \noindent [For (iv), prove that a minimal non-trivial normal subgroup $M$ of $G$ is necessarily Abelian and then use induction.
-	To see that $M$ is Abelian, let $N \trianglelefteq M$ be of prime index (by (iii)) and show that $x^{-1}y^{-1}xy \in N$ for all $x,y \in M$ (cf. \exref{3.1.40}).
+    \noindent [For (iv), prove that a minimal non-trivial normal subgroup $M$ of $G$ is necessarily abelian and then use induction.
+	To see that $M$ is abelian, let $N \trianglelefteq M$ be of prime index (by (iii)) and show that $x^{-1}y^{-1}xy \in N$ for all $x,y \in M$ (cf. \exref{3.1.40}).
 	Apply the same argument to $gNg^{-1}$ to show that $x^{-1}y^{-1}xy$ lies in the intersection of all $G$-conjugates of $N$, and use the minimality of $M$ to conclude that $x^{-1}y^{-1}xy = 1$.]
 \end{exercise}
 
@@ -222,16 +222,16 @@
     \[
     	1 = G_0 \nsub G_1 \nsub \cdots \nsub G_n = G
     \]
-    where $G_{i + 1}/G_i$ is Abelian.
-	We prove the following lemma: if $A$ is a finite Abelian group, then there exists a chain of subgroups
+    where $G_{i + 1}/G_i$ is abelian.
+	We prove the following lemma: if $A$ is a finite abelian group, then there exists a chain of subgroups
     \[
     	1 = A_0 \nsub A_1 \nsub \cdots \nsub A_k = A
     \]
     such that $A_{j + 1}/A_j$ is cyclic.
 	We prove this lemma by induction on $\abs A$.
 	If $\abs A = 1$, the result is trivial.
-	Suppose $\abs A > 1$ and that the result holds for all Abelian groups of order less than $\abs A$.
-	Since $A$ is finite Abelian, there exists some non-identity $a \in A$ such that $\gen a \nsub A$.
+	Suppose $\abs A > 1$ and that the result holds for all abelian groups of order less than $\abs A$.
+	Since $A$ is finite abelian, there exists some non-identity $a \in A$ such that $\gen a \nsub A$.
 	Then $\abs{\gen a} < \abs A$, hence by the inductive hypothesis, there exists a chain of subgroups
     \[
     	1 = B_0 \nsub B_1 \nsub \cdots \nsub B_m = \gen a
@@ -249,9 +249,9 @@
     	1 = B_0 \nsub B_1 \nsub \cdots \nsub B_m = \gen a = C_0 \nsub C_1 \nsub \cdots \nsub C_\ell = A
     \]
     satisfies the lemma.
-	By induction, the lemma holds for all finite Abelian groups. 
+	By induction, the lemma holds for all finite abelian groups. 
 
-    Applying this lemma to each Abelian quotient $G_{i + 1}/G_i$ in the original chain, we obtain a chain of subgroups
+    Applying this lemma to each abelian quotient $G_{i + 1}/G_i$ in the original chain, we obtain a chain of subgroups
     \[
     	1 = H_0 \nsub H_1 \nsub H_2 \nsub \cdots \nsub H_s = G
     \]
@@ -281,15 +281,15 @@
     \[
     	1 = N_0 \nsub N_1 \nsub N_2 \nsub \cdots \nsub N_t = G
     \]
-    such that each $N_i$ is a normal subgroup of $G$ and $N_{i + 1}/N_i$ is Abelian.
+    such that each $N_i$ is a normal subgroup of $G$ and $N_{i + 1}/N_i$ is abelian.
 	Let $M$ be a minimal, non-trivial normal subgroup of $G$, and suppose $N \nsub M$ have prime index.
-	Then for any $x, y \in M$, we have $x^{-1}y^{-1}xy \in N$ since $M/N$ is Abelian.
+	Then for any $x, y \in M$, we have $x^{-1}y^{-1}xy \in N$ since $M/N$ is abelian.
 	Now for any $g \in G$, consider $gNg\inv \nsub gMg\inv = M$.
 	By the same argument, we have $x^{-1}y^{-1}xy \in gNg\inv$ for all $x, y \in M$.
 	It follows that $x^{-1}y^{-1}xy$ lies in the intersection of all $G$-conjugates of $N$.
 	Since $M$ is minimal normal in $G$, this intersection is either 1 or $M$.
-	If it were $M$, then $M$ would be Abelian, contradicting that $M/N$ is non-trivial.
-	Hence, $x^{-1}y^{-1}xy = 1$ for all $x, y \in M$, so that $M$ is Abelian.
+	If it were $M$, then $M$ would be abelian, contradicting that $M/N$ is non-trivial.
+	Hence, $x^{-1}y^{-1}xy = 1$ for all $x, y \in M$, so that $M$ is abelian.
 
     \textbf{(iv) \rightimp (i)}: This implication is immediate from the definition of solvable groups.
 \end{sol}
@@ -382,7 +382,7 @@
 \end{sol}
 
 \begin{exercise}{3.4.11}
-    Prove that if $H$ is a non-trivial normal subgroup of the solvable group $G$ then there is a non-trivial subgroup $A$ of $H$ with $A \trianglelefteq G$ and $A$ Abelian.
+    Prove that if $H$ is a non-trivial normal subgroup of the solvable group $G$ then there is a non-trivial subgroup $A$ of $H$ with $A \trianglelefteq G$ and $A$ abelian.
 \end{exercise}
 
 \begin{sol}
@@ -390,7 +390,7 @@
     \[
     	1 = G_0 \nsub G_1 \nsub \cdots \nsub G_n = G
     \]
-    where $G_{i + 1}/G_i$ is Abelian.
+    where $G_{i + 1}/G_i$ is abelian.
 	Let $H_i = H \cap G_i$ for each $0 \leq i \leq n$.
 	Since $H$ is non-trivial, consider the set of indices $I = \set{i \in \zp \mid G_i \cap H \neq 1}$.
 	Since $H_n = H$, $I$ is nonempty.
@@ -400,8 +400,8 @@
     \[
     	H_k \cong H_k/1 = H_k/(H_k \cap G_{k - 1}) \cong H_k G_{k - 1}/G_{k - 1} \leq G_k/G_{k - 1}
     \]
-    Since $G_k/G_{k - 1}$ is Abelian, so is $H_k$.
-	Therefore, $A = H_k$ is a non-trivial, Abelian normal subgroup of $G$ contained in $H$.
+    Since $G_k/G_{k - 1}$ is abelian, so is $H_k$.
+	Therefore, $A = H_k$ is a non-trivial, abelian normal subgroup of $G$ contained in $H$.
 \end{sol}
 
 \begin{exercise}{3.4.12}
@@ -425,6 +425,6 @@
     \[
     	1 = G_0 \nsub G_1 \nsub \cdots \nsub G_n = G.
     \]
-    Each composition factor $G_{i+1}/G_i$ is simple and of odd order, so by assumption, each is of prime order and hence Abelian.
+    Each composition factor $G_{i+1}/G_i$ is simple and of odd order, so by assumption, each is of prime order and hence abelian.
 	Therefore, $G$ is solvable.
 \end{sol}
