@@ -124,14 +124,14 @@
     But then $p \mid (a, b)$, contradicting $(a, b) = 1$.
 \end{sol}
 
-\begin{spex}{0.2.8}[Legendre's Formula]
+\begin{exercise}![Legendre's Formula]{0.2.8}
     Let $p$ be a prime, $n \in \zp$.
 	Find a formula for the largest power of $p$ which divides $n! = n(n - 1)(n - 2) \ldots 2 \cdot 1$.
 
     \hint{It involves the greatest integer function.}
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
     In $n!$, a factor of $p$ appears in each of the integers $p, 2p, \ldots, \floor{n/p}p$, giving $\floor{n/p}$ factors of $p$.
     In general, an integer $m \leq n$ divisible by exactly $p^k$ appears among the multiples of $p^i$ for each $i = 1, \ldots, k$, so it is counted exactly $k$ times.
     Hence, the exponent of the largest power of $p$ which divides $n!$ is

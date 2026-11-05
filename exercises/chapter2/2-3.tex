@@ -280,13 +280,13 @@
 	Since $p$ is prime, $|x|$ must also be a power of $p$ that is at most $n$.
 \end{sol}
 
-\begin{spex}{2.3.21}
+\begin{exercise}!{2.3.21}
     Let $p$ be an odd prime and let $n$ be a positive integer.
 	Use the Binomial Theorem to show that $(1 + p)^{p^{n - 1}} \equiv 1 \pmod p^n$ but $(1 + p)^{p^{n - 2}} \not\equiv 1 \pmod p^n$.
 	Deduce that $1 + p$ is an element of order $p^{n - 1}$ in the multiplicative group $\units[p^n]$.
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
     By the binomial theorem,
     \[
     	(1 + p)^{p^{n - 1}} = \sum_{k = 0}^{p^{n - 1}} \binom{p^{n - 1}}k p^k = 1 + p^n + \sum_{k = 2}^{p^{n - 1}} \binom{p^{n - 1}}k p^k.
@@ -309,13 +309,13 @@
 	This is clearly not 1 mod $p^n$, so the order of $1 + p$ in $\units[p^n]$ is $p^{n - 1}$.
 \end{sol}
 
-\begin{spex}{2.3.22}
+\begin{exercise}!{2.3.22}
     Let $n$ be an integer $\geq 3$.
 	Use the Binomial Theorem to show that $(1 + 2^2)^{2^{n - 2}} \equiv 1 \pmod 2^n$ but $(1 + 2^2)^{2^{n - 3}} \not\equiv 1 \pmod 2^n$.
 	Deduce that 5 is an element of order $2^{n - 2}$ in the multiplicative group $\units[2^n]$.
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
     The process is similar to the previous exercise, where we use the Binomial Theorem to expand $(1 + 2^2)^{2^{n - 2}}$ and see that $k = 0$ and $k = 1$ terms are $1$ and $2^n$ respectively.
 	For $k \geq 2$, we have the summand as
     \[
@@ -416,7 +416,7 @@
 	Hence, the map $x \mapsto x^k$ is surjective.
 \end{sol}
 
-\begin{spex}{2.3.26}
+\begin{exercise}!{2.3.26}
     Let $Z_n$ be a cyclic group of order $n$ and for each integer $a$ let
     \[
     	\sigma_a : Z_n \to Z_n \quad \text{by} \quad \sigma_a(x) = x^a \text{ for all } x \in Z_n
@@ -428,9 +428,9 @@
         \item Prove that $\sigma_a \circ \sigma_b = \sigma_{ab}$.
 	    Deduce that the map $\bar a \mapsto \sigma_a$ is an isomorphism of $\units$ onto the automorphism group of $Z_n$ (so $\aut(Z_n)$ is an abelian group of order $\phi(n)$).
     \end{subexercises}
-\end{spex}
+\end{exercise}
 
-\begin{solenum}[spsol]
+\begin{solenum}
     \item \rightimp Suppose $\sigma_a \in \aut(Z_n)$, and let $d = (n, a)$.
 	Assume, by way of contradiction, that $d \neq 1$.
 	Then there are $s, t \in \zbb$ such that $n = ds$ and $a = dt$, so that $as = dts = nt$.

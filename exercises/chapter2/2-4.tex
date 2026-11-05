@@ -282,7 +282,7 @@
 	Then $m/n = q \in \gen P$, hence $\qbb_+\unt \leq \gen P$.
 \end{sol}
 
-\begin{spex}{2.4.14}
+\begin{exercise}!{2.4.14}
     A group $H$ is called \textbf{finitely generated} if there is a finite set $A$ such that $H=\langle A\rangle$.
     \begin{subexercises}
         \item Prove that every finite group is finitely generated.
@@ -290,9 +290,9 @@
         \item Prove that every finitely generated subgroup of the additive group $\qbb$ is cyclic. [If $H$ is a finitely generated subgroup of $\qbb$, show that $H \leq \gen{1/k}$, where $k$ is the product of all denominators appearing in a set of generators for $H$.]
         \item Prove that $\qbb$ is not finitely generated.
     \end{subexercises}
-\end{spex}
+\end{exercise}
 
-\begin{solenum}[spsol]
+\begin{solenum}
     \item Since $G$ is finite and generates itself, $G = \gen G$. 
     \item $\zbb = \gen 1$.
     \item Let $H = \gen A$, where
@@ -342,16 +342,16 @@
 	Then $1/2^{m + 1} \notin \gen{p/q}$, but $1/2^{m + 1} \in \gen A$, hence $\gen A$ cannot be cyclic.
 \end{sol}
 
-\begin{spex}{2.4.16}
+\begin{exercise}!{2.4.16}
     A subgroup $M$ of a group $G$ is called a \textbf{maximal subgroup} if $M\ne G$ and the only subgroups of $G$ which contain $M$ are $M$ and $G$.
     \begin{subexercises}
         \item Prove that if $H$ is a proper subgroup of the finite group $G$ then there is a maximal subgroup of $G$ containing $H$.
         \item Show that the subgroup of all rotations in a dihedral group is a maximal subgroup.
         \item Show that if $G=\langle x\rangle$ is a cyclic group of order $n\ge 1$ then a subgroup $H$ is maximal if and only if $H=\langle x^p\rangle$ for some prime $p$ dividing $n$.
     \end{subexercises}
-\end{spex}
+\end{exercise}
 
-\begin{solenum}[spsol]
+\begin{solenum}
     \item If $H$ is maximal, we are done.
 	If not, there exists $H_1 < G$ such that $H < H_1$.
 	If $H_1$ is maximal, then we are done.
@@ -381,7 +381,7 @@
 	It follows that $H$ is maximal.
 \end{solenum}
 
-\begin{spex}{2.4.17}
+\begin{exercise}!{2.4.17}
     This is an exercise involving Zorn's Lemma.
 	Prove that every non-trivial finitely generated group possesses maximal subgroups.
 	Let $G$ be a finitely generated group, say $G=\langle g_1, g_2, \ldots, g_n\rangle$, and let $\scal$ be the set of all proper subgroups of $G$.
@@ -392,9 +392,9 @@
         \item Prove that $H$ is a proper subgroup.  
         \item Use Zorn's Lemma to show that $\scal$ has a maximal element (which is, by definition, a maximal subgroup).
     \end{subexercises}
-\end{spex}
+\end{exercise}
 
-\begin{solenum}[spsol]
+\begin{solenum}
     \item Let $\ccal \subseteq \scal$ be a chain.
 	Put
     \[
@@ -476,15 +476,15 @@
 	It must be that $Z$ is infinitely generated.
 \end{solenum}
 
-\begin{spex}{2.4.19} 
+\begin{exercise}!{2.4.19} 
     A non-trivial abelian group $A$ (written multiplicatively) is called \textbf{divisible} if for each element $a\in A$ and each nonzero integer $k$ there is an element $x\in A$ such that $x^k=a$.  
     \begin{subexercises}
         \item Prove that the additive group of rational numbers $\qbb$ is divisible.
         \item Prove that no finite abelian group is divisible.
     \end{subexercises}
-\end{spex}
+\end{exercise}
 
-\begin{solenum}[spsol]
+\begin{solenum}
     \item Suppose $p/q \in \qbb$.
 	Then $(p/qn)n = p/q$, where $p/qn \in \qbb$.
     \item Let $G$ be finite abelian with $|G| = n$.

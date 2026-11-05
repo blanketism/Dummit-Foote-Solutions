@@ -134,11 +134,11 @@
 	Then $a^2 = 4k(k + 1) + 1 \equiv 1 \pmod 8$ since $k(k + 1)$ is even.
 \end{sol}
 
-\begin{spex}{0.3.10}
+\begin{exercise}!{0.3.10}
     Prove that the number of elements of $\units$ is $\phi(n)$, where $\phi$ denotes the Euler $\phi$-function.
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
     By \exref{0.3.2}, $a \mapsto \bar a$ is a bijection from $\set{1, \ldots, n}$ to $\intmod$, so by Proposition 0.4, $|\units|$ is the number of integers $a$ with $1 \leq a \leq n$ such that $(a, n) = 1$, which is precisely $\phi(n)$.
 \end{sol}
 

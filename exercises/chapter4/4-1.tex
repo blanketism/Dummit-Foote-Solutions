@@ -281,7 +281,7 @@ Let $G$ be a group and let $A$ be a nonempty set.
 	\]
 \end{solenum}
 
-\begin{spex}{4.1.7}
+\begin{exercise}!{4.1.7}
 	Let $G$ be a transitive permutation group on the finite set $A$.
 	A \emph{block} is a nonempty subset $B$ of $A$ such that for all $\sigma \in G$ either $\sigma(B) = B$ or $\sigma(B) \cap B = \varnothing$ (here $\sigma(B) = \set{\sigma(b) \mid b \in B}$). 
 	\begin{subexercises}
@@ -292,9 +292,9 @@ Let $G$ be a group and let $A$ be a nonempty set.
 		Show that $D_8$ is not primitive as a permutation group on the four vertices of a square.
 		\item Prove that the transitive group $G$ is primitive on $A$ if and only if for each $a \in A$, the only subgroups of $G$ containing $G_a$ are $G_a$ and $G$ (i.e., $G_a$ is a \emph{maximal} subgroup of $G$, cf. \exref{2.4.16}). [Use part (a).]
 	\end{subexercises}
-\end{spex}
+\end{exercise}
 
-\begin{solenum}[spsol]
+\begin{solenum}
 	\item We first show that $G_B$ is a subgroup of $G$.
 	Since $1(B) = B$, $1 \in G_B$, hence it is nonempty.
 	If $\sigma, \tau \in G$ such that $\sigma(B) = B$ and $\tau(B) = B$, we note that $\tau\inv(B) = B$ as well, hence $\sigma, \tau\inv \in G_B$.
@@ -379,7 +379,7 @@ Let $G$ be a group and let $A$ be a nonempty set.
 	Since $D_8$ is not primitive in its action on the four vertices of a square (as shown in part (c) of the previous exercise), it is not doubly transitive.
 \end{solenum}
 
-\begin{spex}{4.1.9}
+\begin{exercise}!{4.1.9}
 	[4.1.9] Assume $G$ acts transitively on the finite set $A$ and let $H$ be a normal subgroup of $G$.
 	Let $\ocal_1, \ocal_2, \ldots, \ocal_r$ be the distinct orbits of $H$ on $A$.
 	\begin{subexercises}
@@ -389,9 +389,9 @@ Let $G$ be a group and let $A$ be a nonempty set.
 		\item Prove that if $a \in \ocal_1$ then $|\ocal_1| = |H : H \cap G_a|$ and prove that $r = |G : HG_a|$. [Draw the sublattice describing the Second Isomorphism Theorem for the subgroups $H$ and $G_a$ of $G$.
 		Note that $H \cap G_a = H_a$.]
 	\end{subexercises}
-\end{spex}
+\end{exercise}
 
-\begin{solenum}[spsol]
+\begin{solenum}
 	\item Let $g \in G$ and $\ocal_i$ be an orbit of $H$ on $A$.
 	Let $a \in \ocal_i$ so that $\ocal_i = H \cdot a = \set{h \cdot a \mid h \in H}$.
 	Consider the set $g\ocal_i = \set{g \cdot (h \cdot a) \mid h \in H}$.
@@ -429,7 +429,7 @@ Let $G$ be a group and let $A$ be a nonempty set.
 	\end{center}
 \end{solenum}
 
-\begin{spex}{4.1.10}
+\begin{exercise}!{4.1.10}
 	Let $H$ and $K$ be subgroups of the group $G$.
 	For each $x \in G$ define the $HK$ \emph{double coset} of $x$ in $G$ to be the set $HxK = \set{hxk \mid h \in H, k \in K}$.
 	\begin{subexercises}
@@ -440,9 +440,9 @@ Let $G$ be a group and let $A$ be a nonempty set.
 		\item Prove that $|HxK| = |K| \cdot |H : H \cap xKx^{-1}|$.
 		\item Prove that $|HxK| = |H| \cdot |K : K \cap x^{-1}Hx|$.
 	\end{subexercises}
-\end{spex}
+\end{exercise}
 
-\begin{solenum}[spsol]
+\begin{solenum}
 	\item Let $\ocal$ be the orbit containing $xK$ of $H$ acting by left multiplication on the set of left cosets of $K$.
 	Then $\ocal = \set{hxK \mid h \in H}$, and let $\set{x_1K, \ldots, x_nK}$ be the distinct left cosets in $\ocal$.
 	Let $\kcal$ be the union of these left cosets, i.e., $\kcal = \bigcup_1^n x_iK$.

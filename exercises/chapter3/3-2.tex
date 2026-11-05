@@ -69,15 +69,15 @@ Let $G$ be a group.
 	Hence, $Z(G) = 1$.
 \end{sol}
 
-\begin{spex}{3.2.5}
+\begin{exercise}!{3.2.5}
     Let $H$ be a subgroup of $G$ and fix some element $g \in G$. 
     \begin{subexercises}
         \item Prove that $gH g^{-1}$ is a subgroup of $G$ of the same order as $H$.
         \item Deduce that if $n \in \zbb^+$ and $H$ is the unique subgroup of $G$ of order $n$ then $H \nsub G$.
     \end{subexercises}
-\end{spex}
+\end{exercise}
 
-\begin{solenum}[spsol]
+\begin{solenum}
     \item We first show that $gHg\inv \leq G$.
 	Note that $1 \in H$, hence $g1g\inv = 1 \in gHg\inv$ so that $gHg\inv$ is nonempty.
 	Suppose $gh_1g\inv, gh_2g\inv \in gHg\inv$ for some $h_1, h_2 \in H$.
@@ -109,13 +109,13 @@ Let $G$ be a group.
 	Then $Hg = g'H = gH$, hence $Hg = gH$, and $g \in N_G(H)$.
 \end{sol}
 
-\begin{spex}{3.2.7}
+\begin{exercise}!{3.2.7}
     Let $H \leq G$ and define a relation $\sim$ on $G$ by $a \sim b$ if and only if $b^{-1}a \in H$.
 	Prove that $\sim$ is an equivalence relation and describe the equivalence class of each $a \in G$.
 	Use this to prove Proposition 4.
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
     Let $a, b, c \in G$.
 	To show that $\sim$ is an equivalence relation, we check the three properties:
     \begin{itemize}
@@ -144,7 +144,7 @@ Let $G$ be a group.
 	It follows that $\ell \mid (m, n) = 1$, hence $\ell = 1$.
 \end{sol}
 
-\begin{spex}{3.2.9}
+\begin{exercise}!{3.2.9}
     Let $G$ be a finite group and let $p$ be a prime dividing $|G|$.
 	Let $\scal$ denote the set of $p$-tuples of elements of $G$ the product of whose coordinates are 1:
     \[
@@ -162,9 +162,9 @@ Let $G$ be a group.
 		Deduce that $|G|^{p-1} = k + pd$, where $k$ is the number of classes of size 1 and $d$ is the number of classes of size $p$.
         \item Since $\set{(1, 1, \dots, 1)}$ is an equivalence class of size 1, conclude from (e) that there must be a non-identity element $x \in G$ with $x^p = 1$, i.e., $G$ contains an element of order $p$. [Show $p \mid k$ and so $k > 1$.]
     \end{subexercises}
-\end{spex}
+\end{exercise}
 
-\begin{solenum}[spsol]
+\begin{solenum}
     \item Let $\scal'$ denote the set of $(p - 1)$-tuples of elements of $G$.
 	Observe that $|\scal'| = |G|^{p-1}$.
 	Define the mapping
@@ -226,13 +226,13 @@ Let $G$ be a group.
 	Thus, $G$ contains an element of order $p$.
 \end{solenum}
 
-\begin{spex}{3.2.10}
+\begin{exercise}!{3.2.10}
     Suppose $H$ and $K$ are subgroups of finite index in the (possibly infinite) group $G$ with $|G : H| = m$ and $|G : K| = n$.
 	Prove that $\lcm(m, n) \leq |G : H \cap K| \leq mn$.
 	Deduce that if $m$ and $n$ are relatively prime then $|G : H \cap K| = |G : H| \cdot |G : K|$.
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol] 
+\begin{sol} 
     Let $|G : H \cap K| = \ell$.
 	Consider the cosets $gH, gK$, and $g(H \cap K)$ for some $g \in G$.
 	We wish to identify $g(H \cap K)$ in terms of $gH$ and $gK$.
@@ -260,12 +260,12 @@ Let $G$ be a group.
     Lastly, if $(m, n) = 1$, then $\lcm(m, n) = mn$ so that $\ell = mn$.
 \end{sol}
 
-\begin{spex}{3.2.11}
+\begin{exercise}!{3.2.11}
     Let $H \leq K \leq G$.
 	Prove that $|G : H| = |G : K| \cdot |K : H|$. 
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
     Note that cosets of $H$ are contained in cosets of $K$.
 	If $H$ has infinite index in $K$ or if $K$ has infinite index in $G$, then $H$ has infinite index in $G$.
 	The finite case follows in the proof of \exref{3.2.10}, where we showed that each coset of $K$ contains $\abs{K : H}$ distinct cosets of $H$.
@@ -387,11 +387,11 @@ Let $G$ be a group.
 	By the previous exercise, we have $M \leq N$, and since they have the same order, $M = N$.
 \end{sol}
 
-\begin{spex}{3.2.20}
+\begin{exercise}!{3.2.20}
     If $A$ is an abelian group with $A \nsub G$ and $B$ is any subgroup of $G$ prove that $A \cap B \nsub AB$.
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
     Let $x \in A \cap B$ and $ab \in AB$ where $a \in A$ and $b \in B$.
 	Note that
     \[

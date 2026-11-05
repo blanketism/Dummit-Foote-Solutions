@@ -127,7 +127,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	Since $|G| = |S_4| = 24$, we have $G \cong S_4$.
 \end{solenum}
 
-\begin{spex}{5.5.6}
+\begin{exercise}!{5.5.6}
     Assume that $K$ is a cyclic group, $H$ is an arbitrary group, and $\phi_1$ and $\phi_2$ are homomorphisms from $K$ into $\aut(H)$ such that $\phi_1(K)$ and $\phi_2(K)$ are conjugate subgroups of $\aut(H)$.
 	If $K$ is infinite, assume $\phi_1$ and $\phi_2$ are injective.
 	Prove, by constructing an explicit isomorphism, that
@@ -141,9 +141,9 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     \]
     defined by $\psi((h,k)) = (\sigma(h), k^a)$ is a homomorphism.
 	Show $\psi$ is bijective by constructing a 2-sided inverse.]
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
     Let $K = \gen k$ and $\sigma \in \aut(H)$ such that $\sigma\phi_1(K)\sigma\inv = \phi_2(K)$.
 	Then there exists some $a \in \zbb$ such that $\sigma\phi_1(k)\sigma\inv = \phi_2(k)^a$ for all $k \in K$.
 	Define the map
@@ -201,7 +201,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     \end{enumerate}
 \end{sol}
 
-\begin{spex}{5.5.7}
+\begin{exercise}!{5.5.7}
     This exercise describes thirteen isomorphism types of groups of order 56. (It is not too difficult to show that every group of order 56 is isomorphic to one of these.)
     \begin{subexercises}
         \item Prove that there are three abelian groups of order 56.
@@ -219,9 +219,9 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	    Prove that if $S$ is the Sylow 2-subgroup of $G$ then $S \cong Z_2 \times Z_2 \times Z_2$. [Let an element of order 7 act by conjugation on the seven non-identity elements of $S$ and deduce that they all have the same order.]
         \item Prove that there is a unique group of order 56 with a non-normal Sylow 7-subgroup. [For existence use the fact that $|GL_3(\fbb_2)| = 168$; for uniqueness use \exref{5.5.6}.]
     \end{subexercises}
-\end{spex}
+\end{exercise}
 
-\begin{solenum}[spsol]
+\begin{solenum}
     \item Note that $56 = 2^3 \cdot 7$.
 	By the Fundamental Theorem of Finite abelian Groups, the partitions of 3 are $3, 2 + 1, 1 + 1 + 1$, so the abelian groups of order 56 are of the form $Z_8 \times Z_7$, $Z_4 \times Z_2 \times Z_7$, and $Z_2 \times Z_2 \times Z_2 \times Z_7$.
     \item Let $n_7$ be the number of Sylow 7-subgroups of $G$.
@@ -490,7 +490,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	Therefore, $P \semidir_\phi Q$ is unique, and $G \cong P \semidir_\phi Q$ is non-abelian.
 \end{sol}
 
-\begin{spex}{5.5.10}
+\begin{exercise}!{5.5.10}
     This exercise classifies the groups of order 147 (there are six isomorphism types).
     \begin{subexercises}
         \item Prove that there are two abelian groups of order 147.
@@ -520,9 +520,9 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
         \item Prove that $G_3$ is not isomorphic to $G_4$.
         \item Classify the groups of order 147 by showing that the six non-isomorphic groups described above (two from part (a), one from part (c), and $G_1, G_3$, and $G_4$) are all the groups of order 147. [Use \exref{5.5.6} and part (d).] (The classification of groups of order $pq^2$, where $p$ and $q$ are primes with $p < q$ and $p \mid q - 1$, is quite similar.)
     \end{subexercises}
-\end{spex}
+\end{exercise}
 
-\begin{solenum}[spsol]
+\begin{solenum}
     \item Note that $147 = 3 \cdot 7^2$.
 	By the Fundamental Theorem of Finite abelian Groups, the partitions of 2 are $2, 1 + 1$, so the abelian groups of order 147 are of the form $Z_{49} \times Z_3$ and $Z_7 \times Z_7 \times Z_3$.
     \item Let $n_7$ be the number of Sylow 7-subgroups of $G$.
@@ -851,7 +851,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     \end{itemize}
 \end{sol}
 
-\begin{spex}{5.5.14}
+\begin{exercise}!{5.5.14}
     This exercise classifies the groups of order 60 (there are thirteen isomorphism types).
 	Let $G$ be a group of order 60, let $P$ be a Sylow 5-subgroup of $G$, and let $Q$ be a Sylow 3-subgroup of $G$.
     \begin{subexercises}
@@ -860,9 +860,9 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
         \item Prove that if both $P$ and $Q$ are normal in $G$, then $G \cong Z_{15} \semidir T$, where $T \cong Z_4$ or $Z_2 \times Z_2$.
 	    Show in this case that there are six isomorphism types when $T$ is cyclic (one abelian), and there are five isomorphism types when $T$ is the Klein 4-group (one abelian). [Use the same ideas as in the classification of groups of order 30 and 20.]
     \end{subexercises}
-\end{spex}
+\end{exercise}
 
-\begin{solenum}[spsol]
+\begin{solenum}
     \item Clear, from Corollary 4.22.
     \item If $Q$ is not normal in $G$, then $n_3 \equiv 1 \pmod 3$ and $n_3 \mid 20$ implies that $n_3 = 4$ or 10.
 	If $n_3 = 10$, then since $P \nsub G$, we know that $PQ_i$ is a subgroup of $G$ that is cyclic.
@@ -1307,11 +1307,11 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	Hence, we have shown that the four groups are pairwise non-isomorphic.
 \end{sol}
 
-\begin{spex}{5.5.18}
+\begin{exercise}!{5.5.18}
     Show that if $H$ is any group, then there is a group $G$ that contains $H$ as a normal subgroup with the property that for every automorphism $\sigma$ of $H$, there is an element $g \in G$ such that conjugation by $g$ when restricted to $H$ is the given automorphism $\sigma$, i.e., every automorphism of $H$ is obtained as an inner automorphism of $G$ restricted to $H$.
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
     Let $H$ be a group, and let $G = H \semidir \aut(H)$, where the action is given by the natural action of $\aut(H)$ on $H$.
 	Then $H$ is a normal subgroup of $G$.
 	Let $\sigma \in \aut(H)$.
@@ -1444,16 +1444,16 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
 	Then $U \cong Z_p \times Z_p$, and we are done.
 \end{sol}
 
-\begin{spex}{5.5.21}
+\begin{exercise}!{5.5.21}
     Let $p$ be an odd prime, and let $P$ be a $p$-group.
 	Prove that if every subgroup of $P$ is normal, then $P$ is abelian.
     
     \note{Note that $Q_8$ is a non-abelian 2-group with this property, so the result is false for $p = 2$.}
     
     \hint{Use the preceding exercises and \exref{5.4.15}.}
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
     We proceed by induction on $|P|$.
     The base case of $|P| = p$ is clear, since $P \cong Z_p$ is abelian.
     Suppose $|P| > p$ and every subgroup of $P$ is normal, and assume the result is true for all $p$-groups of order less than $|P|$.
@@ -1519,7 +1519,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
     Note that this is the conjugation homomorphism $\phi : D \to \aut(U)$ given by $\phi(d)(u) = dud\inv$ for $d \in D$ and $u \in U$.
 \end{solenum}
 
-\begin{spex}{5.5.23}[Wreath Products]
+\begin{exercise}!{5.5.23}[Wreath Products]
     Let $K$ and $L$ be groups, let $n$ be a positive integer, let $\rho : K \to S_n$ be a homomorphism and let $H$ be the direct product of $n$ copies of $L$.
 	In \exref{5.1.8}, an injective homomorphism $\psi$ from $S_n$ into $\aut(H)$ was constructed by letting the elements of $S_n$ permute the $n$ factors of $H$.
 	The composition $\psi \circ \rho$ is a homomorphism from $G$ into $\aut(H)$.
@@ -1534,7 +1534,7 @@ Let $H$ and $K$ be groups, let $\phi : K \to \aut(H)$ be a homomorphism, and ide
         
         \hint{The $p$ copies of $Z_p$ whose direct product makes up $H$ may be represented by $p$ disjoint $p$-cycles; these are cyclically permuted by $K$.}
     \end{subexercises}
-\end{spex}
+\end{exercise}
 
 \begin{solenum}
     \item The left regular representation of $K$ is a homomorphism $\rho : K \to S_{|K|}$.

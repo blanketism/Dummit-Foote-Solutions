@@ -27,13 +27,13 @@
     \]
 \end{solenum}
 
-\begin{spex}{1.6.2}
+\begin{exercise}!{1.6.2}
     If $\phi : G \to H$ is an isomorphism, prove that $|\phi(x)| = |x|$ for all $x \in G$.
 	Deduce that any two isomorphic groups have the same number of elements of order $n$ for each $n \in \zbb^+$.
 	Is the result true if $\phi$ is only assumed to be a homomorphism?
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
     Let $x \in G$.
     If $|x| = \infty$, then $\phi(x)^n = \phi(x^n) \neq 1_H$ for all $n \in \zp$, so that $|\phi(x)| = \infty$.
     A similar argument shows that if $|\phi(x)| = \infty$, then $|x| = \infty$.
@@ -220,13 +220,13 @@
     We conclude that $\phi$ is an isomorphism and $G \times C \cong A \times H$.
 \end{sol}
 
-\begin{spex}{1.6.13}
+\begin{exercise}!{1.6.13}
     Let $G$ and $H$ be groups and let $\phi : G \to H$ be a homomorphism.
 	Prove that the image of $\phi$, $\phi(G)$, is a subgroup of $H$.
 	Prove that if $\phi$ is injective then $G \cong \phi(G)$.
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
     Observe that $1_H \in \phi(G)$ since $\phi(1_G) = 1_H$, so that $\phi(G)$ is nonempty.
 	To show closure, let $h_1, h_2 \in \phi(G)$.
 	Then there exist $g_1, g_2 \in G$ such that $\phi(g_1) = h_1$ and $\phi(g_2) = h_2$.
@@ -259,14 +259,14 @@
 	Therefore, $\psi$ is surjective, hence $\psi$ is an isomorphism and $G \cong \phi(G)$.
 \end{sol}
 
-\begin{spex}{1.6.14}
+\begin{exercise}!{1.6.14}
     Let $G$ and $H$ be groups and let $\phi : G \to H$ be a homomorphism.
 	Define the \textbf{kernel} of $\phi$ to be $\set{ g \in G \mid \phi(g) = 1_H }$ (so the kernel is the set of elements in $G$ which map to the identity of $H$, i.e., is the fiber over the identity of $H$).
 	Prove that the kernel of $\phi$ is a subgroup of $G$.
 	Prove that $\phi$ is injective if and only if the kernel of $\phi$ is the identity subgroup of $G$.
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
     Denote the kernel of $\phi$ by $\ker\phi$.
 	Since $\phi(1_G) = 1_H$, $\ker\phi$ is nonempty.
     Let $g_1, g_2 \in \ker\phi$.
@@ -379,12 +379,12 @@
 	Hence, $\phi$ is not injective and thus not an isomorphism.
 \end{sol}
 
-\begin{spex}{1.6.20}
+\begin{exercise}!{1.6.20}
     Let $G$ be a group and let $\aut(G)$ be the set of all isomorphisms from $G$ onto $G$.
 	Prove that $\aut(G)$ is a group under function composition (called the \textbf{automorphism group} of $G$ and the elements of $\aut(G)$ are called \textbf{automorphisms} of $G$).
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
     Recall that function composition is associative.
     Observe that $\aut(G)$ contains the identity map $\id : G \to G$ defined by $\id(g) = g$ for all $g \in G$.
     Also recall that the composition of two bijections is a bijection. Then for any $\phi, \psi \in G$ and $g, h \in G$, we have
@@ -432,14 +432,14 @@
 	For $k = -1$, see \exref{1.6.17} to conclude that $\phi \in \aut(A)$.
 \end{sol}
 
-\begin{spex}{1.6.23}
+\begin{exercise}!{1.6.23}
     Let $G$ be a finite group which possesses an automorphism $\sigma$ such that $\sigma(g) = g$ if and only if $g = 1$.
 	If $\sigma^2$ is the identity map from $G$ to $G$, prove that $G$ is abelian (such an automorphism $\sigma$ is called \textbf{fixed point free} of order 2).
 
     \hint{Show that every element of $G$ can be written in the form $x^{-1}\sigma(x)$ and apply $\sigma$ to such an expression.}
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
     Define the map
     \[
     	f : G \to G \quad \text{by} \quad x \mapsto x\inv \sigma(x)

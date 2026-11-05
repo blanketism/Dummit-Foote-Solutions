@@ -268,7 +268,7 @@
 	Thus, no subset with fewer than $t$ elements generates $G$.
 \end{solenum}
 
-\begin{spex}{5.2.12}
+\begin{exercise}!{5.2.12}
     Let $n$ and $m$ be positive integers with $d = (n, m)$.
 	Let $Z_n = \gen x$ and $Z_m = \gen y$.
 	Let $A$ be the central product of $\gen x$ and $\gen y$ with an element of order $d$ identified, which has presentation
@@ -279,9 +279,9 @@
     
     \noindent\textbf{Note}: While the problem specifically calls for two direct products, the proof shows that for any general $n, m$, $A$ is actually cyclic with order $Z_{nm/d}$, so the second direct product is trivial.
 	I'm not sure if this is a typo, but just know that the problem will have a trivial direct product in the end.
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
     Since we have an element of order $d$ identified, it is easy to see that $|A| = nm/d$.
 	By \exref{5.2.5}, we know that $\exp(Z_n \times Z_m) = \lcm(n, m) = nm/d$.
 	Note that $|x| = n$ and $|y| = m$ in $A$ still, for otherwise there would be a contradiction to the order of $A$ as we would not be able to account for all the elements of $A$.
@@ -320,7 +320,7 @@
 	Then $\psi(x_1^{s_1} x_2^{s_2} \cdots x_r^{s_r}) = \psi(x_1)^{s_1} \psi(x_2)^{s_2} \cdots \psi(x_r)^{s_r} = g_1^{s_1} g_2^{s_2} \cdots g_r^{s_r}$ for all integers $s_1, s_2, \ldots, s_r$, so $\psi = \phi$.
 \end{sol}
 
-\begin{spex}{5.2.14}
+\begin{exercise}!{5.2.14}
     For any group $G$ define the \emph{dual group} of $G$ (denoted $\wh{G}$) to be the set of all homomorphisms from $G$ into the multiplicative group of roots of unity in $\cbb$.
 	Define a group operation in $\wh{G}$ by pointwise multiplication of functions: if $\chi, \psi$ are homomorphisms from $G$ into the group of roots of unity then $\chi\psi$ is the homomorphism given by $(\chi\psi)(g) = \chi(g)\psi(g)$ for all $g \in G$, where the latter multiplication takes place in $\cbb$.
     \begin{subexercises}
@@ -328,9 +328,9 @@
         \item If $G$ is a finite abelian group, prove that $\wh{G} \cong G$. [Write $G$ as $\langle x_1 \rangle \times \cdots \times \langle x_r \rangle$ and if $n_i = |x_i|$ define $\chi_i$ to be the homomorphism which sends $x_i$ to $e^{2\pi i/n_i}$ and sends $x_j$ to $1$, for all $j \neq i$.
 	Prove $\chi_i$ has order $n_i$ in $\wh{G}$ and $\wh{G} = \langle \chi_1 \rangle \times \cdots \times \langle \chi_r \rangle$.]
     \end{subexercises}
-\end{spex}
+\end{exercise}
 
-\begin{solenum}[spsol]
+\begin{solenum}
     \item Multiplication in $\cbb$ is already associative and commutative, so pointwise multiplication of functions is also associative and commutative.
 	The map $\ep : G \to \cbb$ given by $\ep(g) = 1$ for all $g \in G$ is a homomorphism, since $\ep(gh) = 1 = 1 \cdot 1 = \ep(g)\ep(h)$ for all $g, h \in G$, and 1 is a root of unity.
 	Moreover, for any $\chi \in \wh G$, then $(\chi\ep)(g) = \chi(g)\ep(g) = \chi(g) \cdot 1 = \chi(g)$ for all $g \in G$.
@@ -360,16 +360,16 @@
 	Therefore, $\phi$ is an isomorphism, so $\wh{G} \cong G$.
 \end{solenum}
 
-\begin{spex}{5.2.15}
+\begin{exercise}!{5.2.15}
     Let $G = \gen x \times \gen y$, where $|x| = 8$ and $|y| = 4$.
     \begin{subexercises}
         \item Find all pairs $a, b$ in $G$ such that $G = \gen a \times \gen b$ (where $a$ and $b$ are expressed in terms of $x$ and $y$).
         \item Let $H = \gen{x^2y, y^2} \cong Z_4 \times Z_2$.
 	    Prove that there are no elements $a, b$ of $G$ such that $G = \gen a \times \gen b$ and $H = \gen{a^2} \times \gen{b^2}$ (i.e., one cannot pick direct product generators for $G$ in such a way that some powers of these are direct product generators for $H$).
     \end{subexercises}
-\end{spex}
+\end{exercise}
 
-\begin{solenum}[spsol]
+\begin{solenum}
     \item From the description of $G$, we see that $G$ is of type $(8, 4)$, so we have the following conditions for $G = \gen a \times \gen b$:
     \begin{itemize}
         \item $|a| = 8$ and $|b| = 4$,

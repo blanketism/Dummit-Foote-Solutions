@@ -395,7 +395,7 @@ Let $G$ and $H$ be groups.
     \end{align*}
 \end{sol}
 
-\begin{spex}{3.1.14}
+\begin{exercise}!{3.1.14}
     Consider the additive quotient group $\qbb/\zbb$.
     \begin{subexercises}
         \item Show that every coset of $\zbb$ in $\qbb$ contains exactly one representative $q \in \qbb$ in the range $0 \le q < 1$.
@@ -403,9 +403,9 @@ Let $G$ and $H$ be groups.
         \item Show that $\qbb/\zbb$ is the torsion subgroup of $\rbb/\zbb$ (cf. \exref{2.1.6}).
         \item Prove that $\qbb/\zbb$ is isomorphic to the multiplicative group of roots of unity in $\cbb^\times$.
     \end{subexercises}
-\end{spex}
+\end{exercise}
 
-\begin{solenum}[spsol]
+\begin{solenum}
     \item Suppose $a/b \in \qbb$ with $(a, b) = 1$.
 	By the Division Algorithm, there exist unique integers $q, r$ such that $a = bq + r$ for $0 \leq r < b$, or equivalently, $a/b = q + r/b$.
 	Then $a/b + \zbb = r/b + \zbb$.
@@ -448,13 +448,13 @@ Let $G$ and $H$ be groups.
 	Moreover, $\zbb$ is a proper subgroup of $\qbb$, so by the first part, $\qbb/\zbb$ is divisible.
 \end{sol}
 
-\begin{spex}{3.1.16}
+\begin{exercise}!{3.1.16}
     Let $G$ be a group, let $N$ be a normal subgroup of $G$, and let $\bar{G} = G/N$.
 	Prove that if $G = \langle x, y \rangle$ then $\bar{G} = \langle \bar{x}, \bar{y} \rangle$.
 	Prove more generally that if $G = \langle S \rangle$ for any subset $S$ of $G$, then $\bar{G} = \langle \bar{S} \rangle$.
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
     We prove the general case.
 	Since $G = \gen S$, for any $g \in G$, we have
     \[
@@ -611,16 +611,16 @@ Let $G$ and $H$ be groups.
 	Then $\phi : \bar G \to Z_2 \times Z_4$ given by $\phi(\bar u) = a$ and $\phi(\bar v) = b$ is a surjective homomorphism, hence $\bar G \cong Z_2 \times Z_4$.
 \end{solenum}
 
-\begin{spex}{3.1.20}
+\begin{exercise}!{3.1.20}
     Let $G = \zbb/24\zbb$ and let $\wt{G} = G/\langle \bar{12} \rangle$, where for each integer $a$ we simplify notation by writing $\wt{\bar a}$ as $\wt{a}$.
     \begin{subexercises}
         \item Show that $\wt{G} = \set{ \wt{0}, \wt{1}, \ldots, \wt{11} }$.
         \item Find the order of each element of $\wt{G}$.
         \item Prove that $\wt{G} \cong \zbb/12\zbb$ (thus $(\zbb/24\zbb)/(12\zbb/24\zbb) \cong \zbb/12\zbb$, just as if we inverted and canceled the $24\zbb$'s).
     \end{subexercises}
-\end{spex}
+\end{exercise}
 
-\begin{solenum}[spsol]
+\begin{solenum}
     \item Note that for some $\wt x \in \wt G$, we have $\wt x = \bar x\gen{12} = \set{\bar x, \bar{x + 12}}$.
 	It follows that $x = 0, 1, 2, \dots, 11$ produces distinct cosets.
     \item The orders are
@@ -1023,11 +1023,11 @@ Let $G$ and $H$ be groups.
 	This clearly satisfies the relations for $D_{2k}$, hence $D_{2n}/\gen{r^k} \cong D_{2k}$. 
 \end{solenum}
 
-\begin{spex}{3.1.35} 
+\begin{exercise}!{3.1.35} 
     Prove that $\splin_n(F) \nsub \gl_n(F)$ and describe the isomorphism type of the quotient group (cf. \exref{2.1.9}).
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
     Since $\splin_n(F) \leq \gl_n(F)$ by \exref{2.1.9}, it remains to be shown that $\splin_n(F)$ is normal in $\gl_n(F)$.
 	Let $S \in \splin_n(F)$ and $X \in \gl_n(F)$.
 	Then
@@ -1155,12 +1155,12 @@ Let $G$ and $H$ be groups.
 	Then $(\alpha, \beta)(\gamma, \gamma)(\alpha\inv, \beta\inv) = (\gamma, \cyc{2 3})$, hence $D$ is not a normal subgroup of $S_3 \times S_3$.
 \end{sol}
 
-\begin{spex}{3.1.40}
+\begin{exercise}!{3.1.40}
     Let $G$ be a group, let $N$ be a normal subgroup of $G$ and let $\bar{G} = G/N$.
 	Prove that $\bar{x}$ and $\bar{y}$ commute in $\bar{G}$ if and only if $x\inv y\inv xy \in N$. (The element $x\inv y\inv xy$ is called the \emph{commutator} of $x$ and $y$ and is denoted by $[x,y]$.)
-\end{spex}
+\end{exercise}
 
-\begin{soliff}[spsol]
+\begin{soliff}
     \rightimp Suppose $\bar{xy} = \bar{yx}$.
 	Then $xyN = yxN$.
 	Then there exists $n, n' \in N$ such that $xyn = yxn'$, or $x\inv y\inv xy = n'n\inv$ so that $x\inv y\inv xy \in N$.
@@ -1171,12 +1171,12 @@ Let $G$ and $H$ be groups.
 	Hence, $\bar{xy} = \bar{yx}$.
 \end{soliff}
 
-\begin{spex}{3.1.41}
+\begin{exercise}!{3.1.41}
     Let $G$ be a group.
 	Prove that $N = \langle x\inv y\inv xy \mid x,y \in G \rangle$ is a normal subgroup of $G$ and $G/N$ is abelian ($N$ is called the \emph{commutator} subgroup of $G$).
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
     Let $g \in G$ and $x\inv y\inv xy \in N$.
 	Then 
     \[
@@ -1201,12 +1201,12 @@ Let $G$ and $H$ be groups.
 	It follows that $x\inv y\inv xy = 1$, or $xy = yx$.
 \end{sol}
 
-\begin{spex}{3.1.43}
+\begin{exercise}!{3.1.43}
     Assume $\pcal = \set{A_i \mid i \in I}$ is any partition of $G$ with the property that $\pcal$ is a group under the ``quotient operation'' defined as follows: to compute the product of $A_i$ with $A_j$ take any element $a_i$ of $A_i$ and any element $a_j$ of $A_j$ and let $A_iA_j$ be the element of $\pcal$ containing $a_ia_j$ (this operation is assumed to be well-defined).
 	Prove that the element of $\pcal$ that contains the identity of $G$ is a normal subgroup of $G$ and the elements of $\pcal$ are the cosets of this subgroup (so $\pcal$ is just a quotient group of $G$ in the usual sense).
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
     For any $g \in G$, let $\wt g \in \pcal$ denote the element such that $g \in \wt g$.
 	We now show that $\wt 1 \leq G$.
 	Since $1 \in \wt 1$, $\wt 1$ is nonempty.

@@ -203,12 +203,12 @@
 	Hence, $|\sigma| = m$.
 \end{sol}
 
-\begin{spex}{1.3.11}
+\begin{exercise}!{1.3.11}
     Let $\sigma$ be the $m$-cycle $\cyc{1 2 dots m}$.
 	Show that $\sigma^i$ is also an $m$-cycle if and only if $i$ is relatively prime to $m$.
-\end{spex}
+\end{exercise}
 
-\begin{soliff}[spsol]
+\begin{soliff}
     \rightimp Suppose $(m, i) = k > 1$.
 	If $i > m$, replace $i$ with $i \pmod m$ since $\sigma^i = \sigma^{i \pmod m}$.
 	Then $i = k\ell$ for $\ell \in \zp$.
@@ -313,15 +313,15 @@
 	Hence, the order of $\sigma$ is the least common multiple of the lengths of the cycles in its cycle decomposition.
 \end{sol}
 
-\begin{spex}{1.3.16}
+\begin{exercise}!{1.3.16}
     Show that if $n \ge m$ then the number of $m$-cycles in $S_n$ is given by
     \[
     	\frac{n(n-1)(n-2)\dots(n-m+1)}{m}.
     \]
     \hint{Count the number of ways of forming an $m$-cycle and divide by the number of representations of a particular $m$-cycle.}
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
     Note that in an $m$-cycle, there are $m$ integers to write.
 	The first integer has $n$ choices, the second $n - 1$ choices.
 	Continuing on, then the $m$-th integer has $n - m + 1$ choices.

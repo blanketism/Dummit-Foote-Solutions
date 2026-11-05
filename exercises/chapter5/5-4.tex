@@ -167,11 +167,11 @@ Let $G$ be a group.
 	Lastly, the oddness of $p$ is needed in the proof to ensure that $\frac{p(p-1)}{2}$ is divisible by $p$, which allows us to conclude that $[y, x]^{\frac{p(p-1)}{2}} = 1$.
 \end{sol}
 
-\begin{spex}{5.4.10}
+\begin{exercise}!{5.4.10}
     Prove that a finite abelian group is the direct product of its Sylow subgroups.
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
     Inducting on the number of prime factors of the group, we first consider $n = 1$, or when $|G| = p_1^n$ for some prime $p_1$.
 	Then $G$ is its own Sylow $p_1$-subgroup, so the statement holds.
 	We now assume that any abelian with fewer than $n$ prime factors is the direct product of its Sylow subgroups, and let $G$ be an abelian group with $n$ prime factors.
@@ -196,12 +196,12 @@ Let $G$ be a group.
     \]
 \end{sol}
 
-\begin{spex}{5.4.11}
+\begin{exercise}!{5.4.11}
     Prove that if $G = HK$ where $H$ and $K$ are characteristic subgroups of $G$ with $H \cap K = 1$, then $\aut(G) \cong \aut(H) \times \aut(K)$.
 	Deduce that if $G$ is an abelian group of finite order, then $\aut(G)$ is isomorphic to the direct product of the automorphism groups of its Sylow subgroups.
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
     Let $\phi \in \aut(G)$.
 	Since $H$ and $K$ are characteristic subgroups of $G$, we have $\phi(H) = H$ and $\phi(K) = K$.
 	Thus, we can define $\phi_H = \phi|_H$ and $\phi_K = \phi|_K$, which are automorphisms of $H$ and $K$ respectively.

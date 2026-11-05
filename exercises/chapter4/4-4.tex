@@ -1,12 +1,12 @@
 \subsection{Automorphisms}
 
-\begin{spex}{4.4.1}
+\begin{exercise}!{4.4.1}
 	Let $G$ be a group.
 	If $\sigma \in \aut(G)$ and $\varphi_g$ is conjugation by $g$, prove that $\sigma \varphi_g \sigma^{-1} = \varphi_{\sigma(g)}$.
 	Deduce that $\inn(G) \trianglelefteq \aut(G)$. (The group $\aut(G)/\inn(G)$ is called the \emph{outer automorphism group} of $G$.)
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
 	For any $x \in G$, then
 	\[
 		(\sigma\phi_g\sigma\inv)(x) = \sigma(\phi_g(\sigma\inv(x))) = \sigma(g\sigma\inv(x)g\inv) = \sigma(g)\sigma(\sigma\inv(x))\sigma(g)\inv = \sigma(g)x\sigma(g)\inv = \phi_{\sigma(g)}(x).
@@ -15,11 +15,11 @@
 	Therefore, for any $\phi_g \in \inn(G)$ and any $\sigma \in \aut(G)$, we have $\sigma\phi_g\sigma\inv \in \inn(G)$, so that $\inn(G) \trianglelefteq \aut(G)$.
 \end{sol}
 
-\begin{spex}{4.4.2}
+\begin{exercise}!{4.4.2}
 	Prove that if $G$ is an abelian group of order $pq$, where $p$ and $q$ are distinct primes, then $G$ is cyclic. (Use Cauchy's Theorem to produce elements of order $p$ and $q$ and consider the order of their product.)
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
 	By Cauchy's Theorem, there are elements $g, h \in G$ such that $\abs g = p$ and $\abs h = q$.
 	Since $G$ is abelian, we have $\abs{gh} = \lcm(\abs g, \abs h) = \lcm(p, q) = pq$.
 	Therefore, $G = \gen{gh}$ is cyclic.
@@ -98,7 +98,7 @@
 	Therefore, $H$ is characteristic in $G$.
 \end{sol}
 
-\begin{spex}{4.4.8}
+\begin{exercise}!{4.4.8}
 	Let $G$ be a group with subgroups $H$ and $K$ with $H \le K$.
 	\begin{subexercises}
 		\item Prove that if $H$ is characteristic in $K$ and $K$ is normal in $G$, then $H$ is normal in $G$.
@@ -106,9 +106,9 @@
 		Use this to prove that the Klein $4$-group $V_4$ is characteristic in $S_4$.
 		\item Give an example to show that if $H$ is normal in $K$ and $K$ is characteristic in $G$, then $H$ need not be normal in $G$.
 	\end{subexercises}
-\end{spex}
+\end{exercise}
 
-\begin{solenum}[spsol]
+\begin{solenum}
 	\item For any $g \in G$, consider the inner automorphism $\phi_g \in \inn(G)$.
 	Since $K \nsub G$, we have $\phi_g(K) = K$.
 	Moreover, since $H \cha K$, we have $\phi_g(H) = H$.
@@ -258,11 +258,11 @@
 	Therefore, both groups are cyclic.
 \end{sol}
 
-\begin{spex}{4.4.16}
+\begin{exercise}!{4.4.16}
 	Prove that $\units[24]$ is an elementary abelian group of order $8$. (We shall see later that $\units[n]$ is an elementary abelian group if and only if $n \mid 24$.)
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
 	We first prove the lemma: let $a, b, m, n \in \zbb$ such that $(m, n) = 1$.
 	If $a \equiv b \pmod m$ and $a \equiv b \pmod n$, then $a \equiv b \pmod{mn}$.
 	Indeed, we have that
@@ -332,7 +332,7 @@
 	Therefore, $\aut(G) = \set{\psi_1, \psi_5}$.
 \end{solitem}
 
-\begin{spex}{4.4.18}
+\begin{exercise}!{4.4.18}
 	This exercise shows that for $n\neq 6$ every automorphism of $S_n$ is inner.
 	Fix an integer $n\ge 2$ with $n\neq 6$.
 	\begin{subexercises}
@@ -348,9 +348,9 @@
 		\item Show that $(1\,2),(1\,3),\ldots,(1\,n)$ generate $S_n$ and deduce that any automorphism of $S_n$ is uniquely determined by its action on these elements.
 		Use (c) to show that $S_n$ has at most $n!$ automorphisms and conclude that $\aut(S_n)=\inn(S_n)$ for $n\neq 6$.
 	\end{subexercises}
-\end{spex}
+\end{exercise}
 
-\begin{solenum}[spsol]
+\begin{solenum}
 	\item Let $\kcal$ be a conjugacy class of $G$ and let $\sigma \in \aut(G)$.
 	For any $x \in \kcal$, we have $\sigma(x) \in G$.
 	Consider the conjugacy class $\kcal'$ of $\sigma(x)$ in $G$.
@@ -412,7 +412,7 @@
 	Since $\inn(S_n) \leq \aut(S_n)$, we must have $\aut(S_n) = \inn(S_n)$ for $n \neq 6$.
 \end{solenum}
 
-\begin{spex}{4.4.19}
+\begin{exercise}!{4.4.19}
 	This exercise shows that $|\aut(S_6):\inn(S_6)|\le 2$ (Exercise 10 in Section 6.3 shows that equality holds by exhibiting an automorphism of $S_6$ that is not inner).
 	\begin{subexercises}
 		\item Let $\kcal$ be the conjugacy class of transpositions in $S_6$ and let $\kcal'$ be the conjugacy class of any element of order $2$ in $S_6$ that is not a transposition.
@@ -420,9 +420,9 @@
 		Deduce that $\aut(S_6)$ has a subgroup of index at most $2$ which sends transpositions to transpositions.
 		\item Prove that $|\aut(S_6):\inn(S_6)|\le 2$. (Follow the same steps as in (c) and (d) of the preceding exercise to show that any automorphism that sends transpositions to transpositions is inner.)
 	\end{subexercises}
-\end{spex}
+\end{exercise}
 
-\begin{solenum}[spsol]
+\begin{solenum}
 	\item This is similar to (b) in the previous exercise.
 	By \exref{4.3.33}, the formulas for each conjugacy class is given by
 	\[
@@ -444,7 +444,7 @@
 	Therefore, by (a), we have $|\aut(S_6) : \inn(S_6)| \leq 2$.
 \end{solenum}
 
-\begin{spex}{4.4.20}
+\begin{exercise}!{4.4.20}
 	For any finite group $P$ let $d(P)$ be the minimum number of generators of $P$ (so, for example, $d(P)=1$ if and only if $P$ is a non-trivial cyclic group and $d(Q_8)=2$).
 	Let $m(P)$ be the maximum of the integers $d(A)$ as $A$ runs over all abelian subgroups of $P$ (so, for example, $m(Q_8)=1$ and $m(D_8)=2$).
 	Define
@@ -459,9 +459,9 @@
 		\item Prove that if $Q\le P$ and $J(P)$ is a subgroup of $Q$, then $J(P)=J(Q)$.
 		Deduce that if $P$ is a subgroup (not necessarily normal) of the finite group $G$ and $J(P)$ is contained in some subgroup $Q$ of $P$ such that $Q \nsub G$, then $J(P) \nsub G$.
 	\end{subexercises}
-\end{spex}
+\end{exercise}
 
-\begin{solenum}[spsol]
+\begin{solenum}
 	\item Let $\sigma \in \aut(P)$.
 	Let $A$ be an abelian subgroup of $P$ such that $d(A) = m(P)$.
 	Then $\sigma(A)$ is also an abelian subgroup of $P$.

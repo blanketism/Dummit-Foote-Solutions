@@ -13,11 +13,11 @@ Let $G$ be a group.
 	We then have that $|\gl_n(F) : \splin_n(F)| = \abs{F\unt} = q - 1$.
 \end{sol}
 
-\begin{spex}{3.3.2}
+\begin{exercise}!{3.3.2}
     Prove all parts of the Lattice Isomorphism Theorem.
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
     Let $\acal = \set{A \leq G \mid N \subseteq A}$ be the set of subgroups of $G$ containing $N$.
 	Let $\bar{\acal} = \set{\bar A \leq \bar G}$ be the set of subgroups of $\bar G = G/N$.
 	Define the map
@@ -309,14 +309,14 @@ Let $G$ be a group.
     By the First Isomorphism Theorem, we have $G/\ker\phi \cong \phi(G) = G$, hence $G$ is isomorphic to a proper quotient of itself.
 \end{sol}
 
-\begin{spex}{3.3.9}
+\begin{exercise}!{3.3.9}
     Let $p$ be a prime and let $G$ be a group of order $p^am$, where $p$ does not divide $m$.
 	Assume $P$ is a subgroup of $G$ of order $p^a$ and $N$ is a normal subgroup of $G$ of order $p^b n$, where $p$ does not divide $n$.
 	Prove that $|P \cap N| = p^b$ and $|PN/N| = p^{a - b}$. (The subgroup $P$ of $G$ is called a \emph{Sylow $p$-subgroup} of $G$.
 	This exercise shows that the intersection of any Sylow $p$-subgroup with a normal subgroup $N$ is a Sylow $p$-subgroup of $N$.)
-\end{spex}
+\end{exercise}
 
-\begin{sol}[spsol]
+\begin{sol}
     Since $P \cap N \leq P$, $|P \cap N|$ divides $|P| = p^a$.
 	Similarly, since $P \cap N \leq N$, $|P \cap N|$ divides $|N| = p^b n$.
 	It follows that $|P \cap N|$ divides $\gcd(p^a, p^b n) = p^b$, hence $|P \cap N| = p^c$ for some $c \leq b$.
