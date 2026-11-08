@@ -1,7 +1,7 @@
 \subsection{Dihedral Groups}
 
 In these exercises, $D_{2n}$ has the usual presentation 
-$D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
+$D_{2n} = \gen{r, s \mid r^n = s^2 = 1, rs = sr\inv}$.
 
 \begin{exercise}{1.2.1}
     Compute the order of each of the elements in the following groups:
@@ -12,7 +12,7 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 
 \begin{sol}
     For any reflection $sr^k \in D_{2n}$, it is clear that $sr^k \neq 1$.
-	Moreover,
+	By the properties of $D_{2n}$:
     \[
     	(sr^k)^2 = s(r^ks)r^k = s(sr^{-k})r^k = r^{-k}r^k = 1
     \]
@@ -22,7 +22,7 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
         \item $D_6 = \set{1, r, r^2, s, sr, sr^2}$.
 	    Then $|1| = 1$ and $|r| = |r^2| = 3$.
         \item $D_8 = \set{1, r, r^2, r^3, s, sr, sr^2, sr^3}$.
-	    Then $|1| = 1, |r^2| = 2$ and $|r| = |r^3| = 4$.
+	    Then $|1| = 1$, $|r^2| = 2$, and $|r| = |r^3| = 4$.
         \item $D_{10} = \set{1, r, r^2, r^3, r^4, s, sr, sr^2, sr^3, sr^4}$.
 	    Then $|1| = 1$ and $|r| = |r^2| = |r^3| = |r^4| = 5$. \qedhere
     \end{subexercises}
@@ -33,10 +33,10 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 \end{exercise}
 
 \begin{sol}
-    If $x$ is not a power of $r$, then $x$ is a reflection, i.e., $x = sr^k$ for some $0 \leq k < n$.
-	Then
+    If $x$ is not a power of $r$, then $x = sr^k$ for some $0 \leq k < n$.
+	Therefore, we have
     \[
-    	rx = r(sr^k) = (rs)r^k = (sr^{-1})r^k = s(r^{-1}r^k) = s r^{k - 1} = (sr^k) r^{-1} = x r^{-1}. \qedhere
+    	rx = (rs)r^k = s r\inv r^k = (s r^k) r\inv = x r\inv. \qedhere
     \]
 \end{sol}
 
@@ -48,13 +48,9 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 \end{exercise}
  
 \begin{sol}
-    If an element is not a power of $r$, then it is a reflection.
-	See \exref{1.2.1} as to why every reflection has order $2$.
-	Moreover, for any $0 \leq k < n$, we can rewrite $r^k$ and $sr^k$ in terms of $s$ and $sr$ as follows:
-    \[
-    	r^k = (s(sr))^k \quad \text{and} \quad sr^k = s(s(sr))^k,
-    \]
-    showing that every element of $D_{2n}$ can be expressed in terms of $s$ and $sr$.
+    Since every element that is not a power of $r$ is of the form $s r^k$, it follows from \exref{1.2.1} that such elements have order $2$.
+    Therefore, $|s| = |sr| = 2$.
+	Moreover, $r = s(sr)$, so $r, s \in \gen{s, s r}$, and therefore $\gen{s, sr} = D_{2n}$.
 \end{sol}
 
 \begin{exercise}{1.2.4}
@@ -65,16 +61,16 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 \end{exercise}
    
 \begin{sol}
-    Since $n \geq 4$, we have $k \geq 2$ so that $r^k \neq 1$.
+    Since the elements $1, r, \ldots, r^{n-1}$ are all distinct and $0 < k < n$, we have $r^k \neq 1$.
 	Moreover, $(r^k)^2 = r^n = 1$, hence $|r^k| = 2$.
+    In particular, $r^k = (r^k)\inv = r^{-k}$.
 	Since $r^k$ commutes with other powers of $r$, consider $sr^j \in D_{2n}$ for $0 \leq j < n$.
-	Then
-    \[
-    	r^k(sr^j) = (r^ks)r^j = (sr^{-k})r^j = s(r^{-k}r^j) = s r^{j-k} = (sr^j) r^k,
-    \]
+	By applying \exref{1.2.2} $k$ times with $x = s r^j$, we have $r^k (s r^j) = (s r^j) r^{-k} = (s r^j) r^k$.
+
     Now let $w \in D_{2n}$ such that $wx = xw$ for all $x \in D_{2n}$.
 	If $w = r^m$ for $0 < m < n$, then commuting with $s$ gives $w = w\inv$, which implies $m = k$ by \exref{1.1.33}.
-	If $w = sr^m$ instead, then commuting with $r$ implies $r = r\inv$, which cannot be true since $n \geq 4$.
+	If $w = sr^m$ instead, then $r w = w r$.
+    By \exref{1.2.2} with $x = w$, we have $r w = w r\inv$, so $w r = w r\inv$, and therefore $r^2 = 1$, contradicting $|r| \geq 4$.
 \end{sol}
 
 \begin{exercise}{1.2.5}
@@ -84,7 +80,10 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 \end{exercise}
 
 \begin{sol}
-    By the same argument as \exref{1.2.4} and the odd case in \exref{1.1.33}, $w$ cannot be a rotation. The reflection case is the same as in \exref{1.2.4}, and we conclude that $w = 1$.
+    Let $x \in D_{2n}$ commute with all elements of $D_{2n}$.
+    If $x = r^m$ for some $0 < m < n$, commuting with $s$ gives $r^m = r^{-m}$, which cannot occur by \exref{1.1.33}.
+    If $x = s r^m$ for some $0 \leq m < n$, commuting with $r$ gives $r s r^m = s r^m r$, and \exref{1.2.2} gives $r s r^m = s r^m r\inv$.
+    Then $r^2 = 1$, contradicting $|r| \geq 3$, so $x = 1$.
 \end{sol}
 
 \begin{exercise}{1.2.6}
@@ -108,12 +107,17 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 
 \begin{sol}
     If $a^2 = b^2 = (ab)^n = 1$, put $r = ab$ and $s = a$.
-	Then
+    Then
     \[
     	r^n = (ab)^n = 1, \quad s^2 = a^2 = 1, \quad rs = (ab)a = a(ba) = a(b\inv a\inv) = a(ab)\inv = sr\inv.
     \]
-    Conversely, put $a = s$ and $b = sr$.
-	The calculations are similar.
+    Conversely, if $r^n = s^2 = 1$ and $rs = sr\inv$, put $a = s$ and $b = sr$.
+    Then
+    \[
+    	a^2 = s^2 = 1, \quad b^2 = (sr)^2 = s(rs)r = s(sr\inv)r = 1, \quad (ab)^n = (s(sr))^n = r^n = 1.
+    \]
+    The first direction shows $sr = a(ab) = b$ and the second direction shows $ab = s(sr) = r$.
+    Therefore, with $a = s$ and $b = sr$ as in \exref{1.2.3}, the presentations $\gen{a, b \mid a^2 = b^2 = (ab)^n = 1}$ and $\gen{r, s \mid r^n = s^2 = 1, rs = sr\inv}$ are equivalent, and thus both present the group $D_{2n}$.
 \end{sol}
 
 \begin{exercise}{1.2.8}
@@ -121,8 +125,12 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 \end{exercise}
 
 \begin{sol}
-    Since $|r| = n$, the cyclic subgroup generated by $r$ has order $n$ by \exref{1.1.35}.
+    Distinctness of the elements $1, r, r^2, \dots, r^{n-1}$ and the fact that $r^n = 1$ show that the cyclic subgroup generated by $r$ has order $n$.
 \end{sol}
+
+In each of Exercises 9 to 13 you can find the order of the group of rigid motions in $\rbb^3$ (also called the group of rotations) of the given Platonic solid by following the proof for the order of $D_{2n}$:
+find the number of positions to which an adjacent pair of vertices can be sent.
+Alternatively, you can find the number of places to which a given face may be sent and, once a face is fixed, the number of positions to which a vertex on that face may be sent.
 
 \begin{exercise}{1.2.9} 
     Let $G$ be the group of rigid motions in $\rbb^3$ of a tetrahedron.
@@ -130,9 +138,9 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 \end{exercise}
 
 \begin{sol}
-    Label the vertices of a tetrahedron 1 through 4.
-	Vertex 1 has 4 choices, vertex 2 has 3 remaining choices, and vertices 3 and 4 are determined thereafter.
-	It follows that $4(3) = 12$ symmetries.
+    Label the vertices of the tetrahedron $1$ through $4$.
+    Vertex $1$ has $4$ choices, and vertex $2$ has $3$ choices.
+    Since symmetries are rigid motions, the positions of the remaining vertices are determined once vertices $1$ and $2$ are fixed, so $|G| = 4 \cdot 3 = 12$.
 \end{sol}
 
 \begin{exercise}{1.2.10}
@@ -141,7 +149,9 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 \end{exercise}
 
 \begin{sol}
-    8 choices for vertex 1 and 3 adjacent vertices for vertex 2; $8(3) = 24$ symmetries.
+    Label the vertices of the cube $1$ through $8$ with vertices $1$ and $2$ adjacent to each other.
+    Vertex $1$ has $8$ choices, and vertex $2$ has $3$ choices.
+    Since symmetries are rigid motions, the positions of the remaining vertices are determined once vertices $1$ and $2$ are fixed, so $|G| = 8 \cdot 3 = 24$.
 \end{sol}
 
 \begin{exercise}{1.2.11}
@@ -150,7 +160,9 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 \end{exercise}
 
 \begin{sol}
-    6 choices for vertex 1 and 4 adjacent vertices for vertex 2; $6(4) = 24$ symmetries.
+    Label the vertices of the octahedron $1$ through $6$ with vertices $1$ and $2$ adjacent to each other.
+    Vertex $1$ has $6$ choices, and vertex $2$ has $4$ choices.
+    Since symmetries are rigid motions, the positions of the remaining vertices are determined once vertices $1$ and $2$ are fixed, so $|G| = 6 \cdot 4 = 24$.
 \end{sol}
 
 \begin{exercise}{1.2.12}
@@ -159,7 +171,9 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 \end{exercise}
 
 \begin{sol}
-    20 choices for vertex 1 and 3 adjacent vertices for vertex 2; $20(3) = 60$ symmetries.
+    Label the vertices of the dodecahedron $1$ through $20$ with vertices $1$ and $2$ adjacent to each other.
+    Vertex $1$ has $20$ choices, and vertex $2$ has $3$ choices.
+    Since symmetries are rigid motions, the positions of the remaining vertices are determined once vertices $1$ and $2$ are fixed, so $|G| = 20 \cdot 3 = 60$.
 \end{sol}
 
 \begin{exercise}{1.2.13}
@@ -168,7 +182,9 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 \end{exercise}
 
 \begin{sol}
-    12 choices for vertex 1 and 5 adjacent vertices for vertex 2; $12(5) = 60$ symmetries.
+    Label the vertices of the icosahedron $1$ through $12$ with vertices $1$ and $2$ adjacent to each other.
+    Vertex $1$ has $12$ choices, and vertex $2$ has $5$ choices.
+    Since symmetries are rigid motions, the positions of the remaining vertices are determined once vertices $1$ and $2$ are fixed, so $|G| = 12 \cdot 5 = 60$.
 \end{sol}
 
 \begin{exercise}{1.2.14}
@@ -176,7 +192,7 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 \end{exercise}
 
 \begin{sol}
-    Any integer is of the form $n1$, so $\zbb = \gen 1$.
+    Any integer is of the form $n1$ with $n \in \zbb$, so $\zbb = \gen 1$.
 \end{sol}
 
 \begin{exercise}{1.2.15}
@@ -184,30 +200,25 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 \end{exercise}
 
 \begin{sol}
-    Each element of $\intmod$ is of the form $k\bar 1$ for $0 \leq k < n$.
-	Then $\intmod = \gen{\bar 1 \mid n\bar 1 = \bar 0}$.
+    Since $n \bar 1 = \bar 0$, every element in $\intmod$ is of the form $k \bar 1$ for some $0 \leq k < n$, and these are distinct by \exref{0.3.2}, so $\intmod = \gen{\bar 1 \mid n \bar 1 = \bar 0}$.
 \end{sol}
 
 \begin{exercise}{1.2.16}
-    Show that the group $\langle x_1, y_1 \mid x_1^2 = y_1^2 = (x_1 y_1)^2 = 1 \rangle$ is the dihedral group $D_4$ (where $x_1$ may be replaced by the letter $r$ and $y_1$ by $s$).
+    Show that the group $\gen{x_1, y_1 \mid x_1^2 = y_1^2 = (x_1 y_1)^2 = 1}$ is the dihedral group $D_4$ (where $x_1$ may be replaced by the letter $r$ and $y_1$ by $s$).
 
     \hint{Show that the last relation is the same as $x_1 y_1 = y_1 x_1^{-1}$.}
 \end{exercise}
 
 \begin{sol}
-    Note that $y_1^2 = 1$, so $y_1\inv = y_1$.
-	Then
+    Since $y_1^2 = 1$, we have $y_1\inv = y_1$, so
     \[
-    	(x_1y_1)^2 = 1 \iff x_1y_1x_1y_1 = 1 \iff x_1y_1x_1 = y_1\inv = y_1 \iff x_1y_1 = y_1x_1\inv
+        (x_1 y_1)^2 = 1 \iff x_1 y_1 x_1 y_1 = 1 \iff x_1 y_1 x_1 = y_1\inv = y_1 \iff x_1 y_1 = y_1 x_1\inv.
     \]
-    Then the relations of $D_4$ are satisfied by $x_1$ and $y_1$ if we set $r = x_1$ and $s = y_1$.
+    Therefore, the relations above are equivalent to the relations of $D_4$ with $r = x_1$ and $s = y_1$.
 \end{sol}
 
 \begin{exercise}{1.2.17}
     Let $X_{2n}$ be the group whose presentation is displayed in (1.2).
-    \[
-    	X_{2n} = \gen{x, y \mid x^n = y^2 = 1, xy = yx^2}
-    \]
     \begin{subexercises}
         \item Show that if $n = 3k$, then $X_{2n}$ has order $6$, and it has the same generators and relations as $D_6$ when $x$ is replaced by $r$ and $y$ by $s$.
         \item Show that if $(3, n) = 1$, then $x$ satisfies the additional relation: $x = 1$.
@@ -218,41 +229,27 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 \end{exercise}
 
 \begin{solenum}
-    \item If $n = 3k$, then
+    \item As shown in the text, $x^3 = 1$.
+	Assume the relations of $X_{6k}$ hold, and put $r = x$ and $s = y$.
+    Then
     \[
-    	X_{2n} = X_{6k} = \gen{x, y \mid x^{3k} = y^2 = 1, xy = yx^2}
+        r^3 = x^3 = 1, \quad s^2 = y^2 = 1, \quad rs = xy = yx^2 = sr^2 = sr\inv.
     \]
-    As shown in the text, $x^3 = 1$.
-	Assume the relations of $X_{6k}$ hold.
-	Set $r = x$ and $s = y$, so that $r^3 = x^3 = 1$, $s^2 = y^2 = 1$, and
+    Now suppose the relations of $D_6$ hold, and put $x = r$ and $y = s$, so
     \[
-    	rs = xy = yx^2 = sr^2 = sr\inv.
+        x^{3k} = (r^3)^k = 1, \quad y^2 = s^2 = 1, \quad xy = rs = sr^2 = yx^2.
     \]
-    Now suppose the relations of $D_6$ hold.
-	Then
-    \[
-    	x^n = r^{3k} = (r^3)^k = 1^k = 1, \quad y^2 = s^2 = 1
-    \]
-    and
-    \[
-    	xy = rs = sr\inv = sr^2 = yx^2
-    \]
-    Thus, the two presentations are equivalent, and $|X_{6k}| = |D_6| = 6$.
+    Therefore, the two presentations are equivalent, and $|X_{6k}| = |D_6| = 6$.
     \item Since $(3, n) = 1$, there exist integers $a$ and $b$ such that $3a + nb = 1$.
-	From the relations of $X_{2n}$, we have $x^3 = 1$ and $x^n = 1$.
-	Then
+	From the relations of $X_{2n}$ and as in (a), $x^n = 1$ and $x^3 = 1$, so
     \[
-    	x = x^{3a + nb} = (x^3)^a (x^n)^b = 1^a 1^b = 1
+    	x = x^{3a + nb} = (x^3)^a (x^n)^b = 1^a 1^b = 1.
     \]
-    so that $X_{2n} = \set{1, y}$ where $y^2 = 1$.
-	It follows that $|X_{2n}| = 2$.
+    Since $x = 1$, the only remaining relation is $y^2 = 1$, and thus $X_{2n} = \set{1, y}$ with $|X_{2n}| = 2$.
 \end{solenum}
 
 \begin{exercise}{1.2.18}
     Let $Y$ be the group whose presentation is displayed in (1.3).
-    \[
-    	Y = \gen{u, v \mid u^4 = v^3 = 1, uv = v^2u^2}.
-    \]
     \begin{subexercises}
         \item Show that $v^2 = v^{-1}$.
         
@@ -277,14 +274,13 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, \ rs = sr\inv}$.
 \begin{solenum}
     \item $v^3 = 1 \implies v^2 = v\inv$.
     \item From $uv = v^2u^2$, we have $vuv = u^2$ so that $vu = u^2v\inv = u^2v^2$.
-	It follows that
+    It follows that
     \[
-    	v^2u^3v = (v^2u^2)(uv) = (uv)(uv) = u(vu)v = u(u^2v^2)v = u^3.
+        v^2u^3v = (v^2u^2)(uv) = (uv)(uv) = u(vu)v = u(u^2v^2)v = u^3.
     \]
-    \item It follows that $u^9 = (u^4)^2u = u$.
-	Then $uv = (u^3)^3v = v(u^3)^3 = vu$.
-    \item $uv = v^2u^2 = u^2v^2$.
-	Then $1 = uv$.
-    \item $u^4v^3 = u(uv)^3 = u1^3 = 1$.
-	Then $1v = 1$, and $u = v = 1$, so $Y = 1$.
+    By part (a), $v\inv = v^2$, so $v\inv u^3 v = u^3$, and thus $v$ commutes with $u^3$.
+    \item Since $u^4 = 1$, we have $u^9 = (u^4)^2u = u$, so part (b) gives $uv = u^9v = (u^3)^3v = v(u^3)^3 = vu$.
+    \item We have $uv = v^2u^2 = u^2v^2$, and cancellation gives $1 = uv$.
+    \item By part (c), $u^4v^3 = u(uv)^3$, and $u(uv)^3 = u1^3 = u$ by part (d). 
+    The relations $u^4 = v^3 = 1$ then give $u = 1$, and part (d) gives $v = 1$, so $Y = 1$.
 \end{solenum}

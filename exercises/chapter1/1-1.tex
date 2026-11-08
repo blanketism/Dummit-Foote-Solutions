@@ -314,7 +314,7 @@ Let $G$ be a group.
     $xy = yx \iff y\inv xy = y\inv yx = x \iff x\inv y\inv xy = x\inv x = 1$.
 \end{sol}
 
-\begin{exercise}!{1.1.19}
+\begin{exercise}![Exponent Laws in Groups]{1.1.19}
     Let $x \in G$ and let $a, b \in \zp$.
     \begin{subexercises}
         \item Prove that $x^{a+b} = x^a x^b$ and $(x^a)^b = x^{ab}$.
@@ -324,36 +324,48 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{solenum}
-    \item There are $a$ instances of $x$ in $x^a$ and $b$ instances of $x$ in $x^b$.
-	Hence, there are $a + b$ instances of $x$ in $x^a x^b$, so that $x^{a+b} = x^a x^b$.
-	There are $a$ instances of $x$ in $x^a$, and there are $b$ instances of $x^a$ in $(x^a)^b$.
-	Hence, there are $ab$ instances of $x$ in $(x^a)^b$, so that $(x^a)^b = x^{ab}$.
-    \item By \exref{1.1.15}, $(x^a)\inv$ consists of $a$ instances of $x\inv$, so that $(x^a)\inv = x^{-a}$.
-    \item We consider the following cases:
+    \item By Proposition 1.1(5), both $x^{a+b}$ and $x^a x^b$ have ${a+b}$ copies of $x$, up to bracketing, and thus $x^{a+b} = x^a x^b$.
+    Similarly, both $(x^a)^b$ and $x^{ab}$ have $ab$ copies of $x$, up to bracketing, and thus $(x^a)^b = x^{ab}$.
+    \item By \exref{1.1.15}, $(x^a)\inv$ consists of $a$ instances of $x\inv$, and therefore $(x^a)\inv = x^{-a}$.
+    In particular, $(x^n)\inv = x^{-n}$ for all $n \in \zbb$, where $n > 0$ is the preceding argument.
+    The case of $n = 0$ is trivial since $x^0 = 1$ and $1\inv = 1$, and if $n < 0$, then applying the preceding argument to $-n > 0$ and Proposition 1.1(3) gives $(x^n)\inv = x^{-n}$.
+    \item Suppose one of $a$ or $b$ is $0$.
+    Then $x^{a+b} = x^a x^b$ trivially holds since $x^0 = 1$.
+    Moreover, $(x^0)^b = 1^b = 1 = x^{0 \cdot b}$ for any integer $b$, and $(x^a)^0 = 1 = x^{a \cdot 0}$ for any integer $a$.
+    Otherwise, consider the cases:
     \begin{itemize}
         \item If $a, b \in \zp$, then the result follows from part (a).
-        \item If $a \in \zp$ and $b < 0$ (the case of $a < 0$ and $b \in \zp$ is analogous), suppose $a + b \geq 0$.
-	    Then
+        \item If $a \in \zp$ and $b < 0$, suppose $a + b \geq 0$.
+        Then
         \[
-        	x^a = x^{a + b - b} = x^{a + b}x^{-b},
+            x^a = x^{a+b-b} = x^{a+b} x^{-b} = x^{a+b} (x^b)\inv,
         \]
-        so that $x^{a + b} = x^a x^b$.
-	    If $a + b < 0$, then
+        where the last equality follows from part (b).
+        Thus, $x^{a+b} = x^a x^b$.
+        If $a + b < 0$, applying the preceding result to $-a < 0$ and $-b \in \zp$ gives $x^{-(a+b)} = x^{-b} x^{-a}$.
+        By part (b), taking inverses gives
         \[
-        	(x^{a + b})\inv = x^{-a - b} = x^{-b} x^{-a} = (x^a x^b)\inv,
+            (x^{a+b})\inv = x^{-(a+b)} = x^{-b} x^{-a} = (x^a x^b)\inv,
         \]
-        implying that $x^{a + b} = x^a x^b$, since inverses are unique.
-	    Moreover,
+        and uniqueness of inverses gives $x^{a+b} = x^a x^b$.
+        The case of $a < 0$ and $b \in \zp$ is analogous to the previous case with roles of $a$ and $b$ swapped.
+
+        For the multiplication law, if $a \in \zp$ and $b < 0$, then
         \[
-        	(x^a)^b = (x^a)^{-(-b)} = ((x^a)^{-b})\inv = (x^{-ab})\inv = x^{ab}.
+            (x^a)^b = ((x^a)^{-b})\inv = (x^{a(-b)})\inv = (x^{-ab})\inv = x^{ab}.
+        \]
+        If $a < 0$ and $b \in \zp$, then
+        \[
+            (x^a)^b = ((x^{-a})\inv)^b = ((x^{-a})^b)\inv = x^{ab}.
         \]
         \item If $a < 0$ and $b < 0$, then $a + b < 0$ and
         \[
         	x^{a + b} = x^{b + a} = (x^{-b - a})\inv = (x^{-b} x^{-a})\inv = (x^{-a})\inv (x^{-b})\inv = x^a x^b.
         \]
-        Moreover,
+        Moreover, $((x^{-a})\inv)^b = (x^{-a})^{-b} = ((x^{-a})^b)\inv$ follows from the definition of a negative exponent, Proposition 1.1(3), and part (b).
+        Therefore,
         \[
-        	(x^a)^b = ((x^{-a})\inv)^b = ((x^{-a})^b)\inv = (x^{(-a)b})\inv = x^{ab}. \qedhere
+            (x^a)^b = ((x^{-a})\inv)^b = ((x^{-a})^b)\inv = (x^{(-a)b})\inv = (x^{-ab})\inv = x^{ab}. \qedhere
         \]
     \end{itemize}
 \end{solenum}
@@ -366,17 +378,11 @@ Let $G$ be a group.
     Suppose $|x| = n \in \zp$.
 	Then
     \[
-    	(x\inv)^n = (x^n)\inv = 1\inv = 1
+        (x\inv)^n = x^{-n} = (x^n)\inv = 1\inv = 1,
     \]
-    so that $|x\inv| \leq n$ and has finite order.
-	Similarly, suppose $|x\inv| = m \in \zp$.
-	Then
-    \[
-    	x^m = ((x\inv)^m)\inv = 1\inv = 1
-    \]
-    so that $|x| \leq m$ and has finite order.
-	Then $n = m$, and $|x| = |x\inv|$.
-	Specifically, $x$ has finite order if and only if $x\inv$ has finite order, hence $x$ has infinite order if and only if $x\inv$ has infinite order.
+    so $|x\inv| \leq n$.
+    Since $(x\inv)\inv = x$, applying the preceding argument to $x\inv$ gives $n \leq |x\inv|$, and therefore $|x\inv| = n = |x|$.
+	In particular, $x$ has finite order if and only if $x\inv$ has finite order, and hence $x$ has infinite order if and only if $x\inv$ has infinite order.
 \end{sol}
 
 \begin{exercise}{1.1.21}
@@ -396,31 +402,17 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-    We first prove the following lemma.
-    \begin{lemma}{$(g\inv xg)^n = g\inv x^n g$ for all $n \in \zp$.}
-        We proceed by induction, where $n = 1$ is clear.
-	If it holds for $n \in \zp$, then for $n + 1$, we have
-        \[
-        	(g\inv xg)^{n + 1} = (g\inv xg)^n (g\inv xg) = (g\inv x^n g)(g\inv xg) = g\inv x^{n + 1} g.
-        \]
-        Hence, the result follows by induction for all $n \in \zp$.
-    \end{lemma}
-    Let $|x| = m \in \zp$.
+    A simple induction on $n$ gives $(g\inv x g)^n = g\inv x^n g$ for all $n \in \zp$.
+	Let $|x| = m \in \zp$.
 	Then
     \[
-    	(g\inv xg)^m = g\inv x^m g = g\inv 1 g = 1,
+    	(g\inv x g)^m = g\inv x^m g = g\inv 1 g = 1,
     \]
-    so that $|g\inv xg| \leq m$.
-	Similarly, let $|g\inv xg| = n \in \zp$.
-	Then
-    \[
-    	x^n = (gg\inv) x^n (gg\inv) = g(g\inv xg)^n g\inv = g 1 g\inv = 1,
-    \]
-    so that $|x| \leq n$.
-	Hence, $m = n$, and $|x| = |g\inv x g|$.
+    so that $|g\inv x g| \leq m$.
+	Note that $x = (g\inv)\inv(g\inv x g) g\inv$, so applying the preceding argument with $g\inv$ in place of $g$ and $g\inv x g$ in place of $x$ gives $m \leq |g\inv x g|$.
+    Therefore, $|g\inv x g| = m = |x|$, so $x$ has finite order if and only if $g\inv x g$ has finite order, and $x$ has infinite order if and only if $g\inv x g$ has infinite order.
 
-    Let $a, b \in G$, and put $x = ab$ and $g = a$.
-	Then $|ab| = |a\inv(ab)a| = |ba|$.
+    In particular, for any $a, b \in G$, putting $x = ab$ and $g = a$ gives $|ab| = |a\inv (ab) a| = |ba|$.
 \end{sol}
 
 \begin{exercise}{1.1.23}
@@ -429,18 +421,9 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-    Let $|x^s| = r \in \zp$.
-	Then
-    \[
-    	(x^s)^t = x^{st} = x^n = 1,
-    \]
-    so that $r \leq t$.
-	Moreover,
-    \[
-    	x^{sr} = (x^s)^r = 1
-    \]
-    implies that $|x| = st \leq sr$, hence $t \leq r$.
-	Thus, $|x^s| = r = t$.
+    Since $(x^s)^t = x^{st} = x^n = 1$, we have $|x^s| \leq t$.
+	Moreover, if $(x^s)^r = 1$ for some $r \in \zp$, then $x^{sr} = 1$, so $n = st \leq sr$, hence $t \leq r$.
+	Therefore, $|x^s| = t$.
 \end{sol}
 
 \begin{exercise}{1.1.24}
@@ -450,12 +433,16 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-    The case for $n = 0$ and $n = 1$ is clear.
-	If it holds for some $n \in \zp$, then for $n + 1$, we have
+    We prove the statement by induction on $n \in \zp$.
+    The case $n = 1$ is clear since $(ab)^1 = ab = a^1 b^1$.
+    Suppose it holds for some $n \in \zp$.
+    Noting that $b^n a = a b^n$ by another short induction, we have
     \[
-    	(ab)^{n + 1} = (ab)^n (ab) = (a^n b^n)(ab) = a^n (b^n a) b = a^n (ab^n) b = a^{n + 1} b^{n + 1}.
+        (ab)^{n+1} = (ab)^n (ab) = (a^n b^n)(ab) = a^n (b^n a) b = a^n (ab^n) b = a^{n+1} b^{n+1}.
     \]
-    For $n < 0$, then
+    If $n = 0$, then $(ab)^0 = 1 = a^0 b^0$.
+    For $n < 0$, note that $-n > 0$.
+    By the positive case,
     \[
         (ab)^n = ((ab)^{-n})\inv = (a^{-n} b^{-n})\inv = (b^{-n})\inv (a^{-n})\inv = b^n a^n = a^n b^n. \qedhere
     \]
@@ -474,31 +461,31 @@ Let $G$ be a group.
     \]
 \end{sol}
 
-\begin{exercise}!{1.1.26}
+\begin{exercise}![Subgroups]{1.1.26}
     Assume $H$ is a nonempty subset of $(G, \star)$ which is closed under the binary operation on $G$ and is closed under inverses, i.e., for all $h, k \in H$, $hk, \, h^{-1} \in H$.
-	Prove that $H$ is a group under the operation $\star$ restricted to $H$ (such a subset $H$ is called a \textbf{subgroup} of $G$).
+	Prove that $H$ is a group under the operation $\star$ restricted to $H$ (such a subset $H$ is called a \term{subgroup} of $G$).
 \end{exercise}
 
 \begin{sol}
-    Let $H \subseteq (G, \star)$ be nonempty and closed under the binary operation on $G$ and inverses.
-	Let $h \in H$.
-	Then $h\inv \in H$, so that $hh\inv = 1 \in H$.
-	Hence, $H$ has an identity.
-	Associativity is inherited from $G$.
-	Hence, $(H, \star|_H)$ is a group.
+    Let $h \in H$.
+    By assumption, $h\inv \in H$, so $1 = h h\inv \in H$, whence $H$ contains the identity.
+    Moreover, $\star$ is a binary operation on $H$ since $H$ is closed under $\star$.
+    Associativity is inherited from $G$.
+    Finally, every element of $H$ has an inverse in $H$ by assumption.
+    Therefore, $(H, \star|_H)$ is a group.
 \end{sol}
 
-\begin{exercise}!{1.1.27}
-    Prove that if $x$ is an element of the group $G$, then $\set{x^n \mid n \in \zbb }$ is a subgroup of $G$ (called the \textbf{cyclic subgroup} of $G$ generated by $x$).
+\begin{exercise}![Cyclic Subgroups]{1.1.27}
+    Prove that if $x$ is an element of the group $G$, then $\set{x^n \mid n \in \zbb}$ is a subgroup of $G$ (called the \term{cyclic subgroup} of $G$ generated by $x$).
 \end{exercise}
 
 \begin{sol}
-    Let $H$ be the set in question.
-	Then $1 = x^0 \in H$, so that $H$ is nonempty.
-	Let $x^m, x^n \in H$.
-	Then $x^m x^n = x^{m + n} \in H$ and $(x^m)\inv = x^{-m} \in H$.
-	Hence, $H$ is closed under the binary operation on $G$ and inverses.
-	By \exref{1.1.26}, then $H$ is a subgroup of $G$.
+    Let $H = \set{x^n \mid n \in \zbb}$.
+    Then $1 = x^0 \in H$, so that $H$ is nonempty.
+    Let $x^m, x^n \in H$.
+    Then $x^m x^n = x^{m+n} \in H$ and $(x^m)\inv = x^{-m} \in H$.
+    Hence, $H$ is closed under the binary operation on $G$ and inverses.
+    By \exref{1.1.26}, $H$ is a subgroup of $G$.
 \end{sol}
 
 \begin{exercise}{1.1.28}
@@ -518,14 +505,14 @@ Let $G$ be a group.
     \item Let $(a_1, b_1), (a_2, b_2), (a_3, b_3) \in A \times B$.
 	Then
     \begin{align*}
-        [(a_1, b_1)(a_2, b_2)](a_3, b_3) & = (a_1a_2, b_1b_2)(a_3, b_3) \\
-        & = ((a_1a_2)a_3, (b_1b_2)b_3) \\
-        & = (a_1(a_2a_3), b_1(b_2b_3)) \\
-        & = (a_1,b_1)(a_2a_3, b_2b_3) \\
-        & = (a_1, b_1)[(a_2, b_2)(a_3, b_3)]
+        [(a_1, b_1)(a_2, b_2)](a_3, b_3) &= (a_1 \star a_2, b_1 \diamond b_2)(a_3, b_3) \\
+        &= ((a_1 \star a_2) \star a_3, (b_1 \diamond b_2) \diamond b_3) \\
+        &= (a_1 \star (a_2 \star a_3), b_1 \diamond (b_2 \diamond b_3)) \\
+        &= (a_1, b_1)(a_2 \star a_3, b_2 \diamond b_3) \\
+        &= (a_1, b_1)[(a_2, b_2)(a_3, b_3)].
     \end{align*}
-    \item For $a \in A, b \in B$, we have $(a, b)(1, 1) = (a \star 1, b \diamond 1) = (a, b)$.
-    \item $(a, b)(a\inv, b\inv) = (a \star a\inv, b \diamond b\inv) = (1, 1)$.
+    \item For $a \in A, b \in B$, we have $(a, b)(1, 1) = (a \star 1, b \diamond 1) = (a, b) = (1 \star a, 1 \diamond b) = (1, 1)(a, b)$.
+    \item $(a, b)(a\inv, b\inv) = (a \star a\inv, b \diamond b\inv) = (1, 1) = (a\inv \star a, b\inv \diamond b) = (a\inv, b\inv)(a, b)$.
 \end{solenum}
 
 \begin{exercise}{1.1.29}
@@ -533,18 +520,11 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-    Let $a, a' \in A$ and $b, b' \in B$.
-	Suppose $A \times B$ is abelian.
-	Then
+    For all $a, a' \in A$ and $b, b' \in B$, we have
     \[
-    	(aa', bb') = (a, b)(a', b') = (a', b')(a, b) = (a'a, b'b)
+        (a, b)(a', b') = (a', b')(a, b) \iff (aa', bb') = (a'a, b'b) \iff aa' = a'a \text{ and } bb' = b'b.
     \]
-    so that $A$ and $B$ are abelian.
-	If $A$ and $B$ are both abelian, then
-    \[
-    	(a, b)(a', b') = (aa', bb') = (a'a, b'b) = (a', b')(a, b)
-    \]
-    hence $A \times B$ is abelian.
+    Thus, $A \times B$ is abelian if and only if $A$ and $B$ are abelian.
 \end{sol}
 
 \begin{exercise}{1.1.30}
@@ -558,31 +538,39 @@ Let $G$ be a group.
     	(a, 1)(1, b) = (a \cdot 1, 1 \cdot b) = (a, b) = (1 \cdot a, b \cdot 1) = (1, b)(a, 1)
     \]
     so that $(a, 1)$ and $(1, b)$ commute.
-	Let $\ell = \lcm(|a|, |b|)$.
-	Then
+	Note that $(a, b)^k = (a, 1)^k (1, b)^k = (a^k, b^k)$ for all $k \in \zp$ by \exref{1.1.24}.
+    If $|(a, b)|$ is finite, then $(a^{|(a, b)|}, b^{|(a, b)|}) = (1, 1)$, whence $|a|$ and $|b|$ are both finite.
+    Conversely, finite $|a|$ and $|b|$ imply that $|(a, b)|$ is finite since $(a, b)^{|a|\,|b|} = (a^{|a|\,|b|}, b^{|a|\,|b|}) = (1, 1)$.
+    Therefore, $|(a, b)| = \infty$ if and only if $|a| = \infty$ or $|b| = \infty$.
+    Now suppose $|(a, b)|$ is finite, and let $n = |(a, b)|$ and $m = \lcm(|a|, |b|)$.
+    Then $(a, b)^m = (a^m, b^m) = (1, 1)$, so that $n \leq m$.
+    Suppose $(a, b)^\ell = (1, 1)$ for some $\ell \in \zp$.
+    By the division algorithm, write $\ell = q_1 |a| + r_1$ with $0 \leq r_1 < |a|$ and $\ell = q_2 |b| + r_2$ with $0 \leq r_2 < |b|$.
+    Then
     \[
-    	(a, b)^{\ell} = (a^{\ell}, b^{\ell}) = (1, 1)
+        (a, b)^\ell = (a^{q_1 |a| + r_1}, b^{q_2 |b| + r_2}) = (a^{r_1}, b^{r_2}).
     \]
-    so that $|(a, b)| \leq \ell$.
-	Moreover, if $(a, b)^k = (1, 1)$ for some $k \in \zp$, then $a^k = 1$ and $b^k = 1$ so that both $|a|$ and $|b|$ divide $k$.
-	Hence, $\ell$ divides $k$ so that $\ell \leq k$.
-	Thus, $|(a, b)| = \ell$.
+    By minimality of $|a|$ and $|b|$, we must have $r_1 = r_2 = 0$, and thus $\ell$ is a multiple of both $|a|$ and $|b|$.
+    Therefore, $m \mid \ell$, and since $\ell$ was arbitrary, setting $\ell = n$ gives $m \mid n$.
+    Combining this with $n \leq m$, we get $n = m$.
 \end{sol}
 
 \begin{exercise}{1.1.31}
     Prove that any finite group $G$ of even order contains an element of order 2. 
     
-    \hint{Let $t(G)$ be the set $\set{g \in G \mid g \neq g^{-1}}$.
+    \hint{Let $t(G)$ be the set $\set{g \in G \mid g \neq g\inv}$.
 	Show that $t(G)$ has an even number of elements and every non-identity element of $G - t(G)$ has order 2.}
 \end{exercise}
 
 \begin{sol}
-    Let $g \in G$ with $g \neq g\inv$, so $g \in t(G)$.
-	Since $(g\inv)\inv = g$, $g\inv \in t(G)$.
-	Then elements of $t(G)$ come in pairs, so that $t(G)$ has even order.
-	Since $G$ has even order, $G - t(G)$ has even order.
-	Moreover, $1 \notin t(G)$ since $1\inv = 1$, hence $G$ contains a non-identity element $h$.
-	Then $h = h\inv$, so that $h^2 = 1$ and $|h| = 2$.
+    Let $g \in t(G)$.
+    Since $(g\inv)\inv = g$, we have $g\inv \in t(G)$.
+    We have $|\set{g, g\inv}| = 2$ since $g \neq g\inv$.
+    If $g, h \in t(G)$ and $\set{g, g\inv} \cap \set{h, h\inv} \neq \emptyset$, then either $g = h$ or $g = h\inv$, in which case $\set{g, g\inv} = \set{h, h\inv}$, so the sets are either equal or disjoint.
+    Hence, $t(G)$ can be partitioned into pairs $\set{g, g\inv}$, and thus has even cardinality.
+    Since $G$ has even order, $G - t(G)$ has even cardinality.
+    Since $1 = 1\inv$, $1 \notin t(G)$, so $|G - t(G)| \geq 2$, and therefore there exists some $k \in G - t(G)$ with $k \neq 1$.
+    For such a $k$, we have $k = k\inv$, and thus $k^2 = 1$, so $|k| = 2$.
 \end{sol}
 
 \begin{exercise}{1.1.32}
@@ -591,13 +579,12 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-    Let $a, b \in \zp$ be such that $0 \leq a < b < n$.
-	Suppose $x^a = x^b$.
+	Suppose $x^a = x^b$ for some integers $0 \leq a < b < n$.
 	Then
     \[
-    	1 = x^b x^{-a} = x^{b - a}
+    	1 = x^b x^{-a} = x^{b - a},
     \]
-    so that $|x| \leq b - a < n$, which is a contradiction.
+    so $|x| \leq b - a < n$, which is a contradiction.
 	Hence, the elements $1, x, x^2, \dots, x^{n-1}$ are all distinct.
 	Therefore, $G$ contains $n$ distinct elements, so $|x| = n \leq |G|$.
 \end{sol}
@@ -611,12 +598,10 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{solenum}
-    \item Note that $x^{n - i} = x^{-i}$.
-	If $i \neq n - i$, then $x^i \neq x^{n - i}$ by \exref{1.1.32}, so $x^i \neq x^{-i}$.
-	If $i = n - i$, then $2i = n$, which is impossible since $n$ is odd.
-	Hence, $x^i \neq x^{-i}$ for all $i = 1, 2, \dots, n-1$.
-    \item By the same method in part (a), we may show $x^i \neq x^{-i}$ for $i \neq k$.
-	If $i = k$, the result follows.
+    \item Since $x^n = 1$, we have $x^{-i} = x^{n-i}$.
+    Additionally, $1 \leq n-i \leq n-1$, so odd $n$ gives $i \neq n-i$, whence $x^i \neq x^{n-i} = x^{-i}$ by \exref{1.1.32}.
+    \item Since $n = 2k$, $i \neq k$ gives $i \neq n-i$, so $x^i \neq x^{-i}$ as in part (a).
+	If $i = k$, then $x^{-k} = x^{n-k} = x^k = x^i$.
 \end{solenum}
 
 \begin{exercise}{1.1.34}
@@ -624,28 +609,21 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-    If $x^a = x^b$ for $a, b \in \zbb$ such that $a < b$, then $x^{b - a} = 1$, contradicting that $x$ has infinite order.
+    If $x^a = x^b$ for some $a, b \in \zbb$ such that $a < b$, then $x^{b - a} = 1$, contradicting that $x$ has infinite order.
 	Hence, the elements $x^n, n \in \zbb$ are all distinct.
 \end{sol}
 
 \begin{exercise}{1.1.35}
-    If $x$ is an element of finite order $n$ in $G$, use the Division Algorithm to show that any integral power of $x$ equals one of the elements in the set $\set{1, x, x^2, \dots, x^{n-1}}$.
-    
-    \note{These are the distinct elements of the cyclic subgroup of $G$ generated by $x$.}
+    If $x$ is an element of finite order $n$ in $G$, use the Division Algorithm to show that \emph{any} integral power of $x$ equals one of the elements in the set $\set{1, x, x^2, \dots, x^{n-1}}$ (so these are all the distinct elements of the cyclic subgroup (cf. \exref{1.1.27} above) of $G$ generated by $x$).
 \end{exercise}
 
 \begin{sol}
-    Let $\abs x = n \in \zp$ and let $m \in \zbb$.
-	By the Division Algorithm, there exist unique integers $q$ and $r$ such that
+    Let $m \in \zbb$.
+    By the Division Algorithm, there exist integers $q$ and $r$ such that $m = qn + r$ with $0 \leq r < n$.
+    Then
     \[
-    	m = qn + r
+        x^m = (x^n)^q x^r = x^r. \qedhere
     \]
-    where $0 \leq r < n$.
-	Then
-    \[
-    	x^m = x^{qn + r} = x^{qn} x^r = (x^n)^q x^r = 1^q x^r = x^r
-    \]
-    so that any integral power of $x$ equals one of the elements in the set $\set{1, x, x^2, \dots, x^{n-1}}$.
 \end{sol}
 
 \begin{exercise}!{1.1.36}
@@ -658,7 +636,6 @@ Let $G$ be a group.
 \begin{sol}
     Since $G$ has even order, one of $a, b, c$ has order 2 by \exref{1.1.31}.
 	Without loss of generality, let $a^2 = 1$.
-	Then $b$ and $c$ may have order 2 or 3.
 
     We first show that $ab = c$.
 	Indeed, if $ab = 1$, then $b = a\inv = a$, contradicting that $b \neq a$.
@@ -666,18 +643,15 @@ Let $G$ be a group.
 	If $ab = b$, then $a = 1$, contradicting that $a \neq 1$.
 	Hence, $ab = c$.
 	By cancellation, we have $b = a\inv c = ac$.
-	Utilizing a similar contradiction, we may deduce $ba = c$ so that $c = ab = ba$.
-	Moreover, $b = ca\inv = ca$ so that $b = ac = ca$.
-	Lastly, $bc = b(ab) = (ba)b = cb$.
-	This shows $G$ is abelian.
+	By symmetry, $ba = c$ and $b = ca$.
 
     To see that $|b| = |c| = 2$, we first note that $b^2 = (ca)(ac) = c(a^2)c = c^2$.
-	Suppose $|b| = 3$.
-	Eliminating the possibilities for $b^2$ as before, we have that $b^2 \neq b$ since $b \neq 1$.
-	Moreover, $b^2 = c$ gives $b^2 = c = ab$, or $b = a$, contradicting that $b \neq a$.
-	Lastly, if $b^2 = a$, then $b^3 = ab = c \neq 1$, contradicting that $|b| = 3$.
-	Hence, $b^2 = c^2 = 1$ so that $|b| = |c| = 2$.
-	Then the group table is uniquely determined as follows:
+	If $b^2 = b$, then $b = 1$, contradicting that $b \neq 1$.
+    If $b^2 = c$, then $b^2 = ab$, yielding $b = a$, contradicting that $b \neq a$.
+    If $b^2 = a$, then $b^3 = ab = c \neq 1$, contradicting that $|b| \leq 3$.
+    Hence, $b^2 = c^2 = 1$ so that $|b| = |c| = 2$.
+    Then $bc = (ac)c = a(c^2) = a$, and similarly, $cb = c(ca) = (c^2)a = a$.
+	Therefore, the group table is uniquely determined as follows:
     \[
         \begin{array}{c|cccc}
             \star & 1 & a & b & c \\
@@ -686,6 +660,7 @@ Let $G$ be a group.
             a & a & 1 & c & b \\
             b & b & c & 1 & a \\
             c & c & b & a & 1 \\
-        \end{array} \qedhere
+        \end{array},
     \]
+    from which we see that $G$ is abelian by \exref{1.1.10}.
 \end{sol}
