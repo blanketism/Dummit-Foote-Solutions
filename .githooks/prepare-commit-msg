@@ -4,17 +4,21 @@ import re
 import subprocess
 import sys
 from collections import defaultdict
+from itertools import groupby   # add next to your other imports
 
 EXERCISE_RE = re.compile(r"\\begin\{exercise\}[\{\[]([^}\]]+)[\}\]]")
 UNLABELED_RE = re.compile(r"\\begin\{exercise\}(?![\{\[])")
-SOL_START_RE = re.compile(r"\\begin\{sol\}")
-SOL_END_RE = re.compile(r"\\end\{sol\}")
+SOL_START_RE = re.compile(r"\\begin\{(?:sol|solenum|solitem|soliff)\}")
+SOL_END_RE = re.compile(r"\\end\{(?:sol|solenum|solitem|soliff)\}")
 EXERCISE_END_RE = re.compile(r"\\end\{exercise\}")
-
 
 def chapter_key(label):
     return label.split(".")[0] if "." in label else label[0]
 
+def section_key(label):
+    if "." in label:
+        return ".".join(label.split(".")[:2])   # 1.2.10 -> 1.2
+    return label[:2]                            # 1A5    -> 1A
 
 def sort_key(label):
     if "." in label:
@@ -22,16 +26,17 @@ def sort_key(label):
     # Axler format: 1A5
     return (int(label[0]), label[1], int(label[2:]))
 
-
 def collect_edits(diff_text):
     found = defaultdict(set)
-    current_file = current_exercise = None
-    in_solution = False
+    found_appendix = defaultdict(set)
+    current_file = current_exercise = current_apex = None
+    in_solution = in_apex = False
 
     for line in diff_text.splitlines():
         if line.startswith("+++ b/"):
             current_file = line[6:]
-            current_exercise, in_solution = None, False
+            current_exercise = current_apex = None
+            in_solution = in_apex = False
             continue
         if line.startswith(("@@", "---", "diff ")):
             continue
@@ -51,18 +56,35 @@ def collect_edits(diff_text):
         elif line.startswith("+") and in_solution and current_exercise:
             found[chapter_key(current_exercise)].add(current_exercise)
 
-    return found
+    return found, found_appendix
 
 
-def build_message(found):
+def _section(prefix, found):
     chapters = sorted(found, key=lambda ch: (int(ch) if ch.isdigit() else ch))
-    subject = f"fix: chapter{'s' if len(chapters) > 1 else ''} {', '.join(chapters)}\n\n"
+    subject = f"{prefix}: chapter{'s' if len(chapters) > 1 else ''} {', '.join(chapters)}\n\n"
     body = "\n".join(
         ", ".join(sorted(found[ch], key=sort_key))
         for ch in chapters
     )
     return subject + body
 
+def _section(prefix, found):
+    chapters = sorted(found, key=lambda ch: (int(ch) if ch.isdigit() else ch))
+    subject = f"{prefix}: chapter{'s' if len(chapters) > 1 else ''} {', '.join(chapters)}\n\n"
+    blocks = []
+    for ch in chapters:
+        labels = sorted(found[ch], key=sort_key)
+        lines = [", ".join(group) for _, group in groupby(labels, key=section_key)]
+        blocks.append("\n".join(lines))
+    return subject + "\n\n".join(blocks)
+
+def build_message(found, found_appendix):
+    parts = []
+    if found:
+        parts.append(_section("fix", found))
+    if found_appendix:
+        parts.append(_section("appendix", found_appendix))
+    return "\n\n".join(parts)
 
 def main():
     msg_file = sys.argv[1]
@@ -71,14 +93,14 @@ def main():
         return
 
     diff = subprocess.run(
-        ["git", "diff", "--cached", "-U999999"],
-        capture_output=True, encoding="utf-8", errors="replace"
+        ["git", "diff", "--cached", "-U999999", "--", "*.tex"],
+        capture_output=True, text=True
     ).stdout
 
-    found = collect_edits(diff)
-    if found:
+    found, found_appendix = collect_edits(diff)
+    if found or found_appendix:
         with open(msg_file, "w") as f:
-            f.write(build_message(found))
+            f.write(build_message(found, found_appendix))
 
 
 if __name__ == "__main__":
