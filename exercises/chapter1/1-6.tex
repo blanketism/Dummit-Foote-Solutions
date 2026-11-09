@@ -1,6 +1,8 @@
 \subsection{Homomorphisms and Isomorphisms}
 
-\begin{exercise}{1.6.1}
+Let $G$ and $H$ be groups.
+
+\begin{exercise}!{1.6.1}
     Let $\phi : G \to H$ be a homomorphism.
     \begin{subexercises}
         \item Prove that $\phi(x^n) = \phi(x)^n$ for all $n \in \zp$.
@@ -9,21 +11,24 @@
 \end{exercise}
 
 \begin{solenum}
-    \item We induct on $n$. The base case of $n = 1$ is trivial.
-	If the result holds for $n \in \zp$, then
+    \item Fix $x \in G$.
+    We proceed by induction on $n$, where the base case $n = 1$ is trivial.
+	Suppose the result holds for some $n \in \zp$, so $\phi(x^n) = \phi(x)^n$.
+    We then have
     \[
     	\phi(x^{n + 1}) = \phi(x^nx) = \phi(x^n)\phi(x) = \phi(x)^n\phi(x) = \phi(x)^{n + 1}.
     \]
     \item Let $1_G$ and $1_H$ denote the identity elements of $G$ and $H$, respectively.
-    For any $x \in G$, we have
+    We have $\phi(1_G) = \phi(1_G1_G) = \phi(1_G)^2$, so Proposition 1.2 gives $\phi(1_G) = 1_H$.
+    Thus, for any $x \in G$, we have
     \[
-        1_H = \phi(1_G) = \phi(xx\inv) = \phi(x)\phi(x\inv).
+        1_H = \phi(xx\inv) = \phi(x)\phi(x\inv),
     \]
-    Setting $x = 1_G$ yields $\phi(1_G) = \phi(1_G)\phi(1_G)$, so that $\phi(1_G) = 1_H$ by cancellation.
-    Therefore, $1_H = \phi(x)\phi(x\inv)$ implies that $\phi(x\inv) = \phi(x)\inv$, resolving the $n = -1$ case.
-    For $n < -1$, we have
+    and left multiplying by $\phi(x)\inv$ gives $\phi(x)\inv = \phi(x\inv)$.
+    For $n = 0$, we have $\phi(x^0) = \phi(1_G) = 1_H = \phi(x)^0$.
+    Then for any $n < 0$, we use part (a) with $-n$ to yield
     \[
-    	\phi(x^n) = \phi((x\inv)^{-n}) = \phi(x\inv)^{-n} = \phi(x)^{-n} = \phi(x)^n. \qedhere
+        \phi(x^n) = \phi((x\inv)^{-n}) = \phi(x\inv)^{-n} = \phi(x)^n. \qedhere
     \]
 \end{solenum}
 
@@ -111,7 +116,7 @@
 \begin{sol}
     Suppose that $\phi : \qbb \to \zbb$ is an isomorphism.
     Injectivity of $\phi$ and $1 \neq 0$ implies $\phi(1) \neq 0$.
-    Put $\phi(1) = r \in \zbb \setminus \set 0$.
+    Put $\phi(1) = r \in \zbb - \set 0$.
     Then
     \[
         r = \phi(1) = \phi\underbrace{\left(\frac{1}{n} + \frac{1}{n} + \cdots + \frac{1}{n}\right)}_{n\text{ times}} = \underbrace{\phi\left(\frac{1}{n}\right) + \phi\left(\frac{1}{n}\right) + \cdots + \phi\left(\frac{1}{n}\right)}_{n\text{ times}} = n\phi\left(\frac{1}{n}\right),
