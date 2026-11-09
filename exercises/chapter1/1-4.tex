@@ -7,35 +7,8 @@ Let $F$ be a field and let $n \in \zp$.
 \end{exercise}
 
 \begin{sol}
-    Direct calculation gives:
-    \[
-        \gl_2(\fbb_2) = 
-        \set*{
-        \begin{pmatrix}
-            1 & 0 \\
-            0 & 1
-        \end{pmatrix}, 
-        \begin{pmatrix}
-            1 & 1 \\
-            0 & 1
-        \end{pmatrix},
-        \begin{pmatrix}
-            1 & 0 \\
-            1 & 1
-        \end{pmatrix},
-        \begin{pmatrix}
-            0 & 1 \\
-            1 & 0
-        \end{pmatrix},
-        \begin{pmatrix}
-            1 & 1 \\
-            1 & 0
-        \end{pmatrix},
-        \begin{pmatrix}
-            0 & 1 \\
-            1 & 1
-        \end{pmatrix}}. \qedhere
-    \]
+    The first column of a matrix in $\gl_2(\fbb_2)$ cannot be the zero vector, so there are $2^2 - 1 = 3$ choices for the first column.
+    The second column cannot lie in the span of the first column, so there are $2^2 - 2 = 2$ choices for the second column, and therefore $|\gl_2(\fbb_2)| = 3 \cdot 2 = 6$.
 \end{sol}
 
 \begin{exercise}{1.4.2}
@@ -82,17 +55,34 @@ Let $F$ be a field and let $n \in \zp$.
 \end{exercise}
 
 \begin{sol}
-    It is trivial to see that the following two matrices do not commute, hence $\gl_2(\fbb_2)$ is non-abelian.
+    The following two matrices do not commute:
     \[
         \begin{pmatrix}
             1 & 1 \\
             0 & 1
-        \end{pmatrix}, \quad
+        \end{pmatrix}
         \begin{pmatrix}
             1 & 1 \\
             1 & 0
-        \end{pmatrix}. \qedhere
+        \end{pmatrix} = 
+        \begin{pmatrix}
+            0 & 1 \\
+            1 & 0
+        \end{pmatrix} \neq
+        \begin{pmatrix}
+            1 & 0 \\
+            1 & 1
+        \end{pmatrix} =
+        \begin{pmatrix}
+            1 & 1 \\
+            1 & 0
+        \end{pmatrix}
+        \begin{pmatrix}
+            1 & 1 \\
+            0 & 1
+        \end{pmatrix}.
     \]
+    Therefore, $\gl_2(\fbb_2)$ is non-abelian.
 \end{sol}
 
 \begin{exercise}{1.4.4}
@@ -100,12 +90,10 @@ Let $F$ be a field and let $n \in \zp$.
 \end{exercise}
 
 \begin{sol}
-    If $n = 1$, then $\intmod[1] = \set{\bar 0}$ is not a field, since $\units[1] = \varnothing$, contradicting that $\units[1]$ should be a group.
-	Otherwise, suppose $n \geq 2$ and is composite.
-	Then there exist $a, b \in \zp$ such that $1 < a, b < n$ and $n = ab$.
-	Moreover, $(a, n) \neq 1$ since $a \mid n$.
-	By \exref{0.3.12}, there does not exist $c \in \zbb$ such that $ac \equiv 1 \pmod n$.
-	Hence, $\intmod$ is not a field.
+    If $n = 1$, then $\intmod[1] = \set{\bar 0}$ is not a field, since $\intmod[1] - \set{\bar 0} = \varnothing$ is not a group under multiplication.
+	Otherwise, suppose $n$ is composite.
+    Then there exists $a \in \zp$ such that $1 < a < n$ and $a \mid n$, so $\bar a \neq \bar 0$.
+    In particular, $(a, n) \neq 1$, so Proposition 0.4 gives $\bar a \notin \units$, and hence $\intmod$ is not a field.
 \end{sol}
 
 \begin{exercise}{1.4.5}
@@ -116,8 +104,8 @@ Let $F$ be a field and let $n \in \zp$.
     \rightimp If $\gl_n(F)$ is finite, the subset $\set{\alpha I \mid \alpha\in F\unt}$ must also be finite, which implies that $F$ has a finite number of elements.
 
     \leftimp Suppose $|F| = q$.
-	Then an $n \times n$ matrix over $F$ has $q^{n^2}$ possible entries.
-	Since $\gl_n(F)$ is a subset of the set of all $n \times n$ matrices over $F$, it follows that $\gl_n(F)$ is finite.
+    Each $n \times n$ matrix over $F$ has $n^2$ entries, and each entry has $q$ possible values, so there are $q^{n^2}$ total $n \times n$ matrices over $F$.
+    Since $\gl_n(F)$ is a subset of the set of all $n \times n$ matrices over $F$, it follows that $\gl_n(F)$ is finite.
 \end{soliff}
 
 \begin{exercise}{1.4.6}
@@ -125,7 +113,7 @@ Let $F$ be a field and let $n \in \zp$.
 \end{exercise}
 
 \begin{sol}
-    See \leftimp in \exref{1.4.5}.
+    See \leftimp in \exref{1.4.5}, and note that the zero matrix is not invertible, so the inequality is strict.
 \end{sol}
 
 \begin{exercise}{1.4.7}
@@ -139,15 +127,15 @@ Let $F$ be a field and let $n \in \zp$.
 \end{exercise}
 
 \begin{sol}
-    Observe that there are $p^4$ total $2 \times 2$ matrices over $\fbb_p$.
-	The number of non-invertible matrices is as follows:
+    There are $p^4$ total $2 \times 2$ matrices over $\fbb_p$.
+    Consider the cases for the first row of a non-invertible matrix:
     \begin{itemize}
         \item If the first row is $(0, 0)$, then there are $p^2$ choices for the second row.
-        \item If the first row is $(a, b) \neq (0, 0)$, then there are $p$ choices for the second row, since it must be a multiple of the first row.
-	There are $p^2 - 1$ choices for the first row.
+        \item There are $p^2 - 1$ nonzero choices for the first row $(a, b)$.
+        The second row must be some $c(a, b)$ for $c \in \fbb_p$, giving $p$ choices.
     \end{itemize}
     Then the number of non-invertible matrices is $p^2 + p(p^2 - 1) = p^3 + p^2 - p$.
-	Subtracting from the total number of matrices, we have the desired number.
+	Subtracting from the total number of matrices, we get $p^4 - (p^3 + p^2 - p) = p^4 - p^3 - p^2 + p$.
 \end{sol}
 
 \begin{exercise}{1.4.8}
@@ -155,30 +143,31 @@ Let $F$ be a field and let $n \in \zp$.
 \end{exercise}
 
 \begin{sol}
-    Consider the subset $S = \set{0, 1}$ of $F$.
-	Then $\gl_n(S)$ is a subset of $\gl_n(F)$.
-    We induce on $n$ to show that $\gl_n(S)$ is non-abelian for all $n \geq 2$.
-	For $n = 2$, we have $\gl_2(S)$ is non-abelian by \exref{1.4.3}.
-	Suppose that $\gl_n(S)$ is non-abelian for some $n \geq 2$.
-	Then there exist $A, B \in \gl_n(S)$ such that $AB \neq BA$.
-	Consider the matrices
+    Consider the matrices
     \[
-    	A_0 = 
+        A = 
+        \begin{pmatrix}
+            1 & 1 \\
+            0 & 1
+        \end{pmatrix}, \quad
+        B = 
+        \begin{pmatrix}
+            1 & 0 \\
+            1 & 1
+        \end{pmatrix}, \quad
+        A' = 
         \begin{pmatrix}
             A & 0 \\
-            0 & 1
-        \end{pmatrix},
-        B_0 =
+            0 & I_{n-2}
+        \end{pmatrix}, \quad
+        B' = 
         \begin{pmatrix}
             B & 0 \\
-            0 & 1
-        \end{pmatrix} \in \gl_{n + 1}(S).
-	\]
-    Observe that $A_0B_0$ contains $AB$ as a block matrix, while $B_0A_0$ contains $BA$ as a block matrix.
-	Since $AB \neq BA$, $A_0B_0 \neq B_0A_0$.
-	Hence, $\gl_{n + 1}(S)$ is non-abelian.
-	By induction, $\gl_n(S)$ is non-abelian for all $n \geq 2$.
-	Since $\gl_n(S) \subseteq \gl_n(F)$, $\gl_n(F)$ is non-abelian for all $n \geq 2$.
+            0 & I_{n-2}
+        \end{pmatrix}.
+    \]
+    Note that $\det A = \det A' = \det B = \det B' = 1$, so $A', B' \in \gl_n(F)$.
+    Moreover, $(AB)_{11} = 2 \neq 1 = (BA)_{11}$, so $AB \neq BA$, whence $A'B' \neq B'A'$ and $\gl_n(F)$ is non-abelian.
 \end{sol}
 
 \begin{exercise}{1.4.9}
@@ -186,19 +175,22 @@ Let $F$ be a field and let $n \in \zp$.
 \end{exercise}
 
 \begin{sol}
-    The direct proof is laborious.
-	Instead, associate with any $2 \times 2$ matrix some linear map.
-	Since composition of linear maps is associative, the result follows.
+    Associate each $2 \times 2$ matrix $A$ with the linear map $T_A \colon \rbb^2 \to \rbb^2$ defined by $T_A(\mb x) = A \mb x$.
+    The map $A \mapsto T_A$ is clearly injective, and $T_{AB} = T_A \circ T_B$ for all $2 \times 2$ matrices $A$ and $B$.
+    Since composition of linear maps is associative, matrix multiplication is associative as well.
 \end{sol}
 
 \begin{exercise}{1.4.10}
     Let
     \[
-    	G = \left\{
-        \begin{pmatrix}
-            a & b \\
-            0 & c
-        \end{pmatrix}~\middle|~a, b, c \in \rbb, a \neq 0, c \neq 0 \right\}
+    	G = 
+        \set*{
+            \begin{pmatrix}
+                a & b \\
+                0 & c
+            \end{pmatrix}
+            \setmid a, b, c \in \rbb, a \neq 0, c \neq 0
+        }.
 	\]
     \begin{subexercises}
         \item Compute the product of
@@ -256,57 +248,33 @@ Let $F$ be a field and let $n \in \zp$.
             0 & a
         \end{pmatrix} = 
         \begin{pmatrix}
-            1/a & -b/ac \\
-            0 & 1/c
-        \end{pmatrix}
+            \frac{1}{a} & -\frac{b}{ac} \\
+            0 & \frac{1}{c}
+        \end{pmatrix}.
     \]
-    \item Since $G$ is closed under inverses and matrix multiplication, the result follows.
-    \item Let $H = \set{A \in G \mid a = c}$.
-	Then
-    \[
-        \begin{pmatrix}
-            a_1 & b_1 \\
-            0 & a_1
-        \end{pmatrix}
-        \begin{pmatrix}
-            a_2 & b_2 \\
-            0 & a_2
-        \end{pmatrix} = 
-        \begin{pmatrix}
-            a_1a_2 & a_1b_2 + b_1a_2 \\
-            0 & a_1a_2
-        \end{pmatrix} \in H
-    \]
-    and
-    \[
-        \begin{pmatrix}
-            a & b \\
-            0 & a
-        \end{pmatrix}\inv = 
-        \frac{1}{a^2}
-        \begin{pmatrix}
-            a & -b \\
-            0 & a 
-        \end{pmatrix} = 
-        \begin{pmatrix}
-            1/a & -b/a^2 \\
-            0 & 1/a
-        \end{pmatrix} \in H
-    \]
-    Then $H$ is closed under inverses and matrix multiplication, hence it is a subgroup of $\gl_2(\rbb)$.
+    Because $a \neq 0$ and $c \neq 0$, $\frac{1}{a}$ and $\frac{1}{c}$ exist and are nonzero, so the inverse matrix is also in $G$.
+    \item For any $A \in G$, $\det A = A_{11}A_{22} \neq 0$ by assumption, so $A \in \gl_2(\rbb)$.
+    Since $I_2 \in G$ and $G$ is closed under matrix multiplication and inverses, it follows that $G$ is a subgroup of $\gl_2(\rbb)$.
+    \item Let $H = \set{X \in G \mid X_{11} = X_{22}}$.
+    Setting $a_i = c_i$ for $i = 1, 2$ in part (a) gives diagonal entries $a_1a_2$ and $a_1a_2$, showing that the product of two elements of $H$ is again in $H$.
+    Similarly, setting $a = c$ in part (b) yields diagonal entries $\frac{1}{a}$ and $\frac{1}{a}$, showing that the inverse of an element of $H$ is again in $H$.
+    Since $I_2 \in H$, it follows that $H$ is a subgroup of $\gl_2(\rbb)$.
 \end{solenum}
 
 \begin{exercise}{1.4.11}
     Let
     \[
-        H(F) = \left\{\left.
-        \begin{pmatrix}
-            1 & a & b \\
-            0 & 1 & c \\
-            0 & 0 & 1
-        \end{pmatrix}\,\right|\, a, b, c \in F\right\},
+        H(F) = 
+        \set*{
+            \begin{pmatrix}
+                1 & a & b \\
+                0 & 1 & c \\
+                0 & 0 & 1
+            \end{pmatrix} 
+            \setmid a, b, c \in F
+        },
     \]
-    called the \textbf{Heisenberg group} over $F$.
+    called the \term{Heisenberg group} over $F$.
 	Let
     \[
         X = 
@@ -331,7 +299,7 @@ Let $F$ be a field and let $n \in \zp$.
         \item Prove that every non-identity of the group $H(\rbb)$ has infinite order.
     \end{subexercises}
     \remark{The choice of rewriting the matrix as a tuple is simply a time saver/ease of notation for the sake of computation.
-	However, it does allow one to encode $H(F)$ in the multiplication law of the field.}
+	However, it does allow one to encode $H(F)$ in terms of the field operations.}
 \end{exercise}
 
 \begin{solenum}
@@ -344,80 +312,42 @@ Let $F$ be a field and let $n \in \zp$.
             0 & 0 & 1
         \end{pmatrix} \in H(F)
     \]
-    Consider the matrices
-    \[
-        X =
-        \begin{pmatrix}
-            1 & 1 & 1 \\
-            0 & 1 & 0 \\
-            0 & 0 & 1
-        \end{pmatrix}, \quad
-        Y =
-        \begin{pmatrix}
-            1 & 0 & 0 \\
-            0 & 1 & 1 \\
-            0 & 0 & 1
-        \end{pmatrix} \in H(F).
-    \]
-    Then
-    \[
-        XY =
-        \begin{pmatrix}
-            1 & 1 & 1 \\
-            0 & 1 & 1 \\
-            0 & 0 & 1
-        \end{pmatrix} \neq
-        \begin{pmatrix}
-            1 & 1 & 0 \\
-            0 & 1 & 1 \\
-            0 & 0 & 1
-        \end{pmatrix} = YX,
-    \]
-    so that $H(F)$ is non-abelian.
-    \item From part (a), we know $G$ is closed under matrix multiplication.
-	For ease of notation, represent a matrix as a tuple: $X = (a, b, c)$ and $Y = (d, e, f)$.
-	Then we may represent matrix multiplication in $H(F)$ as
-    \[
-    	(a, b, c)(d, e, f) = (a + d, af + b + e, c + f)
-    \]
-    Now we want to find $(x, y, z)$ such that $(a, b, c)(x, y, z) = (0, 0, 0)$.
+    For ease of notation, we may start representing matrices as $3$-tuples, so $X = (a, b, c)$, $Y = (d, e, f)$, and $XY = (a + d, af + b + e, c + f)$.
+
+    Consider $A = (1, 0, 0)$ and $B = (0, 0, 1)$.
+    Then $AB = (1, 1, 1) \neq (1, 0, 1) = BA$, so $H(F)$ is nonabelian.
+    \item Suppose $(a, b, c)(x, y, z) = (0, 0, 0) = I_3$.
 	Then $(a + x, az + b + y, c + z) = (0, 0, 0)$ implies $x = -a$, $y = -b + ac$, and $z = -c$.
-	It follows that
+    Moreover, $(x, y, z)(a, b, c) = (0, 0, 0)$, so
     \[
         X\inv = 
         \begin{pmatrix}
             1 & -a & -b + ac \\
             0 & 1 & -c \\
             0 & 0 & 1
-        \end{pmatrix} = (-a, -b + ac, -c)
+        \end{pmatrix} = (-a, -b + ac, -c),
     \]
-    so that $H(F)$ is closed under inverses.
-    \item For some $(a, b, c) \in H(F)$, we know that there are $|F|$ choices for each of $a, b, c$.
-	Then $|H(F)| = |F|^3$.
-	Now let $(a, b, c), (d, e, f), (g, h, i) \in H(F)$.
+    and thus $H(F)$ is closed under inverses.
+    \item For each $(s, t, u) \in H(F)$, there are $|F|$ choices for each of $s$, $t$, and $u$, so $|H(F)| = |F|^3$.
+	Now let $(g, h, i) \in H(F)$.
 	Then we have
     \begin{align*}
         ((a, b, c)(d, e, f))(g, h, i) & = (a + d, af + b + e, c + f)(g, h, i) \\
         & = (a + d + g, (a + d)i + af + b + e + h, c + f + i) \\
         & = (a + d + g, ai + di + af + b + e + h, c + f + i) \\
-        & = (a, b, c)(d + g, e + h, f + i) \\
-        & = (a, b, c)((d, e, f)(g, h, i))
+        & = (a, b, c)(d + g, di + e + h, f + i) \\
+        & = (a, b, c)((d, e, f)(g, h, i)),
     \end{align*}
+    so matrix multiplication in $H(F)$ is associative.
+    Since closure under matrix multiplication holds by part (a), $H(F)$ contains the identity $(0, 0, 0) = I_3$, and is closed under inverses by part (b), it follows that $H(F)$ is a group under matrix multiplication.
     \item The elements of $H(\intmod[2])$ are
     \[
     	 (0, 0, 0), (1, 0, 0), (0, 1, 0), (0, 0, 1), (1, 1, 0), (1, 0, 1), (0, 1, 1), (1, 1, 1).
     \]
-    Since $(a, b, c)^2 = (2a, 2b + ac, 2c) = (0, ac, 0)$ in $\intmod[2]$, then we have two cases:
+    Since $(a, b, c)^2 = (2a, 2b + ac, 2c) = (0, ac, 0)$ in $\intmod[2]$, we have two cases:
     \begin{itemize}
-        \item If $ac = 0$, then at least one of $a$ or $c$ is 0, while $b$ varies.
-        \[
-        	(1, 0, 0), (0, 1, 0), (0, 0, 1), (1, 1, 0), (0, 1, 1).
-        \]
-        \item If $ac = 1$, then both $a$ and $c$ are 1, while $b$ varies.
-	    These are the matrices that have order 4:
-        \[
-        	(1, 0, 1), (1, 1, 1).
-        \]
+        \item If $ac = 0$, then $(a, b, c)^2 = (0, 0, 0)$, so these elements have order 1 or 2.
+        \item If $ac = 1$, then $(a, b, c)^2 = (0, 1, 0)$, so $(a, b, c)^4 = (0, 0, 0)$, and these elements have order 4.
     \end{itemize}
     \item Let $X \in H(\rbb)$ be non-identity.
 	It is easy to see by induction that

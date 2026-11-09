@@ -18,7 +18,7 @@
     Then
     \begin{align*}
         \sigma^2 & = \cyc{1 5 3} & \tau\sigma & = \cyc{1 2 4 3} \\
-        \sigma\tau & = \cyc{2 5 3 4} & \tau^2\sigma & = \cyc{1 3 4}\cyc{2 4} \qedhere
+        \sigma\tau & = \cyc{2 5 3 4} & \tau^2\sigma & = \cyc{1 3 5}\cyc{2 4} \qedhere
     \end{align*}
 \end{sol}
 
@@ -51,6 +51,7 @@
 \end{exercise}
 
 \begin{sol}
+    Orders for \exref{1.3.1} and \exref{1.3.2}:
     \begin{align*}
         \abs\sigma & = 6, 12 & \abs\tau & = 2, 30 \\
         \abs{\sigma^2} & = 3, 6 & \abs{\sigma\tau} & = 4, 6 \\
@@ -67,57 +68,61 @@
 
 \begin{solenum}
     \item
-    $$\begin{array}{c|c}
-        \text{Permutation} & \text{Order} \\
-        \hline
-        1 & 1 \\
-        (12) & 2 \\
-        (13) & 2 \\
-        (23) & 2 \\
-        (123) & 3 \\
-        (132) & 3
-    \end{array}$$
-    \item 
-    $$\begin{array}{c|c}
+    \[
+        \begin{array}{c|c}
             \text{Permutation} & \text{Order} \\
             \hline
             1 & 1 \\
-            (12) & 2 \\
-            (13) & 2 \\
-            (14) & 2 \\
-            (23) & 2 \\
-            (24) & 2
-    \end{array}\enspace
-    \begin{array}{c|c}
-        \text{Permutation} & \text{Order} \\
-        \hline
-        (34) & 2 \\
-        (123) & 3 \\
-        (124) & 3 \\
-        (132) & 3 \\
-        (134) & 3 \\
-        (142) & 3
-    \end{array}\enspace
-    \begin{array}{c|c}
-        \text{Permutation} & \text{Order} \\
-        \hline
-        (143) & 3 \\
-        (234) & 3 \\
-        (243) & 3 \\
-        (1234) & 4 \\
-        (1243) & 4 \\
-        (1324) & 4
-    \end{array}\enspace
-    \begin{array}{c|c}
-        \text{Permutation} & \text{Order} \\
-        \hline
-        (1342) & 4 \\
-        (1423) & 4 \\
-        (1432) & 4 \\
-        (12)(34) & 2 \\
-        (13)(24) & 2 \\
-        (14)(23) & 2
-    \end{array}$$
+            \cyc{1 2} & 2 \\
+            \cyc{1 3} & 2 \\
+            \cyc{2 3} & 2 \\
+            \cyc{1 2 3} & 3 \\
+            \cyc{1 3 2} & 3
+        \end{array}
+    \]
+    \item 
+    \[
+        \begin{array}{c|c}
+            \text{Permutation} & \text{Order} \\
+            \hline
+            1 & 1 \\
+            \cyc{1 2} & 2 \\
+            \cyc{1 3} & 2 \\
+            \cyc{1 4} & 2 \\
+            \cyc{2 3} & 2 \\
+            \cyc{2 4} & 2
+        \end{array}\enspace
+        \begin{array}{c|c}
+            \text{Permutation} & \text{Order} \\
+            \hline
+            \cyc{3 4} & 2 \\
+            \cyc{1 2 3} & 3 \\
+            \cyc{1 2 4} & 3 \\
+            \cyc{1 3 2} & 3 \\
+            \cyc{1 3 4} & 3 \\
+            \cyc{1 4 2} & 3
+        \end{array}\enspace
+        \begin{array}{c|c}
+            \text{Permutation} & \text{Order} \\
+            \hline
+            \cyc{1 4 3} & 3 \\
+            \cyc{2 3 4} & 3 \\
+            \cyc{2 4 3} & 3 \\
+            \cyc{1 2 3 4} & 4 \\
+            \cyc{1 2 4 3} & 4 \\
+            \cyc{1 3 2 4} & 4
+        \end{array}\enspace
+        \begin{array}{c|c}
+            \text{Permutation} & \text{Order} \\
+            \hline
+            \cyc{1 3 4 2} & 4 \\
+            \cyc{1 4 2 3} & 4 \\
+            \cyc{1 4 3 2} & 4 \\
+            \cyc{1 2}\cyc{3 4} & 2 \\
+            \cyc{1 3}\cyc{2 4} & 2 \\
+            \cyc{1 4}\cyc{2 3} & 2
+        \end{array}
+    \]
 \end{solenum}
 
 \begin{exercise}{1.3.5}
@@ -125,8 +130,9 @@
 \end{exercise}
 
 \begin{sol}
-    There are cycles of lengths 5, 2, 3, and 2.
-	Then the order is $\lcm(5, 2, 3, 2) = 30$.
+    Let $\sigma$ be the permutation in question, and note that it is a product of commuting disjoint cycles, say $\sigma = \sigma_1 \sigma_2 \sigma_3 \sigma_4$, so $\sigma^k = \sigma_1^k \sigma_2^k \sigma_3^k \sigma_4^k$.
+    Then $\sigma^k = 1$ if and only if each $\sigma_i^k = 1$ since the $\sigma_i$ are pairwise disjoint.
+    Such a $k$ must be a multiple of the lengths $5$, $2$, $3$, and $2$ of the cycles $\sigma_1$, $\sigma_2$, $\sigma_3$, and $\sigma_4$, respectively, and the least such $k$ is $30$, so $|\sigma| = 30$.
 \end{sol}
 
 \begin{exercise}{1.3.6}
@@ -153,13 +159,10 @@
 
 \begin{sol}
     For each $n \geq 2$, consider the permutation $\sigma_n = \cyc{1 n}$.
-	Then $\sigma_n \in S_\Omega$ and $\sigma_n \neq \sigma_m$ for $n \neq m$, since they move different elements.
-	Hence, $S_{\Omega}$ contains an infinite collection of distinct elements, so $S_\Omega$ is infinite.
+	Then for $n \neq m$, $\sigma_n(1) = n \neq m = \sigma_m(1)$, so $\sigma_n \neq \sigma_m$, and hence there are infinitely many distinct permutations in $S_\Omega$.
 \end{sol}
 
 \begin{exercise}{1.3.9}
-     Let $\sigma$ be an $m$-cycle.
-	For which positive integers $i$ is $\sigma^i$ also an $m$-cycle?
     \begin{subexercises}
         \item Let $\sigma$ be the 12-cycle $\cyc{1 2 3 4 5 6 7 8 9 10 11 12}$.
         For which positive integers $i$ is $\sigma^i$ also a 12-cycle?
@@ -172,65 +175,64 @@
 \end{exercise}
 
 \begin{solenum}
-    \item Computing the cycle for each integer 0 to 12:
+    \item Note that $\sigma^{12} = 1$, so we only need powers of $\sigma$ up to $\sigma^{11}$:
     \begin{align*}
         \sigma^1 & = \sigma & \sigma^7 & = \cyc{1 8 3 10 5 12 7 2 9 4 11 6} \\
         \sigma^2 & = \cyc{1 3 5 7 9 11}\cyc{2 4 6 8 10 12} & \sigma^8 & = \cyc{1 9 5}\cyc{2 10 6}\cyc{3 11 7}\cyc{4 12 8} \\
         \sigma^3 & = \cyc{1 4 7 10}\cyc{2 5 8 11}\cyc{3 6 9 12} & \sigma^9 & = \cyc{1 10 7 4}\cyc{2 11 8 5}\cyc{3 12 9 6} \\
         \sigma^4 & = \cyc{1 5 9}\cyc{2 6 10}\cyc{3 7 11}\cyc{4 8 12} & \sigma^{10} & = \cyc{1 11 9 7 5 3}\cyc{2 12 10 8 6 4} \\
         \sigma^5 & = \cyc{1 6 11 4 9 2 7 12 5 10 3 8} & \sigma^{11} & = \cyc{1 12 11 10 9 8 7 6 5 4 3 2} \\
-        \sigma^6 & = \cyc{1 7}\cyc{2 8}\cyc{3 9}\cyc{4 10}\cyc{5 11}\cyc{6 12} & \sigma^{12} & = \id
+        \sigma^6 & = \cyc{1 7}\cyc{2 8}\cyc{3 9}\cyc{4 10}\cyc{5 11}\cyc{6 12}.
     \end{align*}
-    Hence, the set of integers that produce a 12-cycle is the set $\set{i + 12k \mid i \in \{1, 5, 7, 11}, k \in \zbb\}$.
-    \item $\set{i + 8k \mid i \in \{1, 3, 5, 7}, k \in \zbb\}$.
-    \item $\set{i + 14k \mid i \in \{1, 3, 5, 9, 11, 13}, k \in \zbb\}$. \qedhere
+    Hence, the set of integers that produce a 12-cycle is the set $\set{i \in \zp \mid i \equiv 1, 5, 7, 11 \pmod{12}}$.
+    \item By calculations similar to part (a) with $\tau^8 = 1$, the set of integers that produce an 8-cycle is $\set{i \in \zp \mid i \equiv 1, 3, 5, 7 \pmod{8}}$.
+    \item By calculations similar to part (a) with $\omega^{14} = 1$, the set of integers that produce a 14-cycle is $\set{i \in \zp \mid i \equiv 1, 3, 5, 9, 11, 13 \pmod{14}}$. \qedhere
 \end{solenum}
 
-\begin{exercise}{1.3.10}
-    Prove that if $\sigma$ is the $m$-cycle $\cyc{a_1 a_2 dots a_m}$, then for all $i \in \set{1,2,\dots,m}$, $\sigma^i(a_k) = a_{k+i}$, where $k+i$ is replaced by its least residue mod $m$ when $k+i > m$.
+\begin{exercise}!{1.3.10}
+    Prove that if $\sigma$ is the $m$-cycle $\cyc{a_1 a_2 \ldots{} a_m}$, then for all $i \in \set{1, 2, \dots, m}$, $\sigma^i(a_k) = a_{k+i}$, where $k+i$ is replaced by its least residue mod $m$ when $k+i > m$.
 	Deduce that $|\sigma| = m$.
 \end{exercise}
 
 \begin{sol}
     Assume all subscripts of $a$ use the least positive residues mod $m$.
-	Inducing on $i$, the base case $i = 1$ is clear.
+	We proceed by induction on $i$, where the base case $i = 1$ is clear.
 	If $\sigma^i(a_k) = a_{k + i}$ for $1 \leq i \leq m - 1$, then
     \[
     	\sigma^{i + 1}(a_k) = \sigma(\sigma^i(a_k)) = \sigma(a_{k + i}) = a_{k + i + 1}.
     \]
-    To see that $|\sigma| = m$, note that $\sigma^m(a_k) = a_{k+m} = a_k$ for all $k \in \set{1,2,\dots,m}$, so that $\sigma^m = \id$.
-	If $|\sigma| = i < m$, then $\sigma^i(a_1) = a_{1+i} = a_1$, which implies that $i \equiv 0 \pmod m$.
-	Hence, $|\sigma| = m$.
+    Observe that $\sigma^m(a_k) = a_{k+m} = a_k$ for all $k \in \set{1, 2, \dots, m}$.
+    Since $\sigma$ fixes all points other than the $a_k$'s, so does $\sigma^m$, and thus $\sigma^m = 1$.
+    Moreover, $\sigma^d(a_k) = a_{k+d} \neq a_k$ for all $1 \leq d < m$ by distinctness of the $a_k$'s, so no smaller positive power of $\sigma$ is the identity, and hence $|\sigma| = m$.
 \end{sol}
 
 \begin{exercise}!{1.3.11}
-    Let $\sigma$ be the $m$-cycle $\cyc{1 2 dots m}$.
+    Let $\sigma$ be the $m$-cycle $\cyc{1 2 \ldots{} m}$.
 	Show that $\sigma^i$ is also an $m$-cycle if and only if $i$ is relatively prime to $m$.
 \end{exercise}
 
 \begin{soliff}
-    \rightimp Suppose $(m, i) = k > 1$.
-	If $i > m$, replace $i$ with $i \pmod m$ since $\sigma^i = \sigma^{i \pmod m}$.
-	Then $i = k\ell$ for $\ell \in \zp$.
-	It is clear that $(\sigma^i)^{m/k} = \sigma^{\ell m} = \id$, so that $|\sigma^i| \leq m/k < m$.
-	Hence, $\sigma^i$ is not an $m$-cycle.
+    \rightimp We proceed by contrapositive.
+    Suppose $(m, i) = d > 1$, and write $i = dk$ for some $k \in \zp$.
+    Then $(\sigma^i)^{m/d} = \sigma^{dk \cdot m/d} = \sigma^{km} = 1$.
+    Hence, $|\sigma^i| \leq m/d < m$, so $\sigma^i$ is not an $m$-cycle by \exref{1.3.10}.
     
     \leftimp Suppose that $(m, i) = 1$.
-	Denote $x_m \equiv x \pmod m$.
-	We claim that the integers
+    Since $\sigma^m = 1$, we only need to consider $i$ such that $1 \leq i \leq m - 1$.
+    Let $\bar n$ denote the integer in $\set{1, \ldots, m}$ such that $\bar n \equiv n \pmod m$.
+    We claim that the integers
     \[
-    	1_m, (1 + i)_m, (1 + 2i)_m, \ldots, (1 + (m - 1)i)_m
+        \bar 1, \bar{1 + i}, \bar{1 + 2i}, \ldots, \bar{1 + (m - 1)i}
     \]
     are all distinct.
-	Suppose $(1 + xi)_m = (1 + yi)_m$ for some $0 \leq x, y \leq m - 1$ with $x \neq y$.
-	Then $i(x - y) \equiv 0 \pmod m$.
-	Since $(m, i) = 1$, $m \mid (x - y)$.
-	However, since $1 - m \leq x - y \leq m - 1$, the only choice for $x - y$ is 0, or that $x = y$.
-	Then we have exactly $m$ distinct integers so that
+    Indeed, if $\bar{1 + xi} = \bar{1 + yi}$ for some $0 \leq x, y \leq m - 1$, then $i(x - y) \equiv 0 \pmod m$.
+    Because $(m, i) = 1$, we have $m \mid (x - y)$, and since $0 \leq x, y \leq m - 1$, it follows that $x - y = 0$, so $x = y$.
+    By \exref{1.3.10}, $\sigma^i(\bar{1 + xi}) = \bar{1 + (x + 1)i}$ for $0 \leq x \leq m - 1$.
+    Since $\bar{1 + mi} = \bar 1$, and the integers $\bar 1, \bar{1 + i}, \ldots, \bar{1 + (m - 1)i}$ are all distinct, the cycle decomposition of $\sigma^i$ is
     \[
-    	\sigma^i = (1\ (1 + i)_m\ (1 + 2i)_m\ \ldots\ (1 + (m - 1)i)_m).
+        \sigma^i = \cyc{\bar{1} \bar{1 + i} \bar{1 + 2i} \ldots \bar{1 + (m - 1)i}},
     \]
-    Thus, $\sigma^i$ is an $m$-cycle.
+    which is an $m$-cycle.
 \end{soliff}
 
 \begin{exercise}{1.3.12}
@@ -238,29 +240,17 @@
         \item If $\tau = \cyc{1 2}\cyc{3 4}\cyc{5 6}\cyc{7 8}\cyc{9 10}$, determine whether there is an $n$-cycle ($n \ge 10$) with $\tau = \sigma^k$ for some integer $k$.
         \item If $\tau = \cyc{1 2}\cyc{3 4 5}$, determine whether there is an $n$-cycle ($n \ge 5$) with $\tau = \sigma^k$ for some integer $k$.
     \end{subexercises}
-    \note{Part (a) can be done systematically once we have access to Lagrange's Theorem.}
+    \remark{Part (a) can be done systematically once we have access to Lagrange's Theorem.}
 \end{exercise}
 
 \begin{solenum}
     \item Put $\sigma = \cyc{1 3 5 7 9 2 4 6 8 10}$.
-	Then $\sigma^2 = \tau$, so there exists a 10-cycle $\sigma$ such that $\tau = \sigma^k$ for $k = 2$.
-    \item We first prove the following lemma:
-    \begin{lemma}{$(ac, bc) = c(a, b)$ for $a, b, c \in \zp$.}
-        Let $d = (a, b)$ and $d' = (ac, bc)$.
-	Then there exist $s, t \in \zbb$ such that $d = as + bt$.
-	Consider $cd = acs + bct$.
-	Then $d' = (ac, bc)$ implies that $d' \mid cd$.
-	Since $d \mid a$ and $d \mid b$, $cd \mid ac$ and $cd \mid bc$, so that $cd \mid (ac, bc) = d'$.
-	Then $d' = cd$ or $d' = c(a, b)$.
-    \end{lemma}
-    
-    Assume for contradiction that there exists an $n$-cycle $\sigma$ and $k$ such that $\sigma^k = \tau$.
-	Then $\tau^2(1) = 1$, hence $\sigma^{2k}(1) = 1$, or $2k \equiv 0 \pmod n$.
-	Moreover, $\tau^3(3) = 3$, hence $\sigma^{3k}(3) = 3$, or $3k \equiv 0 \pmod n$.
-	Then $n \mid 2k$ and $n \mid 3k$, so that $n \mid (2k, 3k)$.
-	By the lemma, $(2k, 3k) = k(2, 3) = k$, so that $n \mid k$.
-	However, $\sigma^k \neq 1$, so $n \nmid k$.
-	This is a contradiction, so there does not exist an $n$-cycle $\sigma$ such that $\sigma^k = \tau$.
+	Then $\sigma^5 = \tau$, so there exists a 10-cycle $\sigma$ such that $\tau = \sigma^k$ for $k = 5$.
+    \item Assume for contradiction that there exist an $n$-cycle $\sigma$ and an integer $k$ such that $\sigma^k = \tau$.
+	Then $\tau^2(1) = 1$ and $\tau^3(3) = 3$, so $\sigma^{2k}(1) = 1$ and $\sigma^{3k}(3) = 3$.
+    Equivalently, $2k \equiv 0 \pmod n$ and $3k \equiv 0 \pmod n$ by \exref{1.3.10}.
+    Then $n \mid (3k - 2k) = k$, which implies $\sigma^k = 1$, contradicting the assumption that $\sigma^k = \tau \neq 1$.
+    Therefore, no such $n$-cycle $\sigma$ exists.
 \end{solenum}
 
 \begin{exercise}{1.3.13}
@@ -269,13 +259,14 @@
 
 \begin{soliff}
     \rightimp Let $\sigma \in S_n$ with $\abs\sigma = 2$.
-	Let $\cyc{a_1 a_2 ldots a_m}$ be one of the cycles in its cycle decomposition.
-	Since $\sigma \neq \id$ and $\sigma^2 = 1$, $\sigma(a_1) = a_2$ and $\sigma(a_2) = a_1$.
-	Then $m = 2$, and the cycle is a 2-cycle.
+	Let $\cyc{a_1 a_2 \ldots{} a_m}$ be one of the cycles in its cycle decomposition.
+	Since $\sigma^2 = 1$, we have $\sigma(a_1) = a_2$ and $\sigma(a_2) = \sigma^2(a_1) = a_1$.
+    If $m \geq 3$, then $\sigma(a_2) = a_3 \neq a_1$, contradicting $\sigma^2 = 1$, so $m = 2$.
+    Therefore, every cycle in the cycle decomposition of $\sigma$ is a 2-cycle, and since disjoint cycles commute, $\sigma$ is a product of commuting 2-cycles.
 
-    \leftimp Suppose $\sigma$'s cycle decomposition is a product of commuting 2-cycles $\cyc{a_1 b_1}\cyc{a_2 b_2} \ldots \cyc{a_k b_k}$.
-	Since each 2-cycle has order 2, and the 2-cycles commute, $\sigma^2 = \id$.
-	Because $\sigma \neq \id$, then $\abs\sigma = 2$.
+    \leftimp Suppose $\sigma$'s cycle decomposition is a product of commuting 2-cycles $\cyc{a_1 b_1}\cyc{a_2 b_2} \cdots \cyc{a_k b_k}$.
+	Since each 2-cycle has order 2, and the 2-cycles commute, $\sigma^2 = 1$.
+    Because $\sigma(a_1) = b_1 \neq a_1$, we have $\sigma \neq 1$, so $\abs\sigma = 2$.
 \end{soliff}
 
 \begin{exercise}{1.3.14}
@@ -284,33 +275,39 @@
 	Show by an explicit example that this need not be the case if $p$ is not prime.
 \end{exercise}
 
-\begin{soliff}
-    \rightimp Let $\sigma \in S_n$ with $\abs\sigma = p$.
-	Let $\cyc{a_1 a_2 ldots a_m}$ be one of the cycles in its cycle decomposition.
-	By \exref{1.3.10}, we know $\sigma^i(a_i) = a_{1 + i}$ where $1 + i$ is taken mod $m$ when $1 + i > m$.
-	Then $\sigma^p(a_1) = a_{1 + p} = a_1$, so that $m \mid p$.
-	Since $p$ is prime, $m = p$, hence any cycle in the cycle decomposition of $\sigma$ is a $p$-cycle.
+\begin{sol}
+    \leavevmode
 
-    \leftimp Let $\sigma = \tau_1\tau_2 \ldots \tau_k$ be the cycle decomposition of $\sigma$, where each $\tau_i$ is a $p$-cycle.
+    \rightimp Let $\sigma \in S_n$ with $\abs\sigma = p$.
+	Let $\cyc{a_1 a_2 \ldots{} a_m}$ be one of the cycles in its cycle decomposition, where $m \geq 2$ since $1$-cycles are omitted from the decomposition.
+	By \exref{1.3.10}, we know $\sigma^i(a_1) = a_{1 + i}$ where $1 + i$ is replaced by the least positive residue modulo $m$ when $1 + i > m$.
+	Because $\sigma^p = 1$, we have $\sigma^p(a_1) = a_1$, and by distinctness of the $a_k$'s, we must have $m \mid p$.
+	Since $p$ is prime, $m = p$, hence any cycle in the cycle decomposition of $\sigma$ is a $p$-cycle.
+    Moreover, each $p$-cycle in the decomposition is disjoint from the others, so they commute.
+
+    \leftimp Let $\sigma = \tau_1\tau_2 \cdots \tau_k$ be the cycle decomposition of $\sigma$, where each $\tau_i$ is a $p$-cycle.
 	Since the cycles are disjoint, they commute.
-	Moreover, $\tau_i^t$ is a non-trivial $p$-cycle for $t < p$ by \exref{1.3.11}.
-	Then $\sigma^t = \tau_1^t\tau_2^t \ldots \tau_k^t$ is a product of non-trivial $p$-cycles for $t < p$, so that $\sigma^t \neq 1$.
-	However, $\sigma^p = \tau_1^p\tau_2^p \ldots \tau_k^p = 1$, so that $\abs\sigma = p$.
+	By \exref{1.3.10}, $\sigma^t(x) = \tau_1^t(x) \neq x$ for any $x$ moved by $\tau_1$ and $t$ such that $1 \leq t < p$.
+	Therefore, $\sigma^t \neq 1$ for all $1 \leq t < p$, and because $\tau_i^p = 1$ for all $i$, we have $\sigma^p = 1$, and hence $\abs\sigma = p$.
 
     For a counterexample when $p$ is not prime, consider $\sigma = \cyc{1 2 3}\cyc{4 5}$ in $S_5$.
-	Then $\abs\sigma = 6$, but the cycle decomposition consists of a 3-cycle and a 2-cycle.
-\end{soliff}
+	Then $\sigma^t = \cyc{1 2 3}^t \cyc{4 5}^t \neq 1$ for all $1 \leq t \leq 5$, but $\sigma^6 = 1$, so $\abs\sigma = 6$, even though $\sigma$ contains no $6$-cycle.
+\end{sol}
 
-\begin{exercise}{1.3.15}
+\begin{exercise}!{1.3.15}
     Prove that the order of an element in $S_n$ equals the least common multiple of the lengths of the cycles in its cycle decomposition.
 \end{exercise}
 
 \begin{sol}
-    Let $\sigma \in S_n$ have cycle decomposition $\tau_1\tau_2 \ldots \tau_k$, where each $\tau_i$ is a cycle of length $m_i$.
-	Then $\abs{\tau_i} = m_i$ by \exref{1.3.10}.
-	Since the cycles are disjoint, they commute, so that $\sigma^t = \tau_1^t\tau_2^t \ldots \tau_k^t$.
-	Then $\sigma^t = 1$ if and only if $\tau_i^t = 1$ for all $i$, which occurs if and only if $m_i \mid t$ for all $i$.
-	Hence, the order of $\sigma$ is the least common multiple of the lengths of the cycles in its cycle decomposition.
+    Let $\sigma \in S_n$ have cycle decomposition $\tau_1\tau_2 \cdots \tau_k$, where each $\tau_i$ is a cycle of length $m_i$.
+    For any $t \geq 1$,
+    \[
+        \sigma^t = 1 \iff \tau_i^t = 1 \text{ for all } i \iff m_i \mid t \text{ for all } i \iff \lcm(m_1, \ldots, m_k) \mid t,
+    \]
+    where the first equivalence follows from disjointness of the cycles and commutativity of disjoint cycles;
+    the second equivalence is \exref{1.3.10};
+    and the third equivalence is by the definition of the least common multiple.
+    Therefore, $\abs\sigma$ is the least $t \geq 1$ for which $\sigma^t = 1$, which is precisely $\lcm(m_1, \ldots, m_k)$.
 \end{sol}
 
 \begin{exercise}!{1.3.16}
@@ -322,23 +319,30 @@
 \end{exercise}
 
 \begin{sol}
-    Note that in an $m$-cycle, there are $m$ integers to write.
-	The first integer has $n$ choices, the second $n - 1$ choices.
-	Continuing on, then the $m$-th integer has $n - m + 1$ choices.
-	However, each choice of $m$ integers has $m$ equivalent representations (such as $\cyc{1 2 3 4}$ being equivalent to $\cyc{2 3 4 1}$ by shifting each integer to the left one place).
-	Then take the product $n(n - 1)(n - 2) \ldots (n - m + 1)$ and divide by $m$.
+    If $m = 1$, then any single element forms a $1$-cycle, and there are $n$ such $1$-cycles.
+    Let $m \geq 2$.
+    There are $n(n - 1)(n - 2)\cdots(n - m + 1)$ ways to choose $m$ distinct integers from $\set{1, \ldots, n}$ and arrange them in a sequence.
+    For a given sequence $a_1, \ldots, a_m$, a cycle $\cyc{a_1 \ldots a_m}$ has $m$ equivalent representations, corresponding to the $m$ choices for the starting element of the cycle, which then determines the order of the remaining elements.
+    Therefore, the number of distinct $m$-cycles is 
+    \[
+        \frac{n(n - 1)(n - 2)\cdots(n - m + 1)}{m}. \qedhere
+    \]
 \end{sol}
 
 \begin{exercise}{1.3.17}
-    Show that if $n \geq 4$ then the number of permutations in $S_n$ which are the product of two disjoint 2-cycles is
+    Show that if $n \geq 4$ then the number of permutations in $S_n$ which are the product of two disjoint $2$-cycles is
     \[
     	\frac{n(n - 1)(n - 2)(n - 3)}{8}.
     \]
 \end{exercise}
 
 \begin{sol}
-    The first 2-cycle has $n(n - 1)/2$ choices, and the second 2-cycle has $(n - 2)(n - 3)/2$ choices.
-	Moreover, there are 2 representations for the same set of 2-cycles, so multiply the given quantities and divide by 2.
+    By \exref{1.3.16}, the first $2$-cycle has $\frac{n(n - 1)}{2}$ choices, and the second $2$-cycle has $\frac{(n - 2)(n - 3)}{2}$ choices.
+    Since these $2$-cycles are disjoint, there are 2 representations for the same permutation corresponding to the order in which we choose the two $2$-cycles, and the permutation determines the cycles up to this order.
+    Therefore, the number of permutations which are the product of two disjoint $2$-cycles is
+    \[
+        \frac{\frac{n(n - 1)}{2} \cdot \frac{(n - 2)(n - 3)}{2}}{2} = \frac{n(n - 1)(n - 2)(n - 3)}{8}. \qedhere
+    \]
 \end{sol}
 
 \begin{exercise}{1.3.18}
@@ -346,9 +350,10 @@
 \end{exercise}
 
 \begin{sol}
-    $S_5$ contains elements of order 1 through 5.
-	Moreover, we can have a 2 and 3-cycle together whose LCM is 6.
-	Then $n = 1, 2, 3, 4, 5, 6$.
+    $S_5$ contains $n$-cycles for $n = 1$, $2$, $3$, $4$, and $5$.
+    We can also have a product of disjoint $2$- and $3$-cycles, which has order $6$ by \exref{1.3.15}.
+    The remaining elements of $S_5$ are products of disjoint cycles whose lengths sum to at most $5$, namely the product of two disjoint $2$-cycles, which has order $2$.
+    Therefore, the numbers $n$ such that $S_5$ contains an element of order $n$ are $1$, $2$, $3$, $4$, $5$, and $6$.
 \end{sol}
 
 \begin{exercise}{1.3.19}
@@ -356,9 +361,11 @@
 \end{exercise}
 
 \begin{sol}
-    We have $n$ from 1 to 7.
-	We can have 2 and 5-cycles and 3 and 4-cycles.
-	We also have $n = 10$ and 12.
+    $S_7$ contains $n$-cycles for $n = 1$, $2$, $3$, $4$, $5$, $6$, and $7$.
+    We can also have the products of disjoint $2$- and $5$-cycles and disjoint $3$- and $4$-cycles, which have orders $10$ and $12$ respectively by \exref{1.3.15}.
+    The remaining elements of $S_7$ are products of disjoint cycles whose lengths sum to at most $7$, namely $2+2$, $2+3$, $2+4$, $2+2+2$, $2+2+3$, and $3+3$. 
+    The orders of these products are $2$, $6$, $4$, $2$, $6$, and $3$ respectively. 
+    Therefore, the numbers $n$ such that $S_7$ contains an element of order $n$ are $1$, $2$, $3$, $4$, $5$, $6$, $7$, $10$, and $12$.
 \end{sol}
 
 \begin{exercise}{1.3.20}
@@ -366,21 +373,15 @@
 \end{exercise}
 
 \begin{sol}
-    Recall that $S_3 = \{1, \cyc{1 2}, \cyc{1 3}, \cyc{2 3}, \cyc{1 2 3}, \cyc{1 3 2}\}$. 
-    Since $S_3$ contains no element of order 6, it is not cyclic, so at least two generators are needed. 
-    Put $\alpha = \cyc{1 2}$ and $\beta = \cyc{1 3}$. Direct computation gives $\alpha^2 = \beta^2 = 1$ and $(\alpha\beta)^3 = \cyc{1 3 2}^3 = 1$.
-
-    We claim $S_3= \langle\, \alpha, \beta \mid \alpha^2 = \beta^2 = (\alpha\beta)^3 = 1\,\rangle$. 
-    The six elements $1, \alpha, \beta, \alpha\beta, \beta\alpha, \alpha\beta\alpha$ are distinct, which can be verified by direct computation. 
-    To see that $|S| \leq 6$, note that the relations $\alpha^2 = \beta^2 = 1$ imply that elements of $S$ reduce to an alternating string. 
-    Moreover, one can deduce from $(\alpha\beta)^3 = 1$ that
+    Let $\sigma = \cyc{1 2 3}$ and $\tau = \cyc{1 2}$. 
+    Direct computation gives $\sigma^3 = \tau^2 = 1$ and $\sigma\tau = \cyc{1 3} = \tau\sigma\inv$.
+    The elements $1, \sigma, \sigma^2, \tau, \sigma\tau, \sigma^2\tau$ are all distinct and account for all six elements of $S_3$, so $\sigma$ and $\tau$ generate $S_3$.
+    
+    Let $G = \gen{\alpha, \beta \mid \alpha^3 = \beta^2 = 1, \alpha\beta = \beta\alpha\inv}$.
+    By induction on $i$, we have $\alpha^i \beta = \beta \alpha^{-i}$ for $i = 0, 1, 2$.
+    Therefore, every element of $G$ is of the form $\alpha^i$ or $\beta \alpha^i$ for $i = 0, 1, 2$, and hence $|G| \leq 6$.
+    Since $S_3$ has six elements and is generated by $\sigma$ and $\tau$ satisfying the same relations, we must have
     \[
-        (\alpha\beta\alpha)(\beta\alpha\beta) = 1 \implies \alpha\beta\alpha = (\beta\alpha\beta)^{-1} = \beta\alpha\beta.
+        S_3 = \gen{\sigma, \tau \mid \sigma^3 = \tau^2 = 1, \sigma\tau = \tau\sigma\inv}. \qedhere
     \]
-    Since we saw $\alpha\beta$ and $\beta\alpha$ are distinct, it suffices to check if two repeats are distinct:
-    \[
-        \alpha\beta\alpha\beta = (\beta\alpha\beta)\beta = \beta\alpha, \quad \beta\alpha\beta\alpha = (\alpha\beta\alpha)\alpha = \alpha\beta
-    \]
-    Longer strings of $\alpha\beta$ and $\beta\alpha$ reduce to one of the six elements above by induction. 
-    Hence, $|S| \leq 6$, so that $|S| = 6$ and $S = S_3$.
 \end{sol}
