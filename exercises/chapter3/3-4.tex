@@ -8,7 +8,7 @@
     Since $G$ is abelian, every subgroup of $G$ is normal.
 	Moreover, simplicity of $G$ implies that its only subgroups are 1 and $G$.
 	If $G$ is the trivial group, then $G \cong Z_1$.
-	Suppose $G$ is non-trivial, and let $g \in G$ be non-identity.
+	Suppose $G$ is nontrivial, and let $g \in G$ be nonidentity.
 	Then $\gen g \leq G$.
 	Since $g \neq 1$ and $G$ is simple, $\gen g = G$, hence $G$ is cyclic.
 
@@ -16,7 +16,7 @@
 	We have two cases:
     \begin{itemize}
         \item Suppose $\abs G$ is infinite.
-	Then $G \cong \zbb$ has infinitely many proper non-trivial subgroups, contradicting the simplicity of $G$.
+	Then $G \cong \zbb$ has infinitely many proper nontrivial subgroups, contradicting the simplicity of $G$.
         \item Suppose $\abs G$ is finite and composite.
 	Then there exists some divisor $d$ of $\abs G$ such that $1 < d < \abs G$.
 	Since $G$ is cyclic, there exists a unique subgroup of $G$ of order $d$, contradicting the simplicity of $G$.
@@ -149,7 +149,7 @@
 \begin{sol}
     Let $G$ be a finite group.
 	If $G = 1$, then the result is trivial.
-	Suppose now $G$ is non-trivial and that the result holds for all groups of order less than $\abs G$.
+	Suppose now $G$ is nontrivial and that the result holds for all groups of order less than $\abs G$.
 	If $G$ is simple, then the composition series is $1 \nsub G$.
 	Suppose now $G$ is not simple, and let $N$ be a maximal, normal subgroup of $G$.
 	Since $\abs N < \abs G$, we may conclude by the inductive hypothesis that there exists a composition series
@@ -212,7 +212,7 @@
         \]
         such that each $N_i$ is a normal subgroup of $G$ and $N_{i+1}/N_i$ is abelian, $0 \le i \le t-1$.
     \end{enumerate}
-    \noindent [For (iv), prove that a minimal non-trivial normal subgroup $M$ of $G$ is necessarily abelian and then use induction.
+    \noindent [For (iv), prove that a minimal nontrivial normal subgroup $M$ of $G$ is necessarily abelian and then use induction.
 	To see that $M$ is abelian, let $N \trianglelefteq M$ be of prime index (by (iii)) and show that $x^{-1}y^{-1}xy \in N$ for all $x,y \in M$ (cf. \exref{3.1.40}).
 	Apply the same argument to $gNg^{-1}$ to show that $x^{-1}y^{-1}xy$ lies in the intersection of all $G$-conjugates of $N$, and use the minimality of $M$ to conclude that $x^{-1}y^{-1}xy = 1$.]
 \end{exercise}
@@ -231,7 +231,7 @@
 	We prove this lemma by induction on $\abs A$.
 	If $\abs A = 1$, the result is trivial.
 	Suppose $\abs A > 1$ and that the result holds for all abelian groups of order less than $\abs A$.
-	Since $A$ is finite abelian, there exists some non-identity $a \in A$ such that $\gen a \nsub A$.
+	Since $A$ is finite abelian, there exists some nonidentity $a \in A$ such that $\gen a \nsub A$.
 	Then $\abs{\gen a} < \abs A$, hence by the inductive hypothesis, there exists a chain of subgroups
     \[
     	1 = B_0 \nsub B_1 \nsub \cdots \nsub B_m = \gen a
@@ -270,9 +270,9 @@
 	If $n$ is prime, then the composition factors of $G/H_{s - 1}$ are of prime order.
 	Since $\abs{H_{s - 1}} < \abs G$, by the inductive hypothesis, the composition factors of $H_{s - 1}$ are also of prime order, hence all composition factors of $G$ are of prime order.
 	Suppose now $n$ is not prime, so that $n = km$ for some $k, m \in \zp$ where $1 < k, m < n$.
-	Then $Z_n$ has a proper, non-trivial subgroup $\gen{a^m}$ of order $k$.
+	Then $Z_n$ has a proper, nontrivial subgroup $\gen{a^m}$ of order $k$.
 	Let $\pi : G \to G/H_{s - 1}$ be the natural projection, and let $K = \pi\inv(\gen{a^m})$.
-	Then $H_{s - 1} \nsub K \nsub G$ so that by the Lattice Isomorphism Theorem, $K/H_{s - 1} \cong \gen{a^m}$ is a proper, non-trivial subgroup of $G/H_{s - 1}$, contradicting that $H_{s - 1}$ is maximal normal in $G$.
+	Then $H_{s - 1} \nsub K \nsub G$ so that by the Lattice Isomorphism Theorem, $K/H_{s - 1} \cong \gen{a^m}$ is a proper, nontrivial subgroup of $G/H_{s - 1}$, contradicting that $H_{s - 1}$ is maximal normal in $G$.
 	It follows that $n$ must be prime, hence all composition factors of $G$ are of prime order.
 	By induction, the result holds for all finite groups.
 
@@ -282,13 +282,13 @@
     	1 = N_0 \nsub N_1 \nsub N_2 \nsub \cdots \nsub N_t = G
     \]
     such that each $N_i$ is a normal subgroup of $G$ and $N_{i + 1}/N_i$ is abelian.
-	Let $M$ be a minimal, non-trivial normal subgroup of $G$, and suppose $N \nsub M$ have prime index.
+	Let $M$ be a minimal, nontrivial normal subgroup of $G$, and suppose $N \nsub M$ have prime index.
 	Then for any $x, y \in M$, we have $x^{-1}y^{-1}xy \in N$ since $M/N$ is abelian.
 	Now for any $g \in G$, consider $gNg\inv \nsub gMg\inv = M$.
 	By the same argument, we have $x^{-1}y^{-1}xy \in gNg\inv$ for all $x, y \in M$.
 	It follows that $x^{-1}y^{-1}xy$ lies in the intersection of all $G$-conjugates of $N$.
 	Since $M$ is minimal normal in $G$, this intersection is either 1 or $M$.
-	If it were $M$, then $M$ would be abelian, contradicting that $M/N$ is non-trivial.
+	If it were $M$, then $M$ would be abelian, contradicting that $M/N$ is nontrivial.
 	Hence, $x^{-1}y^{-1}xy = 1$ for all $x, y \in M$, so that $M$ is abelian.
 
     \textbf{(iv) \rightimp (i)}: This implication is immediate from the definition of solvable groups.
@@ -345,7 +345,7 @@
 	By the previous exercise, we may assume that $\min\set{r, s} > 2$.
 	Suppose the statement is true for $\min\set{r, s} < k$ for some $k > 2$, and let $\min\set{r, s} = k$.
 	Let $H = N_{r - 1} \cap M_{s - 1}$.
-	If $N_{r - 1} \leq M_{s - 1}$ is proper, then by simplicity of $M_{s - 1}$, it must be that $N_{r - 1} = 1$, contradicting that $N_{r - 1}$ is non-trivial.
+	If $N_{r - 1} \leq M_{s - 1}$ is proper, then by simplicity of $M_{s - 1}$, it must be that $N_{r - 1} = 1$, contradicting that $N_{r - 1}$ is nontrivial.
 	Hence, $N_{r - 1} \nsub M_{s - 1}$.
 	By a similar argument, we have $M_{s - 1} \nsub N_{r - 1}$.
 	If we have $M_{s - 1} = N_{r - 1}$, then by the previous exercise, the composition factors of both series are the same, so we now suppose $M_{s - 1} \neq N_{r - 1}$ and they are not contained 
@@ -382,7 +382,7 @@
 \end{sol}
 
 \begin{exercise}{3.4.11}
-    Prove that if $H$ is a non-trivial normal subgroup of the solvable group $G$ then there is a non-trivial subgroup $A$ of $H$ with $A \trianglelefteq G$ and $A$ abelian.
+    Prove that if $H$ is a nontrivial normal subgroup of the solvable group $G$ then there is a nontrivial subgroup $A$ of $H$ with $A \trianglelefteq G$ and $A$ abelian.
 \end{exercise}
 
 \begin{sol}
@@ -392,7 +392,7 @@
     \]
     where $G_{i + 1}/G_i$ is abelian.
 	Let $H_i = H \cap G_i$ for each $0 \leq i \leq n$.
-	Since $H$ is non-trivial, consider the set of indices $I = \set{i \in \zp \mid G_i \cap H \neq 1}$.
+	Since $H$ is nontrivial, consider the set of indices $I = \set{i \in \zp \mid G_i \cap H \neq 1}$.
 	Since $H_n = H$, $I$ is nonempty.
 	By the Well Ordering Property, there exist some minimal index $k$ such that $H_k = G_k \cap H \neq 1$ but $H_{k - 1} = G_{k - 1} \cap H = 1$.
 	Note that $H_k \nsub G$ since $H \nsub G$ and $G_k \nsub G$.
@@ -401,7 +401,7 @@
     	H_k \cong H_k/1 = H_k/(H_k \cap G_{k - 1}) \cong H_k G_{k - 1}/G_{k - 1} \leq G_k/G_{k - 1}
     \]
     Since $G_k/G_{k - 1}$ is abelian, so is $H_k$.
-	Therefore, $A = H_k$ is a non-trivial, abelian normal subgroup of $G$ contained in $H$.
+	Therefore, $A = H_k$ is a nontrivial, abelian normal subgroup of $G$ contained in $H$.
 \end{sol}
 
 \begin{exercise}{3.4.12}

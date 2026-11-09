@@ -10,9 +10,9 @@ Let $G$ be a group and let $\Omega$ be an infinite set.
 	Suppose $H \leq A_n$ is a proper subgroup of index $k < n$.
 	Then $A_n$ acts on the left cosets of $H$ by left multiplication, inducing a homomorphism $\phi : A_n \to S_k$.
 	Observe that $n/2 > 0$ for all $n \geq 5$.
-	This lets us conclude that $\ker\phi$ must be non-trivial, for otherwise $\phi$ would be injective and $|A_n| \leq |S_k|$.
+	This lets us conclude that $\ker\phi$ must be nontrivial, for otherwise $\phi$ would be injective and $|A_n| \leq |S_k|$.
 	However, $k < n$ implies $k \leq n - 1$, or $k! \leq (n - 1)! < n!/2 = |A_n|$, which is a contradiction.
-	Since $\ker\phi$ is a non-trivial normal subgroup of $A_n$, $\ker\phi = A_n$ since $A_n$ is simple for all $n \geq 5$.
+	Since $\ker\phi$ is a nontrivial normal subgroup of $A_n$, $\ker\phi = A_n$ since $A_n$ is simple for all $n \geq 5$.
 	It follows that $\phi$ is the trivial homomorphism, so that $H = A_n$, which is a contradiction.
 	Therefore, $A_n$ does not have a proper subgroup of index $< n$ for all $n \geq 5$.
 \end{sol}
@@ -51,9 +51,9 @@ Let $G$ be a group and let $\Omega$ be an infinite set.
 	Let $H \leq S_n$ be a proper subgroup where $|S_n : H| = k < n$.
 	Then $S_n$ acts on the left cosets of $H$ by left multiplication, inducing a homomorphism $\phi : S_n \to S_k$.
 	Observe that $n/2 > 0$ for all $n \geq 5$.
-	This lets us conclude that $\ker\phi$ must be non-trivial, for otherwise $\phi$ would be injective and $|S_n| \leq |S_k|$.
+	This lets us conclude that $\ker\phi$ must be nontrivial, for otherwise $\phi$ would be injective and $|S_n| \leq |S_k|$.
 	However, $k < n$ implies $k \leq n - 1$, or $k! \leq (n - 1)! < n! = |S_n|$, which is a contradiction.
-	Since $\ker\phi$ is a non-trivial normal subgroup of $S_n$, $\ker\phi = A_n$ or $\ker\phi = S_n$ since these are the only normal subgroups of $S_n$ for all $n \geq 5$.
+	Since $\ker\phi$ is a nontrivial normal subgroup of $S_n$, $\ker\phi = A_n$ or $\ker\phi = S_n$ since these are the only normal subgroups of $S_n$ for all $n \geq 5$.
 	If $\ker\phi = S_n$, then $\phi$ is the trivial homomorphism, so that $H = S_n$, which is a contradiction.
 	Therefore, $\ker\phi = A_n$, so that $A_n \subseteq H$.
 	By maximality of $A_n$ in $S_n$, then $H = A_n$.
@@ -124,7 +124,7 @@ Let $G$ be a group and let $\Omega$ be an infinite set.
 \end{sol}
 
 \begin{exercise}{4.6.7}
-	Under the notation of the preceding exercise, prove that if $H \nsub S_\Omega$ and $H \neq 1$, then $A \leq H$, i.e., $A$ is the unique (non-trivial) minimal normal subgroup of $S_\Omega$.
+	Under the notation of the preceding exercise, prove that if $H \nsub S_\Omega$ and $H \neq 1$, then $A \leq H$, i.e., $A$ is the unique (nontrivial) minimal normal subgroup of $S_\Omega$.
 \end{exercise}
 
 \begin{sol}
@@ -135,7 +135,7 @@ Let $G$ be a group and let $\Omega$ be an infinite set.
 
 	Let $B$ be the set of elements of $A$ which fix every point outside $\Gamma$.
 	Since $B \cong A_{|\Gamma|}$ and $|\Gamma| \geq 5$, $B$ is simple.
-	Since $H \cap B \trianglelefteq B$ is non-trivial (it contains $\sigma$), simplicity of $B$ gives $B \leq H$.
+	Since $H \cap B \trianglelefteq B$ is nontrivial (it contains $\sigma$), simplicity of $B$ gives $B \leq H$.
 	In particular, $H$ contains a 3-cycle $\cyc{alpha beta gamma}$.
 	Now let $\cyc{a b c}$ be any 3-cycle in $S_\Omega$.
 	Since there exists $\tau \in S_\Omega$ with $\tau(\alpha) = a$, $\tau(\beta) = b$, $\tau(\gamma) = c$, and $H \trianglelefteq S_\Omega$, we have $\tau\cyc{alpha beta gamma}\tau^{-1} = \cyc{a b c} \in H$.

@@ -40,8 +40,8 @@ Let $G$ be a finite group and let $p$ be a prime.
 \begin{sol}
 	Let $|G| = p^n m$ where $p \nmid m$.
 	By Sylow's Theorem, there exists some $P \in \syl_p(G)$ such that $|P| = p^n$.
-	Since $n \geq 1$, $P$ is non-trivial.
-	By Theorem 4.8, we know that the center $Z(P)$ is non-trivial.
+	Since $n \geq 1$, $P$ is nontrivial.
+	By Theorem 4.8, we know that the center $Z(P)$ is nontrivial.
 	Since $Z(P)$ is abelian, by Proposition 3.21, there exists some element $x \in Z(P)$ such that $|x| = p$.
 	Therefore, $x \in G$ has order $p$.
 \end{sol}
@@ -140,7 +140,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 	\[
 		\gen{\cyc{1 2 4 3}, \cyc{2 3}} = \set{1, \cyc{1 2 4 3}, \cyc{1 4}\cyc{2 3}, \cyc{1 3 4 2}, \cyc{2 3}, \cyc{1 2}\cyc{3 4}, \cyc{1 4}, \cyc{1 3}\cyc{2 4}}.
 	\]
-	Note that these are all distinct but have non-trivial intersections.
+	Note that these are all distinct but have nontrivial intersections.
 \end{sol}
 
 \begin{exercise}{4.5.8}
@@ -461,7 +461,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 	Note that $2907 = 3^2 \cdot 17 \cdot 19$.
 	Suppose that none of the $n_i \equiv 1 \pmod i$ for $i = 3, 17, 19$ is equal to 1.
 	Then $n_{19} = 1$ or 153, $n_{17} = 1$ or 171, and $n_3 = 1$ or 19.
-	Assuming that the Sylow 3-subgroups intersect non-trivially, then there are at least $19 \cdot 6 = 114$ elements of 3-power order, at least $153 \cdot 18 = 2754$ elements of order 19, and at least $171 \cdot 16 = 2736$ elements of order 17, giving a total of at least $114 + 2754 + 2736 = 5604$ elements, which is impossible.
+	Assuming that the Sylow 3-subgroups intersect nontrivially, then there are at least $19 \cdot 6 = 114$ elements of 3-power order, at least $153 \cdot 18 = 2754$ elements of order 19, and at least $171 \cdot 16 = 2736$ elements of order 17, giving a total of at least $114 + 2754 + 2736 = 5604$ elements, which is impossible.
 	Therefore, there must be a normal Sylow subgroup in $G$, so that $G$ is not simple.
 \end{sol}
 
@@ -473,7 +473,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 	Note that $132 = 2^2 \cdot 3 \cdot 11$.
 	Suppose that none of the $n_i \equiv 1 \pmod i$ for $i = 2, 3, 11$ is equal to 1.
 	Then $n_{11} = 1$ or 12, $n_3 = 1$ or 22, and $n_2 = 1, 11$ or 33.
-	Assuming that the Sylow 2-subgroups intersect non-trivially, then there are at least $11 \cdot 3 = 33$ elements of order 2-power order, at least $22 \cdot 2 = 44$ elements of order 3, and at least $12 \cdot 10 = 120$ elements of order 11, giving a total of at least $33 + 44 + 120 = 197$ elements, which is impossible.
+	Assuming that the Sylow 2-subgroups intersect nontrivially, then there are at least $11 \cdot 3 = 33$ elements of order 2-power order, at least $22 \cdot 2 = 44$ elements of order 3, and at least $12 \cdot 10 = 120$ elements of order 11, giving a total of at least $33 + 44 + 120 = 197$ elements, which is impossible.
 	Therefore, there must be a normal Sylow subgroup in $G$, so that $G$ is not simple.
 \end{sol}
 
@@ -587,13 +587,13 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{sol}
 
 \begin{exercise}!{4.5.29}
-	If $G$ is a non-abelian simple group of order $< 100$, prove that $G \cong A_5$. (Eliminate all orders but 60.)
+	If $G$ is a nonabelian simple group of order $< 100$, prove that $G \cong A_5$. (Eliminate all orders but 60.)
 \end{exercise}
 
 \begin{sol}
 	Let $p, q, r$ be distinct primes.
 	From the text, orders of 12, 30, $pq$, and $p^2q$ where $p < q$ are eliminated.
-	Moreover, orders of $p$ are eliminated as they are cyclic, $p^n$ are eliminated as they have non-trivial centers by Theorem 4.8, and $pqr$ are eliminated by \exref{4.5.16}.
+	Moreover, orders of $p$ are eliminated as they are cyclic, $p^n$ are eliminated as they have nontrivial centers by Theorem 4.8, and $pqr$ are eliminated by \exref{4.5.16}.
 	The only remaining orders are 24, 36, 40, 48, 54, 56, 72, 80, 84, 90, and 96.
 	We examine each in detail:
 	\begin{itemize}
@@ -625,8 +625,8 @@ Let $G$ be a finite group and let $p$ be a prime.
 	Since $|P| = 8$ for some $P \in \syl_2(G)$, we only have room for one Sylow 2-subgroup, so that $n_2 = 1$.
 	Therefore, there is a normal Sylow 2-subgroup in $G$, which is a contradiction.
 		\item $|G| = 72$: Suppose $n_3 = 4$.
-	Then the induced homomorphism $\phi : G \to S_4$ cannot have a non-trivial kernel.
-	Then $G$ has a non-trivial normal subgroup, which is a contradiction.
+	Then the induced homomorphism $\phi : G \to S_4$ cannot have a nontrivial kernel.
+	Then $G$ has a nontrivial normal subgroup, which is a contradiction.
 		\item $|G| = 80$: If $n_6 = 16$, then there are at least $16 \cdot 4 = 64$ elements of order 5, leaving only 16 elements left.
 	Since $|P| = 16$ for some $P \in \syl_2(G)$, we only have room for one Sylow 2-subgroup, so that $n_2 = 1$.
 	Therefore, there is a normal Sylow 2-subgroup in $G$, which is a contradiction.
@@ -634,15 +634,15 @@ Let $G$ be a finite group and let $p$ be a prime.
 	Therefore, there is a normal Sylow 7-subgroup in $G$, which is a contradiction.
 		\item $|G| = 90$: If $n_5 = 6$, then there are at least 24 elements of order 5.
 	Moreover, $n_3 = 10$ such that all the Sylow-3 subgroups intersect trivially, then there are at least $10 \cdot 8 = 80$ elements of order 3, which is impossible.
-	Then the Sylow-3 subgroups must intersect non-trivially.
+	Then the Sylow-3 subgroups must intersect nontrivially.
 	If $P, Q \in \syl_3(G)$ such that $|P \cap Q| = 3$, we may use a similar argument as in $|G| = 36$ to determine that $N_G(P \cap Q)$ has order 45 or 90.
 		\item $|G| = 96$: We have that either $n_3 = 4$ or $n_3 = 16$, since $n_3 \mid 32$.
 	Consider $N_G(P)$ for some $P \in \syl_3(G)$.
-	Then $|G : N_G(P)| = 4$ if $n_3 = 4$ so that an induced homomorphism from $G$ to $S_4$ has a non-trivial kernel, which is a contradiction.
+	Then $|G : N_G(P)| = 4$ if $n_3 = 4$ so that an induced homomorphism from $G$ to $S_4$ has a nontrivial kernel, which is a contradiction.
 	If $n_3 = 16$, we may use the same arguments as $|G| = 36$ or 90 to show a contradiction as well.
 	\end{itemize}
 	By Theorem 4.23, we know that simple groups of order 60 are isomorphic to $A_5$.
-	Therefore, if $G$ is a non-abelian simple group of order less than 100, then $G \cong A_5$.
+	Therefore, if $G$ is a nonabelian simple group of order less than 100, then $G \cong A_5$.
 \end{sol}
 
 \begin{exercise}{4.5.30}
@@ -789,7 +789,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 		\item The subgroup $O_p(G)$ is defined to be the group generated by all normal $p$-subgroups of $G$.
 		Prove that $O_p(G)$ is the unique largest $p$-subgroup of $G$ and $O_p(G)$ equals the intersection of all Sylow $p$-subgroups of $G$.
 		\item Let $\bar G = G/O_p(G)$.
-		Prove that $O_p(\bar G) = \bar 1$ (i.e., $\bar G$ has no non-trivial normal $p$-subgroup).
+		Prove that $O_p(\bar G) = \bar 1$ (i.e., $\bar G$ has no nontrivial normal $p$-subgroup).
 	\end{subexercises}
 \end{exercise}
 
@@ -803,7 +803,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 	Then $g(RS)g\inv = (gRg\inv)(gSg\inv) = RS$, so that $RS \nsub G$.
 	Moreover, $RS$ is a $p$-group because $R \cap S$ is a $p$-group, hence $|RS|$ is a power of $p$.
 	\item By induction, we have that the product of any finite number of normal $p$-subgroups of $G$ is a normal $p$-subgroup of $G$.
-	Since the set of normal $p$-subgroups of $G$ is non-empty (it contains the trivial subgroup), $O_p(G)$ is a normal $p$-subgroup of $G$.
+	Since the set of normal $p$-subgroups of $G$ is nonempty (it contains the trivial subgroup), $O_p(G)$ is a normal $p$-subgroup of $G$.
 	Moreover, if $R$ is a normal $p$-subgroup of $G$, then $R \leq O_p(G)$ by definition.
 	Uniqueness follows from that fact that $O_p(G)$ contains every normal $p$-subgroup of $G$ and is itself a normal $p$-subgroup of $G$.
 	
@@ -1046,7 +1046,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 
 \begin{exercise}{4.5.46}
 	Find generators for a Sylow $p$-subgroup of $S_{p^2}$, where $p$ is a prime.
-	Show that this is a non-abelian group of order $p^{p + 1}$.
+	Show that this is a nonabelian group of order $p^{p + 1}$.
 \end{exercise}
 
 \begin{sol}
@@ -1068,9 +1068,9 @@ Let $G$ be a finite group and let $p$ be a prime.
 	Equipped with $B = \gen\beta$, we see that $B$ normalizes $A$ since $\beta$ permutes the generators of $A$.
 	Moreover, $A \cap B = \set{1}$ since $A$ is an abelian group of order $p^p$ and $B$ is a cyclic group of order $p$.
 	It follows that $P = AB$ is a subgroup of $S_{p^2}$ of order $p^{p + 1}$, so that $P$ is a Sylow $p$-subgroup of $S_{p^2}$.
-	Finally, we show that $P$ is non-abelian.
+	Finally, we show that $P$ is nonabelian.
 	Note that $\beta \alpha_0 \beta\inv = \alpha_1 \neq \alpha_0$, so that $\beta$ does not commute with $\alpha_0$.
-	Therefore, $P$ is non-abelian.
+	Therefore, $P$ is nonabelian.
 \end{sol}
 
 \begin{exercise}{4.5.47}
@@ -1181,7 +1181,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{sol}
 
 \begin{exercise}{4.5.53}
-	Use the preceding exercise to prove that if $G$ is any non-abelian group in which every proper subgroup is abelian then $G$ is not simple. (Let $G$ be a counterexample to this assertion and use \exref{4.3.24} to show that $G$ has more than one conjugacy class of maximal subgroups.
+	Use the preceding exercise to prove that if $G$ is any nonabelian group in which every proper subgroup is abelian then $G$ is not simple. (Let $G$ be a counterexample to this assertion and use \exref{4.3.24} to show that $G$ has more than one conjugacy class of maximal subgroups.
 	Use the method of \exref{4.3.23} to count the elements which lie in all conjugates of $M$ and $N$, where $M$ and $N$ are nonconjugate maximal subgroups of $G$; show that this gives more than $|G|$ elements.)
 \end{exercise}
 
@@ -1191,7 +1191,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 	Moreover, conjugates of maximal subgroups are also maximal: if $M$ is a maximal subgroup of $G$ with $g \in G$ such that $gMg \inv \leq H$ for some $H \leq G$, then $M \leq g\inv Hg$ so that $g\inv Hg = G$ or $M$.
 	It follows that $gMg\inv = G$ or $M$, hence $gMg\inv = M$ since $M$ is a proper subgroup of $G$.
 	Therefore, $gMg\inv$ is a maximal subgroup of $G$.
-	Lastly, simplicity of $G$ forces $M$ to be a non-normal subgroup, hence $N_G(M) = M$ by maximality of $M$.
+	Lastly, simplicity of $G$ forces $M$ to be a nonnormal subgroup, hence $N_G(M) = M$ by maximality of $M$.
 
 	We now show that there are at least two distinct conjugacy classes of maximal subgroups of $G$.
 	Assume by way of contradiction that there is only one conjugacy class of maximal subgroups of $G$.
@@ -1202,7 +1202,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 	This is a contradiction since $G$ is the union of its maximal subgroups.
 	Therefore, there are at least two distinct conjugacy classes of maximal subgroups of $G$.
 
-	Lastly, observe that $|M| \geq 2$ and $|N| \geq 2$ since $M$ and $N$ are non-abelian.
+	Lastly, observe that $|M| \geq 2$ and $|N| \geq 2$ since $M$ and $N$ are nonabelian.
 	It follows that
 	\[
 		|G| - |G : M| - |G : N| = |G|\left(1 - \frac{1}{|M|} - \frac{1}{|N|}\right) \geq 0.
@@ -1217,7 +1217,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 
 \begin{exercise}{4.5.54}
 	Prove the following classification: if $G$ is a finite group of order $p_1p_2 \cdots p_r$ where the $p_i$'s are distinct primes such that $p_i$ does not divide $p_j - 1$ for all $i$ and $j$, then $G$ is cyclic. (By induction, every proper subgroup of $G$ is cyclic, so $G$ is not simple by the preceding exercise.
-	If $N$ is a non-trivial proper normal subgroup, $N$ is cyclic and $G/N$ acts as automorphisms of $N$.
+	If $N$ is a nontrivial proper normal subgroup, $N$ is cyclic and $G/N$ acts as automorphisms of $N$.
 	Use Proposition 16 to show that $N \leq Z(G)$ and use induction to show $G/Z(G)$ is cyclic, hence $G$ is abelian by \exref{3.1.36}.)
 \end{exercise}
 
@@ -1227,7 +1227,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 
 	Assume by way of contradiction that $G$ is not abelian.
 	By \exref{4.5.53}, $G$ is not simple.
-	Let $N$ be a non-trivial normal subgroup of $G$ with $|N| = q_1q_2 \cdots q_s$ are primes from $p_1, p_2, \ldots, p_r$.
+	Let $N$ be a nontrivial normal subgroup of $G$ with $|N| = q_1q_2 \cdots q_s$ are primes from $p_1, p_2, \ldots, p_r$.
 	Moreover, $N$ is cyclic by the inductive hypothesis.
 
 	By $N \nsub G$, then $G$ acts on $N$ which induces the homomorphism $\psi : G \to \aut(N)$.
@@ -1252,17 +1252,17 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	We proceed by contrapositive, i.e., if $n$ is not a product of distinct primes, or if $n$ is a product of distinct primes, but there exist some $i$ and $j$ such that $p_i \mid p_j - 1$, then there exists some non-cyclic group of order $n$.
+	We proceed by contrapositive, i.e., if $n$ is not a product of distinct primes, or if $n$ is a product of distinct primes, but there exist some $i$ and $j$ such that $p_i \mid p_j - 1$, then there exists some noncyclic group of order $n$.
 	\begin{itemize}
 		\item Suppose $n$ is not a product of distinct primes, i.e., $n = p^2m$ for some prime $p$ and some integer $m \geq 1$.
 	Consider the group $\intmod[p] \times \intmod[p] \times \intmod[m]$.
-	Note that $\intmod[p] \times \intmod[p]$ is a non-cyclic group of order $p^2$, since every non-identity element of $\intmod[p]$ has order $p$.
+	Note that $\intmod[p] \times \intmod[p]$ is a noncyclic group of order $p^2$, since every nonidentity element of $\intmod[p]$ has order $p$.
 	If $G$ were cyclic, then the isomorphic copy of $\intmod[p] \times \intmod[p]$ in $G$, namely $\intmod[p] \times \intmod[p] \times \set{0}$, would also be cyclic, which is a contradiction.
-	Therefore, $\intmod[p] \times \intmod[p] \times \intmod[m]$ is a non-cyclic group of order $n$.
-		\item By the text, if $p \mid q - 1$, then there exists a non-abelian group of order $pq$.
+	Therefore, $\intmod[p] \times \intmod[p] \times \intmod[m]$ is a noncyclic group of order $n$.
+		\item By the text, if $p \mid q - 1$, then there exists a nonabelian group of order $pq$.
 	Let $H$ be such a group, and let $m$ be an integer such that $n = pqm$, and $(pq, m) = 1$.
 	Consider the group $H \times \intmod[m]$.
-	Using similar reasoning as in the previous case, $(H \times \set 0) \cong H$ is a non-cyclic subgroup of $H \times \intmod[m]$, so that $H \times \intmod[m]$ is a non-cyclic group of order $n$. \qedhere
+	Using similar reasoning as in the previous case, $(H \times \set 0) \cong H$ is a noncyclic subgroup of $H \times \intmod[m]$, so that $H \times \intmod[m]$ is a noncyclic group of order $n$. \qedhere
 	\end{itemize}
 \end{sol}
 
@@ -1274,7 +1274,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 	We proceed by induction on $|G|$.
 	If $G$ is abelian, then $G$ is solvable.
 	Assume that the hypothesis holds for all groups of order less than $|G|$.
-	If $G$ is not simple, then there exists some non-trivial normal subgroup $N$ of $G$.
+	If $G$ is not simple, then there exists some nontrivial normal subgroup $N$ of $G$.
 	Since $N$ and $G/N$ are both groups in which every proper subgroup is abelian (specifically, $G/N$ has every proper subgroup abelian because each $H/N \leq G/N$ has some $H \leq G$ that is abelian, by hypothesis), by the inductive hypothesis, $N$ and $G/N$ are solvable.
 	It follows that $G$ is solvable as well.
 	If $G$ is simple, then by \exref{4.5.53}, $G$ is abelian, hence solvable.
