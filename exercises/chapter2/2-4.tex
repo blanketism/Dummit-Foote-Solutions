@@ -195,7 +195,7 @@
         0 & 2
         \end{pmatrix}
     \end{align*}
-    Since $|\gen{A, B}| > 12$ and $\gen{A, B} \leq \splin_2(\fbb_3)$ which has order 24, we must have $\gen{A, B} = \splin_2(\fbb_3)$.
+    Since $\abs{\gen{A, B}} > 12$ and $\gen{A, B} \leq \splin_2(\fbb_3)$ which has order 24, we must have $\gen{A, B} = \splin_2(\fbb_3)$.
 \end{sol}
 
 \begin{exercise}{2.4.10}
@@ -237,8 +237,8 @@
     \]
     extends to a homomorphism since the relations are satisfied.
 	Moreover, $\phi$ maps generators of $Q_8$ to generators of $\gen{A, B}$ so that $\phi$ is surjective.
-	In particular, this implies $|\gen{A, B}| \leq |Q_8| = 8$.
-	Since $B \notin \gen A$, we must have $|\gen{A, B}| = 8$, and hence $\phi$ is an isomorphism.
+	In particular, this implies $\abs{\gen{A, B}} \leq \abs{Q_8} = 8$.
+	Since $B \notin \gen A$, we must have $\abs{\gen{A, B}} = 8$, and hence $\phi$ is an isomorphism.
 \end{sol}
 
 \begin{exercise}{2.4.11}
@@ -429,7 +429,7 @@
 \end{exercise}
 
 \begin{solenum}
-    \item Note that $|H_k| = p^k$ for any $k$ as there are exactly $p^k$ roots of unity.
+    \item Note that $\abs{H_k} = p^k$ for any $k$ as there are exactly $p^k$ roots of unity.
 	Now, if $H_k \leq H_m$, then $p^k \mid p^m$ by Lagrange's Theorem.
 	Then $p^k \leq p^m$, or $k \leq m$ since $p > 0$.
     
@@ -487,7 +487,7 @@
 \begin{solenum}
     \item Suppose $p/q \in \qbb$.
 	Then $(p/qn)n = p/q$, where $p/qn \in \qbb$.
-    \item Let $G$ be finite abelian with $|G| = n$.
+    \item Let $G$ be finite abelian with $\abs{G} = n$.
 	For some nontrivial $g \in G$, we have $g^n = 1$.
 	If $G$ was divisible, then there would be some $x \in G$ such that $x^n = g$.
 	But then $g = x^n = 1$, contradicting that $g$ is nontrivial.

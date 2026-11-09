@@ -180,19 +180,19 @@
 	\item This is done in \exref{4.2.4}.
 	\item Let $Q_8$ act on a set $A$ of order $n \leq 7$.
 	For any $a \in A$, consider the orbit $\ocal_a$ of $a$ under this action.
-	By Proposition 4.2, we have $|\ocal_a| = |Q_8 \colon (Q_8)_a|$, where $(Q_8)_a$ is the stabilizer of $a$ in $Q_8$.
-	Since $|\ocal_a|$ divides $|A| \leq 7$, $|\ocal_a|$ must be 1, 2, 4, or 7.
-	However, since $Q_8$ has no subgroup of index 7, $|\ocal_a|$ cannot be 7.
-	If $|\ocal_a| = 4$, then $(Q_8)_a$ has order 2, but the only subgroup of order 2 in $Q_8$ is $\langle -1 \rangle$.
-	If $|\ocal_a| = 2$, then $(Q_8)_a$ has order 4, and the only subgroups of order 4 in $Q_8$ are $\langle i \rangle$, $\langle j \rangle$, and $\langle k \rangle$, all of which contain $\langle -1 \rangle$.
-	If $|\ocal_a| = 1$, then $(Q_8)_a = Q_8$, which also contains $\langle -1 \rangle$.
+	By Proposition 4.2, we have $\abs{\ocal_a} = \abs{Q_8 \colon (Q_8)_a}$, where $(Q_8)_a$ is the stabilizer of $a$ in $Q_8$.
+	Since $\abs{\ocal_a}$ divides $\abs{A} \leq 7$, $\abs{\ocal_a}$ must be 1, 2, 4, or 7.
+	However, since $Q_8$ has no subgroup of index 7, $\abs{\ocal_a}$ cannot be 7.
+	If $\abs{\ocal_a} = 4$, then $(Q_8)_a$ has order 2, but the only subgroup of order 2 in $Q_8$ is $\langle -1 \rangle$.
+	If $\abs{\ocal_a} = 2$, then $(Q_8)_a$ has order 4, and the only subgroups of order 4 in $Q_8$ are $\langle i \rangle$, $\langle j \rangle$, and $\langle k \rangle$, all of which contain $\langle -1 \rangle$.
+	If $\abs{\ocal_a} = 1$, then $(Q_8)_a = Q_8$, which also contains $\langle -1 \rangle$.
 	Therefore, in all cases, the stabilizer $(Q_8)_a$ contains $\langle -1 \rangle$.
 	Since this holds for all $a \in A$, $\langle -1 \rangle$ is contained in the kernel of the action.
 	The action is not faithful, hence $Q_8$ cannot be isomorphic to a subgroup of $S_n$ for any $n \leq 7$.
 \end{solenum}
 
 \begin{exercise}{4.2.8}
-	Prove that if $H$ has finite index $n$ then there is a normal subgroup $K$ of $G$ with $K \le H$ and $|G \colon K| \le n!$.
+	Prove that if $H$ has finite index $n$ then there is a normal subgroup $K$ of $G$ with $K \le H$ and $\abs{G \colon K} \le n!$.
 \end{exercise}
 
 \begin{sol}
@@ -200,8 +200,8 @@
 	Then we have the homomorphism $\phi \colon G \to S_n$, which is the permutation representation of $G$ on $G/H$.
 	Let $K = \ker(\phi) \subseteq H$, since $g \in K$ if and only if $gxH = xH$ for all $x \in G$.
 	Taking $x = 1$, we have $gH = H$, so that $g \in H$.
-	By the First Isomorphism Theorem, we have $G/K \cong \phi(G) \leq S_n$, so that $|G \colon K| = |G/K| = |\phi(G)|$ divides $|S_n| = n!$.
-	Therefore, $|G \colon K| \leq n!$.
+	By the First Isomorphism Theorem, we have $G/K \cong \phi(G) \leq S_n$, so that $\abs{G \colon K} = \abs{G/K} = \abs{\phi(G)}$ divides $\abs{S_n} = n!$.
+	Therefore, $\abs{G \colon K} \leq n!$.
 \end{sol}
 
 \begin{exercise}{4.2.9}
@@ -211,13 +211,13 @@
 
 \begin{sol}
 	Let $H$ be a subgroup of $G$ with index $p$.
-	Then $|G \colon H| = p$, so the action of $G$ on the left cosets of $H$ in $G$ gives a homomorphism $\phi \colon G \to S_p$.
-	Since $|G| = p^\alpha$, by Lagrange's Theorem, the order of $\phi(G)$ divides $p^\alpha$.
+	Then $\abs{G \colon H} = p$, so the action of $G$ on the left cosets of $H$ in $G$ gives a homomorphism $\phi \colon G \to S_p$.
+	Since $\abs{G} = p^\alpha$, by Lagrange's Theorem, the order of $\phi(G)$ divides $p^\alpha$.
 	However, the only subgroups of $S_p$ whose order divides $p^\alpha$ are the trivial group and groups of order $p$.
 	Since $\phi(G)$ acts transitively on the $p$ cosets of $H$, $\phi(G)$ cannot be trivial.
-	Therefore, $|\phi(G)| = p$, which is prime, so $\phi(G)$ is cyclic and hence abelian.
+	Therefore, $\abs{\phi(G)} = p$, which is prime, so $\phi(G)$ is cyclic and hence abelian.
 	The kernel of $\phi$ is a normal subgroup of $G$ contained in $H$.
-	Since the image $\phi(G)$ has order $p$, by the First Isomorphism Theorem, we have $|G \colon \ker(\phi)| = p$.
+	Since the image $\phi(G)$ has order $p$, by the First Isomorphism Theorem, we have $\abs{G \colon \ker(\phi)} = p$.
 	But since $\ker(\phi) \subseteq H$ and both have index $p$, $\ker(\phi) = H$.
 	Therefore, $H$ is normal in $G$.
 
@@ -252,31 +252,31 @@
 	This action gives a homomorphism $\phi \colon G \to S_3$.
 	Since $H$ is not normal in $G$, the action is nontrivial, so $\phi$ is injective.
 	Therefore, $G \cong \phi(G) \leq S_3$.
-	Since $|G| = 6 = |S_3|$, $\phi(G) = S_3$, and hence $G \cong S_3$.
+	Since $\abs{G} = 6 = \abs{S_3}$, $\phi(G) = S_3$, and hence $G \cong S_3$.
 \end{sol}
 
 \begin{exercise}{4.2.11}
 	Let $G$ be a finite group and let $\pi \colon G \to S_G$ be the left regular representation.
-	Prove that if $x$ is an element of $G$ of order $n$ and $|G| = mn$, then $\pi(x)$ is a product of $m$ $n$-cycles.
-	Deduce that $\pi(x)$ is an odd permutation if and only if $|x|$ is even and $\abs G/\abs x$ is odd.
+	Prove that if $x$ is an element of $G$ of order $n$ and $\abs{G} = mn$, then $\pi(x)$ is a product of $m$ $n$-cycles.
+	Deduce that $\pi(x)$ is an odd permutation if and only if $\abs{x}$ is even and $\abs G/\abs x$ is odd.
 \end{exercise}
 
 \begin{sol}
 	Let $x \in G$ with $\abs x = n$.
 	Consider the action of $\langle x \rangle$ on $G$ by left multiplication.
 	The orbit of any $g \in G$ under this action is $\ocal_g = \set{x^k g \mid k = 0, 1, \ldots, n-1}$.
-	Since $\abs x = n$, $|\ocal_g| = n$ for all $g \in G$.
-	By Proposition 4.2, we have $|\ocal_g| = |\langle x \rangle \colon (\langle x \rangle)_g|$, where $(\langle x \rangle)_g$ is the stabilizer of $g$ in $\langle x \rangle$.
-	Since $|\ocal_g| = n$, $(\langle x \rangle)_g$ is trivial for all $g \in G$.
+	Since $\abs x = n$, $\abs{\ocal_g} = n$ for all $g \in G$.
+	By Proposition 4.2, we have $\abs{\ocal_g} = \abs{\langle x \rangle \colon (\langle x \rangle)_g}$, where $(\langle x \rangle)_g$ is the stabilizer of $g$ in $\langle x \rangle$.
+	Since $\abs{\ocal_g} = n$, $(\langle x \rangle)_g$ is trivial for all $g \in G$.
 	Therefore, the orbits of this action partition $G$ into subsets of size $n$.
-	Since $|G| = mn$, there are exactly $m$ such orbits.
+	Since $\abs{G} = mn$, there are exactly $m$ such orbits.
 	Each orbit corresponds to an $n$-cycle in the permutation $\pi(x)$.
 	Therefore, $\pi(x)$ is a product of $m$ $n$-cycles.
 
 	To determine when $\pi(x)$ is an odd permutation, we note that an $n$-cycle is an odd permutation if and only if $n$ is even.
 	Since $\pi(x)$ is a product of $m$ $n$-cycles, the parity of $\pi(x)$ is determined by the parity of $m$ and $n$.
 	Specifically, $\pi(x)$ is odd if and only if $n$ is even and $m$ is odd.
-	Thus, $\pi(x)$ is an odd permutation if and only if $|x|$ is even and $|G|/|x|$ is odd.
+	Thus, $\pi(x)$ is an odd permutation if and only if $\abs{x}$ is even and $\abs{G}/\abs{x}$ is odd.
 \end{sol}
 
 \begin{exercise}{4.2.12}
@@ -289,18 +289,18 @@
 	Moreover, $\pi$ is a homomorphism from $G$ to $S_G$.
 	Consider the composition $\ep \circ \pi \colon G \to \set{\pm 1}$.
 	Since $\pi(G)$ contains an odd permutation, $\ep \circ \pi$ is surjective.
-	By the First Isomorphism Theorem, we have $G/\ker(\ep \circ \pi) \cong \set{\pm 1}$, so that $|\ker(\ep \circ \pi)| = |G|/2$.
+	By the First Isomorphism Theorem, we have $G/\ker(\ep \circ \pi) \cong \set{\pm 1}$, so that $\abs{\ker(\ep \circ \pi)} = \abs{G}/2$.
 	Therefore, $\ker(\ep \circ \pi)$ is a subgroup of $G$ of index 2.
 \end{sol}
 
 \begin{exercise}{4.2.13}
-	Prove that if $|G| = 2k$ where $k$ is odd then $G$ has a subgroup of index 2. [Use Cauchy's Theorem to produce an element of order 2 and then use the preceding two exercises.]
+	Prove that if $\abs{G} = 2k$ where $k$ is odd then $G$ has a subgroup of index 2. [Use Cauchy's Theorem to produce an element of order 2 and then use the preceding two exercises.]
 \end{exercise}
 
 \begin{sol}
 	By Cauchy's Theorem, there exists $x \in G$ such that $\abs x = 2$.
 	Then $\pi(x)$ is of order 2 and is hence a product of disjoint transpositions.
-	Since $|G| = 2k$ with $k$ odd, use $m = k$ and $n = 2$ in \exref{4.2.11} along with even $\abs x$ to conclude that $\pi(x)$ is an odd permutation.
+	Since $\abs{G} = 2k$ with $k$ odd, use $m = k$ and $n = 2$ in \exref{4.2.11} along with even $\abs x$ to conclude that $\pi(x)$ is an odd permutation.
 	By the \exref{4.2.12}, $G$ has a subgroup of index 2.
 \end{sol}
 

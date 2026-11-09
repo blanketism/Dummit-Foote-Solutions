@@ -122,7 +122,7 @@
     Since $3c^2 \equiv 0 \pmod 4$, we have $c^2 \equiv 0 \pmod 4$, so that $c$ is even.
     Since $a^2$ and $b^2$ are $0$ or $1 \pmod 4$ by \exref{0.3.6}, $a^2 + b^2 \equiv 0 \pmod 4$ forces $a^2 \equiv b^2 \equiv 0 \pmod 4$, whence $a$ and $b$ are even.
     Divide each of $a$, $b$, and $c$ by $2$ to get a smaller solution to the original equation.
-    Iterating this process leads to a sequence of strictly positive and decreasing integers $|c| > |c|/2 > |c|/4 > \dots$, which is impossible.
+    Iterating this process leads to a sequence of strictly positive and decreasing integers $\abs{c} > \abs{c}/2 > \abs{c}/4 > \dots$, which is impossible.
 \end{sol}
 
 \begin{exercise}{0.3.9}
@@ -139,7 +139,7 @@
 \end{exercise}
 
 \begin{sol}
-    By \exref{0.3.2}, $a \mapsto \bar a$ is a bijection from $\set{1, \ldots, n}$ to $\intmod$, so by Proposition 0.4, $|\units|$ is the number of integers $a$ with $1 \leq a \leq n$ such that $(a, n) = 1$, which is precisely $\phi(n)$.
+    By \exref{0.3.2}, $a \mapsto \bar a$ is a bijection from $\set{1, \ldots, n}$ to $\intmod$, so by Proposition 0.4, $\abs{\units}$ is the number of integers $a$ with $1 \leq a \leq n$ such that $(a, n) = 1$, which is precisely $\phi(n)$.
 \end{sol}
 
 \begin{exercise}{0.3.11}
@@ -227,5 +227,5 @@
 \end{exercise}
 
 \begin{sol}
-    Please see \verb|modular_arithmetic.py| for the solution.
+    See \verb|modular_arithmetic.py| for the solution.
 \end{sol}

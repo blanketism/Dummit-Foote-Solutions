@@ -93,11 +93,11 @@ Let $G$ and $H$ be groups.
 	If there exists some $m < n$ such that $(gN)^m = N$, then \exref{3.1.4} shows that $g^m \in N$, contradicting the minimality of $n$.
 	Hence, the order of $gN$ is exactly $n$.
 	If no such positive integer exists, then $(gN)^m \neq N$ for all $m \in \zp$.
-	If $|gN|$ were finite, then there would exist some $m \in \zp$ such that $(gN)^m = N$, contradicting the assumption.
-	Hence, $|gN|$ is infinite.
+	If $\abs{gN}$ were finite, then there would exist some $m \in \zp$ such that $(gN)^m = N$, contradicting the assumption.
+	Hence, $\abs{gN}$ is infinite.
 
     Put $G = Z_4 = \gen x$ and $N = \gen{x^2}$.
-	Then $|x| = 4$, but $|xN| = 2$ since $(xN)^2 = x^2N = N$.
+	Then $\abs{x} = 4$, but $\abs{xN} = 2$ since $(xN)^2 = x^2N = N$.
 \end{sol}
 
 \begin{exercise}{3.1.6}
@@ -420,7 +420,7 @@ Let $G$ and $H$ be groups.
 	Moreover, $1/k + \zbb \in \qbb/\zbb$ has order $k$, and since $k$ can be made arbitrarily large, there are elements of arbitrarily large order.
     \item By the previous exercise, $\qbb/\zbb \subseteq \tor(\rbb/\zbb)$.
 	Let $x + \zbb \in \tor(\rbb/\zbb)$.
-	Then $|x + \zbb|$ is finite, so there exists some $n \in \zbb$ such that $n(x + \zbb) = nx + \zbb = \zbb$.
+	Then $\abs{x + \zbb}$ is finite, so there exists some $n \in \zbb$ such that $n(x + \zbb) = nx + \zbb = \zbb$.
 	Then $nx \in \zbb$, so that $x = m/n$ for some $m \in \zbb$.
 	Hence, $x + \zbb \in \qbb/\zbb$, and $\tor(\rbb/\zbb) \subseteq \qbb/\zbb$.
 	Therefore, $\tor(\rbb/\zbb) = \qbb/\zbb$.
@@ -527,7 +527,7 @@ Let $G$ and $H$ be groups.
     \[
     	\pi\inv(\bar H) = \set{1, r^2, r^4, r^6, s, sr^2, sr^4, sr^6}
     \]
-    Note that $|\pi\inv(\bar H)| = 8$, and the elements of $\bar H$ satisfy the relations $(r^2)^4 = s^2 = 1$.
+    Note that $\abs{\pi\inv(\bar H)} = 8$, and the elements of $\bar H$ satisfy the relations $(r^2)^4 = s^2 = 1$.
 	Then the mapping $\phi \colon D_8 \to \pi\inv(\bar H)$ given by $\phi(r) = r^2$ and $\phi(s) = s$ extends to a homomorphism that is clearly surjective.
 	Then $\phi$ is an isomorphism, and $\pi\inv(\bar H) \cong D_8$.
     \item From the previous exercise, we have that $\bar G = \gen{\bar r, \bar s}$.
@@ -831,7 +831,7 @@ Let $G$ and $H$ be groups.
     \item \rightimp Immediate from the definition of a normal subgroup.
 
     \leftimp Let $S = \gen x$, and use part (c).
-    \item Let $S = \set{g \in G \mid |g| = n}$.
+    \item Let $S = \set{g \in G \mid \abs{g} = n}$.
 	Let $N = \gen S$.
 	If $S$ is empty, then $N$ is again trivial, hence is normal.
 	Suppose $S$ is nonempty.
@@ -848,7 +848,7 @@ Let $G$ and $H$ be groups.
 \begin{soliff}
     \rightimp Suppose $gNg\inv \subseteq N$.
 	Let $\phi \colon N \to gNg\inv$ be the conjugation map.
-	By \exref{1.7.17}, we know that this map is defined to be an isomorphism, hence $|gNg\inv| = |N|$.
+	By \exref{1.7.17}, we know that this map is defined to be an isomorphism, hence $\abs{gNg\inv} = \abs{N}$.
 	Since $gNg\inv \subseteq N$ and both sets are finite with the same cardinality, it follows that $gNg\inv = N$.
 
     \leftimp Immediate.

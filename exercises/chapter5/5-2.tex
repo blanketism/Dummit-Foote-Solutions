@@ -85,13 +85,13 @@
 
 \begin{soliff}
     \rightimp Let $g = (g_1, g_2, \ldots, g_t) \in G$ have order $m$.
-	Then $m = \lcm(|g_1|, |g_2|, \ldots, |g_t|)$, so $|g_i| \mid m$ for all $i$.
-	Since $G$ is of type $(n_1, n_2, \ldots, n_t)$, we have $|g_i| \mid n_i$ for all $i$, so $m$ divides $\lcm(n_1, n_2, \ldots, n_t) = n_1$.
+	Then $m = \lcm(\abs{g_1}, \abs{g_2}, \ldots, \abs{g_t})$, so $\abs{g_i} \mid m$ for all $i$.
+	Since $G$ is of type $(n_1, n_2, \ldots, n_t)$, we have $\abs{g_i} \mid n_i$ for all $i$, so $m$ divides $\lcm(n_1, n_2, \ldots, n_t) = n_1$.
 
     \leftimp If $m \mid n_1$, then there exists an element of order $m$ in the cyclic subgroup of order $n_1$.
 
     Since $G$ contains an element of order $n_1$, the exponent of $G$ is at least $n_1$.
-	On the other hand, if $g \in G$, then $|g| \mid n_1$, so the exponent of $G$ divides $n_1$.
+	On the other hand, if $g \in G$, then $\abs{g} \mid n_1$, so the exponent of $G$ divides $n_1$.
 	Thus, the exponent of $G$ is exactly $n_1$.
 \end{soliff}
 
@@ -114,7 +114,7 @@
 \end{sol}
 
 \begin{exercise}{5.2.7}
-    Let $p$ be a prime and let $A = \langle x_1 \rangle \times \langle x_2 \rangle \times \cdots \times \langle x_n \rangle$ be an abelian $p$-group, where $|x_i| = p^{\alpha_i} > 1$ for all $i$.
+    Let $p$ be a prime and let $A = \langle x_1 \rangle \times \langle x_2 \rangle \times \cdots \times \langle x_n \rangle$ be an abelian $p$-group, where $\abs{x_i} = p^{\alpha_i} > 1$ for all $i$.
 	Define the $p^{\text{th}}$-\emph{power map}
     \[
     	\phi \colon A \to A \quad \text{by} \quad \phi \colon x \mapsto x^p.
@@ -182,17 +182,17 @@
         \]
         We may again use \exref{5.1.14} along with the fact that $A_{p_i} / A_{p_i}^p \cong A_{p_i}^p$ to conclude that $A/A^p \cong A_p$.
     \end{itemize}
-    \item Let $H \leq A$ such that $|A \colon H| = p$.
+    \item Let $H \leq A$ such that $\abs{A \colon H} = p$.
 	Let $a \in A$.
 	Then $aH \in A/H$.
-	Since $|A \colon H| = p$, $|aH| = 1$ or $p$.
-	If $|aH| = 1$, then $a \in H$.
-	If $|aH| = p$, then $a^pH = H$, or $a^p \in H$.
+	Since $\abs{A \colon H} = p$, $\abs{aH} = 1$ or $p$.
+	If $\abs{aH} = 1$, then $a \in H$.
+	If $\abs{aH} = p$, then $a^pH = H$, or $a^p \in H$.
 	In either case, we have $a^p \in H$, so $A^p \subseteq H$.
 	By the Lattice Isomorphism Theorem, then subgroups of $A$ containing $A^p$ are in bijection with subgroups of $A/A^p$.
 	By the previous part, $A/A^p \cong A_p$, so the number of index $p$ subgroups of $A$ equals the number of index $p$ subgroups of $A_p$.
     
-    Now let $K \leq A$ where $|K| = p$.
+    Now let $K \leq A$ where $\abs{K} = p$.
 	For any $k \in K$, we know $k^p = 1$, so $K \subseteq A_p$.
 	Then subgroups of order $p$ in $A$ are exactly the subgroups of order $p$ in $A_p$, since $A_p \leq A$.
 	Thus, the number of subgroups of order $p$ in $A$ equals the number of subgroups of order $p$ in $A_p$.
@@ -282,19 +282,19 @@
 \end{exercise}
 
 \begin{sol}
-    Since we have an element of order $d$ identified, it is easy to see that $|A| = nm/d$.
+    Since we have an element of order $d$ identified, it is easy to see that $\abs{A} = nm/d$.
 	By \exref{5.2.5}, we know that $\exp(Z_n \times Z_m) = \lcm(n, m) = nm/d$.
-	Note that $|x| = n$ and $|y| = m$ in $A$ still, for otherwise there would be a contradiction to the order of $A$ as we would not be able to account for all the elements of $A$.
+	Note that $\abs{x} = n$ and $\abs{y} = m$ in $A$ still, for otherwise there would be a contradiction to the order of $A$ as we would not be able to account for all the elements of $A$.
 
     Again, by \exref{5.2.5}, we know that $A$ contains an element of order $n$ iff $n \mid \exp(A)$, and $A$ contains an element of order $m$ iff $m \mid \exp(A)$.
-	Since $\exp(A) \mid |A| = nm/d$, we have that $\exp(A)$ is a common multiple of $n$ and $m$, so $\exp(A)$ is a multiple of $\lcm(n, m) = nm/d$, hence $\lcm(n, m) \mid \exp(A)$.
-	On the other hand, $\exp(A) \mid |A| = nm/d$ since the order of any element divides the order of the group, so $\exp(A) \mid \lcm(n, m)$.
+	Since $\exp(A) \mid \abs{A} = nm/d$, we have that $\exp(A)$ is a common multiple of $n$ and $m$, so $\exp(A)$ is a multiple of $\lcm(n, m) = nm/d$, hence $\lcm(n, m) \mid \exp(A)$.
+	On the other hand, $\exp(A) \mid \abs{A} = nm/d$ since the order of any element divides the order of the group, so $\exp(A) \mid \lcm(n, m)$.
 	Thus, $\exp(A) = \lcm(n, m)$.
 	We now conclude that $A$ is cyclic, so $A \cong Z_{nm/d} \times Z_1$.
 \end{sol}
 
 \begin{exercise}{5.2.13}
-    Let $A = \gen{x_1} \times \gen{x_2} \times \cdots \times \gen{x_r}$ be a finite abelian group with $|x_i| = n_i$ for $1 \leq i \leq r$.
+    Let $A = \gen{x_1} \times \gen{x_2} \times \cdots \times \gen{x_r}$ be a finite abelian group with $\abs{x_i} = n_i$ for $1 \leq i \leq r$.
 	Find a presentation for $A$.
 	Prove that if $G$ is any group containing commuting elements $g_1, \ldots, g_r$ such that $g_i^{n_i} = 1$ for $1 \leq i \leq r$, then there is a unique homomorphism from $A$ to $G$ which sends $x_i$ to $g_i$ for all $i$.
 \end{exercise}
@@ -325,7 +325,7 @@
 	Define a group operation in $\wh{G}$ by pointwise multiplication of functions: if $\chi, \psi$ are homomorphisms from $G$ into the group of roots of unity then $\chi\psi$ is the homomorphism given by $(\chi\psi)(g) = \chi(g)\psi(g)$ for all $g \in G$, where the latter multiplication takes place in $\cbb$.
     \begin{subexercises}
         \item Show that this operation on $\wh{G}$ makes $\wh{G}$ into an abelian group. [Show that the identity is the map $g \mapsto 1$ for all $g \in G$ and the inverse of $\chi \in \wh{G}$ is the map $g \mapsto \chi(g)^{-1}$.]
-        \item If $G$ is a finite abelian group, prove that $\wh{G} \cong G$. [Write $G$ as $\langle x_1 \rangle \times \cdots \times \langle x_r \rangle$ and if $n_i = |x_i|$ define $\chi_i$ to be the homomorphism which sends $x_i$ to $e^{2\pi i/n_i}$ and sends $x_j$ to $1$, for all $j \neq i$.
+        \item If $G$ is a finite abelian group, prove that $\wh{G} \cong G$. [Write $G$ as $\langle x_1 \rangle \times \cdots \times \langle x_r \rangle$ and if $n_i = \abs{x_i}$ define $\chi_i$ to be the homomorphism which sends $x_i$ to $e^{2\pi i/n_i}$ and sends $x_j$ to $1$, for all $j \neq i$.
 	Prove $\chi_i$ has order $n_i$ in $\wh{G}$ and $\wh{G} = \langle \chi_1 \rangle \times \cdots \times \langle \chi_r \rangle$.]
     \end{subexercises}
 \end{exercise}
@@ -361,7 +361,7 @@
 \end{solenum}
 
 \begin{exercise}!{5.2.15}
-    Let $G = \gen x \times \gen y$, where $|x| = 8$ and $|y| = 4$.
+    Let $G = \gen x \times \gen y$, where $\abs{x} = 8$ and $\abs{y} = 4$.
     \begin{subexercises}
         \item Find all pairs $a, b$ in $G$ such that $G = \gen a \times \gen b$ (where $a$ and $b$ are expressed in terms of $x$ and $y$).
         \item Let $H = \gen{x^2y, y^2} \cong Z_4 \times Z_2$.
@@ -372,20 +372,20 @@
 \begin{solenum}
     \item From the description of $G$, we see that $G$ is of type $(8, 4)$, so we have the following conditions for $G = \gen a \times \gen b$:
     \begin{itemize}
-        \item $|a| = 8$ and $|b| = 4$,
+        \item $\abs{a} = 8$ and $\abs{b} = 4$,
         \item $\gen a \cap \gen b = 1$.
     \end{itemize}
     Let $a = x^s y^t$ and $b = x^u y^v$ for some integers $s, t, u, v$.
-	Then $|a| = \lcm(8/\gcd(8, s), 4/\gcd(4, t))$ and $|b| = \lcm(8/\gcd(8, u), 4/\gcd(4, v))$.
-	For $|a|$ to be 8, we must have $\gcd(8, s) = 1$, implying that $s$ must be odd, while $t$ may range freely.
-	For $|b|$ to be 4, then $8/\gcd(8, u) \mid 4$ and $\max(8/\gcd(8, u), 4/\gcd(4, v)) = 4$, so we have the following cases:
+	Then $\abs{a} = \lcm(8/\gcd(8, s), 4/\gcd(4, t))$ and $\abs{b} = \lcm(8/\gcd(8, u), 4/\gcd(4, v))$.
+	For $\abs{a}$ to be 8, we must have $\gcd(8, s) = 1$, implying that $s$ must be odd, while $t$ may range freely.
+	For $\abs{b}$ to be 4, then $8/\gcd(8, u) \mid 4$ and $\max(8/\gcd(8, u), 4/\gcd(4, v)) = 4$, so we have the following cases:
     \begin{enumerate}[label=(\arabic*)]
         \item If $\gcd(8, u) = 8$, then $u = 0$ and $v$ must be odd.
         \item If $\gcd(8, u) = 4$, then $u = 4$ and $v$ must be odd.
         \item If $\gcd(8, u) = 2$, then $u = 2, 6$ and $v$ can be free.
     \end{enumerate}
     To have trivial intersection, we must have that $x^{ks} y^{kt} = x^{\ell u} y^{\ell v} = 1$, or $ks \equiv \ell u \pmod 8$ and $kt \equiv \ell v \pmod 4$ implies that $k \equiv 0 \pmod 8$ and $\ell \equiv 0 \pmod 4$, which is seen from $a^k = 1$ and $b^\ell = 1$ iff $8 \mid k$ and $4 \mid \ell$.
-	Thus, we check the cases for $|b|$:
+	Thus, we check the cases for $\abs{b}$:
     \begin{enumerate}[label=(\arabic*)]
         \item $u = 0$ and $v$ is odd: We have $ks \equiv 0 \pmod 8$ and $kt \equiv \ell v \pmod 4$.
 	Since $s$ is odd, $k \equiv 0 \pmod 8$.

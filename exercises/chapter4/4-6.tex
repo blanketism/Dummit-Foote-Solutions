@@ -10,8 +10,8 @@ Let $G$ be a group and let $\Omega$ be an infinite set.
 	Suppose $H \leq A_n$ is a proper subgroup of index $k < n$.
 	Then $A_n$ acts on the left cosets of $H$ by left multiplication, inducing a homomorphism $\phi \colon A_n \to S_k$.
 	Observe that $n/2 > 0$ for all $n \geq 5$.
-	This lets us conclude that $\ker\phi$ must be nontrivial, for otherwise $\phi$ would be injective and $|A_n| \leq |S_k|$.
-	However, $k < n$ implies $k \leq n - 1$, or $k! \leq (n - 1)! < n!/2 = |A_n|$, which is a contradiction.
+	This lets us conclude that $\ker\phi$ must be nontrivial, for otherwise $\phi$ would be injective and $\abs{A_n} \leq \abs{S_k}$.
+	However, $k < n$ implies $k \leq n - 1$, or $k! \leq (n - 1)! < n!/2 = \abs{A_n}$, which is a contradiction.
 	Since $\ker\phi$ is a nontrivial normal subgroup of $A_n$, $\ker\phi = A_n$ since $A_n$ is simple for all $n \geq 5$.
 	It follows that $\phi$ is the trivial homomorphism, so that $H = A_n$, which is a contradiction.
 	Therefore, $A_n$ does not have a proper subgroup of index $< n$ for all $n \geq 5$.
@@ -35,11 +35,11 @@ Let $G$ be a group and let $\Omega$ be an infinite set.
 		\item If $N \cap A_n = A_n$, then $A_n \subseteq N$.
 	By maximality of $A_n$ in $S_n$, then $N = A_n$ or $N = S_n$.
 		\item If $N \cap A_n = 1$, consider $NA_n \leq S_n$ because $N \nsub S_n$ and $A_n \nsub S_n$.
-	It follows that $|NA_n| = |N||A_n|$.
-	Because $NA_n \leq S_n$, then $|NA_n| = |N||A_n| \leq |S_n|$, so that $|N| \leq 2$.
-	If $|N| = 2$, then $N = \gen\rho$ for some order 2 element $\rho$.
+	It follows that $\abs{NA_n} = \abs{N}\abs{A_n}$.
+	Because $NA_n \leq S_n$, then $\abs{NA_n} = \abs{N}\abs{A_n} \leq \abs{S_n}$, so that $\abs{N} \leq 2$.
+	If $\abs{N} = 2$, then $N = \gen\rho$ for some order 2 element $\rho$.
 	However, $N \nsub S_n$ implies that $\tau\rho\tau\inv = \rho$ for all $\tau \in S_n$, or that $\rho \in Z(S_n)$, which is a contradiction since $Z(S_n) = 1$ for all $n \geq 3$.
-	Therefore, $|N| = 1$, so that $N = 1$. \qedhere
+	Therefore, $\abs{N} = 1$, so that $N = 1$. \qedhere
 	\end{enumerate}
 \end{sol}
 
@@ -48,11 +48,11 @@ Let $G$ be a group and let $\Omega$ be an infinite set.
 \end{exercise}
 
 \begin{sol}
-	Let $H \leq S_n$ be a proper subgroup where $|S_n \colon H| = k < n$.
+	Let $H \leq S_n$ be a proper subgroup where $\abs{S_n \colon H} = k < n$.
 	Then $S_n$ acts on the left cosets of $H$ by left multiplication, inducing a homomorphism $\phi \colon S_n \to S_k$.
 	Observe that $n/2 > 0$ for all $n \geq 5$.
-	This lets us conclude that $\ker\phi$ must be nontrivial, for otherwise $\phi$ would be injective and $|S_n| \leq |S_k|$.
-	However, $k < n$ implies $k \leq n - 1$, or $k! \leq (n - 1)! < n! = |S_n|$, which is a contradiction.
+	This lets us conclude that $\ker\phi$ must be nontrivial, for otherwise $\phi$ would be injective and $\abs{S_n} \leq \abs{S_k}$.
+	However, $k < n$ implies $k \leq n - 1$, or $k! \leq (n - 1)! < n! = \abs{S_n}$, which is a contradiction.
 	Since $\ker\phi$ is a nontrivial normal subgroup of $S_n$, $\ker\phi = A_n$ or $\ker\phi = S_n$ since these are the only normal subgroups of $S_n$ for all $n \geq 5$.
 	If $\ker\phi = S_n$, then $\phi$ is the trivial homomorphism, so that $H = S_n$, which is a contradiction.
 	Therefore, $\ker\phi = A_n$, so that $A_n \subseteq H$.
@@ -108,12 +108,12 @@ Let $G$ be a group and let $\Omega$ be an infinite set.
 	Therefore, $A \nsub D$.
 	Moreover, $A$ is infinite since $\Omega$ is infinite, so that there are infinitely many even permutations on $\Omega$ that move only a finite number of elements of $\Omega$.
 
-	Since $\Omega$ is infinite, for each $n \geq 5$, we can consider the subset $\Omega_n$ such that $|\Omega_n| = n$, and $\Omega_n \subseteq \Omega_{n + 1}$ for all $n$.
+	Since $\Omega$ is infinite, for each $n \geq 5$, we can consider the subset $\Omega_n$ such that $\abs{\Omega_n} = n$, and $\Omega_n \subseteq \Omega_{n + 1}$ for all $n$.
 	Define
 	\[
 		B_n = \set{\sigma \in A \mid M(\sigma) \subseteq \Omega_n}
 	\]
-	Consider the bijection $\phi \colon B_n \to A_n$ defined by $\phi(\sigma) = \sigma|_{\Omega_n}$, where $\sigma|_{\Omega_n}$ is the restriction of $\sigma$ to $\Omega_n$.
+	Consider the bijection $\phi \colon B_n \to A_n$ defined by $\phi(\sigma) = \sigma\abs{_{\Omega_n}$, where $\sigma}_{\Omega_n}$ is the restriction of $\sigma$ to $\Omega_n$.
 	It is clear that this is a homomorphism, hence $B_n \cong A_n$.
 	Moreover, $B_n$ is simple since $A_n$ is simple for all $n \geq 5$.
 	Considering the chain of subgroups $B_5 \leq B_6 \leq \cdots$, we see that
@@ -129,12 +129,12 @@ Let $G$ be a group and let $\Omega$ be an infinite set.
 
 \begin{sol}
 	Let $\sigma \in H$.
-	Since $\sigma$ moves only a finite number of elements of $\Omega$, there exists some $\Gamma \subseteq \Omega$ with $|\Gamma| \geq 5$ such that $\sigma(\omega) = \omega$ for all $\omega \in \Omega - \Gamma$.
+	Since $\sigma$ moves only a finite number of elements of $\Omega$, there exists some $\Gamma \subseteq \Omega$ with $\abs{\Gamma} \geq 5$ such that $\sigma(\omega) = \omega$ for all $\omega \in \Omega - \Gamma$.
 	If $\sigma$ is an odd permutation, let $x, y \in \Omega - \Gamma$ be distinct (which exist since $\Omega$ is infinite) and replace $\sigma$ with $\sigma\cyc{x y} \in H$ and $\Gamma$ with $\Gamma \cup \set{x, y}$.
 	Thus, we may assume without loss of generality that $\sigma$ is an even permutation fixing every point outside $\Gamma$. 
 
 	Let $B$ be the set of elements of $A$ which fix every point outside $\Gamma$.
-	Since $B \cong A_{|\Gamma|}$ and $|\Gamma| \geq 5$, $B$ is simple.
+	Since $B \cong A_{\abs{\Gamma}}$ and $\abs{\Gamma} \geq 5$, $B$ is simple.
 	Since $H \cap B \trianglelefteq B$ is nontrivial (it contains $\sigma$), simplicity of $B$ gives $B \leq H$.
 	In particular, $H$ contains a 3-cycle $\cyc{alpha beta gamma}$.
 	Now let $\cyc{a b c}$ be any 3-cycle in $S_\Omega$.
@@ -143,33 +143,33 @@ Let $G$ be a group and let $\Omega$ be an infinite set.
 \end{sol}
 
 \begin{exercise}{4.6.8}
-	Under the notation of the preceding two exercises, prove that $|D| = |A| = |\Omega|$.
+	Under the notation of the preceding two exercises, prove that $\abs{D} = \abs{A} = \abs{\Omega}$.
 	Deduce that
 	\[
-		\text{if }S_\Omega \cong S_\Delta, \text{ then } |\Omega| = |\Delta|.
+		\text{if }S_\Omega \cong S_\Delta, \text{ then } \abs{\Omega} = \abs{\Delta}.
 	\]
 	(Use the fact that $D$ is generated by transpositions.
-	You may assume that countable unions and finite direct products of sets of cardinality $|\Omega|$ also have cardinality $|\Omega|$.)
+	You may assume that countable unions and finite direct products of sets of cardinality $\abs{\Omega}$ also have cardinality $\abs{\Omega}$.)
 \end{exercise}
 
 \begin{sol}
-	We first show that $|D| = |\Omega|$.
+	We first show that $\abs{D} = \abs{\Omega}$.
 	Since $D$ is generated by transpositions, every element of $D$ is a finite product of transpositions.
-	For each $n \geq 1$, the set of products of exactly $n$ transpositions has cardinality at most $|\Omega|^n = |\Omega|$, since each transposition is determined by a pair of elements of $\Omega$.
+	For each $n \geq 1$, the set of products of exactly $n$ transpositions has cardinality at most $\abs{\Omega}^n = \abs{\Omega}$, since each transposition is determined by a pair of elements of $\Omega$.
 	Since
 	\[
 		D = \bigcup_{n=1}^\infty D_n
 	\]
-	where $D_n$ is the set of products of at most $n$ transpositions, and a countable union of sets of cardinality $|\Omega|$ has cardinality $|\Omega|$, we get $|D| \leq |\Omega|$.
-	Since the map $\omega \mapsto \cyc{omega alpha}$ for a fixed $\alpha \in \Omega$ is an injection $\Omega \to D$, we conclude $|D| = |\Omega|$.
+	where $D_n$ is the set of products of at most $n$ transpositions, and a countable union of sets of cardinality $\abs{\Omega}$ has cardinality $\abs{\Omega}$, we get $\abs{D} \leq \abs{\Omega}$.
+	Since the map $\omega \mapsto \cyc{omega alpha}$ for a fixed $\alpha \in \Omega$ is an injection $\Omega \to D$, we conclude $\abs{D} = \abs{\Omega}$.
 
-    We now show that $|A| = |\Omega|$.
-	Since $A \leq D$, we have $|A| \leq |D| = |\Omega|$.
+    We now show that $\abs{A} = \abs{\Omega}$.
+	Since $A \leq D$, we have $\abs{A} \leq \abs{D} = \abs{\Omega}$.
 	Conversely, fix distinct $x, y \in \Omega$.
-	Then the map $\omega \mapsto \cyc{omega x y}$ for $\omega \in \Omega - \set{x, y}$ is an injection $\Omega - \set{x, y} \to A$, so $|\Omega| \leq |A|$.
-	Therefore, $|A| = |\Omega|$.
+	Then the map $\omega \mapsto \cyc{omega x y}$ for $\omega \in \Omega - \set{x, y}$ is an injection $\Omega - \set{x, y} \to A$, so $\abs{\Omega} \leq \abs{A}$.
+	Therefore, $\abs{A} = \abs{\Omega}$.
 
     Finally, suppose $S_\Omega \cong S_\Delta$ via some isomorphism $\phi$.
 	By the preceding exercise, $A$ is the unique minimal normal subgroup of $S_\Omega$, and similarly $A'$ is the unique minimal normal subgroup of $S_\Delta$.
-	Since $\phi$ maps normal subgroups to normal subgroups, $\phi(A) = A'$, so $|A| = |A'|$, and therefore $|\Omega| = |\Delta|$.
+	Since $\phi$ maps normal subgroups to normal subgroups, $\phi(A) = A'$, so $\abs{A} = \abs{A'}$, and therefore $\abs{\Omega} = \abs{\Delta}$.
 \end{sol}

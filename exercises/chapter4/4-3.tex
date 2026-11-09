@@ -110,10 +110,10 @@ Let $G$ be a group.
 
 \begin{sol}
 	Let $\kcal_g$ be the conjugacy class of some $g \in G$.
-	By Proposition 4.6, we have $|\kcal_g| = |G \colon C_G(g)|$.
-	Since $Z(G) \leq C_G(g)$ for all $g \in G$, Lagrange's Theorem shows that $|Z(G)|$ divides $|C_G(g)|$.
-	Therefore, $|G \colon C_G(g)|$ divides $|G \colon Z(G)| = n$.
-	Hence, $|\kcal_g| \leq n$.
+	By Proposition 4.6, we have $\abs{\kcal_g} = \abs{G \colon C_G(g)}$.
+	Since $Z(G) \leq C_G(g)$ for all $g \in G$, Lagrange's Theorem shows that $\abs{Z(G)}$ divides $\abs{C_G(g)}$.
+	Therefore, $\abs{G \colon C_G(g)}$ divides $\abs{G \colon Z(G)} = n$.
+	Hence, $\abs{\kcal_g} \leq n$.
 \end{sol}
 
 \begin{exercise}!{4.3.6}
@@ -127,16 +127,16 @@ Let $G$ be a group.
 	Since $G$ is nonabelian, $Z(G) \neq G$.
 	Assume $1 < Z(G) < 15$.
 	By Lagrange's Theorem, $Z(G)$ has order 3 or 5.
-	If $|Z(G)| = 3$, then $|G/Z(G)| = 5$ and $G/Z(G) \cong Z_5$.
-	If $|Z(G)| = 5$, then $|G/Z(G)| = 3$ and $G/Z(G) \cong Z_3$.
+	If $\abs{Z(G)} = 3$, then $\abs{G/Z(G)} = 5$ and $G/Z(G) \cong Z_5$.
+	If $\abs{Z(G)} = 5$, then $\abs{G/Z(G)} = 3$ and $G/Z(G) \cong Z_3$.
 	In either case, $G/Z(G)$ is cyclic by Corollary 3.10, and \exref{3.1.36} implies that $G$ is abelian, a contradiction.
 	Therefore, $Z(G) = 1$.
 
 	Now suppose $g \in G$ is nonidentity.
-	Since $\langle g \rangle \leq C_G(g)$, $|C_G(g)|$ is 3, 5, or 15 by Lagrange's Theorem.
-	If $|C_G(g)| = 15$, then $C_G(g) = G$, so $g \in Z(G)$, a contradiction.
-	Therefore, $|C_G(g)|$ is 3 or 5 for all nonidentity $g \in G$.
-	By Proposition 4.6, we have $|\kcal_g| = |G \colon C_G(g)|$, so that $|\kcal_g|$ is 5 or 3 respectively.
+	Since $\langle g \rangle \leq C_G(g)$, $\abs{C_G(g)}$ is 3, 5, or 15 by Lagrange's Theorem.
+	If $\abs{C_G(g)} = 15$, then $C_G(g) = G$, so $g \in Z(G)$, a contradiction.
+	Therefore, $\abs{C_G(g)}$ is 3 or 5 for all nonidentity $g \in G$.
+	By Proposition 4.6, we have $\abs{\kcal_g} = \abs{G \colon C_G(g)}$, so that $\abs{\kcal_g}$ is 5 or 3 respectively.
 	The identity element forms a conjugacy class of size 1, and the class equation must involve a summation of sizes 3 and 5 that adds to 14.
 	The only such combination is three classes of size 3 and one class of size 5.
 	Therefore, the class equation of $G$ is $15 = 1 + 3 + 3 + 3 + 5$.
@@ -226,7 +226,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}{4.3.9}
-	Show that $|C_{S_n}(\cyc{1 2}\cyc{3 4})| = 8 (n-4)!$ for all $n \ge 4$.
+	Show that $\abs{C_{S_n}(\cyc{1 2}\cyc{3 4})} = 8 (n-4)!$ for all $n \ge 4$.
 	Determine the elements in this centralizer explicitly.
 \end{exercise}
 
@@ -241,7 +241,7 @@ Let $G$ be a group.
 		C_{S_4}(\cyc{1 2}\cyc{3 4}) = \set{1, \cyc{1 2}, \cyc{3 4}, \cyc{1 2}\cyc{3 4}, \cyc{1 3}\cyc{2 4}, \cyc{1 4}\cyc{2 3}, \cyc{1 3 2 4}, \cyc{1 4 2 3}},
 	\]
 	which has size 8.
-	Combining this with the $(n - 4)!$ factor, we have $|C_{S_n}(\cyc{1 2}\cyc{3 4})| = 8(n - 4)!$ for all $n \geq 4$.
+	Combining this with the $(n - 4)!$ factor, we have $\abs{C_{S_n}(\cyc{1 2}\cyc{3 4})} = 8(n - 4)!$ for all $n \geq 4$.
 \end{sol}
 
 \begin{exercise}{4.3.10}
@@ -327,11 +327,11 @@ Let $G$ be a group.
 	Let $G$ be a finite group with exactly two conjugacy classes.
 	One of these classes must be $\set{1}$, the identity element.
 	Let $\kcal$ be the other conjugacy class, and let $g \in \kcal$.
-	By Proposition 4.6, we have $|\kcal| = |G \colon C_G(g)|$.
-	Since there are only two conjugacy classes, $|\kcal| = |G| - 1$.
-	Therefore, $|G \colon C_G(g)| = |G| - 1$, which implies that $|C_G(g)| = |G|/(|G| - 1)$.
-	Since $|C_G(g)|$ is an integer, $|G| - 1$ divides $|G|$.
-	This is only possible if $|G| - 1 = 1$, so that $|G| = 2$.
+	By Proposition 4.6, we have $\abs{\kcal} = \abs{G \colon C_G(g)}$.
+	Since there are only two conjugacy classes, $\abs{\kcal} = \abs{G} - 1$.
+	Therefore, $\abs{G \colon C_G(g)} = \abs{G} - 1$, which implies that $\abs{C_G(g)} = \abs{G}/(\abs{G} - 1)$.
+	Since $\abs{C_G(g)}$ is an integer, $\abs{G} - 1$ divides $\abs{G}$.
+	This is only possible if $\abs{G} - 1 = 1$, so that $\abs{G} = 2$.
 	Therefore, the only finite group with exactly two conjugacy classes is the group of order 2, which is isomorphic to $Z_2$.
 \end{sol}
 
@@ -376,14 +376,14 @@ Let $G$ be a group.
 		F(X) = \set{a \in A \mid \sigma(a) = a \text{ for all } \sigma \in X} \qquad \text{--the \emph{fixed set} of $X$}
 	\]
 	Let $M(X) = A - F(X)$ be the elements which are \emph{moved} by some element of $X$.
-	Let $D = \set{\sigma \in S_A \mid |M(\sigma)| < \infty}$.
+	Let $D = \set{\sigma \in S_A \mid \abs{M(\sigma)} < \infty}$.
 	Prove that $D$ is a normal subgroup of $S_A$.
 \end{exercise}
 
 \begin{sol}
 	Note that $1 \in D$, since $M(1) = \varnothing$ as it fixes all elements of $A$.
 	Let $\sigma, \tau \in D$.
-	Then $|M(\sigma)| < \infty$ and $|M(\tau)| < \infty$.
+	Then $\abs{M(\sigma)} < \infty$ and $\abs{M(\tau)} < \infty$.
 	Suppose $a \in F(\sigma) \cap F(\tau)$.
 	Clearly, $a \in F(\sigma\tau)$.
 	By contrapositive, then $a \in M(\sigma\tau)$ implies $a \in M(\sigma) \cup M(\tau)$, which are both finite, hence $M(\sigma\tau)$ is finite.
@@ -421,7 +421,7 @@ Let $G$ be a group.
 
 \begin{exercise}{4.3.19}
 	Assume $H$ is a normal subgroup of $G$, $\kcal$ is a conjugacy class of $G$ contained in $H$ and $x \in \kcal$.
-	Prove that $\kcal$ is a union of $k$ conjugacy classes of equal size in $H$, where $k = |G \colon HC_G(x)|$.
+	Prove that $\kcal$ is a union of $k$ conjugacy classes of equal size in $H$, where $k = \abs{G \colon HC_G(x)}$.
 	Deduce that a conjugacy class in $S_n$ which consists of even permutations is either a single conjugacy class under the action of $A_n$ or is a union of two classes of the same size in $A_n$. [Let $A = C_G(x)$ and $B = H$ so $A \cap B = C_H(x)$.
 	Draw the lattice diagram associated to the Second Isomorphism Theorem and interpret the appropriate indices.
 	See also \exref{4.1.9}.]
@@ -432,32 +432,32 @@ Let $G$ be a group.
 	Since $\kcal$ is a conjugacy class of $G$, this action is transitive.
 	Because $H \nsub G$ and $\kcal \subseteq H$, then $H$ also acts on $\kcal$ by conjugation.
 	Let $\ocal$ be one such orbit of this action, and suppose $y \in \ocal$.
-	By Proposition 4.6, we have $|\ocal| = |H \colon C_H(y)|$.
+	By Proposition 4.6, we have $\abs{\ocal} = \abs{H \colon C_H(y)}$.
 	By normality of $H$ in $G$, we have $C_H(y) = C_G(y) \cap H$.
 	Using the Second Isomorphism Theorem, we have
 	\[
 		HC_G(y)/C_G(y) \cong H/C_H(y)
 	\]
-	so that $|H \colon C_H(y)| = |HC_G(y) \colon C_G(y)|$.
-	Therefore, $|\ocal| = |HC_G(y) \colon C_G(y)|$.
-	Using \exref{4.1.9}, we know that each orbit of $H$ on $\kcal$ has the same size, so every orbit has size $|HC_G(y) \colon C_G(y)|$.
+	so that $\abs{H \colon C_H(y)} = \abs{HC_G(y) \colon C_G(y)}$.
+	Therefore, $\abs{\ocal} = \abs{HC_G(y) \colon C_G(y)}$.
+	Using \exref{4.1.9}, we know that each orbit of $H$ on $\kcal$ has the same size, so every orbit has size $\abs{HC_G(y) \colon C_G(y)}$.
 	Suppose there are $k$ orbits.
 	Then
 	\[
-		|\kcal| = k|HC_G(y) \colon C_G(y)|.
+		\abs{\kcal} = k\abs{HC_G(y) \colon C_G(y)}.
 	\]
-	By Proposition 4.6, we also have $|\kcal| = |G \colon C_G(y)|$.
+	By Proposition 4.6, we also have $\abs{\kcal} = \abs{G \colon C_G(y)}$.
 	Therefore,
 	\[
-		|G \colon C_G(y)| = k|HC_G(y) \colon C_G(y)|.
+		\abs{G \colon C_G(y)} = k\abs{HC_G(y) \colon C_G(y)}.
 	\]
-	Dividing both sides by $|HC_G(y) \colon C_G(y)|$, we obtain $k = |G \colon HC_G(y)|$.
+	Dividing both sides by $\abs{HC_G(y) \colon C_G(y)}$, we obtain $k = \abs{G \colon HC_G(y)}$.
 	Hence, $\kcal$ is a union of $k$ conjugacy classes of equal size in $H$.
 
 	Now suppose $\kcal \subseteq A_n$ is a conjugacy class of $S_n$ consisting of even permutations.
 	Let $x \in \kcal$.
-	Applying the preceding result with $H = A_n$, we have that $\kcal$ is a union of $k$ conjugacy classes of equal size in $A_n$, where $k = |S_n \colon A_nC_{S_n}(x)|$.
-	Since $|S_n \colon A_n| = 2$, $k$ is either 1 or 2.
+	Applying the preceding result with $H = A_n$, we have that $\kcal$ is a union of $k$ conjugacy classes of equal size in $A_n$, where $k = \abs{S_n \colon A_nC_{S_n}(x)}$.
+	Since $\abs{S_n \colon A_n} = 2$, $k$ is either 1 or 2.
 	Therefore, $\kcal$ is either a single conjugacy class under the action of $A_n$ or is a union of two classes of the same size in $A_n$.
 \end{sol}
 
@@ -469,13 +469,13 @@ Let $G$ be a group.
 \begin{soliff}
 	\rightimp Recall by the previous exercise that the conjugacy class of $\sigma$ in $S_n$ is either a single conjugacy class in $A_n$ or a union of two conjugacy classes of equal size in $A_n$.
 	Suppose all elements in the conjugacy class of $\sigma$ in $S_n$ are conjugate in $A_n$.
-	Then the conjugacy class of $\sigma$ in $S_n$ is a single conjugacy class in $A_n$, so that $k = |S_n \colon A_nC_{S_n}(\sigma)| = 1$.
+	Then the conjugacy class of $\sigma$ in $S_n$ is a single conjugacy class in $A_n$, so that $k = \abs{S_n \colon A_nC_{S_n}(\sigma)} = 1$.
 	Therefore, $S_n = A_nC_{S_n}(\sigma)$, so that there exists some odd permutation $\tau \in S_n$ such that $\tau \in C_{S_n}(\sigma)$.
 	Hence, $\sigma$ commutes with an odd permutation.
 
 	\leftimp Suppose $\sigma$ commutes with an odd permutation $\tau \in S_n$.
 	Then $\tau \in C_{S_n}(\sigma)$, so that $A_nC_{S_n}(\sigma)$ contains odd permutations.
-	Therefore, $|S_n \colon A_nC_{S_n}(\sigma)| = 1$, so that the conjugacy class of $\sigma$ in $S_n$ is a single conjugacy class in $A_n$.
+	Therefore, $\abs{S_n \colon A_nC_{S_n}(\sigma)} = 1$, so that the conjugacy class of $\sigma$ in $S_n$ is a single conjugacy class in $A_n$.
 	Hence, all elements in the conjugacy class of $\sigma$ in $S_n$ are conjugate in $A_n$.
 \end{soliff}
 
@@ -520,7 +520,7 @@ Let $G$ be a group.
 \begin{exercise}{4.3.23}
 	Recall (cf. \exref{2.4.16}) that a proper subgroup $M$ of $G$ is called \emph{maximal} if whenever $M \leq H \leq G$, either $H = M$ or $H = G$.
 	Prove that if $M$ is a maximal subgroup of $G$ then either $N_G(M) = M$ or $N_G(M) = G$.
-	Deduce that if $M$ is a maximal subgroup of $G$ that is not normal in $G$, then the number of nonidentity elements of $G$ that are contained in conjugates of $M$ is at most $(|M| - 1)|G \colon M|$.
+	Deduce that if $M$ is a maximal subgroup of $G$ that is not normal in $G$, then the number of nonidentity elements of $G$ that are contained in conjugates of $M$ is at most $(\abs{M} - 1)\abs{G \colon M}$.
 \end{exercise}
 
 \begin{sol}
@@ -530,9 +530,9 @@ Let $G$ be a group.
 
 	Now suppose $M$ is a maximal subgroup of $G$ that is not normal in $G$.
 	Then by the previous result, we have $N_G(M) = M$.
-	By Proposition 4.6, the size of the conjugacy class of $M$ in $G$ is $|G \colon N_G(M)| = |G \colon M|$.
-	Each conjugate of $M$ contains $|M| - 1$ nonidentity elements.
-	Therefore, the total number of nonidentity elements of $G$ contained in conjugates of $M$ is at most $(|M| - 1)|G \colon M|$.
+	By Proposition 4.6, the size of the conjugacy class of $M$ in $G$ is $\abs{G \colon N_G(M)} = \abs{G \colon M}$.
+	Each conjugate of $M$ contains $\abs{M} - 1$ nonidentity elements.
+	Therefore, the total number of nonidentity elements of $G$ contained in conjugates of $M$ is at most $(\abs{M} - 1)\abs{G \colon M}$.
 \end{sol}
 
 \begin{exercise}{4.3.24}
@@ -558,10 +558,10 @@ Let $G$ be a group.
 	
 	
 	Now suppose $M$ is not normal in $G$.
-	Then by the previous exercise, the number of nonidentity elements of $G$ contained in conjugates of $M$ is at most $(|M| - 1)|G \colon M|$.
+	Then by the previous exercise, the number of nonidentity elements of $G$ contained in conjugates of $M$ is at most $(\abs{M} - 1)\abs{G \colon M}$.
 	Moreover, $H \leq M$ implies that any conjugate of $H$ is contained in a conjugate of $M$.
-	Therefore, the number of nonidentity elements of $G$ contained in conjugates of $H$ is also at most $(|M| - 1)|G \colon M|$.
-	Since $M$ is a proper subgroup of $G$, $|G \colon M| \geq 2$, so that $(|M| - 1)|G \colon M| < |G| - 1$.
+	Therefore, the number of nonidentity elements of $G$ contained in conjugates of $H$ is also at most $(\abs{M} - 1)\abs{G \colon M}$.
+	Since $M$ is a proper subgroup of $G$, $\abs{G \colon M} \geq 2$, so that $(\abs{M} - 1)\abs{G \colon M} < \abs{G} - 1$.
 	Therefore, there exists at least one nonidentity element of $G$ that is not contained in any conjugate of $H$, hence
 	\[
 		G \neq \bigcup_{g \in G} gHg\inv. \qedhere
@@ -616,7 +616,7 @@ Let $G$ be a group.
 
 \begin{sol}
 	For each $a \in A$, consider $G_a$.
-	By transitivity of $G$ on $A$, we have $|G \colon G_a| = |A| > 1$, so that $G_a$ is a proper subgroup of $G$.
+	By transitivity of $G$ on $A$, we have $\abs{G \colon G_a} = \abs{A} > 1$, so that $G_a$ is a proper subgroup of $G$.
 	By \exref{4.3.24}, we have
 	\[
 		G \neq \bigcup_{g \in G} gG_ag\inv.
@@ -634,12 +634,12 @@ Let $G$ be a group.
 \begin{sol}
 	It is clear that $g_i \in C_G(g_j)$ for any two representatives $g_i$ and $g_j$.
 	Let $S$ be the set of class representatives, so that we may write $S \subseteq C_G(g_i)$.
-	Then $|C_G(g_i)| \geq |S| = r$ for all $i$.
+	Then $\abs{C_G(g_i)} \geq \abs{S} = r$ for all $i$.
 	From the class equation, we get that
 	\[
-		|G| = \sum_{i = 1}^r |G \colon C_G(g_i)| \leq \sum_{i = 1}^r \frac{|G|}{r} = |G|
+		\abs{G} = \sum_{i = 1}^r \abs{G \colon C_G(g_i)} \leq \sum_{i = 1}^r \frac{\abs{G}}{r} = \abs{G}
 	\]
-	Each term in the sum must be equal to $|G|/r$ so that $|C_G(g_i)| = r$ for all $i$.
+	Each term in the sum must be equal to $\abs{G}/r$ so that $\abs{C_G(g_i)} = r$ for all $i$.
 	Therefore, $C_G(g_i) = S$ for all $i$.
 	Recall that one of the $g_i$ must be 1, so that $C_G(1) = G$.
 	Therefore, $G = S$, so that $G$ is abelian.
@@ -660,12 +660,12 @@ Let $G$ be a group.
 	Then there is the associated permutation representation $\pi \colon G \to S_q$.
 	In particular, $\pi$ is injective: If $\pi(x) = 1$ for some $x \in G$, then $xgP = gP$ for every $g \in G$, or $g\inv xg \in P$ for every $g \in G$.
 	But $\ker\pi \nsub G$ and is contained in $P$ so that $\ker\pi$ has order 1 or $p$.
-	If $|\ker\pi| = p$, then $\ker\pi = P$ is normal in $G$, a contradiction.
+	If $\abs{\ker\pi} = p$, then $\ker\pi = P$ is normal in $G$, a contradiction.
 	Therefore, $\ker\pi = 1$ and $\pi$ is injective.
 
 	Recall that $\abs g = q$ so that $\abs{\pi(g)} = q$, so $\pi(g)$ acts transitively on $G/P$ since its powers generate $q$ distinct cosets.
 	Now pick $h \in G$.
-	From \exref{1.1.22}, it follows that $|hgh\inv| = |g| = q$ so that $hgh\inv = g^k$ for some integer $k$ with $1 \leq k < q$.
+	From \exref{1.1.22}, it follows that $\abs{hgh\inv} = \abs{g} = q$ so that $hgh\inv = g^k$ for some integer $k$ with $1 \leq k < q$.
 	Therefore,
 	\[
 		\pi(h)\pi(g)\pi(h)\inv = \pi(hgh\inv) = \pi(g^k) = (\pi(g))^k \in \gen{\pi(g)}.
@@ -743,7 +743,7 @@ Let $G$ be a group.
 	Therefore, the conjugacy classes in $D_{2n}$ when $n$ is even are $\set 1, \set{r^k}, \set{r^{\pm 1}}, \set{r^{\pm 2}}, \ldots, \set{r^{\pm(k - 1)}}, \set{sr^{2b} \mid b = 1, \ldots, k}$ and $\set{sr^{2b - 1} \mid b = 1, \ldots, k}$.
 	Lastly, the class equation for $D_{2n}$ is
 	\[
-		|D_{2n}| = 1 + 1 + 2(k - 1) + k + k.\qedhere
+		\abs{D_{2n}} = 1 + 1 + 2(k - 1) + k + k.\qedhere
 	\]
 \end{sol}
 
@@ -771,7 +771,7 @@ Let $G$ be a group.
 	Therefore, the conjugacy classes in $D_{2n}$ when $n$ is odd are $\set{1}, \set{r^{\pm 1}}, \set{r^{\pm 2}}, \ldots, \set{r^{\pm k}}$, and $\set{sr^b \mid b = 1, \ldots, n}$.
 	Lastly, the class equation for $D_{2n}$ is
 	\[
-		|D_{2n}| = 1 + 2k + n.\qedhere
+		\abs{D_{2n}} = 1 + 2k + n.\qedhere
 	\]
 \end{sol}
 
@@ -801,7 +801,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}{4.3.34}
-	 Prove that if $p$ is a prime and $P$ is a subgroup of $S_p$ of order $p$, then $|N_{S_p}(P)| = p(p - 1)$. [Argue that every conjugate of $P$ contains exactly $p - 1$ $p$-cycles, and use the formula for the number of $p$-cycles to compute the index of $N_{S_p}(P)$ in $S_p$.]
+	 Prove that if $p$ is a prime and $P$ is a subgroup of $S_p$ of order $p$, then $\abs{N_{S_p}(P)} = p(p - 1)$. [Argue that every conjugate of $P$ contains exactly $p - 1$ $p$-cycles, and use the formula for the number of $p$-cycles to compute the index of $N_{S_p}(P)$ in $S_p$.]
 \end{exercise}
 
 \begin{sol}
@@ -811,13 +811,13 @@ Let $G$ be a group.
 	Therefore, each conjugate of $P$ contains exactly $p - 1$ $p$-cycles.
 	Note that the number of distinct $p$-cycles in $S_p$ is given by $p!/p = (p - 1)!$.
 
-	Recall by Proposition 4.6 that the size of the conjugacy class of $P$ in $S_p$ is given by $|S_p \colon N_{S_p}(P)|$.
+	Recall by Proposition 4.6 that the size of the conjugacy class of $P$ in $S_p$ is given by $\abs{S_p \colon N_{S_p}(P)}$.
 	Let this index be $k$.
 	Since each conjugate of $P$ contains exactly $p - 1$ $p$-cycles, the total number of distinct $p$-cycles contained in all conjugates of $P$ is $k(p - 1)$.
 	However, since every $p$-cycle in $S_p$ is contained in some conjugate of $P$, we have $k(p - 1) = (p - 1)!$.
 	Therefore, $k = (p - 2)!$, so that
 	\[
-		|N_{S_p}(P)| = \frac{|S_p|}{k} = \frac{p!}{(p - 2)!} = p(p - 1).\qedhere
+		\abs{N_{S_p}(P)} = \frac{\abs{S_p}}{k} = \frac{p!}{(p - 2)!} = p(p - 1).\qedhere
 	\]
 \end{sol}
 

@@ -11,7 +11,7 @@
 \end{exercise}
 
 \begin{exercise}{6.1.3}
-    If $G$ is finite, prove that $G$ is nilpotent if and only if it has a normal subgroup of each order dividing $|G|$, and is cyclic if and only if it has a unique subgroup of each order dividing $|G|$.
+    If $G$ is finite, prove that $G$ is nilpotent if and only if it has a normal subgroup of each order dividing $\abs{G}$, and is cyclic if and only if it has a unique subgroup of each order dividing $\abs{G}$.
 \end{exercise}
 
 \begin{exercise}{6.1.4}
@@ -32,11 +32,11 @@
 \end{exercise}
 
 \begin{exercise}{6.1.8}
-    Prove that if $p$ is a prime and $P$ is a nonabelian group of order $p^3$ then $|Z(P)| = p$ and $P/Z(P) \cong Z_p \times Z_p$.
+    Prove that if $p$ is a prime and $P$ is a nonabelian group of order $p^3$ then $\abs{Z(P)} = p$ and $P/Z(P) \cong Z_p \times Z_p$.
 \end{exercise}
 
 \begin{exercise}{6.1.9}
-    Prove that a finite group $G$ is nilpotent if and only if whenever $a, b \in G$ with $(|a|, |b|) = 1$ then $ab = ba$.
+    Prove that a finite group $G$ is nilpotent if and only if whenever $a, b \in G$ with $(\abs{a}, \abs{b}) = 1$ then $ab = ba$.
     [Use Part 4 of Theorem 3.]
 \end{exercise}
 
@@ -108,7 +108,7 @@
 
 \begin{exercise}{6.1.24}
     Say an element $x$ of $G$ is a \emph{nongenerator} if for every proper subgroup $H$ of $G$, $\langle x, H \rangle$ is also a proper subgroup of $G$.
-    Prove that $\Phi(G)$ is the set of nongenerators of $G$ (here $|G| > 1$).
+    Prove that $\Phi(G)$ is the set of nongenerators of $G$ (here $\abs{G} > 1$).
 \end{exercise}
 
 \begin{exercise}{6.1.25}
@@ -148,7 +148,7 @@
 \end{exercise}
 
 \begin{exercise}{6.1.28}
-    Prove that if $p$ is a prime and $P = Z_p \times Z_{p^2}$ then $|\Phi(P)| = p$ and $P/\Phi(P) \cong Z_p \times Z_p$.
+    Prove that if $p$ is a prime and $P = Z_p \times Z_{p^2}$ then $\abs{\Phi(P)} = p$ and $P/\Phi(P) \cong Z_p \times Z_p$.
     Deduce that $P$ has $p+1$ maximal subgroups.
 \end{exercise}
 
@@ -176,13 +176,13 @@
 
 \begin{exercise}{6.1.33}
     Let $\pi$ be any set of primes.
-    A subgroup $H$ of a finite group is called a \emph{Hall $\pi$-subgroup} of $G$ if the only primes dividing $|H|$ are in the set $\pi$ and $|H|$ is relatively prime to $|G:H|$.
+    A subgroup $H$ of a finite group is called a \emph{Hall $\pi$-subgroup} of $G$ if the only primes dividing $\abs{H}$ are in the set $\pi$ and $\abs{H}$ is relatively prime to $\abs{G:H}$.
     (Note that if $\pi = \{p\}$, Hall $\pi$-subgroups are the same as Sylow $p$-subgroups. Hall subgroups were introduced in Exercise 10 of Section 3.3).
     Prove the following generalization of Sylow's Theorem for solvable groups: if $G$ is a finite solvable group then for every set $\pi$ of primes, $G$ has a Hall $\pi$-subgroup and any two Hall $\pi$-subgroups (for the same set $\pi$) are conjugate in $G$.
-    [Fix $\pi$ and proceed by induction on $|G|$, proving both existence and conjugacy at once.
+    [Fix $\pi$ and proceed by induction on $\abs{G}$, proving both existence and conjugacy at once.
     Let $M$ be a minimal normal subgroup of $G$, so $M$ is a $p$-group for some prime $p$.
     If $p \in \pi$, apply induction to $G/M$.
-    If $p \notin \pi$, reduce to the case $|G| = p^\alpha n$, where $p^\alpha = |M|$ and $n$ is the order of a Hall $\pi$-subgroup of $G$.
+    If $p \notin \pi$, reduce to the case $\abs{G} = p^\alpha n$, where $p^\alpha = \abs{M}$ and $n$ is the order of a Hall $\pi$-subgroup of $G$.
     In this case let $N/M$ be a minimal normal subgroup of $G/M$, so $N/M$ is a $q$-group for some prime $q \neq p$.
     Let $Q \in \syl_q(N)$.
     If $Q \nsub G$ argue as before with $Q$ in place of $M$.
@@ -195,14 +195,14 @@
     Let $P$ be the largest normal $p$-subgroup of $G$ (cf. Exercise 37, Section 4.5).
     Note that Exercise 31 above shows that $P \neq 1$.
     Prove that $C_G(P) \leq P$, i.e., $C_G(P) = Z(P)$.
-    [Let $N = C_G(P)$ and use the preceding exercise to show $N = Z(P) \times H$ for some Hall $\pi$-subgroup $H$ of $N$ — here $\pi$ is the set of all prime divisors of $|N|$ except for $p$.
+    [Let $N = C_G(P)$ and use the preceding exercise to show $N = Z(P) \times H$ for some Hall $\pi$-subgroup $H$ of $N$ — here $\pi$ is the set of all prime divisors of $\abs{N}$ except for $p$.
     Show $H \nsub G$ to obtain the desired conclusion: $H = 1$.]
 \end{exercise}
 
 \begin{exercise}{6.1.35}
     Prove that if $G$ is a finite group in which every proper subgroup is nilpotent, then $G$ is solvable.
     [Show that a minimal counterexample is simple.
-    Let $M$ and $N$ be distinct maximal subgroups chosen with $|M \cap N|$ as large as possible and apply Part 2 of Theorem 3 to show that $M \cap N = 1$.
+    Let $M$ and $N$ be distinct maximal subgroups chosen with $\abs{M \cap N}$ as large as possible and apply Part 2 of Theorem 3 to show that $M \cap N = 1$.
     Now apply the methods of Exercise 53 in Section 4.5.]
 \end{exercise}
 
@@ -217,7 +217,7 @@
     Show that every element in the image of this map is fixed by $\varphi$.
     Deduce that the subspace of elements of $V$ which are fixed by $\varphi$ has dimension $\geq \frac{1}{2}(\text{dimension } V)$.
     (Note that if $G$ is the semidirect product of $V$ with $\langle \varphi \rangle$, where $V \nsub G$ and $\varphi$ acts by conjugation on $V$ by sending each $v \in V$ to $\varphi(v)$, then the fixed points of $\varphi$ on $V$ are $C_V(\varphi)$ and the above map is simply the commutator map: $v \mapsto [v, \varphi]$.
-    In this terminology the problem is to show that $|C_V(\varphi)|^2 \geq |V|$.)
+    In this terminology the problem is to show that $\abs{C_V(\varphi)}^2 \geq \abs{V}$.)
 \end{exercise}
 
 \begin{exercise}{6.1.38}

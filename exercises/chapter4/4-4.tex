@@ -27,7 +27,7 @@
 
 \begin{exercise}{4.4.3}
 	Prove that under any automorphism of $D_8$, $r$ has at most $2$ possible images and $s$ has at most $4$ possible images (where $r$ and $s$ are the usual generators).
-	Deduce that $|\aut(D_8)| \le 8$.
+	Deduce that $\abs{\aut(D_8)} \le 8$.
 \end{exercise}
 
 \begin{sol}
@@ -35,11 +35,11 @@
 	The only elements of order 4 in $D_8$ are $r$ and $r^3$, so $r$ has at most 2 possible images under $\sigma$.
 	Moreover, $\abs s = 2$, so $\sigma(s)$ must be an element of order 2.
 	The elements of order 2 in $D_8$ are $s, sr, sr^2,$ and $sr^3$, so $s$ has at most 4 possible images under $\sigma$.
-	Therefore, there are at most $2 \cdot 4 = 8$ possible automorphisms of $D_8$, so that $|\aut(D_8)| \leq 8$.
+	Therefore, there are at most $2 \cdot 4 = 8$ possible automorphisms of $D_8$, so that $\abs{\aut(D_8)} \leq 8$.
 \end{sol}
 
 \begin{exercise}{4.4.4}
-	Use arguments similar to those in the preceding exercise to show that $|\aut(Q_8)| \le 24$.
+	Use arguments similar to those in the preceding exercise to show that $\abs{\aut(Q_8)} \le 24$.
 \end{exercise}
 
 \begin{sol}
@@ -47,7 +47,7 @@
 	The only elements of order 4 in $Q_8$ are $i, j, k, i^{-1}, j^{-1}, k^{-1}$, so $i$ has at most 6 possible images under $\sigma$.
 	Moreover, since $ij = k$, we have $\sigma(i)\sigma(j) = \sigma(k)$.
 	Therefore, once we choose the image of $i$, there are 4 possible choices for the image of $j$ (since it cannot be the inverse of the image of $i$).
-	Hence, there are at most $6 \cdot 4 = 24$ possible automorphisms of $Q_8$, so that $|\aut(Q_8)| \leq 24$.
+	Hence, there are at most $6 \cdot 4 = 24$ possible automorphisms of $Q_8$, so that $\abs{\aut(Q_8)} \leq 24$.
 \end{sol}
 
 \begin{exercise}{4.4.5}
@@ -68,7 +68,7 @@
 
 	We now have that $N_{D_{16}}(H)/C_{D_{16}}(H) \cong D_{16}/Z(D_{16}) \cong D_8$.
 	Now recall that $D_{16}/Z(D_{16})$ is still isomorphic to a subgroup of $\aut(H)$ when acted on by conjugation.
-	By \exref{4.4.3}, we know that $|\aut(D_8)| \leq 8$, so that $\aut(H) \cong D_8$.
+	By \exref{4.4.3}, we know that $\abs{\aut(D_8)} \leq 8$, so that $\aut(H) \cong D_8$.
 	Therefore, $\aut(D_8) \cong D_8$.
 \end{sol}
 
@@ -170,8 +170,8 @@
 \end{exercise}
 
 \begin{sol}
-	By \exref{4.3.34}, we know that $|N_{S_p}(P)| = p(p - 1)$.
-	Moreover, since $P$ is cyclic of order $p$, we have $\aut(P) \cong \units[p]$ by Proposition 4.16, so that $|\aut(P)| = p - 1$.
+	By \exref{4.3.34}, we know that $\abs{N_{S_p}(P)} = p(p - 1)$.
+	Moreover, since $P$ is cyclic of order $p$, we have $\aut(P) \cong \units[p]$ by Proposition 4.16, so that $\abs{\aut(P)} = p - 1$.
 	Let $N_{S_p}$ act on $P$ by conjugation.
 	Then we have the map
 	\[
@@ -186,7 +186,7 @@
 	Since $P$ is cyclic, the only permutations that centralize $P$ are the elements of $P$ itself, so that $C_{S_p}(P) = P$.
 	Therefore,
 	\[
-		|N_{S_p}(P)/C_{S_p}(P)| = \frac{|N_{S_p}(P)|}{|C_{S_p}(P)|} = \frac{p(p - 1)}{p} = p - 1 = |\aut(P)|.
+		\abs{N_{S_p}(P)/C_{S_p}(P)} = \frac{\abs{N_{S_p}(P)}}{\abs{C_{S_p}(P)}} = \frac{p(p - 1)}{p} = p - 1 = \abs{\aut(P)}.
 	\]
 	Hence, $\im\phi = \aut(P)$ so that $N_{S_p}(P)/C_{S_p}(P) \cong \aut(P)$.
 \end{sol}
@@ -199,7 +199,7 @@
 \begin{sol}
 	Observe that $3825 = 15^2 \cdot 17$.
 	Since $\abs H = 17$ a prime, $H$ is cyclic.
-	Moreover, we have $\aut(H) \cong \units[17]$ by Proposition 4.16, so that $|\aut(H)| = 16$.
+	Moreover, we have $\aut(H) \cong \units[17]$ by Proposition 4.16, so that $\abs{\aut(H)} = 16$.
 	Now consider the action of $G$ on $H$ by conjugation.
 	This gives the map
 	\[
@@ -211,8 +211,8 @@
 	\[
 		G/C_G(H) \cong \im\phi \leq \aut(H).
 	\]
-	Hence, $|G/C_G(H)|$ divides $|\aut(H)| = 16$.
-	However, $|G| = 3825$ is relatively prime to 16, so that $|G/C_G(H)| = 1$.
+	Hence, $\abs{G/C_G(H)}$ divides $\abs{\aut(H)} = 16$.
+	However, $\abs{G} = 3825$ is relatively prime to 16, so that $\abs{G/C_G(H)} = 1$.
 	Therefore, $G = C_G(H)$, so that $H \leq Z(G)$.
 \end{sol}
 
@@ -226,7 +226,7 @@
 	Note that $203 = 7 \cdot 29$.
 	The proof of showing that $H \leq Z(G)$ is similar to the previous exercise.
 	To see that $G$ is abelian, consider the quotient group $G/H$.
-	Since $|G/H| = 29$ is prime, $G/H$ is cyclic.
+	Since $\abs{G/H} = 29$ is prime, $G/H$ is cyclic.
 	By \exref{3.1.36}, we have that $G$ is abelian.
 \end{sol}
 
@@ -237,11 +237,11 @@
 
 \begin{sol}
 	This exercise is similar to the previous two.
-	Following the proofs, we will find that $|G/C_G(H)|$ divides $|\aut(H)| = 6$ or 48.
-	However, $1575 = 3^2 \cdot 5^2 \cdot 7$ results in $(|G|, |\aut(H)|) = 1$ or 3.
-	If the latter is true, then $|C_G(H)| = 525$.
-	However, this is impossible since $H \leq C_G(H)$ and $|H| = 9$ does not divide $525$.
-	Therefore, we must have $|G/C_G(H)| = 1$, so that $G = C_G(H)$ and hence $H \leq Z(G)$.
+	Following the proofs, we will find that $\abs{G/C_G(H)}$ divides $\abs{\aut(H)} = 6$ or 48.
+	However, $1575 = 3^2 \cdot 5^2 \cdot 7$ results in $(\abs{G}, \abs{\aut(H)}) = 1$ or 3.
+	If the latter is true, then $\abs{C_G(H)} = 525$.
+	However, this is impossible since $H \leq C_G(H)$ and $\abs{H} = 9$ does not divide $525$.
+	Therefore, we must have $\abs{G/C_G(H)} = 1$, so that $G = C_G(H)$ and hence $H \leq Z(G)$.
 \end{sol}
 
 \begin{exercise}{4.4.15}
@@ -249,10 +249,10 @@
 \end{exercise}
 
 \begin{sol}
-	Since $|\units[5]| = 4$, $\units[5]$ is isomorphic to either $Z_4$ or $V_4$.
+	Since $\abs{\units[5]} = 4$, $\units[5]$ is isomorphic to either $Z_4$ or $V_4$.
 	However, $\bar 2 \in \units[5]$ has order 4, so that $\units[5] \cong Z_4$ is cyclic.
 
-	Observe that $|\units[9]| = |\units[18]| = 6$.
+	Observe that $\abs{\units[9]} = \abs{\units[18]} = 6$.
 	By \exref{4.2.10}, groups of order 6 are isomorphic to either $Z_6$ or $S_3$.
 	However, both groups are abelian, so that $\units[9]$ and $\units[18]$ must be isomorphic to $Z_6$.
 	Therefore, both groups are cyclic.
@@ -338,7 +338,7 @@
 	\begin{subexercises}
 		\item Prove that the automorphism group of a group $G$ permutes the conjugacy classes of $G$, i.e.\ for each $\sigma\in\aut(G)$ and each conjugacy class $\kcal$ of $G$, the set $\sigma(\kcal)$ is also a conjugacy class of $G$.
 		\item Let $\kcal$ be the conjugacy class of transpositions in $S_n$ and let $\kcal'$ be the conjugacy class of any element of order $2$ in $S_n$ that is not a transposition.
-		Prove that $|\kcal|\neq|\kcal'|$.
+		Prove that $\abs{\kcal}\neq\abs{\kcal'}$.
 		Deduce that any automorphism of $S_n$ sends transpositions to transpositions. (See \exref{4.3.33}.)
 		\item Prove that for each $\sigma\in\aut(S_n)$,
 		\[
@@ -372,17 +372,17 @@
 	Hence, $\sigma(\kcal) = \kcal'$, so that $\aut(G)$ permutes the conjugacy classes of $G$.
 	\item By \exref{4.3.33}, the formulas for each conjugacy class is given by
 	\[
-		|\kcal| = \binom n2 = \frac{n(n - 1)}{2}, \quad \text{and} \quad |\kcal'| = \frac{n!}{2^k k! (n - 2k)!}
+		\abs{\kcal} = \binom n2 = \frac{n(n - 1)}{2}, \quad \text{and} \quad \abs{\kcal'} = \frac{n!}{2^k k! (n - 2k)!}
 	\]
 	for some $k \geq 2$.
-	Assume, by way of contradiction, that $|\kcal| = |\kcal'|$.
+	Assume, by way of contradiction, that $\abs{\kcal} = \abs{\kcal'}$.
 	Equating the two expressions and cancellation, we obtain
 	\[
 		(n - 2)(n - 3) \cdots (n - 2k + 1) = 2^k k!.
 	\]
 	Observe that the left-hand side contains $2k - 2$ consecutive integers, which has at most $k - 1$ powers of 2.
 	The right-hand side has at least $k$ powers of 2, so that the two sides cannot be equal.
-	Therefore, $|\kcal| \neq |\kcal'|$.
+	Therefore, $\abs{\kcal} \neq \abs{\kcal'}$.
 	Hence, by (a), any automorphism of $S_n$ sends transpositions to transpositions.
 	\item Let $\sigma \in \aut(S_n)$.
 	By (b), we know that $\sigma$ sends transpositions to transpositions.
@@ -407,18 +407,18 @@
 	\]
 	Therefore, any automorphism of $S_n$ is uniquely determined by its action on these elements.
 	By (c), there are at most $n!$ ways to assign images to these transpositions since there are $n$ choices for the image of $\cyc{1 2}$, $n - 1$ choices for the image of $\cyc{1 3}$, and so on.
-	Therefore, $|\aut(S_n)| \leq n!$.
-	However, $|\inn(S_n)| = |S_n/Z(S_n)| = n!$ since $Z(S_n)$ is trivial for $n \geq 3$.
+	Therefore, $\abs{\aut(S_n)} \leq n!$.
+	However, $\abs{\inn(S_n)} = \abs{S_n/Z(S_n)} = n!$ since $Z(S_n)$ is trivial for $n \geq 3$.
 	Since $\inn(S_n) \leq \aut(S_n)$, we must have $\aut(S_n) = \inn(S_n)$ for $n \neq 6$.
 \end{solenum}
 
 \begin{exercise}!{4.4.19}
-	This exercise shows that $|\aut(S_6):\inn(S_6)|\le 2$ (Exercise 10 in Section 6.3 shows that equality holds by exhibiting an automorphism of $S_6$ that is not inner).
+	This exercise shows that $\abs{\aut(S_6):\inn(S_6)}\le 2$ (Exercise 10 in Section 6.3 shows that equality holds by exhibiting an automorphism of $S_6$ that is not inner).
 	\begin{subexercises}
 		\item Let $\kcal$ be the conjugacy class of transpositions in $S_6$ and let $\kcal'$ be the conjugacy class of any element of order $2$ in $S_6$ that is not a transposition.
-		Prove that $|\kcal|\neq|\kcal'|$ unless $\kcal'$ is the conjugacy class of products of three disjoint transpositions.
+		Prove that $\abs{\kcal}\neq\abs{\kcal'}$ unless $\kcal'$ is the conjugacy class of products of three disjoint transpositions.
 		Deduce that $\aut(S_6)$ has a subgroup of index at most $2$ which sends transpositions to transpositions.
-		\item Prove that $|\aut(S_6):\inn(S_6)|\le 2$. (Follow the same steps as in (c) and (d) of the preceding exercise to show that any automorphism that sends transpositions to transpositions is inner.)
+		\item Prove that $\abs{\aut(S_6):\inn(S_6)}\le 2$. (Follow the same steps as in (c) and (d) of the preceding exercise to show that any automorphism that sends transpositions to transpositions is inner.)
 	\end{subexercises}
 \end{exercise}
 
@@ -426,22 +426,22 @@
 	\item This is similar to (b) in the previous exercise.
 	By \exref{4.3.33}, the formulas for each conjugacy class is given by
 	\[
-		|\kcal| = \binom 62 = 15, \quad \text{and} \quad |\kcal'| = \frac{6!}{2^k k! (6 - 2k)!}
+		\abs{\kcal} = \binom 62 = 15, \quad \text{and} \quad \abs{\kcal'} = \frac{6!}{2^k k! (6 - 2k)!}
 	\]
 	for some $k \geq 2$.
 	Since we are working in $S_6$, we only need to check $k = 2$ and $k = 3$.
 	For $k = 2$, we have
 	\[
-		|\kcal'| = \frac{6!}{2^2 \cdot 2! \cdot 2!} = 45 \neq 15 = |\kcal|.
+		\abs{\kcal'} = \frac{6!}{2^2 \cdot 2! \cdot 2!} = 45 \neq 15 = \abs{\kcal}.
 	\]
 	For $k = 3$, we have
 	\[
-		|\kcal'| = \frac{6!}{2^3 \cdot 3! \cdot 0!} = 15 = |\kcal|.
+		\abs{\kcal'} = \frac{6!}{2^3 \cdot 3! \cdot 0!} = 15 = \abs{\kcal}.
 	\]
-	Therefore, $|\kcal| \neq |\kcal'|$ unless $\kcal'$ is the conjugacy class of products of three disjoint transpositions.
+	Therefore, $\abs{\kcal} \neq \abs{\kcal'}$ unless $\kcal'$ is the conjugacy class of products of three disjoint transpositions.
 	Hence, by (a) in the previous exercise, $\aut(S_6)$ has a subgroup of index at most 2 which sends transpositions to transpositions.
 	\item Following the same steps as in (c) and (d) of the previous exercise, we can show that any automorphism that sends transpositions to transpositions is inner.
-	Therefore, by (a), we have $|\aut(S_6) \colon \inn(S_6)| \leq 2$.
+	Therefore, by (a), we have $\abs{\aut(S_6) \colon \inn(S_6)} \leq 2$.
 \end{solenum}
 
 \begin{exercise}!{4.4.20}

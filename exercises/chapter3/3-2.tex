@@ -16,7 +16,7 @@ Let $G$ be a group.
     Prove that the lattice of subgroups of $S_3$ in Section 2.5 is correct (i.e., prove that it contains all subgroups of $S_3$ and that their pairwise joins and intersections are correctly drawn).
 \end{exercise}
 \begin{sol}
-    Recall that $|S_3| = 6$.
+    Recall that $\abs{S_3} = 6$.
 	By Lagrange's Theorem, the possible orders of nontrivial subgroups are 2 and 3.
 	Any subgroup of order 2 must be cyclic, and these are the subgroups $\gen{\cyc{1 2}}, \gen{\cyc{1 3}}$, and $\gen{\cyc{2 3}}$.
 	Similarly, any subgroup of order 3 must be cyclic.
@@ -38,7 +38,7 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-    Recall that $|Q_8| = 8$.
+    Recall that $\abs{Q_8} = 8$.
 	By Lagrange's Theorem, the possible orders of nontrivial subgroups are 2 and 4.
 	Any subgroup of order 2 must be cyclic, and the only element of order 2 in $Q_8$ is $-1$, hence $\gen{-1}$ is the only subgroup of order 2.
 	There are 6 elements of order 4 in $Q_8$, and each of them is contained in one of the three subgroups of order 4: $\gen i, \gen j$, and $\gen k$.
@@ -54,7 +54,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}{3.2.4}
-    Show that if $|G| = pq$ for some primes $p$ and $q$ (not necessarily distinct) then either $G$ is abelian or $Z(G) = 1$. [See \exref{3.1.36}.]
+    Show that if $\abs{G} = pq$ for some primes $p$ and $q$ (not necessarily distinct) then either $G$ is abelian or $Z(G) = 1$. [See \exref{3.1.36}.]
 \end{exercise}
 
 \begin{sol}
@@ -62,8 +62,8 @@ Let $G$ be a group.
 	Suppose $G$ is not abelian, so that $Z(G)$ is a proper subgroup of $G$.
 	Suppose $Z(G) \neq 1$.
 	By Lagrange's Theorem, the possible orders of $Z(G)$ are $p$ or $q$.
-	Without loss of generality, assume $|Z(G)| = p$.
-	Then $|G/Z(G)| = |G|/|Z(G)| = pq/p = q$, which is prime.
+	Without loss of generality, assume $\abs{Z(G)} = p$.
+	Then $\abs{G/Z(G)} = \abs{G}/\abs{Z(G)} = pq/p = q$, which is prime.
 	By Corollary 3.10, $G/Z(G) \cong Z_q$, which is cyclic.
 	By \exref{3.1.36}, $G$ is abelian, a contradiction.
 	Hence, $Z(G) = 1$.
@@ -91,7 +91,7 @@ Let $G$ be a group.
     To show that $gHg\inv$ has the same order as $H$, consider the mapping $\phi \colon H \to gHg\inv$ given by $\phi(h) = ghg\inv$.
 	For $h_1, h_2 \in H$ such that $\phi(h_1) = \phi(h_2)$, then $gh_1g\inv = gh_2g\inv$, or $h_1 = h_2$, hence $\phi$ is injective.
 	Moreover, for any $ghg\inv \in gHg\inv$, then $\phi(h) = ghg\inv$, so that $\phi$ is surjective.
-	Hence, $\phi$ is a bijection, and $|gHg\inv| = |H|$.
+	Hence, $\phi$ is a bijection, and $\abs{gHg\inv} = \abs{H}$.
     \item Let $H$ be the unique subgroup of $G$ of order $n$.
 	For any $g \in G$, consider the subgroup $gHg\inv$.
 	By part (a), $gHg\inv$ is a subgroup of $G$ of order $n$.
@@ -134,7 +134,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}{3.2.8}
-    Prove that if $H$ and $K$ are finite subgroups of $G$ whose orders are relatively prime then $|H \cap K| = 1$.
+    Prove that if $H$ and $K$ are finite subgroups of $G$ whose orders are relatively prime then $\abs{H \cap K} = 1$.
 \end{exercise}
 
 \begin{sol}
@@ -145,13 +145,13 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}!{3.2.9}
-    Let $G$ be a finite group and let $p$ be a prime dividing $|G|$.
+    Let $G$ be a finite group and let $p$ be a prime dividing $\abs{G}$.
 	Let $\scal$ denote the set of $p$-tuples of elements of $G$ the product of whose coordinates are 1:
     \[
     	\scal = \set{(x_1, x_2, \ldots, x_p) \mid x_i \in G \text{ and } x_1x_2 \cdots x_p = 1}
     \]
     \begin{subexercises}
-        \item Show that $\scal$ has $|G|^{p-1}$ elements, hence has order divisible by $p$.
+        \item Show that $\scal$ has $\abs{G}^{p-1}$ elements, hence has order divisible by $p$.
     \end{subexercises}
     Define the relation $\sim$ on $S$ by letting $\alpha \sim \beta$ if $\beta$ is a cyclic permutation of $\alpha$.
     \begin{subexercises}[resume]
@@ -159,14 +159,14 @@ Let $G$ be a group.
         \item Prove that $\sim$ is an equivalence relation on $\scal$.
         \item Prove that an equivalence class contains a single element if and only if it is of the form $(x, x, \dots, x)$ with $x^p = 1$.
         \item Prove that every equivalence class has order 1 or $p$ (this uses the fact that $p$ is \emph{prime}).
-		Deduce that $|G|^{p-1} = k + pd$, where $k$ is the number of classes of size 1 and $d$ is the number of classes of size $p$.
+		Deduce that $\abs{G}^{p-1} = k + pd$, where $k$ is the number of classes of size 1 and $d$ is the number of classes of size $p$.
         \item Since $\set{(1, 1, \dots, 1)}$ is an equivalence class of size 1, conclude from (e) that there must be a nonidentity element $x \in G$ with $x^p = 1$, i.e., $G$ contains an element of order $p$. [Show $p \mid k$ and so $k > 1$.]
     \end{subexercises}
 \end{exercise}
 
 \begin{solenum}
     \item Let $\scal'$ denote the set of $(p - 1)$-tuples of elements of $G$.
-	Observe that $|\scal'| = |G|^{p-1}$.
+	Observe that $\abs{\scal'} = \abs{G}^{p-1}$.
 	Define the mapping
     \[
     	\phi \colon \scal' \to \scal \quad \text{by} \quad \phi(x_1, x_2, \dots, x_{p-1}) = (x_1, x_2, \dots, x_{p-1}, (x_1x_2 \cdots x_{p-1})\inv)
@@ -175,7 +175,7 @@ Let $G$ be a group.
 	Then $x_i = y_i$ for all $1 \leq i \leq p - 1$, and the last inverse term must imply $x_1x_2 \cdots x_{p - 1} = y_1y_2 \cdots y_{p - 1}$ since inverses are unique in a group.
 	Hence, $\phi$ is injective.
 	Moreover, this mapping is clearly surjective.
-	It follows that $\abs\scal = \abs{\scal'} = |G|^{p-1}$.
+	It follows that $\abs\scal = \abs{\scal'} = \abs{G}^{p-1}$.
     \item Let $\alpha = (x_1, x_2, \dots, x_p) \in \scal$.
 	A cyclic permutation of $\alpha$ shifts the $i$-th coordinate of $\alpha$ to the $(i + k)$-th coordinate of $\beta$ for some fixed $k$, where the indices are taken modulo $p$ when $i + k > p$.
 	Explicitly, $\beta = (x_k, x_{k+1}, \dots, x_p, x_1, x_2, \dots, x_{k-1})$ for some $1 \leq k \leq p$.
@@ -218,8 +218,8 @@ Let $G$ be a group.
     Since the equivalence classes partition $\scal$, let $k$ be the number of classes of size 1 and $d$ be the number of classes of size $p$.
 	Then $\abs\scal = k + pd$, as desired.
     \item Note that $\set{(1, 1, \dots, 1)}$ is an equivalence class of size 1, hence $k \geq 1$.
-	From part (d), we have $\abs\scal = |G|^{p-1} = k + pd$.
-	Since $p$ divides $|G|$, it divides $|G|^{p-1}$, hence it divides $k + pd$.
+	From part (d), we have $\abs\scal = \abs{G}^{p-1} = k + pd$.
+	Since $p$ divides $\abs{G}$, it divides $\abs{G}^{p-1}$, hence it divides $k + pd$.
 	It follows that $p$ divides $k$.
 	Since $k \geq 1$, $k \geq p > 1$.
 	In particular, there exists some equivalence class of size 1 that is not $\set{(1, 1, \dots, 1)}$, hence by part (c), there exists some $x \in G$ with $x^p = 1$ and $x \neq 1$.
@@ -227,13 +227,13 @@ Let $G$ be a group.
 \end{solenum}
 
 \begin{exercise}!{3.2.10}
-    Suppose $H$ and $K$ are subgroups of finite index in the (possibly infinite) group $G$ with $|G \colon H| = m$ and $|G \colon K| = n$.
-	Prove that $\lcm(m, n) \leq |G \colon H \cap K| \leq mn$.
-	Deduce that if $m$ and $n$ are relatively prime then $|G \colon H \cap K| = |G \colon H| \cdot |G \colon K|$.
+    Suppose $H$ and $K$ are subgroups of finite index in the (possibly infinite) group $G$ with $\abs{G \colon H} = m$ and $\abs{G \colon K} = n$.
+	Prove that $\lcm(m, n) \leq \abs{G \colon H \cap K} \leq mn$.
+	Deduce that if $m$ and $n$ are relatively prime then $\abs{G \colon H \cap K} = \abs{G \colon H} \cdot \abs{G \colon K}$.
 \end{exercise}
 
 \begin{sol} 
-    Let $|G \colon H \cap K| = \ell$.
+    Let $\abs{G \colon H \cap K} = \ell$.
 	Consider the cosets $gH, gK$, and $g(H \cap K)$ for some $g \in G$.
 	We wish to identify $g(H \cap K)$ in terms of $gH$ and $gK$.
 	Note that $x \in g(H \cap K)$ implies that $g\inv x \in H \cap K$, hence $g\inv x \in H$ and $g\inv x \in K$, so that $x \in gH$ and $x \in gK$.
@@ -262,7 +262,7 @@ Let $G$ be a group.
 
 \begin{exercise}!{3.2.11}
     Let $H \leq K \leq G$.
-	Prove that $|G \colon H| = |G \colon K| \cdot |K \colon H|$. 
+	Prove that $\abs{G \colon H} = \abs{G \colon K} \cdot \abs{K \colon H}$. 
 \end{exercise}
 
 \begin{sol}
@@ -317,12 +317,12 @@ Let $G$ be a group.
 	Observe that $N$ cannot contain all 6 2-cycles of $S_4$ for otherwise $\cyc{1 2}\cyc{1 3} = \cyc{1 3 2} \in N$, a contradiction.
 	It must be that there is some 2-cycle $\sigma \in S_4$ that is not in $N$.
 	Since $N \nsub S_4$, $N \gen\sigma \leq S_4$.
-	Since $\sigma \notin S_4$, $N \cap \gen\sigma = 1$, hence $|N \gen\sigma| = 16$.
+	Since $\sigma \notin S_4$, $N \cap \gen\sigma = 1$, hence $\abs{N \gen\sigma} = 16$.
 	This contradicts Lagrange's Theorem, hence $N$ cannot exist.
 
     If $S_4$ has a normal subgroup $M$ of order 3, then $M \cong Z_3$ which is cyclic.
 	Since $S_4$ contains 4 distinct 3-cycles, we may pick another $\tau \in S_4$ such that $\tau \notin M$, hence $M \cap \gen\tau = 1$.
-	Because $M \nsub S_4$, we have $|M \gen\tau| = 9$, contradicting Lagrange's Theorem, hence $M$ cannot exist.
+	Because $M \nsub S_4$, we have $\abs{M \gen\tau} = 9$, contradicting Lagrange's Theorem, hence $M$ cannot exist.
 \end{sol}
 
 \begin{exercise}{3.2.15}
@@ -363,23 +363,23 @@ Let $G$ be a group.
 
 \begin{exercise}{3.2.18}
     Let $G$ be a finite group, let $H$ be a subgroup of $G$ and let $N \nsub G$.
-	Prove that if $\abs H$ and $|G \colon N|$ are relatively prime then $H \leq N$.
+	Prove that if $\abs H$ and $\abs{G \colon N}$ are relatively prime then $H \leq N$.
 \end{exercise}
 
 \begin{sol}
     Since $N \nsub G$, $HN \leq G$.
-	Moreover, $H \cap N \leq H$ so that $|H \cap N|$ divides $\abs H$.
-	Then we have that $|G| = m|HN|$ and $|H| = n|H \cap N|$ for some $m, n \in \zbb$.
+	Moreover, $H \cap N \leq H$ so that $\abs{H \cap N}$ divides $\abs H$.
+	Then we have that $\abs{G} = m\abs{HN}$ and $\abs{H} = n\abs{H \cap N}$ for some $m, n \in \zbb$.
 	By Corollary 13, we have that
     \[
-    	|HN| = \frac{\abs H \abs N}{|H \cap N|} \implies m|HN| = m\frac{n|H \cap N||N|}{|H \cap N|} \implies \frac{|G|}{|N|} = |G \colon N| = mn
+    	\abs{HN} = \frac{\abs H \abs N}{\abs{H \cap N}} \implies m\abs{HN} = m\frac{n\abs{H \cap N}\abs{N}}{\abs{H \cap N}} \implies \frac{\abs{G}}{\abs{N}} = \abs{G \colon N} = mn
     \]
-    Since $(\abs H, |G \colon N|) = 1$, $n = 1$ so that $\abs H = |H \cap N|$.
+    Since $(\abs H, \abs{G \colon N}) = 1$, $n = 1$ so that $\abs H = \abs{H \cap N}$.
 	It follows that $H = H \cap N$, hence $H \leq N$.
 \end{sol}
 
 \begin{exercise}{3.2.19}
-    Prove that if $N$ is a normal subgroup of the finite group $G$ and $(|N|, |G \colon N|) = 1$ then $N$ is the unique subgroup of $G$ of order $|N|$.
+    Prove that if $N$ is a normal subgroup of the finite group $G$ and $(\abs{N}, \abs{G \colon N}) = 1$ then $N$ is the unique subgroup of $G$ of order $\abs{N}$.
 \end{exercise}
 
 \begin{sol}
@@ -409,7 +409,7 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-    Suppose $\qbb$ has a proper subgroup $H$ such that $|\qbb \colon H|$ is some finite $n$.
+    Suppose $\qbb$ has a proper subgroup $H$ such that $\abs{\qbb \colon H}$ is some finite $n$.
 	Recalling that $\qbb$ is divisible by \exref{2.4.19}, then $\qbb/H$ is also divisible by \exref{3.1.15}.
 	However, $\qbb/H$ is a finite group of order $n$, hence it cannot be divisible unless it is trivial.
 	It follows that $H = \qbb$, a contradiction.

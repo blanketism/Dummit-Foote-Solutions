@@ -219,7 +219,7 @@ Let $G$ be a group.
         \begin{array}{*{13}{c|}}
             \bar x & \bar 0 & \bar 1 & \bar 2 & \bar 3 & \bar 4 & \bar 5 & \bar 6 & \bar 7 & \bar 8 & \bar 9 & \bar{10} & \bar{11} \\
             \hline
-            |\bar x| & 1 & 12 & 6 & 4 & 3 & 12 & 2 & 12 & 3 & 4 & 6 & 12
+            \abs{\bar x} & 1 & 12 & 6 & 4 & 3 & 12 & 2 & 12 & 3 & 4 & 6 & 12
         \end{array}\,. \qedhere
 	\]
 \end{sol}
@@ -233,7 +233,7 @@ Let $G$ be a group.
     	\begin{array}{*{7}{c|}}
             \bar x & \bar{1} & \bar{-1} & \bar{5} & \bar{7} & \bar{-7} & \bar{13} \\
             \hline
-            |\bar x| & 1 & 2 & 2 & 2 & 2 & 1
+            \abs{\bar x} & 1 & 2 & 2 & 2 & 2 & 1
         \end{array}\,. \qedhere
 	\]
 \end{sol}
@@ -247,7 +247,7 @@ Let $G$ be a group.
     	\begin{array}{*{10}{c|}}
             \bar x & \bar 1 & \bar 2 & \bar 6 & \bar 9 & \bar{10} & \bar{12} & \bar{-1} & \bar{-10} & \bar{-18} \\
             \hline
-            |\bar x| & 36 & 18 & 6 & 4 & 18 & 3 & 36 & 18 & 2
+            \abs{\bar x} & 36 & 18 & 6 & 4 & 18 & 3 & 36 & 18 & 2
         \end{array}\,. \qedhere
 	\]
 \end{sol}
@@ -261,7 +261,7 @@ Let $G$ be a group.
     	\begin{array}{*{7}{c|}}
             \bar x & \bar 1 & \bar{-1} & \bar 5 & \bar{13} & \bar{-13} & \bar{17} \\
             \hline
-            |\bar x| & 1 & 2 & 6 & 3 & 6 & 2
+            \abs{\bar x} & 1 & 2 & 6 & 3 & 6 & 2
         \end{array}\,. \qedhere
 	\]
 \end{sol}
@@ -282,21 +282,21 @@ Let $G$ be a group.
 
 \begin{exercise}{1.1.16}
     Let $x$ be an element of $G$.
-	Prove that $x^2 = 1$ if and only if $|x|$ is either $1$ or $2$.
+	Prove that $x^2 = 1$ if and only if $\abs{x}$ is either $1$ or $2$.
 \end{exercise}
 
 \begin{soliff}
     \rightimp Suppose $x^2 = 1$.
-	Then $|x| \leq 2$.
-	Since $|x| \in \zp$, $|x|$ is either $1$ or $2$.
+	Then $\abs{x} \leq 2$.
+	Since $\abs{x} \in \zp$, $\abs{x}$ is either $1$ or $2$.
 
-    \leftimp If $|x| = 1$, then $x = 1$ and $x^2 = 1$.
-	If $|x| = 2$, then $x^2 = 1$ by definition.
+    \leftimp If $\abs{x} = 1$, then $x = 1$ and $x^2 = 1$.
+	If $\abs{x} = 2$, then $x^2 = 1$ by definition.
 \end{soliff}
 
 \begin{exercise}{1.1.17}
     Let $x$ be an element of $G$.
-	Prove that if $|x| = n$ for some positive integer $n$, then $x^{-1} = x^{n-1}$.
+	Prove that if $\abs{x} = n$ for some positive integer $n$, then $x^{-1} = x^{n-1}$.
 \end{exercise}
 
 \begin{sol}
@@ -375,13 +375,13 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-    Suppose $|x| = n \in \zp$.
+    Suppose $\abs{x} = n \in \zp$.
 	Then
     \[
         (x\inv)^n = x^{-n} = (x^n)\inv = 1\inv = 1,
     \]
-    so $|x\inv| \leq n$.
-    Since $(x\inv)\inv = x$, applying the preceding argument to $x\inv$ gives $n \leq |x\inv|$, and therefore $|x\inv| = n = |x|$.
+    so $\abs{x\inv} \leq n$.
+    Since $(x\inv)\inv = x$, applying the preceding argument to $x\inv$ gives $n \leq \abs{x\inv}$, and therefore $\abs{x\inv} = n = \abs{x}$.
 	In particular, $x$ has finite order if and only if $x\inv$ has finite order, and hence $x$ has infinite order if and only if $x\inv$ has infinite order.
 \end{sol}
 
@@ -397,33 +397,33 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}!{1.1.22}
-    If $x$ and $g$ are elements of the group $G$, prove that $|x| = |g^{-1} x g|$.
-	Deduce that $|ab| = |ba|$ for all $a, b \in G$.
+    If $x$ and $g$ are elements of the group $G$, prove that $\abs{x} = \abs{g^{-1} x g}$.
+	Deduce that $\abs{ab} = \abs{ba}$ for all $a, b \in G$.
 \end{exercise}
 
 \begin{sol}
     A simple induction on $n$ gives $(g\inv x g)^n = g\inv x^n g$ for all $n \in \zp$.
-	Let $|x| = m \in \zp$.
+	Let $\abs{x} = m \in \zp$.
 	Then
     \[
     	(g\inv x g)^m = g\inv x^m g = g\inv 1 g = 1,
     \]
-    so that $|g\inv x g| \leq m$.
-	Note that $x = (g\inv)\inv(g\inv x g) g\inv$, so applying the preceding argument with $g\inv$ in place of $g$ and $g\inv x g$ in place of $x$ gives $m \leq |g\inv x g|$.
-    Therefore, $|g\inv x g| = m = |x|$, so $x$ has finite order if and only if $g\inv x g$ has finite order, and $x$ has infinite order if and only if $g\inv x g$ has infinite order.
+    so that $\abs{g\inv x g} \leq m$.
+	Note that $x = (g\inv)\inv(g\inv x g) g\inv$, so applying the preceding argument with $g\inv$ in place of $g$ and $g\inv x g$ in place of $x$ gives $m \leq \abs{g\inv x g}$.
+    Therefore, $\abs{g\inv x g} = m = \abs{x}$, so $x$ has finite order if and only if $g\inv x g$ has finite order, and $x$ has infinite order if and only if $g\inv x g$ has infinite order.
 
-    In particular, for any $a, b \in G$, putting $x = ab$ and $g = a$ gives $|ab| = |a\inv (ab) a| = |ba|$.
+    In particular, for any $a, b \in G$, putting $x = ab$ and $g = a$ gives $\abs{ab} = \abs{a\inv (ab) a} = \abs{ba}$.
 \end{sol}
 
 \begin{exercise}{1.1.23}
-    Suppose $x \in G$ and $|x| = n < \infty$.
-	If $n = st$ for some positive integers $s$ and $t$, prove that $|x^s| = t$.
+    Suppose $x \in G$ and $\abs{x} = n < \infty$.
+	If $n = st$ for some positive integers $s$ and $t$, prove that $\abs{x^s} = t$.
 \end{exercise}
 
 \begin{sol}
-    Since $(x^s)^t = x^{st} = x^n = 1$, we have $|x^s| \leq t$.
+    Since $(x^s)^t = x^{st} = x^n = 1$, we have $\abs{x^s} \leq t$.
 	Moreover, if $(x^s)^r = 1$ for some $r \in \zp$, then $x^{sr} = 1$, so $n = st \leq sr$, hence $t \leq r$.
-	Therefore, $|x^s| = t$.
+	Therefore, $\abs{x^s} = t$.
 \end{sol}
 
 \begin{exercise}{1.1.24}
@@ -528,7 +528,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}{1.1.30}
-    Prove that the elements $(a, 1)$ and $(1, b)$ of $A \times B$ commute and deduce that the order of $(a, b)$ is the least common multiple of $|a|$ and $|b|$.
+    Prove that the elements $(a, 1)$ and $(1, b)$ of $A \times B$ commute and deduce that the order of $(a, b)$ is the least common multiple of $\abs{a}$ and $\abs{b}$.
 \end{exercise}
 
 \begin{sol}
@@ -539,18 +539,18 @@ Let $G$ be a group.
     \]
     so that $(a, 1)$ and $(1, b)$ commute.
 	Note that $(a, b)^k = (a, 1)^k (1, b)^k = (a^k, b^k)$ for all $k \in \zp$ by \exref{1.1.24}.
-    If $|(a, b)|$ is finite, then $(a^{|(a, b)|}, b^{|(a, b)|}) = (1, 1)$, whence $|a|$ and $|b|$ are both finite.
-    Conversely, finite $|a|$ and $|b|$ imply that $|(a, b)|$ is finite since $(a, b)^{|a|\,|b|} = (a^{|a|\,|b|}, b^{|a|\,|b|}) = (1, 1)$.
-    Therefore, $|(a, b)| = \infty$ if and only if $|a| = \infty$ or $|b| = \infty$.
-    Now suppose $|(a, b)|$ is finite, and let $n = |(a, b)|$ and $m = \lcm(|a|, |b|)$.
+    If $\abs{(a, b)}$ is finite, then $(a^{\abs{(a, b)}}, b^{\abs{(a, b)}}) = (1, 1)$, whence $\abs{a}$ and $\abs{b}$ are both finite.
+    Conversely, finite $\abs{a}$ and $\abs{b}$ imply that $\abs{(a, b)}$ is finite since $(a, b)^{\abs{a}\,\abs{b}} = (a^{\abs{a}\,\abs{b}}, b^{\abs{a}\,\abs{b}}) = (1, 1)$.
+    Therefore, $\abs{(a, b)} = \infty$ if and only if $\abs{a} = \infty$ or $\abs{b} = \infty$.
+    Now suppose $\abs{(a, b)}$ is finite, and let $n = \abs{(a, b)}$ and $m = \lcm(\abs{a}, \abs{b})$.
     Then $(a, b)^m = (a^m, b^m) = (1, 1)$, so that $n \leq m$.
     Suppose $(a, b)^\ell = (1, 1)$ for some $\ell \in \zp$.
-    By the division algorithm, write $\ell = q_1 |a| + r_1$ with $0 \leq r_1 < |a|$ and $\ell = q_2 |b| + r_2$ with $0 \leq r_2 < |b|$.
+    By the division algorithm, write $\ell = q_1 \abs{a} + r_1$ with $0 \leq r_1 < \abs{a}$ and $\ell = q_2 \abs{b} + r_2$ with $0 \leq r_2 < \abs{b}$.
     Then
     \[
-        (a, b)^\ell = (a^{q_1 |a| + r_1}, b^{q_2 |b| + r_2}) = (a^{r_1}, b^{r_2}).
+        (a, b)^\ell = (a^{q_1 \abs{a} + r_1}, b^{q_2 \abs{b} + r_2}) = (a^{r_1}, b^{r_2}).
     \]
-    By minimality of $|a|$ and $|b|$, we must have $r_1 = r_2 = 0$, and thus $\ell$ is a multiple of both $|a|$ and $|b|$.
+    By minimality of $\abs{a}$ and $\abs{b}$, we must have $r_1 = r_2 = 0$, and thus $\ell$ is a multiple of both $\abs{a}$ and $\abs{b}$.
     Therefore, $m \mid \ell$, and since $\ell$ was arbitrary, setting $\ell = n$ gives $m \mid n$.
     Combining this with $n \leq m$, we get $n = m$.
 \end{sol}
@@ -565,17 +565,17 @@ Let $G$ be a group.
 \begin{sol}
     Let $g \in t(G)$.
     Since $(g\inv)\inv = g$, we have $g\inv \in t(G)$.
-    We have $|\set{g, g\inv}| = 2$ since $g \neq g\inv$.
+    We have $\abs{\set{g, g\inv}} = 2$ since $g \neq g\inv$.
     If $g, h \in t(G)$ and $\set{g, g\inv} \cap \set{h, h\inv} \neq \emptyset$, then either $g = h$ or $g = h\inv$, in which case $\set{g, g\inv} = \set{h, h\inv}$, so the sets are either equal or disjoint.
     Hence, $t(G)$ can be partitioned into pairs $\set{g, g\inv}$, and thus has even cardinality.
     Since $G$ has even order, $G - t(G)$ has even cardinality.
-    Since $1 = 1\inv$, $1 \notin t(G)$, so $|G - t(G)| \geq 2$, and therefore there exists some $k \in G - t(G)$ with $k \neq 1$.
-    For such a $k$, we have $k = k\inv$, and thus $k^2 = 1$, so $|k| = 2$.
+    Since $1 = 1\inv$, $1 \notin t(G)$, so $\abs{G - t(G)} \geq 2$, and therefore there exists some $k \in G - t(G)$ with $k \neq 1$.
+    For such a $k$, we have $k = k\inv$, and thus $k^2 = 1$, so $\abs{k} = 2$.
 \end{sol}
 
 \begin{exercise}{1.1.32}
     If $x$ is an element of finite order $n$ in $G$, prove that the elements $1, x, x^2, \dots, x^{n-1}$ are all distinct.
-	Deduce that $|x| \leq |G|$.
+	Deduce that $\abs{x} \leq \abs{G}$.
 \end{exercise}
 
 \begin{sol}
@@ -584,9 +584,9 @@ Let $G$ be a group.
     \[
     	1 = x^b x^{-a} = x^{b - a},
     \]
-    so $|x| \leq b - a < n$, which is a contradiction.
+    so $\abs{x} \leq b - a < n$, which is a contradiction.
 	Hence, the elements $1, x, x^2, \dots, x^{n-1}$ are all distinct.
-	Therefore, $G$ contains $n$ distinct elements, so $|x| = n \leq |G|$.
+	Therefore, $G$ contains $n$ distinct elements, so $\abs{x} = n \leq \abs{G}$.
 \end{sol}
 
 \begin{exercise}{1.1.33}
@@ -645,11 +645,11 @@ Let $G$ be a group.
 	By cancellation, we have $b = a\inv c = ac$.
 	By symmetry, $ba = c$ and $b = ca$.
 
-    To see that $|b| = |c| = 2$, we first note that $b^2 = (ca)(ac) = c(a^2)c = c^2$.
+    To see that $\abs{b} = \abs{c} = 2$, we first note that $b^2 = (ca)(ac) = c(a^2)c = c^2$.
 	If $b^2 = b$, then $b = 1$, contradicting that $b \neq 1$.
     If $b^2 = c$, then $b^2 = ab$, yielding $b = a$, contradicting that $b \neq a$.
-    If $b^2 = a$, then $b^3 = ab = c \neq 1$, contradicting that $|b| \leq 3$.
-    Hence, $b^2 = c^2 = 1$ so that $|b| = |c| = 2$.
+    If $b^2 = a$, then $b^3 = ab = c \neq 1$, contradicting that $\abs{b} \leq 3$.
+    Hence, $b^2 = c^2 = 1$ so that $\abs{b} = \abs{c} = 2$.
     Then $bc = (ac)c = a(c^2) = a$, and similarly, $cb = c(ca) = (c^2)a = a$.
 	Therefore, the group table is uniquely determined as follows:
     \[

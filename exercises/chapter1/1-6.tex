@@ -33,32 +33,23 @@ Let $G$ and $H$ be groups.
 \end{solenum}
 
 \begin{exercise}!{1.6.2}
-    If $\phi \colon G \to H$ is an isomorphism, prove that $|\phi(x)| = |x|$ for all $x \in G$.
+    If $\phi \colon G \to H$ is an isomorphism, prove that $\abs{\phi(x)} = \abs{x}$ for all $x \in G$.
 	Deduce that any two isomorphic groups have the same number of elements of order $n$ for each $n \in \zbb^+$.
 	Is the result true if $\phi$ is only assumed to be a homomorphism?
 \end{exercise}
 
 \begin{sol}
-    Let $x \in G$.
-    If $|x| = \infty$, then $\phi(x)^n = \phi(x^n) \neq 1_H$ for all $n \in \zp$, so that $|\phi(x)| = \infty$.
-    A similar argument shows that if $|\phi(x)| = \infty$, then $|x| = \infty$.
-    Hence, we may assume that $|x|$ and $|\phi(x)|$ are both finite.
-	Let $\abs x = m$ and $\abs{\phi(x)} = n$.
-	Then
+    Let $x \in G$ and $k \in \zp$.
+    By \exref{1.6.1} and injectivity of $\phi$,
     \[
-    	1_H = \phi(1_G) = \phi(x^m) = \phi(x)^m
+        x^k = 1_G \iff \phi(x)^k = \phi(x^k) = 1_H.
     \]
-    so that $n \leq m$.
-	Similarly,
-    \[
-    	1_G = \phi\inv(1_H) = \phi\inv(\phi(x)^n) = x^n
-    \]
-    so that $m \leq n$.
-	It follows that $m = n$, i.e., $|\phi(x)| = |x|$.
-	Moreover, since $\phi$ is bijective, it induces a bijection between the elements of order $n$ in $G$ and the elements of order $n$ in $H$.
-	Hence, any two isomorphic groups have the same number of elements of order $n$ for each $n \in \zbb^+$.
+    Then $x$ and $\phi(x)$ have the same set of positive integers $k$ such that $x^k = 1_G$ and $\phi(x)^k = 1_H$, respectively, and thus $\abs{x} = \abs{\phi(x)}$.
+    Consequently, the restriction $\phi|_S$, where $S = \set{g \in G \mid \abs{g} = n}$, is a bijection onto $\set{h \in H \mid \abs{h} = n}$, so the number of elements of order $n$ in $G$ and $H$ is the same.
 
-    The result is not true if $\phi$ is only assumed to be a homomorphism. Consider a nontrivial group $G$ and the trivial homomorphism $\phi \colon G \to 1$. Then $G$ contains nonidentity elements whose order is greater than 1, but only $1 \in 1$ has order 1.
+    The result is not true if $\phi$ is only assumed to be a homomorphism.
+    Consider $\phi \colon G \to 1$ for some nontrivial group $G$.
+    Then any nonidentity $x \in G$ has order greater than 1, but $\phi(x) = 1$ has order 1.
 \end{sol}
 
 \begin{exercise}{1.6.3}
@@ -121,7 +112,7 @@ Let $G$ and $H$ be groups.
     \[
         r = \phi(1) = \phi\underbrace{\left(\frac{1}{n} + \frac{1}{n} + \cdots + \frac{1}{n}\right)}_{n\text{ times}} = \underbrace{\phi\left(\frac{1}{n}\right) + \phi\left(\frac{1}{n}\right) + \cdots + \phi\left(\frac{1}{n}\right)}_{n\text{ times}} = n\phi\left(\frac{1}{n}\right),
     \]
-    so $\phi(1/n) = r/n \in \zbb$, contradicting that $r/n \notin \zbb$ for $n > |r|$.
+    so $\phi(1/n) = r/n \in \zbb$, contradicting that $r/n \notin \zbb$ for $n > \abs{r}$.
     Hence, $\phi$ cannot be an isomorphism.
 \end{sol}
 
@@ -138,7 +129,7 @@ Let $G$ and $H$ be groups.
 \end{exercise}
 
 \begin{sol}
-    If $n \neq m$, then $n! \neq m!$ so that $|S_n| \neq |S_m|$.
+    If $n \neq m$, then $n! \neq m!$ so that $\abs{S_n} \neq \abs{S_m}$.
 \end{sol}
 
 \begin{exercise}{1.6.9}
@@ -150,7 +141,7 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{exercise}{1.6.10}
-    Fill in the details of the proof that the symmetric groups $S_\Delta$ and $S_\Omega$ are isomorphic if $|\Delta| = |\Omega|$ as follows: let $\theta \colon \Delta \to \Omega$ be a bijection.
+    Fill in the details of the proof that the symmetric groups $S_\Delta$ and $S_\Omega$ are isomorphic if $\abs{\Delta} = \abs{\Omega}$ as follows: let $\theta \colon \Delta \to \Omega$ be a bijection.
 	Define
     \[
         \phi \colon S_\Delta \to S_\Omega \quad \text{by} \quad \phi(\sigma) = \theta \circ \sigma \circ \theta^{-1} \quad \text{for all } \sigma \in S_\Delta
@@ -470,7 +461,7 @@ Let $G$ and $H$ be groups.
 
 \begin{exercise}{1.6.24}
     Let $G$ be a finite group and let $x$ and $y$ be distinct elements of order 2 in $G$ that generate $G$.
-	Prove that $G \cong D_{2n}$, where $n = |xy|$.
+	Prove that $G \cong D_{2n}$, where $n = \abs{xy}$.
 \end{exercise}
 
 \begin{sol}
@@ -483,16 +474,16 @@ Let $G$ and $H$ be groups.
     \]
     so that the elements $x$ and $t$ satisfy the relations of the generators of $D_{2n}$.
     Observe that $y = xt$, so $t, x$ generate $G$.
-    Since $|x| = 2$ and $|t| = n$, we may use relations of the generators to write any element of $G$ in the form $t^j$ or $xt^j$ for some integer $j$.
+    Since $\abs{x} = 2$ and $\abs{t} = n$, we may use relations of the generators to write any element of $G$ in the form $t^j$ or $xt^j$ for some integer $j$.
     The elements $1, t, t^2, \ldots, t^{n-1}$ are distinct by \exref{1.1.32}.
-    Moreover, the elements $x, xt, xt^2, \ldots, xt^{n-1}$ are $n$ distinct elements: if $xt^j = xt^k$ for some $0 \leq j, k < n$, then $t^{|k - j|} = 1$, contradicting the fact that $|t| = n$.
+    Moreover, the elements $x, xt, xt^2, \ldots, xt^{n-1}$ are $n$ distinct elements: if $xt^j = xt^k$ for some $0 \leq j, k < n$, then $t^{\abs{k - j}} = 1$, contradicting the fact that $\abs{t} = n$.
     To see that no element is in both sets, consider $x t^j = t^k$ for some $0 \leq j, k < n$.
     Then $x = t^{k - j}$, so $x t = t^{k - j} t = t^{k - j + 1}$.
     From the relation $xt = t\inv x$, we have
     \[
         t^{k - j}t = t\inv t^{k - j} \implies t^{k - j + 1} = t^{k - j - 1} \implies t^2 = 1.
     \]
-    Then $n = |t| = 2$, so that $G = \set{1, t, x, xt}$.
+    Then $n = \abs{t} = 2$, so that $G = \set{1, t, x, xt}$.
     Since $0 \leq j, k < 2$, $x \neq 1$ forces $k - j \in \set{-1, 0, 1}$.
     \begin{itemize}
         \item If $k - j = 0$, then $x = t^0 = 1$, a contradiction.

@@ -23,10 +23,10 @@
         \]
         so that $H \leq G$.
         \item Since $\abs 1 = 1$, $1 \in H$ so that it is nonempty.
-        For $z, w \in H$, we first note that $|w\inv| = 1/|w| = 1/1 = 1$.
+        For $z, w \in H$, we first note that $\abs{w\inv} = 1/\abs{w} = 1/1 = 1$.
         Then
         \[
-        	|zw\inv| = |z||w\inv| = 1 \cdot 1 = 1
+        	\abs{zw\inv} = \abs{z}\abs{w\inv} = 1 \cdot 1 = 1
         \]
         so that $zw\inv \in H$, hence $H \leq G$.
         \item Fix $n \in \zp$.
@@ -63,7 +63,7 @@
     \begin{subexercises}
         \item The set of $2$-cycles in $S_n$ for $n \ge 3$.
         \item The set of reflections in $D_{2n}$ for $n \ge 3$.
-        \item For $n$ a composite integer $>1$ and $G$ a group containing an element of order $n$, the set $\set{x \in G \mid |x| = n} \cup \set{1}$.
+        \item For $n$ a composite integer $>1$ and $G$ a group containing an element of order $n$, the set $\set{x \in G \mid \abs{x} = n} \cup \set{1}$.
         \item The set of (positive and negative) odd integers in $\zbb$ together with $0$.
         \item The set of real numbers whose square is a rational number (under addition).
     \end{subexercises}
@@ -76,7 +76,7 @@
         \item For $n = 3$, then $s, sr \in H$, but $s(sr) = r \notin H$.
         \item Let $n = ab$ for some $a, b \in \zp$ with $1 < a, b < n$.
 	    Let $x \in G$ with $\abs x = n$.
-	    Then $x \in H$ so that $x^a \in H$, but $(x^a)^b = x^n = 1$ implies that $|x^a| \leq b$.
+	    Then $x \in H$ so that $x^a \in H$, but $(x^a)^b = x^n = 1$ implies that $\abs{x^a} \leq b$.
         \item Observe that $1 \in H$, but $1 + 1 = 2 \notin H$.
         \item Observe that $\sqrt 2, \sqrt 3 \in H$, but $(\sqrt 2 + \sqrt 3)^2 \notin \qbb$. \qedhere
     \end{subexercises}
@@ -127,29 +127,29 @@
 \end{sol}
 
 \begin{exercise}{2.1.5}
-    Prove that $G$ cannot have a subgroup $H$ with $|H| = n - 1$, where $n = |G| > 2$.
+    Prove that $G$ cannot have a subgroup $H$ with $\abs{H} = n - 1$, where $n = \abs{G} > 2$.
 \end{exercise}
 
 \begin{sol}
-   If $H \leq G$ with $|H| = n - 1$, then there exists $k \in \zp$ such that $k(n - 1) = n$ by Lagrange's Theorem.
+   If $H \leq G$ with $\abs{H} = n - 1$, then there exists $k \in \zp$ such that $k(n - 1) = n$ by Lagrange's Theorem.
    But since $1 < n/(n - 1) < 2$ for all $n > 2$, no such $k$ can exist.
 \end{sol}
 
 \begin{exercise}!{2.1.6}
     Let $G$ be an abelian group.
-	Prove that $\set{ g \in G \mid |g| < \infty }$ is a subgroup of $G$ (called the \textbf{torsion subgroup} of $G$).
+	Prove that $\set{ g \in G \mid \abs{g} < \infty }$ is a subgroup of $G$ (called the \textbf{torsion subgroup} of $G$).
 	Give an explicit example where this set is not a subgroup when $G$ is nonabelian.
 \end{exercise}
 
 \begin{sol}
     Let the torsion subgroup be denoted as $\tor(G)$.
-	Since $|1| = 1$, $1 \in \tor(G)$.
-	If $g, h \in \tor(G)$ such that $|g| = m$ and $|h| = n$, we have
+	Since $\abs{1} = 1$, $1 \in \tor(G)$.
+	If $g, h \in \tor(G)$ such that $\abs{g} = m$ and $\abs{h} = n$, we have
     \[
     	(gh\inv)^{mn} = g^{mn}(h\inv)^{mn} = (g^m)^n((h^n)\inv)^m = 1^n(1\inv)^m = 1,
     \]
     where the first equality follows from $G$ being abelian.
-	Then $|gh\inv| \leq mn$, hence $gh\inv \in \tor(G)$, and $\tor(G) \leq G$.
+	Then $\abs{gh\inv} \leq mn$, hence $gh\inv \in \tor(G)$, and $\tor(G) \leq G$.
 
     Consider $G = \gl_2(\rbb)$ where
     \[
@@ -164,7 +164,7 @@
             0 & 1
         \end{pmatrix}.
 	\]
-    Note that $|A| = |B| = 2$ so that $A, B \in \tor(G)$.
+    Note that $\abs{A} = \abs{B} = 2$ so that $A, B \in \tor(G)$.
 	However,
     \[
     	AB = 
@@ -182,7 +182,7 @@
         \end{pmatrix}
 	\]
     for all $n \in \zp$.
-	Hence, $|AB| = \infty$, so $AB \notin \tor(G)$.
+	Hence, $\abs{AB} = \infty$, so $AB \notin \tor(G)$.
 \end{sol}
 
 \begin{exercise}{2.1.7}

@@ -20,11 +20,11 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, rs = sr\inv}$.
 	We now compute the orders of the rotations in each group.
     \begin{subexercises}
         \item $D_6 = \set{1, r, r^2, s, sr, sr^2}$.
-	    Then $|1| = 1$ and $|r| = |r^2| = 3$.
+	    Then $\abs{1} = 1$ and $\abs{r} = \abs{r^2} = 3$.
         \item $D_8 = \set{1, r, r^2, r^3, s, sr, sr^2, sr^3}$.
-	    Then $|1| = 1$, $|r^2| = 2$, and $|r| = |r^3| = 4$.
+	    Then $\abs{1} = 1$, $\abs{r^2} = 2$, and $\abs{r} = \abs{r^3} = 4$.
         \item $D_{10} = \set{1, r, r^2, r^3, r^4, s, sr, sr^2, sr^3, sr^4}$.
-	    Then $|1| = 1$ and $|r| = |r^2| = |r^3| = |r^4| = 5$. \qedhere
+	    Then $\abs{1} = 1$ and $\abs{r} = \abs{r^2} = \abs{r^3} = \abs{r^4} = 5$. \qedhere
     \end{subexercises}
 \end{sol}
 
@@ -49,7 +49,7 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, rs = sr\inv}$.
  
 \begin{sol}
     Since every element that is not a power of $r$ is of the form $s r^k$, it follows from \exref{1.2.1} that such elements have order $2$.
-    Therefore, $|s| = |sr| = 2$.
+    Therefore, $\abs{s} = \abs{sr} = 2$.
 	Moreover, $r = s(sr)$, so $r, s \in \gen{s, s r}$, and therefore $\gen{s, sr} = D_{2n}$.
 \end{sol}
 
@@ -62,7 +62,7 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, rs = sr\inv}$.
    
 \begin{sol}
     Since the elements $1, r, \ldots, r^{n-1}$ are all distinct and $0 < k < n$, we have $r^k \neq 1$.
-	Moreover, $(r^k)^2 = r^n = 1$, hence $|r^k| = 2$.
+	Moreover, $(r^k)^2 = r^n = 1$, hence $\abs{r^k} = 2$.
     In particular, $r^k = (r^k)\inv = r^{-k}$.
 	Since $r^k$ commutes with other powers of $r$, consider $sr^j \in D_{2n}$ for $0 \leq j < n$.
 	By applying \exref{1.2.2} $k$ times with $x = s r^j$, we have $r^k (s r^j) = (s r^j) r^{-k} = (s r^j) r^k$.
@@ -70,7 +70,7 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, rs = sr\inv}$.
     Now let $w \in D_{2n}$ such that $wx = xw$ for all $x \in D_{2n}$.
 	If $w = r^m$ for $0 < m < n$, then commuting with $s$ gives $w = w\inv$, which implies $m = k$ by \exref{1.1.33}.
 	If $w = sr^m$ instead, then $r w = w r$.
-    By \exref{1.2.2} with $x = w$, we have $r w = w r\inv$, so $w r = w r\inv$, and therefore $r^2 = 1$, contradicting $|r| \geq 4$.
+    By \exref{1.2.2} with $x = w$, we have $r w = w r\inv$, so $w r = w r\inv$, and therefore $r^2 = 1$, contradicting $\abs{r} \geq 4$.
 \end{sol}
 
 \begin{exercise}{1.2.5}
@@ -83,16 +83,16 @@ $D_{2n} = \gen{r, s \mid r^n = s^2 = 1, rs = sr\inv}$.
     Let $x \in D_{2n}$ commute with all elements of $D_{2n}$.
     If $x = r^m$ for some $0 < m < n$, commuting with $s$ gives $r^m = r^{-m}$, which cannot occur by \exref{1.1.33}.
     If $x = s r^m$ for some $0 \leq m < n$, commuting with $r$ gives $r s r^m = s r^m r$, and \exref{1.2.2} gives $r s r^m = s r^m r\inv$.
-    Then $r^2 = 1$, contradicting $|r| \geq 3$, so $x = 1$.
+    Then $r^2 = 1$, contradicting $\abs{r} \geq 3$, so $x = 1$.
 \end{sol}
 
 \begin{exercise}{1.2.6}
     Let $x$ and $y$ be elements of order $2$ in any group $G$.
-	Prove that if $t = xy$, then $tx = xt\inv$ (so that if $n = |xy| < \infty$ then $x, y$ satisfy the same relations in $G$ as $s, r$ do in $D_{2n}$).
+	Prove that if $t = xy$, then $tx = xt\inv$ (so that if $n = \abs{xy} < \infty$ then $x, y$ satisfy the same relations in $G$ as $s, r$ do in $D_{2n}$).
 \end{exercise}
 
 \begin{sol}
-    Since $|x| = |y| = 2$, we have $x = x\inv$ and $y = y\inv$.
+    Since $\abs{x} = \abs{y} = 2$, we have $x = x\inv$ and $y = y\inv$.
 	Then
     \[
     	tx = (xy)x = x(yx) = x(xy)\inv = x t\inv. \qedhere
@@ -134,57 +134,57 @@ Alternatively, you can find the number of places to which a given face may be se
 
 \begin{exercise}{1.2.9} 
     Let $G$ be the group of rigid motions in $\rbb^3$ of a tetrahedron.
-	Show that $|G| = 12$.
+	Show that $\abs{G} = 12$.
 \end{exercise}
 
 \begin{sol}
     Label the vertices of the tetrahedron $1$ through $4$.
     Vertex $1$ has $4$ choices, and vertex $2$ has $3$ choices.
-    Since symmetries are rigid motions, the positions of the remaining vertices are determined once vertices $1$ and $2$ are fixed, so $|G| = 4 \cdot 3 = 12$.
+    Since symmetries are rigid motions, the positions of the remaining vertices are determined once vertices $1$ and $2$ are fixed, so $\abs{G} = 4 \cdot 3 = 12$.
 \end{sol}
 
 \begin{exercise}{1.2.10}
     Let $G$ be the group of rigid motions in $\rbb^3$ of a cube.
-	Show that $|G| = 24$.
+	Show that $\abs{G} = 24$.
 \end{exercise}
 
 \begin{sol}
     Label the vertices of the cube $1$ through $8$ with vertices $1$ and $2$ adjacent to each other.
     Vertex $1$ has $8$ choices, and vertex $2$ has $3$ choices.
-    Since symmetries are rigid motions, the positions of the remaining vertices are determined once vertices $1$ and $2$ are fixed, so $|G| = 8 \cdot 3 = 24$.
+    Since symmetries are rigid motions, the positions of the remaining vertices are determined once vertices $1$ and $2$ are fixed, so $\abs{G} = 8 \cdot 3 = 24$.
 \end{sol}
 
 \begin{exercise}{1.2.11}
     Let $G$ be the group of rigid motions in $\rbb^3$ of an octahedron.
-	Show that $|G| = 24$.
+	Show that $\abs{G} = 24$.
 \end{exercise}
 
 \begin{sol}
     Label the vertices of the octahedron $1$ through $6$ with vertices $1$ and $2$ adjacent to each other.
     Vertex $1$ has $6$ choices, and vertex $2$ has $4$ choices.
-    Since symmetries are rigid motions, the positions of the remaining vertices are determined once vertices $1$ and $2$ are fixed, so $|G| = 6 \cdot 4 = 24$.
+    Since symmetries are rigid motions, the positions of the remaining vertices are determined once vertices $1$ and $2$ are fixed, so $\abs{G} = 6 \cdot 4 = 24$.
 \end{sol}
 
 \begin{exercise}{1.2.12}
     Let $G$ be the group of rigid motions in $\rbb^3$ of a dodecahedron.
-	Show that $|G| = 60$.
+	Show that $\abs{G} = 60$.
 \end{exercise}
 
 \begin{sol}
     Label the vertices of the dodecahedron $1$ through $20$ with vertices $1$ and $2$ adjacent to each other.
     Vertex $1$ has $20$ choices, and vertex $2$ has $3$ choices.
-    Since symmetries are rigid motions, the positions of the remaining vertices are determined once vertices $1$ and $2$ are fixed, so $|G| = 20 \cdot 3 = 60$.
+    Since symmetries are rigid motions, the positions of the remaining vertices are determined once vertices $1$ and $2$ are fixed, so $\abs{G} = 20 \cdot 3 = 60$.
 \end{sol}
 
 \begin{exercise}{1.2.13}
     Let $G$ be the group of rigid motions in $\rbb^3$ of an icosahedron.
-	Show that $|G| = 60$.
+	Show that $\abs{G} = 60$.
 \end{exercise}
 
 \begin{sol}
     Label the vertices of the icosahedron $1$ through $12$ with vertices $1$ and $2$ adjacent to each other.
     Vertex $1$ has $12$ choices, and vertex $2$ has $5$ choices.
-    Since symmetries are rigid motions, the positions of the remaining vertices are determined once vertices $1$ and $2$ are fixed, so $|G| = 12 \cdot 5 = 60$.
+    Since symmetries are rigid motions, the positions of the remaining vertices are determined once vertices $1$ and $2$ are fixed, so $\abs{G} = 12 \cdot 5 = 60$.
 \end{sol}
 
 \begin{exercise}{1.2.14}
@@ -239,13 +239,13 @@ Alternatively, you can find the number of places to which a given face may be se
     \[
         x^{3k} = (r^3)^k = 1, \quad y^2 = s^2 = 1, \quad xy = rs = sr^2 = yx^2.
     \]
-    Therefore, the two presentations are equivalent, and $|X_{6k}| = |D_6| = 6$.
+    Therefore, the two presentations are equivalent, and $\abs{X_{6k}} = \abs{D_6} = 6$.
     \item Since $(3, n) = 1$, there exist integers $a$ and $b$ such that $3a + nb = 1$.
 	From the relations of $X_{2n}$ and as in (a), $x^n = 1$ and $x^3 = 1$, so
     \[
     	x = x^{3a + nb} = (x^3)^a (x^n)^b = 1^a 1^b = 1.
     \]
-    Since $x = 1$, the only remaining relation is $y^2 = 1$, and thus $X_{2n} = \set{1, y}$ with $|X_{2n}| = 2$.
+    Since $x = 1$, the only remaining relation is $y^2 = 1$, and thus $X_{2n} = \set{1, y}$ with $\abs{X_{2n}} = 2$.
 \end{solenum}
 
 \begin{exercise}{1.2.18}
