@@ -14,7 +14,7 @@
 
 \begin{sol}
     \[
-        \begin{array}{c|c|c|c}
+        \begin{array}{*{4}{c|}}
             & (a, b) & \lcm(a, b) & ax + by \\
             \hline
             (\text a) & 1 & 260 & 2(20) - 3(13) \\
@@ -76,18 +76,18 @@
 
 \begin{sol}
     \[
-        \begin{array}{c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c}
+        \begin{array}{*{16}{c|}}
             n & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\
             \hline
             \phi(n) & 1 & 1 & 2 & 2 & 4 & 2 & 6 & 4 & 6 & 4 & 10 & 4 & 12 & 6 & 8
         \end{array}
     \]
     \[
-        \begin{array}{c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c}
+        \begin{array}{*{16}{c|}}
             n & 16 & 17 & 18 & 19 & 20 & 21 & 22 & 23 & 24 & 25 & 26 & 27 & 28 & 29 & 30 \\
             \hline
             \phi(n) & 8 & 16 & 6 & 18 & 8 & 12 & 10 & 22 & 8 & 20 & 12 & 18 & 12 & 28 & 8
-        \end{array}. \qedhere
+        \end{array}\,. \qedhere
     \]
 \end{sol}
 
@@ -112,7 +112,7 @@
 \end{exercise}
 
 \begin{sol}
-    Suppose there exist $a, b \in \zbb \nzero$ such that $a^2 = pb^2$.
+    Suppose there exist $a, b \in \zbb - \set{0}$ such that $a^2 = pb^2$.
     Without loss of generality, assume $(a, b) = 1$.
     Then $p \mid a^2$, so $p \mid a$.
     Put $a = pk$ for some $k \in \zbb$.
