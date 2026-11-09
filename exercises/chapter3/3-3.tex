@@ -4,13 +4,13 @@ Let $G$ be a group.
 
 \begin{exercise}{3.3.1}
     Let $F$ be a finite field of order $q$ and let $n \in \zp$.
-	Prove that $|\gl_n(F) : \splin_n(F)| = q - 1$. [See \exref{3.1.35}.]
+	Prove that $|\gl_n(F) \colon \splin_n(F)| = q - 1$. [See \exref{3.1.35}.]
 \end{exercise}
 
 \begin{sol}
     In \exref{3.1.35}, we showed that $\splin_n(F) \nsub \gl_n(F)$ and that $\gl_n(F)/\splin_n(F) \cong F\unt$.
 	Since $F$ is a finite field of order $q$, $\abs{F\unt} = q - 1$.
-	We then have that $|\gl_n(F) : \splin_n(F)| = \abs{F\unt} = q - 1$.
+	We then have that $|\gl_n(F) \colon \splin_n(F)| = \abs{F\unt} = q - 1$.
 \end{sol}
 
 \begin{exercise}!{3.3.2}
@@ -22,7 +22,7 @@ Let $G$ be a group.
 	Let $\bar{\acal} = \set{\bar A \leq \bar G}$ be the set of subgroups of $\bar G = G/N$.
 	Define the map
     \[
-    	\phi : \acal \to \bar{\acal} \quad \text{by} \quad \phi(A) = \bar A = A/N
+    	\phi \colon \acal \to \bar{\acal} \quad \text{by} \quad \phi(A) = \bar A = A/N
     \]
     We first show that $\phi(A) \leq \bar G$.
 	Since $1 \in A$ for any $A \in \acal$, $1N = N \in \bar A$ so that $\bar 1 \in \bar A$, hence $\bar A$ is nonempty.
@@ -34,7 +34,7 @@ Let $G$ be a group.
     so that $\bar A \leq \bar G$.
 
     Next, we show that $\phi$ is surjective.
-	Let $\bar A \in \bar{\acal}$, and let $\pi : G \to \bar G$ be the natural projection homomorphism.
+	Let $\bar A \in \bar{\acal}$, and let $\pi \colon G \to \bar G$ be the natural projection homomorphism.
 	Consider $\pi\inv(\bar A)$.
 	Since $\pi$ is a homomorphism, $\pi\inv(\bar A) \leq G$.
 	Moreover, since $\bar 1 \in \bar A$, $N = \pi\inv(\bar 1) \subseteq \pi\inv(\bar A)$ so that $\pi\inv(\bar A) \in \acal$.
@@ -60,7 +60,7 @@ Let $G$ be a group.
         Therefore, $A \leq B$.
         \item Define the map
         \[
-        	\psi : B/A \to \bar B / \bar A \quad \text{by} \quad \psi(bA) = \bar b \bar A
+        	\psi \colon B/A \to \bar B / \bar A \quad \text{by} \quad \psi(bA) = \bar b \bar A
         \]
         for $b \in B$.
         To show $\psi$ is well-defined, suppose $b_1A = b_2A$ for some $b_1, b_2 \in B$.
@@ -79,7 +79,7 @@ Let $G$ be a group.
         	\psi(b_1A \cdot b_2A) = \psi(b_1b_2A) = \bar{b_1b_2} \bar A = \bar b_1 \bar b_2 \bar A = \psi(b_1A) \cdot \psi(b_2A)
         \]
         so that $\psi$ is a homomorphism.
-        Therefore, $\psi$ is an isomorphism and $|B : A| = |B/A| = |\bar B / \bar A| = |\bar B : \bar A|$.
+        Therefore, $\psi$ is an isomorphism and $|B \colon A| = |B/A| = |\bar B / \bar A| = |\bar B \colon \bar A|$.
         \item Let $\bar x \in \bar{\gen{A, B}}$.
         Then $x \in \gen{A, B}$ so that $x = x_1x_2 \ldots x_n$ where $x_i \in A \cup B$ for each $1 \leq i \leq n$.
         It follows that
@@ -119,7 +119,7 @@ Let $G$ be a group.
     Prove that if $H$ is a normal subgroup of $G$ of prime index $p$ then for all $K \leq G$ either
     \begin{enumerate}
         \item[(i)] $K \leq H$ or
-        \item[(ii)] $G = HK$ and $|K : K \cap H| = p$.
+        \item[(ii)] $G = HK$ and $|K \colon K \cap H| = p$.
     \end{enumerate}
 \end{exercise}
 
@@ -128,17 +128,17 @@ Let $G$ be a group.
 	By Proposition 3.14, $HK = KH$.
 	By \exref{3.2.11}, we have
     \[
-    	|G : H| = |G : HK| \cdot |HK : H|.
+    	|G \colon H| = |G \colon HK| \cdot |HK \colon H|.
     \]
-    Since $|G : H| = p$ is prime, we have two cases:
+    Since $|G \colon H| = p$ is prime, we have two cases:
     \begin{enumerate}
-        \item If $|G : HK| = 1$, then $G = HK$.
+        \item If $|G \colon HK| = 1$, then $G = HK$.
 	    By the Second Isomorphism Theorem, we have
         \[
         	K/(K \cap H) \cong KH/H = G/H
         \]
-        so that $|K : K \cap H| = |KH : H| = |G : H| = p$.
-        \item If $|G : HK| = p$, then $|HK : H| = 1$, hence $HK = H$.
+        so that $|K \colon K \cap H| = |KH \colon H| = |G \colon H| = p$.
+        \item If $|G \colon HK| = p$, then $|HK \colon H| = 1$, hence $HK = H$.
 	It follows that $K \leq H$. \qedhere
     \end{enumerate}
 \end{sol}
@@ -151,7 +151,7 @@ Let $G$ be a group.
 \begin{sol}
     Define the map
     \[
-    	\phi : A \times B \to (A/C) \times (B/D) \quad \text{by} \quad \phi(a, b) = (aC, bD)
+    	\phi \colon A \times B \to (A/C) \times (B/D) \quad \text{by} \quad \phi(a, b) = (aC, bD)
     \]
     for $a \in A$ and $b \in B$.
 	It is easy to see that $\phi$ is well-defined.
@@ -267,7 +267,7 @@ Let $G$ be a group.
     \end{center}
     Consider the mapping
     \[
-    	\phi : G \to (G/M) \times (G/N) \quad \text{by} \quad \phi(g) = (gM, gN)
+    	\phi \colon G \to (G/M) \times (G/N) \quad \text{by} \quad \phi(g) = (gM, gN)
     \]
     for $g \in G$.
 	It is easy to see that $\phi$ is well-defined.
@@ -333,7 +333,7 @@ Let $G$ be a group.
 
 \begin{exercise}{3.3.10}
     Generalize the preceding exercise as follows.
-	A subgroup $H$ of a finite group $G$ is called a \emph{Hall subgroup} of $G$ if its index in $G$ is relatively prime to its order: $(|G : H|, |H|) = 1$.
+	A subgroup $H$ of a finite group $G$ is called a \emph{Hall subgroup} of $G$ if its index in $G$ is relatively prime to its order: $(|G \colon H|, |H|) = 1$.
 	Prove that if $H$ is a Hall subgroup of $G$ and $N \nsub G$, then $H \cap N$ is a Hall subgroup of $N$ and $HN/N$ is a Hall subgroup of $G/N$.
 \end{exercise}
 
@@ -341,13 +341,13 @@ Let $G$ be a group.
     It follows by the Second Isomorphism Theorem that $HN \leq G$ and $HN/N \cong H/(H \cap N)$.
 	Note that
     \[
-    	|HN| = \frac{\abs H \abs N}{\abs{H \cap N}} \quad \text{must divide} \quad \abs G = \abs H |G : H|
+    	|HN| = \frac{\abs H \abs N}{\abs{H \cap N}} \quad \text{must divide} \quad \abs G = \abs H |G \colon H|
     \]
-    Hence, $|N|/\abs{H \cap N}$ divides $|G : H|$.
-	Since $(|G : H|, \abs H) = 1$, and $|N|/|H \cap N|$ divides $|G : H|$, it follows that $(|N|/\abs{H \cap N}, \abs H) = 1$, hence $(\abs{N : H \cap N}, \abs{H \cap N}) = 1$.
+    Hence, $|N|/\abs{H \cap N}$ divides $|G \colon H|$.
+	Since $(|G \colon H|, \abs H) = 1$, and $|N|/|H \cap N|$ divides $|G \colon H|$, it follows that $(|N|/\abs{H \cap N}, \abs H) = 1$, hence $(\abs{N \colon H \cap N}, \abs{H \cap N}) = 1$.
 	Then $H \cap N$ is a Hall subgroup of $N$.
 
-    Now, observe that $|G/N : HN/N| = |G|/|HN| = |G:H|/|HN : H|$.
+    Now, observe that $|G/N \colon HN/N| = |G|/|HN| = |G:H|/|HN \colon H|$.
 	Moreover, $|HN/N| = |H|/|H \cap N|$.
-	Then $(|G/N : HN/N|, |HN/N|) = 1$ follows because $(|G : H|, \abs H) = 1$, hence $HN/N$ is a Hall subgroup of $G/N$.
+	Then $(|G/N \colon HN/N|, |HN/N|) = 1$ follows because $(|G \colon H|, \abs H) = 1$, hence $HN/N$ is a Hall subgroup of $G/N$.
 \end{sol}

@@ -83,7 +83,7 @@
 	Then $\sigma^4 = \tau^2 = 1$.
 	Moreover, $\sigma\tau = \cyc{1 2 3 4}\cyc{1 3} = \cyc{1 4}\cyc{2 3}$, and $\tau\sigma\inv = \cyc{1 3}\cyc{4 3 2 1} = \cyc{1 4}\cyc{2 3}$, so that $\sigma\tau = \tau\sigma\inv$.
 	This satisfies the same relations in $S_4$ as $r$ and $s$ do in $D_8$.
-	We then define a surjective homomorphism $\phi : D_8 \to \gen{\sigma, \tau}$ by $\phi(r) = \sigma$ and $\phi(s) = \tau$.
+	We then define a surjective homomorphism $\phi \colon D_8 \to \gen{\sigma, \tau}$ by $\phi(r) = \sigma$ and $\phi(s) = \tau$.
 	Then $\gen{\sigma, \tau}$ has at most 8 elements, showing that it is a proper subgroup of $S_4$.
 	It is easy to see that $\phi$ maps to distinct elements in $\gen{\sigma, \tau}$, hence $\abs{\gen{\sigma, \tau}} = 8$ and $\phi$ is an isomorphism.
 	Therefore, $\gen{\sigma, \tau} \cong D_8$.
@@ -226,7 +226,7 @@
 \begin{solenum}
     \item Consider $X = \set{1, 2, 3, 4, 5} - \set i$, where $i \in \set{1, 2, 3, 4, 5}$ is the common element being fixed by both $x$ and $y$.
 	Then $x$ and $y$ act only on $X$.
-	Define the map $\phi : \gen{x, y} \to S_4$ given by $\phi(\sigma) = \sigma|_X$.
+	Define the map $\phi \colon \gen{x, y} \to S_4$ given by $\phi(\sigma) = \sigma|_X$.
 	It is clear that $\phi$ is a homomorphism. 
     
     Now suppose $\sigma \in \ker\phi$.
@@ -256,7 +256,7 @@
         \item If $x$ and $y$ act on 5 elements and do not fix a common element, then $\gen{x, y} = A_5$ by part (b) of the previous exercise.
         \item If $x$ and $y$ act on 6 elements, then they are disjoint and commute.
 		We show that $\gen{x, y} \cong Z_3 \times Z_3$.
-		Let $z \in Z_3$ such that $\gen z = Z_3$, and define the map $\phi : \gen{x, y} \to Z_3 \times Z_3$ by $\phi(x^a y^b) = (z^a, z^b)$ for $a, b \in \set{0, 1, 2}$.
+		Let $z \in Z_3$ such that $\gen z = Z_3$, and define the map $\phi \colon \gen{x, y} \to Z_3 \times Z_3$ by $\phi(x^a y^b) = (z^a, z^b)$ for $a, b \in \set{0, 1, 2}$.
 		It is clear that $\phi$ is a homomorphism.
 		Suppose $\phi(x^a y^b) = (1, 1)$.
 		Then $z^a = 1$ and $z^b = 1$, so that $a \equiv 0 \pmod 3$ and $b \equiv 0 \pmod 3$.

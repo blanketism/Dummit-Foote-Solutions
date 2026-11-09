@@ -71,7 +71,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 	Hence, $P \times Q \in \syl_p(G \times H)$.
 	For the converse, let $R \in \syl_p(G \times H)$.
 	Then $|R| = p^k$ for some $k \geq 0$.
-	Consider the projections $\pi_G : G \times H \to G$ and $\pi_H : G \times H \to H$.
+	Consider the projections $\pi_G \colon G \times H \to G$ and $\pi_H \colon G \times H \to H$.
 	Then $\pi_G(R)$ is a $p$-subgroup of $G$ and $\pi_H(R)$ is a $p$-subgroup of $H$.
 	Therefore, there exist Sylow $p$-subgroups $P$ of $G$ and $Q$ of $H$ such that $\pi_G(R) \leq P$ and $\pi_H(R) \leq Q$.
 	Hence, $R \leq P \times Q$.
@@ -576,7 +576,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 	Note that $n_5(PQ) \equiv 1 \pmod 5$ and $n_5(PQ) \mid 9$, so that $n_5(PQ) = 1$.
 	Therefore, there is a normal Sylow 5-subgroup in $PQ$, which must be $Q$ since $Q$ is a Sylow 5-subgroup of $PQ$.
 	It also follows that $P \leq N_{PQ}(Q) \leq N_G(Q)$.
-	Since $|G : N_G(Q)|$ divides $|G : PQ| = 7$ so that $n_5(G) = 1$.
+	Since $|G \colon N_G(Q)|$ divides $|G \colon PQ| = 7$ so that $n_5(G) = 1$.
 	We may use similar reasoning to show that $n_7(G) = 1$ as well.
 	Therefore, there is a normal Sylow 5-subgroup and a normal Sylow 7-subgroup in $G$.
 	Moreover, it is easy to see that the subgroups $P, Q$, and $R$ are all abelian since $p^2$-order groups are abelian, and $R$ has prime order hence it is cyclic.
@@ -625,7 +625,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 	Since $|P| = 8$ for some $P \in \syl_2(G)$, we only have room for one Sylow 2-subgroup, so that $n_2 = 1$.
 	Therefore, there is a normal Sylow 2-subgroup in $G$, which is a contradiction.
 		\item $|G| = 72$: Suppose $n_3 = 4$.
-	Then the induced homomorphism $\phi : G \to S_4$ cannot have a nontrivial kernel.
+	Then the induced homomorphism $\phi \colon G \to S_4$ cannot have a nontrivial kernel.
 	Then $G$ has a nontrivial normal subgroup, which is a contradiction.
 		\item $|G| = 80$: If $n_6 = 16$, then there are at least $16 \cdot 4 = 64$ elements of order 5, leaving only 16 elements left.
 	Since $|P| = 16$ for some $P \in \syl_2(G)$, we only have room for one Sylow 2-subgroup, so that $n_2 = 1$.
@@ -638,7 +638,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 	If $P, Q \in \syl_3(G)$ such that $|P \cap Q| = 3$, we may use a similar argument as in $|G| = 36$ to determine that $N_G(P \cap Q)$ has order 45 or 90.
 		\item $|G| = 96$: We have that either $n_3 = 4$ or $n_3 = 16$, since $n_3 \mid 32$.
 	Consider $N_G(P)$ for some $P \in \syl_3(G)$.
-	Then $|G : N_G(P)| = 4$ if $n_3 = 4$ so that an induced homomorphism from $G$ to $S_4$ has a nontrivial kernel, which is a contradiction.
+	Then $|G \colon N_G(P)| = 4$ if $n_3 = 4$ so that an induced homomorphism from $G$ to $S_4$ has a nontrivial kernel, which is a contradiction.
 	If $n_3 = 16$, we may use the same arguments as $|G| = 36$ or 90 to show a contradiction as well.
 	\end{itemize}
 	By Theorem 4.23, we know that simple groups of order 60 are isomorphic to $A_5$.
@@ -735,8 +735,8 @@ Let $G$ be a finite group and let $p$ be a prime.
 	Next, we show that $PN/N$ is a Sylow $p$-subgroup of $G/N$.
 	By the Second Isomorphism Theorem, we have that $PN/N \cong P/(P \cap N)$.
 	Let $|G| = p^\alpha m$ where $p \nmid m$ and $|N| = p^\beta n$ where $p \nmid n$.
-	Observe that $|G/N : PN/N| = |G: PN|$ divides $|G : P| = m$.
-	It follows that $|G/N : PN/N|$ is relatively prime to $p$.
+	Observe that $|G/N \colon PN/N| = |G: PN|$ divides $|G \colon P| = m$.
+	It follows that $|G/N \colon PN/N|$ is relatively prime to $p$.
 	Since $P \cap N \leq P$, $\beta \leq \alpha$ so that $|PN/N| = |P/(P \cap N)| = p^{\alpha - \beta}$.
 	Therefore, $PN/N$ is a Sylow $p$-subgroup of $G/N$.
 \end{sol}
@@ -765,7 +765,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	We first show that the map $\phi : \syl_p(G) \to \syl_p(G/N)$ defined by $\phi(P) = PN/N$ is well-defined.
+	We first show that the map $\phi \colon \syl_p(G) \to \syl_p(G/N)$ defined by $\phi(P) = PN/N$ is well-defined.
 	Let $P \in \syl_p(G)$.
 	By \exref{4.5.34}, we have that $PN/N$ is a Sylow $p$-subgroup of $G/N$, so that $\phi(P) \in \syl_p(G/N)$.
 
@@ -775,7 +775,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 	\[
 		\bar Q = \bar g\bar P\bar g\inv = \pi(gPg\inv)
 	\]
-	where $\pi : G \to G/N$ is the natural projection homomorphism.
+	where $\pi \colon G \to G/N$ is the natural projection homomorphism.
 	Since $P \in \syl_p(G)$, $gPg\inv \in \syl_p(G)$ as well.
 	Hence, $\pi(gPg\inv) = \bar Q$ so that $\phi(gPg\inv) = \bar Q$.
 	Therefore, $\phi$ is surjective, so that $n_p(G/N) \leq n_p(G)$.
@@ -816,7 +816,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 	Finally, since each Sylow $p$-subgroup is a $p$-group, their intersection is also a $p$-group.
 	Therefore, $\bigcap_{P \in \pcal} P = R \leq O_p(G)$.
 	\item Let $\bar R$ be a normal $p$-subgroup of $\bar G$.
-	Let $\pi : G \to \bar G$ be the natural projection homomorphism.
+	Let $\pi \colon G \to \bar G$ be the natural projection homomorphism.
 	Then $\pi\inv(\bar R)$ is a normal subgroup of $G$ since $\bar R$ is normal in $\bar G$.
 	Moreover, $\pi\inv(\bar R)$ is a $p$-group as follows: using the First Isomorphism Theorem, we have that $\pi\inv(\bar R)/O_p(G) \cong \bar R$.
 	It follows that
@@ -830,7 +830,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{solenum}
 
 \begin{exercise}{4.5.38}
-	Use the method of proof in Sylow's Theorem to show that if $n_p$ is not congruent to $1 \pmod p^2$ then there are distinct Sylow $p$-subgroups $P$ and $Q$ of $G$ such that $|P : P \cap Q| = |Q : P \cap Q| = p$.
+	Use the method of proof in Sylow's Theorem to show that if $n_p$ is not congruent to $1 \pmod p^2$ then there are distinct Sylow $p$-subgroups $P$ and $Q$ of $G$ such that $|P \colon P \cap Q| = |Q \colon P \cap Q| = p$.
 \end{exercise}
 
 \begin{sol}
@@ -839,8 +839,8 @@ Let $G$ be a finite group and let $p$ be a prime.
 	\[
 		\syl_p(G) = \ocal_1 \cup \ocal_2 \cup \cdots \cup \ocal_k, \quad n_p = \sum_{i = 1}^k |\ocal_i|
 	\]
-	By definition, $|\ocal_i| = |P : N_P(P_i)|$.
-	Using Lemma 4.19, we see that $N_P(P_i) = P \cap N_G(P_i) = P \cap P_i$, hence $|\ocal_i| = |P : P \cap P_i|$.
+	By definition, $|\ocal_i| = |P \colon N_P(P_i)|$.
+	Using Lemma 4.19, we see that $N_P(P_i) = P \cap N_G(P_i) = P \cap P_i$, hence $|\ocal_i| = |P \colon P \cap P_i|$.
 	We also note that $|\ocal_1| = 1$ since $P \in \syl_p(G)$ is fixed by the action of $P$ on $\syl_p(G)$ by conjugation, and $|\ocal_i| > 1$ for $i > 1$ since $P_i$ is not fixed by the action of $P$ on $\syl_p(G)$ by conjugation.
 
 	By definition, each $P_i$ is a $p$-group, hence their intersections are also $p$-groups.
@@ -852,8 +852,8 @@ Let $G$ be a finite group and let $p$ be a prime.
 	Then $n_p$ is congruent to $1 \pmod p^2$, which is a contradiction.
 	Therefore, there exists some $i > 1$ such that $|\ocal_i| = p$.
 	Let $Q = P_i$.
-	Then $|P : P \cap Q| = p$ as desired.
-	By symmetry, we also have that $|Q : P \cap Q| = p$.
+	Then $|P \colon P \cap Q| = p$ as desired.
+	By symmetry, we also have that $|Q \colon P \cap Q| = p$.
 \end{sol}
 
 \begin{exercise}{4.5.39}
@@ -877,7 +877,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	Since $n_p = |G : N_P(G)|$ for any $P \in \syl_p(G)$, we can find $n_p$ by finding the normalizer of a Sylow $p$-subgroup of $\gl_2(\fbb_p)$.
+	Since $n_p = |G \colon N_P(G)|$ for any $P \in \syl_p(G)$, we can find $n_p$ by finding the normalizer of a Sylow $p$-subgroup of $\gl_2(\fbb_p)$.
 	Let $P$ be the subgroup of strictly upper triangular matrices in $\gl_2(\fbb_p)$.
 	We have that
 	\[
@@ -942,7 +942,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 	where $a, d \in \fbb_p\unt$ since $X$ must be invertible.
 	We have that $|N_G(P)| = p(p - 1)^2$, so that
 	\[
-		n_p = |G : N_G(P)| = \frac{|\gl_2(\fbb_p)|}{|N_G(P)|} = \frac{p(p - 1)^2(p + 1)}{p(p - 1)^2} = p + 1 \qedhere
+		n_p = |G \colon N_G(P)| = \frac{|\gl_2(\fbb_p)|}{|N_G(P)|} = \frac{p(p - 1)^2(p + 1)}{p(p - 1)^2} = p + 1 \qedhere
 	\]
 \end{sol}
 
@@ -1150,7 +1150,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 
 \begin{exercise}{4.5.51}
 	Let $P$ be a Sylow $p$-subgroup of $G$ and let $M$ be any subgroup of $G$ which contains $N_G(P)$.
-	Prove that $|G : M| \equiv 1 \pmod p$.
+	Prove that $|G \colon M| \equiv 1 \pmod p$.
 \end{exercise}
 
 \begin{sol}
@@ -1159,12 +1159,12 @@ Let $G$ be a finite group and let $p$ be a prime.
 	Then $mPm\inv = P$, so that $m \in N_G(P)$ since $P$ is a Sylow $p$-subgroup of $G$.
 	Then we have $N_M(P) \subseteq N_G(P)$.
 	Conversely, $N_G(P) \subseteq N_M(P)$ since $N_G(P) \leq M$.
-	It follows that $N_M(P) = N_G(P)$, so that $|G : N_G(P)| = |M : N_M(P)| \equiv 1 \pmod p$.
+	It follows that $N_M(P) = N_G(P)$, so that $|G \colon N_G(P)| = |M \colon N_M(P)| \equiv 1 \pmod p$.
 	Then
 	\[
-		|G : N_G(P)| = |G : M||M : N_G(P)| = |G : M||M : N_M(P)| \equiv 1 \pmod p
+		|G \colon N_G(P)| = |G \colon M||M \colon N_G(P)| = |G \colon M||M \colon N_M(P)| \equiv 1 \pmod p
 	\]
-	so that $|G : M| \equiv 1 \pmod p$.
+	so that $|G \colon M| \equiv 1 \pmod p$.
 \end{sol}
 
 \begin{exercise}{4.5.52}
@@ -1196,20 +1196,20 @@ Let $G$ be a finite group and let $p$ be a prime.
 	We now show that there are at least two distinct conjugacy classes of maximal subgroups of $G$.
 	Assume by way of contradiction that there is only one conjugacy class of maximal subgroups of $G$.
 	Let $M$ be a maximal subgroup of $G$ such that for any maximal subgroup $N$ of $G$, there exists some $g \in G$ such that $gMg\inv = N$.
-	Moreover, recall that the number of conjugates of $M$ is $|G : N_G(M)| = |G : M|$.
-	Since conjugates intersect trivially by \exref{4.5.52}, then the number of elements in the union of all conjugates of $M$ is $|G : M|(|M| - 1) + 1$, or $|G| - |G : M| + 1$.
-	However, $M \neq G$, hence $|G : M| > 1$, so that $|G| - |G : M| + 1 < |G|$.
+	Moreover, recall that the number of conjugates of $M$ is $|G \colon N_G(M)| = |G \colon M|$.
+	Since conjugates intersect trivially by \exref{4.5.52}, then the number of elements in the union of all conjugates of $M$ is $|G \colon M|(|M| - 1) + 1$, or $|G| - |G \colon M| + 1$.
+	However, $M \neq G$, hence $|G \colon M| > 1$, so that $|G| - |G \colon M| + 1 < |G|$.
 	This is a contradiction since $G$ is the union of its maximal subgroups.
 	Therefore, there are at least two distinct conjugacy classes of maximal subgroups of $G$.
 
 	Lastly, observe that $|M| \geq 2$ and $|N| \geq 2$ since $M$ and $N$ are nonabelian.
 	It follows that
 	\[
-		|G| - |G : M| - |G : N| = |G|\left(1 - \frac{1}{|M|} - \frac{1}{|N|}\right) \geq 0.
+		|G| - |G \colon M| - |G \colon N| = |G|\left(1 - \frac{1}{|M|} - \frac{1}{|N|}\right) \geq 0.
 	\]
 	From this, we see that
 	\[
-		|G| + (|G| - |G : M| - |G : N|) + 1 > |G|
+		|G| + (|G| - |G \colon M| - |G \colon N|) + 1 > |G|
 	\]
 	so that $G$ has more than $|G|$ elements, which is a contradiction.
 	Therefore, $G$ is not simple.
@@ -1230,7 +1230,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 	Let $N$ be a nontrivial normal subgroup of $G$ with $|N| = q_1q_2 \cdots q_s$ are primes from $p_1, p_2, \ldots, p_r$.
 	Moreover, $N$ is cyclic by the inductive hypothesis.
 
-	By $N \nsub G$, then $G$ acts on $N$ which induces the homomorphism $\psi : G \to \aut(N)$.
+	By $N \nsub G$, then $G$ acts on $N$ which induces the homomorphism $\psi \colon G \to \aut(N)$.
 	Moreover, cyclicity of $N$ implies that
 	\[
 		|\aut(N)| = \phi(|N|) = \prod_{i = 1}^s (q_i - 1).

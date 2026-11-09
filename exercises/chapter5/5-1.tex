@@ -45,7 +45,7 @@
 \begin{solenum}
     \item Define the map
     \[
-        \phi : G_I \to \prod_{i \in I} G_i, \quad \phi((g_1, g_2, \ldots, g_n)) = (g_i)_{i \in I}.
+        \phi \colon G_I \to \prod_{i \in I} G_i, \quad \phi((g_1, g_2, \ldots, g_n)) = (g_i)_{i \in I}.
     \]
     Since $G_I$ and $\prod_{i \in I} G_i$ are both groups under componentwise multiplication and $\phi$ preserves multiplication componentwise, $\phi$ is a homomorphism.
     To see that $\phi$ is injective, suppose $\phi((g_1, \ldots, g_n)) = (1)_{i \in I}$, the identity in $\prod_{i \in I} G_i$.
@@ -57,14 +57,14 @@
     \item As shown in part (a), we may identify $G_J$ with the direct product of the $G_j$ for $j \in J$.
     Define the map
     \[
-        \pi_J : G \to G_J, \quad \pi_J((g_1, g_2, \ldots, g_n)) = (g_j)_{j \in J}.
+        \pi_J \colon G \to G_J, \quad \pi_J((g_1, g_2, \ldots, g_n)) = (g_j)_{j \in J}.
     \]
     As in the previous part, $\pi_J$ is seen to be a surjective homomorphism.
     The kernel of $\pi_J$ consists of all elements $(g_1, \ldots, g_n) \in G$ such that $g_j = 1$ for all $j \in J$, which is precisely the definition of $G_I$, so $\ker \pi_J = G_I$.
     By the First Isomorphism Theorem, we have $G/G_I \cong \pi_J(G) = G_J$.
     \item Using part (a) to identify $G_I$ and $G_J$ with their respective direct products, define the map
     \[
-        \psi : G \to G_I \times G_J, \quad \psi((g_1, g_2, \ldots, g_n)) = ((g_i)_{i \in I}, (g_j)_{j \in J}).
+        \psi \colon G \to G_I \times G_J, \quad \psi((g_1, g_2, \ldots, g_n)) = ((g_i)_{i \in I}, (g_j)_{j \in J}).
     \]
     It is clear that $\psi$ is a homomorphism, and it is injective since if $\psi((g_1, \ldots, g_n)) = ((1)_{i \in I}, (1)_{j \in J})$, then $g_i = 1$ for all $i \in I$ and $g_j = 1$ for all $j \in J$, so $(g_1, \ldots, g_n) = (1, \ldots, 1)$.
 
@@ -100,7 +100,7 @@
 	Then $|A \times B| = |A||B| = p^{\alpha + \beta}mn$.
 	Let $R \in \syl_p(A \times B)$.
 	Then $|R| = p^{\alpha + \beta}$, so $R$ is a Sylow $p$-subgroup of $A \times B$.
-	Let $\pi_A : A \times B \to A$ and $\pi_B : A \times B \to B$ be the projection maps.
+	Let $\pi_A \colon A \times B \to A$ and $\pi_B \colon A \times B \to B$ be the projection maps.
 	Then $\pi_A(R)$ is a $p$-subgroup of $A$, so $\pi_A(R) \subseteq P$ for some $P \in \syl_p(A)$.
 	Similarly, $\pi_B(R) \subseteq Q$ for some $Q \in \syl_p(B)$.
 	Thus, $R \subseteq P \times Q$.
@@ -151,7 +151,7 @@
     Let $G_1, G_2, \ldots, G_n$ be groups and $\pi$ be a fixed element of $S_n$.
 	Prove that the map 
     \[
-    	\phi_\pi : G_1 \times G_2 \times \cdots \times G_n \to G_{\pi\inv(1)} \times G_{\pi\inv(2)} \times \cdots \times G_{\pi\inv(n)}
+    	\phi_\pi \colon G_1 \times G_2 \times \cdots \times G_n \to G_{\pi\inv(1)} \times G_{\pi\inv(2)} \times \cdots \times G_{\pi\inv(n)}
     \]
     defined by
     \[
@@ -170,7 +170,7 @@
         & = (g_{\pi\inv(1)}, g_{\pi\inv(2)}, \ldots, g_{\pi\inv(n)})(h_{\pi\inv(1)}, h_{\pi\inv(2)}, \ldots, h_{\pi\inv(n)}) \\
         & = \phi_\pi(g)\phi_\pi(h)
     \end{align*}
-    Noting that $\pi \in S_n$ is a bijection, consider the map $\phi_{\pi\inv} : G_{\pi\inv(1)} \times G_{\pi\inv(2)} \times \cdots \times G_{\pi\inv(n)} \to G_1 \times G_2 \times \cdots \times G_n$ defined by
+    Noting that $\pi \in S_n$ is a bijection, consider the map $\phi_{\pi\inv} \colon G_{\pi\inv(1)} \times G_{\pi\inv(2)} \times \cdots \times G_{\pi\inv(n)} \to G_1 \times G_2 \times \cdots \times G_n$ defined by
     \[
     	\phi_{\pi\inv}(k_1, k_2, \ldots, k_n) = (k_{\pi(1)}, k_{\pi(2)}, \ldots, k_{\pi(n)})
     \]
@@ -282,7 +282,7 @@
 \end{exercise}
 
 \begin{solenum}
-    \item Consider the maps $\pi_A : A \to A \ast B$ and $\pi_B : B \to A \ast B$ defined by $\pi_A(a) = (a, 1)Z$ and $\pi_B(b) = (1, b)Z$.
+    \item Consider the maps $\pi_A \colon A \to A \ast B$ and $\pi_B \colon B \to A \ast B$ defined by $\pi_A(a) = (a, 1)Z$ and $\pi_B(b) = (1, b)Z$.
 	It is clear that $\pi_A$ and $\pi_B$ are homomorphisms.
 	Moreover, $\ker\pi_A$ consists of the elements $a \in A$ such that $(a, 1) \in Z$.
 	Then $y_i = 1$, and since $x_i \mapsto y_i$ is an isomorphism, we have $x_i = 1$, so $a = 1$.
@@ -310,7 +310,7 @@
     \[
         \mb z \mb i \mb z\inv = \mb j \mb y\inv \mb i \mb y \mb j\inv = \mb j \mb i \mb j\inv = \mb i\inv.
     \]
-    Then $\mb z$ has the same properties as $\mb s$, so we may define a map $\phi : Z_4 \ast D_8 \to Z_4 \ast Q_8$ by
+    Then $\mb z$ has the same properties as $\mb s$, so we may define a map $\phi \colon Z_4 \ast D_8 \to Z_4 \ast Q_8$ by
     \[
         \phi(\mb x^\alpha \mb r^\beta \mb s^\gamma) = \mb y^\alpha \mb i^\beta \mb z^\gamma.
     \]
@@ -369,7 +369,7 @@
     since $a_ib_ia_i\inv \in B_i$ for all $i$.
 	Thus, $H$ is normal in $G$.
 
-    Consider the map $\phi : G \to (A_1/B_1) \times (A_2/B_2) \times \cdots \times (A_n/B_n)$ defined by
+    Consider the map $\phi \colon G \to (A_1/B_1) \times (A_2/B_2) \times \cdots \times (A_n/B_n)$ defined by
     \[
     	\phi((a_1, a_2, \ldots, a_n)) = (a_1B_1, a_2B_2, \ldots, a_nB_n).
     \]
@@ -454,7 +454,7 @@
         \[
         	G/\wh G_i \cong \prod_{j \neq i} G_j.
         \]
-        \item For fixed $i$, define $\pi_i : G \to G_i$ by $\pi_i((g_j)_{j \in I}) = g_i$.
+        \item For fixed $i$, define $\pi_i \colon G \to G_i$ by $\pi_i((g_j)_{j \in I}) = g_i$.
 	Then $\pi_i$ is a surjective homomorphism with kernel $\wh G_i$, so $G/\wh G_i \cong G_i$.
         \item If $x \in G_i$ and $y \in G_j$ for $i \neq j$, then $x$ and $y$ commute in $G$.
     \end{enumerate}
@@ -467,7 +467,7 @@
         \]
         since $g_i h_i g_i\inv \in G_i$.
 	Thus, $\wh G_i$ is normal in $G$.
-	Consider the map $\phi : G_i \to \wh G_i$ defined by $\phi(g_i) = \prod_{j \neq i} 1_j g_i$.
+	Consider the map $\phi \colon G_i \to \wh G_i$ defined by $\phi(g_i) = \prod_{j \neq i} 1_j g_i$.
 	It is clear that $\phi$ is a homomorphism.
 	Moreover, if $\phi(g_i) = \prod_{j \neq i} 1_j g_i = \prod_{j \neq i} 1_j$, then $g_i$ is the identity element of $G_i$, so $\phi$ is injective.
 	Finally, for any $\prod_{j \neq i} 1_j h_i \in \wh G_i$, we have $\phi(h_i) = \prod_{j \neq i} 1_j h_i$, so $\phi$ is surjective.
@@ -475,7 +475,7 @@
         
         Consider the map
         \[
-        	\psi : G \to \prod_{j \neq i} G_j \text{ defined by } \psi\left(\prod_{j \in I} g_j\right) = \prod_{j \neq i} g_j.
+        	\psi \colon G \to \prod_{j \neq i} G_j \text{ defined by } \psi\left(\prod_{j \in I} g_j\right) = \prod_{j \neq i} g_j.
         \]
         It is clear that $\psi$ is a homomorphism.
 	Moreover, the kernel of $\psi$ is $\wh G_i$, so by the First Isomorphism Theorem, we have
@@ -556,7 +556,7 @@
 	We may then consider the group $G = S_1 \times S_2 \times S_3 \times \cdots$.
 	For any finite group $H$, there is some $n$ such that $H$ is isomorphic to a subgroup of $S_n$, so $H$ is isomorphic to a subgroup of $G$.
     \item Let $G = \zbb \times \zbb \times \cdots$.
-	Consider the map $\phi : G \to G \times G$ defined by
+	Consider the map $\phi \colon G \to G \times G$ defined by
     \[
     	\phi((a_1, a_2, a_3, \ldots)) = ((a_1, a_3, a_5, \ldots), (a_2, a_4, a_6, \ldots)).
     \]

@@ -89,7 +89,7 @@
 
 \begin{exercise}{2.3.8}
     Let $Z_{48} = \gen x$.
-	For which integers $a$ does the map $\phi_a$ defined by $\phi_a : \bar 1 \mapsto x^a$ extend to an isomorphism from $\intmod[48]$ to $Z_{48}$?
+	For which integers $a$ does the map $\phi_a$ defined by $\phi_a \colon \bar 1 \mapsto x^a$ extend to an isomorphism from $\intmod[48]$ to $Z_{48}$?
 \end{exercise}
 
 \begin{sol}
@@ -101,7 +101,7 @@
 
 \begin{exercise}{2.3.9}
     Let $Z_{36} = \gen x$.
-	For which integers $a$ does the map $\psi_a$ defined by $\psi_a : \bar 1 \mapsto x^a$ extend to a \emph{well-defined homomorphism} from $\intmod[48]$ into $Z_{36}$.
+	For which integers $a$ does the map $\psi_a$ defined by $\psi_a \colon \bar 1 \mapsto x^a$ extend to a \emph{well-defined homomorphism} from $\intmod[48]$ into $Z_{36}$.
 	Can $\psi_a$ ever be a surjective homomorphism?
 \end{exercise}
 
@@ -244,7 +244,7 @@
 \end{exercise}
 
 \begin{sol}
-    Define the map $\phi : x^k \mapsto h^k$ so that $\phi(x) = h$.
+    Define the map $\phi \colon x^k \mapsto h^k$ so that $\phi(x) = h$.
 	Suppose $x^a = x^b$ for some $a, b \in \zbb$.
 	Then $n \mid (a - b)$, or $a - b = nk$ for some $k \in \zbb$.
 	It follows that
@@ -257,7 +257,7 @@
     	\phi(x^{a + b}) = h^{a + b} = h^a h^b = \phi(x^a) \phi(x^b)
     \]
     so that $\phi$ is a homomorphism.
-	Lastly, if $\psi : Z_n \to H$ is another homomorphism such that $\psi(x) = h$, it must satisfy $\psi(x^k) = \psi(x)^k = h^k$.
+	Lastly, if $\psi \colon Z_n \to H$ is another homomorphism such that $\psi(x) = h$, it must satisfy $\psi(x^k) = \psi(x)^k = h^k$.
 	This shows that $\psi = \phi$.
 \end{sol}
 
@@ -266,7 +266,7 @@
 \end{exercise}
 
 \begin{sol}
-    Define the map $\phi : n \mapsto h^n$ so that $\phi(1) = h$.
+    Define the map $\phi \colon n \mapsto h^n$ so that $\phi(1) = h$.
 	The homomorphism and uniqueness follow similarly to \exref{2.3.18}.
 \end{sol}
 
@@ -398,7 +398,7 @@
 
 \begin{sol}
     Fix $k \in \zp$ such that $(k, n) = 1$.
-	Let $\phi : x \mapsto x^k$.
+	Let $\phi \colon x \mapsto x^k$.
 	Since $G$ is cyclic, $G = \gen x$ for some $x \in G$.
 	For any $y \in G$, there exists some integer $m$ such that $y = x^m$.
 	Since $(k, n) = 1$, there exist integers $s, t$ such that $ks + nt = 1$.
@@ -419,7 +419,7 @@
 \begin{exercise}!{2.3.26}
     Let $Z_n$ be a cyclic group of order $n$ and for each integer $a$ let
     \[
-    	\sigma_a : Z_n \to Z_n \quad \text{by} \quad \sigma_a(x) = x^a \text{ for all } x \in Z_n
+    	\sigma_a \colon Z_n \to Z_n \quad \text{by} \quad \sigma_a(x) = x^a \text{ for all } x \in Z_n
     \]
     \begin{subexercises}
         \item Prove that $\sigma_a$ is an automorphism of $Z_n$ if and only if $a$ and $n$ are relatively prime.
@@ -483,7 +483,7 @@
     so that $\sigma_a \circ \sigma_b = \sigma_{ab}$.
 	Consider the map
     \[
-    	\phi : \units \to \aut(Z_n) \quad \text{by} \quad \phi(\bar a) = \sigma_a
+    	\phi \colon \units \to \aut(Z_n) \quad \text{by} \quad \phi(\bar a) = \sigma_a
     \]
     By part (b), $\phi$ is well-defined.
 	Part (a) shows that $\phi$ is injective, while part (c) shows that $\phi$ is surjective.

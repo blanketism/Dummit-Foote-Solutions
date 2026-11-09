@@ -85,7 +85,7 @@
 \end{exercise}
 
 \begin{sol}
-    Let $K$ denote the kernel of the action, and let $K'$ denote $\ker\phi$, where $\phi : G \to S_A$ is the permutation representation corresponding to the action.
+    Let $K$ denote the kernel of the action, and let $K'$ denote $\ker\phi$, where $\phi \colon G \to S_A$ is the permutation representation corresponding to the action.
 	Suppose $g \in K$.
 	Then $g \cdot a = a$ for every $a \in A$, hence $\phi(g)$ is the identity permutation in $S_A$ and $g \in K'$.
 	Conversely, suppose $g \in K'$.
@@ -226,7 +226,7 @@
 \end{exercise}
 
 \begin{sol}
-    Let $\phi : D_8 \to S_4$ be the permutation representation of the action of $D_8$ on the vertices of a square $\set{1, 2, 3, 4}$, where the vertices are labeled in order around the square starting in the top left corner, then going clockwise.
+    Let $\phi \colon D_8 \to S_4$ be the permutation representation of the action of $D_8$ on the vertices of a square $\set{1, 2, 3, 4}$, where the vertices are labeled in order around the square starting in the top left corner, then going clockwise.
 	Then the cycle decompositions are as follows:
     \begin{align*}
         \phi(1) & = 1 & \phi(r) & = \cyc{1 2 3 4} \\
@@ -362,7 +362,7 @@
 \end{exercise}
 
 \begin{sol}
-    Let $\phi : x \mapsto gxg\inv$.
+    Let $\phi \colon x \mapsto gxg\inv$.
 	Let $x, y \in G$.
 	Then
     \[
@@ -414,7 +414,7 @@
 \end{exercise}
 
 \begin{sol}
-    Let $\phi : H \to \ocal$ be the map defined by $\phi(h) = hx$ for all $h \in H$.
+    Let $\phi \colon H \to \ocal$ be the map defined by $\phi(h) = hx$ for all $h \in H$.
 	We show that $\phi$ is a bijection.
 	To show injectivity, suppose $\phi(h_1) = \phi(h_2)$ for some $h_1, h_2 \in H$.
 	Then
@@ -440,7 +440,7 @@
 
     Since $G$ acts on $A$, this gives rise to a homomorphism 
     \[
-    	\phi : G \to S_4 \quad \text{where} \quad \phi(\alpha)(i) = \alpha(i) \quad \text{for all} \quad i \in A.
+    	\phi \colon G \to S_4 \quad \text{where} \quad \phi(\alpha)(i) = \alpha(i) \quad \text{for all} \quad i \in A.
     \]
     To see that $\phi$ is injective, suppose $\phi(\alpha)$ is the identity permutation in $S_4$ for some $\alpha \in G$.
 	Then for every vertex $i \in A$, we have $\phi(\alpha)(i) = i$, so that $\alpha(i) = i$.
@@ -459,7 +459,7 @@
 
     Using similar reasoning as in the exercise, we have an injective homomorphism
     \[
-    	\phi : G \to S_4 \quad \text{where} \quad \phi(\alpha)(a_i) = \alpha(a_i) \quad \text{for all} \quad a_i \in A.
+    	\phi \colon G \to S_4 \quad \text{where} \quad \phi(\alpha)(a_i) = \alpha(a_i) \quad \text{for all} \quad a_i \in A.
     \]
     Since $|G| = 24 = |S_4|$, it follows that $\phi$ is surjective as well, hence $G \cong S_4$.
 \end{sol}
@@ -476,7 +476,7 @@
 
     Using similar reasoning as in the previous exercises, we have an injective homomorphism
     \[
-    	\phi : G \to S_4 \quad \text{where} \quad \phi(\alpha)(f_i) = \alpha(f_i) \quad \text{for all} \quad f_i \in A.
+    	\phi \colon G \to S_4 \quad \text{where} \quad \phi(\alpha)(f_i) = \alpha(f_i) \quad \text{for all} \quad f_i \in A.
     \]
     Therefore, $G$ is isomorphic to a subgroup of $S_4$.
 	From \exref{1.2.11}, we know that $|G| = 24$, hence $G \cong S_4$.

@@ -386,7 +386,7 @@ Let $G$ be a group and let $A$ be a nonempty set.
 		\item Prove that $G$ permutes the sets $\ocal_1, \ocal_2, \ldots, \ocal_r$, in the sense that for each $g \in G$ and each $i \in \set{1,\ldots,r}$ there is a $j$ such that $g \ocal_i = \ocal_j$, where $g\ocal = \set{g \cdot a \mid a \in \ocal}$ (i.e., in the notation of Exercise 7 the sets $\ocal_1, \ldots, \ocal_r$ are blocks).
 		Prove that $G$ is transitive on $\set{\ocal_1, \ldots, \ocal_r}$.
 		Deduce that all orbits of $H$ on $A$ have the same cardinality.
-		\item Prove that if $a \in \ocal_1$ then $|\ocal_1| = |H : H \cap G_a|$ and prove that $r = |G : HG_a|$. [Draw the sublattice describing the Second Isomorphism Theorem for the subgroups $H$ and $G_a$ of $G$.
+		\item Prove that if $a \in \ocal_1$ then $|\ocal_1| = |H \colon H \cap G_a|$ and prove that $r = |G \colon HG_a|$. [Draw the sublattice describing the Second Isomorphism Theorem for the subgroups $H$ and $G_a$ of $G$.
 		Note that $H \cap G_a = H_a$.]
 	\end{subexercises}
 \end{exercise}
@@ -405,14 +405,14 @@ Let $G$ be a group and let $A$ be a nonempty set.
 	Therefore, $G$ is transitive on $\set{\ocal_1, \ldots, \ocal_r}$.
 	Since $G$ is transitive on $\set{\ocal_1, \ldots, \ocal_r}$, all orbits of $H$ on $A$ have the same cardinality.
 	\item Suppose $a \in \ocal_1$.
-	By Proposition 4.2, we have $|\ocal_1| = |H : H_a|$.
-	Since $H_a = H \cap G_a$, $|\ocal_1| = |H : H \cap G_a|$.
+	By Proposition 4.2, we have $|\ocal_1| = |H \colon H_a|$.
+	Since $H_a = H \cap G_a$, $|\ocal_1| = |H \colon H \cap G_a|$.
 	Moreover, the orbits of $H$ partition $A$ and have the same size by the previous solution, so we have $|A| = r|\ocal_1|$.
-	By applying Proposition 4.2 again, we have $|A| = |G : G_a|$.
-	Therefore, $|G : G_a| = r|\ocal_1| = r|H : H \cap G_a|$.
-	By the Second Isomorphism Theorem, we also have that $H/(H \cap G_a) \cong HG_a/G_a$ so that $|H : H \cap G_a| = |HG_a : G_a|$.
-	Now recall by \exref{3.2.11} that $|G : K| = |G : H||H : K|$ for subgroups $K \leq H \leq G$.
-	Applying this to the subgroups $G_a \leq HG_a \leq G$, we have $|G : G_a| = |G : HG_a||HG_a : G_a| = |G : HG_a||H : H \cap G_a|.$ We then have $r|H : H \cap G_a| = |G : HG_a||H : H \cap G_a|$, or $r = |G : HG_a|$.
+	By applying Proposition 4.2 again, we have $|A| = |G \colon G_a|$.
+	Therefore, $|G \colon G_a| = r|\ocal_1| = r|H \colon H \cap G_a|$.
+	By the Second Isomorphism Theorem, we also have that $H/(H \cap G_a) \cong HG_a/G_a$ so that $|H \colon H \cap G_a| = |HG_a \colon G_a|$.
+	Now recall by \exref{3.2.11} that $|G \colon K| = |G \colon H||H \colon K|$ for subgroups $K \leq H \leq G$.
+	Applying this to the subgroups $G_a \leq HG_a \leq G$, we have $|G \colon G_a| = |G \colon HG_a||HG_a \colon G_a| = |G \colon HG_a||H \colon H \cap G_a|.$ We then have $r|H \colon H \cap G_a| = |G \colon HG_a||H \colon H \cap G_a|$, or $r = |G \colon HG_a|$.
 	Moreover, the sublattice is given as follows:
 	\begin{center}
 		\begin{tikzpicture}
@@ -437,8 +437,8 @@ Let $G$ be a group and let $A$ be a nonempty set.
 		\item Prove that $HxK$ is a union of right cosets of $H$.
 		\item Show that $HxK$ and $HyK$ are either the same set or are disjoint for all $x, y \in G$.
 		Show that the set of $HK$ double cosets partitions $G$.
-		\item Prove that $|HxK| = |K| \cdot |H : H \cap xKx^{-1}|$.
-		\item Prove that $|HxK| = |H| \cdot |K : K \cap x^{-1}Hx|$.
+		\item Prove that $|HxK| = |K| \cdot |H \colon H \cap xKx^{-1}|$.
+		\item Prove that $|HxK| = |H| \cdot |K \colon K \cap x^{-1}Hx|$.
 	\end{subexercises}
 \end{exercise}
 
@@ -465,10 +465,10 @@ Let $G$ be a group and let $A$ be a nonempty set.
 	We have shown that $HxK$ and $HyK$ are either the same set or are disjoint for all $x, y \in G$.
 	Since every element of $G$ is in some double coset of the form $HxK$, the set of $HK$ double cosets partitions $G$.
 	\item Recall that the orbit of $xK$ under this action is $\ocal = \set{hxK \mid h \in H}$.
-	By Proposition 4.2, we have $|\ocal| = |H : H_{xK}|$, where $H_{xK}$ is the stabilizer of $xK$ in $H$.
+	By Proposition 4.2, we have $|\ocal| = |H \colon H_{xK}|$, where $H_{xK}$ is the stabilizer of $xK$ in $H$.
 	Observe that $H_{xK} = \set{h \in H \mid hxK = xK}$.
 	Then $hxK = xK$ implies that there exists some $k \in K$ such that $hxk = x$, or equivalently, $h = x k x\inv$.
 	Therefore, $H_{xK} = H \cap x K x\inv$.
-	By part (a), we have $|HxK| = |\ocal| \cdot |K| = |H : H \cap x K x\inv| \cdot |K|$.
+	By part (a), we have $|HxK| = |\ocal| \cdot |K| = |H \colon H \cap x K x\inv| \cdot |K|$.
 	\item Similar to part (d).
 \end{solenum}

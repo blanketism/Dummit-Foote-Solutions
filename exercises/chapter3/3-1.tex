@@ -5,7 +5,7 @@
 Let $G$ and $H$ be groups.
 
 \begin{exercise}{3.1.1}
-    Let $\phi : G \to H$ be a homomorphism and let $E$ be a subgroup of $H$.
+    Let $\phi \colon G \to H$ be a homomorphism and let $E$ be a subgroup of $H$.
 	Prove that $\phi\inv(E) \leq G$.
 	If $E \nsub H$ prove that $\phi\inv(E) \nsub G$.
 	Deduce that $\ker(\phi) \nsub G$.
@@ -30,7 +30,7 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{exercise}{3.1.2}
-    Let $\phi : G \to H$ be a homomorphism of groups with kernel $K$ and let $a,b \in \phi(G)$.
+    Let $\phi \colon G \to H$ be a homomorphism of groups with kernel $K$ and let $a,b \in \phi(G)$.
 	Let $X \in G/K$ be the fiber above $a$ and let $Y$ be the fiber above $b$, i.e., $X = \phi\inv (a)$, $Y = \phi\inv (b)$.
 	Fix an element $u \in X$ (so $\phi(u)=a$).
 	Prove that if $XY = Z$ in the quotient group $G/K$ and $w$ is any member of $Z$, then there is some $v \in Y$ such that $uv = w$.
@@ -101,7 +101,7 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{exercise}{3.1.6}
-    Define $\phi : \rbb^{\times} \to \set{\pm 1}$ by letting $\phi(x)$ be $x$ divided by the absolute value of $x$.
+    Define $\phi \colon \rbb^{\times} \to \set{\pm 1}$ by letting $\phi(x)$ be $x$ divided by the absolute value of $x$.
 	Describe the fibers of $\phi$ and prove that $\phi$ is a homomorphism.
 \end{exercise}
 
@@ -115,7 +115,7 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{exercise}{3.1.7}
-    Define $\pi : \rbb^2 \to \rbb$ by $\pi((x,y)) = x + y$.
+    Define $\pi \colon \rbb^2 \to \rbb$ by $\pi((x,y)) = x + y$.
 	Prove that $\pi$ is a surjective homomorphism and describe the kernel and fibers of $\pi$ geometrically.
 \end{exercise}
 
@@ -131,7 +131,7 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{exercise}{3.1.8}
-    Let $\phi : \rbb^{\times} \to \rbb^{\times}$ be the map sending $x$ to the absolute value of $x$.
+    Let $\phi \colon \rbb^{\times} \to \rbb^{\times}$ be the map sending $x$ to the absolute value of $x$.
 	Prove that $\phi$ is a homomorphism and find the image of $\phi$.
 	Describe the kernel and the fibers of $\phi$.
 \end{exercise}
@@ -147,7 +147,7 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{exercise}{3.1.9}
-    Define $\phi : \cbb^{\times} \to \rbb^{\times}$ by $\phi(a+bi) = a^2 + b^2$.
+    Define $\phi \colon \cbb^{\times} \to \rbb^{\times}$ by $\phi(a+bi) = a^2 + b^2$.
 	Prove that $\phi$ is a homomorphism and find the image of $\phi$.
 	Describe the kernel and the fibers of $\phi$ geometrically (as subsets of the plane).
 \end{exercise}
@@ -167,7 +167,7 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{exercise}{3.1.10}
-    Let $\phi : \intmod[8] \to \intmod[4]$ by $\phi(\bar  a) = \bar  a$.
+    Let $\phi \colon \intmod[8] \to \intmod[4]$ by $\phi(\bar  a) = \bar  a$.
 	Show that this is a well-defined, surjective homomorphism and describe its fibers and kernel explicitly (showing that $\phi$ is well-defined involves the fact that $\bar  a$ has a different meaning in the domain and range of $\phi$).
 \end{exercise}
 
@@ -204,7 +204,7 @@ Let $G$ and $H$ be groups.
     \begin{subexercises}
         \item Prove that the map
         \[
-        	\phi : 
+        	\phi \colon 
             \begin{pmatrix}
                 a & b \\
                 0 & c
@@ -214,7 +214,7 @@ Let $G$ and $H$ be groups.
 	    Describe the fibers and kernel of $\phi$.
         \item Prove that the map
         \[
-        	\psi : 
+        	\psi \colon 
             \begin{pmatrix}
                 a & b \\
                 0 & c
@@ -293,7 +293,7 @@ Let $G$ and $H$ be groups.
         \end{pmatrix}~\right|~s \in F}
 	\]
     with $\ker\psi = \psi\inv((1, 1))$.
-    \item Define the mapping $\pi_1 : H \to F$ given by
+    \item Define the mapping $\pi_1 \colon H \to F$ given by
     \[
     	\pi_1\left(
         \begin{pmatrix}
@@ -301,7 +301,7 @@ Let $G$ and $H$ be groups.
             0 & 1
         \end{pmatrix}\right) = b
 	\]
-    Define another map $\pi_2 : F \to H$ given by
+    Define another map $\pi_2 \colon F \to H$ given by
     \[
     	\pi_2(b) = 
         \begin{pmatrix}
@@ -342,7 +342,7 @@ Let $G$ and $H$ be groups.
 \end{solenum}
 
 \begin{exercise}{3.1.12}
-    Let $G$ be the additive group of real numbers, let $H$ be the multiplicative group of complex numbers of absolute value $1$ (the unit circle $S^1$ in the complex plane) and let $\phi : G \to H$ be the homomorphism $\phi : r \mapsto e^{2\pi i r}$.
+    Let $G$ be the additive group of real numbers, let $H$ be the multiplicative group of complex numbers of absolute value $1$ (the unit circle $S^1$ in the complex plane) and let $\phi \colon G \to H$ be the homomorphism $\phi \colon r \mapsto e^{2\pi i r}$.
 	Draw the points on a real line which lie in the kernel of $\phi$.
 	Describe similarly the elements in the fibers of $\phi$ above the points $-1$, $i$, and $e^{4\pi i/3}$ of $H$.
 \end{exercise}
@@ -371,7 +371,7 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{exercise}{3.1.13}
-    Repeat the preceding exercise with the map $\phi$ replaced by the map $\phi : r \mapsto e^{4\pi i r}$.
+    Repeat the preceding exercise with the map $\phi$ replaced by the map $\phi \colon r \mapsto e^{4\pi i r}$.
 \end{exercise}
 
 \begin{sol}
@@ -521,14 +521,14 @@ Let $G$ and $H$ be groups.
 	The above calculations show that for every $\bar g \in \bar G$, then $\bar{gr^2g\inv}, \bar{gsg\inv} \in H$ so that $\bar{gHg\inv} = \bar H$, hence $\bar H \nsub \bar G$.
 	Moreover, it is easy to see that every element of $\bar H$ is of order 2 so that $\bar H \cong V_4$.
 
-    Let $\pi : G \to \bar G$ be the natural projection of $G$ onto $\bar G$.
+    Let $\pi \colon G \to \bar G$ be the natural projection of $G$ onto $\bar G$.
 	Then $\pi\inv(\bar H)$ is the complete preimage of $\bar H$, or the set of elements that map to a coset in $\bar H$.
 	Using part (b), we see that
     \[
     	\pi\inv(\bar H) = \set{1, r^2, r^4, r^6, s, sr^2, sr^4, sr^6}
     \]
     Note that $|\pi\inv(\bar H)| = 8$, and the elements of $\bar H$ satisfy the relations $(r^2)^4 = s^2 = 1$.
-	Then the mapping $\phi : D_8 \to \pi\inv(\bar H)$ given by $\phi(r) = r^2$ and $\phi(s) = s$ extends to a homomorphism that is clearly surjective.
+	Then the mapping $\phi \colon D_8 \to \pi\inv(\bar H)$ given by $\phi(r) = r^2$ and $\phi(s) = s$ extends to a homomorphism that is clearly surjective.
 	Then $\phi$ is an isomorphism, and $\pi\inv(\bar H) \cong D_8$.
     \item From the previous exercise, we have that $\bar G = \gen{\bar r, \bar s}$.
 	Since $\bar r^2$ commutes with both $\bar r$ and $\bar s$, $\bar r^2 \in Z(\bar G)$.
@@ -573,7 +573,7 @@ Let $G$ and $H$ be groups.
     \]
     \item $\bar{\sigma\tau} = \bar{\tau\sigma^3}, \bar{\tau\sigma^{-2}\tau} = \bar\sigma^2, \bar{\tau\inv\sigma\inv\tau\sigma} = \bar\sigma^2$.
     \item Note that $\bar\sigma^4 = \bar\tau^2 = \bar 1$, and $\bar{\sigma\tau} = \bar{\tau\sigma^3} = \bar{\tau\sigma^7} = \bar{\tau\sigma}$ so that $\bar G$ satisfies the same relations in $D_8$.
-	Then the mapping $\phi : \bar G \to D_8$ given by $\phi(\bar\sigma) = r$ and $\phi(\bar\tau) = s$ extends to a surjective homomorphism, hence $\bar G \cong D_8$.
+	Then the mapping $\phi \colon \bar G \to D_8$ given by $\phi(\bar\sigma) = r$ and $\phi(\bar\tau) = s$ extends to a surjective homomorphism, hence $\bar G \cong D_8$.
 \end{solenum}
 
 \begin{exercise}{3.1.19}
@@ -608,7 +608,7 @@ Let $G$ and $H$ be groups.
     \item $\bar{vu} = \bar{uv^5} = \bar{uv},\; \bar{uv^{-2}u} = \bar{v^2},\; \bar{u\inv v\inv uv} = \bar{v^2}$.
     \item Since $\bar{vu} = \bar{uv^5} = \bar{uv}$, $\bar G$ is abelian.
 	Moreover, using the presentation of $Z_2 \times Z_4$ in \exref{2.5.12}, we see that $\bar u^2 = \bar v^4 = 1$ so that $\bar G$ satisfies the same relations.
-	Then $\phi : \bar G \to Z_2 \times Z_4$ given by $\phi(\bar u) = a$ and $\phi(\bar v) = b$ is a surjective homomorphism, hence $\bar G \cong Z_2 \times Z_4$.
+	Then $\phi \colon \bar G \to Z_2 \times Z_4$ given by $\phi(\bar u) = a$ and $\phi(\bar v) = b$ is a surjective homomorphism, hence $\bar G \cong Z_2 \times Z_4$.
 \end{solenum}
 
 \begin{exercise}!{3.1.20}
@@ -631,7 +631,7 @@ Let $G$ and $H$ be groups.
             \abs{\wt x} & 1 & 12 & 6 & 4 & 3 & 12 & 2 & 12 & 3 & 4 & 6 & 12
         \end{array}
     \]
-    \item Define the mapping $\phi : \wt G \to \intmod[12]$ given by $\phi(\wt x) = \bar x$.
+    \item Define the mapping $\phi \colon \wt G \to \intmod[12]$ given by $\phi(\wt x) = \bar x$.
 	This map is trivially a bijection, and for any $\wt x, \wt y \in \wt G$, then
     \[
     	\phi(\wt x + \wt y) = \phi(\wt{x + y}) = \bar{x + y} = \bar x + \bar y = \phi(\wt x) + \phi(\wt y)
@@ -673,7 +673,7 @@ Let $G$ and $H$ be groups.
             \abs{\bar g} & 1 & 4 & 2 & 4 & 4 & 2 & 4 & 2
         \end{array}
     \]
-    \item Using the presentation of $Z_2 \times Z_4$ in \exref{2.5.12}, and noting that $\bar{xy}^2 = \bar x^4 = 1$ then the mapping $\phi : Z_2 \times Z_4 \to \bar G$ given by
+    \item Using the presentation of $Z_2 \times Z_4$ in \exref{2.5.12}, and noting that $\bar{xy}^2 = \bar x^4 = 1$ then the mapping $\phi \colon Z_2 \times Z_4 \to \bar G$ given by
     \[
     	\phi(a) = \bar{xy}, \quad \phi(b) = \bar x
     \]
@@ -847,7 +847,7 @@ Let $G$ and $H$ be groups.
 
 \begin{soliff}
     \rightimp Suppose $gNg\inv \subseteq N$.
-	Let $\phi : N \to gNg\inv$ be the conjugation map.
+	Let $\phi \colon N \to gNg\inv$ be the conjugation map.
 	By \exref{1.7.17}, we know that this map is defined to be an isomorphism, hence $|gNg\inv| = |N|$.
 	Since $gNg\inv \subseteq N$ and both sets are finite with the same cardinality, it follows that $gNg\inv = N$.
 
@@ -1039,8 +1039,8 @@ Let $G$ and $H$ be groups.
 	Hence, $\splin_n(F) \nsub \gl_n(F)$.
 
     Observe that a normal subgroup corresponds to the kernel of some homomorphism.
-	It is clear that the mapping $\det : \gl_n(F) \to F\unt$ is a homomorphism, and the elements that map to the identity in $F\unt$ are precisely those matrices with determinant 1, i.e. $\splin_n(F)$.
-	Then we may consider the mapping $\phi : \gl_n(F)/\splin_n(F) \to F\unt$ given by $\phi(\bar X) = \det(X)$.
+	It is clear that the mapping $\det \colon \gl_n(F) \to F\unt$ is a homomorphism, and the elements that map to the identity in $F\unt$ are precisely those matrices with determinant 1, i.e. $\splin_n(F)$.
+	Then we may consider the mapping $\phi \colon \gl_n(F)/\splin_n(F) \to F\unt$ given by $\phi(\bar X) = \det(X)$.
 
     We now show that $\phi$ is well-defined.
 	Suppose $\bar A = \bar B$ for some $\bar A, \bar B \in \gl_n(F)/\splin_n(F)$.
@@ -1105,7 +1105,7 @@ Let $G$ and $H$ be groups.
     \]
     hence, $C \nsub A \times B$.
 
-    Let $\phi : A \times B/C \to B$ be given by $\phi((a, b)C) = b$.
+    Let $\phi \colon A \times B/C \to B$ be given by $\phi((a, b)C) = b$.
 	To show that this is well-defined, suppose $(a, b)C = (a', b')C$.
 	Then $C = (a\inv, b\inv)(a', b')C$, or that $(a\inv a', b\inv b') \in C$.
 	Then $b\inv b' = 1$, or $b = b'$ so that $\phi$ is well-defined.
@@ -1129,7 +1129,7 @@ Let $G$ and $H$ be groups.
 \begin{sol}
     By \exref{1.1.29}, $A \times A$ is abelian since $A$ is abelian, hence every subgroup of $A \times A$ is normal, including $D$.
 
-    Let $\phi : (A \times A)/D \to A$ be given by $\phi((a, b)D) = ab\inv$.
+    Let $\phi \colon (A \times A)/D \to A$ be given by $\phi((a, b)D) = ab\inv$.
 	To show that this is well-defined, suppose $(a_1, b_1)D = (a_2, b_2)D$.
 	Then $D = (a_1\inv, b_1\inv)(a_2, b_2)D$, or that $(a_1\inv a_2, b_1\inv b_2) \in D$.
 	Then $a_1\inv a_2 = b_1\inv b_2$, or $a_2b_2\inv = a_1b_1\inv$ so that $\phi$ is well-defined.

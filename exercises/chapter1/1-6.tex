@@ -3,7 +3,7 @@
 Let $G$ and $H$ be groups.
 
 \begin{exercise}!{1.6.1}
-    Let $\phi : G \to H$ be a homomorphism.
+    Let $\phi \colon G \to H$ be a homomorphism.
     \begin{subexercises}
         \item Prove that $\phi(x^n) = \phi(x)^n$ for all $n \in \zp$.
         \item Do part (a) for $n = - 1$ and deduce that $\phi(x^n) = \phi(x)^n$ for all $n \in \zbb$.
@@ -33,7 +33,7 @@ Let $G$ and $H$ be groups.
 \end{solenum}
 
 \begin{exercise}!{1.6.2}
-    If $\phi : G \to H$ is an isomorphism, prove that $|\phi(x)| = |x|$ for all $x \in G$.
+    If $\phi \colon G \to H$ is an isomorphism, prove that $|\phi(x)| = |x|$ for all $x \in G$.
 	Deduce that any two isomorphic groups have the same number of elements of order $n$ for each $n \in \zbb^+$.
 	Is the result true if $\phi$ is only assumed to be a homomorphism?
 \end{exercise}
@@ -58,12 +58,12 @@ Let $G$ and $H$ be groups.
 	Moreover, since $\phi$ is bijective, it induces a bijection between the elements of order $n$ in $G$ and the elements of order $n$ in $H$.
 	Hence, any two isomorphic groups have the same number of elements of order $n$ for each $n \in \zbb^+$.
 
-    The result is not true if $\phi$ is only assumed to be a homomorphism. Consider a nontrivial group $G$ and the trivial homomorphism $\phi : G \to 1$. Then $G$ contains nonidentity elements whose order is greater than 1, but only $1 \in 1$ has order 1.
+    The result is not true if $\phi$ is only assumed to be a homomorphism. Consider a nontrivial group $G$ and the trivial homomorphism $\phi \colon G \to 1$. Then $G$ contains nonidentity elements whose order is greater than 1, but only $1 \in 1$ has order 1.
 \end{sol}
 
 \begin{exercise}{1.6.3}
-    If $\phi : G \to H$ is an isomorphism, prove that $G$ is abelian if and only if $H$ is abelian.
-	If $\phi : G \to H$ is a homomorphism, what additional conditions on $\phi$ (if any) are sufficient to ensure that if $G$ is abelian, then so is $H$?
+    If $\phi \colon G \to H$ is an isomorphism, prove that $G$ is abelian if and only if $H$ is abelian.
+	If $\phi \colon G \to H$ is a homomorphism, what additional conditions on $\phi$ (if any) are sufficient to ensure that if $G$ is abelian, then so is $H$?
 \end{exercise}
 
 \begin{sol}
@@ -85,7 +85,7 @@ Let $G$ and $H$ be groups.
     \]
     so that $G$ is abelian.
     
-    Let $\phi : G \to H$ be a homomorphism.
+    Let $\phi \colon G \to H$ be a homomorphism.
 	In the \rightimp direction, observe that the only property of $\phi$ used was its surjectivity to guarantee the existence of $g_1$ and $g_2$ such that $\phi(g_1) = h_1$ and $\phi(g_2) = h_2$.
 	Hence, if $\phi$ is surjective, then $H$ is abelian whenever $G$ is abelian.
 \end{sol}
@@ -114,7 +114,7 @@ Let $G$ and $H$ be groups.
 \end{exercise}
 
 \begin{sol}
-    Suppose that $\phi : \qbb \to \zbb$ is an isomorphism.
+    Suppose that $\phi \colon \qbb \to \zbb$ is an isomorphism.
     Injectivity of $\phi$ and $1 \neq 0$ implies $\phi(1) \neq 0$.
     Put $\phi(1) = r \in \zbb - \set 0$.
     Then
@@ -150,10 +150,10 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{exercise}{1.6.10}
-    Fill in the details of the proof that the symmetric groups $S_\Delta$ and $S_\Omega$ are isomorphic if $|\Delta| = |\Omega|$ as follows: let $\theta : \Delta \to \Omega$ be a bijection.
+    Fill in the details of the proof that the symmetric groups $S_\Delta$ and $S_\Omega$ are isomorphic if $|\Delta| = |\Omega|$ as follows: let $\theta \colon \Delta \to \Omega$ be a bijection.
 	Define
     \[
-        \phi : S_\Delta \to S_\Omega \quad \text{by} \quad \phi(\sigma) = \theta \circ \sigma \circ \theta^{-1} \quad \text{for all } \sigma \in S_\Delta
+        \phi \colon S_\Delta \to S_\Omega \quad \text{by} \quad \phi(\sigma) = \theta \circ \sigma \circ \theta^{-1} \quad \text{for all } \sigma \in S_\Delta
     \]
     and prove the following:
     \begin{subexercises}
@@ -165,11 +165,11 @@ Let $G$ and $H$ be groups.
 \end{exercise}
 
 \begin{solenum}
-    \item Since $\theta : \Delta \to \Omega$ and $\theta\inv : \Omega \to \Delta$ are both bijections with $\sigma$ a bijection, it follows that their composition is a bijection.
+    \item Since $\theta \colon \Delta \to \Omega$ and $\theta\inv \colon \Omega \to \Delta$ are both bijections with $\sigma$ a bijection, it follows that their composition is a bijection.
 	Moreover, $\theta \circ \sigma \circ \theta^{-1}$ is a permutation of $\Omega$, so that $\phi$ is well-defined.
     \item Consider the mapping 
     \[
-    	\psi : S_\Omega \to S_\Delta\quad \text{by} \quad \psi(\tau) = \theta\inv \circ \tau \circ \theta \quad \text{for all } \tau \in S_\Omega
+    	\psi \colon S_\Omega \to S_\Delta\quad \text{by} \quad \psi(\tau) = \theta\inv \circ \tau \circ \theta \quad \text{for all } \tau \in S_\Omega
     \]
     By the above discussion, $\psi$ is well-defined.
 	For any $\sigma \in S_\Delta$, we have
@@ -199,7 +199,7 @@ Let $G$ and $H$ be groups.
 \begin{sol}
     The mapping
     \[
-    	\phi : A \times B \to B \times A \quad \text{given by} \quad (a, b) \mapsto (b, a)
+    	\phi \colon A \times B \to B \times A \quad \text{given by} \quad (a, b) \mapsto (b, a)
     \]
     for all $a \in A$ and $b \in B$ is clearly bijective.
 	Moreover, for any $(a_1, b_1), (a_2, b_2) \in A \times B$, we have
@@ -218,7 +218,7 @@ Let $G$ and $H$ be groups.
 \begin{sol}
     Consider the mapping
     \[
-    	\phi : G \times C \to A \times H \quad \text{by} \quad ((a, b), c) \mapsto (a, (b, c))
+    	\phi \colon G \times C \to A \times H \quad \text{by} \quad ((a, b), c) \mapsto (a, (b, c))
     \]
     for all $a \in A$, $b \in B$, and $c \in C$.
 	The proof is similar to the previous exercise and is omitted.
@@ -226,7 +226,7 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{exercise}!{1.6.13}
-    Let $G$ and $H$ be groups and let $\phi : G \to H$ be a homomorphism.
+    Let $G$ and $H$ be groups and let $\phi \colon G \to H$ be a homomorphism.
 	Prove that the image of $\phi$, $\phi(G)$, is a subgroup of $H$.
 	Prove that if $\phi$ is injective then $G \cong \phi(G)$.
 \end{exercise}
@@ -250,7 +250,7 @@ Let $G$ and $H$ be groups.
     Suppose $\phi$ is injective.
 	Then the mapping
     \[
-    	\psi : G \to \phi(G) \quad \text{by} \quad g \mapsto \phi(g)
+    	\psi \colon G \to \phi(G) \quad \text{by} \quad g \mapsto \phi(g)
     \]
     is well-defined.
 	For any $g_1, g_2 \in G$,
@@ -265,7 +265,7 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{exercise}!{1.6.14}
-    Let $G$ and $H$ be groups and let $\phi : G \to H$ be a homomorphism.
+    Let $G$ and $H$ be groups and let $\phi \colon G \to H$ be a homomorphism.
 	Define the \textbf{kernel} of $\phi$ to be $\set{ g \in G \mid \phi(g) = 1_H }$ (so the kernel is the set of elements in $G$ which map to the identity of $H$, i.e., is the fiber over the identity of $H$).
 	Prove that the kernel of $\phi$ is a subgroup of $G$.
 	Prove that $\phi$ is injective if and only if the kernel of $\phi$ is the identity subgroup of $G$.
@@ -296,7 +296,7 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{exercise}{1.6.15}
-    Define a map $\pi : \rbb^2 \to \rbb$ by $\pi((x,y)) = x$.
+    Define a map $\pi \colon \rbb^2 \to \rbb$ by $\pi((x,y)) = x$.
 	Prove that $\pi$ is a homomorphism and find the kernel of $\pi$.
 \end{exercise}
 
@@ -316,7 +316,7 @@ Let $G$ and $H$ be groups.
 
 \begin{exercise}{1.6.16}
     Let $A$ and $B$ be groups and let $G$ be their direct product, $A \times B$.
-	Prove that the maps $\pi_1 : G \to A$ and $\pi_2 : G \to B$ defined by $\pi_1((a,b)) = a$ and $\pi_2((a,b)) = b$ are homomorphisms and find their kernels.
+	Prove that the maps $\pi_1 \colon G \to A$ and $\pi_2 \colon G \to B$ defined by $\pi_1((a,b)) = a$ and $\pi_2((a,b)) = b$ are homomorphisms and find their kernels.
 \end{exercise}
 
 \begin{sol}
@@ -336,7 +336,7 @@ Let $G$ and $H$ be groups.
 \end{exercise}
 
 \begin{soliff}
-    \rightimp Suppose $\phi : g \mapsto g\inv$ is a homomorphism.
+    \rightimp Suppose $\phi \colon g \mapsto g\inv$ is a homomorphism.
 	Then for $g, h \in G$, we have
     \[
         gh = (h\inv g\inv)\inv = \phi(h\inv g\inv) = \phi(h\inv)\phi(g\inv) = hg,
@@ -367,7 +367,7 @@ Let $G$ and $H$ be groups.
 
 \begin{sol}
     Since $G \subseteq \cbb$, $G$ is abelian.
-	Let $\phi : z \to z^k$.
+	Let $\phi \colon z \to z^k$.
 	Hence, for any $z, w \in G$, we have
     \[
     	\phi(zw) = (zw)^k = z^kw^k = \phi(z)\phi(w)
@@ -391,7 +391,7 @@ Let $G$ and $H$ be groups.
 
 \begin{sol}
     Recall that function composition is associative.
-    Observe that $\aut(G)$ contains the identity map $\id : G \to G$ defined by $\id(g) = g$ for all $g \in G$.
+    Observe that $\aut(G)$ contains the identity map $\id \colon G \to G$ defined by $\id(g) = g$ for all $g \in G$.
     Also recall that the composition of two bijections is a bijection. Then for any $\phi, \psi \in G$ and $g, h \in G$, we have
     \[
         (\phi \circ \psi)(gh) = \phi(\psi(gh)) = \phi(\psi(g)\psi(h)) = \phi(\psi(g))\phi(\psi(h)) = (\phi \circ \psi)(g)(\phi \circ \psi)(h),
@@ -412,7 +412,7 @@ Let $G$ and $H$ be groups.
 \end{exercise}
 
 \begin{sol}
-    Let $\phi : \qbb \to \qbb$ be defined by $\phi(q) = kq$ for all $q \in \qbb$.
+    Let $\phi \colon \qbb \to \qbb$ be defined by $\phi(q) = kq$ for all $q \in \qbb$.
 	For any $p, q \in \qbb$, we have
     \[
     	\phi(p + q) = k(p + q) = kp + kq = \phi(p) + \phi(q),
@@ -428,7 +428,7 @@ Let $G$ and $H$ be groups.
 \end{exercise}
 
 \begin{sol}
-    Let $\phi : A \to A$ be defined by $\phi(a) = a^k$ for all $a \in A$.
+    Let $\phi \colon A \to A$ be defined by $\phi(a) = a^k$ for all $a \in A$.
 	For any $a_1, a_2 \in A$, we have
     \[
     	\phi(a_1a_2) = (a_1a_2)^k = a_1^k a_2^k = \phi(a_1)\phi(a_2)
@@ -447,7 +447,7 @@ Let $G$ and $H$ be groups.
 \begin{sol}
     Define the map
     \[
-    	f : G \to G \quad \text{by} \quad x \mapsto x\inv \sigma(x)
+    	f \colon G \to G \quad \text{by} \quad x \mapsto x\inv \sigma(x)
     \]
     for all $x \in G$.
 	If $f(x) = f(y)$ for $x, y \in G$, then $x\inv \sigma(x) = y\inv \sigma(y)$ so that $yx\inv = \sigma(yx\inv)$.
@@ -514,7 +514,7 @@ Let $G$ and $H$ be groups.
             \end{pmatrix}
         \]
         is the matrix of the linear transformation which rotates the $x,y$-plane about the origin in a counterclockwise direction by $\theta$ radians.
-        \item Prove that the map $\phi : D_{2n} \to \gl_2(\rbb)$ defined on generators by
+        \item Prove that the map $\phi \colon D_{2n} \to \gl_2(\rbb)$ defined on generators by
         \[
             \phi(r) = 
             \begin{pmatrix}

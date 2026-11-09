@@ -8,7 +8,7 @@ Let $G$ be a group and let $\Omega$ be an infinite set.
 
 \begin{sol}
 	Suppose $H \leq A_n$ is a proper subgroup of index $k < n$.
-	Then $A_n$ acts on the left cosets of $H$ by left multiplication, inducing a homomorphism $\phi : A_n \to S_k$.
+	Then $A_n$ acts on the left cosets of $H$ by left multiplication, inducing a homomorphism $\phi \colon A_n \to S_k$.
 	Observe that $n/2 > 0$ for all $n \geq 5$.
 	This lets us conclude that $\ker\phi$ must be nontrivial, for otherwise $\phi$ would be injective and $|A_n| \leq |S_k|$.
 	However, $k < n$ implies $k \leq n - 1$, or $k! \leq (n - 1)! < n!/2 = |A_n|$, which is a contradiction.
@@ -48,8 +48,8 @@ Let $G$ be a group and let $\Omega$ be an infinite set.
 \end{exercise}
 
 \begin{sol}
-	Let $H \leq S_n$ be a proper subgroup where $|S_n : H| = k < n$.
-	Then $S_n$ acts on the left cosets of $H$ by left multiplication, inducing a homomorphism $\phi : S_n \to S_k$.
+	Let $H \leq S_n$ be a proper subgroup where $|S_n \colon H| = k < n$.
+	Then $S_n$ acts on the left cosets of $H$ by left multiplication, inducing a homomorphism $\phi \colon S_n \to S_k$.
 	Observe that $n/2 > 0$ for all $n \geq 5$.
 	This lets us conclude that $\ker\phi$ must be nontrivial, for otherwise $\phi$ would be injective and $|S_n| \leq |S_k|$.
 	However, $k < n$ implies $k \leq n - 1$, or $k! \leq (n - 1)! < n! = |S_n|$, which is a contradiction.
@@ -113,7 +113,7 @@ Let $G$ be a group and let $\Omega$ be an infinite set.
 	\[
 		B_n = \set{\sigma \in A \mid M(\sigma) \subseteq \Omega_n}
 	\]
-	Consider the bijection $\phi : B_n \to A_n$ defined by $\phi(\sigma) = \sigma|_{\Omega_n}$, where $\sigma|_{\Omega_n}$ is the restriction of $\sigma$ to $\Omega_n$.
+	Consider the bijection $\phi \colon B_n \to A_n$ defined by $\phi(\sigma) = \sigma|_{\Omega_n}$, where $\sigma|_{\Omega_n}$ is the restriction of $\sigma$ to $\Omega_n$.
 	It is clear that this is a homomorphism, hence $B_n \cong A_n$.
 	Moreover, $B_n$ is simple since $A_n$ is simple for all $n \geq 5$.
 	Considering the chain of subgroups $B_5 \leq B_6 \leq \cdots$, we see that

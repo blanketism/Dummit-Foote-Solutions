@@ -84,7 +84,7 @@
 
 	Consider the abelian group $G = \intmod[2] \times \intmod[2]$.
 	Then every subgroup of $G$ is normal since $G$ is abelian.
-	However, the subgroup $H = \set{(0,0), (1,0)}$ is not characteristic in $G$ since the automorphism $\sigma : G \to G$ defined by $\sigma((a,b)) = (b,a)$ sends $H$ to the distinct subgroup $\set{(0,0), (0,1)}$.
+	However, the subgroup $H = \set{(0,0), (1,0)}$ is not characteristic in $G$ since the automorphism $\sigma \colon G \to G$ defined by $\sigma((a,b)) = (b,a)$ sends $H$ to the distinct subgroup $\set{(0,0), (0,1)}$.
 	Therefore, $H$ is a normal subgroup of $G$ that is not characteristic.
 \end{sol}
 
@@ -175,7 +175,7 @@
 	Let $N_{S_p}$ act on $P$ by conjugation.
 	Then we have the map
 	\[
-		\phi : N_{S_p}(P) \to \aut(P), \quad \phi(g)(x) = gxg\inv
+		\phi \colon N_{S_p}(P) \to \aut(P), \quad \phi(g)(x) = gxg\inv
 	\]
 	for all $g \in N_{S_p}(P)$ and $x \in P$.
 	Recall that $\ker\phi = C_{S_p}(P)$ by Proposition 4.13.
@@ -203,7 +203,7 @@
 	Now consider the action of $G$ on $H$ by conjugation.
 	This gives the map
 	\[
-		\phi : G \to \aut(H), \quad \phi(g)(x) = gxg\inv
+		\phi \colon G \to \aut(H), \quad \phi(g)(x) = gxg\inv
 	\]
 	for all $g \in G$ and $x \in H$.
 	Recall that $\ker\phi = C_G(H)$ by Proposition 4.13.
@@ -300,33 +300,33 @@
 
 \begin{solitem}
 	\item $n = 2$: $\units[2] = \set{\bar 1}$.
-	Then $\psi_1 : x^k \mapsto x^{1 \cdot k} = x^k$ for $k = 0, 1$.
+	Then $\psi_1 \colon x^k \mapsto x^{1 \cdot k} = x^k$ for $k = 0, 1$.
 	Therefore, $\aut(G) = \set{\id}$.
 	\item $n = 3$: $\units[3] = \set{\bar 1, \bar 2}$.
 	Then
 	\[
-		\psi_1 : x^k \mapsto x^{1 \cdot k} = x^k, \quad \psi_2 : x^k \mapsto x^{2 \cdot k}
+		\psi_1 \colon x^k \mapsto x^{1 \cdot k} = x^k, \quad \psi_2 \colon x^k \mapsto x^{2 \cdot k}
 	\]
 	for $k = 0, 1, 2$.
 	Therefore, $\aut(G) = \set{\psi_1, \psi_2}$.
 	\item $n = 4$: $\units[4] = \set{\bar 1, \bar 3}$.
 	Then
 	\[
-		\psi_1 : x^k \mapsto x^{1 \cdot k} = x^k, \quad \psi_3 : x^k \mapsto x^{3 \cdot k}
+		\psi_1 \colon x^k \mapsto x^{1 \cdot k} = x^k, \quad \psi_3 \colon x^k \mapsto x^{3 \cdot k}
 	\]
 	for $k = 0, 1, 2, 3$.
 	Therefore, $\aut(G) = \set{\psi_1, \psi_3}$.
 	\item $n = 5$: $\units[5] = \set{\bar 1, \bar 2, \bar 3, \bar 4}$.
 	Then
 	\[
-		\psi_1 : x^k \mapsto x^{1 \cdot k}, \quad \psi_2 : x^k \mapsto x^{2 \cdot k}, \quad \psi_3 : x^k \mapsto x^{3 \cdot k}, \quad \psi_4 : x^k \mapsto x^{4 \cdot k}
+		\psi_1 \colon x^k \mapsto x^{1 \cdot k}, \quad \psi_2 \colon x^k \mapsto x^{2 \cdot k}, \quad \psi_3 \colon x^k \mapsto x^{3 \cdot k}, \quad \psi_4 \colon x^k \mapsto x^{4 \cdot k}
 	\]
 	for $k = 0, 1, 2, 3, 4$.
 	Therefore, $\aut(G) = \set{\psi_1, \psi_2, \psi_3, \psi_4}$.
 	\item $n = 6$: $\units[6] = \set{\bar 1, \bar 5}$.
 	Then
 	\[
-		\psi_1 : x^k \mapsto x^{1 \cdot k} = x^k, \quad \psi_5 : x^k \mapsto x^{5 \cdot k}
+		\psi_1 \colon x^k \mapsto x^{1 \cdot k} = x^k, \quad \psi_5 \colon x^k \mapsto x^{5 \cdot k}
 	\]
 	for $k = 0, 1, 2, 3, 4, 5$.
 	Therefore, $\aut(G) = \set{\psi_1, \psi_5}$.
@@ -441,7 +441,7 @@
 	Therefore, $|\kcal| \neq |\kcal'|$ unless $\kcal'$ is the conjugacy class of products of three disjoint transpositions.
 	Hence, by (a) in the previous exercise, $\aut(S_6)$ has a subgroup of index at most 2 which sends transpositions to transpositions.
 	\item Following the same steps as in (c) and (d) of the previous exercise, we can show that any automorphism that sends transpositions to transpositions is inner.
-	Therefore, by (a), we have $|\aut(S_6) : \inn(S_6)| \leq 2$.
+	Therefore, by (a), we have $|\aut(S_6) \colon \inn(S_6)| \leq 2$.
 \end{solenum}
 
 \begin{exercise}!{4.4.20}
@@ -489,7 +489,7 @@
 			\gen{\tau\sigma^2, \sigma^4} = \set{1, \sigma^4, \tau\sigma^2, \tau\sigma^6} \quad \text{and} \quad \gen{\tau, \sigma^4} = \set{1, \sigma^4, \tau, \tau\sigma^4}.
 		\]
 		The join of these two subgroups is the subgroup $\gen{\sigma^2, \tau}$, which has order 8.
-	Since $\tau^2 = (\sigma^2)^4 = 1$, and $\sigma^2\tau = \tau\sigma^6$, the mapping $\phi : D_8 \to \gen{\sigma^2, \tau}$ defined by $\phi(r) = \sigma^2$ and $\phi(s) = \tau$ is an isomorphism.
+	Since $\tau^2 = (\sigma^2)^4 = 1$, and $\sigma^2\tau = \tau\sigma^6$, the mapping $\phi \colon D_8 \to \gen{\sigma^2, \tau}$ defined by $\phi(r) = \sigma^2$ and $\phi(s) = \tau$ is an isomorphism.
 	Therefore, $J(QD_{16})$ is a dihedral subgroup of order 8 in $QD_{16}$.
 	\end{itemize}
 	\item Note that any abelian subgroup of $Q$ is also an abelian subgroup of $P$.

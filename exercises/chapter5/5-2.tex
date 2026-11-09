@@ -117,7 +117,7 @@
     Let $p$ be a prime and let $A = \langle x_1 \rangle \times \langle x_2 \rangle \times \cdots \times \langle x_n \rangle$ be an abelian $p$-group, where $|x_i| = p^{\alpha_i} > 1$ for all $i$.
 	Define the $p^{\text{th}}$-\emph{power map}
     \[
-    	\phi : A \to A \quad \text{by} \quad \phi : x \mapsto x^p.
+    	\phi \colon A \to A \quad \text{by} \quad \phi \colon x \mapsto x^p.
     \]
     \begin{subexercises}
         \item Prove that $\phi$ is a homomorphism.
@@ -182,10 +182,10 @@
         \]
         We may again use \exref{5.1.14} along with the fact that $A_{p_i} / A_{p_i}^p \cong A_{p_i}^p$ to conclude that $A/A^p \cong A_p$.
     \end{itemize}
-    \item Let $H \leq A$ such that $|A : H| = p$.
+    \item Let $H \leq A$ such that $|A \colon H| = p$.
 	Let $a \in A$.
 	Then $aH \in A/H$.
-	Since $|A : H| = p$, $|aH| = 1$ or $p$.
+	Since $|A \colon H| = p$, $|aH| = 1$ or $p$.
 	If $|aH| = 1$, then $a \in H$.
 	If $|aH| = p$, then $a^pH = H$, or $a^p \in H$.
 	In either case, we have $a^p \in H$, so $A^p \subseteq H$.
@@ -305,7 +305,7 @@
     	\gen{x_1, x_2, \ldots, x_r \mid x_i^{n_i} = 1 \text{ for } 1 \leq i \leq r, x_ix_j = x_jx_i \text{ for } 1 \leq i < j \leq r}.
     \]
     Now, observe that every element of $A$ is of the form $x_1^{s_1} x_2^{s_2} \cdots x_r^{s_r}$ for some integers $s_1, s_2, \ldots, s_r$.
-	Define $\phi : A \to G$ by $\phi(x_1^{s_1} x_2^{s_2} \cdots x_r^{s_r}) = g_1^{s_1} g_2^{s_2} \cdots g_r^{s_r}$.
+	Define $\phi \colon A \to G$ by $\phi(x_1^{s_1} x_2^{s_2} \cdots x_r^{s_r}) = g_1^{s_1} g_2^{s_2} \cdots g_r^{s_r}$.
 	Since the $g_i$ commute, $\phi$ is well-defined.
 	Moreover, $\phi$ is a homomorphism since
     \begin{align*}
@@ -316,7 +316,7 @@
     \end{align*}
     for all integers $s_1, s_2, \ldots, s_r$ and $t_1, t_2, \ldots, t_r$.
 	Finally, $\phi(x_i) = g_i$ for all $i$ by definition.
-	To see that $\phi$ is the unique homomorphism from $A$ to $G$ sending $x_i$ to $g_i$ for all $i$, let $\psi : A \to G$ be any such homomorphism.
+	To see that $\phi$ is the unique homomorphism from $A$ to $G$ sending $x_i$ to $g_i$ for all $i$, let $\psi \colon A \to G$ be any such homomorphism.
 	Then $\psi(x_1^{s_1} x_2^{s_2} \cdots x_r^{s_r}) = \psi(x_1)^{s_1} \psi(x_2)^{s_2} \cdots \psi(x_r)^{s_r} = g_1^{s_1} g_2^{s_2} \cdots g_r^{s_r}$ for all integers $s_1, s_2, \ldots, s_r$, so $\psi = \phi$.
 \end{sol}
 
@@ -332,10 +332,10 @@
 
 \begin{solenum}
     \item Multiplication in $\cbb$ is already associative and commutative, so pointwise multiplication of functions is also associative and commutative.
-	The map $\ep : G \to \cbb$ given by $\ep(g) = 1$ for all $g \in G$ is a homomorphism, since $\ep(gh) = 1 = 1 \cdot 1 = \ep(g)\ep(h)$ for all $g, h \in G$, and 1 is a root of unity.
+	The map $\ep \colon G \to \cbb$ given by $\ep(g) = 1$ for all $g \in G$ is a homomorphism, since $\ep(gh) = 1 = 1 \cdot 1 = \ep(g)\ep(h)$ for all $g, h \in G$, and 1 is a root of unity.
 	Moreover, for any $\chi \in \wh G$, then $(\chi\ep)(g) = \chi(g)\ep(g) = \chi(g) \cdot 1 = \chi(g)$ for all $g \in G$.
 	Thus, $\ep$ is the identity element of $\wh{G}$.
-	Finally, if $\chi \in \wh{G}$, then the map $\chi^{-1} : G \to \cbb$ given by $\chi^{-1}(g) = \chi(g)^{-1}$ is a homomorphism, since $\chi^{-1}(gh) = \chi(gh)^{-1} = (\chi(g)\chi(h))^{-1} = \chi(g)^{-1}\chi(h)^{-1} = \chi^{-1}(g)\chi^{-1}(h)$ for all $g, h \in G$, and $\chi(g)^{-1}$ is a root of unity since $\chi(g)$ is a root of unity.
+	Finally, if $\chi \in \wh{G}$, then the map $\chi^{-1} \colon G \to \cbb$ given by $\chi^{-1}(g) = \chi(g)^{-1}$ is a homomorphism, since $\chi^{-1}(gh) = \chi(gh)^{-1} = (\chi(g)\chi(h))^{-1} = \chi(g)^{-1}\chi(h)^{-1} = \chi^{-1}(g)\chi^{-1}(h)$ for all $g, h \in G$, and $\chi(g)^{-1}$ is a root of unity since $\chi(g)$ is a root of unity.
 	Moreover, $\chi\chi^{-1} = \ep$, so $\chi^{-1}$ is the inverse of $\chi$ in $\wh{G}$.
     \item To see that $\chi_i$ has order $n_i$ in $\wh G$, let $g = x_1^{s_1} \cdots x_r^{s_r} \in G$.
 	Then
@@ -345,7 +345,7 @@
     where all terms $\chi_i(x_j)^{s_j}$ for $j \neq i$ are 1.
 	Thus, $\chi_i^k(g) = e^{2\pi i k s_i / n_i}$ for all integers $k$, so $\chi_i^k = \ep$ if and only if $n_i \mid k$.
 	Thus, $\chi_i$ has order $n_i$ in $\wh{G}$.
-	Now, note by \exref{5.2.13} that there exists a unique homomorphism $\phi : G \to \wh G$ such that $\phi(x_i) = \chi_i$ for all $i$.
+	Now, note by \exref{5.2.13} that there exists a unique homomorphism $\phi \colon G \to \wh G$ such that $\phi(x_i) = \chi_i$ for all $i$.
 	We now show that $\phi$ is an isomorphism.
 
     Let $g = x_1^{s_1} \cdots x_r^{s_r} \in G$ such that $\phi(g) = \ep$.

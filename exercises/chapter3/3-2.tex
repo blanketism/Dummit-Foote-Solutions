@@ -88,7 +88,7 @@ Let $G$ be a group.
     since $h_1h_2\inv \in H$.
 	Then $gHg\inv \leq G$.
 
-    To show that $gHg\inv$ has the same order as $H$, consider the mapping $\phi : H \to gHg\inv$ given by $\phi(h) = ghg\inv$.
+    To show that $gHg\inv$ has the same order as $H$, consider the mapping $\phi \colon H \to gHg\inv$ given by $\phi(h) = ghg\inv$.
 	For $h_1, h_2 \in H$ such that $\phi(h_1) = \phi(h_2)$, then $gh_1g\inv = gh_2g\inv$, or $h_1 = h_2$, hence $\phi$ is injective.
 	Moreover, for any $ghg\inv \in gHg\inv$, then $\phi(h) = ghg\inv$, so that $\phi$ is surjective.
 	Hence, $\phi$ is a bijection, and $|gHg\inv| = |H|$.
@@ -169,7 +169,7 @@ Let $G$ be a group.
 	Observe that $|\scal'| = |G|^{p-1}$.
 	Define the mapping
     \[
-    	\phi : \scal' \to \scal \quad \text{by} \quad \phi(x_1, x_2, \dots, x_{p-1}) = (x_1, x_2, \dots, x_{p-1}, (x_1x_2 \cdots x_{p-1})\inv)
+    	\phi \colon \scal' \to \scal \quad \text{by} \quad \phi(x_1, x_2, \dots, x_{p-1}) = (x_1, x_2, \dots, x_{p-1}, (x_1x_2 \cdots x_{p-1})\inv)
     \]
     To show that $\phi$ is injective, suppose $\phi(x_1, \dots, x_{p-1}) = \phi(y_1, \dots, y_{p-1})$.
 	Then $x_i = y_i$ for all $1 \leq i \leq p - 1$, and the last inverse term must imply $x_1x_2 \cdots x_{p - 1} = y_1y_2 \cdots y_{p - 1}$ since inverses are unique in a group.
@@ -227,13 +227,13 @@ Let $G$ be a group.
 \end{solenum}
 
 \begin{exercise}!{3.2.10}
-    Suppose $H$ and $K$ are subgroups of finite index in the (possibly infinite) group $G$ with $|G : H| = m$ and $|G : K| = n$.
-	Prove that $\lcm(m, n) \leq |G : H \cap K| \leq mn$.
-	Deduce that if $m$ and $n$ are relatively prime then $|G : H \cap K| = |G : H| \cdot |G : K|$.
+    Suppose $H$ and $K$ are subgroups of finite index in the (possibly infinite) group $G$ with $|G \colon H| = m$ and $|G \colon K| = n$.
+	Prove that $\lcm(m, n) \leq |G \colon H \cap K| \leq mn$.
+	Deduce that if $m$ and $n$ are relatively prime then $|G \colon H \cap K| = |G \colon H| \cdot |G \colon K|$.
 \end{exercise}
 
 \begin{sol} 
-    Let $|G : H \cap K| = \ell$.
+    Let $|G \colon H \cap K| = \ell$.
 	Consider the cosets $gH, gK$, and $g(H \cap K)$ for some $g \in G$.
 	We wish to identify $g(H \cap K)$ in terms of $gH$ and $gK$.
 	Note that $x \in g(H \cap K)$ implies that $g\inv x \in H \cap K$, hence $g\inv x \in H$ and $g\inv x \in K$, so that $x \in gH$ and $x \in gK$.
@@ -252,8 +252,8 @@ Let $G$ be a group.
 	Moreover, because $H \cap K \leq H$, then the cosets of $H \cap K$ in $H$ partition $H$ so that there exists a unique $h \in H$ such that $x \in gh(H \cap K)$.
 	Pick another coset $h' \neq h$ of $H \cap K$ in $H$.
 	Then $gh(H \cap K) \neq gh'(H \cap K)$ since if they were equal, $(gh)\inv(gh') = h\inv h' \in H \cap K$, contradicting that $h$ and $h'$ are distinct cosets.
-	It follows that for each coset of $H$ in $G$, there are $\abs{H : H \cap K}$ distinct cosets of $H \cap K$ in $G$.
-	Since there are $m$ cosets of $H$ in $G$, $\ell = m \abs{H : H \cap K}$, hence $m \mid \ell$.
+	It follows that for each coset of $H$ in $G$, there are $\abs{H \colon H \cap K}$ distinct cosets of $H \cap K$ in $G$.
+	Since there are $m$ cosets of $H$ in $G$, $\ell = m \abs{H \colon H \cap K}$, hence $m \mid \ell$.
 	Similarly, $n \mid \ell$.
 	Since $\ell$ is a multiple of both $m$ and $n$, $\lcm(m, n) \mid \ell$, hence $\lcm(m, n) \leq \ell$, and we have the desired inequality $\lcm(m, n) \leq \ell \leq mn$.
 
@@ -262,14 +262,14 @@ Let $G$ be a group.
 
 \begin{exercise}!{3.2.11}
     Let $H \leq K \leq G$.
-	Prove that $|G : H| = |G : K| \cdot |K : H|$. 
+	Prove that $|G \colon H| = |G \colon K| \cdot |K \colon H|$. 
 \end{exercise}
 
 \begin{sol}
     Note that cosets of $H$ are contained in cosets of $K$.
 	If $H$ has infinite index in $K$ or if $K$ has infinite index in $G$, then $H$ has infinite index in $G$.
-	The finite case follows in the proof of \exref{3.2.10}, where we showed that each coset of $K$ contains $\abs{K : H}$ distinct cosets of $H$.
-	Since there are $\abs{G : K}$ distinct cosets of $K$ in $G$, there are $\abs{G : K} \cdot \abs{K : H}$ distinct cosets of $H$ in $G$, hence $\abs{G : H} = \abs{G : K} \cdot \abs{K : H}$.
+	The finite case follows in the proof of \exref{3.2.10}, where we showed that each coset of $K$ contains $\abs{K \colon H}$ distinct cosets of $H$.
+	Since there are $\abs{G \colon K}$ distinct cosets of $K$ in $G$, there are $\abs{G \colon K} \cdot \abs{K \colon H}$ distinct cosets of $H$ in $G$, hence $\abs{G \colon H} = \abs{G \colon K} \cdot \abs{K \colon H}$.
 \end{sol}
 
 \begin{exercise}{3.2.12}
@@ -279,13 +279,13 @@ Let $G$ be a group.
 
 \begin{sol}
     Let $L$ be the set of left cosets of $H$ in $G$ and $R$ be the set of right cosets of $H$ in $G$.
-	Define the map $\phi : L \to R$ be given by $\phi(xH) = Hx\inv$.
+	Define the map $\phi \colon L \to R$ be given by $\phi(xH) = Hx\inv$.
 	We claim that this map is well-defined. Suppose $xH = yH$.
 	Then
 	\[
 		y\inv x \in H \implies (y\inv x)\inv = x\inv y \in H \implies Hx\inv = Hy\inv.
 	\]
-	Note that the map $\psi : R \to L$ given by $\psi(Hx) = x\inv H$ is well-defined by a similar argument.
+	Note that the map $\psi \colon R \to L$ given by $\psi(Hx) = x\inv H$ is well-defined by a similar argument.
 	It is clear that $\phi \circ \psi = 1$ and $\psi \circ \phi = 1$, hence $\psi = \phi\inv$ so that $\phi$ is a bijection.
 	It follows that $\abs L = \abs R$.
 \end{sol}
@@ -363,7 +363,7 @@ Let $G$ be a group.
 
 \begin{exercise}{3.2.18}
     Let $G$ be a finite group, let $H$ be a subgroup of $G$ and let $N \nsub G$.
-	Prove that if $\abs H$ and $|G : N|$ are relatively prime then $H \leq N$.
+	Prove that if $\abs H$ and $|G \colon N|$ are relatively prime then $H \leq N$.
 \end{exercise}
 
 \begin{sol}
@@ -372,14 +372,14 @@ Let $G$ be a group.
 	Then we have that $|G| = m|HN|$ and $|H| = n|H \cap N|$ for some $m, n \in \zbb$.
 	By Corollary 13, we have that
     \[
-    	|HN| = \frac{\abs H \abs N}{|H \cap N|} \implies m|HN| = m\frac{n|H \cap N||N|}{|H \cap N|} \implies \frac{|G|}{|N|} = |G : N| = mn
+    	|HN| = \frac{\abs H \abs N}{|H \cap N|} \implies m|HN| = m\frac{n|H \cap N||N|}{|H \cap N|} \implies \frac{|G|}{|N|} = |G \colon N| = mn
     \]
-    Since $(\abs H, |G : N|) = 1$, $n = 1$ so that $\abs H = |H \cap N|$.
+    Since $(\abs H, |G \colon N|) = 1$, $n = 1$ so that $\abs H = |H \cap N|$.
 	It follows that $H = H \cap N$, hence $H \leq N$.
 \end{sol}
 
 \begin{exercise}{3.2.19}
-    Prove that if $N$ is a normal subgroup of the finite group $G$ and $(|N|, |G : N|) = 1$ then $N$ is the unique subgroup of $G$ of order $|N|$.
+    Prove that if $N$ is a normal subgroup of the finite group $G$ and $(|N|, |G \colon N|) = 1$ then $N$ is the unique subgroup of $G$ of order $|N|$.
 \end{exercise}
 
 \begin{sol}
@@ -409,7 +409,7 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-    Suppose $\qbb$ has a proper subgroup $H$ such that $|\qbb : H|$ is some finite $n$.
+    Suppose $\qbb$ has a proper subgroup $H$ such that $|\qbb \colon H|$ is some finite $n$.
 	Recalling that $\qbb$ is divisible by \exref{2.4.19}, then $\qbb/H$ is also divisible by \exref{3.1.15}.
 	However, $\qbb/H$ is a finite group of order $n$, hence it cannot be divisible unless it is trivial.
 	It follows that $H = \qbb$, a contradiction.
