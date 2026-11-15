@@ -4,50 +4,51 @@ import re
 import subprocess
 import sys
 from collections import defaultdict
-from itertools import groupby   # add next to your other imports
 
-EXERCISE_RE = re.compile(r"\\begin\{exercise\}[\{\[]([^}\]]+)[\}\]]")
-UNLABELED_RE = re.compile(r"\\begin\{exercise\}(?![\{\[])")
+EXERCISE_RE = re.compile(r"\\begin\{exercise\}\*?[\{\[]([^}\]]+)[\}\]]")
+UNLABELED_RE = re.compile(r"\\begin\{exercise\}\*?(?![\{\[*])")
 SOL_START_RE = re.compile(r"\\begin\{(?:sol|solenum|solitem|soliff)\}")
 SOL_END_RE = re.compile(r"\\end\{(?:sol|solenum|solitem|soliff)\}")
 EXERCISE_END_RE = re.compile(r"\\end\{exercise\}")
 
+ALLOWED_SOURCES = ("", "template", "message")
+
+
+def _natural(s):
+    return tuple((0, int(t)) if t.isdigit() else (1, t)
+                 for t in re.findall(r"\d+|\D+", s))
+
+
 def chapter_key(label):
-    return label.split(".")[0] if "." in label else label[0]
-
-def section_key(label):
     if "." in label:
-        return ".".join(label.split(".")[:2])   # 1.2.10 -> 1.2
-    return label[:2]                            # 1A5    -> 1A
+        return label.split(".")[0]
+    m = re.match(r"\d+|\D", label)
+    return m[0] if m else label
 
-def sort_key(label):
-    if "." in label:
-        return tuple(int(x) for x in label.split("."))
-    # Axler format: 1A5
-    return (int(label[0]), label[1], int(label[2:]))
 
 def collect_edits(diff_text):
     found = defaultdict(set)
-    found_appendix = defaultdict(set)
-    current_file = current_exercise = current_apex = None
-    in_solution = in_apex = False
+    current_file = current_exercise = None
+    in_solution = False
+    warned = set()
 
     for line in diff_text.splitlines():
         if line.startswith("+++ b/"):
             current_file = line[6:]
-            current_exercise = current_apex = None
-            in_solution = in_apex = False
+            current_exercise = None
+            in_solution = False
             continue
         if line.startswith(("@@", "---", "diff ")):
             continue
 
         content = line[1:] if line[:1] in "+- " else line
 
-        if UNLABELED_RE.search(content):
+        if UNLABELED_RE.search(content) and current_file not in warned:
             print(f"Warning: unlabeled exercise in {current_file}", file=sys.stderr)
+            warned.add(current_file)
 
         if m := EXERCISE_RE.search(content):
-            current_exercise = m[1]
+            current_exercise = m[1].strip()
             in_solution = False
         elif SOL_START_RE.search(content):
             in_solution = True
@@ -56,51 +57,34 @@ def collect_edits(diff_text):
         elif line.startswith("+") and in_solution and current_exercise:
             found[chapter_key(current_exercise)].add(current_exercise)
 
-    return found, found_appendix
+    return found
 
 
-def _section(prefix, found):
-    chapters = sorted(found, key=lambda ch: (int(ch) if ch.isdigit() else ch))
-    subject = f"{prefix}: chapter{'s' if len(chapters) > 1 else ''} {', '.join(chapters)}\n\n"
-    body = "\n".join(
-        ", ".join(sorted(found[ch], key=sort_key))
-        for ch in chapters
-    )
+def build_message(found):
+    chapters = sorted(found, key=_natural)
+    subject = f"fix: chapter{'s' if len(chapters) > 1 else ''} {', '.join(chapters)}\n\n"
+    body = "\n".join(", ".join(sorted(found[ch], key=_natural)) for ch in chapters)
     return subject + body
 
-def _section(prefix, found):
-    chapters = sorted(found, key=lambda ch: (int(ch) if ch.isdigit() else ch))
-    subject = f"{prefix}: chapter{'s' if len(chapters) > 1 else ''} {', '.join(chapters)}\n\n"
-    blocks = []
-    for ch in chapters:
-        labels = sorted(found[ch], key=sort_key)
-        lines = [", ".join(group) for _, group in groupby(labels, key=section_key)]
-        blocks.append("\n".join(lines))
-    return subject + "\n\n".join(blocks)
-
-def build_message(found, found_appendix):
-    parts = []
-    if found:
-        parts.append(_section("fix", found))
-    if found_appendix:
-        parts.append(_section("appendix", found_appendix))
-    return "\n\n".join(parts)
 
 def main():
     msg_file = sys.argv[1]
     source = sys.argv[2] if len(sys.argv) > 2 else ""
-    if source not in ("", "template"):
+    if source not in ALLOWED_SOURCES:
         return
 
-    diff = subprocess.run(
+    result = subprocess.run(
         ["git", "diff", "--cached", "-U999999", "--", "*.tex"],
-        capture_output=True, text=True
-    ).stdout
+        capture_output=True, encoding="utf-8", errors="replace",
+    )
+    if result.returncode != 0:
+        print(f"prepare-commit-msg: git diff failed:\n{result.stderr}", file=sys.stderr)
+        return
 
-    found, found_appendix = collect_edits(diff)
-    if found or found_appendix:
-        with open(msg_file, "w") as f:
-            f.write(build_message(found, found_appendix))
+    found = collect_edits(result.stdout)
+    if found:
+        with open(msg_file, "w", encoding="utf-8", newline="\n") as f:
+            f.write(build_message(found))
 
 
 if __name__ == "__main__":
