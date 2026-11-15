@@ -576,7 +576,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 	Note that $n_5(PQ) \equiv 1 \pmod 5$ and $n_5(PQ) \mid 9$, so that $n_5(PQ) = 1$.
 	Therefore, there is a normal Sylow 5-subgroup in $PQ$, which must be $Q$ since $Q$ is a Sylow 5-subgroup of $PQ$.
 	It also follows that $P \leq N_{PQ}(Q) \leq N_G(Q)$.
-	Since $\abs{G \colon N_G(Q)}$ divides $\abs{G \colon PQ} = 7$ so that $n_5(G) = 1$.
+	Since $\abs{G : N_G(Q)}$ divides $\abs{G : PQ} = 7$ so that $n_5(G) = 1$.
 	We may use similar reasoning to show that $n_7(G) = 1$ as well.
 	Therefore, there is a normal Sylow 5-subgroup and a normal Sylow 7-subgroup in $G$.
 	Moreover, it is easy to see that the subgroups $P, Q$, and $R$ are all abelian since $p^2$-order groups are abelian, and $R$ has prime order hence it is cyclic.
@@ -638,7 +638,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 	If $P, Q \in \syl_3(G)$ such that $\abs{P \cap Q} = 3$, we may use a similar argument as in $\abs{G} = 36$ to determine that $N_G(P \cap Q)$ has order 45 or 90.
 		\item $\abs{G} = 96$: We have that either $n_3 = 4$ or $n_3 = 16$, since $n_3 \mid 32$.
 	Consider $N_G(P)$ for some $P \in \syl_3(G)$.
-	Then $\abs{G \colon N_G(P)} = 4$ if $n_3 = 4$ so that an induced homomorphism from $G$ to $S_4$ has a nontrivial kernel, which is a contradiction.
+	Then $\abs{G : N_G(P)} = 4$ if $n_3 = 4$ so that an induced homomorphism from $G$ to $S_4$ has a nontrivial kernel, which is a contradiction.
 	If $n_3 = 16$, we may use the same arguments as $\abs{G} = 36$ or 90 to show a contradiction as well.
 	\end{itemize}
 	By Theorem 4.23, we know that simple groups of order 60 are isomorphic to $A_5$.
@@ -735,8 +735,8 @@ Let $G$ be a finite group and let $p$ be a prime.
 	Next, we show that $PN/N$ is a Sylow $p$-subgroup of $G/N$.
 	By the Second Isomorphism Theorem, we have that $PN/N \cong P/(P \cap N)$.
 	Let $\abs{G} = p^\alpha m$ where $p \nmid m$ and $\abs{N} = p^\beta n$ where $p \nmid n$.
-	Observe that $\abs{G/N \colon PN/N} = \abs{G: PN}$ divides $\abs{G \colon P} = m$.
-	It follows that $\abs{G/N \colon PN/N}$ is relatively prime to $p$.
+	Observe that $\abs{G/N : PN/N} = \abs{G: PN}$ divides $\abs{G : P} = m$.
+	It follows that $\abs{G/N : PN/N}$ is relatively prime to $p$.
 	Since $P \cap N \leq P$, $\beta \leq \alpha$ so that $\abs{PN/N} = \abs{P/(P \cap N)} = p^{\alpha - \beta}$.
 	Therefore, $PN/N$ is a Sylow $p$-subgroup of $G/N$.
 \end{sol}
@@ -830,7 +830,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{solenum}
 
 \begin{exercise}{4.5.38}
-	Use the method of proof in Sylow's Theorem to show that if $n_p$ is not congruent to $1 \pmod p^2$ then there are distinct Sylow $p$-subgroups $P$ and $Q$ of $G$ such that $\abs{P \colon P \cap Q} = \abs{Q \colon P \cap Q} = p$.
+	Use the method of proof in Sylow's Theorem to show that if $n_p$ is not congruent to $1 \pmod p^2$ then there are distinct Sylow $p$-subgroups $P$ and $Q$ of $G$ such that $\abs{P : P \cap Q} = \abs{Q : P \cap Q} = p$.
 \end{exercise}
 
 \begin{sol}
@@ -839,8 +839,8 @@ Let $G$ be a finite group and let $p$ be a prime.
 	\[
 		\syl_p(G) = \ocal_1 \cup \ocal_2 \cup \cdots \cup \ocal_k, \quad n_p = \sum_{i = 1}^k \abs{\ocal_i}
 	\]
-	By definition, $\abs{\ocal_i} = \abs{P \colon N_P(P_i)}$.
-	Using Lemma 4.19, we see that $N_P(P_i) = P \cap N_G(P_i) = P \cap P_i$, hence $\abs{\ocal_i} = \abs{P \colon P \cap P_i}$.
+	By definition, $\abs{\ocal_i} = \abs{P : N_P(P_i)}$.
+	Using Lemma 4.19, we see that $N_P(P_i) = P \cap N_G(P_i) = P \cap P_i$, hence $\abs{\ocal_i} = \abs{P : P \cap P_i}$.
 	We also note that $\abs{\ocal_1} = 1$ since $P \in \syl_p(G)$ is fixed by the action of $P$ on $\syl_p(G)$ by conjugation, and $\abs{\ocal_i} > 1$ for $i > 1$ since $P_i$ is not fixed by the action of $P$ on $\syl_p(G)$ by conjugation.
 
 	By definition, each $P_i$ is a $p$-group, hence their intersections are also $p$-groups.
@@ -852,8 +852,8 @@ Let $G$ be a finite group and let $p$ be a prime.
 	Then $n_p$ is congruent to $1 \pmod p^2$, which is a contradiction.
 	Therefore, there exists some $i > 1$ such that $\abs{\ocal_i} = p$.
 	Let $Q = P_i$.
-	Then $\abs{P \colon P \cap Q} = p$ as desired.
-	By symmetry, we also have that $\abs{Q \colon P \cap Q} = p$.
+	Then $\abs{P : P \cap Q} = p$ as desired.
+	By symmetry, we also have that $\abs{Q : P \cap Q} = p$.
 \end{sol}
 
 \begin{exercise}{4.5.39}
@@ -877,7 +877,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 \end{exercise}
 
 \begin{sol}
-	Since $n_p = \abs{G \colon N_P(G)}$ for any $P \in \syl_p(G)$, we can find $n_p$ by finding the normalizer of a Sylow $p$-subgroup of $\gl_2(\fbb_p)$.
+	Since $n_p = \abs{G : N_P(G)}$ for any $P \in \syl_p(G)$, we can find $n_p$ by finding the normalizer of a Sylow $p$-subgroup of $\gl_2(\fbb_p)$.
 	Let $P$ be the subgroup of strictly upper triangular matrices in $\gl_2(\fbb_p)$.
 	We have that
 	\[
@@ -942,7 +942,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 	where $a, d \in \fbb_p\unt$ since $X$ must be invertible.
 	We have that $\abs{N_G(P)} = p(p - 1)^2$, so that
 	\[
-		n_p = \abs{G \colon N_G(P)} = \frac{\abs{\gl_2(\fbb_p)}}{\abs{N_G(P)}} = \frac{p(p - 1)^2(p + 1)}{p(p - 1)^2} = p + 1 \qedhere
+		n_p = \abs{G : N_G(P)} = \frac{\abs{\gl_2(\fbb_p)}}{\abs{N_G(P)}} = \frac{p(p - 1)^2(p + 1)}{p(p - 1)^2} = p + 1 \qedhere
 	\]
 \end{sol}
 
@@ -1150,7 +1150,7 @@ Let $G$ be a finite group and let $p$ be a prime.
 
 \begin{exercise}{4.5.51}
 	Let $P$ be a Sylow $p$-subgroup of $G$ and let $M$ be any subgroup of $G$ which contains $N_G(P)$.
-	Prove that $\abs{G \colon M} \equiv 1 \pmod p$.
+	Prove that $\abs{G : M} \equiv 1 \pmod p$.
 \end{exercise}
 
 \begin{sol}
@@ -1159,12 +1159,12 @@ Let $G$ be a finite group and let $p$ be a prime.
 	Then $mPm\inv = P$, so that $m \in N_G(P)$ since $P$ is a Sylow $p$-subgroup of $G$.
 	Then we have $N_M(P) \subseteq N_G(P)$.
 	Conversely, $N_G(P) \subseteq N_M(P)$ since $N_G(P) \leq M$.
-	It follows that $N_M(P) = N_G(P)$, so that $\abs{G \colon N_G(P)} = \abs{M \colon N_M(P)} \equiv 1 \pmod p$.
+	It follows that $N_M(P) = N_G(P)$, so that $\abs{G : N_G(P)} = \abs{M : N_M(P)} \equiv 1 \pmod p$.
 	Then
 	\[
-		\abs{G \colon N_G(P)} = \abs{G \colon M}\abs{M \colon N_G(P)} = \abs{G \colon M}\abs{M \colon N_M(P)} \equiv 1 \pmod p
+		\abs{G : N_G(P)} = \abs{G : M}\abs{M : N_G(P)} = \abs{G : M}\abs{M : N_M(P)} \equiv 1 \pmod p
 	\]
-	so that $\abs{G \colon M} \equiv 1 \pmod p$.
+	so that $\abs{G : M} \equiv 1 \pmod p$.
 \end{sol}
 
 \begin{exercise}{4.5.52}
@@ -1196,20 +1196,20 @@ Let $G$ be a finite group and let $p$ be a prime.
 	We now show that there are at least two distinct conjugacy classes of maximal subgroups of $G$.
 	Assume by way of contradiction that there is only one conjugacy class of maximal subgroups of $G$.
 	Let $M$ be a maximal subgroup of $G$ such that for any maximal subgroup $N$ of $G$, there exists some $g \in G$ such that $gMg\inv = N$.
-	Moreover, recall that the number of conjugates of $M$ is $\abs{G \colon N_G(M)} = \abs{G \colon M}$.
-	Since conjugates intersect trivially by \exref{4.5.52}, then the number of elements in the union of all conjugates of $M$ is $\abs{G \colon M}(\abs{M} - 1) + 1$, or $\abs{G} - \abs{G \colon M} + 1$.
-	However, $M \neq G$, hence $\abs{G \colon M} > 1$, so that $\abs{G} - \abs{G \colon M} + 1 < \abs{G}$.
+	Moreover, recall that the number of conjugates of $M$ is $\abs{G : N_G(M)} = \abs{G : M}$.
+	Since conjugates intersect trivially by \exref{4.5.52}, then the number of elements in the union of all conjugates of $M$ is $\abs{G : M}(\abs{M} - 1) + 1$, or $\abs{G} - \abs{G : M} + 1$.
+	However, $M \neq G$, hence $\abs{G : M} > 1$, so that $\abs{G} - \abs{G : M} + 1 < \abs{G}$.
 	This is a contradiction since $G$ is the union of its maximal subgroups.
 	Therefore, there are at least two distinct conjugacy classes of maximal subgroups of $G$.
 
 	Lastly, observe that $\abs{M} \geq 2$ and $\abs{N} \geq 2$ since $M$ and $N$ are non-abelian.
 	It follows that
 	\[
-		\abs{G} - \abs{G \colon M} - \abs{G \colon N} = \abs{G}\left(1 - \frac{1}{\abs{M}} - \frac{1}{\abs{N}}\right) \geq 0.
+		\abs{G} - \abs{G : M} - \abs{G : N} = \abs{G}\left(1 - \frac{1}{\abs{M}} - \frac{1}{\abs{N}}\right) \geq 0.
 	\]
 	From this, we see that
 	\[
-		\abs{G} + (\abs{G} - \abs{G \colon M} - \abs{G \colon N}) + 1 > \abs{G}
+		\abs{G} + (\abs{G} - \abs{G : M} - \abs{G : N}) + 1 > \abs{G}
 	\]
 	so that $G$ has more than $\abs{G}$ elements, which is a contradiction.
 	Therefore, $G$ is not simple.

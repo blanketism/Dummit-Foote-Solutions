@@ -386,7 +386,7 @@ Let $G$ be a group and let $A$ be a nonempty set.
 		\item Prove that $G$ permutes the sets $\ocal_1, \ocal_2, \ldots, \ocal_r$, in the sense that for each $g \in G$ and each $i \in \set{1,\ldots,r}$ there is a $j$ such that $g \ocal_i = \ocal_j$, where $g\ocal = \set{g \cdot a \mid a \in \ocal}$ (i.e., in the notation of Exercise 7 the sets $\ocal_1, \ldots, \ocal_r$ are blocks).
 		Prove that $G$ is transitive on $\set{\ocal_1, \ldots, \ocal_r}$.
 		Deduce that all orbits of $H$ on $A$ have the same cardinality.
-		\item Prove that if $a \in \ocal_1$ then $\abs{\ocal_1} = \abs{H \colon H \cap G_a}$ and prove that $r = \abs{G \colon HG_a}$. [Draw the sublattice describing the Second Isomorphism Theorem for the subgroups $H$ and $G_a$ of $G$.
+		\item Prove that if $a \in \ocal_1$ then $\abs{\ocal_1} = \abs{H : H \cap G_a}$ and prove that $r = \abs{G : HG_a}$. [Draw the sublattice describing the Second Isomorphism Theorem for the subgroups $H$ and $G_a$ of $G$.
 		Note that $H \cap G_a = H_a$.]
 	\end{subexercises}
 \end{exercise}
@@ -405,14 +405,14 @@ Let $G$ be a group and let $A$ be a nonempty set.
 	Therefore, $G$ is transitive on $\set{\ocal_1, \ldots, \ocal_r}$.
 	Since $G$ is transitive on $\set{\ocal_1, \ldots, \ocal_r}$, all orbits of $H$ on $A$ have the same cardinality.
 	\item Suppose $a \in \ocal_1$.
-	By Proposition 4.2, we have $\abs{\ocal_1} = \abs{H \colon H_a}$.
-	Since $H_a = H \cap G_a$, $\abs{\ocal_1} = \abs{H \colon H \cap G_a}$.
+	By Proposition 4.2, we have $\abs{\ocal_1} = \abs{H : H_a}$.
+	Since $H_a = H \cap G_a$, $\abs{\ocal_1} = \abs{H : H \cap G_a}$.
 	Moreover, the orbits of $H$ partition $A$ and have the same size by the previous solution, so we have $\abs{A} = r\abs{\ocal_1}$.
-	By applying Proposition 4.2 again, we have $\abs{A} = \abs{G \colon G_a}$.
-	Therefore, $\abs{G \colon G_a} = r\abs{\ocal_1} = r\abs{H \colon H \cap G_a}$.
-	By the Second Isomorphism Theorem, we also have that $H/(H \cap G_a) \cong HG_a/G_a$ so that $\abs{H \colon H \cap G_a} = \abs{HG_a \colon G_a}$.
-	Now recall by \exref{3.2.11} that $\abs{G \colon K} = \abs{G \colon H}\abs{H \colon K}$ for subgroups $K \leq H \leq G$.
-	Applying this to the subgroups $G_a \leq HG_a \leq G$, we have $\abs{G \colon G_a} = \abs{G \colon HG_a}\abs{HG_a \colon G_a} = \abs{G \colon HG_a}\abs{H \colon H \cap G_a}.$ We then have $r\abs{H \colon H \cap G_a} = \abs{G \colon HG_a}\abs{H \colon H \cap G_a}$, or $r = \abs{G \colon HG_a}$.
+	By applying Proposition 4.2 again, we have $\abs{A} = \abs{G : G_a}$.
+	Therefore, $\abs{G : G_a} = r\abs{\ocal_1} = r\abs{H : H \cap G_a}$.
+	By the Second Isomorphism Theorem, we also have that $H/(H \cap G_a) \cong HG_a/G_a$ so that $\abs{H : H \cap G_a} = \abs{HG_a : G_a}$.
+	Now recall by \exref{3.2.11} that $\abs{G : K} = \abs{G : H}\abs{H : K}$ for subgroups $K \leq H \leq G$.
+	Applying this to the subgroups $G_a \leq HG_a \leq G$, we have $\abs{G : G_a} = \abs{G : HG_a}\abs{HG_a : G_a} = \abs{G : HG_a}\abs{H : H \cap G_a}.$ We then have $r\abs{H : H \cap G_a} = \abs{G : HG_a}\abs{H : H \cap G_a}$, or $r = \abs{G : HG_a}$.
 	Moreover, the sublattice is given as follows:
 	\begin{center}
 		\begin{tikzpicture}
@@ -437,8 +437,8 @@ Let $G$ be a group and let $A$ be a nonempty set.
 		\item Prove that $HxK$ is a union of right cosets of $H$.
 		\item Show that $HxK$ and $HyK$ are either the same set or are disjoint for all $x, y \in G$.
 		Show that the set of $HK$ double cosets partitions $G$.
-		\item Prove that $\abs{HxK} = \abs{K} \cdot \abs{H \colon H \cap xKx^{-1}}$.
-		\item Prove that $\abs{HxK} = \abs{H} \cdot \abs{K \colon K \cap x^{-1}Hx}$.
+		\item Prove that $\abs{HxK} = \abs{K} \cdot \abs{H : H \cap xKx^{-1}}$.
+		\item Prove that $\abs{HxK} = \abs{H} \cdot \abs{K : K \cap x^{-1}Hx}$.
 	\end{subexercises}
 \end{exercise}
 
@@ -465,10 +465,10 @@ Let $G$ be a group and let $A$ be a nonempty set.
 	We have shown that $HxK$ and $HyK$ are either the same set or are disjoint for all $x, y \in G$.
 	Since every element of $G$ is in some double coset of the form $HxK$, the set of $HK$ double cosets partitions $G$.
 	\item Recall that the orbit of $xK$ under this action is $\ocal = \set{hxK \mid h \in H}$.
-	By Proposition 4.2, we have $\abs{\ocal} = \abs{H \colon H_{xK}}$, where $H_{xK}$ is the stabilizer of $xK$ in $H$.
+	By Proposition 4.2, we have $\abs{\ocal} = \abs{H : H_{xK}}$, where $H_{xK}$ is the stabilizer of $xK$ in $H$.
 	Observe that $H_{xK} = \set{h \in H \mid hxK = xK}$.
 	Then $hxK = xK$ implies that there exists some $k \in K$ such that $hxk = x$, or equivalently, $h = x k x\inv$.
 	Therefore, $H_{xK} = H \cap x K x\inv$.
-	By part (a), we have $\abs{HxK} = \abs{\ocal} \cdot \abs{K} = \abs{H \colon H \cap x K x\inv} \cdot \abs{K}$.
+	By part (a), we have $\abs{HxK} = \abs{\ocal} \cdot \abs{K} = \abs{H : H \cap x K x\inv} \cdot \abs{K}$.
 	\item Similar to part (d).
 \end{solenum}

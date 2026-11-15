@@ -227,13 +227,13 @@ Let $G$ be a group.
 \end{solenum}
 
 \begin{exercise}!{3.2.10}
-    Suppose $H$ and $K$ are subgroups of finite index in the (possibly infinite) group $G$ with $\abs{G \colon H} = m$ and $\abs{G \colon K} = n$.
-	Prove that $\lcm(m, n) \leq \abs{G \colon H \cap K} \leq mn$.
-	Deduce that if $m$ and $n$ are relatively prime then $\abs{G \colon H \cap K} = \abs{G \colon H} \cdot \abs{G \colon K}$.
+    Suppose $H$ and $K$ are subgroups of finite index in the (possibly infinite) group $G$ with $\abs{G : H} = m$ and $\abs{G : K} = n$.
+	Prove that $\lcm(m, n) \leq \abs{G : H \cap K} \leq mn$.
+	Deduce that if $m$ and $n$ are relatively prime then $\abs{G : H \cap K} = \abs{G : H} \cdot \abs{G : K}$.
 \end{exercise}
 
 \begin{sol} 
-    Let $\abs{G \colon H \cap K} = \ell$.
+    Let $\abs{G : H \cap K} = \ell$.
 	Consider the cosets $gH, gK$, and $g(H \cap K)$ for some $g \in G$.
 	We wish to identify $g(H \cap K)$ in terms of $gH$ and $gK$.
 	Note that $x \in g(H \cap K)$ implies that $g\inv x \in H \cap K$, hence $g\inv x \in H$ and $g\inv x \in K$, so that $x \in gH$ and $x \in gK$.
@@ -252,8 +252,8 @@ Let $G$ be a group.
 	Moreover, because $H \cap K \leq H$, then the cosets of $H \cap K$ in $H$ partition $H$ so that there exists a unique $h \in H$ such that $x \in gh(H \cap K)$.
 	Pick another coset $h' \neq h$ of $H \cap K$ in $H$.
 	Then $gh(H \cap K) \neq gh'(H \cap K)$ since if they were equal, $(gh)\inv(gh') = h\inv h' \in H \cap K$, contradicting that $h$ and $h'$ are distinct cosets.
-	It follows that for each coset of $H$ in $G$, there are $\abs{H \colon H \cap K}$ distinct cosets of $H \cap K$ in $G$.
-	Since there are $m$ cosets of $H$ in $G$, $\ell = m \abs{H \colon H \cap K}$, hence $m \mid \ell$.
+	It follows that for each coset of $H$ in $G$, there are $\abs{H : H \cap K}$ distinct cosets of $H \cap K$ in $G$.
+	Since there are $m$ cosets of $H$ in $G$, $\ell = m \abs{H : H \cap K}$, hence $m \mid \ell$.
 	Similarly, $n \mid \ell$.
 	Since $\ell$ is a multiple of both $m$ and $n$, $\lcm(m, n) \mid \ell$, hence $\lcm(m, n) \leq \ell$, and we have the desired inequality $\lcm(m, n) \leq \ell \leq mn$.
 
@@ -262,14 +262,14 @@ Let $G$ be a group.
 
 \begin{exercise}!{3.2.11}
     Let $H \leq K \leq G$.
-	Prove that $\abs{G \colon H} = \abs{G \colon K} \cdot \abs{K \colon H}$. 
+	Prove that $\abs{G : H} = \abs{G : K} \cdot \abs{K : H}$. 
 \end{exercise}
 
 \begin{sol}
     Note that cosets of $H$ are contained in cosets of $K$.
 	If $H$ has infinite index in $K$ or if $K$ has infinite index in $G$, then $H$ has infinite index in $G$.
-	The finite case follows in the proof of \exref{3.2.10}, where we showed that each coset of $K$ contains $\abs{K \colon H}$ distinct cosets of $H$.
-	Since there are $\abs{G \colon K}$ distinct cosets of $K$ in $G$, there are $\abs{G \colon K} \cdot \abs{K \colon H}$ distinct cosets of $H$ in $G$, hence $\abs{G \colon H} = \abs{G \colon K} \cdot \abs{K \colon H}$.
+	The finite case follows in the proof of \exref{3.2.10}, where we showed that each coset of $K$ contains $\abs{K : H}$ distinct cosets of $H$.
+	Since there are $\abs{G : K}$ distinct cosets of $K$ in $G$, there are $\abs{G : K} \cdot \abs{K : H}$ distinct cosets of $H$ in $G$, hence $\abs{G : H} = \abs{G : K} \cdot \abs{K : H}$.
 \end{sol}
 
 \begin{exercise}{3.2.12}
@@ -363,7 +363,7 @@ Let $G$ be a group.
 
 \begin{exercise}{3.2.18}
     Let $G$ be a finite group, let $H$ be a subgroup of $G$ and let $N \nsub G$.
-	Prove that if $\abs H$ and $\abs{G \colon N}$ are relatively prime then $H \leq N$.
+	Prove that if $\abs H$ and $\abs{G : N}$ are relatively prime then $H \leq N$.
 \end{exercise}
 
 \begin{sol}
@@ -372,14 +372,14 @@ Let $G$ be a group.
 	Then we have that $\abs{G} = m\abs{HN}$ and $\abs{H} = n\abs{H \cap N}$ for some $m, n \in \zbb$.
 	By Corollary 13, we have that
     \[
-    	\abs{HN} = \frac{\abs H \abs N}{\abs{H \cap N}} \implies m\abs{HN} = m\frac{n\abs{H \cap N}\abs{N}}{\abs{H \cap N}} \implies \frac{\abs{G}}{\abs{N}} = \abs{G \colon N} = mn
+    	\abs{HN} = \frac{\abs H \abs N}{\abs{H \cap N}} \implies m\abs{HN} = m\frac{n\abs{H \cap N}\abs{N}}{\abs{H \cap N}} \implies \frac{\abs{G}}{\abs{N}} = \abs{G : N} = mn
     \]
-    Since $(\abs H, \abs{G \colon N}) = 1$, $n = 1$ so that $\abs H = \abs{H \cap N}$.
+    Since $(\abs H, \abs{G : N}) = 1$, $n = 1$ so that $\abs H = \abs{H \cap N}$.
 	It follows that $H = H \cap N$, hence $H \leq N$.
 \end{sol}
 
 \begin{exercise}{3.2.19}
-    Prove that if $N$ is a normal subgroup of the finite group $G$ and $(\abs{N}, \abs{G \colon N}) = 1$ then $N$ is the unique subgroup of $G$ of order $\abs{N}$.
+    Prove that if $N$ is a normal subgroup of the finite group $G$ and $(\abs{N}, \abs{G : N}) = 1$ then $N$ is the unique subgroup of $G$ of order $\abs{N}$.
 \end{exercise}
 
 \begin{sol}
@@ -409,7 +409,7 @@ Let $G$ be a group.
 \end{exercise}
 
 \begin{sol}
-    Suppose $\qbb$ has a proper subgroup $H$ such that $\abs{\qbb \colon H}$ is some finite $n$.
+    Suppose $\qbb$ has a proper subgroup $H$ such that $\abs{\qbb : H}$ is some finite $n$.
 	Recalling that $\qbb$ is divisible by \exref{2.4.19}, then $\qbb/H$ is also divisible by \exref{3.1.15}.
 	However, $\qbb/H$ is a finite group of order $n$, hence it cannot be divisible unless it is trivial.
 	It follows that $H = \qbb$, a contradiction.

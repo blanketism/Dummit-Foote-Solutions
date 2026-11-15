@@ -4,13 +4,13 @@ Let $G$ be a group.
 
 \begin{exercise}{3.3.1}
     Let $F$ be a finite field of order $q$ and let $n \in \zp$.
-	Prove that $\abs{\gl_n(F) \colon \splin_n(F)} = q - 1$. [See \exref{3.1.35}.]
+	Prove that $\abs{\gl_n(F) : \splin_n(F)} = q - 1$. [See \exref{3.1.35}.]
 \end{exercise}
 
 \begin{sol}
     In \exref{3.1.35}, we showed that $\splin_n(F) \nsub \gl_n(F)$ and that $\gl_n(F)/\splin_n(F) \cong F\unt$.
 	Since $F$ is a finite field of order $q$, $\abs{F\unt} = q - 1$.
-	We then have that $\abs{\gl_n(F) \colon \splin_n(F)} = \abs{F\unt} = q - 1$.
+	We then have that $\abs{\gl_n(F) : \splin_n(F)} = \abs{F\unt} = q - 1$.
 \end{sol}
 
 \begin{exercise}!{3.3.2}
@@ -79,7 +79,7 @@ Let $G$ be a group.
         	\psi(b_1A \cdot b_2A) = \psi(b_1b_2A) = \bar{b_1b_2} \bar A = \bar b_1 \bar b_2 \bar A = \psi(b_1A) \cdot \psi(b_2A)
         \]
         so that $\psi$ is a homomorphism.
-        Therefore, $\psi$ is an isomorphism and $\abs{B \colon A} = \abs{B/A} = \abs{\bar B / \bar A} = \abs{\bar B \colon \bar A}$.
+        Therefore, $\psi$ is an isomorphism and $\abs{B : A} = \abs{B/A} = \abs{\bar B / \bar A} = \abs{\bar B : \bar A}$.
         \item Let $\bar x \in \bar{\gen{A, B}}$.
         Then $x \in \gen{A, B}$ so that $x = x_1x_2 \ldots x_n$ where $x_i \in A \cup B$ for each $1 \leq i \leq n$.
         It follows that
@@ -119,7 +119,7 @@ Let $G$ be a group.
     Prove that if $H$ is a normal subgroup of $G$ of prime index $p$ then for all $K \leq G$ either
     \begin{enumerate}
         \item[(i)] $K \leq H$ or
-        \item[(ii)] $G = HK$ and $\abs{K \colon K \cap H} = p$.
+        \item[(ii)] $G = HK$ and $\abs{K : K \cap H} = p$.
     \end{enumerate}
 \end{exercise}
 
@@ -128,17 +128,17 @@ Let $G$ be a group.
 	By Proposition 3.14, $HK = KH$.
 	By \exref{3.2.11}, we have
     \[
-    	\abs{G \colon H} = \abs{G \colon HK} \cdot \abs{HK \colon H}.
+    	\abs{G : H} = \abs{G : HK} \cdot \abs{HK : H}.
     \]
-    Since $\abs{G \colon H} = p$ is prime, we have two cases:
+    Since $\abs{G : H} = p$ is prime, we have two cases:
     \begin{enumerate}
-        \item If $\abs{G \colon HK} = 1$, then $G = HK$.
+        \item If $\abs{G : HK} = 1$, then $G = HK$.
 	    By the Second Isomorphism Theorem, we have
         \[
         	K/(K \cap H) \cong KH/H = G/H
         \]
-        so that $\abs{K \colon K \cap H} = \abs{KH \colon H} = \abs{G \colon H} = p$.
-        \item If $\abs{G \colon HK} = p$, then $\abs{HK \colon H} = 1$, hence $HK = H$.
+        so that $\abs{K : K \cap H} = \abs{KH : H} = \abs{G : H} = p$.
+        \item If $\abs{G : HK} = p$, then $\abs{HK : H} = 1$, hence $HK = H$.
 	It follows that $K \leq H$. \qedhere
     \end{enumerate}
 \end{sol}
@@ -333,7 +333,7 @@ Let $G$ be a group.
 
 \begin{exercise}{3.3.10}
     Generalize the preceding exercise as follows.
-	A subgroup $H$ of a finite group $G$ is called a \emph{Hall subgroup} of $G$ if its index in $G$ is relatively prime to its order: $(\abs{G \colon H}, \abs{H}) = 1$.
+	A subgroup $H$ of a finite group $G$ is called a \emph{Hall subgroup} of $G$ if its index in $G$ is relatively prime to its order: $(\abs{G : H}, \abs{H}) = 1$.
 	Prove that if $H$ is a Hall subgroup of $G$ and $N \nsub G$, then $H \cap N$ is a Hall subgroup of $N$ and $HN/N$ is a Hall subgroup of $G/N$.
 \end{exercise}
 
@@ -341,13 +341,13 @@ Let $G$ be a group.
     It follows by the Second Isomorphism Theorem that $HN \leq G$ and $HN/N \cong H/(H \cap N)$.
 	Note that
     \[
-    	\abs{HN} = \frac{\abs H \abs N}{\abs{H \cap N}} \quad \text{must divide} \quad \abs G = \abs H \abs{G \colon H}
+    	\abs{HN} = \frac{\abs H \abs N}{\abs{H \cap N}} \quad \text{must divide} \quad \abs G = \abs H \abs{G : H}
     \]
-    Hence, $\abs{N}/\abs{H \cap N}$ divides $\abs{G \colon H}$.
-	Since $(\abs{G \colon H}, \abs H) = 1$, and $\abs{N}/\abs{H \cap N}$ divides $\abs{G \colon H}$, it follows that $(\abs{N}/\abs{H \cap N}, \abs H) = 1$, hence $(\abs{N \colon H \cap N}, \abs{H \cap N}) = 1$.
+    Hence, $\abs{N}/\abs{H \cap N}$ divides $\abs{G : H}$.
+	Since $(\abs{G : H}, \abs H) = 1$, and $\abs{N}/\abs{H \cap N}$ divides $\abs{G : H}$, it follows that $(\abs{N}/\abs{H \cap N}, \abs H) = 1$, hence $(\abs{N : H \cap N}, \abs{H \cap N}) = 1$.
 	Then $H \cap N$ is a Hall subgroup of $N$.
 
-    Now, observe that $\abs{G/N \colon HN/N} = \abs{G}/\abs{HN} = \abs{G:H}/\abs{HN \colon H}$.
+    Now, observe that $\abs{G/N : HN/N} = \abs{G}/\abs{HN} = \abs{G:H}/\abs{HN : H}$.
 	Moreover, $\abs{HN/N} = \abs{H}/\abs{H \cap N}$.
-	Then $(\abs{G/N \colon HN/N}, \abs{HN/N}) = 1$ follows because $(\abs{G \colon H}, \abs H) = 1$, hence $HN/N$ is a Hall subgroup of $G/N$.
+	Then $(\abs{G/N : HN/N}, \abs{HN/N}) = 1$ follows because $(\abs{G : H}, \abs H) = 1$, hence $HN/N$ is a Hall subgroup of $G/N$.
 \end{sol}

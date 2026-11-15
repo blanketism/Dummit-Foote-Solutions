@@ -180,7 +180,7 @@
 	\item This is done in \exref{4.2.4}.
 	\item Let $Q_8$ act on a set $A$ of order $n \leq 7$.
 	For any $a \in A$, consider the orbit $\ocal_a$ of $a$ under this action.
-	By Proposition 4.2, we have $\abs{\ocal_a} = \abs{Q_8 \colon (Q_8)_a}$, where $(Q_8)_a$ is the stabilizer of $a$ in $Q_8$.
+	By Proposition 4.2, we have $\abs{\ocal_a} = \abs{Q_8 : (Q_8)_a}$, where $(Q_8)_a$ is the stabilizer of $a$ in $Q_8$.
 	Since $\abs{\ocal_a}$ divides $\abs{A} \leq 7$, $\abs{\ocal_a}$ must be 1, 2, 4, or 7.
 	However, since $Q_8$ has no subgroup of index 7, $\abs{\ocal_a}$ cannot be 7.
 	If $\abs{\ocal_a} = 4$, then $(Q_8)_a$ has order 2, but the only subgroup of order 2 in $Q_8$ is $\langle -1 \rangle$.
@@ -192,7 +192,7 @@
 \end{solenum}
 
 \begin{exercise}{4.2.8}
-	Prove that if $H$ has finite index $n$ then there is a normal subgroup $K$ of $G$ with $K \le H$ and $\abs{G \colon K} \le n!$.
+	Prove that if $H$ has finite index $n$ then there is a normal subgroup $K$ of $G$ with $K \le H$ and $\abs{G : K} \le n!$.
 \end{exercise}
 
 \begin{sol}
@@ -200,8 +200,8 @@
 	Then we have the homomorphism $\phi \colon G \to S_n$, which is the permutation representation of $G$ on $G/H$.
 	Let $K = \ker(\phi) \subseteq H$, since $g \in K$ if and only if $gxH = xH$ for all $x \in G$.
 	Taking $x = 1$, we have $gH = H$, so that $g \in H$.
-	By the First Isomorphism Theorem, we have $G/K \cong \phi(G) \leq S_n$, so that $\abs{G \colon K} = \abs{G/K} = \abs{\phi(G)}$ divides $\abs{S_n} = n!$.
-	Therefore, $\abs{G \colon K} \leq n!$.
+	By the First Isomorphism Theorem, we have $G/K \cong \phi(G) \leq S_n$, so that $\abs{G : K} = \abs{G/K} = \abs{\phi(G)}$ divides $\abs{S_n} = n!$.
+	Therefore, $\abs{G : K} \leq n!$.
 \end{sol}
 
 \begin{exercise}{4.2.9}
@@ -211,13 +211,13 @@
 
 \begin{sol}
 	Let $H$ be a subgroup of $G$ with index $p$.
-	Then $\abs{G \colon H} = p$, so the action of $G$ on the left cosets of $H$ in $G$ gives a homomorphism $\phi \colon G \to S_p$.
+	Then $\abs{G : H} = p$, so the action of $G$ on the left cosets of $H$ in $G$ gives a homomorphism $\phi \colon G \to S_p$.
 	Since $\abs{G} = p^\alpha$, by Lagrange's Theorem, the order of $\phi(G)$ divides $p^\alpha$.
 	However, the only subgroups of $S_p$ whose order divides $p^\alpha$ are the trivial group and groups of order $p$.
 	Since $\phi(G)$ acts transitively on the $p$ cosets of $H$, $\phi(G)$ cannot be trivial.
 	Therefore, $\abs{\phi(G)} = p$, which is prime, so $\phi(G)$ is cyclic and hence abelian.
 	The kernel of $\phi$ is a normal subgroup of $G$ contained in $H$.
-	Since the image $\phi(G)$ has order $p$, by the First Isomorphism Theorem, we have $\abs{G \colon \ker(\phi)} = p$.
+	Since the image $\phi(G)$ has order $p$, by the First Isomorphism Theorem, we have $\abs{G : \ker(\phi)} = p$.
 	But since $\ker(\phi) \subseteq H$ and both have index $p$, $\ker(\phi) = H$.
 	Therefore, $H$ is normal in $G$.
 
@@ -266,7 +266,7 @@
 	Consider the action of $\langle x \rangle$ on $G$ by left multiplication.
 	The orbit of any $g \in G$ under this action is $\ocal_g = \set{x^k g \mid k = 0, 1, \ldots, n-1}$.
 	Since $\abs x = n$, $\abs{\ocal_g} = n$ for all $g \in G$.
-	By Proposition 4.2, we have $\abs{\ocal_g} = \abs{\langle x \rangle \colon (\langle x \rangle)_g}$, where $(\langle x \rangle)_g$ is the stabilizer of $g$ in $\langle x \rangle$.
+	By Proposition 4.2, we have $\abs{\ocal_g} = \abs{\langle x \rangle : (\langle x \rangle)_g}$, where $(\langle x \rangle)_g$ is the stabilizer of $g$ in $\langle x \rangle$.
 	Since $\abs{\ocal_g} = n$, $(\langle x \rangle)_g$ is trivial for all $g \in G$.
 	Therefore, the orbits of this action partition $G$ into subsets of size $n$.
 	Since $\abs{G} = mn$, there are exactly $m$ such orbits.
