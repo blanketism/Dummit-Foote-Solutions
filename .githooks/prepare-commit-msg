@@ -73,6 +73,12 @@ def main():
     if source not in ALLOWED_SOURCES:
         return
 
+    with open(msg_file, encoding="utf-8", errors="replace") as f:
+        existing = [ln for ln in f.read().splitlines()
+                    if ln.strip() and not ln.lstrip().startswith("#")]
+    if existing:
+        return
+
     result = subprocess.run(
         ["git", "diff", "--cached", "-U999999", "--", "*.tex"],
         capture_output=True, encoding="utf-8", errors="replace",
