@@ -101,21 +101,21 @@
 
 \begin{exercise}{2.3.9}
     Let $Z_{36} = \gen x$.
-	For which integers $a$ does the map $\psi_a$ defined by $\psi_a \colon \bar 1 \mapsto x^a$ extend to a \emph{well-defined homomorphism} from $\intmod[48]$ into $Z_{36}$.
+	For which integers $a$ does the map $\psi_a$ defined by $\psi_a \colon \bar 1 \mapsto x^a$ extend to a \emph{well defined homomorphism} from $\intmod[48]$ into $Z_{36}$.
 	Can $\psi_a$ ever be a surjective homomorphism?
 \end{exercise}
 
 \begin{sol}
     Suppose $\bar r, \bar s \in \intmod[48]$ such that $\bar r = \bar s$.
 	Then $r \equiv s \pmod 48$.
-	If $\psi_a$ is well-defined, then
+	If $\psi_a$ is well defined, then
     \[
     	\psi_a(\bar r) = \psi_a(r \cdot \bar 1) = x^{a r} = x^{a s} = \psi_a(s \cdot \bar 1) = \psi_a(\bar s)
     \]
     so that $x^{a (r - s)} = 1$ whenever $48 \mid (r - s)$.
 	This occurs if and only if $36 \mid a(r - s)$ whenever $48 \mid (r - s)$.
 	Since $(36, 48) = 12$, $36/12 = 3 \mid a$.
-	Hence, $\psi_a$ is well-defined if and only if $3 \mid a$.
+	Hence, $\psi_a$ is well defined if and only if $3 \mid a$.
 
     Surjectivity requires that $x^a$ generates $Z_{36}$.
 	By Proposition 2.5, this occurs if and only if $(a, 36) = 1$.
@@ -251,7 +251,7 @@
     \[
     	\phi(x^a) = h^a = h^{b + nk} = h^b (h^n)^k = h^b \cdot 1 = h^b = \phi(x^b)
     \]
-    so that $\phi$ is well-defined.
+    so that $\phi$ is well defined.
 	Moreover,
     \[
     	\phi(x^{a + b}) = h^{a + b} = h^a h^b = \phi(x^a) \phi(x^b)
@@ -337,7 +337,6 @@
 
 \begin{exercise}{2.3.23}
     Show that $\units[2^n]$ is not cyclic for any $n \ge 3$.
-    
     \hint{Find two distinct subgroups of order 2.}
 \end{exercise}
 
@@ -485,7 +484,7 @@
     \[
     	\phi \colon \units \to \aut(Z_n) \quad \text{by} \quad \phi(\bar a) = \sigma_a
     \]
-    By part (b), $\phi$ is well-defined.
+    By part (b), $\phi$ is well defined.
 	Part (a) shows that $\phi$ is injective, while part (c) shows that $\phi$ is surjective.
 	The first part of (d) shows that $\phi$ is a homomorphism.
 	Hence, $\phi$ is an isomorphism of $\units$ onto $\aut(Z_n)$.

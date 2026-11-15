@@ -54,7 +54,7 @@ Let $H$ and $K$ be groups, let $\phi \colon K \to \aut(H)$ be a homomorphism, an
 \end{sol}
 
 \begin{exercise}{5.5.4}
-    Let $p = 2$ and check that the construction of the two nonabelian groups of order $p^3$ is valid in this case.
+    Let $p = 2$ and check that the construction of the two non-abelian groups of order $p^3$ is valid in this case.
 	Prove that \emph{both} resulting groups are isomorphic to $D_8$.
 \end{exercise}
 
@@ -65,7 +65,7 @@ Let $H$ and $K$ be groups, let $\phi \colon K \to \aut(H)$ be a homomorphism, an
     \[
     	u^4 = v^2 = 1, \quad vu = u\inv v.
     \]
-    It is clear that $U \semidir_\phi V$ is nonabelian, since $vu \neq uv$.
+    It is clear that $U \semidir_\phi V$ is non-abelian, since $vu \neq uv$.
 	Let $r = u$ and $s = v$.
 	Then $r^4 = s^2 = 1$, and $sr = vu = u\inv v = r\inv s$, so $U \semidir_\phi V$ has the same presentation as $D_8$, hence $U \semidir_\phi V \cong D_8$.
 
@@ -76,7 +76,7 @@ Let $H$ and $K$ be groups, let $\phi \colon K \to \aut(H)$ be a homomorphism, an
     \[
     	w^2 = x^2 = y^2 = 1, \quad yw = x y, \quad yx = w y.
     \]
-    It is clear that $W \semidir_\phi Y$ is nonabelian, since $yw \neq wy$.
+    It is clear that $W \semidir_\phi Y$ is non-abelian, since $yw \neq wy$.
 	Let $r = yw$ and $s = y$.
 	Then $s^2 = 1$,
     \[
@@ -100,7 +100,7 @@ Let $H$ and $K$ be groups, let $\phi \colon K \to \aut(H)$ be a homomorphism, an
 \end{exercise}
 
 \begin{solenum}
-    \item Note that $\aut(H) \cong \gl_2(\fbb_2) \cong S_3$ as it is a nonabelian group of order 6, by \exref{4.2.10}.
+    \item Note that $\aut(H) \cong \gl_2(\fbb_2) \cong S_3$ as it is a non-abelian group of order 6, by \exref{4.2.10}.
 	It follows by definition that $G = H \semidir K$, where $K \cong S_3$.
 	Hence, $\abs{G} = \abs{H}\abs{K} = 4 \cdot 6 = 24$.
     \item Let $G$ act on the left cosets of $K$ in $G$.
@@ -172,7 +172,7 @@ Let $H$ and $K$ be groups, let $\phi \colon K \to \aut(H)$ be a homomorphism, an
         	\nu \colon \units[n] \to \units[m], \quad \nu(a) = a \pmod m
         \]
         is a surjective homomorphism.
-	We first check that $\nu$ is well-defined: if $a \equiv b \pmod n$, then $n \mid (a - b)$, so $m \mid (a - b)$, hence $a \equiv b \pmod m$.
+	We first check that $\nu$ is well defined: if $a \equiv b \pmod n$, then $n \mid (a - b)$, so $m \mid (a - b)$, hence $a \equiv b \pmod m$.
 	Next, we check that $\nu$ is a homomorphism: for any $a, b \in \units[n]$, we have
         \[
         	\nu(ab) = ab \pmod m = (a \pmod m)(b \pmod m) = \nu(a)\nu(b).
@@ -206,7 +206,7 @@ Let $H$ and $K$ be groups, let $\phi \colon K \to \aut(H)$ be a homomorphism, an
     \begin{subexercises}
         \item Prove that there are three abelian groups of order 56.
         \item Prove that every group of order 56 has either a normal Sylow 2-subgroup or a normal Sylow 7-subgroup.
-        \item Construct the following nonabelian groups of order 56 which have a normal Sylow 7-subgroup and whose Sylow 2-subgroup $S$ is as specified:
+        \item Construct the following non-abelian groups of order 56 which have a normal Sylow 7-subgroup and whose Sylow 2-subgroup $S$ is as specified:
         \begin{itemize}
             \item one group when $S \cong Z_2 \times Z_2 \times Z_2$
             \item two nonisomorphic groups when $S \cong Z_4 \times Z_2$
@@ -420,8 +420,8 @@ Let $H$ and $K$ be groups, let $\phi \colon K \to \aut(H)$ be a homomorphism, an
 \end{solenum}
 
 \begin{exercise}{5.5.8}
-    Construct a nonabelian group of order 75.
-	Classify all groups of order 75 (there are three of them). [Use \exref{5.5.6} to show that the nonabelian group is unique.] (The classification of groups of order $pq^2$, where $p$ and $q$ are primes with $p < q$ and $p$ not dividing $q - 1$, is quite similar.)
+    Construct a non-abelian group of order 75.
+	Classify all groups of order 75 (there are three of them). [Use \exref{5.5.6} to show that the non-abelian group is unique.] (The classification of groups of order $pq^2$, where $p$ and $q$ are primes with $p < q$ and $p$ not dividing $q - 1$, is quite similar.)
 \end{exercise}
 
 \begin{sol}
@@ -445,7 +445,7 @@ Let $H$ and $K$ be groups, let $\phi \colon K \to \aut(H)$ be a homomorphism, an
         Since $\abs{Q} = 3$, there exists a nontrivial homomorphism $\phi \colon Q \to \aut(P)$, which is unique since $\abs{\aut(P)} = 480$ and $(480, 3) = 3$.
         We may use similar reasoning as the previous exercise in that $\phi_1(Q)$ and $\phi_2(Q)$ are conjugate subgroups of $\aut(P)$, and $\phi_1(Q), \phi_2(Q) \in \syl_3(\aut(P))$, so they are conjugate by the Sylow theorems.
         Hence, by \exref{5.5.6}, we have $P \semidir_{\phi_1} Q \cong P \semidir_{\phi_2} Q$.
-        Therefore, $P \semidir_\phi Q$ is unique, and $G \cong P \semidir_\phi Q$ is nonabelian.
+        Therefore, $P \semidir_\phi Q$ is unique, and $G \cong P \semidir_\phi Q$ is non-abelian.
         
         If we consider $G \cong Q \semidir P$, then we have a homomorphism $\phi \colon P \to \aut(Q)$.
         Since $\abs{\aut(Q)} = 2$, the only homomorphism $\phi \colon P \to \aut(Q)$ is the trivial homomorphism, so $G \cong Q \semidir P \cong Q \times P \cong Z_3 \times (Z_5 \times Z_5)$.
@@ -461,8 +461,8 @@ Let $H$ and $K$ be groups, let $\phi \colon K \to \aut(H)$ be a homomorphism, an
         \end{pmatrix}
     \]
     is an element of order 5 in $\gl_2(\fbb_{19})$.
-	Use this matrix to construct a nonabelian group of order 1805, and give a presentation of this group.
-	Classify groups of order 1805 (there are three isomorphism types). [Use \exref{5.5.6} to prove uniqueness of the nonabelian group.] (A general method for finding elements of prime order in $\gl_n(\fbb_p)$ is described in the exercises in Section 12.2; this particular matrix of order 5 in $\gl_2(\fbb_{19})$ appears in \exref{12.2.16} of that section as an illustration of the method.)
+	Use this matrix to construct a non-abelian group of order 1805, and give a presentation of this group.
+	Classify groups of order 1805 (there are three isomorphism types). [Use \exref{5.5.6} to prove uniqueness of the non-abelian group.] (A general method for finding elements of prime order in $\gl_n(\fbb_p)$ is described in the exercises in Section 12.2; this particular matrix of order 5 in $\gl_2(\fbb_{19})$ appears in \exref{12.2.16} of that section as an illustration of the method.)
 \end{exercise}
 
 \begin{sol}
@@ -487,7 +487,7 @@ Let $H$ and $K$ be groups, let $\phi \colon K \to \aut(H)$ be a homomorphism, an
 	Now, since $\abs{Q} = 5$, there exists a nontrivial homomorphism $\phi \colon Q \to \aut(P)$, which is unique since $\abs{\aut(P)} = 123120$ and $(123120, 5) = 5$.
 	We may use similar reasoning as the previous exercise in that $\phi_1(Q)$ and $\phi_2(Q)$ are conjugate subgroups of $\aut(P)$, and $\phi_1(Q), \phi_2(Q) \in \syl_5(\aut(P))$, so they are conjugate by the Sylow theorems.
 	Hence, by \exref{5.5.6}, we have $P \semidir_{\phi_1} Q \cong P \semidir_{\phi_2} Q$.
-	Therefore, $P \semidir_\phi Q$ is unique, and $G \cong P \semidir_\phi Q$ is nonabelian.
+	Therefore, $P \semidir_\phi Q$ is unique, and $G \cong P \semidir_\phi Q$ is non-abelian.
 \end{sol}
 
 \begin{exercise}!{5.5.10}
@@ -495,7 +495,7 @@ Let $H$ and $K$ be groups, let $\phi \colon K \to \aut(H)$ be a homomorphism, an
     \begin{subexercises}
         \item Prove that there are two abelian groups of order 147.
         \item Prove that every group of order 147 has a normal Sylow 7-subgroup.
-        \item Prove that there is a unique nonabelian group of order 147 whose Sylow 7-subgroup is cyclic.
+        \item Prove that there is a unique non-abelian group of order 147 whose Sylow 7-subgroup is cyclic.
         \item Let
         \[
         	t_1 = 
@@ -534,7 +534,7 @@ Let $H$ and $K$ be groups, let $\phi \colon K \to \aut(H)$ be a homomorphism, an
 	Then either $q \mapsto \alpha$ or $q \mapsto \alpha^2$.
 	Let $\phi_1, \phi_2 \colon Q \to \aut(P)$ be the two homomorphisms defined by $\phi_1(q) = \alpha$ and $\phi_2(q) = \alpha^2$.
 	Since $\phi_1(Q) = \phi_2(Q) = \gen\alpha$, by \exref{5.5.6}, we have $P \semidir_{\phi_1} Q \cong P \semidir_{\phi_2} Q$.
-	Hence, there is a unique nonabelian group of order 147 whose Sylow 7-subgroup is cyclic.
+	Hence, there is a unique non-abelian group of order 147 whose Sylow 7-subgroup is cyclic.
     \item Recall that $\abs{\gl_2(\fbb_7)} = (7^2 - 1)(7^2 - 7) = 48 \cdot 42 = 2016 = 2^5 \cdot 3^2 \cdot 7$.
 	Observe that
     \[
@@ -649,9 +649,9 @@ Let $H$ and $K$ be groups, let $\phi \colon K \to \aut(H)$ be a homomorphism, an
 	Let $P \in \syl_7(G)$ and $Q \in \syl_3(G)$.
 	Since $P \cap Q = 1$ because (49, 3) = 1, and $\abs{G} = \abs{P}\abs{Q}$, $G = PQ$, and $G \cong P \semidir Q$.
 	If the homomorphism is trivial, then we have the two abelian groups from part (a).
-	If the homomorphism is nontrivial and $P$ is cyclic, then we have the unique nonabelian group from part (c).
+	If the homomorphism is nontrivial and $P$ is cyclic, then we have the unique non-abelian group from part (c).
 	If the homomorphism is nontrivial and $P$ is not cyclic, then $\phi(Q)$ is a subgroup of order 3 in $\aut(P) \cong \gl_2(\fbb_7)$.
-	By part (d), every subgroup of order 3 is conjugate in $\gl_2(\fbb_7)$ to a subgroup of $P$, so by \exref{5.5.6} we have the three nonabelian groups $G_1, G_3$, and $G_4$ from part (e).
+	By part (d), every subgroup of order 3 is conjugate in $\gl_2(\fbb_7)$ to a subgroup of $P$, so by \exref{5.5.6} we have the three non-abelian groups $G_1, G_3$, and $G_4$ from part (e).
 	Hence, the six nonisomorphic groups described above are all the groups of order 147.
 \end{solenum}
 
@@ -736,7 +736,7 @@ Let $H$ and $K$ be groups, let $\phi \colon K \to \aut(H)$ be a homomorphism, an
         Also observe that $\ker\phi_2 = \ker\phi_4 = 1$ while $\ker\phi_3 = \gen{s^2}$.
         Then the resulting semidirect products from $\phi_2$ and $\phi_4$ are isomorphic, since $\phi_2(S) = \phi_4(S) = \gen\alpha$, so by \exref{5.5.6}, we have $P \semidir_{\phi_2} S \cong P \semidir_{\phi_4} S$.
         Moreover, $\ker\phi_3 = \gen{s^2}$, which is the unique subgroup of order 2 in $\aut(P)$, so $P \semidir_{\phi_3} S$ is not isomorphic to $P \semidir_{\phi_2} S$.
-        Hence, we have two nonabelian groups of order 20, and we have
+        Hence, we have two non-abelian groups of order 20, and we have
         \[
         	G \cong P \semidir_{\phi_2} S \cong \set{p, s \mid p^5 = s^4 = 1, sps\inv = p^2} \cong F_{20}.
         \]
@@ -806,7 +806,7 @@ Let $H$ and $K$ be groups, let $\phi \colon K \to \aut(H)$ be a homomorphism, an
         	\phi_1 \colon s \mapsto \rho, \quad \phi_2 \colon s \mapsto \rho^3, \quad \phi_3 \colon s \mapsto \rho^2.
         \]
         We know that $\phi_1$ and $\phi_2$ give isomorphic semidirect products, since $\phi_1(S) = \phi_2(S) = \gen\rho$.
-	    Hence, we have two nonabelian groups of order $4p$, and we have
+	    Hence, we have two non-abelian groups of order $4p$, and we have
         \[
         	G \cong P \semidir_{\phi_1} S \cong \set{q, s \mid q^p = s^4 = 1, sqs\inv = q^k},
         \]
@@ -874,7 +874,7 @@ Let $H$ and $K$ be groups, let $\phi \colon K \to \aut(H)$ be a homomorphism, an
     
     Consider $G/P$, where $\abs{G/P} = 12$.
 	If we consider $\pi$ to be the natural projection map from $G$ to $G/P$, we claim that the map $\psi \colon \syl_3(G) \to \syl_3(G/P)$ given by $\psi(Q_i) \to \pi(Q_i)$ is a bijection.
-	Note that this is a well-defined map, since $\pi(Q_i) = Q_iP/P$ is a subgroup of $G/P$, and since $Q_iP \leq G$ with order 15, $Q_iP/P$ has order 3, so $\pi(Q_i) \in \syl_3(G/P)$.
+	Note that this is a well defined map, since $\pi(Q_i) = Q_iP/P$ is a subgroup of $G/P$, and since $Q_iP \leq G$ with order 15, $Q_iP/P$ has order 3, so $\pi(Q_i) \in \syl_3(G/P)$.
 	To see that $\psi$ is injective, suppose that $\psi(Q_i) = \psi(Q_j)$, then $Q_iP/P = Q_jP/P$, which implies that $Q_iP = Q_jP$.
 	Since $\abs{Q_iP} = \abs{Q_jP} = 15$, and $n_3(Q_iP) \equiv 1 \pmod 3$ and $n_3(Q_iP) \mid 5$, $n_3(Q_iP) = 1$.
 	Hence, $Q_i = Q_j$, so $\psi$ is injective.
@@ -1241,8 +1241,8 @@ Let $H$ and $K$ be groups, let $\phi \colon K \to \aut(H)$ be a homomorphism, an
         \item $G_3 \cong Z_8 \semidir_{\phi_3} Z_2$ has the automorphism $bab\inv = a^5$, hence $G_3 \cong M$.
         \item $G_4 \cong Z_8 \semidir_{\phi_4} Z_2$ has the inversion map $bab\inv = a\inv$, hence $G_4 \cong D_{16}$.
     \end{itemize}
-    By \exref{5.3.1}, we know that the three nonabelian groups are pairwise nonisomorphic.
-	Moreover, $Z_8 \times Z_2$ is abelian and the others are nonabelian, so it is also nonisomorphic to the others.
+    By \exref{5.3.1}, we know that the three non-abelian groups are pairwise nonisomorphic.
+	Moreover, $Z_8 \times Z_2$ is abelian and the others are non-abelian, so it is also nonisomorphic to the others.
 \end{sol}
 
 \begin{exercise}{5.5.17}
@@ -1399,7 +1399,6 @@ Let $H$ and $K$ be groups, let $\phi \colon K \to \aut(H)$ be a homomorphism, an
 	Deduce that, for odd primes $p$, a $p$-group that contains a unique subgroup of order $p$ is cyclic.
     
     \note{For $p = 2$, it is a theorem that the generalized quaternion groups $Q_{2^n}$ are the only noncyclic 2-groups which contain a unique subgroup of order 2.}
-    
     \hint{Proceed by induction on $\abs{P}$.
 	Let $Z$ be a subgroup of order $p$ in $Z(P)$, and let $\bar P = P/Z$.
 	If $\bar P$ is cyclic, then $P$ is abelian by \exref{3.1.36}--show that the result is true for abelian groups.
@@ -1448,8 +1447,7 @@ Let $H$ and $K$ be groups, let $\phi \colon K \to \aut(H)$ be a homomorphism, an
     Let $p$ be an odd prime, and let $P$ be a $p$-group.
 	Prove that if every subgroup of $P$ is normal, then $P$ is abelian.
     
-    \note{Note that $Q_8$ is a nonabelian 2-group with this property, so the result is false for $p = 2$.}
-    
+    \note{Note that $Q_8$ is a non-abelian 2-group with this property, so the result is false for $p = 2$.}
     \hint{Use the preceding exercises and \exref{5.4.15}.}
 \end{exercise}
 
@@ -1530,7 +1528,7 @@ Let $H$ and $K$ be groups, let $\phi \colon K \to \aut(H)$ be a homomorphism, an
         \item Assume $K$ and $L$ are finite groups and $\rho$ is the left regular representation of $K$.
 	    Find $\abs{L \wr K}$ in terms of $\abs{K}$ and $\abs{L}$.
         \item Let $p$ be a prime, let $K = L = Z_p$ and let $\rho$ be the left regular representation of $K$.
-	    Prove that $Z_p \wr Z_p$ is a nonabelian group of order $p^{p+1}$ and is isomorphic to a Sylow $p$-subgroup of $S_{p^2}$.
+	    Prove that $Z_p \wr Z_p$ is a non-abelian group of order $p^{p+1}$ and is isomorphic to a Sylow $p$-subgroup of $S_{p^2}$.
         
         \hint{The $p$ copies of $Z_p$ whose direct product makes up $H$ may be represented by $p$ disjoint $p$-cycles; these are cyclically permuted by $K$.}
     \end{subexercises}
@@ -1546,7 +1544,7 @@ Let $H$ and $K$ be groups, let $\phi \colon K \to \aut(H)$ be a homomorphism, an
     \item From the above, we know that $\abs{Z_p \wr Z_p} = \abs{Z_p}^{\abs{Z_p}}\abs{Z_p} = p^p \cdot p = p^{p + 1}$.
     Let $H$ be the direct product of $p$ copies of $Z_p$, and put $K = \gen k \cong Z_p$.
     Let $H = \gen{h_1} \times \gen{h_2} \times \cdots \times \gen{h_p}$, where $\abs{h_i} = p$ for all $i$.
-    To see that $Z_p \wr Z_p$ is nonabelian, we show that $k$ does not commute with $h_1$.
+    To see that $Z_p \wr Z_p$ is non-abelian, we show that $k$ does not commute with $h_1$.
     Let $\rho \colon K \to S_p$ be the left regular representation of $K$.
     Then $\rho(k)$ is the $p$-cycle $\cyc{1 2 \cdots p}$.
     Then $\rho(k)$ permutes the $p$ factors of $H$, so $kh_1k\inv = h_2 \neq h_1$.
@@ -1598,14 +1596,13 @@ Let $H$ and $K$ be groups, let $\phi \colon K \to \aut(H)$ be a homomorphism, an
 \begin{exercise}{5.5.24}
     Let $n$ be an integer $> 1$.
 	Prove the following classification: every group of order $n$ is abelian if and only if $n = p_1^{\alpha_1} p_2^{\alpha_2} \cdots p_r^{\alpha_r}$, where $p_1, \ldots, p_r$ are distinct primes, $\alpha_i = 1$ or $2$ for all $i \in \set{1, \ldots, r}$ and $p_i$ does not divide $p_j^{\alpha_j} - 1$ for all $i$ and $j$.
-    
     \hint{See \exref{4.5.56}.}
 \end{exercise}
 
 \begin{soliff}
     \rightimp Suppose some $\alpha_i \geq 3$.
-    Then there exists a nonabelian group of order $p_i^3$ by the classification of groups of order $p^3$.
-    Then the direct product of this group with the cyclic groups of order $p_j^{\alpha_j}$ for $j \neq i$ is a nonabelian group of order $n$.
+    Then there exists a non-abelian group of order $p_i^3$ by the classification of groups of order $p^3$.
+    Then the direct product of this group with the cyclic groups of order $p_j^{\alpha_j}$ for $j \neq i$ is a non-abelian group of order $n$.
     Hence, $\alpha_i \leq 2$ for all $i$.
 
     Now suppose there exist $i$ and $j$ such that $p_i$ divides $p_j^{\alpha_j} - 1$.
@@ -1614,13 +1611,13 @@ Let $H$ and $K$ be groups, let $\phi \colon K \to \aut(H)$ be a homomorphism, an
     \begin{itemize}
         \item If $\alpha_j = 1$, then $p_j^{\alpha_j} - 1 = p_j - 1$, and $p_i$ divides $p_j - 1$.
         Using Cauchy's theorem, we have that $\aut(Z_{p_j})$ has an element of order $p_i$.
-        Then we may form the nonabelian group $Z_{p_j} \semidir Z_{p_i}$ of order $p_jp_i$.
+        Then we may form the non-abelian group $Z_{p_j} \semidir Z_{p_i}$ of order $p_jp_i$.
         \item If $\alpha_j = 2$, then $p_i \mid p_j^2 - 1$.
         Note that $Z_{p_j} \times Z_{p_j}$ has automorphism group isomorphic to $\gl_2(\fbb_{p_j})$.
         Then $\abs{\aut(Z_{p_j} \times Z_{p_j})} = \abs{\gl_2(\fbb_{p_j})} = (p_j^2 - 1)(p_j^2 - p_j) = p_j(p_j - 1)^2(p_j + 1)$, which is divisible by $p_i$.
-        Again, we may use Cauchy's theorem to find an element of order $p_i$ in $\aut(Z_{p_j} \times Z_{p_j})$, and form the nonabelian group $(Z_{p_j} \times Z_{p_j}) \semidir Z_{p_i}$ of order $p_j^2p_i$.
+        Again, we may use Cauchy's theorem to find an element of order $p_i$ in $\aut(Z_{p_j} \times Z_{p_j})$, and form the non-abelian group $(Z_{p_j} \times Z_{p_j}) \semidir Z_{p_i}$ of order $p_j^2p_i$.
     \end{itemize}
-    In either case, we may form a direct product of the nonabelian group with the cyclic groups of order $p_k^{\alpha_k}$ for $k \neq i, j$ to obtain a nonabelian group of order $n$.
+    In either case, we may form a direct product of the non-abelian group with the cyclic groups of order $p_k^{\alpha_k}$ for $k \neq i, j$ to obtain a non-abelian group of order $n$.
 
     \leftimp We proceed by induction on $\abs{G} = n$.
     If $r = 1$, then $n = p$ or $p^2$.
@@ -1655,7 +1652,7 @@ Let $H$ and $K$ be groups, let $\phi \colon K \to \aut(H)$ be a homomorphism, an
 
 \begin{exercise}{5.5.25}
     Let $H(\fbb_p)$ be the Heisenberg group over the finite field $\fbb_p = \zbb/p\zbb$ (cf. \exref{5.4.20}).
-	Prove that $H(\fbb_2) \cong D_8$, and that $H(\fbb_p)$ has exponent $p$ and is isomorphic to the first nonabelian group in Example 7.
+	Prove that $H(\fbb_2) \cong D_8$, and that $H(\fbb_p)$ has exponent $p$ and is isomorphic to the first non-abelian group in Example 7.
 \end{exercise}
 
 \begin{sol}
