@@ -6,10 +6,10 @@ Let $G$ be a group and let $A$ be a nonempty set.
 
 \begin{exercise}{4.1.1}
 	Let $G$ act on the set $A$.
-	Prove that if $a,b \in A$ and $b = g \cdot a$ for some $g \in G$, then \(G_b = g G_a g^{-1}\) (\(G_a\) is the stabilizer of $a$).
+	Prove that if $a,b \in A$ and $b = g \cdot a$ for some $g \in G$, then \(G_b = g G_a g\inv\) (\(G_a\) is the stabilizer of $a$).
 	Deduce that if $G$ acts transitively on $A$ then the kernel of the action is
 	\[
-		\bigcap_{g \in G} g G_a g^{-1}.
+		\bigcap_{g \in G} g G_a g\inv.
 	\]
 \end{exercise}
 
@@ -20,54 +20,54 @@ Let $G$ be a group and let $A$ be a nonempty set.
 	But $b = g \cdot a$, so $h \cdot (g \cdot a) = g \cdot a$.
 	Applying $g\inv$ to both sides, we get $g\inv h g \cdot a = a$.
 	This means that $g\inv h g \in G_a$, so $h \in g G_a g\inv$.
-	Thus, we have shown that \(G_b \subseteq g G_a g^{-1}\).
-	For the other direction, suppose $h \in g G_a g^{-1}$.
-	Then there exists some $k \in G_a$ such that $h = g k g^{-1}$.
+	Thus, we have shown that \(G_b \subseteq g G_a g\inv\).
+	For the other direction, suppose $h \in g G_a g\inv$.
+	Then there exists some $k \in G_a$ such that $h = g k g\inv$.
 	We want to show that $h \in G_b$.
-	We have $h \cdot b = (g k g^{-1}) \cdot (g \cdot a) = g \cdot (k \cdot a) = g \cdot a = b$, since $k \in G_a$ implies $k \cdot a = a$.
+	We have $h \cdot b = (g k g\inv) \cdot (g \cdot a) = g \cdot (k \cdot a) = g \cdot a = b$, since $k \in G_a$ implies $k \cdot a = a$.
 	Thus, $h \in G_b$.
-	Therefore, we have shown that \(g G_a g^{-1} \subseteq G_b\).
-	Combining both inclusions, we conclude that \(G_b = g G_a g^{-1}\).
+	Therefore, we have shown that \(g G_a g\inv \subseteq G_b\).
+	Combining both inclusions, we conclude that \(G_b = g G_a g\inv\).
 
 	Now, if $G$ acts transitively on $A$, then for any $b \in A$, there exists some $g \in G$ such that $b = g \cdot a$.
-	From the first part, we have \(G_b = g G_a g^{-1}\).
+	From the first part, we have \(G_b = g G_a g\inv\).
 	The kernel of the action is the intersection of all stabilizers \(G_b\) for \(b \in A\).
 	Therefore, the kernel is
 	\[
-		\bigcap_{b \in A} G_b = \bigcap_{g \in G} g G_a g^{-1}. \qedhere
+		\bigcap_{b \in A} G_b = \bigcap_{g \in G} g G_a g\inv. \qedhere
 	\]
 \end{sol}
 
 \begin{exercise}{4.1.2}
 	Let $G$ be a permutation group on the set $A$ (i.e., \(G \leq S_A\)), let \(\sigma \in G\) and let \(a \in A\).
-	Prove that \(\sigma G_a \sigma^{-1} = G_{\sigma(a)}\).
+	Prove that \(\sigma G_a \sigma\inv = G_{\sigma(a)}\).
 	Deduce that if $G$ acts transitively on $A$ then 
 	\[
-		\bigcap_{\sigma \in G} \sigma G_a \sigma^{-1} = 1.
+		\bigcap_{\sigma \in G} \sigma G_a \sigma\inv = 1.
 	\]
 \end{exercise}
 
 \begin{sol}
 	Suppose $\tau \in \sigma G_a\sigma\inv$.
 	We want to show that $\tau \in G_{\sigma(a)}$.
-	Since $\tau \in \sigma G_a \sigma^{-1}$, there exists some $\rho \in G_a$ such that $\tau = \sigma \rho \sigma^{-1}$.
-	We have $\tau \cdot \sigma(a) = (\sigma \rho \sigma^{-1}) \cdot \sigma(a) = \sigma \cdot (\rho \cdot a) = \sigma(a)$, since $\rho \in G_a$ implies $\rho \cdot a = a$.
+	Since $\tau \in \sigma G_a \sigma\inv$, there exists some $\rho \in G_a$ such that $\tau = \sigma \rho \sigma\inv$.
+	We have $\tau \cdot \sigma(a) = (\sigma \rho \sigma\inv) \cdot \sigma(a) = \sigma \cdot (\rho \cdot a) = \sigma(a)$, since $\rho \in G_a$ implies $\rho \cdot a = a$.
 	Thus, $\tau \in G_{\sigma(a)}$.
-	Therefore, we have shown that \(\sigma G_a \sigma^{-1} \subseteq G_{\sigma(a)}\).
+	Therefore, we have shown that \(\sigma G_a \sigma\inv \subseteq G_{\sigma(a)}\).
 	For the other direction, suppose $\tau \in G_{\sigma(a)}$.
-	We want to show that $\tau \in \sigma G_a \sigma^{-1}$.
+	We want to show that $\tau \in \sigma G_a \sigma\inv$.
 	We have $\tau \cdot \sigma(a) = \sigma(a)$.
-	Applying $\sigma^{-1}$ to both sides, we get $\sigma^{-1} \tau \sigma \cdot a = a$.
-	This means that $\sigma^{-1} \tau \sigma \in G_a$, so $\tau \in \sigma G_a \sigma^{-1}$.
-	Thus, we have shown that \(G_{\sigma(a)} \subseteq \sigma G_a \sigma^{-1}\).
-	Combining both inclusions, we conclude that \(\sigma G_a \sigma^{-1} = G_{\sigma(a)}\).
+	Applying $\sigma\inv$ to both sides, we get $\sigma\inv \tau \sigma \cdot a = a$.
+	This means that $\sigma\inv \tau \sigma \in G_a$, so $\tau \in \sigma G_a \sigma\inv$.
+	Thus, we have shown that \(G_{\sigma(a)} \subseteq \sigma G_a \sigma\inv\).
+	Combining both inclusions, we conclude that \(\sigma G_a \sigma\inv = G_{\sigma(a)}\).
 
 	Now, if $G$ acts transitively on $A$, then for any $b \in A$, there exists some $\sigma \in G$ such that $b = \sigma(a)$.
-	From the first part, we have \(\sigma G_a \sigma^{-1} = G_b\).
+	From the first part, we have \(\sigma G_a \sigma\inv = G_b\).
 	The kernel of the action is the intersection of all stabilizers \(G_b\) for \(b \in A\).
 	Therefore, the kernel is
 	\[
-		\bigcap_{b \in A} G_b = \bigcap_{\sigma \in G} \sigma G_a \sigma^{-1} = 1. \qedhere
+		\bigcap_{b \in A} G_b = \bigcap_{\sigma \in G} \sigma G_a \sigma\inv = 1. \qedhere
 	\]
 \end{sol}
 
@@ -86,7 +86,7 @@ Let $G$ be a group and let $A$ be a nonempty set.
 \end{sol}
 
 \begin{exercise}{4.1.4}
-	Let \(S_3\) act on the set \(\Omega\) of ordered pairs \(\set{(i,j) \mid 1 \le i,j \le 3}\) by \(\sigma((i,j)) = (\sigma(i), \sigma(j))\).
+	Let \(S_3\) act on the set \(\Omega\) of ordered pairs \(\set{(i,j) \mid 1 \leq i,j \leq 3}\) by \(\sigma((i,j)) = (\sigma(i), \sigma(j))\).
 	Find the orbits of \(S_3\) on \(\Omega\).
 	For each \(\sigma \in S_3\) find the cycle decomposition of \(\sigma\) under this action (i.e., find its cycle decomposition when \(\sigma\) is considered as an element of \(S_9\)—first fix a labeling of these nine ordered pairs).
 	For each orbit \(\ocal\) of $S_3$ acting on these nine points, pick some \(a \in \ocal\) and find the stabilizer of \(a\) in \(S_3\).
@@ -144,7 +144,7 @@ Let $G$ be a group and let $A$ be a nonempty set.
 \begin{exercise}{4.1.5}
 	For each of parts (a) and (b) repeat the preceding exercise but with $S_3$ acting on the specified set:
 	\begin{subexercises}
-		\item the set of 27 triples \(\set{(i,j,k) \mid 1 \le i,j,k \le 3}\)
+		\item the set of 27 triples \(\set{(i,j,k) \mid 1 \leq i,j,k \leq 3}\)
 		\item the set \(\pcal(\set{1,2,3}) - \set{\varnothing}\) of all 7 nonempty subsets of \(\set{1,2,3}\)
 	\end{subexercises}
 \end{exercise}
@@ -359,7 +359,7 @@ Let $G$ be a group and let $A$ be a nonempty set.
 \begin{exercise}{4.1.8}
 	A transitive permutation group $G$ on a set $A$ is called \emph{doubly transitive} if for any (hence all) $a \in A$ the subgroup $G_a$ is transitive on the set $A - \set{a}$.
 	\begin{subexercises}
-		\item Prove that $S_n$ is doubly transitive on $\set{1,2,\ldots,n}$ for all $n \ge 2$.
+		\item Prove that $S_n$ is doubly transitive on $\set{1,2,\ldots,n}$ for all $n \geq 2$.
 		\item Prove that a doubly transitive group is primitive.
 		Deduce that $D_8$ is not doubly transitive in its action on the 4 vertices of a square.
 	\end{subexercises}
@@ -437,8 +437,8 @@ Let $G$ be a group and let $A$ be a nonempty set.
 		\item Prove that $HxK$ is a union of right cosets of $H$.
 		\item Show that $HxK$ and $HyK$ are either the same set or are disjoint for all $x, y \in G$.
 		Show that the set of $HK$ double cosets partitions $G$.
-		\item Prove that $\abs{HxK} = \abs{K} \cdot \abs{H : H \cap xKx^{-1}}$.
-		\item Prove that $\abs{HxK} = \abs{H} \cdot \abs{K : K \cap x^{-1}Hx}$.
+		\item Prove that $\abs{HxK} = \abs{K} \cdot \abs{H : H \cap xKx\inv}$.
+		\item Prove that $\abs{HxK} = \abs{H} \cdot \abs{K : K \cap x\invHx}$.
 	\end{subexercises}
 \end{exercise}
 

@@ -31,24 +31,24 @@
 \end{sol}
 
 \begin{exercise}{1.7.3}
-    Show that the additive group $\rbb$ acts on the $x,y$ plane $\rbb\times\rbb$ by $r\cdot (x,y) = (x + r, y)$.
+    Show that the additive group $\rbb$ acts on the $x,y$ plane $\rbb\times\rbb$ by $r\cdot (x,y) = (x + ry, y)$.
 \end{exercise}
 
 \begin{sol}
     Let $r, s \in \rbb$ and $(x, y) \in \rbb^2$.
 	Then
     \[
-    	r \cdot (s \cdot (x, y)) = r \cdot (x + s, y) = (x + s + r, y) = (x + (r + s), y) = (r + s) \cdot (x, y).
+    	r \cdot (s \cdot (x, y)) = r \cdot (x + sy, y) = (x + sy + ry, y) = (x + (r + s)y, y) = (r + s) \cdot (x, y).
     \]
-    Moreover, $0 \cdot (x, y) = (x + 0, y) = (x, y)$, and thus $\rbb$ acts on $\rbb^2$.
+    Moreover, $0 \cdot (x, y) = (x + 0y, y) = (x, y)$, and thus $\rbb$ acts on $\rbb^2$.
 \end{sol}
 
 \begin{exercise}![Kernel and Stabilizer of a Group Action]{1.7.4}
     Let $G$ be a group acting on a set $A$ and fix some $a\in A$.
-	Show that the following sets are subgroups of $G$:
+	Show that the following sets are subgroups of $G$ (cf. \exref{1.1.26}):
     \begin{subexercises}
         \item the kernel of the action,
-        \item $\set{g\in G \mid g a = a}$---this subgroup is called the \term{stabilizer} of $a$ in $G$.
+        \item $\set{g\in G \mid g a = a}$ --- this subgroup is called the \term{stabilizer} of $a$ in $G$.
     \end{subexercises}
 \end{exercise}
 
@@ -102,10 +102,7 @@
 
 \begin{exercise}{1.7.8}
     Let $A$ be a nonempty set and let $k$ be a positive integer with $k \leq \abs{A}$.
-	The symmetric group $S_A$ acts on the set $B$ consisting of all subsets of $A$ of cardinality $k$ by
-    \[
-    	\sigma(\set{a_1, \dots, a_k}) = \set{\sigma(a_1), \dots, \sigma(a_k)}.
-    \]
+	The symmetric group $S_A$ acts on the set $B$ consisting of all subsets of $A$ of cardinality $k$ by $\sigma \cdot \set{a_1, \ldots, a_k} = \set{\sigma(a_1), \ldots, \sigma(a_k)}$.
     \begin{subexercises}
         \item Prove that this is a group action.
         \item Describe explicitly how the elements $\cyc{1 2}$ and $\cyc{1 2 3}$ act on the six $2$-element subsets of $\set{1,2,3,4}$.
@@ -138,8 +135,8 @@
 \end{solenum}
 
 \begin{exercise}{1.7.9}
-    Do both parts of the preceding exercise with ``ordered $k$-tuples'' in place of ``$k$-element subsets,'' where the action on $k$-tuples is defined as above but with set braces replaced by parentheses.
-    \note{Note that, for example, the $2$-tuples $(1,2)$ and $(2,1)$ are different even though the sets $\set{1,2}$ and $\set{2,1}$ are the same, so the sets being acted upon are different.}
+    Do both parts of the preceding exercise with ``ordered $k$-tuples'' in place of ``$k$-element subsets,'' where the action on $k$-tuples is defined as above but with set braces replaced by parentheses
+    \note{note that, for example, the $2$-tuples $(1,2)$ and $(2,1)$ are different even though the sets $\set{1,2}$ and $\set{2,1}$ are the same, so the sets being acted upon are different}.
 
     \remark{With respect to the note, we assume that the ordered $k$-tuples have distinct entries.}
 \end{exercise}
@@ -196,7 +193,7 @@
 \end{sol}
 
 \begin{exercise}{1.7.11}
-    Write out the cycle decomposition of the eight permutations in $S_4$ corresponding to the elements of $D_8$ given by the action of $D_8$ on the vertices of a square (where the vertices of the square are labeled as in Section 2).
+    Write out the cycle decomposition of the eight permutations in $S_4$ corresponding to the elements of $D_8$ given by the action of $D_8$ on the vertices of a square (where the vertices of the square are labelled as in Section 2).
 \end{exercise}
 
 \begin{sol}
@@ -242,11 +239,7 @@
 
 \begin{exercise}{1.7.14}
     Let $G$ be a group and let $A = G$.
-	Show that if $G$ is non-abelian then the maps defined by  
-    \[
-    	 g \cdot a = ag \quad \text{for all } g,a\in G 
-    \]
-    do \emph{not} satisfy the axioms of a (left) group action of $G$ on itself.
+	Show that if $G$ is non-abelian then the maps defined by $g \cdot a = ag$ for all $g, a \in G$ do \emph{not} satisfy the axioms of a (left) group action of $G$ on itself.
 \end{exercise}
 
 \begin{sol}
@@ -256,11 +249,7 @@
 
 \begin{exercise}{1.7.15}
     Let $G$ be any group and let $A = G$.
-	Show that the maps defined by  
-    \[
-    	 g \cdot a = ag^{-1} \quad \text{for all } g,a\in G 
-    \]
-    \emph{do} satisfy the axioms of a (left) group action of $G$ on itself.
+	Show that the maps defined by $g \cdot a = ag\inv$ for all $g, a \in G$ \emph{do} satisfy the axioms of a (left) group action of $G$ on itself.
 \end{exercise}
 
 \begin{sol}
@@ -272,14 +261,9 @@
     Moreover, $1 \cdot a = a1 = a$, and thus this defines a left group action.
 \end{sol}
 
-\begin{exercise}!{1.7.16}
+\begin{exercise}![Conjugation]{1.7.16}
     Let $G$ be any group and let $A = G$.
-	Show that the maps defined by  
-    \[
-    	 g \cdot a = gag^{-1} \quad \text{for all } g,a\in G 
-    \]
-    \emph{do} satisfy the axioms of a (left) group action.
-    \note{This action of $G$ on itself is called \term{conjugation}.}
+	Show that the maps defined by $g \cdot a = gag\inv$ for all $g, a \in G$ \emph{do} satisfy the axioms of a (left) group action \note{this action of $G$ on itself is called \term{conjugation}}.
 \end{exercise}
 
 \begin{sol}
@@ -294,10 +278,10 @@
 \begin{exercise}{1.7.17}
     Let $G$ be a group and let $G$ act on itself by left conjugation, so each $g\in G$ maps $G$ to $G$ by
     \[
-    	 x \mapsto gxg^{-1}. 
+    	 x \mapsto gxg\inv. 
     \]
-    For fixed $g\in G$, prove that conjugation by $g$ is an isomorphism from $G$ onto itself (i.e., is an automorphism of $G$---cf. \exref{1.6.20}).
-	Deduce that $x$ and $gxg^{-1}$ have the same order for all $x\in G$ and that for any subset $A$ of $G$, $\abs{A} = \abs{gAg^{-1}}$ (here $gAg^{-1} = \set{gag^{-1} \mid a\in A}$).
+    For fixed $g\in G$, prove that conjugation by $g$ is an isomorphism from $G$ onto itself \note{i.e., is an automorphism of $G$ --- cf. \exref{1.6.20}}.
+	Deduce that $x$ and $gxg\inv$ have the same order for all $x$ in $G$ and that for any subset $A$ of $G$, $\abs{A} = \abs{gAg\inv}$ \note{here $gAg\inv = \set{gag\inv \mid a\in A}$}.
 \end{exercise}
 
 \begin{sol}
@@ -334,7 +318,7 @@
 \end{solitem}
 
 \begin{exercise}![Lagrange's Theorem]{1.7.19}
-    Let $H$ be a subgroup of the finite group $G$ and let $H$ act on $G$ (here $A = G$) by left multiplication.
+    Let $H$ be a subgroup \note{cf. \exref{1.1.26}} of the finite group $G$ and let $H$ act on $G$ (here $A = G$) by left multiplication.
 	Let $x\in G$ and let $\ocal$ be the orbit of $x$ under this action of $H$.
 	Prove that the map  
     \[
@@ -399,9 +383,9 @@
 
 \begin{exercise}{1.7.22}
     Show that the group of rigid motions of an octahedron is isomorphic to a subgroup (cf. \exref{1.1.26}) of $S_4$. \hint{This group acts on the set of four pairs of opposite faces.}
-    Deduce that the groups of rigid motions of a cube and of an octahedron are isomorphic.
-    \note{These groups are isomorphic because these solids are ``dual''---see \emph{Introduction to Geometry} by H. Coxeter, Wiley, 1961.
-    We shall see later that the groups of rigid motions of the dodecahedron and icosahedron are isomorphic as well---these solids are also dual.}
+    Deduce that the groups of rigid motions of a cube and an octahedron are isomorphic.
+    \note{These groups are isomorphic because these solids are ``dual'' --- see \emph{Introduction to Geometry} by H. Coxeter, Wiley, 1961.
+    We shall see later that the groups of rigid motions of the dodecahedron and icosahedron are isomorphic as well --- these solids are also dual.}
 \end{exercise}
 
 \begin{sol}

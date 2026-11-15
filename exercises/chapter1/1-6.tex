@@ -122,7 +122,7 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{exercise}{1.6.8}
-    Prove that if $n \neq m$, then $S_n$ and $S_m$ are not isomorphic.
+    Prove that if $n \neq m$, $S_n$ and $S_m$ are not isomorphic.
 \end{exercise}
 
 \begin{sol}
@@ -141,16 +141,16 @@ Let $G$ and $H$ be groups.
     Fill in the details of the proof that the symmetric groups $S_\Delta$ and $S_\Omega$ are isomorphic if $\abs{\Delta} = \abs{\Omega}$ as follows: let $\theta \colon \Delta \to \Omega$ be a bijection.
 	Define
     \[
-        \phi \colon S_\Delta \to S_\Omega \quad \text{by} \quad \phi(\sigma) = \theta \circ \sigma \circ \theta^{-1} \quad \text{for all } \sigma \in S_\Delta
+        \phi \colon S_\Delta \to S_\Omega \quad \text{by} \quad \phi(\sigma) = \theta \circ \sigma \circ \theta\inv \quad \text{for all } \sigma \in S_\Delta
     \]
     and prove the following:
     \begin{subexercises}
-        \item $\phi$ is well defined, that is, if $\sigma$ is a permutation of $\Delta$ then $\theta \circ \sigma \circ \theta^{-1}$ is a permutation of $\Omega$.
+        \item $\phi$ is well defined, that is, if $\sigma$ is a permutation of $\Delta$ then $\theta \circ \sigma \circ \theta\inv$ is a permutation of $\Omega$.
         \item $\phi$ is a bijection from $S_\Delta$ onto $S_\Omega$.
         \hint{Find a $2$-sided inverse for $\phi$.}
         \item $\phi$ is a homomorphism, that is, $\phi(\sigma \circ \tau) = \phi(\sigma) \circ \phi(\tau)$.
     \end{subexercises}
-    \note{Note the similarity to the change of basis or similarity transformations for matrices (we shall see the connections between these later in the text)}.
+    Note the similarity to the \emph{change of basis} or \emph{similarity} transformations for matrices (we shall see the connections between these later in the text).
 \end{exercise}
 
 \begin{solenum}
@@ -289,7 +289,7 @@ Let $G$ and $H$ be groups.
 
 \begin{exercise}{1.6.17}
     Let $G$ be any group.
-	Prove that the map from $G$ to itself defined by $g \mapsto g^{-1}$ is a homomorphism if and only if $G$ is abelian.
+	Prove that the map from $G$ to itself defined by $g \mapsto g\inv$ is a homomorphism if and only if $G$ is abelian.
 \end{exercise}
 
 \begin{sol}
@@ -396,7 +396,7 @@ Let $G$ and $H$ be groups.
 \begin{exercise}!{1.6.23}
     Let $G$ be a finite group which possesses an automorphism $\sigma$ (cf. \exref{1.6.20}) such that $\sigma(g) = g$ if and only if $g = 1$.
 	If $\sigma^2$ is the identity map from $G$ to $G$, prove that $G$ is abelian (such an automorphism $\sigma$ is called \term{fixed point free} of order 2).
-\hint{Show that every element of $G$ can be written in the form $x^{-1}\sigma(x)$ and apply $\sigma$ to such an expression.}
+\hint{Show that every element of $G$ can be written in the form $x\inv\sigma(x)$ and apply $\sigma$ to such an expression.}
 \end{exercise}
 
 \begin{sol}
@@ -464,7 +464,7 @@ Let $G$ and $H$ be groups.
             \end{pmatrix}
         \]
         extends to a homomorphism of $D_{2n}$ into $\gl_2(\rbb)$.
-        \item Prove that the homomorphism $\phi$ in part(b) is injective.
+        \item Prove that the homomorphism $\phi$ in part (b) is injective.
     \end{subexercises}
 \end{exercise}
 
@@ -536,7 +536,7 @@ Let $G$ and $H$ be groups.
 \end{solenum}
 
 \begin{exercise}{1.6.26}
-    Let $i$ and $j$ be the generators of $Q_8$ described in Section 1.5.
+    Let $i$ and $j$ be the generators of $Q_8$ described in Section 5.
 	Prove that the map $\phi$ from $Q_8$ to $\gl_2(\cbb)$ defined on generators by
     \[
         \phi(i) = 

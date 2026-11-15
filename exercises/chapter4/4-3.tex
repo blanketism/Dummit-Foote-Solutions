@@ -85,7 +85,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}{4.3.4}
-	Prove that if $S \subseteq G$ and $g \in G$ then $gN_G(S)g^{-1} = N_G(gSg^{-1})$ and $gC_G(S)g^{-1} = C_G(gSg^{-1}).$
+	Prove that if $S \subseteq G$ and $g \in G$ then $gN_G(S)g\inv = N_G(gSg\inv)$ and $gC_G(S)g\inv = C_G(gSg\inv).$
 \end{exercise}
 
 \begin{sol}
@@ -119,7 +119,7 @@ Let $G$ be a group.
 \begin{exercise}!{4.3.6}
 	Assume $G$ is a non-abelian group of order $15$.
 	Prove that $Z(G)=1$.
-	Use the fact that $\langle g \rangle \le C_G(g)$ for all $g \in G$ to show that there is at most one possible class equation for $G$. [Use \exref{3.1.36}.]
+	Use the fact that $\langle g \rangle \leq C_G(g)$ for all $g \in G$ to show that there is at most one possible class equation for $G$. [Use \exref{3.1.36}.]
 \end{exercise}
 
 \begin{sol}
@@ -212,7 +212,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}{4.3.8}
-	Prove that $Z(S_n)=1$ for all $n \ge 3$.
+	Prove that $Z(S_n)=1$ for all $n \geq 3$.
 \end{exercise}
 
 \begin{sol}
@@ -226,7 +226,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}{4.3.9}
-	Show that $\abs{C_{S_n}(\cyc{1 2}\cyc{3 4})} = 8 (n-4)!$ for all $n \ge 4$.
+	Show that $\abs{C_{S_n}(\cyc{1 2}\cyc{3 4})} = 8 (n-4)!$ for all $n \geq 4$.
 	Determine the elements in this centralizer explicitly.
 \end{exercise}
 
@@ -248,16 +248,16 @@ Let $G$ be a group.
 	Let $\sigma$ be the 5-cycle $\cyc{1 2 3 4 5}$ in $S_5$.
 	In each of (a) to (c) find an explicit element $\tau \in S_5$ which accomplishes the specified conjugation:
 	\begin{subexercises}
-		\item $\tau \sigma \tau^{-1} = \sigma^2$
-		\item $\tau \sigma \tau^{-1} = \sigma^{-1}$
-		\item $\tau \sigma \tau^{-1} = \sigma^{-2}$
+		\item $\tau \sigma \tau\inv = \sigma^2$
+		\item $\tau \sigma \tau\inv = \sigma\inv$
+		\item $\tau \sigma \tau\inv = \sigma^{-2}$
 	\end{subexercises}
 \end{exercise}
 
 \begin{solenum}
 	\item $\sigma^2 = \cyc{1 3 5 2 4}$.
 	Then $\tau = \cyc{2 3 5 4}$.
-	\item $\sigma^{-1} = \cyc{1 5 4 3 2}$.
+	\item $\sigma\inv = \cyc{1 5 4 3 2}$.
 	Then $\tau = \cyc{1 5}\cyc{2 4}$.
 	\item $\sigma^{-2} = \cyc{1 4 2 5 3}$.
 	Then $\tau = \cyc{2 4 5 3}$.
@@ -265,7 +265,7 @@ Let $G$ be a group.
 
 \begin{exercise}{4.3.11}
 	In each of (a) -- (d) determine whether $\sigma_1$ and $\sigma_2$ are conjugate.
-	If they are, given an explicit permutation $\tau$ such that $\tau \sigma_1 \tau^{-1} = \sigma_2$.
+	If they are, given an explicit permutation $\tau$ such that $\tau \sigma_1 \tau\inv = \sigma_2$.
 	\begin{subexercises}
 		\item $\sigma_1 = \cyc{1 2}\cyc{3 4 5}$ and $\sigma_2 = \cyc{1 2 3}\cyc{4 5}$
 		\item $\sigma_1 = \cyc{1 5}\cyc{3 7 2}\cyc{10 6 8 11}$ and $\sigma_2 = \cyc{3 7 5 10}\cyc{4 9}\cyc{13 11 2}$
@@ -696,7 +696,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}{4.3.30}
-	If $G$ is a group of odd order, prove for any nonidentity element $x \in G$ that $x$ and $x^{-1}$ are not conjugate in $G$.
+	If $G$ is a group of odd order, prove for any nonidentity element $x \in G$ that $x$ and $x\inv$ are not conjugate in $G$.
 \end{exercise}
 
 \begin{sol}

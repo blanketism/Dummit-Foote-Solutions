@@ -324,7 +324,7 @@
     For any group $G$ define the \emph{dual group} of $G$ (denoted $\wh{G}$) to be the set of all homomorphisms from $G$ into the multiplicative group of roots of unity in $\cbb$.
 	Define a group operation in $\wh{G}$ by pointwise multiplication of functions: if $\chi, \psi$ are homomorphisms from $G$ into the group of roots of unity then $\chi\psi$ is the homomorphism given by $(\chi\psi)(g) = \chi(g)\psi(g)$ for all $g \in G$, where the latter multiplication takes place in $\cbb$.
     \begin{subexercises}
-        \item Show that this operation on $\wh{G}$ makes $\wh{G}$ into an abelian group. [Show that the identity is the map $g \mapsto 1$ for all $g \in G$ and the inverse of $\chi \in \wh{G}$ is the map $g \mapsto \chi(g)^{-1}$.]
+        \item Show that this operation on $\wh{G}$ makes $\wh{G}$ into an abelian group. [Show that the identity is the map $g \mapsto 1$ for all $g \in G$ and the inverse of $\chi \in \wh{G}$ is the map $g \mapsto \chi(g)\inv$.]
         \item If $G$ is a finite abelian group, prove that $\wh{G} \cong G$. [Write $G$ as $\langle x_1 \rangle \times \cdots \times \langle x_r \rangle$ and if $n_i = \abs{x_i}$ define $\chi_i$ to be the homomorphism which sends $x_i$ to $e^{2\pi i/n_i}$ and sends $x_j$ to $1$, for all $j \neq i$.
 	Prove $\chi_i$ has order $n_i$ in $\wh{G}$ and $\wh{G} = \langle \chi_1 \rangle \times \cdots \times \langle \chi_r \rangle$.]
     \end{subexercises}
@@ -335,8 +335,8 @@
 	The map $\ep \colon G \to \cbb$ given by $\ep(g) = 1$ for all $g \in G$ is a homomorphism, since $\ep(gh) = 1 = 1 \cdot 1 = \ep(g)\ep(h)$ for all $g, h \in G$, and 1 is a root of unity.
 	Moreover, for any $\chi \in \wh G$, then $(\chi\ep)(g) = \chi(g)\ep(g) = \chi(g) \cdot 1 = \chi(g)$ for all $g \in G$.
 	Thus, $\ep$ is the identity element of $\wh{G}$.
-	Finally, if $\chi \in \wh{G}$, then the map $\chi^{-1} \colon G \to \cbb$ given by $\chi^{-1}(g) = \chi(g)^{-1}$ is a homomorphism, since $\chi^{-1}(gh) = \chi(gh)^{-1} = (\chi(g)\chi(h))^{-1} = \chi(g)^{-1}\chi(h)^{-1} = \chi^{-1}(g)\chi^{-1}(h)$ for all $g, h \in G$, and $\chi(g)^{-1}$ is a root of unity since $\chi(g)$ is a root of unity.
-	Moreover, $\chi\chi^{-1} = \ep$, so $\chi^{-1}$ is the inverse of $\chi$ in $\wh{G}$.
+	Finally, if $\chi \in \wh{G}$, then the map $\chi\inv \colon G \to \cbb$ given by $\chi\inv(g) = \chi(g)\inv$ is a homomorphism, since $\chi\inv(gh) = \chi(gh)\inv = (\chi(g)\chi(h))\inv = \chi(g)\inv\chi(h)\inv = \chi\inv(g)\chi\inv(h)$ for all $g, h \in G$, and $\chi(g)\inv$ is a root of unity since $\chi(g)$ is a root of unity.
+	Moreover, $\chi\chi\inv = \ep$, so $\chi\inv$ is the inverse of $\chi$ in $\wh{G}$.
     \item To see that $\chi_i$ has order $n_i$ in $\wh G$, let $g = x_1^{s_1} \cdots x_r^{s_r} \in G$.
 	Then
     \[

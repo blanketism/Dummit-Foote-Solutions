@@ -190,16 +190,16 @@
     Let $G_1 = G_2 = \cdots = G_n$ and let $G = G_1 \times \cdots \times G_n$.
 	Under the notation of the preceding exercise show that $\phi_\pi \in \text{Aut}(G)$.
 	Show also that the map $\pi \mapsto \phi_\pi$ is an injective homomorphism of $S_n$ into $\text{Aut}(G)$. (In particular, $\phi_{\pi_1} \circ \phi_{\pi_2} = \phi_{\pi_1 \pi_2}$.
-	It is at this point that the $\pi^{-1}$'s in the definition of $\phi_\pi$ are needed.
+	It is at this point that the $\pi\inv$'s in the definition of $\phi_\pi$ are needed.
 	The underlying reason for this is that if $e_i$ is the $n$-tuple with 1 in position $i$ and zeros elsewhere, $1 \leq i \leq n$, then $S_n$ acts on $\set{e_1, \ldots, e_n}$ by $\pi \cdot e_i = e_{\pi(i)}$; this is a left group action.
 	If the $n$-tuple $(g_1, \ldots, g_n)$ is represented by $g_1 e_1 + \cdots + g_n e_n$, then this left group action on $\set{e_1, \ldots, e_n}$ extends to a left group action on sums by
     \[
     	\pi \cdot (g_1 e_1 + g_2 e_2 + \cdots + g_n e_n) = g_1 e_{\pi(1)} + g_2 e_{\pi(2)} + \cdots + g_n e_{\pi(n)}.
     \]
-    The coefficient of $e_{\pi(i)}$ on the right-hand side is $g_i$, so the coefficient of $e_i$ is $g_{\pi^{-1}(i)}$.
-	Thus, the right-hand side may be rewritten as $g_{\pi^{-1}(1)} e_1 + g_{\pi^{-1}(2)} e_2 + \cdots + g_{\pi^{-1}(n)} e_n$, which is precisely the sum attached to the $n$-tuple $(g_{\pi^{-1}(1)}, g_{\pi^{-1}(2)}, \ldots, g_{\pi^{-1}(n)})$.
+    The coefficient of $e_{\pi(i)}$ on the right-hand side is $g_i$, so the coefficient of $e_i$ is $g_{\pi\inv(i)}$.
+	Thus, the right-hand side may be rewritten as $g_{\pi\inv(1)} e_1 + g_{\pi\inv(2)} e_2 + \cdots + g_{\pi\inv(n)} e_n$, which is precisely the sum attached to the $n$-tuple $(g_{\pi\inv(1)}, g_{\pi\inv(2)}, \ldots, g_{\pi\inv(n)})$.
 	In other words, any permutation of the ``position vectors'' $e_1, \ldots, e_n$ (which fixes their coefficients) is the same as the inverse permutation on the coefficients (fixing the $e_i$'s).
-	If one uses $\pi$'s in place of $\pi^{-1}$'s in the definition of $\phi_\pi$ then the map $\pi \mapsto \phi_\pi$ is not necessarily a homomorphism--it corresponds to a \emph{right} group action.)
+	If one uses $\pi$'s in place of $\pi\inv$'s in the definition of $\phi_\pi$ then the map $\pi \mapsto \phi_\pi$ is not necessarily a homomorphism--it corresponds to a \emph{right} group action.)
 \end{exercise}
 
 \begin{sol}
@@ -268,7 +268,7 @@
 	Let this isomorphism be given by the map $x_i \mapsto y_i$ for all $x_i \in Z_1$.
 	A \textbf{\emph{central product}} of $A$ and $B$ is a quotient
     \[
-    	(A \times B)/Z \quad \text{where} \quad Z = \set{(x_i, y_i^{-1}) \mid x_i \in Z_1}
+    	(A \times B)/Z \quad \text{where} \quad Z = \set{(x_i, y_i\inv) \mid x_i \in Z_1}
     \]
     and is denoted by $A \ast B$--it is not unique since it depends on $Z_1$, $Z_2$ and the isomorphism between them. (Think of $A \ast B$ as the direct product of $A$ and $B$ ``collapsed'' by identifying each element $x_i \in Z_1$ with its corresponding element $y_i \in Z_2$.)
     \begin{subexercises}
@@ -393,7 +393,7 @@
     \begin{subexercises}
         \item Show that this binary operation is well defined and associative.
         \item Show that the element $\prod 1_i$ satisfies the axiom for the identity of $G$, where $1_i$ is the identity of $G_i$ for all $i$.
-        \item Show that the element $\prod a_i^{-1}$ is the inverse of $\prod a_i$, where the inverse of each component element $a_i$ is taken in the group $G_i$.
+        \item Show that the element $\prod a_i\inv$ is the inverse of $\prod a_i$, where the inverse of each component element $a_i$ is taken in the group $G_i$.
     \end{subexercises}
     Conclude that the direct product is a group. (Note that if $I = \set{1, 2, \ldots, n}$, this definition of the direct product is the same as the $n$-tuple definition in the text.)
 \end{exercise}
@@ -428,13 +428,13 @@
     \item Let $\prod a_i$ be an element of $G$.
 	Then
     \[
-    	\left(\prod_{i \in I} a_i\right)\left(\prod_{i \in I} a_i^{-1}\right) = \prod_{i \in I} (a_i \star_i a_i^{-1}) = \prod_{i \in I} 1_i
+    	\left(\prod_{i \in I} a_i\right)\left(\prod_{i \in I} a_i\inv\right) = \prod_{i \in I} (a_i \star_i a_i\inv) = \prod_{i \in I} 1_i
     \]
     and
     \[
-    	\left(\prod_{i \in I} a_i^{-1}\right)\left(\prod_{i \in I} a_i\right) = \prod_{i \in I} (a_i^{-1} \star_i a_i) = \prod_{i \in I} 1_i.
+    	\left(\prod_{i \in I} a_i\inv\right)\left(\prod_{i \in I} a_i\right) = \prod_{i \in I} (a_i\inv \star_i a_i) = \prod_{i \in I} 1_i.
     \]
-    Thus, $\prod a_i^{-1}$ is the inverse of $\prod a_i$.
+    Thus, $\prod a_i\inv$ is the inverse of $\prod a_i$.
 	We conclude that $G$ is a group with inverse and identity as described above.
 \end{solenum}
 
@@ -514,11 +514,11 @@
 	It is clear that $H$ is a subset of $G$.
 	Moreover, if $\prod a_i$ and $\prod b_i$ are elements of $H$, then there are only finitely many $i$ such that $a_i \neq 1_i$ and only finitely many $i$ such that $b_i \neq 1_i$.
 	Thus, there are only finitely many $i$ such that $a_i b_i \neq 1_i$, so $\prod a_i \prod b_i = \prod (a_i b_i)$ is an element of $H$.
-	Finally, if $\prod a_i$ is an element of $H$, then there are only finitely many $i$ such that $a_i \neq 1_i$, so there are only finitely many $i$ such that $a_i^{-1} \neq 1_i$, so $\prod a_i^{-1}$ is an element of $H$.
+	Finally, if $\prod a_i$ is an element of $H$, then there are only finitely many $i$ such that $a_i \neq 1_i$, so there are only finitely many $i$ such that $a_i\inv \neq 1_i$, so $\prod a_i\inv$ is an element of $H$.
 	Thus, $H \leq G$.
     \item Let $G = \prod_{i \in I} G_i$ and let $H$ be the restricted direct product of the $G_i$'s.
 	Let $\prod a_i$ be an element of $G$ and let $\prod b_i$ be an element of $H$.
-	Then there are only finitely many $i$ such that $b_i \neq 1_i$, so there are only finitely many $i$ such that $a_i b_i a_i^{-1} \neq 1_i$, so $\prod a_i \prod b_i \prod a_i^{-1}$ is an element of $H$.
+	Then there are only finitely many $i$ such that $b_i \neq 1_i$, so there are only finitely many $i$ such that $a_i b_i a_i\inv \neq 1_i$, so $\prod a_i \prod b_i \prod a_i\inv$ is an element of $H$.
 	Thus, $H \nsub G$.
     \item Let $G = \prod_{i \in \zbb^+} G_i$ where $G_i = \zbb/p_i\zbb$ for all $i$.
 	Let $H$ be the restricted direct product of the $G_i$'s.

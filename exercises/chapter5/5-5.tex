@@ -108,7 +108,7 @@ Let $H$ and $K$ be groups, let $\phi \colon K \to \aut(H)$ be a homomorphism, an
 	Moreover, we have some homomorphism $\psi \colon K \to \aut(H)$ such that $G \cong H \semidir_\psi K$.
 	Lastly, we know from Theorem 4.3 that
     \[
-    	\ker\phi = \bigcap_{g \in G} gKg^{-1} \nsub G
+    	\ker\phi = \bigcap_{g \in G} gKg\inv \nsub G
     \]
     such that $\ker\phi \leq K$.
 	Putting $N = \ker\phi$, then $N = \set{1, A_3, K}$.
@@ -620,7 +620,7 @@ Let $H$ and $K$ be groups, let $\phi \colon K \to \aut(H)$ be a homomorphism, an
 	Then $z = a^ib^jq^k$ for some $0 \leq i, j \leq 6$ and $1 \leq k \leq 2$.
 	Since $z$ commutes with $a$, 
     \[
-    	a^ib^jq^k = z = aza\inv = aa^ib^jq^ka\inv = a^{i+1}b^jq^ka\inv = a^{i+1}b^jq^ka^{-1}.
+    	a^ib^jq^k = z = aza\inv = aa^ib^jq^ka\inv = a^{i+1}b^jq^ka\inv = a^{i+1}b^jq^ka\inv.
     \]
     However, since $q$ does not centralize $\gen a$, this is a contradiction.
 	Hence, $Z(G_3) - (\gen a \times \gen b) = 1$, so $Z(G_3) = 1$.

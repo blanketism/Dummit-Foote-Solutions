@@ -1,11 +1,11 @@
 \subsection{Centralizers and Normalizers, Stabilizers and Kernels}
 
 \begin{exercise}{2.2.1}
-    Prove that $C_G(A)=\set{g\in G\mid g^{-1}ag=a\text{ for all }a\in A}.$
+    Prove that $C_G(A)=\set{g\in G\mid g\invag=a\text{ for all }a\in A}.$
 \end{exercise}
 
 \begin{sol}
-    $g \in C_G(A) \iff ga = ag$ for all $a \in A \iff g^{-1}ga = g^{-1}ag \iff a = g^{-1}ag$ for all $a \in A$.
+    $g \in C_G(A) \iff ga = ag$ for all $a \in A \iff g\invga = g\invag \iff a = g\invag$ for all $a \in A$.
 \end{sol}
 
 \begin{exercise}{2.2.2}
@@ -112,8 +112,8 @@
 \begin{exercise}{2.2.6}
     Let $H$ be a subgroup of the group $G.$
     \begin{subexercises}
-        \item Show that $H\le N_G(H).$ Give an example to show that this is not necessarily true if $H$ is not a subgroup.
-        \item Show that $H\le C_G(H)$ if and only if $H$ is abelian.
+        \item Show that $H\leq N_G(H).$ Give an example to show that this is not necessarily true if $H$ is not a subgroup.
+        \item Show that $H\leq C_G(H)$ if and only if $H$ is abelian.
     \end{subexercises}
 \end{exercise}
 
@@ -139,7 +139,7 @@
 \end{solenum}
 
 \begin{exercise}{2.2.7} 
-    Let $n\in\zbb$ with $n\ge 3.$ Prove the following:
+    Let $n\in\zbb$ with $n\geq 3.$ Prove the following:
     \begin{subexercises}
         \item $Z(D_{2n})=\set{1}$ if $n$ is odd.
         \item $Z(D_{2n})=\set{1,r^k}$ if $n=2k.$
@@ -186,7 +186,7 @@
 \end{sol}
 
 \begin{exercise}{2.2.9}
-    For any subgroup $H$ of $G$ and any nonempty subset $A$ of $G$ define $N_H(A)$ to be the set $\set{h \in H \mid hAh^{-1} = A}$.
+    For any subgroup $H$ of $G$ and any nonempty subset $A$ of $G$ define $N_H(A)$ to be the set $\set{h \in H \mid hAh\inv = A}$.
 	Show that $N_H(A) = N_G(A) \cap H$ and deduce that $N_H(A)$ is a subgroup of $H$ (note that $A$ need not be a subset of $H$).
 \end{exercise}
 
@@ -207,7 +207,7 @@
 \begin{exercise}{2.2.10}
     Let $H$ be a subgroup of order $2$ in $G$.
 	Show that $N_G(H) = C_G(H)$.
-	Deduce that if $N_G(H) = G$ then $H \le Z(G)$.
+	Deduce that if $N_G(H) = G$ then $H \leq Z(G)$.
 \end{exercise}
 
 \begin{sol}
@@ -227,7 +227,7 @@
 \end{sol}
 
 \begin{exercise}{2.2.11}
-    Prove that $Z(G)\le N_G(A)$ for any subset $A$ of $G$.
+    Prove that $Z(G)\leq N_G(A)$ for any subset $A$ of $G$.
 \end{exercise}
 
 \begin{sol}

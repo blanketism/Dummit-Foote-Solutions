@@ -2,7 +2,7 @@
 
 \begin{exercise}!{4.4.1}
 	Let $G$ be a group.
-	If $\sigma \in \aut(G)$ and $\varphi_g$ is conjugation by $g$, prove that $\sigma \varphi_g \sigma^{-1} = \varphi_{\sigma(g)}$.
+	If $\sigma \in \aut(G)$ and $\varphi_g$ is conjugation by $g$, prove that $\sigma \varphi_g \sigma\inv = \varphi_{\sigma(g)}$.
 	Deduce that $\inn(G) \trianglelefteq \aut(G)$. (The group $\aut(G)/\inn(G)$ is called the \emph{outer automorphism group} of $G$.)
 \end{exercise}
 
@@ -27,7 +27,7 @@
 
 \begin{exercise}{4.4.3}
 	Prove that under any automorphism of $D_8$, $r$ has at most $2$ possible images and $s$ has at most $4$ possible images (where $r$ and $s$ are the usual generators).
-	Deduce that $\abs{\aut(D_8)} \le 8$.
+	Deduce that $\abs{\aut(D_8)} \leq 8$.
 \end{exercise}
 
 \begin{sol}
@@ -39,12 +39,12 @@
 \end{sol}
 
 \begin{exercise}{4.4.4}
-	Use arguments similar to those in the preceding exercise to show that $\abs{\aut(Q_8)} \le 24$.
+	Use arguments similar to those in the preceding exercise to show that $\abs{\aut(Q_8)} \leq 24$.
 \end{exercise}
 
 \begin{sol}
 	Note that $\abs i = \abs j = \abs k = 4$, so any automorphism $\sigma$ of $Q_8$ must send $i$ to an element of order 4.
-	The only elements of order 4 in $Q_8$ are $i, j, k, i^{-1}, j^{-1}, k^{-1}$, so $i$ has at most 6 possible images under $\sigma$.
+	The only elements of order 4 in $Q_8$ are $i, j, k, i\inv, j\inv, k\inv$, so $i$ has at most 6 possible images under $\sigma$.
 	Moreover, since $ij = k$, we have $\sigma(i)\sigma(j) = \sigma(k)$.
 	Therefore, once we choose the image of $i$, there are 4 possible choices for the image of $j$ (since it cannot be the inverse of the image of $i$).
 	Hence, there are at most $6 \cdot 4 = 24$ possible automorphisms of $Q_8$, so that $\abs{\aut(Q_8)} \leq 24$.
@@ -99,7 +99,7 @@
 \end{sol}
 
 \begin{exercise}!{4.4.8}
-	Let $G$ be a group with subgroups $H$ and $K$ with $H \le K$.
+	Let $G$ be a group with subgroups $H$ and $K$ with $H \leq K$.
 	\begin{subexercises}
 		\item Prove that if $H$ is characteristic in $K$ and $K$ is normal in $G$, then $H$ is normal in $G$.
 		\item Prove that if $H$ is characteristic in $K$ and $K$ is characteristic in $G$, then $H$ is characteristic in $G$.
@@ -145,7 +145,7 @@
 
 \begin{exercise}{4.4.10}
 	Let $G$ be a group, let $A$ be an abelian normal subgroup of $G$, and write $\overline{G}=G/A$.
-	Show that $\overline{G}$ acts (on the left) by conjugation on $A$ by $\bar g \cdot a = gag^{-1}$, where $g$ is any representative of the coset $\bar g$ (in particular, show that this action is well defined).
+	Show that $\overline{G}$ acts (on the left) by conjugation on $A$ by $\bar g \cdot a = gag\inv$, where $g$ is any representative of the coset $\bar g$ (in particular, show that this action is well defined).
 	Give an explicit example to show that this action is not well defined if $A$ is non-abelian.
 \end{exercise}
 
@@ -193,7 +193,7 @@
 
 \begin{exercise}{4.4.12}
 	Let $G$ be a group of order $3825$.
-	Prove that if $H$ is a normal subgroup of order $17$ in $G$ then $H \le Z(G)$.
+	Prove that if $H$ is a normal subgroup of order $17$ in $G$ then $H \leq Z(G)$.
 \end{exercise}
 
 \begin{sol}
@@ -218,7 +218,7 @@
 
 \begin{exercise}{4.4.13}
 	Let $G$ be a group of order $203$.
-	Prove that if $H$ is a normal subgroup of order $7$ in $G$ then $H \le Z(G)$.
+	Prove that if $H$ is a normal subgroup of order $7$ in $G$ then $H \leq Z(G)$.
 	Deduce that $G$ is abelian in this case.
 \end{exercise}
 
@@ -232,7 +232,7 @@
 
 \begin{exercise}{4.4.14}
 	Let $G$ be a group of order $1575$.
-	Prove that if $H$ is a normal subgroup of order $9$ in $G$ then $H \le Z(G)$.
+	Prove that if $H$ is a normal subgroup of order $9$ in $G$ then $H \leq Z(G)$.
 \end{exercise}
 
 \begin{sol}
@@ -334,7 +334,7 @@
 
 \begin{exercise}!{4.4.18}
 	This exercise shows that for $n\neq 6$ every automorphism of $S_n$ is inner.
-	Fix an integer $n\ge 2$ with $n\neq 6$.
+	Fix an integer $n\geq 2$ with $n\neq 6$.
 	\begin{subexercises}
 		\item Prove that the automorphism group of a group $G$ permutes the conjugacy classes of $G$, i.e.\ for each $\sigma\in\aut(G)$ and each conjugacy class $\kcal$ of $G$, the set $\sigma(\kcal)$ is also a conjugacy class of $G$.
 		\item Let $\kcal$ be the conjugacy class of transpositions in $S_n$ and let $\kcal'$ be the conjugacy class of any element of order $2$ in $S_n$ that is not a transposition.
@@ -413,12 +413,12 @@
 \end{solenum}
 
 \begin{exercise}!{4.4.19}
-	This exercise shows that $\abs{\aut(S_6):\inn(S_6)}\le 2$ (Exercise 10 in Section 6.3 shows that equality holds by exhibiting an automorphism of $S_6$ that is not inner).
+	This exercise shows that $\abs{\aut(S_6):\inn(S_6)}\leq 2$ (Exercise 10 in Section 6.3 shows that equality holds by exhibiting an automorphism of $S_6$ that is not inner).
 	\begin{subexercises}
 		\item Let $\kcal$ be the conjugacy class of transpositions in $S_6$ and let $\kcal'$ be the conjugacy class of any element of order $2$ in $S_6$ that is not a transposition.
 		Prove that $\abs{\kcal}\neq\abs{\kcal'}$ unless $\kcal'$ is the conjugacy class of products of three disjoint transpositions.
 		Deduce that $\aut(S_6)$ has a subgroup of index at most $2$ which sends transpositions to transpositions.
-		\item Prove that $\abs{\aut(S_6):\inn(S_6)}\le 2$. (Follow the same steps as in (c) and (d) of the preceding exercise to show that any automorphism that sends transpositions to transpositions is inner.)
+		\item Prove that $\abs{\aut(S_6):\inn(S_6)}\leq 2$. (Follow the same steps as in (c) and (d) of the preceding exercise to show that any automorphism that sends transpositions to transpositions is inner.)
 	\end{subexercises}
 \end{exercise}
 
@@ -456,7 +456,7 @@
 		\item Prove that $J(P)$ is a characteristic subgroup of $P$.
 		\item For each of the following groups $P$, list all abelian subgroups $A$ of $P$ that satisfy $d(A)=m(P)$: $Q_8$, $D_8$, $D_{16}$, and $QD_{16}$ (where $QD_{16}$ is the quasidihedral group of order $16$ defined in \exref{2.5.11}). (Use the lattices of subgroups for these groups in Section 2.5.)
 		\item Show that $J(Q_8)=Q_8$, $J(D_8)=D_8$, $J(D_{16})=D_{16}$, and $J(QD_{16})$ is a dihedral subgroup of order $8$ in $QD_{16}$.
-		\item Prove that if $Q\le P$ and $J(P)$ is a subgroup of $Q$, then $J(P)=J(Q)$.
+		\item Prove that if $Q\leq P$ and $J(P)$ is a subgroup of $Q$, then $J(P)=J(Q)$.
 		Deduce that if $P$ is a subgroup (not necessarily normal) of the finite group $G$ and $J(P)$ is contained in some subgroup $Q$ of $P$ such that $Q \nsub G$, then $J(P) \nsub G$.
 	\end{subexercises}
 \end{exercise}
