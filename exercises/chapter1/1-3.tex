@@ -69,7 +69,7 @@
 \begin{solenum}
     \item
     \[
-        \begin{array}{*{2}{c|}}
+        \begin{array}{*{1}{c|}c}
             \text{Permutation} & \text{Order} \\
             \hline
             1 & 1 \\
@@ -82,7 +82,7 @@
     \]
     \item 
     \[
-        \begin{array}{*{2}{c|}}
+        \begin{array}{*{1}{c|}c}
             \text{Permutation} & \text{Order} \\
             \hline
             1 & 1 \\
@@ -92,7 +92,7 @@
             \cyc{2 3} & 2 \\
             \cyc{2 4} & 2
         \end{array}\enspace
-        \begin{array}{*{2}{c|}}
+        \begin{array}{*{1}{c|}c}
             \text{Permutation} & \text{Order} \\
             \hline
             \cyc{3 4} & 2 \\
@@ -102,7 +102,7 @@
             \cyc{1 3 4} & 3 \\
             \cyc{1 4 2} & 3
         \end{array}\enspace
-        \begin{array}{*{2}{c|}}
+        \begin{array}{*{1}{c|}c}
             \text{Permutation} & \text{Order} \\
             \hline
             \cyc{1 4 3} & 3 \\
@@ -112,7 +112,7 @@
             \cyc{1 2 4 3} & 4 \\
             \cyc{1 3 2 4} & 4
         \end{array}\enspace
-        \begin{array}{*{2}{c|}}
+        \begin{array}{*{1}{c|}c}
             \text{Permutation} & \text{Order} \\
             \hline
             \cyc{1 3 4 2} & 4 \\
@@ -296,6 +296,7 @@
 
 \begin{exercise}!{1.3.15}
     Prove that the order of an element in $S_n$ equals the least common multiple of the lengths of the cycles in its cycle decomposition.
+    \hint{Use \exref{1.3.10} and \exref{1.1.24}.}
 \end{exercise}
 
 \begin{sol}
@@ -314,8 +315,7 @@
     Show that if $n \ge m$ then the number of $m$-cycles in $S_n$ is given by
     \[
     	\frac{n(n-1)(n-2)\dots(n-m+1)}{m}.
-    \]
-    \hint{Count the number of ways of forming an $m$-cycle and divide by the number of representations of a particular $m$-cycle.}
+    \]\hint{Count the number of ways of forming an $m$-cycle and divide by the number of representations of a particular $m$-cycle.}
 \end{exercise}
 
 \begin{sol}
@@ -347,6 +347,7 @@
 
 \begin{exercise}{1.3.18}
     Find all numbers $n$ such that $S_5$ contains an element of order $n$.
+    \hint{Use \exref{1.3.15}.}
 \end{exercise}
 
 \begin{sol}
@@ -358,6 +359,7 @@
 
 \begin{exercise}{1.3.19}
     Find all numbers $n$ such that $S_7$ contains an element of order $n$.
+    \hint{Use \exref{1.3.15}.}
 \end{exercise}
 
 \begin{sol}

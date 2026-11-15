@@ -18,7 +18,7 @@ Let $F$ be a field and let $n \in \zp$.
 \begin{sol}
     By direct calculation, we obtain the following:
     \[
-        \begin{array}{*{7}{c|}}
+        \begin{array}{*{6}{c|}c}
             A & 
             \begin{pmatrix}
                 1 & 0 \\
@@ -51,7 +51,7 @@ Let $F$ be a field and let $n \in \zp$.
 \end{sol}
 
 \begin{exercise}{1.4.3}
-    Show that $\gl_2(\fbb_2)$ is nonabelian.
+    Show that $\gl_2(\fbb_2)$ is non-abelian.
 \end{exercise}
 
 \begin{sol}
@@ -82,7 +82,7 @@ Let $F$ be a field and let $n \in \zp$.
             0 & 1
         \end{pmatrix}.
     \]
-    Therefore, $\gl_2(\fbb_2)$ is nonabelian.
+    Therefore, $\gl_2(\fbb_2)$ is non-abelian.
 \end{sol}
 
 \begin{exercise}{1.4.4}
@@ -119,9 +119,7 @@ Let $F$ be a field and let $n \in \zp$.
 \begin{exercise}{1.4.7}
     Let $p$ be a prime.
 	Prove that the order of $\gl_2(\fbb_p)$ is $p^4 - p^3 - p^2 + p$.
-    
     \note{Do not just quote the order formula in this section.}
-
     \hint{Subtract the number of $2 \times 2$ matrices which are \emph{not} invertible from the total number of $2 \times 2$ matrices over $\fbb_p$.
 	You may use the fact that a $2 \times 2$ matrix is not invertible if and only if one row is a multiple of the other.}
 \end{exercise}
@@ -139,7 +137,7 @@ Let $F$ be a field and let $n \in \zp$.
 \end{sol}
 
 \begin{exercise}{1.4.8}
-    Show that $\gl_n(F)$ is nonabelian for any $n \geq 2$ and any $F$.
+    Show that $\gl_n(F)$ is non-abelian for any $n \geq 2$ and any $F$.
 \end{exercise}
 
 \begin{sol}
@@ -167,7 +165,7 @@ Let $F$ be a field and let $n \in \zp$.
         \end{pmatrix}.
     \]
     Note that $\det A = \det A' = \det B = \det B' = 1$, so $A', B' \in \gl_n(F)$.
-    Moreover, $(AB)_{11} = 2 \neq 1 = (BA)_{11}$, so $AB \neq BA$, whence $A'B' \neq B'A'$ and $\gl_n(F)$ is nonabelian.
+    Moreover, $(AB)_{11} = 2 \neq 1 = (BA)_{11}$, so $AB \neq BA$, whence $A'B' \neq B'A'$ and $\gl_n(F)$ is non-abelian.
 \end{sol}
 
 \begin{exercise}{1.4.9}
@@ -176,7 +174,7 @@ Let $F$ be a field and let $n \in \zp$.
 
 \begin{sol}
     Associate each $2 \times 2$ matrix $A$ with the linear map $T_A \colon \rbb^2 \to \rbb^2$ defined by $T_A(\mb x) = A \mb x$.
-    The map $A \mapsto T_A$ is clearly injective, and $T_{AB} = T_A \circ T_B$ for all $2 \times 2$ matrices $A$ and $B$.
+    The map $A \mapsto T_A$ can be shown to be injective, and $T_{AB} = T_A \circ T_B$ for all $2 \times 2$ matrices $A$ and $B$.
     Since composition of linear maps is associative, matrix multiplication is associative as well.
 \end{sol}
 
@@ -261,6 +259,10 @@ Let $F$ be a field and let $n \in \zp$.
     Since $I_2 \in H$, it follows that $H$ is a subgroup of $\gl_2(\rbb)$.
 \end{solenum}
 
+The next exercise introduces the \term{Heisenberg group} over the field $F$ and develops some of its basic properties.
+When $F = \rbb$ this group plays an important role in quantum mechanics and signal theory by giving a group theoretic interpretation (due to H. Weyl) of Heisenberg's Uncertainty Principle.
+Note also that the Heisenberg group may be defined more generally---for example, with entries in $\zbb$.
+
 \begin{exercise}{1.4.11}
     Let
     \[
@@ -292,7 +294,7 @@ Let $F$ be a field and let $n \in \zp$.
     be elements of $H(F)$.
     \begin{subexercises}
         \item Compute the matrix product $XY$ and deduce that $H(F)$ is closed under matrix multiplication.
-	    Exhibit explicit matrices such that $XY \neq YX$ (so that $H(F)$ is always nonabelian).
+	    Exhibit explicit matrices such that $XY \neq YX$ (so that $H(F)$ is always non-abelian).
         \item Find an explicit formula for the matrix inverse $X\inv$ and deduce that $H(F)$ is closed under inverses.
         \item Prove the associative law for $H(F)$ and deduce that $H(F)$ is a group of order $\abs{F}^3$. (Do not assume that matrix multiplication is associative.)
         \item Find the order of each element of the finite group $H(\intmod[2])$.
@@ -315,7 +317,7 @@ Let $F$ be a field and let $n \in \zp$.
     For ease of notation, we may start representing matrices as $3$-tuples, so $X = (a, b, c)$, $Y = (d, e, f)$, and $XY = (a + d, af + b + e, c + f)$.
 
     Consider $A = (1, 0, 0)$ and $B = (0, 0, 1)$.
-    Then $AB = (1, 1, 1) \neq (1, 0, 1) = BA$, so $H(F)$ is nonabelian.
+    Then $AB = (1, 1, 1) \neq (1, 0, 1) = BA$, so $H(F)$ is non-abelian.
     \item Suppose $(a, b, c)(x, y, z) = (0, 0, 0) = I_3$.
 	Then $(a + x, az + b + y, c + z) = (0, 0, 0)$ implies $x = -a$, $y = -b + ac$, and $z = -c$.
     Moreover, $(x, y, z)(a, b, c) = (0, 0, 0)$, so

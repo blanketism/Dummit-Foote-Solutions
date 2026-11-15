@@ -18,8 +18,7 @@
 
 \begin{exercise}{0.3.2}
     Prove that the distinct equivalence classes in $\intmod$ are precisely $\bar 0, \bar 1, \bar 2, \ldots, \bar{n - 1}$.
-
-    \hint{Use the Division Algorithm.}
+\hint{Use the Division Algorithm.}
 \end{exercise}
 
 \begin{sol}
@@ -38,17 +37,9 @@
 \end{sol}
 
 \begin{exercise}{0.3.3}
-    Prove that if
-    \[
-    	a = a_n 10^n + a_{n - 1}10^{n - 1} + \cdots + a_1 10 + a_0
-    \]
-    is any positive integer, then
-    \[
-    	a \equiv (a_n + a_{n - 1} + \cdots + a_1 + a_0) \pmod 9.
-    \]
-    \hint{Use the fact that $10 \equiv 1 \pmod 9$.}
-
-    \note{Note that this is the usual arithmetic rule that the remainder after division by 9 is the same as the sum of the decimal digits mod 9—in particular an integer is divisible by 9 if and only if the sum of its digits is divisible by 9.}
+    Prove that if $a = a_n 10^n + a_{n - 1}10^{n - 1} + \cdots + a_1 10 + a_0$ is any positive integer then $a \equiv a_n + a_{n - 1} + \cdots + a_1 + a_0 \pmod 9$.
+    \note{note that this is the usual arithmetic rule that the remainder after division by 9 is the same as the sum of the decimal digits mod 9---in particular an integer is divisible by 9 if and only if the sum of its digits is divisible by 9.}
+    \hint{note that $10 \equiv 1 \pmod 9$.}
 \end{exercise}
 
 \begin{sol}
@@ -89,7 +80,7 @@
 \end{sol}
 
 \begin{exercise}{0.3.6}
-    Prove that the square of the elements in $\intmod[4]$ are just $\bar 0$ and $\bar 1$.
+    Prove that the squares of the elements in $\intmod[4]$ are just $\bar 0$ and $\bar 1$.
 \end{exercise}
 
 \begin{sol}
@@ -98,9 +89,7 @@
 \end{sol}
 
 \begin{exercise}{0.3.7}
-    Prove that for any integers $a$ and $b$ that $a^2 + b^2$ never leaves a remainder of $3$ when divided by $4$.
-
-    \hint{Use \exref{0.3.6}.}
+    Prove for any integers $a$ and $b$ that $a^2 + b^2$ never leaves a remainder of $3$ when divided by $4$ (use the previous exercise).
 \end{exercise}
 
 \begin{sol}
@@ -109,8 +98,7 @@
 
 \begin{exercise}{0.3.8}
     Prove that the equation $a^2 + b^2 = 3c^2$ has no solutions in nonzero integers $a, b$ and $c$.
-    
-    \hint{Consider the equation $\pmod{4}$ as in the previous two exercises and show that $a, b$ and $c$ would all have to be divisible by $2$.
+    \hint{Consider the equation mod $4$ as in the previous two exercises and show that $a, b$ and $c$ would all have to be divisible by $2$.
 	Then each of $a^2, b^2$ and $c^2$ has a factor of $4$ and by dividing through by $4$ show that there would be a smaller set of solutions to the original equation.
 	Iterate to reach a contradiction.}
 \end{exercise}
@@ -135,7 +123,7 @@
 \end{sol}
 
 \begin{exercise}!{0.3.10}
-    Prove that the number of elements of $\units$ is $\phi(n)$, where $\phi$ denotes the Euler $\phi$-function.
+    Prove that the number of elements of $\units$ is $\phi(n)$ where $\phi$ denotes the Euler $\phi$-function.
 \end{exercise}
 
 \begin{sol}
@@ -156,7 +144,7 @@
 \end{sol}
 
 \begin{exercise}{0.3.12}
-    Let $n \in \zbb, n > 1$ and let $a \in \zbb$ with $1 \leq a \leq n$.
+    Let $n \in \zbb$, $n > 1$, and let $a \in \zbb$ with $1 \leq a \leq n$.
 	Prove if $a$ and $n$ are not relatively prime, there exists an integer $b$ with $1 \leq b < n$ such that $ab \equiv 0 \pmod n$ and deduce that there cannot be an integer $c$ such that $ac \equiv 1 \pmod n$.
 \end{exercise}
 
@@ -172,10 +160,9 @@
 \end{sol}
 
 \begin{exercise}{0.3.13}
-    Let $n \in \zbb, n > 1$ and let $a \in \zbb$ with $1 \leq a \leq n$.
+    Let $n \in \zbb$, $n > 1$, and let $a \in \zbb$ with $1 \leq a \leq n$.
 	Prove that if $a$ and $n$ are relatively prime then there is an integer $c$ such that $ac \equiv 1 \pmod n$.
-
-    \hint{Use the fact that the GCD of two integers is a $\zbb$-linear combination of the integers.}
+    \hint{Use the fact that the g.c.d of two integers is a $\zbb$-linear combination of the integers.}
 \end{exercise}
 
 \begin{sol}
@@ -200,10 +187,11 @@
 \begin{exercise}{0.3.15}
     For each of the following pairs of integers $a$ and $n$, show that $a$ is relatively prime to $n$ and determine the multiplicative inverse of $\bar a$ in $\intmod$.
     \begin{subexercises}
-        \item $a = 13, n = 20$
-        \item $a = 69, n = 89$
-        \item $a = 1891, n = 3797$
-        \item $a = 6003722857, n = 77695236973$
+        \item $a = 13, n = 20$.
+        \item $a = 69, n = 89$.
+        \item $a = 1891, n = 3797$.
+        \item $a = 6003722857, n = 77695236973$.
+        \hint{The Euclidean Algorithm requires only $3$ steps for these integers.}
     \end{subexercises}
 \end{exercise}
 

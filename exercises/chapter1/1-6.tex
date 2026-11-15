@@ -58,7 +58,7 @@ Let $G$ and $H$ be groups.
 \end{exercise}
 
 \begin{sol}
-    Note that $\phi$ is bijective, hence $\phi\inv$ exists and is also an isomorphism.
+    \leavevmode
 
     \rightimp Suppose that $G$ is abelian.
     Given $h_1, h_2 \in H$, there exist $g_1, g_2 \in G$ such that $\phi(g_1) = h_1$ and $\phi(g_2) = h_2$.
@@ -69,16 +69,14 @@ Let $G$ and $H$ be groups.
     so that $H$ is abelian.
 
     \leftimp Suppose that $H$ is abelian.
-    Given $g_1, g_2 \in G$, there exist $h_1, h_2 \in H$ such that $\phi\inv(h_1) = g_1$ and $\phi\inv(h_2) = g_2$.
-    Then
+    Then for any $g_1, g_2 \in G$, we have
     \[
-        g_1g_2 = \phi\inv(h_1)\phi\inv(h_2) = \phi\inv(h_1h_2) = \phi\inv(h_2h_1) = \phi\inv(h_2)\phi\inv(h_1) = g_2g_1,
+        \phi(g_1g_2) = \phi(g_1)\phi(g_2) = \phi(g_2)\phi(g_1) = \phi(g_2g_1),
     \]
-    so that $G$ is abelian.
+    and injectivity of $\phi$ implies $g_1g_2 = g_2g_1$, so $G$ is abelian.
     
     Let $\phi \colon G \to H$ be a homomorphism.
-	In the \rightimp direction, observe that the only property of $\phi$ used was its surjectivity to guarantee the existence of $g_1$ and $g_2$ such that $\phi(g_1) = h_1$ and $\phi(g_2) = h_2$.
-	Hence, if $\phi$ is surjective, then $H$ is abelian whenever $G$ is abelian.
+	In the \rightimp direction, observe that the only additional property of $\phi$ used was its surjectivity, so it is sufficient for $\phi$ to be surjective.
 \end{sol}
 
 \begin{exercise}{1.6.4}
@@ -86,7 +84,8 @@ Let $G$ and $H$ be groups.
 \end{exercise}
 
 \begin{sol}
-    Note that $i \in \cbb - \set{0}$ has order 4, but there is no element in $\rbb - \set{0}$ that has order 4.
+    By \exref{1.6.2}, isomorphisms preserve the number of elements of each order.
+    The element $i \in \cbb - \set{0}$ has order 4, and if $x \in \rbb - \set{0}$ is such that $x^4 = 1$, then $x = \pm 1$, which has order 1 or 2.
 \end{sol}
 
 \begin{exercise}{1.6.5}
@@ -94,26 +93,24 @@ Let $G$ and $H$ be groups.
 \end{exercise}
 
 \begin{sol}
-    $\rbb$ is uncountable, while $\qbb$ is countable.
-	But bijections preserve cardinality.
+    $\rbb$ is uncountable, while $\qbb$ is countable, so no such isomorphism can exist.
 \end{sol}
 
 \begin{exercise}{1.6.6}
     Prove that the additive groups $\zbb$ and $\qbb$ are not isomorphic.
 
-    \remark{In fact, no nontrivial homomorphism exists from $\zbb$ to $\qbb$.}
+    \remark{In fact, no nontrivial homomorphism exists from $\qbb$ to $\zbb$.}
 \end{exercise}
 
 \begin{sol}
     Suppose that $\phi \colon \qbb \to \zbb$ is an isomorphism.
-    Injectivity of $\phi$ and $1 \neq 0$ implies $\phi(1) \neq 0$.
-    Put $\phi(1) = r \in \zbb - \set 0$.
-    Then
+    Because $\phi(0) = 0$ by \exref{1.6.1}, injectivity of $\phi$ gives $r = \phi(1) \neq 0$.
+    Fix $n > \abs{r}$.
+    By \exref{1.6.1}(a) in additive notation, we have
     \[
-        r = \phi(1) = \phi\underbrace{\left(\frac{1}{n} + \frac{1}{n} + \cdots + \frac{1}{n}\right)}_{n\text{ times}} = \underbrace{\phi\left(\frac{1}{n}\right) + \phi\left(\frac{1}{n}\right) + \cdots + \phi\left(\frac{1}{n}\right)}_{n\text{ times}} = n\phi\left(\frac{1}{n}\right),
+        r = \phi(1) = \phi\left(n \cdot \frac{1}{n}\right) = n \phi\left(\frac{1}{n}\right),
     \]
-    so $\phi(1/n) = r/n \in \zbb$, contradicting that $r/n \notin \zbb$ for $n > \abs{r}$.
-    Hence, $\phi$ cannot be an isomorphism.
+    and thus $\phi(\frac{1}{n}) = \frac{r}{n} \in \zbb$, contradicting the choice of $n$.
 \end{sol}
 
 \begin{exercise}{1.6.7}
@@ -121,7 +118,7 @@ Let $G$ and $H$ be groups.
 \end{exercise}
 
 \begin{sol}
-    $D_8$ has only 2 elements of order 4, while $Q_8$ has 6 elements of order 4.
+    The tables in \exref{1.2.1} and \exref{1.5.1} give 2 elements of order 4 in $D_8$ and 6 elements of order 4 in $Q_8$, so they cannot be isomorphic by \exref{1.6.2}.
 \end{sol}
 
 \begin{exercise}{1.6.8}
@@ -137,7 +134,7 @@ Let $G$ and $H$ be groups.
 \end{exercise}
 
 \begin{sol}
-    $D_{24}$ has elements of order 12, but $S_4$ does not.
+    By \exref{1.3.15}, $S_4$ has no elements of order 12, while $r \in D_{24}$ has order 12, and thus they cannot be isomorphic by \exref{1.6.2}.
 \end{sol}
 
 \begin{exercise}{1.6.10}
@@ -148,38 +145,37 @@ Let $G$ and $H$ be groups.
     \]
     and prove the following:
     \begin{subexercises}
-        \item Prove that $\phi$ is well-defined, that is, if $\sigma$ is a permutation of $\Delta$ then $\theta \circ \sigma \circ \theta^{-1}$ is a permutation of $\Omega$.
-        \item Prove that $\phi$ is a bijection from $S_\Delta$ onto $S_\Omega$ by finding a two-sided inverse for $\phi$.
-        \item Prove that $\phi$ is a homomorphism, that is, $\phi(\sigma \circ \tau) = \phi(\sigma) \circ \phi(\tau)$.
+        \item $\phi$ is well defined, that is, if $\sigma$ is a permutation of $\Delta$ then $\theta \circ \sigma \circ \theta^{-1}$ is a permutation of $\Omega$.
+        \item $\phi$ is a bijection from $S_\Delta$ onto $S_\Omega$.
+        \hint{Find a $2$-sided inverse for $\phi$.}
+        \item $\phi$ is a homomorphism, that is, $\phi(\sigma \circ \tau) = \phi(\sigma) \circ \phi(\tau)$.
     \end{subexercises}
     \note{Note the similarity to the change of basis or similarity transformations for matrices (we shall see the connections between these later in the text)}.
 \end{exercise}
 
 \begin{solenum}
-    \item Since $\theta \colon \Delta \to \Omega$ and $\theta\inv \colon \Omega \to \Delta$ are both bijections with $\sigma$ a bijection, it follows that their composition is a bijection.
-	Moreover, $\theta \circ \sigma \circ \theta^{-1}$ is a permutation of $\Omega$, so that $\phi$ is well-defined.
-    \item Consider the mapping 
+    \item The map $\theta \circ \sigma \circ \theta\inv$ is a composition of bijections that takes $\Omega \to \Delta \to \Delta \to \Omega$, and hence is a permutation of $\Omega$, so $\phi$ is well defined.
+    \item Define the mapping 
     \[
-    	\psi \colon S_\Omega \to S_\Delta\quad \text{by} \quad \psi(\tau) = \theta\inv \circ \tau \circ \theta \quad \text{for all } \tau \in S_\Omega
+    	\psi \colon S_\Omega \to S_\Delta\quad \text{by} \quad \psi(\tau) = \theta\inv \circ \tau \circ \theta \quad \text{for all } \tau \in S_\Omega.
     \]
-    By the above discussion, $\psi$ is well-defined.
+    The map $\theta\inv \circ \tau \circ \theta$ is a composition of bijections that takes $\Delta \to \Omega \to \Omega \to \Delta$, and hence is a permutation of $\Delta$, so $\psi$ is well defined.
 	For any $\sigma \in S_\Delta$, we have
     \[
-    	\psi(\phi(\sigma)) = \theta\inv \circ (\theta \circ \sigma \circ \theta\inv) \circ \theta = \id_{S_\Delta} \circ \sigma \circ \id_{S_\Delta} = \sigma
+    	\psi(\phi(\sigma)) = \theta\inv \circ (\theta \circ \sigma \circ \theta\inv) \circ \theta = 1_\Delta \circ \sigma \circ 1_\Delta = \sigma,
     \]
     and for any $\tau \in S_\Omega$, we have
     \[
-    	\phi(\psi(\tau)) = \theta \circ (\theta\inv \circ \tau \circ \theta) \circ \theta\inv = \id_{S_\Omega} \circ \tau \circ \id_{S_\Omega} = \tau
+    	\phi(\psi(\tau)) = \theta \circ (\theta\inv \circ \tau \circ \theta) \circ \theta\inv = 1_\Omega \circ \tau \circ 1_\Omega = \tau,
     \]
-    so that $\psi$ is a two-sided inverse for $\phi$.
+    wherefore $\psi$ is a two-sided inverse for $\phi$.
 	Hence, $\phi$ is a bijection from $S_\Delta$ onto $S_\Omega$.
     \item Let $\sigma, \tau \in S_\Delta$.
 	Then
     \[
-    	\phi(\sigma \circ \tau) = \theta \circ (\sigma \circ \tau) \circ \theta\inv = (\theta \circ \sigma) \circ (\tau \circ \theta\inv) = (\theta \circ \sigma \circ \theta\inv) \circ (\theta \circ \tau \circ \theta\inv) = \phi(\sigma) \circ \phi(\tau)
+    	\phi(\sigma \circ \tau) = \theta \circ (\sigma \circ \tau) \circ \theta\inv = (\theta \circ \sigma \circ \theta\inv) \circ (\theta \circ \tau \circ \theta\inv) = \phi(\sigma) \circ \phi(\tau).
     \]
-    so that $\phi$ is a homomorphism.
-	By the above, $\phi$ is an isomorphism, and hence $S_\Delta \cong S_\Omega$.
+    Therefore, $\phi$ is a homomorphism, whence it is an isomorphism, so $S_\Delta \cong S_\Omega$.
 \end{solenum}
 
 \begin{exercise}{1.6.11}
@@ -188,17 +184,16 @@ Let $G$ and $H$ be groups.
 \end{exercise}
 
 \begin{sol}
-    The mapping
+    Consider the map $\phi \colon A \times B \to B \times A$ given by
     \[
-    	\phi \colon A \times B \to B \times A \quad \text{given by} \quad (a, b) \mapsto (b, a)
+    	\phi((a, b)) = (b, a) \quad \text{for all } a \in A, b \in B.
     \]
-    for all $a \in A$ and $b \in B$ is clearly bijective.
-	Moreover, for any $(a_1, b_1), (a_2, b_2) \in A \times B$, we have
+    The map $(b, a) \mapsto (a, b)$ is the two-sided inverse of $\phi$, so $\phi$ is bijective.
+	Moreover, for all $(a_1, b_1), (a_2, b_2) \in A \times B$, we have
     \[
-    	\phi((a_1, b_1)(a_2, b_2)) = \phi((a_1a_2, b_1b_2)) = (b_1b_2, a_1a_2) = (b_1, a_1)(b_2, a_2) = \phi(a_1, b_1)\phi(a_2, b_2)
+    	\phi((a_1, b_1)(a_2, b_2)) = \phi((a_1a_2, b_1b_2)) = (b_1b_2, a_1a_2) = (b_1, a_1)(b_2, a_2) = \phi((a_1, b_1))\phi((a_2, b_2)).
     \]
-    so that $\phi$ is a homomorphism.
-	Therefore, $\phi$ is an isomorphism and $A \times B \cong B \times A$.
+    Therefore, $\phi$ is a homomorphism, and hence an isomorphism, so $A \times B \cong B \times A$.
 \end{sol}
 
 \begin{exercise}{1.6.12}
@@ -207,117 +202,88 @@ Let $G$ and $H$ be groups.
 \end{exercise}
 
 \begin{sol}
-    Consider the mapping
+    Consider the map $\phi \colon G \times C \to A \times H$ given by
     \[
-    	\phi \colon G \times C \to A \times H \quad \text{by} \quad ((a, b), c) \mapsto (a, (b, c))
+    	\phi(((a, b), c)) = (a, (b, c)) \quad \text{for all } a \in A, b \in B, c \in C.
     \]
-    for all $a \in A$, $b \in B$, and $c \in C$.
-	The proof is similar to the previous exercise and is omitted.
-    We conclude that $\phi$ is an isomorphism and $G \times C \cong A \times H$.
+    The map $(a, (b, c)) \mapsto ((a, b), c)$ is the two-sided inverse of $\phi$, so $\phi$ is bijective.
+	As in \exref{1.6.11}, $\phi$ is a homomorphism, and hence an isomorphism, so $G \times C \cong A \times H$.
 \end{sol}
 
-\begin{exercise}!{1.6.13}
+\begin{exercise}![Image]{1.6.13}
     Let $G$ and $H$ be groups and let $\phi \colon G \to H$ be a homomorphism.
-	Prove that the image of $\phi$, $\phi(G)$, is a subgroup of $H$.
+	Prove that the \term{image} of $\phi$, $\phi(G)$, is a subgroup of $H$ (cf. \exref{1.1.26}).
 	Prove that if $\phi$ is injective then $G \cong \phi(G)$.
 \end{exercise}
 
 \begin{sol}
-    Observe that $1_H \in \phi(G)$ since $\phi(1_G) = 1_H$, so that $\phi(G)$ is nonempty.
-	To show closure, let $h_1, h_2 \in \phi(G)$.
-	Then there exist $g_1, g_2 \in G$ such that $\phi(g_1) = h_1$ and $\phi(g_2) = h_2$.
-	Then
+    Let $g_1, g_2 \in G$.
+    By \exref{1.6.1}(b), $\phi(1_G) = 1_H$, so $1_H \in \phi(G)$, and
     \[
-    	h_1h_2 = \phi(g_1)\phi(g_2) = \phi(g_1g_2) \in \phi(G)
+        \phi(g_1g_2) = \phi(g_1)\phi(g_2) \in \phi(G), \quad \phi(g_1\inv) = \phi(g_1)\inv \in \phi(G),
     \]
-    so that $h_1h_2 \in \phi(G)$.
-	Finally,
-    \[
-    	h_1\inv = \phi(g_1)\inv = \phi(g_1\inv) \in \phi(G)
-    \]
-    so that $h_1\inv \in \phi(G)$.
-	Therefore, $\phi(G)$ is a subgroup of $H$.
+    showing that $\phi(G)$ is a subgroup of $H$.
 
-    Suppose $\phi$ is injective.
-	Then the mapping
-    \[
-    	\psi \colon G \to \phi(G) \quad \text{by} \quad g \mapsto \phi(g)
-    \]
-    is well-defined.
-	For any $g_1, g_2 \in G$,
-    \[
-    	\psi(g_1g_2) = \phi(g_1g_2) = \phi(g_1)\phi(g_2) = \psi(g_1)\psi(g_2)
-    \]
-    so that $\psi$ is a homomorphism.
-	Moreover, if $\psi(g_1) = \psi(g_2)$, then $\phi(g_1) = \phi(g_2)$, and since $\phi$ is injective, $g_1 = g_2$.
-	Hence, $\psi$ is injective.
-	For any $h \in \phi(G)$, there exists $g \in G$ such that $\phi(g) = h$, and hence $\psi(g) = h$.
-	Therefore, $\psi$ is surjective, hence $\psi$ is an isomorphism and $G \cong \phi(G)$.
+    Now suppose $\phi$ is injective.
+    The map $\psi \colon G \to \phi(G)$ defined by $g \mapsto \phi(g)$ is injective since $\phi$ is injective, surjective by definition of $\phi(G)$, and a homomorphism since $\phi$ is a homomorphism, so $G \cong \phi(G)$.
 \end{sol}
 
-\begin{exercise}!{1.6.14}
+\begin{exercise}![Kernel]{1.6.14}
     Let $G$ and $H$ be groups and let $\phi \colon G \to H$ be a homomorphism.
-	Define the \textbf{kernel} of $\phi$ to be $\set{ g \in G \mid \phi(g) = 1_H }$ (so the kernel is the set of elements in $G$ which map to the identity of $H$, i.e., is the fiber over the identity of $H$).
-	Prove that the kernel of $\phi$ is a subgroup of $G$.
+	Define the \term{kernel} of $\phi$ to be $\set{g \in G \mid \phi(g) = 1_H }$ (so the kernel is the set of elements in $G$ which map to the identity of $H$, i.e., is the fiber over the identity of $H$).
+	Prove that the kernel of $\phi$ is a subgroup (cf. \exref{1.1.26}) of $G$.
 	Prove that $\phi$ is injective if and only if the kernel of $\phi$ is the identity subgroup of $G$.
 \end{exercise}
 
 \begin{sol}
     Denote the kernel of $\phi$ by $\ker\phi$.
-	Since $\phi(1_G) = 1_H$, $\ker\phi$ is nonempty.
-    Let $g_1, g_2 \in \ker\phi$.
-	Then
+	By \exref{1.6.1}(b), $\phi(1_G) = 1_H$, so $1_G \in \ker\phi$, and for $g_1, g_2 \in \ker\phi$, we have
     \[
-    	\phi(g_1g_2) = \phi(g_1)\phi(g_2) = 1_H1_H = 1_H
+        \phi(g_1g_2) = \phi(g_1)\phi(g_2) = 1_H \cdot 1_H = 1_H, \quad \phi(g_1\inv) = \phi(g_1)\inv = 1_H\inv = 1_H,
     \]
-    so that $g_1g_2 \in \ker\phi$.
-	Finally,
+    so $g_1g_2, g_1\inv \in \ker\phi$, and thus $\ker\phi$ is a subgroup of $G$.
+
+    \rightimp Suppose $\phi$ is injective, and let $g \in \ker\phi$.
+    By definition, $\phi(g) = 1_H = \phi(1_G)$, and injectivity of $\phi$ gives $g = 1_G$, so $\ker\phi = 1$.
+
+    \leftimp Suppose $\ker\phi = 1$, and let $g_1, g_2 \in G$ such that $\phi(g_1) = \phi(g_2)$.
+    By \exref{1.6.1}(b), we have
     \[
-    	\phi(g_1\inv) = \phi(g_1)\inv = 1_H\inv = 1_H
+        \phi(g_1g_2\inv) = \phi(g_1)\phi(g_2\inv) = \phi(g_1)\phi(g_2)\inv = 1_H,
     \]
-    so that $g_1\inv \in \ker\phi$.
-	Therefore, $\ker\phi$ is a subgroup of $G$.
-
-    \rightimp If $\phi$ is injective, then for $g \in \ker\phi$, we have $\phi(g) = 1_H = \phi(1_G)$.
-	Then $g = 1_G$, so that $\ker\phi = \set{1_G}$.
-
-    \leftimp If $\ker\phi = \set{1_G}$, then for $g_1, g_2 \in G$, if $\phi(g_1) = \phi(g_2)$, we have $\phi(g_1)\phi(g_2)\inv = 1_H$, so $g_1g_2\inv \in \ker\phi$.
-	Hence, $g_1g_2\inv = 1_G$, and thus $g_1 = g_2$.
-	Therefore, $\phi$ is injective.
+    so $g_1g_2\inv \in \ker\phi$.
+    Then $g_1g_2\inv = 1_G$, so $g_1 = g_2$, and hence $\phi$ is injective.
 \end{sol}
 
 \begin{exercise}{1.6.15}
     Define a map $\pi \colon \rbb^2 \to \rbb$ by $\pi((x,y)) = x$.
-	Prove that $\pi$ is a homomorphism and find the kernel of $\pi$.
+	Prove that $\pi$ is a homomorphism and find the kernel of $\pi$ (cf. \exref{1.6.14}).
 \end{exercise}
 
 \begin{sol}
     Let $(x_1, y_1), (x_2, y_2) \in \rbb^2$.
 	Then
     \[
-    	\pi((x_1, y_1) + (x_2, y_2)) = \pi((x_1 + x_2, y_1 + y_2)) = x_1 + x_2 = \pi((x_1, y_1)) + \pi((x_2, y_2))
+    	\pi((x_1, y_1) + (x_2, y_2)) = \pi((x_1 + x_2, y_1 + y_2)) = x_1 + x_2 = \pi((x_1, y_1)) + \pi((x_2, y_2)),
     \]
-    so that $\pi$ is a homomorphism.
-	Moreover, if $(x, y) \in \ker(\pi)$, then $\pi((x, y)) = x = 0$.
-	Hence,
+    so $\pi$ is a homomorphism.
+    Moreover, $(x, y) \in \ker\pi$ if and only if $\pi((x, y)) = x = 0$, so
     \[
-    	\ker(\pi) = \set{(0, y) \mid y \in \rbb} \qedhere
+        \ker\pi = \set{(0, y) \mid y \in \rbb}. \qedhere
     \]
 \end{sol}
 
 \begin{exercise}{1.6.16}
     Let $A$ and $B$ be groups and let $G$ be their direct product, $A \times B$.
-	Prove that the maps $\pi_1 \colon G \to A$ and $\pi_2 \colon G \to B$ defined by $\pi_1((a,b)) = a$ and $\pi_2((a,b)) = b$ are homomorphisms and find their kernels.
+	Prove that the maps $\pi_1 \colon G \to A$ and $\pi_2 \colon G \to B$ defined by $\pi_1((a,b)) = a$ and $\pi_2((a,b)) = b$ are homomorphisms and find their kernels (cf. \exref{1.6.14}).
 \end{exercise}
 
 \begin{sol}
-    The proof is similar to the previous exercise and is omitted.
-    We conclude that $\pi_1$ and $\pi_2$ are homomorphisms.
-	Moreover, if $(a, b) \in \ker(\pi_1)$, then $\pi_1((a, b)) = a = 1_A$.
-	If $(a, b) \in \ker(\pi_2)$, then $\pi_2((a, b)) = b = 1_B$.
-	Hence,
+    As in \exref{1.6.15}, $\pi_1$ and $\pi_2$ are homomorphisms.
+	Moreover, $(a, b) \in \ker\pi_1$ if and only if $\pi_1((a, b)) = a = 1_A$, and $(a, b) \in \ker\pi_2$ if and only if $\pi_2((a, b)) = b = 1_B$.
+    Therefore,
     \[
-    	\ker(\pi_1) = \set{(1_A, b) \mid b \in B}, \quad \text{and} \quad \ker(\pi_2) = \set{(a, 1_B) \mid a \in A} \qedhere
+        \ker\pi_1 = \set{(1_A, b) \mid b \in B}, \quad \ker\pi_2 = \set{(a, 1_B) \mid a \in A}. \qedhere
     \]
 \end{sol}
 
@@ -326,8 +292,10 @@ Let $G$ and $H$ be groups.
 	Prove that the map from $G$ to itself defined by $g \mapsto g^{-1}$ is a homomorphism if and only if $G$ is abelian.
 \end{exercise}
 
-\begin{soliff}
-    \rightimp Suppose $\phi \colon g \mapsto g\inv$ is a homomorphism.
+\begin{sol}
+    Let $\phi \colon G \to G$ be defined by $\phi(g) = g\inv$.
+
+    \rightimp Suppose $\phi$ is a homomorphism.
 	Then for $g, h \in G$, we have
     \[
         gh = (h\inv g\inv)\inv = \phi(h\inv g\inv) = \phi(h\inv)\phi(g\inv) = hg,
@@ -340,7 +308,7 @@ Let $G$ and $H$ be groups.
     	\phi(gh) = (gh)\inv = h\inv g\inv = g\inv h\inv = \phi(g)\phi(h),
     \]
     so that $\phi$ is a homomorphism.
-\end{soliff}
+\end{sol}
 
 \begin{exercise}{1.6.18}
     Let $G$ be any group.
@@ -348,7 +316,11 @@ Let $G$ and $H$ be groups.
 \end{exercise}
 
 \begin{sol}
-    The proof is similar to \exref{1.6.17}, hence we omit the details.
+    Let $\phi \colon G \to G$ be defined by $\phi(g) = g^2$.
+    Then for all $g, h \in G$, we have
+    \[
+        \phi(gh) = \phi(g)\phi(h) \iff (gh)^2 = g^2 h^2 \iff hg = gh. \qedhere
+    \]
 \end{sol}
 
 \begin{exercise}{1.6.19}
@@ -357,38 +329,31 @@ Let $G$ and $H$ be groups.
 \end{exercise}
 
 \begin{sol}
-    Since $G \subseteq \cbb$, $G$ is abelian.
-	Let $\phi \colon z \to z^k$.
-	Hence, for any $z, w \in G$, we have
+    Define the map $\phi \colon G \to G$ by $\phi(z) = z^k$.
+    Since $G \subseteq \cbb$, $G$ is abelian, so for any $z, w \in G$,
     \[
-    	\phi(zw) = (zw)^k = z^kw^k = \phi(z)\phi(w)
+    	\phi(zw) = (zw)^k = z^kw^k = \phi(z)\phi(w),
     \]
-    so that $\phi$ is a homomorphism.
-	To show surjectivity, let $w \in G$ such that $w^n = 1$ for some $n \in \zp$.
-	Then there exists $z \in \cbb$ such that $z^k = w$.
-    Then
-    \[
-        z^{nk} = (z^k)^n = w^n = 1
-    \]
-    so that $z \in G$ and $\phi(z) = z^k = w$. Hence, $\phi$ is surjective.
-	Finally, any $z = e^{2\pi i/k} \in G$ is such that $\phi(z) = z^k = 1$ with $z \neq 1$ since $k > 1$.
-	Hence, $\phi$ is not injective and thus not an isomorphism.
+    and hence $\phi$ is a homomorphism.
+	To show surjectivity, let $w \in G$ with $w^n = 1$ for some $n \in \zp$.
+    Then there exists $z \in \cbb$ such that $z^k = w$, so $z^{nk} = (z^k)^n = w^n = 1$ and hence $z \in G$.
+    Moreover, $\phi(z) = z^k = w$, so $\phi$ is surjective.
+    Finally, $u = e^{2\pi i/k} \in G$ is such that $\phi(u) = u^k = 1$ with $u \neq 1$ since $k > 1$, so $\phi$ is not injective, and therefore not an isomorphism.
 \end{sol}
 
-\begin{exercise}!{1.6.20}
+\begin{exercise}![The Automorphism Group]{1.6.20}
     Let $G$ be a group and let $\aut(G)$ be the set of all isomorphisms from $G$ onto $G$.
-	Prove that $\aut(G)$ is a group under function composition (called the \textbf{automorphism group} of $G$ and the elements of $\aut(G)$ are called \textbf{automorphisms} of $G$).
+	Prove that $\aut(G)$ is a group under function composition (called the \term{automorphism group} of $G$ and the elements of $\aut(G)$ are called \term{automorphisms} of $G$).
 \end{exercise}
 
 \begin{sol}
     Recall that function composition is associative.
-    Observe that $\aut(G)$ contains the identity map $\id \colon G \to G$ defined by $\id(g) = g$ for all $g \in G$.
-    Also recall that the composition of two bijections is a bijection. Then for any $\phi, \psi \in G$ and $g, h \in G$, we have
+    Observe that $\aut(G)$ contains the identity map $1 \colon G \to G$ defined by $1(g) = g$ for all $g \in G$.
+    For any $\phi, \psi \in \aut(G)$ and $g, h \in G$, we have
     \[
         (\phi \circ \psi)(gh) = \phi(\psi(gh)) = \phi(\psi(g)\psi(h)) = \phi(\psi(g))\phi(\psi(h)) = (\phi \circ \psi)(g)(\phi \circ \psi)(h),
     \]
-    so $\phi \circ \psi$ is a homomorphism, and $\psi \circ \phi \in \aut(G)$.
-    Then $\aut(G)$ is closed under function composition.
+    so $\phi \circ \psi$ is a bijective homomorphism, and hence $\aut(G)$ is closed under composition.
     Finally, for any $\phi \in \aut(G)$, $\phi\inv$ exists and is also a bijection. 
     Then for any $g, h \in G$, we have
     \[
@@ -399,7 +364,7 @@ Let $G$ and $H$ be groups.
 \end{sol}
 
 \begin{exercise}{1.6.21}
-    Prove that for each fixed nonzero $k \in \qbb$ the map from $\qbb$ to itself defined by $q \mapsto kq$ is an automorphism of $\qbb$.
+    Prove that for each fixed nonzero $k \in \qbb$ the map from $\qbb$ to itself defined by $q \mapsto kq$ is an automorphism of $\qbb$ (cf. \exref{1.6.20}).
 \end{exercise}
 
 \begin{sol}
@@ -409,7 +374,7 @@ Let $G$ and $H$ be groups.
     	\phi(p + q) = k(p + q) = kp + kq = \phi(p) + \phi(q),
     \]
     so that $\phi$ is a homomorphism.
-	Bijectivity is clear, hence $\phi \in \aut(\qbb)$.
+	The map $q \mapsto \frac{q}{k}$ is the two-sided inverse of $\phi$, so $\phi \in \aut(\qbb)$.
 \end{sol}
 
 \begin{exercise}{1.6.22}
@@ -422,76 +387,55 @@ Let $G$ and $H$ be groups.
     Let $\phi \colon A \to A$ be defined by $\phi(a) = a^k$ for all $a \in A$.
 	For any $a_1, a_2 \in A$, we have
     \[
-    	\phi(a_1a_2) = (a_1a_2)^k = a_1^k a_2^k = \phi(a_1)\phi(a_2)
+    	\phi(a_1a_2) = (a_1a_2)^k = a_1^k a_2^k = \phi(a_1)\phi(a_2),
     \]
-    so that $\phi$ is a homomorphism.
-	For $k = -1$, see \exref{1.6.17} to conclude that $\phi \in \aut(A)$.
+    and thus $\phi$ is a homomorphism.
+    If $k = -1$, then $\phi \circ \phi = 1$, so $\phi = \phi\inv$, and hence $\phi \in \aut(A)$.
 \end{sol}
 
 \begin{exercise}!{1.6.23}
-    Let $G$ be a finite group which possesses an automorphism $\sigma$ such that $\sigma(g) = g$ if and only if $g = 1$.
-	If $\sigma^2$ is the identity map from $G$ to $G$, prove that $G$ is abelian (such an automorphism $\sigma$ is called \textbf{fixed point free} of order 2).
-
-    \hint{Show that every element of $G$ can be written in the form $x^{-1}\sigma(x)$ and apply $\sigma$ to such an expression.}
+    Let $G$ be a finite group which possesses an automorphism $\sigma$ (cf. \exref{1.6.20}) such that $\sigma(g) = g$ if and only if $g = 1$.
+	If $\sigma^2$ is the identity map from $G$ to $G$, prove that $G$ is abelian (such an automorphism $\sigma$ is called \term{fixed point free} of order 2).
+\hint{Show that every element of $G$ can be written in the form $x^{-1}\sigma(x)$ and apply $\sigma$ to such an expression.}
 \end{exercise}
 
 \begin{sol}
-    Define the map
+    Define the map $\phi \colon G \to G$ by
     \[
-    	f \colon G \to G \quad \text{by} \quad x \mapsto x\inv \sigma(x)
+        \phi(x) = x\inv \sigma(x) \quad \text{for all } x \in G.
     \]
-    for all $x \in G$.
-	If $f(x) = f(y)$ for $x, y \in G$, then $x\inv \sigma(x) = y\inv \sigma(y)$ so that $yx\inv = \sigma(yx\inv)$.
-	Since $\sigma$ is fixed point free, $yx\inv = 1$ and $x = y$.
-	Hence, $f$ is injective.
-	Since $G$ is finite, $f$ is also surjective, and every element of $G$ may be written in the form $x\inv \sigma(x)$ for some $x \in G$.
+	If $\phi(x) = \phi(y)$ for $x, y \in G$, then $x\inv \sigma(x) = y\inv \sigma(y)$, and hence $yx\inv = \sigma(yx\inv)$.
+	Since $\sigma$ is fixed point free, $yx\inv = 1$, so $y = x$, and thus $\phi$ is injective.
+	Since $G$ is finite, $\phi$ is also surjective, and every element of $G$ may be written in the form $x\inv \sigma(x)$ for some $x \in G$.
 
-    Let $g \in G$ be arbitrary.
-	Then there exists $x \in G$ such that $g = x\inv \sigma(x)$.
+    For any $g \in G$, there exists $x \in G$ such that $g = x\inv \sigma(x)$.
 	Applying $\sigma$ to both sides, we have
     \[
     	\sigma(g) = \sigma(x\inv \sigma(x)) = \sigma(x\inv) \sigma^2(x) = \sigma(x)\inv x = (x\inv \sigma(x))\inv = g\inv.
     \]
-    Then for any $g, h \in G$, we have
-    \[
-    	\sigma(gh) = (gh)\inv = h\inv g\inv = \sigma(h) \sigma(g) = \sigma(hg).
-    \]
-    Since $\sigma$ is injective, $gh = hg$ and $G$ is abelian.
+    By \exref{1.6.17}, $G$ is abelian.
 \end{sol}
 
-\begin{exercise}{1.6.24}
+\begin{exercise}!{1.6.24}
     Let $G$ be a finite group and let $x$ and $y$ be distinct elements of order 2 in $G$ that generate $G$.
 	Prove that $G \cong D_{2n}$, where $n = \abs{xy}$.
+    \hint{See \exref{1.2.6}.}
 \end{exercise}
 
 \begin{sol}
-    Observe that $G$ must contain $1, x, y$, hence $n \geq 2$.
-    Put $t = xy$ and $x$ as itself.
-    Observe that $x = x\inv$.
-    Then
-    \[
-        xt = x(xy) = y = y\inv = (y\inv x\inv)x = t\inv x,
-    \]
-    so that the elements $x$ and $t$ satisfy the relations of the generators of $D_{2n}$.
-    Observe that $y = xt$, so $t, x$ generate $G$.
-    Since $\abs{x} = 2$ and $\abs{t} = n$, we may use relations of the generators to write any element of $G$ in the form $t^j$ or $xt^j$ for some integer $j$.
-    The elements $1, t, t^2, \ldots, t^{n-1}$ are distinct by \exref{1.1.32}.
-    Moreover, the elements $x, xt, xt^2, \ldots, xt^{n-1}$ are $n$ distinct elements: if $xt^j = xt^k$ for some $0 \leq j, k < n$, then $t^{\abs{k - j}} = 1$, contradicting the fact that $\abs{t} = n$.
-    To see that no element is in both sets, consider $x t^j = t^k$ for some $0 \leq j, k < n$.
-    Then $x = t^{k - j}$, so $x t = t^{k - j} t = t^{k - j + 1}$.
-    From the relation $xt = t\inv x$, we have
-    \[
-        t^{k - j}t = t\inv t^{k - j} \implies t^{k - j + 1} = t^{k - j - 1} \implies t^2 = 1.
-    \]
-    Then $n = \abs{t} = 2$, so that $G = \set{1, t, x, xt}$.
-    Since $0 \leq j, k < 2$, $x \neq 1$ forces $k - j \in \set{-1, 0, 1}$.
-    \begin{itemize}
-        \item If $k - j = 0$, then $x = t^0 = 1$, a contradiction.
-        \item If $k - j = 1$, then $y = x t = t^{k - j + 1} = t^2 = 1$, a contradiction.
-        \item If $k - j = -1$, then $y = x t = t^{k - j + 1} = t^0 = 1$, a contradiction.
-    \end{itemize}
-    Hence, $x t^j \neq t^k$ for any $0 \leq j, k < n$ for all $n \geq 2$.
-    It follows that $G$ has $2n$ elements and is generated by $x$ and $t$ satisfying the relations of the generators of $D_{2n}$, so that $G \cong D_{2n}$.
+    Observe that $G$ must contain the distinct elements $1$, $x$, and $y$.
+    Put $t = xy$, and note that $x \neq y$ gives $t \neq 1$, so $n \geq 2$.
+    Note that $t^n = (xy)^n = 1$, $x^2 = 1$, and $txt = (xy)x(xy) = xyy = x$, so $tx = xt\inv$.
+    Moreover, $y = xt$, so $G = \gen{x, t}$.
+    Then the map $r \mapsto t$ and $s \mapsto x$ extends to a surjective homomorphism $\phi \colon D_{2n} \to G$.
+
+    Now, \exref{1.1.32} gives that $1, t, \ldots, t^{n-1}$ are all distinct elements of $G$.
+    If $xt^j = xt^k$ for some $0 \leq j, k \leq n-1$ such that $j \neq k$, then left cancelling by $x$ gives $t^j = t^k$, contradicting the distinctness of $1, t, \ldots, t^{n-1}$, so the elements $x, xt, \ldots, xt^{n-1}$ are also distinct.
+    If $x \in \gen{t}$, then $x$ must commute with $t$, so $xt = tx = xt\inv$.
+    This yields $t^2 = 1$, so $y = xt \in \gen{t}$ as well, and therefore $G = \gen{t}$.
+    But then $G$ would have at most 2 elements, contradicting the fact that $1$, $x$, and $y$ are distinct elements of $G$.
+    Therefore, no $xt^j \in \gen{t}$, for otherwise $x \in \gen{t}$, so all the elements $1, t, \ldots, t^{n-1}, x, xt, \ldots, xt^{n-1}$ are distinct.
+    Thus, $\abs{G} = 2n$ and $G \cong D_{2n}$.
 \end{sol}
 
 \begin{exercise}{1.6.25}
@@ -504,7 +448,7 @@ Let $G$ and $H$ be groups.
                 \sin \theta & \cos \theta
             \end{pmatrix}
         \]
-        is the matrix of the linear transformation which rotates the $x,y$-plane about the origin in a counterclockwise direction by $\theta$ radians.
+        is the matrix of the linear transformation which rotates the $x,y$ plane about the origin in a counterclockwise direction by $\theta$ radians.
         \item Prove that the map $\phi \colon D_{2n} \to \gl_2(\rbb)$ defined on generators by
         \[
             \phi(r) = 
@@ -520,76 +464,79 @@ Let $G$ and $H$ be groups.
             \end{pmatrix}
         \]
         extends to a homomorphism of $D_{2n}$ into $\gl_2(\rbb)$.
-        \item Prove that the homomorphism $\phi$ defined above is injective.
+        \item Prove that the homomorphism $\phi$ in part(b) is injective.
     \end{subexercises}
 \end{exercise}
 
 \begin{solenum}
-    \item Let $\rbb^2$ be generated by the standard basis vectors $\mb e_1 = (1 \quad 0)^T$ and $\mb e_2 = (0 \quad 1)^T$.
-	Let $T$ denote the linear transformation which rotates the $x,y$-plane about the origin in a counterclockwise direction by $\theta$ radians.
+    \item Let $\rbb^2$ be spanned by the standard basis vectors $\mb e_1 = (1 \quad 0)^t$ and $\mb e_2 = (0 \quad 1)^t$ and let $T$ denote the linear transformation which rotates the $x,y$ plane about the origin in a counterclockwise direction by $\theta$ radians.
 	Then
     \[
         T(\mb e_1) = 
         \begin{pmatrix}
             \cos \theta \\
             \sin \theta
-        \end{pmatrix}, \quad \text{and} \quad
+        \end{pmatrix} \quad \text{and} \quad
         T(\mb e_2) = 
         \begin{pmatrix}
             -\sin \theta \\
             \cos \theta
-        \end{pmatrix}.
+        \end{pmatrix},
     \]
-    Then the matrix of $T$ with respect to the standard basis $\set{\mb e_1, \mb e_2}$ is exactly the desired matrix.
-    \item It is easy to show by induction that for any positive $k$, then $\phi(r)^k$ is given by the following matrix:
+    so the matrix of $T$ with respect to $\mb e_1$ and $\mb e_2$ is exactly the desired rotation matrix.
+    \item By induction on $k$, $\phi(r)^k$ is given by
     \[
-        \phi(r)^k = \begin{pmatrix}
+        \phi(r)^k = 
+        \begin{pmatrix}
             \cos (k\theta) & -\sin (k\theta) \\
             \sin (k\theta) & \cos (k\theta)
-        \end{pmatrix}
+        \end{pmatrix},
     \]
-    so that $\phi(r)^n = I$.
-	It is fairly straightforward to see that the set of vectors $\set{T(\mb e_1), T(\mb e_2)}$ is orthonormal, so $\phi(r)$ is an orthogonal matrix, and hence $\phi(r)\inv = \phi(r)^T$.
-	Moreover, we can calculate that $\phi(s)^2 = I$.
-	Lastly, we calculate that
+    and thus $\phi(r)^n = I_2$.
+    Since $\det\phi(r) = 1$, we have
     \[
-        \phi(s)\phi(r) = 
-        \begin{pmatrix}
-            0 & 1 \\
-            1 & 0
-        \end{pmatrix}
-        \begin{pmatrix}
-            \cos \theta & -\sin \theta \\
-            \sin \theta & \cos \theta
-        \end{pmatrix} = 
-        \begin{pmatrix}
-            \sin \theta & \cos \theta \\
-            \cos \theta & -\sin \theta
-        \end{pmatrix} = 
+        \phi(r)\inv = 
         \begin{pmatrix}
             \cos \theta & \sin \theta \\
             -\sin \theta & \cos \theta
+        \end{pmatrix}.
+    \]
+	Direct computation gives $\phi(s)^2 = I_2$, and
+    \[
+        \phi(r)\phi(s) = 
+        \begin{pmatrix}
+            \cos \theta & -\sin \theta \\
+            \sin \theta & \cos \theta
         \end{pmatrix}
         \begin{pmatrix}
             0 & 1 \\
             1 & 0
-        \end{pmatrix} = \phi(r)\inv \phi(s)
+        \end{pmatrix} =
+        \begin{pmatrix}
+            -\sin\theta & \cos\theta \\
+            \cos\theta & \sin\theta
+        \end{pmatrix} = 
+        \begin{pmatrix}
+            0 & 1 \\
+            1 & 0
+        \end{pmatrix}
+        \begin{pmatrix}
+            \cos\theta & \sin\theta \\
+            -\sin\theta & \cos\theta
+        \end{pmatrix} = 
+        \phi(s)\phi(r)\inv.
     \]
-    so that $\phi(s)\phi(r) = \phi(r)\inv \phi(s)$.
 	Since these relations match those of $D_{2n}$, $\phi$ extends to a homomorphism from $D_{2n}$ to $\gl_2(\rbb)$.
-    \item To show that $\phi$ is injective, we show that $\ker\phi$ is trivial.
-	Let $g \in \ker\phi$.
-    \begin{itemize}
-        \item If $g = r^k$ for some $0 \leq k < n$, then $\phi(r^k) \neq I$, since $\phi(r)^k$ is a rotation matrix and only $\phi(r)^n = I$.
-        \item If $g = sr^k$ for some $0 \leq k < n$, then $\phi(sr^k) = \phi(s)\phi(r)^k$.
-	Note that $\phi(s)$ has determinant $-1$ while $\phi(r)^k$ has determinant $1$ since it is a rotation matrix.
-	Hence, $\phi(sr^k)$ has determinant $-1$ and cannot be the identity matrix.
-    \end{itemize}
-    Therefore, the only element in $\ker\phi$ is the identity element of $D_{2n}$, so that $\phi$ is injective.
+    \item By \exref{1.6.14}, it suffices to show $\ker\phi = 1$.
+    Let $g \in \ker\phi$, so $\phi(g) = I_2$.
+    If $g = r^k$ for some $1 \leq k < n$, then $\phi(g)_{11} = \cos(k\theta) = \cos(\frac{2\pi k}{n}) \neq 1$, so $\phi(g) \neq I_2$.
+    If $g = sr^k$ for some $0 \leq k < n$, then $\phi(g) = \phi(s)\phi(r)^k$.
+    Since $\det\phi(s) = -1$ and $\det\phi(r)^k = 1$, it follows that $\det\phi(g) = - 1 \neq 1 = \det I_2$.
+    Hence, $g = 1$, and $\ker\phi = 1$, so $\phi$ is injective.
 \end{solenum}
 
 \begin{exercise}{1.6.26}
-    Let $i$ and $j$ be the generators of $Q_8$ described in Section 5.
+    Let $i$ and $j$ be the generators of $Q_8$ described in Section 1.5.
 	Prove that the map $\phi$ from $Q_8$ to $\gl_2(\cbb)$ defined on generators by
     \[
         \phi(i) = 
@@ -610,6 +557,8 @@ Let $G$ and $H$ be groups.
 
 \begin{sol}
     Matrix multiplication shows that the relations described in \exref{1.5.3} are satisfied, so that $\phi$ extends to a homomorphism from $Q_8$ to $\gl_2(\cbb)$.
-	Moreover, $\phi$ is injective since the only element that maps to the identity matrix is $1 \in Q_8$.
-	Therefore, $\phi$ is an injective homomorphism.
+	By \exref{1.6.14}, it suffices to show that $\ker\phi = 1$.
+    By \exref{1.5.1}, every element of $Q_8 - \set{\pm 1}$ squares to $-1$, so a nontrivial kernel must contain $-1$.
+    However, $\phi(-1) = -I_2 \neq I_2$, so $-1 \notin \ker\phi$.
+    Therefore, $\ker\phi = 1$, and $\phi$ is injective.
 \end{sol}

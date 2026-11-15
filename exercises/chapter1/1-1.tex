@@ -9,15 +9,9 @@ Let $G$ be a group.
     \begin{subexercises}
         \item The operation $\star$ on $\zbb$ defined by $a \star b = a - b$.
         \item The operation $\star$ on $\rbb$ defined by $a \star b = a + b + ab$.
-        \item The operation $\star$ on $\qbb$ defined by
-        \[
-        	a \star b = \dfrac{a + b}{5}.
-        \]
+        \item The operation $\star$ on $\qbb$ defined by $a \star b = \frac{a + b}{5}$.
         \item The operation $\star$ on $\zbb \times \zbb$ defined by $(a,b) \star (c,d) = (ad + bc, \, bd)$.
-        \item The operation $\star$ on $\qbb - \set{0}$ defined by
-        \[
-        	a \star b = \dfrac{a}{b}.
-        \]
+        \item The operation $\star$ on $\qbb - \set{0}$ defined by $a \star b = \frac{a}{b}$.
     \end{subexercises}
 \end{exercise}
 
@@ -34,15 +28,9 @@ Let $G$ be a group.
     \begin{subexercises}
         \item The operation $\star$ on $\zbb$ defined by $a \star b = a - b$.
         \item The operation $\star$ on $\rbb$ defined by $a \star b = a + b + ab$.
-        \item The operation $\star$ on $\qbb$ defined by
-        \[
-        	a \star b = \dfrac{a + b}{5}.
-        \]
+        \item The operation $\star$ on $\qbb$ defined by $a \star b = \frac{a + b}{5}$.
         \item The operation $\star$ on $\zbb \times \zbb$ defined by $(a,b) \star (c,d) = (ad + bc, \, bd)$.
-        \item The operation $\star$ on $\qbb - \set{0}$ defined by
-        \[
-        	a \star b = \dfrac{a}{b}.
-        \]
+        \item The operation $\star$ on $\qbb - \set{0}$ defined by $a \star b = \frac{a}{b}$.
     \end{subexercises}
 \end{exercise}
 
@@ -55,7 +43,7 @@ Let $G$ be a group.
 \end{solenum}
 
 \begin{exercise}{1.1.3}
-    Prove that addition of residue classes in $\intmod$ is associative (you may assume it is well-defined).
+    Prove that addition of residue classes in $\intmod$ is associative (you may assume it is well defined).
 \end{exercise}
 
 \begin{sol}
@@ -67,7 +55,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}{1.1.4}
-    Prove that multiplication of residue classes in $\intmod$ is associative (you may assume it is well-defined).
+    Prove that multiplication of residue classes in $\intmod$ is associative (you may assume it is well defined).
 \end{exercise}
 
 \begin{sol}
@@ -119,14 +107,14 @@ Let $G$ be a group.
 
 \begin{exercise}{1.1.7}
     Let $G = \set{ x \in \rbb \mid 0 \le x < 1 }$ and for $x, y \in G$ let $x \star y$ be the fractional part of $x + y$ (i.e., $x \star y = x + y - [x + y]$ where $[a]$ is the greatest integer less than or equal to $a$).
-	Prove that $\star$ is a well-defined binary operation on $G$ and that $G$ is an abelian group under $\star$ (called the \term{real numbers mod $1$}).
+	Prove that $\star$ is a well defined binary operation on $G$ and that $G$ is an abelian group under $\star$ (called the \term{real numbers mod $1$}).
 \end{exercise}
 
 \begin{sol}
     Let $x, y, z \in G$.
     \begin{itemize}
         \item Note that for any $a \in \rbb$, we have $[a] \leq a < [a] + 1$, so $0 \leq a - [a] < 1$.
-        Applying this to $x + y$, we have $0 \leq x + y - [x + y] < 1$, so $x \star y \in G$, and $\star$ is well-defined.
+        Applying this to $x + y$, we have $0 \leq x + y - [x + y] < 1$, so $x \star y \in G$, and $\star$ is well defined.
         \item Observe that $x \star y = x + y - [x + y] = y + x - [y + x] = y \star x$, so $G$ is abelian under $\star$.
         \item Because $x \star 0 = x + 0 - [x + 0] = x - [x] = x$, it follows that $0$ is the identity element of $G$ under $\star$.
         \item Since $0 \star 0 = 0$, the inverse of $0$ under $\star$ is itself.
@@ -172,7 +160,6 @@ Let $G$ be a group.
     \begin{subexercises}
         \item Prove that $G$ is a group under addition.
         \item Prove that the nonzero elements of $G$ are a group under multiplication.
-        
         \hint{``Rationalize the denominators'' to find multiplicative inverses.}
     \end{subexercises}
 \end{exercise}
@@ -225,7 +212,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}{1.1.12}
-    Find the orders of the following elements of the multiplicative group $(\zbb/12\zbb)^{\times}$: $\bar{1}, \bar{-1}, \bar{5}, \bar{7}, \bar{-7}, \bar{13}$.
+    Find the orders of the following elements of the multiplicative group $(\zbb/12\zbb)^{\times}$: $\bar{1}$, $\bar{-1}$, $\bar{5}$, $\bar{7}$, $\bar{-7}$, $\bar{13}$.
 \end{exercise}
 
 \begin{sol}
@@ -239,7 +226,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}{1.1.13}
-    Find the orders of the following elements of the additive group $\zbb/36\zbb$: $\bar{1}, \bar{2}, \bar{6}, \bar{9}, \bar{10}, \bar{12}, \bar{-1}, \bar{-10},\\ \bar{-18}$.
+    Find the orders of the following elements of the additive group $\zbb/36\zbb$: $\bar{1}$, $\bar{2}$, $\bar{6}$, $\bar{9}$, $\bar{10}$, $\bar{12}$, $\bar{-1}$, $\bar{-10}$, $\bar{-18}$.
 \end{exercise}
 
 \begin{sol}
@@ -253,7 +240,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}{1.1.14}
-    Find the orders of the following elements of the multiplicative group $(\zbb/36\zbb)^{\times}$: $\bar{1}, \bar{-1}, \bar{5}, \bar{13}, \bar{-13},\\ \bar{17}$.
+    Find the orders of the following elements of the multiplicative group $(\zbb/36\zbb)^{\times}$: $\bar{1}$, $\bar{-1}$, $\bar{5}$, $\bar{13}$, $\bar{-13}$, $\bar{17}$.
 \end{exercise}
 
 \begin{sol}
@@ -427,9 +414,7 @@ Let $G$ be a group.
 \end{sol}
 
 \begin{exercise}{1.1.24}
-    If $a$ and $b$ are commuting elements of $G$, prove that $(ab)^n = a^n b^n$ for all $n \in \zbb$. 
-    
-    \hint{Do this by induction for positive $n$ first.}
+    If $a$ and $b$ are commuting elements of $G$, prove that $(ab)^n = a^n b^n$ for all $n \in \zbb$. \hint{Do this by induction for positive $n$ first.}
 \end{exercise}
 
 \begin{sol}
@@ -557,7 +542,6 @@ Let $G$ be a group.
 
 \begin{exercise}{1.1.31}
     Prove that any finite group $G$ of even order contains an element of order 2. 
-    
     \hint{Let $t(G)$ be the set $\set{g \in G \mid g \neq g\inv}$.
 	Show that $t(G)$ has an even number of elements and every nonidentity element of $G - t(G)$ has order 2.}
 \end{exercise}
