@@ -173,9 +173,65 @@ Let $F$ be a field and let $n \in \zp$.
 \end{exercise}
 
 \begin{sol}
-    Associate each $2 \times 2$ matrix $A$ with the linear map $T_A \colon \rbb^2 \to \rbb^2$ defined by $T_A(\mb x) = A \mb x$.
-    The map $A \mapsto T_A$ can be shown to be injective, and $T_{AB} = T_A \circ T_B$ for all $2 \times 2$ matrices $A$ and $B$.
-    Since composition of linear maps is associative, matrix multiplication is associative as well.
+    \begin{align*}
+        \left(
+        \begin{pmatrix}
+            a & b \\
+            c & d
+        \end{pmatrix}
+        \begin{pmatrix}
+            e & f \\
+            g & h
+        \end{pmatrix}
+        \right)
+        \begin{pmatrix}
+            i & j \\
+            k & \ell
+        \end{pmatrix}
+        &=
+        \begin{pmatrix}
+            ae + bg & af + bh \\
+            ce + dg & cf + dh
+        \end{pmatrix}
+        \begin{pmatrix}
+            i & j \\
+            k & \ell
+        \end{pmatrix} \\
+        &= 
+        \begin{pmatrix}
+            (ae + bg)i + (af + bh)k & (ae + bg)j + (af + bh)\ell \\
+            (ce + dg)i + (cf + dh)k & (ce + dg)j + (cf + dh)\ell
+        \end{pmatrix} \\
+        &= 
+        \begin{pmatrix}
+            a(ei + fk) + b(gi + hk) & a(ej + f\ell) + b(gi + hk) \\
+            c(ei + fk) + d(gi + hk) & c(ej + f\ell) + d(gi + hk)
+        \end{pmatrix} \\
+        &=
+        \begin{pmatrix}
+            a & b \\
+            c & d
+        \end{pmatrix}
+        \begin{pmatrix}
+            ei + fk & ej + f\ell \\
+            gi + hk & gj + h\ell
+        \end{pmatrix} \\
+        &=
+        \begin{pmatrix}
+            a & b \\
+            c & d
+        \end{pmatrix}
+        \left(
+        \begin{pmatrix}
+            e & f \\
+            g & h
+        \end{pmatrix}
+        \begin{pmatrix}
+            i & j \\
+            k & \ell
+        \end{pmatrix}
+        \right). \qedhere
+    \end{align*}
 \end{sol}
 
 \begin{exercise}{1.4.10}

@@ -2,31 +2,35 @@
 
 \subsection{Definitions and Examples}
 
+Let $G$ be a group.
+
 \begin{exercise}{2.1.1}
-    In each of (a)--(e) prove that the specified subset is a subgroup of the given group.
+    In each of (a) -- (e) prove that the specified subset is a subgroup of the given group:
     \begin{subexercises}
-        \item The set of complex numbers of the form $a + ai$, $a \in \rbb$ (under addition).
-        \item The set of complex numbers of absolute value $1$, i.e., the unit circle in the complex plane (under multiplication).
-        \item For fixed $n \in \zbb^+$, the set of rational numbers whose denominators divide $n$ (under addition).
-        \item For fixed $n \in \zbb^+$, the set of rational numbers whose denominators are relatively prime to $n$ (under addition).
-        \item The set of nonzero real numbers whose square is a rational number (under multiplication).
+        \item the set of complex numbers of the form $a + ai$, $a \in \rbb$ (under addition)
+        \item the set of complex numbers of absolute value $1$, i.e., the unit circle in the complex plane (under multiplication)
+        \item for fixed $n \in \zbb^+$ the set of rational numbers whose denominators divide $n$ (under addition)
+        \item for fixed $n \in \zbb^+$ the set of rational numbers whose denominators are relatively prime to $n$ (under addition)
+        \item the set of nonzero real numbers whose square is a rational number (under multiplication).
     \end{subexercises}
 \end{exercise}
 
 \begin{sol}
     Let $G$ be the group and $H$ be the subset in question.
+    Each result follows from the Subgroup Criterion.
     \begin{subexercises}
         \item Since $0 + 0i \in H$, $H$ is nonempty.
-        For $a + ai, b + bi \in H$,
+        Let $a + ai, b + bi \in H$.
+        Then
         \[
         	(a + ai) - (b + bi) = (a - b) + (a - b)i \in H
         \]
         so that $H \leq G$.
         \item Since $\abs 1 = 1$, $1 \in H$ so that it is nonempty.
-        For $z, w \in H$, we first note that $\abs{w\inv} = 1/\abs{w} = 1/1 = 1$.
+        Let $z, w \in H$.
         Then
         \[
-        	\abs{zw\inv} = \abs{z}\abs{w\inv} = 1 \cdot 1 = 1
+        	\abs{zw\inv} = \frac{\abs{z}}{\abs{w}} = 1
         \]
         so that $zw\inv \in H$, hence $H \leq G$.
         \item Fix $n \in \zp$.
@@ -35,21 +39,20 @@
         From $b \mid n$ and $d \mid n$, we have $\ell \mid n$.
         Then
         \[
-            \frac ab - \frac cd = \frac{a\ell/b - c\ell/d}{\ell} \in H
+            \frac ab - \frac cd = \frac{a\ell/b - c\ell/d}{\ell},
         \]
-        so that $H \leq G$.
+        where reducing denominators still gives an integer dividing $\ell$, hence dividing $n$, so that $H \leq G$.
         \item Fix $n \in \zp$.
         Since $(1, n) = 1$, $0 = 0/1 \in H$ so that $H$ is nonempty.
         Let $a/b, c/d \in H$ so that $(b, n) = (d, n) = 1$.
         Then
         \[
-        	\frac ab - \frac cd = \frac{ad - bc}{bd}
+        	\frac ab - \frac cd = \frac{ad - bc}{bd}.
         \]
-        If $(bd, n) \neq 1$, then there exists some prime $p$ such that $p \mid bd$ and $p \mid n$.
-        Then $p \mid b$ or $p \mid d$, contradicting our assumption.
-        Hence, $(bd, n) = 1$, so that $H \leq G$.
+        Any prime $p$ such that $p \mid bd$ gives $p \mid b$ or $p \mid d$, and thus $p \nmid n$.
+        Reducing denominators gives an integer dividing $bd$ which is still relatively prime to $n$, wherefore $H \leq G$.
         \item Since $1 = 1^2 = 1/1$, $1 \in H$ so that $H$ is nonempty.
-        For $x, y \in H$, then $x^2, y^2 \in \qbb$.
+        Let $x, y \in H$ so $x^2, y^2 \in \qbb$.
         Then
         \[
         	\left(\frac xy\right)^2 = \frac{x^2}{y^2} \in \qbb
@@ -59,62 +62,64 @@
 \end{sol}
 
 \begin{exercise}{2.1.2}
-    In each of (a)--(e) prove that the specified subset is \emph{not} a subgroup of the given group.
+    In each of (a) -- (e) prove that the specified subset is \emph{not} a subgroup of the given group:
     \begin{subexercises}
-        \item The set of $2$-cycles in $S_n$ for $n \geq 3$.
-        \item The set of reflections in $D_{2n}$ for $n \geq 3$.
-        \item For $n$ a composite integer $>1$ and $G$ a group containing an element of order $n$, the set $\set{x \in G \mid \abs{x} = n} \cup \set{1}$.
-        \item The set of (positive and negative) odd integers in $\zbb$ together with $0$.
-        \item The set of real numbers whose square is a rational number (under addition).
+        \item the set of $2$-cycles in $S_n$ for $n \geq 3$
+        \item the set of reflections in $D_{2n}$ for $n \geq 3$
+        \item for $n$ a composite integer $>1$ and $G$ a group containing an element of order $n$, the set $\set{x \in G \mid \abs{x} = n} \cup \set{1}$
+        \item the set of (positive and negative) odd integers in $\zbb$ together with $0$
+        \item the set of real numbers whose square is a rational number (under addition).
     \end{subexercises}
 \end{exercise}
 
 \begin{sol}
-    Let $G$ be the group and $H$ be the subset in question. Assume that $H \leq G$.
+    Let $G$ be the group and $H$ be the subset in question.
     \begin{subexercises}
-        \item For $n = 3$, then $\cyc{1 2}, \cyc{1 3} \in H$, but $\cyc{1 2}\cyc{1 3} = \cyc{1 3 2} \notin H$.
-        \item For $n = 3$, then $s, sr \in H$, but $s(sr) = r \notin H$.
+        \item For all $S_n$ with $n \geq 3$, $\cyc{1 2}, \cyc{1 3} \in H$, but $\cyc{1 2}\cyc{1 3} = \cyc{1 3 2} \notin H$.
+        \item For all $D_{2n}$ with $n \geq 3$, $s, sr \in H$, but $s(sr) = r \notin H$ since $\abs{r} = n \geq 3$.
         \item Let $n = ab$ for some $a, b \in \zp$ with $1 < a, b < n$.
-	    Let $x \in G$ with $\abs x = n$.
-	    Then $x \in H$ so that $x^a \in H$, but $(x^a)^b = x^n = 1$ implies that $\abs{x^a} \leq b$.
+	    Let $x \in G$ with $\abs x = n$, so $x \in H$.
+	    If $H \leq G$, then $x^a \in H$, but $(x^a)^b = x^n = 1$ implies that $\abs{x^a} \leq b < n$.
+        Because $0 < a < n$, $x^a \neq 1$, so $x^a \notin H$.
         \item Observe that $1 \in H$, but $1 + 1 = 2 \notin H$.
-        \item Observe that $\sqrt 2, \sqrt 3 \in H$, but $(\sqrt 2 + \sqrt 3)^2 \notin \qbb$. \qedhere
+        \item Observe that $\sqrt 2, \sqrt 3 \in H$, but $(\sqrt 2 + \sqrt 3)^2 = 5 + 2\sqrt 6 \notin \qbb$. \qedhere
     \end{subexercises}
 \end{sol}
 
 \begin{exercise}{2.1.3}
     Show that the following subsets of the dihedral group $D_8$ are actually subgroups:
-    \begin{subexercises}
-        \item $\set{1, r^2, s, sr^2}$
-        \item $\set{1, r^2, sr, sr^3}$
-    \end{subexercises}
+    
+    (a) $\set{1, r^2, s, sr^2}$, \quad (b) $\set{1, r^2, sr, sr^3}$.
 \end{exercise}
 
-\begin{solenum}
-    \item 
-    \[
-        \begin{array}{*{5}{c|}}
-            \circ & 1 & r^2 & s & sr^2 \\
-            \hline
-            1 & 1 & r^2 & s & sr^2 \\
-            r^2 & r^2 & 1 & sr^2 & s \\
-            s & s & sr^2 & 1 & r^2 \\
-            sr^2 & sr^2 & s & r^2 & 1
-        \end{array}
-    \]
-    \item 
-    \[
-        \begin{array}{*{5}{c|}}
-            \circ & 1 & r^2 & sr & sr^3 \\
-            \hline
-            1 & 1 & r^2 & sr & sr^3 \\
-            r^2 & r^2 & 1 & sr^3 & sr \\
-            sr & sr & sr^3 & 1 & r^2 \\
-            sr^3 & sr^3 & sr & r^2 & 1
-        \end{array}
-    \]
-    Both tables show closure, since no product is an element outside the subset.
-\end{solenum}
+\begin{sol}
+    \leavevmode
+    \begin{subexercises}
+        \item 
+        \[
+            \begin{array}{*{4}{c|}c}
+                \circ & 1 & r^2 & s & sr^2 \\
+                \hline
+                1 & 1 & r^2 & s & sr^2 \\
+                r^2 & r^2 & 1 & sr^2 & s \\
+                s & s & sr^2 & 1 & r^2 \\
+                sr^2 & sr^2 & s & r^2 & 1
+            \end{array}
+        \]
+        \item 
+        \[
+            \begin{array}{*{4}{c|}c}
+                \circ & 1 & r^2 & sr & sr^3 \\
+                \hline
+                1 & 1 & r^2 & sr & sr^3 \\
+                r^2 & r^2 & 1 & sr^3 & sr \\
+                sr & sr & sr^3 & 1 & r^2 \\
+                sr^3 & sr^3 & sr & r^2 & 1
+            \end{array}
+        \]
+    \end{subexercises}
+    Both tables show closure, so each subset is a subgroup of $D_8$ by the finite case of the Subgroup Criterion.
+\end{sol}
 
 \begin{exercise}{2.1.4}
     Give an explicit example of a group $G$ and an infinite subset $H$ of $G$ that is closed under the group operation but is not a subgroup of $G$.
@@ -131,25 +136,25 @@
 \end{exercise}
 
 \begin{sol}
-   If $H \leq G$ with $\abs{H} = n - 1$, then there exists $k \in \zp$ such that $k(n - 1) = n$ by Lagrange's Theorem.
+   If $H \leq G$ with $\abs{H} = n - 1$, then there exists $k \in \zp$ such that $k(n - 1) = n$ by \exref{1.7.19}.
    But since $1 < n/(n - 1) < 2$ for all $n > 2$, no such $k$ can exist.
 \end{sol}
 
-\begin{exercise}!{2.1.6}
+\begin{exercise}![Torsion Subgroup]{2.1.6}
     Let $G$ be an abelian group.
-	Prove that $\set{ g \in G \mid \abs{g} < \infty }$ is a subgroup of $G$ (called the \textbf{torsion subgroup} of $G$).
+	Prove that $\set{g \in G \mid \abs{g} < \infty}$ is a subgroup of $G$ \note{called the \term{torsion subgroup} of $G$}.
 	Give an explicit example where this set is not a subgroup when $G$ is non-abelian.
 \end{exercise}
 
 \begin{sol}
-    Let the torsion subgroup be denoted as $\tor(G)$.
+    Let $\tor(G)$ denote the set of elements of finite order in $G$.
 	Since $\abs{1} = 1$, $1 \in \tor(G)$.
-	If $g, h \in \tor(G)$ such that $\abs{g} = m$ and $\abs{h} = n$, we have
+	Let $g, h \in \tor(G)$ with $\abs{g} = m$ and $\abs{h} = n$.
+    Since $G$ is abelian, we have
     \[
-    	(gh\inv)^{mn} = g^{mn}(h\inv)^{mn} = (g^m)^n((h^n)\inv)^m = 1^n(1\inv)^m = 1,
+    	(gh\inv)^{mn} = g^{mn}(h\inv)^{mn} = (g^m)^n((h^n)\inv)^m = 1^n(1\inv)^m = 1.
     \]
-    where the first equality follows from $G$ being abelian.
-	Then $\abs{gh\inv} \leq mn$, hence $gh\inv \in \tor(G)$, and $\tor(G) \leq G$.
+    Thus, $\abs{gh\inv} \leq mn$, so $gh\inv \in \tor(G)$ and $\tor(G) \leq G$ by the Subgroup Criterion.
 
     Consider $G = \gl_2(\rbb)$ where
     \[
@@ -187,20 +192,21 @@
 
 \begin{exercise}{2.1.7}
     Fix some $n \in \zbb$ with $n>1$.
-	Find the torsion subgroup of $\zbb \times (\zbb/n\zbb)$.
+	Find the torsion subgroup (cf. the previous exercise) of $\zbb \times (\intmod)$.
 	Show that the set of elements of infinite order together with the identity is \emph{not} a subgroup of this direct product.
 \end{exercise}
 
 \begin{sol}
-    The only finite order element in $\zbb$ is 0, while $\intmod$ is finite.
-	Then
+	If $(x, \bar y) \in \zbb \times (\intmod)$ is such that $k(x, \bar y) = (0, \bar 0)$ for $k \geq 1$, then $kx = 0$ in $\zbb$, so $x = 0$.
+    Conversely, $n(0, \bar y) = (0, \bar 0)$, so $(0, \bar y)$ has finite order.
+    Therefore, $(x, \bar y) \in \tor(\zbb \times (\intmod))$ if and only if $x = 0$, so
     \[
-    	\tor(\zbb \times \intmod) = \set{(0, \bar x) \mid \bar x \in \intmod}.
+    	\tor(\zbb \times (\intmod)) = \set{(0, \bar y) \mid \bar y \in \intmod}.
     \]
-    Consider $H = \set{(x, \bar y) \in \zbb \times \intmod \mid x \neq 0} \cup \set{(0, \bar 0)}$.
-	Then $H$ contains the identity and all elements of infinite order.
-	However, $(1, \bar 1), (-1, \bar 0) \in H$, but $(0, \bar 1) = (1, \bar 1) + (-1, \bar 0) \notin H$, since it has finite order.
-	Hence, $H$ is not a subgroup of $\zbb \times \intmod$.
+    Consider $H = \set{(x, \bar y) \in \zbb \times (\intmod) \mid x \neq 0} \cup \set{(0, \bar 0)}$.
+    By the first part, $(x, \bar y) \in \zbb \times (\intmod)$ has infinite order if and only if $x \neq 0$, so $H$ is exactly the set of elements of infinite order together with the identity.
+	We have $(1, \bar 1), (-1, \bar 0) \in H$, but $(0, \bar 1) = (1, \bar 1) + (-1, \bar 0) \notin H$ since $\bar 1 \neq \bar 0$.
+	Hence, $H$ is not a subgroup of $\zbb \times (\intmod)$.
 \end{sol}
 
 \begin{exercise}{2.1.8}
@@ -209,29 +215,22 @@
 \end{exercise}
 
 \begin{soliff}
-    \rightimp Suppose $H \cup K$ is a subgroup.
-	If $H \subseteq K$, then we are done.
-	Suppose that $H \nsubseteq K$.
-	Then there exists some $h \in H$ such that $h \notin K$.
-	Since $H \cup K$ is a subgroup, for any $k \in K$, we have $hk \in H \cup K$.
-    
-    Observe that $k\inv \in K$ since $K \leq G$.
+    \rightimp Suppose $H \cup K \leq G$ and $H \nsubseteq K$.
+	Then there exists $h \in H$ such that $h \notin K$.
+	Since $H \cup K \leq G$, for any $k \in K$, we have $hk \in H \cup K$.
 	If $hk \in K$, then $h = (hk)k\inv \in K$, contradicting our assumption.
-	It must be that $hk \in H$.
-	Since $h \in H$, $h\inv \in H$ as $H \leq G$.
-	Then $h\inv(hk) = k \in H$, hence $K \subseteq H$.
+	Therefore, $hk \in H$, so $k = h\inv(hk) \in H$, and hence $K \subseteq H$.
 
-    \leftimp If $H \subseteq K$, then $H \cup K = K \leq G$.
-	Similarly, if $K \subseteq H$, then $H \cup K = H \leq G$.
+    \leftimp If $H \subseteq K$ or $K \subseteq H$, then $H \cup K$ equals $K$ or $H$, respectively, so $H \cup K \leq G$.
 \end{soliff}
 
-\begin{exercise}!{2.1.9}
+\begin{exercise}![Special Linear Group]{2.1.9}
     Let $G = \gl_n(F)$, where $F$ is any field.
 	Define
     \[
     	\splin_n(F) = \set{ A \in \gl_n(F) \mid \det(A) = 1 }
     \]
-    (called the \textbf{special linear group}).
+    (called the \term{special linear group}).
 	Prove that $\splin_n(F) \leq \gl_n(F)$.
 \end{exercise}
 
@@ -240,13 +239,12 @@
 	Suppose $A, B \in \splin_n(F)$.
 	Then
     \[
-    	\det(AB\inv) = \det(A)\det(B\inv) = \frac{\det(A)}{\det(B)} = \frac 11 = 1
+    	\det(AB\inv) = \det(A)\det(B\inv) = \frac{\det(A)}{\det(B)} = 1,
     \]
-    so that $AB\inv \in \splin_n(F)$.
-	It follows that $\splin_n(F) \leq \gl_n(F)$.
+    wherefore $AB\inv \in \splin_n(F)$, and hence $\splin_n(F) \leq \gl_n(F)$ by the Subgroup Criterion.
 \end{sol}
 
-\begin{exercise}{2.1.10}
+\begin{exercise}!{2.1.10}
     \begin{subexercises}
         \item Prove that if $H$ and $K$ are subgroups of $G$ then so is their intersection $H \cap K$.
         \item Prove that the intersection of an arbitrary nonempty collection of subgroups of $G$ is again a subgroup of $G$ (do not assume the collection is countable).
@@ -255,16 +253,16 @@
 
 \begin{sol}
     We prove (b) and note that (a) is a special case with $I = \set{1, 2}$ and $H_1 = H$, $H_2 = K$.
-	Let $I$ be an indexing set, and consider the collection of subgroups $\set{ H_i }_{i \in I}$ of $G$.
+	Let $I$ be a nonempty indexing set, and consider the collection of subgroups $\set{ H_i }_{i \in I}$ of $G$.
 	Let
     \[
-    	H = \bigcap_{i \in I} H_i
+    	L = \bigcap_{i \in I} H_i.
     \]
-    Since $1 \in H_i$ for all $i \in I$, $1 \in H$.
-	Suppose $a, b \in H$.
+    Since $1 \in H_i$ for all $i \in I$, $1 \in L$.
+	Suppose $a, b \in L$.
 	Then $a, b \in H_i$ for all $i \in I$.
 	Since each $H_i$ is a subgroup of $G$, $ab\inv \in H_i$ for all $i \in I$.
-	Hence, $ab\inv \in H$, and $H \leq G$.
+	Hence, $ab\inv \in L$, so $L \leq G$ by the Subgroup Criterion.
 \end{sol}
 
 \begin{exercise}{2.1.11}
@@ -273,7 +271,7 @@
     \begin{subexercises}
         \item $\set{ (a, 1) \mid a \in A }$
         \item $\set{ (1, b) \mid b \in B }$
-        \item $\set{ (a, a) \mid a \in A }$, where we assume $B = A$ (called the diagonal subgroup)
+        \item $\set{ (a, a) \mid a \in A }$, where here we assume $B = A$ (called the \term{diagonal subgroup}).
     \end{subexercises}
 \end{exercise}
 
@@ -287,15 +285,8 @@
         	(a_1, 1)(a_2, 1)\inv = (a_1, 1)(a_2\inv, 1) = (a_1a_2\inv, 1) \in C
         \]
         since $a_1a_2\inv \in A$.
-        Hence, $C \leq A \times B$.
-        \item Since $1 \in B$, $(1, 1) \in C$ so that $C$ is nonempty.
-        Suppose $(1, b_1), (1, b_2) \in C$.
-        Then
-        \[
-        	(1, b_1)(1, b_2)\inv = (1, b_1)(1, b_2\inv) = (1, b_1b_2\inv) \in C
-        \]
-        since $b_1b_2\inv \in B$.
-        Hence, $C \leq A \times B$.
+        Hence, $C \leq A \times B$ by the Subgroup Criterion.
+        \item This is part (a) with the roles of $A$ and $B$ reversed.
         \item Since $1 \in A$, $(1, 1) \in C$ so that $C$ is nonempty.
         Suppose $(a_1, a_1), (a_2, a_2) \in C$.
         Then
@@ -303,38 +294,36 @@
         	(a_1, a_1)(a_2, a_2)\inv = (a_1, a_1)(a_2\inv, a_2\inv) = (a_1a_2\inv, a_1a_2\inv) \in C
         \]
         since $a_1a_2\inv \in A$.
-	Hence, $C \leq A \times B$. \qedhere
+	    Hence, $C \leq A \times B$ by the Subgroup Criterion. \qedhere
     \end{subexercises}
 \end{sol}
 
 \begin{exercise}{2.1.12}
     Let $A$ be an abelian group and fix some $n \in \zbb$.
-	Prove that the following sets are subgroups of $A$.
+	Prove that the following sets are subgroups of $A$:
     \begin{subexercises}
-        \item $\set{ a^n \mid a \in A }$.
+        \item $\set{ a^n \mid a \in A }$
         \item $\set{ a \in A \mid a^n = 1 }$.
     \end{subexercises}
 \end{exercise}
 
 \begin{sol}
-    Let $B$ be the sets in question.
+    Let $B$ be the set in each part.
     \begin{subexercises}
         \item Since $1 = 1^n$, $1 \in B$ so that $B$ is nonempty.
         Suppose $a^n, b^n \in B$.
-        Then
+        Since $A$ is abelian, we have
         \[
-        	(a^n)(b^n)\inv = a^n b^{-n} = (ab\inv)^n \in B
+        	(a^n)(b^n)\inv = a^n b^{-n} = (ab\inv)^n \in B,
         \]
-        where the last equality follows from the fact that $A$ is abelian.
-	    Hence, $B \leq A$.
+	    and thus $B \leq A$ by the Subgroup Criterion.
         \item Since $1^n = 1$, $1 \in B$ so that $B$ is nonempty.
         Suppose $a, b \in B$.
-        Then
+        Since $A$ is abelian, we have
         \[
-        	(ab\inv)^n = a^n (b\inv)^n = a^n (b^n)\inv = 1 \cdot 1\inv = 1
+        	(ab\inv)^n = a^n (b\inv)^n = a^n (b^n)\inv = 1,
         \]
-        where the second equality follows from the fact that $A$ is abelian.
-        Hence, $B \leq A$. \qedhere
+        so $ab\inv \in B$, and thus $B \leq A$ by the Subgroup Criterion. \qedhere
     \end{subexercises}
 \end{sol}
 
@@ -344,25 +333,16 @@
 \end{exercise}
 
 \begin{sol}
-    Let $H \leq \qbb$.
-	Then $0 \in H$.
-	If no other elements are in $H$, then $H = 0$, and we are done.
-	Suppose there exists some nonzero $a/b \in H$ where $a, b \in \zbb$ and $b \neq 0$.
-	Moreover, we may assume without loss of generality that $a/b > 0$, for otherwise we may take $-a/b$ since $H$ contains additive inverses.
-	We now use $a/b$ to generate $\qbb$.
-
-    Since $a/b \in H$, $b(a/b) = a \in H$ so that $1/a \in H$.
-	Then $a(1/a) = 1 \in H$.
-	From this, we can see that $\zbb \subseteq H$.
+    If $H$ has no nonzero element, then $H = 0$.
+    Otherwise, let $a/b \in H$ be nonzero with $a, b \in \zbb$, where $b \neq 0$ and $a \neq 0$ since $a/b \neq 0$.
+    Then $b(a/b) = a \in H$ so that $1/a \in H$, whence $1 \in H$.
 	Now let $c/d \in \qbb$ for some $c, d \in \zbb$ with $d \neq 0$.
-	Since $1 \in H$, $d(1) = d \in H$ so that $1/d \in H$.
-	Then $c(1/d) = c/d \in H$.
-	Since $c/d$ was arbitrary, $\qbb \subseteq H$.
-	Hence, $H = \qbb$.
+	Then $d(1) = d \in H$ so that $1/d \in H$, and $c(1/d) = c/d \in H$.
+	Since $c/d$ was arbitrary, $H = \qbb$.
 \end{sol}
 
 \begin{exercise}{2.1.14}
-    Show that $\set{ x \in D_{2n} \mid x^2 = 1 }$ is \emph{not} a subgroup of $D_{2n}$ (here $n \geq 3$).
+    Show that $\set{ x \in D_{2n} \mid x^2 = 1 }$ is not a subgroup of $D_{2n}$ (here $n \geq 3$).
 \end{exercise}
 
 \begin{sol}
@@ -372,73 +352,65 @@
 \end{sol}
 
 \begin{exercise}{2.1.15}
-    Let $H_1 \subseteq H_2 \subseteq \cdots$ be an ascending chain of subgroups of $G$.
-	Prove that
-    \[
-    	\bigcup_{i = 1}^\infty H_i
-    \]
-    is a subgroup of $G$.
+    Let $H_1 \leq H_2 \leq \cdots$ be an ascending chain of subgroups of $G$.
+	Prove that $\bigcup_{i = 1}^\infty H_i$ is a subgroup of $G$.
 \end{exercise}
 
 \begin{sol}
     Let $H$ be the union in question.
-	From $H_i \leq G$ for each $i \in \zp$, then $1 \in H_i$ so that $1 \in H$.
-	Let $a, b \in H$ so that there exists $m, n \in \zp$ where $a \in H_m$ and $b \in H_n$.
-	Put $k = \max(m, n)$.
-	It follows that $H_m \subseteq H_k$ and $H_n \subseteq H_k$, so that $a, b \in H_k$.
-	Since $H_k \leq G$, $ab\inv \in H_k$, hence $ab\inv \in H$.
-	Therefore, $H \leq G$.
+	Then $1 \in H_1 \subseteq H$.
+	Let $a, b \in H$ so that there exist $m, n \in \zp$ where $a \in H_m$ and $b \in H_n$.
+    With $k = \max(m, n)$, we have $H_m \subseteq H_k$ and $H_n \subseteq H_k$, and thus $a, b \in H_k$.
+    Since $H_k \leq G$, $ab\inv \in H_k$, and hence $ab\inv \in H$.
+	Therefore, $H \leq G$ by the Subgroup Criterion.
 \end{sol}
 
 \begin{exercise}{2.1.16}
     Let $n \in \zbb^+$ and let $F$ be a field.
-	Prove that the set $\set{ (a_{ij}) \in \gl_n(F) \mid a_{ij} = 0 \text{ for all } i > j }$ is a subgroup of $\gl_n(F)$ (called the group of upper triangular matrices).
+	Prove that the set $\set{(a_{ij}) \in \gl_n(F) \mid a_{ij} = 0 \text{ for all } i > j}$ is a subgroup of $\gl_n(F)$ \note{called the group of \term{upper triangular} matrices}.
 \end{exercise}
 
 \begin{sol}
-    Let $\ut_n(F)$ denote the set of $n \times n$ upper triangular matrices with entries from $F$.
-	Observe that $I_n$ contains $0$'s everywhere except the diagonal, hence $I_n \in \ut_n(F)$ so that $\ut_n(F)$ is nonempty.
+    Let $\ut_n(F)$ denote the set in question.
+	Observe that $I_n \in \ut_n(F)$ so that $\ut_n(F)$ is nonempty.
 	Suppose $A, B \in \ut_n(F)$, and consider $C = AB$.
-	Then the $(i, j)$-th entry of $C$ is given by
+    Since $\gl_n(F)$ is a group, $C \in \gl_n(F)$.
+	Moreover, the $(i, j)$th entry of $C$ is given by
     \[
-    	c_{ij} = \sum_{k = 1}^n a_{ik}b_{kj}
+    	c_{ij} = \sum_{k = 1}^n a_{ik}b_{kj}.
     \]
-    Consider the case when $i > j$, which is below the main diagonal.
-    \begin{itemize}
-        \item If $i > k$, then $a_{ik} = 0$ since $A$ is upper triangular.
-        \item If $k > j$, then $b_{kj} = 0$ since $B$ is upper triangular.
-    \end{itemize}
-    Hence, for all $k$, either $a_{ik} = 0$ or $b_{kj} = 0$, so that $c_{ij} = 0$.
-	It follows that $C \in \ut_n(F)$.
+    If $i > j$, then for each $k$, either $i > k$ or $k \geq i > j$, and thus $a_{ik}b_{kj} = 0$.
+    Therefore, $c_{ij} = 0$ for all $i > j$, and $C \in \ut_n(F)$.
 
-    Let $A \in \ut_n(F)$.
-	Since $A \in \gl_n(F)$, we know that the entries on the main diagonal are all nonzero, for otherwise $A$ is not invertible.
-	By back-substitution, we may solve the matrix equation $AX = I_n$ for $X$, and the solution will also be upper triangular.
-	Hence, $A\inv \in \ut_n(F)$.
+    Now let $A \in \ut_n(F)$ and $X = A\inv$.
+    Since $A \in \gl_n(F)$, $\det A = \prod_i a_{ii} \neq 0$, so $a_{ii} \neq 0$ for all $i$.
+    Fix column $j$ and consider $i > j$.
+    Because $a_{ik} = 0$ for $k < i$ and $i \neq j$, the $i$th row of $AX = I_n$ gives
+    \[
+        a_{ii}x_{ij} + \sum_{k > i} a_{ik}x_{kj} = 0.
+    \]
+    By induction on $i$ from $n$ down to $j+1$, we have $x_{kj} = 0$ for all $k > i$, so $a_{ii}x_{ij} = 0$, and hence $x_{ij} = 0$.
+    Therefore, $X$ is upper triangular, and $X \in \ut_n(F)$.
 \end{sol}
 
 \begin{exercise}{2.1.17}
     Let $n \in \zbb^+$ and let $F$ be a field.
-	Prove that the set $\set{ (a_{ij}) \in \gl_n(F) \mid a_{ij} = 0 \text{ for all } i > j,\ \text{and } a_{ii} = 1 \text{ for all } i }$ is a subgroup of $\gl_n(F)$.
+	Prove that the set $\set{(a_{ij}) \in \gl_n(F) \mid a_{ij} = 0 \text{ for all } i > j, \text{and } a_{ii} = 1 \text{ for all } i}$ is a subgroup of $\gl_n(F)$.
 \end{exercise}
 
 \begin{sol}
     Let $H$ be the set in question.
-	Since the diagonal of $I_n$ is only 1's, $I_n \in H$.
+    We have $I_n \in H$ so that $H$ is nonempty.
 	Suppose $A, B \in H$.
-	By the previous exercise, $A, B \in \ut_n(F)$, so it remains to show that $a_{ii} = b_{ii} = 1$ for all $1 \leq i \leq n$.
-	Then
+	By \exref{2.1.16}, $AB \in \ut_n(F)$, so it remains to check that $(AB)_{ii} = 1$ for all $i$.
+	We have
     \[
-    	(AB)_{ii} = \sum_{k = 1}^n a_{ik}b_{ki}
+    	(AB)_{ii} = \sum_{k = 1}^n a_{ik}b_{ki}.
     \]
-    Since $a_{ik} = 0$ for $k < i$ and $b_{ki} = 0$ for $k > i$, the sum evaluates to $a_{ii}b_{ii} = 1$.
-	Then $H$ is closed under multiplication.
-	Moreover, suppose $D \in \ut_n(F)$ such that $DA = I_n$.
-	Then
-    \[
-    	1 = (DA)_{ii} = d_{ii}a_{ii}
-    \]
-    where we use the above to collapse the $ii$-th term of $DA$.
-	Then $d_{ii} = 1$, hence $D \in H$, and $H$ is closed under inverses.
-	Hence, $H \leq \gl_n(F)$.
+    Since $a_{ik} = 0$ for $k < i$ and $b_{ki} = 0$ for $k > i$, the sum evaluates to $a_{ii}b_{ii} = 1$ for all $i$, so $H$ is closed under multiplication.
+	
+    Now let $A \in H$ and $X = A\inv$.
+    By \exref{2.1.16}, $X \in \ut_n(F)$, so it remains to check that $x_{ii} = 1$ for all $i$.
+    Since both $A$ and $X$ are upper triangular, the diagonal computation above gives $(AX)_{ii} = a_{ii}x_{ii} = 1$ for all $i$.
+    Since $a_{ii} = 1$, we have $x_{ii} = 1$ for all $i$, and hence $X \in H$.
 \end{sol}
