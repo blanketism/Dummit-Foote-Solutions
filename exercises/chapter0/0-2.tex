@@ -125,6 +125,14 @@
 \begin{exercise}![Legendre's Formula]{0.2.8}
     Let $p$ be a prime, $n \in \zp$.
 	Find a formula for the largest power of $p$ which divides $n! = n(n - 1)(n - 2) \ldots 2 \cdot 1$ (it involves the greatest integer function).
+
+    \remark{This is known as the \term{$p$-adic valuation} of $n!$ and is typically denoted by $\nu_p(n!)$.
+    In particular, for any $m \in \zbb$, $\nu_p(m)$ denotes the exponent of the largest power of $p$ dividing $m$.
+    From this definition, there are two main facts that we can use:
+    \begin{enumerate}
+        \item For any $m, n \in \zbb$, $\nu_p(mn) = \nu_p(m) + \nu_p(n)$: if $m = p^{\nu_p(m)} m'$ and $n = p^{\nu_p(n)} n'$ with $p \nmid m'$ and $p \nmid n'$, then $mn = p^{\nu_p(m) + \nu_p(n)} m'n'$ with $p \nmid m'n'$ since $p$ is prime.
+        \item $p^r \mid m$ if and only if $r \leq \nu_p(m)$: if $m = p^{\nu_p(m)} m'$ with $p \nmid m'$, then $p^r \mid m$ exactly when $r \leq \nu_p(m)$.
+    \end{enumerate}}
 \end{exercise}
 
 \begin{sol}
